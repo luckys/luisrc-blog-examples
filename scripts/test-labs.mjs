@@ -7,6 +7,7 @@ const commands = [
     "api-threats",
     "api-contracts",
     "api-identity",
+    "api-integration",
     "api-pagination-evolution",
     "api-authorization",
     "api-validation-errors",

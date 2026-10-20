@@ -79,8 +79,8 @@ test("identidad: cuatro drafts españoles con extractos del código probado y di
   assert.equal(snippets, 4);
 });
 
-test("APIs: treinta y dos partes mantienen orden, fechas únicas y once fichas del catálogo", async () => {
-  assert.equal(manifest.articles.length, 32);
+test("APIs: treinta y seis partes mantienen orden, fechas únicas y doce fichas del catálogo", async () => {
+  assert.equal(manifest.articles.length, 36);
   const positions = new Map(
     manifest.articles.map((entry, index) => [entry.id, index]),
   );
@@ -96,7 +96,7 @@ test("APIs: treinta y dos partes mantienen orden, fechas únicas y once fichas d
       if (positions.has(id))
         assert.ok(positions.get(id) < index, `${id} antes de ${entry.id}`);
   }
-  assert.equal(new Set(dates).size, 32);
+  assert.equal(new Set(dates).size, 36);
   assert.deepEqual(
     dates,
     dates.toSorted((a, b) => a - b),
@@ -115,6 +115,7 @@ test("APIs: treinta y dos partes mantienen orden, fechas únicas y once fichas d
       "P028",
       "P029",
       "P030",
+      "P031",
     ],
   );
 });

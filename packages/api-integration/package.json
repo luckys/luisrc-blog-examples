@@ -1,0 +1,15 @@
+{
+  "name": "@luisrc-examples/api-integration",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "demo": "node demo.mjs"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "1.14.6",
+    "@grpc/proto-loader": "0.8.1",
+    "dataloader": "2.2.3",
+    "graphql": "16.11.0"
+  }
+}

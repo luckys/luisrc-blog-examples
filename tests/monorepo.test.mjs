@@ -10,7 +10,7 @@ const exports = JSON.parse(
   await readFile("metadata/blog-exports.json", "utf8"),
 );
 
-test("workspace: los dieciséis laboratorios tienen nombres únicos y un único lockfile", async () => {
+test("workspace: los diecisiete laboratorios tienen nombres únicos y un único lockfile", async () => {
   const workspace = YAML.parse(await readFile("pnpm-workspace.yaml", "utf8"));
   assert.deepEqual(workspace.packages, ["packages/*"]);
   const lock = YAML.parseAllDocuments(await readFile("pnpm-lock.yaml", "utf8"))
@@ -22,6 +22,7 @@ test("workspace: los dieciséis laboratorios tienen nombres únicos y un único 
     "api-authorization",
     "api-contracts",
     "api-identity",
+    "api-integration",
     "api-pagination-evolution",
     "api-threats",
     "api-validation-errors",
@@ -55,7 +56,7 @@ test("workspace: los dieciséis laboratorios tienen nombres únicos y un único 
 });
 
 test("artículos: todos los índices enlazan archivos reales dentro del monorepo", async () => {
-  assert.equal(posts.length, 132);
+  assert.equal(posts.length, 136);
   const unique = new Set();
   for (const post of posts) {
     const id = `${post.locale}/${post.slug}`;
@@ -110,7 +111,7 @@ test("migración: las fuentes ejecutables originales se conservan byte a byte", 
 });
 
 test("exportación: solo recursos estáticos explícitos, sin servidores, secretos o dependencias", async () => {
-  assert.equal(exports.length, 41);
+  assert.equal(exports.length, 45);
   const destinations = new Set();
   for (const entry of exports) {
     assert.ok(!destinations.has(entry.destination));

@@ -3,3 +3,5 @@ packages:
 
 allowBuilds:
   esbuild: true
+  # Only prints dependency-version warnings; no generated runtime is needed.
+  protobufjs: false

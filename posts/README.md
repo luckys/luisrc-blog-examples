@@ -134,3 +134,10 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · dist-webhooks**: [Webhooks seguros: verificar bytes, persistir y tolerar eventos desordenados](es/dist-webhooks/README.md)
 - **es · p075**: [WebRTC: de pedir el micrófono a transportar audio y cerrar la llamada](es/p075/README.md)
 - **es · p029**: [XSS en el DOM: mostrar texto sin convertirlo en código](es/p029/README.md)
+
+## P031: integración de APIs
+
+- [P031: Polling o eventos: seguir un pedido sin perder cambios](es/p031/README.md)
+- [API-INTEGRATION-GRAPHQL: GraphQL y N+1: un request no implica una sola lectura](es/api-integration-graphql/README.md)
+- [API-INTEGRATION-GRPC: gRPC: contratos Protobuf, deadlines y compatibilidad](es/api-integration-grpc/README.md)
+- [API-INTEGRATION-CHOICE: Elegir una integración: REST, callbacks, subscriptions y eventos](es/api-integration-choice/README.md)

@@ -602,6 +602,22 @@
   },
   {
     "locale": "es",
+    "slug": "elegir-integracion-rest-callbacks-subscriptions-eventos",
+    "title": "Elegir una integración: REST, callbacks, subscriptions y eventos",
+    "post": "src/content/posts/es/elegir-integracion-rest-callbacks-subscriptions-eventos.md",
+    "labs": [
+      "api-integration"
+    ],
+    "files": [
+      "packages/api-integration/demo.mjs",
+      "packages/api-integration/results/experiment.json",
+      "packages/api-integration/tests/integration.test.mjs",
+      "packages/api-integration/README.md"
+    ],
+    "directory": "es/api-integration-choice"
+  },
+  {
+    "locale": "es",
     "slug": "elegir-sql-nosql-motores-especializados",
     "title": "SQL, NoSQL y motores especializados: elige por requisitos, no por etiquetas",
     "post": "src/content/posts/es/elegir-sql-nosql-motores-especializados.md",
@@ -844,6 +860,39 @@
       "packages/data-structures-algorithms/README.md"
     ],
     "directory": "es/dsa-17"
+  },
+  {
+    "locale": "es",
+    "slug": "graphql-resolvers-n-mas-uno-dataloader",
+    "title": "GraphQL y N+1: un request no implica una sola lectura",
+    "post": "src/content/posts/es/graphql-resolvers-n-mas-uno-dataloader.md",
+    "labs": [
+      "api-integration"
+    ],
+    "files": [
+      "packages/api-integration/graphql.mjs",
+      "packages/api-integration/http.mjs",
+      "packages/api-integration/tests/integration.test.mjs",
+      "packages/api-integration/README.md"
+    ],
+    "directory": "es/api-integration-graphql"
+  },
+  {
+    "locale": "es",
+    "slug": "grpc-protobuf-deadlines-compatibilidad",
+    "title": "gRPC: contratos Protobuf, deadlines y compatibilidad",
+    "post": "src/content/posts/es/grpc-protobuf-deadlines-compatibilidad.md",
+    "labs": [
+      "api-integration"
+    ],
+    "files": [
+      "packages/api-integration/orders.proto",
+      "packages/api-integration/orders-legacy.proto",
+      "packages/api-integration/rpc.mjs",
+      "packages/api-integration/tests/integration.test.mjs",
+      "packages/api-integration/README.md"
+    ],
+    "directory": "es/api-integration-grpc"
   },
   {
     "locale": "es",
@@ -1258,6 +1307,23 @@
       "packages/data-structures-algorithms/README.md"
     ],
     "directory": "es/dsa-05"
+  },
+  {
+    "locale": "es",
+    "slug": "polling-eventos-estado-pedido",
+    "title": "Polling o eventos: seguir un pedido sin perder cambios",
+    "post": "src/content/posts/es/polling-eventos-estado-pedido.md",
+    "labs": [
+      "api-integration"
+    ],
+    "files": [
+      "packages/api-integration/orders.mjs",
+      "packages/api-integration/http.mjs",
+      "packages/api-integration/clients.mjs",
+      "packages/api-integration/tests/integration.test.mjs",
+      "packages/api-integration/README.md"
+    ],
+    "directory": "es/p031"
   },
   {
     "locale": "es",

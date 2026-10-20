@@ -162,5 +162,21 @@
   {
     "source": "packages/reliable-services/results/load.json",
     "destination": "assets/evidence/reliable-services/results/load.json"
+  },
+  {
+    "source": "packages/api-integration/explorer.html",
+    "destination": "public/assets/interactive/api-integration/explorer.html"
+  },
+  {
+    "source": "packages/api-integration/explorer.mjs",
+    "destination": "public/assets/interactive/api-integration/explorer.mjs"
+  },
+  {
+    "source": "packages/api-integration/timeline.mjs",
+    "destination": "public/assets/interactive/api-integration/timeline.mjs"
+  },
+  {
+    "source": "packages/api-integration/results/experiment.json",
+    "destination": "assets/evidence/api-integration/results/experiment.json"
   }
 ]

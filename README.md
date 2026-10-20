@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 132 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 136 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -56,6 +56,7 @@ laboratorio antes de iniciar servicios o ejecutar pruebas de integración.
 | [api-authorization](packages/api-authorization/README.md)                   | Tenant, ownership y autorización                        | `pnpm --dir packages/api-authorization test`                                           |
 | [browser-security](packages/browser-security/README.md)                     | XSS, CSP, CSRF y CORS                                   | `pnpm --dir packages/browser-security test` (Chromium)                                 |
 | [api-threats](packages/api-threats/README.md)                               | Mass assignment, SQL injection, SSRF, cuotas y secretos | `pnpm --dir packages/api-threats test`                                                 |
+| [api-integration](packages/api-integration/README.md) | Polling/SSE, GraphQL N+1 y gRPC | `pnpm --dir packages/api-integration test` |
 
 Los tests con Docker, servicios de datos, imágenes científicas o navegador son
 opt-in. No se omiten silenciosamente dentro de `test:labs`: ese comando declara
