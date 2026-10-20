@@ -1,0 +1,9 @@
+{
+  "name": "@luisrc-examples/computing-networks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "packageManager": "pnpm@12.8.1"
+}

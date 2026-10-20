@@ -1,0 +1,13 @@
+{
+  "name": "@luisrc-examples/api-contracts",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.19.0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "start": "node server.mjs"
+  },
+  "packageManager": "pnpm@12.8.1"
+}

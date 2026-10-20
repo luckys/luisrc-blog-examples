@@ -1,0 +1,1870 @@
+[
+  {
+    "locale": "en",
+    "slug": "acid-properties-databases",
+    "title": "ACID properties: what a database guarantees and what your code must handle",
+    "post": "src/content/posts/en/acid-properties-databases.md",
+    "labs": [
+      "transactions-en"
+    ],
+    "files": [
+      "packages/transactions-en/README.md"
+    ],
+    "directory": "en/db-acid"
+  },
+  {
+    "locale": "en",
+    "slug": "postgresql-transactions-practical-examples",
+    "title": "PostgreSQL transactions: BEGIN, COMMIT, ROLLBACK and SAVEPOINT with examples",
+    "post": "src/content/posts/en/postgresql-transactions-practical-examples.md",
+    "labs": [
+      "transactions-en"
+    ],
+    "files": [
+      "packages/transactions-en/README.md"
+    ],
+    "directory": "en/db-transactions"
+  },
+  {
+    "locale": "es",
+    "slug": "access-refresh-tokens-rotacion-reutilizacion",
+    "title": "Access y refresh tokens: rotación, reutilización y revocación",
+    "post": "src/content/posts/es/access-refresh-tokens-rotacion-reutilizacion.md",
+    "labs": [
+      "api-identity"
+    ],
+    "files": [
+      "packages/api-identity/state.mjs",
+      "packages/api-identity/README.md"
+    ],
+    "directory": "es/api-session-refresh"
+  },
+  {
+    "locale": "es",
+    "slug": "aislamiento-mvcc-postgresql",
+    "title": "Aislamiento y MVCC en PostgreSQL: por qué dos transacciones ven datos distintos",
+    "post": "src/content/posts/es/aislamiento-mvcc-postgresql.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-isolation"
+  },
+  {
+    "locale": "es",
+    "slug": "algoritmos-busqueda-ordenacion-heaps-grafos",
+    "title": "Algoritmos: contratos, invariantes y complejidad antes del código",
+    "post": "src/content/posts/es/algoritmos-busqueda-ordenacion-heaps-grafos.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-02"
+  },
+  {
+    "locale": "es",
+    "slug": "api-contrato-esquema-clientes",
+    "title": "Diseñar una API: el contrato es más que un JSON que funciona",
+    "post": "src/content/posts/es/api-contrato-esquema-clientes.md",
+    "labs": [
+      "api-contracts"
+    ],
+    "files": [
+      "packages/api-contracts/openapi.json",
+      "packages/api-contracts/server.mjs",
+      "packages/api-contracts/README.md"
+    ],
+    "directory": "es/p020"
+  },
+  {
+    "locale": "es",
+    "slug": "api-keys-credenciales-clientes-permisos",
+    "title": "API keys: verificar al cliente sin confundir identidad y permisos",
+    "post": "src/content/posts/es/api-keys-credenciales-clientes-permisos.md",
+    "labs": [
+      "api-threats"
+    ],
+    "files": [
+      "packages/api-threats/credentials.mjs",
+      "packages/api-threats/tests/credentials.test.mjs",
+      "packages/api-threats/README.md"
+    ],
+    "directory": "es/api-threats-credentials"
+  },
+  {
+    "locale": "es",
+    "slug": "arbol-binario-busqueda-altura-balanceo",
+    "title": "Binary search trees: por qué la altura importa más que el nombre",
+    "post": "src/content/posts/es/arbol-binario-busqueda-altura-balanceo.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/focused.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-06"
+  },
+  {
+    "locale": "es",
+    "slug": "arboles-random-forest-gradient-boosting",
+    "title": "Árboles, Random Forest y Gradient Boosting: cómo comparar modelos tabulares",
+    "post": "src/content/posts/es/arboles-random-forest-gradient-boosting.md",
+    "labs": [
+      "machine-learning"
+    ],
+    "files": [
+      "packages/machine-learning/models.py",
+      "packages/machine-learning/README.md"
+    ],
+    "directory": "es/p090"
+  },
+  {
+    "locale": "es",
+    "slug": "arrays-listas-enlazadas-costes-reales",
+    "title": "Arrays y linked lists: qué operación estás pagando realmente",
+    "post": "src/content/posts/es/arrays-listas-enlazadas-costes-reales.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/algorithms.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-04"
+  },
+  {
+    "locale": "es",
+    "slug": "asincronia-nodejs-carreras-concurrencia",
+    "title": "Asincronía en Node.js: por qué un solo hilo también tiene race conditions",
+    "post": "src/content/posts/es/asincronia-nodejs-carreras-concurrencia.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/tests/core.test.mjs",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/api-async"
+  },
+  {
+    "locale": "es",
+    "slug": "autenticacion-autorizacion-tenant",
+    "title": "Autenticación y autorización: una sesión válida no da acceso a cualquier pedido",
+    "post": "src/content/posts/es/autenticacion-autorizacion-tenant.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/security.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/api-identity"
+  },
+  {
+    "locale": "es",
+    "slug": "autorizacion-multi-tenant-contexto-datos",
+    "title": "Autorización multi-tenant: llevar el contexto hasta la lectura y la escritura",
+    "post": "src/content/posts/es/autorizacion-multi-tenant-contexto-datos.md",
+    "labs": [
+      "api-authorization"
+    ],
+    "files": [
+      "packages/api-authorization/fixtures.mjs",
+      "packages/api-authorization/server.mjs",
+      "packages/api-authorization/README.md"
+    ],
+    "directory": "es/api-authz-tenant"
+  },
+  {
+    "locale": "es",
+    "slug": "autorizacion-rbac-abac-permisos-recursos",
+    "title": "Autorización por recurso: combinar RBAC, ABAC y ownership sin permisos implícitos",
+    "post": "src/content/posts/es/autorizacion-rbac-abac-permisos-recursos.md",
+    "labs": [
+      "api-authorization"
+    ],
+    "files": [
+      "packages/api-authorization/policy.mjs",
+      "packages/api-authorization/README.md"
+    ],
+    "directory": "es/p028"
+  },
+  {
+    "locale": "es",
+    "slug": "autorizacion-tests-adversariales-bola",
+    "title": "Probar autorización por HTTP: detectar BOLA sin conformarse con un 403",
+    "post": "src/content/posts/es/autorizacion-tests-adversariales-bola.md",
+    "labs": [
+      "api-authorization"
+    ],
+    "files": [
+      "packages/api-authorization/tests/http.test.mjs",
+      "packages/api-authorization/README.md"
+    ],
+    "directory": "es/api-authz-tests"
+  },
+  {
+    "locale": "es",
+    "slug": "bfs-recorrido-anchura-camino-minimo",
+    "title": "BFS: encontrar un camino con el menor número de aristas",
+    "post": "src/content/posts/es/bfs-recorrido-anchura-camino-minimo.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/algorithms.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-18"
+  },
+  {
+    "locale": "es",
+    "slug": "binary-heap-cola-prioridad",
+    "title": "Binary heap: mantener la próxima prioridad sin ordenar toda la colección",
+    "post": "src/content/posts/es/binary-heap-cola-prioridad.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/algorithms.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-15"
+  },
+  {
+    "locale": "es",
+    "slug": "bits-floats-unicode-fechas-representacion",
+    "title": "Bits, decimales, texto y fechas: el valor no es lo mismo que sus bytes",
+    "post": "src/content/posts/es/bits-floats-unicode-fechas-representacion.md",
+    "labs": [
+      "computing-networks"
+    ],
+    "files": [
+      "packages/computing-networks/concepts.mjs",
+      "packages/computing-networks/README.md"
+    ],
+    "directory": "es/p002"
+  },
+  {
+    "locale": "es",
+    "slug": "bubble-sort-intercambios-adyacentes",
+    "title": "Bubble sort: qué demuestra una pasada sin intercambios",
+    "post": "src/content/posts/es/bubble-sort-intercambios-adyacentes.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/focused.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-12"
+  },
+  {
+    "locale": "es",
+    "slug": "busqueda-binaria-lower-bound",
+    "title": "Búsqueda binaria: entender los límites para no perder la respuesta",
+    "post": "src/content/posts/es/busqueda-binaria-lower-bound.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/algorithms.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-08"
+  },
+  {
+    "locale": "es",
+    "slug": "busqueda-hash-map-colisiones",
+    "title": "Hashing y Map: buscar por clave sin olvidar colisiones ni actualizaciones",
+    "post": "src/content/posts/es/busqueda-hash-map-colisiones.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/algorithms.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-09"
+  },
+  {
+    "locale": "es",
+    "slug": "busqueda-lineal-contrato-coste",
+    "title": "Búsqueda lineal: cuándo recorrer los datos es una buena decisión",
+    "post": "src/content/posts/es/busqueda-lineal-contrato-coste.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/algorithms.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-07"
+  },
+  {
+    "locale": "es",
+    "slug": "calibracion-interpretabilidad-equidad-modelos",
+    "title": "Calibración, interpretabilidad y equidad: cuatro preguntas para una predicción",
+    "post": "src/content/posts/es/calibracion-interpretabilidad-equidad-modelos.md",
+    "labs": [
+      "machine-learning"
+    ],
+    "files": [
+      "packages/machine-learning/models.py",
+      "packages/machine-learning/README.md"
+    ],
+    "directory": "es/p094"
+  },
+  {
+    "locale": "es",
+    "slug": "clustering-kmeans-dbscan-estabilidad",
+    "title": "Clustering: encontrar grupos no significa haber descubierto categorías reales",
+    "post": "src/content/posts/es/clustering-kmeans-dbscan-estabilidad.md",
+    "labs": [
+      "machine-learning"
+    ],
+    "files": [
+      "packages/machine-learning/models.py",
+      "packages/machine-learning/README.md"
+    ],
+    "directory": "es/p091"
+  },
+  {
+    "locale": "es",
+    "slug": "colas-ack-leases-trabajos-duplicados",
+    "title": "Colas y workers: cuándo confirmar un trabajo y qué pasa si se repite",
+    "post": "src/content/posts/es/colas-ack-leases-trabajos-duplicados.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/distributed.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/dist-queues"
+  },
+  {
+    "locale": "es",
+    "slug": "componentes-design-system-contratos-estados",
+    "title": "Componentes y design systems: contratos pequeños, estados explícitos",
+    "post": "src/content/posts/es/componentes-design-system-contratos-estados.md",
+    "labs": [
+      "realtime-frontend"
+    ],
+    "files": [
+      "packages/realtime-frontend/src/components.tsx",
+      "packages/realtime-frontend/README.md"
+    ],
+    "directory": "es/p072"
+  },
+  {
+    "locale": "es",
+    "slug": "concurrencia-bloqueos-postgresql",
+    "title": "Concurrencia en PostgreSQL: actualizaciones atómicas, locks y versiones",
+    "post": "src/content/posts/es/concurrencia-bloqueos-postgresql.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-concurrency"
+  },
+  {
+    "locale": "es",
+    "slug": "consumo-recursos-concurrencia-bulkheads",
+    "title": "Consumo de recursos: limitar trabajo activo sin crear una cola infinita",
+    "post": "src/content/posts/es/consumo-recursos-concurrencia-bulkheads.md",
+    "labs": [
+      "api-threats"
+    ],
+    "files": [
+      "packages/api-threats/admission.mjs",
+      "packages/api-threats/README.md"
+    ],
+    "directory": "es/api-threats-capacity"
+  },
+  {
+    "locale": "es",
+    "slug": "contratos-http-recursos-operaciones",
+    "title": "Contratos HTTP: crear un recurso no es completar una operación",
+    "post": "src/content/posts/es/contratos-http-recursos-operaciones.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/service.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/api-http"
+  },
+  {
+    "locale": "es",
+    "slug": "cors-sop-preflight-no-autorizacion",
+    "title": "CORS y SOP: bloquear la lectura de una respuesta no autoriza una API",
+    "post": "src/content/posts/es/cors-sop-preflight-no-autorizacion.md",
+    "labs": [
+      "browser-security"
+    ],
+    "files": [
+      "packages/browser-security/README.md"
+    ],
+    "directory": "es/api-browser-cors"
+  },
+  {
+    "locale": "es",
+    "slug": "counting-sort-rango-frecuencias",
+    "title": "Counting sort: ordenar contando funciona si puedes pagar el rango",
+    "post": "src/content/posts/es/counting-sort-rango-frecuencias.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/focused.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-21"
+  },
+  {
+    "locale": "es",
+    "slug": "cpu-memoria-almacenamiento-localidad",
+    "title": "CPU, memoria y almacenamiento: qué estás midiendo cuando un programa tarda",
+    "post": "src/content/posts/es/cpu-memoria-almacenamiento-localidad.md",
+    "labs": [
+      "computing-networks"
+    ],
+    "files": [
+      "packages/computing-networks/concepts.mjs",
+      "packages/computing-networks/results/experiments.json",
+      "packages/computing-networks/README.md"
+    ],
+    "directory": "es/p001"
+  },
+  {
+    "locale": "es",
+    "slug": "crdt-yjs-offline-convergencia",
+    "title": "CRDT y Yjs: editar sin conexión y volver a converger",
+    "post": "src/content/posts/es/crdt-yjs-offline-convergencia.md",
+    "labs": [
+      "realtime-frontend"
+    ],
+    "files": [
+      "packages/realtime-frontend/src/collaboration.ts",
+      "packages/realtime-frontend/README.md"
+    ],
+    "directory": "es/p074"
+  },
+  {
+    "locale": "es",
+    "slug": "csp-nonces-report-only-defensa-adicional",
+    "title": "CSP con nonces: bloquear ejecución no es corregir el HTML inyectado",
+    "post": "src/content/posts/es/csp-nonces-report-only-defensa-adicional.md",
+    "labs": [
+      "browser-security"
+    ],
+    "files": [
+      "packages/browser-security/lab.mjs",
+      "packages/browser-security/README.md"
+    ],
+    "directory": "es/api-browser-csp"
+  },
+  {
+    "locale": "es",
+    "slug": "csr-ssr-ssg-hydration-renderizado",
+    "title": "CSR, SSR y SSG: qué recibe el navegador antes de ejecutar tu código",
+    "post": "src/content/posts/es/csr-ssr-ssg-hydration-renderizado.md",
+    "labs": [
+      "realtime-frontend"
+    ],
+    "files": [
+      "packages/realtime-frontend/src/client.tsx",
+      "packages/realtime-frontend/README.md"
+    ],
+    "directory": "es/p068"
+  },
+  {
+    "locale": "es",
+    "slug": "csrf-cookies-samesite-origin-token",
+    "title": "CSRF: por qué una cookie válida no demuestra que el usuario quiso actuar",
+    "post": "src/content/posts/es/csrf-cookies-samesite-origin-token.md",
+    "labs": [
+      "browser-security"
+    ],
+    "files": [
+      "packages/browser-security/lab.mjs",
+      "packages/browser-security/README.md"
+    ],
+    "directory": "es/api-browser-csrf"
+  },
+  {
+    "locale": "es",
+    "slug": "derivadas-gradientes-regla-cadena",
+    "title": "Derivadas y regla de la cadena: cómo cambia una pérdida al mover un parámetro",
+    "post": "src/content/posts/es/derivadas-gradientes-regla-cadena.md",
+    "labs": [
+      "mathematics-statistics"
+    ],
+    "files": [
+      "packages/mathematics-statistics/foundations.py",
+      "packages/mathematics-statistics/README.md"
+    ],
+    "directory": "es/p078"
+  },
+  {
+    "locale": "es",
+    "slug": "dfs-recorrido-profundidad-stack",
+    "title": "DFS: explorar una rama sin perderse en los ciclos",
+    "post": "src/content/posts/es/dfs-recorrido-profundidad-stack.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/focused.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-19"
+  },
+  {
+    "locale": "es",
+    "slug": "dijkstra-caminos-minimos-pesos",
+    "title": "Dijkstra: el camino más barato no siempre tiene menos pasos",
+    "post": "src/content/posts/es/dijkstra-caminos-minimos-pesos.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/algorithms.ts",
+      "packages/data-structures-algorithms/focused.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-20"
+  },
+  {
+    "locale": "es",
+    "slug": "dinero-tipos-validacion-typescript",
+    "title": "Dinero en TypeScript: cantidades exactas y límites de confianza",
+    "post": "src/content/posts/es/dinero-tipos-validacion-typescript.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/money.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/api-money"
+  },
+  {
+    "locale": "es",
+    "slug": "distribuciones-media-percentiles-latencia",
+    "title": "Distribuciones y percentiles: qué oculta una media de latencia",
+    "post": "src/content/posts/es/distribuciones-media-percentiles-latencia.md",
+    "labs": [
+      "mathematics-statistics"
+    ],
+    "files": [
+      "packages/mathematics-statistics/foundations.py",
+      "packages/mathematics-statistics/README.md"
+    ],
+    "directory": "es/p081"
+  },
+  {
+    "locale": "es",
+    "slug": "docker-ci-despliegues-runbooks",
+    "title": "Del laboratorio a un servicio operable: Docker, CI, rollback y runbooks",
+    "post": "src/content/posts/es/docker-ci-despliegues-runbooks.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/ops-delivery"
+  },
+  {
+    "locale": "es",
+    "slug": "eda-numpy-pandas-calidad-datos",
+    "title": "EDA con NumPy y pandas: qué revisar antes de entrenar un modelo",
+    "post": "src/content/posts/es/eda-numpy-pandas-calidad-datos.md",
+    "labs": [
+      "machine-learning"
+    ],
+    "files": [
+      "packages/machine-learning/data.py",
+      "packages/machine-learning/data/logistics-v1.csv",
+      "packages/machine-learning/README.md"
+    ],
+    "directory": "es/p087"
+  },
+  {
+    "locale": "es",
+    "slug": "elegir-sql-nosql-motores-especializados",
+    "title": "SQL, NoSQL y motores especializados: elige por requisitos, no por etiquetas",
+    "post": "src/content/posts/es/elegir-sql-nosql-motores-especializados.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/sql/13-motores.sql",
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-storage"
+  },
+  {
+    "locale": "es",
+    "slug": "entropia-cross-entropy-kl-logits",
+    "title": "Entropía y cross entropy: qué castiga una pérdida probabilística",
+    "post": "src/content/posts/es/entropia-cross-entropy-kl-logits.md",
+    "labs": [
+      "mathematics-statistics"
+    ],
+    "files": [
+      "packages/mathematics-statistics/foundations.py",
+      "packages/mathematics-statistics/README.md"
+    ],
+    "directory": "es/p084"
+  },
+  {
+    "locale": "es",
+    "slug": "errores-api-logs-request-id-diagnostico-seguro",
+    "title": "Diagnosticar errores de API sin filtrar datos: logs y request IDs",
+    "post": "src/content/posts/es/errores-api-logs-request-id-diagnostico-seguro.md",
+    "labs": [
+      "api-validation-errors"
+    ],
+    "files": [
+      "packages/api-validation-errors/server.mjs",
+      "packages/api-validation-errors/tests/http.test.mjs",
+      "packages/api-validation-errors/README.md"
+    ],
+    "directory": "es/api-error-logging"
+  },
+  {
+    "locale": "es",
+    "slug": "errores-api-problem-details-stock-concurrencia",
+    "title": "Errores de API: diseñar Problem Details y distinguir conflictos de negocio",
+    "post": "src/content/posts/es/errores-api-problem-details-stock-concurrencia.md",
+    "labs": [
+      "api-validation-errors"
+    ],
+    "files": [
+      "packages/api-validation-errors/problems.mjs",
+      "packages/api-validation-errors/service.mjs",
+      "packages/api-validation-errors/README.md"
+    ],
+    "directory": "es/p023"
+  },
+  {
+    "locale": "es",
+    "slug": "estado-cliente-servidor-optimismo-races",
+    "title": "Estado de cliente y servidor: búsquedas sin carreras y cambios optimistas",
+    "post": "src/content/posts/es/estado-cliente-servidor-optimismo-races.md",
+    "labs": [
+      "realtime-frontend"
+    ],
+    "files": [
+      "packages/realtime-frontend/src/state.ts",
+      "packages/realtime-frontend/README.md"
+    ],
+    "directory": "es/p069"
+  },
+  {
+    "locale": "es",
+    "slug": "estructuras-datos-elegir-patron-acceso",
+    "title": "Estructuras de datos: elige según lo que necesitas hacer con los datos",
+    "post": "src/content/posts/es/estructuras-datos-elegir-patron-acceso.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/algorithms.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/p011"
+  },
+  {
+    "locale": "es",
+    "slug": "evolucion-api-paginacion-contratos",
+    "title": "Evolucionar una API sin romper clientes: contratos y cursor pagination",
+    "post": "src/content/posts/es/evolucion-api-paginacion-contratos.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/service.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/api-evolution"
+  },
+  {
+    "locale": "es",
+    "slug": "evolucion-api-versiones-consumidores-contratos",
+    "title": "Compatibilidad de APIs: detectar breaking changes con contract tests",
+    "post": "src/content/posts/es/evolucion-api-versiones-consumidores-contratos.md",
+    "labs": [
+      "api-pagination-evolution"
+    ],
+    "files": [
+      "packages/api-pagination-evolution/clients.mjs",
+      "packages/api-pagination-evolution/openapi.json",
+      "packages/api-pagination-evolution/representations.mjs",
+      "packages/api-pagination-evolution/README.md"
+    ],
+    "directory": "es/p025"
+  },
+  {
+    "locale": "es",
+    "slug": "experimentos-ab-p-value-efecto-potencia",
+    "title": "Experimentos A/B: separar tamaño del efecto, incertidumbre y p-value",
+    "post": "src/content/posts/es/experimentos-ab-p-value-efecto-potencia.md",
+    "labs": [
+      "mathematics-statistics"
+    ],
+    "files": [
+      "packages/mathematics-statistics/foundations.py",
+      "packages/mathematics-statistics/README.md"
+    ],
+    "directory": "es/p083"
+  },
+  {
+    "locale": "es",
+    "slug": "experimentos-ml-reproducibles-baselines",
+    "title": "Experimentos reproducibles de ML: cómo saber qué cambio mejoró el modelo",
+    "post": "src/content/posts/es/experimentos-ml-reproducibles-baselines.md",
+    "labs": [
+      "machine-learning"
+    ],
+    "files": [
+      "packages/machine-learning/experiments.py",
+      "packages/machine-learning/protocol.json",
+      "packages/machine-learning/README.md"
+    ],
+    "directory": "es/p095"
+  },
+  {
+    "locale": "es",
+    "slug": "explain-analyze-postgresql",
+    "title": "EXPLAIN ANALYZE en PostgreSQL: cómo investigar una consulta lenta",
+    "post": "src/content/posts/es/explain-analyze-postgresql.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/sql/09-planes.sql",
+      "packages/database-fundamentals/results/benchmark.json",
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-plans"
+  },
+  {
+    "locale": "es",
+    "slug": "fallos-parciales-timeout-resultado-desconocido",
+    "title": "Fallos parciales: un timeout no te dice si la operación se ejecutó",
+    "post": "src/content/posts/es/fallos-parciales-timeout-resultado-desconocido.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/distributed.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/dist-failures"
+  },
+  {
+    "locale": "es",
+    "slug": "fault-injection-pruebas-propiedades",
+    "title": "Fault injection y pruebas de propiedades: buscar el fallo entre dos pasos",
+    "post": "src/content/posts/es/fault-injection-pruebas-propiedades.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/tests/core.test.mjs",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/ops-faults"
+  },
+  {
+    "locale": "es",
+    "slug": "fourier-fft-convolucion-errores-numericos",
+    "title": "Fourier, convolución y números aproximados: de las muestras a las frecuencias",
+    "post": "src/content/posts/es/fourier-fft-convolucion-errores-numericos.md",
+    "labs": [
+      "mathematics-statistics"
+    ],
+    "files": [
+      "packages/mathematics-statistics/foundations.py",
+      "packages/mathematics-statistics/README.md"
+    ],
+    "directory": "es/p085"
+  },
+  {
+    "locale": "es",
+    "slug": "frontend-accesible-semantica-teclado-foco",
+    "title": "Frontend accesible: un formulario que se puede usar sin ratón",
+    "post": "src/content/posts/es/frontend-accesible-semantica-teclado-foco.md",
+    "labs": [
+      "realtime-frontend"
+    ],
+    "files": [
+      "packages/realtime-frontend/src/App.tsx",
+      "packages/realtime-frontend/README.md"
+    ],
+    "directory": "es/p067"
+  },
+  {
+    "locale": "es",
+    "slug": "gradiente-descendente-learning-rate-convergencia",
+    "title": "Gradient descent: por qué un learning rate puede acercarte al mínimo o alejarte",
+    "post": "src/content/posts/es/gradiente-descendente-learning-rate-convergencia.md",
+    "labs": [
+      "mathematics-statistics"
+    ],
+    "files": [
+      "packages/mathematics-statistics/foundations.py",
+      "packages/mathematics-statistics/README.md"
+    ],
+    "directory": "es/p079"
+  },
+  {
+    "locale": "es",
+    "slug": "grafos-listas-adyacencia-matrices",
+    "title": "Grafos: representar conexiones antes de elegir un recorrido",
+    "post": "src/content/posts/es/grafos-listas-adyacencia-matrices.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/focused.ts",
+      "packages/data-structures-algorithms/tests/algorithms.test.mjs",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-17"
+  },
+  {
+    "locale": "es",
+    "slug": "heapsort-construccion-bottom-up",
+    "title": "Heapsort: ordenar con una frontera y construir el heap en O(n)",
+    "post": "src/content/posts/es/heapsort-construccion-bottom-up.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/focused.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-16"
+  },
+  {
+    "locale": "es",
+    "slug": "http-semantica-versiones-etag-cache",
+    "title": "HTTP y caché: por qué una respuesta 304 necesita algo que ya tienes",
+    "post": "src/content/posts/es/http-semantica-versiones-etag-cache.md",
+    "labs": [
+      "computing-networks"
+    ],
+    "files": [
+      "packages/computing-networks/http-server.mjs",
+      "packages/computing-networks/README.md"
+    ],
+    "directory": "es/p008"
+  },
+  {
+    "locale": "es",
+    "slug": "https-tls-certificados-identidad",
+    "title": "HTTPS y TLS: cifrar una conexión no basta si no verificas con quién hablas",
+    "post": "src/content/posts/es/https-tls-certificados-identidad.md",
+    "labs": [
+      "computing-networks"
+    ],
+    "files": [
+      "packages/computing-networks/experiments.mjs",
+      "packages/computing-networks/README.md"
+    ],
+    "directory": "es/p007"
+  },
+  {
+    "locale": "es",
+    "slug": "idempotencia-api-claves-efectos",
+    "title": "Idempotencia en una API: repetir la petición sin repetir el efecto",
+    "post": "src/content/posts/es/idempotencia-api-claves-efectos.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/distributed.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/dist-idempotency"
+  },
+  {
+    "locale": "es",
+    "slug": "indices-compuestos-parciales-covering",
+    "title": "Índices compuestos, parciales y covering: diseña desde la consulta",
+    "post": "src/content/posts/es/indices-compuestos-parciales-covering.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/sql/08-indices-diseno.sql",
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-index-design"
+  },
+  {
+    "locale": "es",
+    "slug": "indices-postgresql-fundamentos",
+    "title": "Índices en PostgreSQL: por qué aceleran algunas consultas y encarecen las escrituras",
+    "post": "src/content/posts/es/indices-postgresql-fundamentos.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/sql/07-indices.sql",
+      "packages/database-fundamentals/results/benchmark.json",
+      "packages/database-fundamentals/tools/benchmark.mjs",
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-indexes"
+  },
+  {
+    "locale": "es",
+    "slug": "inferencia-bootstrap-intervalos-confianza",
+    "title": "Inferencia y bootstrap: cuánto puedes concluir a partir de una muestra",
+    "post": "src/content/posts/es/inferencia-bootstrap-intervalos-confianza.md",
+    "labs": [
+      "mathematics-statistics"
+    ],
+    "files": [
+      "packages/mathematics-statistics/foundations.py",
+      "packages/mathematics-statistics/README.md"
+    ],
+    "directory": "es/p082"
+  },
+  {
+    "locale": "es",
+    "slug": "insertion-sort-prefijo-ordenado",
+    "title": "Insertion sort: ordenar manteniendo un prefijo correcto",
+    "post": "src/content/posts/es/insertion-sort-prefijo-ordenado.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/focused.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-10"
+  },
+  {
+    "locale": "es",
+    "slug": "internet-ip-routing-nat-dns",
+    "title": "De un dominio a un servicio: DNS, direcciones IP, rutas y NAT",
+    "post": "src/content/posts/es/internet-ip-routing-nat-dns.md",
+    "labs": [
+      "computing-networks"
+    ],
+    "files": [
+      "packages/computing-networks/experiments.mjs",
+      "packages/computing-networks/README.md"
+    ],
+    "directory": "es/p005"
+  },
+  {
+    "locale": "es",
+    "slug": "linux-diagnosticar-procesos-puertos-senales",
+    "title": "Linux para diagnosticar un servicio: del puerto al proceso y al cierre",
+    "post": "src/content/posts/es/linux-diagnosticar-procesos-puertos-senales.md",
+    "labs": [
+      "computing-networks"
+    ],
+    "files": [
+      "packages/computing-networks/service.mjs",
+      "packages/computing-networks/README.md"
+    ],
+    "directory": "es/p004"
+  },
+  {
+    "locale": "es",
+    "slug": "machine-learning-problema-target-prediccion",
+    "title": "Machine Learning empieza por definir qué quieres predecir y cuándo",
+    "post": "src/content/posts/es/machine-learning-problema-target-prediccion.md",
+    "labs": [
+      "machine-learning"
+    ],
+    "files": [
+      "packages/machine-learning/data.py",
+      "packages/machine-learning/tasks.json",
+      "packages/machine-learning/README.md"
+    ],
+    "directory": "es/p086"
+  },
+  {
+    "locale": "es",
+    "slug": "maquinas-estados-reglas-negocio",
+    "title": "Máquinas de estados: impedir transiciones que el negocio no permite",
+    "post": "src/content/posts/es/maquinas-estados-reglas-negocio.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/workflow.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/design-states"
+  },
+  {
+    "locale": "es",
+    "slug": "mass-assignment-comandos-propiedades-autorizadas",
+    "title": "Mass assignment: editar un título no debería permitir cambiar el propietario",
+    "post": "src/content/posts/es/mass-assignment-comandos-propiedades-autorizadas.md",
+    "labs": [
+      "api-threats"
+    ],
+    "files": [
+      "packages/api-threats/command.mjs",
+      "packages/api-threats/store.mjs",
+      "packages/api-threats/README.md"
+    ],
+    "directory": "es/api-threats-assignment"
+  },
+  {
+    "locale": "es",
+    "slug": "medir-algoritmos-busqueda-lineal-map",
+    "title": "Medir algoritmos: cuándo compensa cambiar una búsqueda lineal por Map",
+    "post": "src/content/posts/es/medir-algoritmos-busqueda-lineal-map.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/benchmark.mjs",
+      "packages/data-structures-algorithms/results/benchmark.json",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-03"
+  },
+  {
+    "locale": "es",
+    "slug": "merge-sort-mezcla-estabilidad",
+    "title": "Merge sort: ordenar al mezclar y conservar los empates",
+    "post": "src/content/posts/es/merge-sort-mezcla-estabilidad.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/algorithms.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-13"
+  },
+  {
+    "locale": "es",
+    "slug": "metricas-ml-precision-recall-auc-errores",
+    "title": "Métricas de Machine Learning: qué errores oculta un buen porcentaje",
+    "post": "src/content/posts/es/metricas-ml-precision-recall-auc-errores.md",
+    "labs": [
+      "machine-learning"
+    ],
+    "files": [
+      "packages/machine-learning/models.py",
+      "packages/machine-learning/README.md"
+    ],
+    "directory": "es/p093"
+  },
+  {
+    "locale": "es",
+    "slug": "migraciones-base-datos-sin-romper-aplicacion",
+    "title": "Migraciones de base de datos: cambia el esquema sin romper las versiones anteriores",
+    "post": "src/content/posts/es/migraciones-base-datos-sin-romper-aplicacion.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/sql/10-migraciones.sql",
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-migrations"
+  },
+  {
+    "locale": "es",
+    "slug": "modelado-relacional-integridad-datos",
+    "title": "Modelado relacional e integridad: qué reglas debe proteger la base de datos",
+    "post": "src/content/posts/es/modelado-relacional-integridad-datos.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/sql/01-modelo.sql",
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-model"
+  },
+  {
+    "locale": "es",
+    "slug": "monolito-modular-solid-sin-sobreingenieria",
+    "title": "Un monolito modular sin ceremonia: SOLID, puertos y decisiones pequeñas",
+    "post": "src/content/posts/es/monolito-modular-solid-sin-sobreingenieria.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/service.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/design-modules"
+  },
+  {
+    "locale": "es",
+    "slug": "navegador-dom-cssom-event-loop-fetch",
+    "title": "Del HTML a la pantalla: qué hace el navegador mientras tu JavaScript espera",
+    "post": "src/content/posts/es/navegador-dom-cssom-event-loop-fetch.md",
+    "labs": [
+      "computing-networks"
+    ],
+    "files": [
+      "packages/computing-networks/browser.mjs",
+      "packages/computing-networks/results/browser.json",
+      "packages/computing-networks/README.md"
+    ],
+    "directory": "es/p009"
+  },
+  {
+    "locale": "es",
+    "slug": "normalizacion-desnormalizacion-datos",
+    "title": "Normalización y desnormalización: qué duplicación evita errores y cuál los provoca",
+    "post": "src/content/posts/es/normalizacion-desnormalizacion-datos.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/sql/06-normalizacion.sql",
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-normalization"
+  },
+  {
+    "locale": "es",
+    "slug": "oauth-oidc-authorization-code-pkce",
+    "title": "OAuth y OIDC: entender Authorization Code con PKCE paso a paso",
+    "post": "src/content/posts/es/oauth-oidc-authorization-code-pkce.md",
+    "labs": [
+      "api-identity"
+    ],
+    "files": [
+      "packages/api-identity/lab.mjs",
+      "packages/api-identity/README.md"
+    ],
+    "directory": "es/p027"
+  },
+  {
+    "locale": "es",
+    "slug": "observabilidad-logs-metricas-trazas-workers",
+    "title": "Observabilidad de una operación: seguirla de la API al worker",
+    "post": "src/content/posts/es/observabilidad-logs-metricas-trazas-workers.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/service.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/ops-signals"
+  },
+  {
+    "locale": "es",
+    "slug": "oidc-validar-id-token-jwks-claims",
+    "title": "Validar un ID token: firma, JWKS y claims que tu aplicación espera",
+    "post": "src/content/posts/es/oidc-validar-id-token-jwks-claims.md",
+    "labs": [
+      "api-identity"
+    ],
+    "files": [
+      "packages/api-identity/identity.mjs",
+      "packages/api-identity/README.md"
+    ],
+    "directory": "es/api-oidc-validation"
+  },
+  {
+    "locale": "es",
+    "slug": "paginacion-escrituras-concurrentes-snapshots",
+    "title": "Paginación bajo escrituras: qué conserva keyset y qué necesita un snapshot",
+    "post": "src/content/posts/es/paginacion-escrituras-concurrentes-snapshots.md",
+    "labs": [
+      "api-pagination-evolution"
+    ],
+    "files": [
+      "packages/api-pagination-evolution/tests/postgres.test.mjs",
+      "packages/api-pagination-evolution/README.md"
+    ],
+    "directory": "es/api-pagination-consistency"
+  },
+  {
+    "locale": "es",
+    "slug": "paginacion-offset-keyset-postgresql-concurrencia",
+    "title": "Paginación de APIs: OFFSET, keyset y cursores con un orden estable",
+    "post": "src/content/posts/es/paginacion-offset-keyset-postgresql-concurrencia.md",
+    "labs": [
+      "api-pagination-evolution"
+    ],
+    "files": [
+      "packages/api-pagination-evolution/pagination.mjs",
+      "packages/api-pagination-evolution/queries.mjs",
+      "packages/api-pagination-evolution/server.mjs",
+      "packages/api-pagination-evolution/README.md"
+    ],
+    "directory": "es/p024"
+  },
+  {
+    "locale": "es",
+    "slug": "paginacion-postgresql-indices-explain-mediciones",
+    "title": "Medir paginación en PostgreSQL: índices, filtros y planes de ejecución",
+    "post": "src/content/posts/es/paginacion-postgresql-indices-explain-mediciones.md",
+    "labs": [
+      "api-pagination-evolution"
+    ],
+    "files": [
+      "packages/api-pagination-evolution/schema.sql",
+      "packages/api-pagination-evolution/README.md"
+    ],
+    "directory": "es/api-pagination-performance"
+  },
+  {
+    "locale": "es",
+    "slug": "particionado-retencion-postgresql",
+    "title": "Particionado y retención en PostgreSQL: divide una tabla cuando el acceso lo justifique",
+    "post": "src/content/posts/es/particionado-retencion-postgresql.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/sql/11-particionado.sql",
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-partitioning"
+  },
+  {
+    "locale": "es",
+    "slug": "pilas-colas-lifo-fifo",
+    "title": "Pilas y colas: cómo elegir el orden en que se procesa el trabajo",
+    "post": "src/content/posts/es/pilas-colas-lifo-fifo.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/algorithms.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-05"
+  },
+  {
+    "locale": "es",
+    "slug": "preprocesamiento-pipelines-data-leakage",
+    "title": "Preprocesamiento sin data leakage: por qué dividir antes de ajustar",
+    "post": "src/content/posts/es/preprocesamiento-pipelines-data-leakage.md",
+    "labs": [
+      "machine-learning"
+    ],
+    "files": [
+      "packages/machine-learning/models.py",
+      "packages/machine-learning/README.md"
+    ],
+    "directory": "es/p088"
+  },
+  {
+    "locale": "es",
+    "slug": "probabilidad-bayes-prior-alertas",
+    "title": "Probabilidad y Bayes: una alerta no es la probabilidad de que haya un problema",
+    "post": "src/content/posts/es/probabilidad-bayes-prior-alertas.md",
+    "labs": [
+      "mathematics-statistics"
+    ],
+    "files": [
+      "packages/mathematics-statistics/foundations.py",
+      "packages/mathematics-statistics/README.md"
+    ],
+    "directory": "es/p080"
+  },
+  {
+    "locale": "es",
+    "slug": "procesos-hilos-memoria-virtual-bloqueos",
+    "title": "Procesos, hilos y memoria virtual: por qué async no evita un bloqueo de CPU",
+    "post": "src/content/posts/es/procesos-hilos-memoria-virtual-bloqueos.md",
+    "labs": [
+      "computing-networks"
+    ],
+    "files": [
+      "packages/computing-networks/process-probe.mjs",
+      "packages/computing-networks/README.md"
+    ],
+    "directory": "es/p003"
+  },
+  {
+    "locale": "es",
+    "slug": "propiedades-acid-bases-de-datos",
+    "title": "Propiedades ACID: qué garantiza una base de datos y qué depende de tu código",
+    "post": "src/content/posts/es/propiedades-acid-bases-de-datos.md",
+    "labs": [
+      "transactions"
+    ],
+    "files": [
+      "packages/transactions/docker-compose.yml",
+      "packages/transactions/README.md"
+    ],
+    "directory": "es/db-acid"
+  },
+  {
+    "locale": "es",
+    "slug": "pruebas-carga-percentiles-saturacion",
+    "title": "Pruebas de carga: leer percentiles sin esconder la saturación",
+    "post": "src/content/posts/es/pruebas-carga-percentiles-saturacion.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/tools/load.mjs",
+      "packages/reliable-services/results/load.json",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/ops-load"
+  },
+  {
+    "locale": "es",
+    "slug": "quicksort-particion-pivote",
+    "title": "Quicksort: particionar bien no garantiza elegir bien el pivote",
+    "post": "src/content/posts/es/quicksort-particion-pivote.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/focused.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-14"
+  },
+  {
+    "locale": "es",
+    "slug": "rate-limiting-token-bucket-tenant",
+    "title": "Token bucket: limitar solicitudes por tenant sin confundir ráfagas y concurrencia",
+    "post": "src/content/posts/es/rate-limiting-token-bucket-tenant.md",
+    "labs": [
+      "api-threats"
+    ],
+    "files": [
+      "packages/api-threats/admission.mjs",
+      "packages/api-threats/README.md"
+    ],
+    "directory": "es/api-threats-rate"
+  },
+  {
+    "locale": "es",
+    "slug": "reconciliacion-operaciones-inciertas",
+    "title": "Reconciliación: resolver operaciones inciertas sin inventar su resultado",
+    "post": "src/content/posts/es/reconciliacion-operaciones-inciertas.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/workflow.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/dist-reconciliation"
+  },
+  {
+    "locale": "es",
+    "slug": "recursos-http-metodos-idempotencia",
+    "title": "Recursos HTTP: qué prometen GET, POST, PUT, PATCH y DELETE",
+    "post": "src/content/posts/es/recursos-http-metodos-idempotencia.md",
+    "labs": [
+      "api-contracts"
+    ],
+    "files": [
+      "packages/api-contracts/openapi.json",
+      "packages/api-contracts/server.mjs",
+      "packages/api-contracts/README.md"
+    ],
+    "directory": "es/p021"
+  },
+  {
+    "locale": "es",
+    "slug": "redis-cache-consistencia",
+    "title": "Redis y caché: lecturas rápidas, datos antiguos y carreras de invalidación",
+    "post": "src/content/posts/es/redis-cache-consistencia.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-cache"
+  },
+  {
+    "locale": "es",
+    "slug": "regresion-lineal-logistica-perdidas-regularizacion",
+    "title": "Regresión lineal y logística: qué aprende el modelo y qué significa su salida",
+    "post": "src/content/posts/es/regresion-lineal-logistica-perdidas-regularizacion.md",
+    "labs": [
+      "machine-learning"
+    ],
+    "files": [
+      "packages/machine-learning/models.py",
+      "packages/machine-learning/README.md"
+    ],
+    "directory": "es/p089"
+  },
+  {
+    "locale": "es",
+    "slug": "rendimiento-frontend-medir-antes-optimizar",
+    "title": "Rendimiento frontend: medir antes de añadir memo y más herramientas",
+    "post": "src/content/posts/es/rendimiento-frontend-medir-antes-optimizar.md",
+    "labs": [
+      "realtime-frontend"
+    ],
+    "files": [
+      "packages/realtime-frontend/tools/measure-dom.mjs",
+      "packages/realtime-frontend/results/dom.json",
+      "packages/realtime-frontend/README.md"
+    ],
+    "directory": "es/p070"
+  },
+  {
+    "locale": "es",
+    "slug": "requisitos-capacidad-invariantes-servicio",
+    "title": "Antes de elegir arquitectura: requisitos, invariantes y capacidad",
+    "post": "src/content/posts/es/requisitos-capacidad-invariantes-servicio.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/service.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/design-requirements"
+  },
+  {
+    "locale": "es",
+    "slug": "retries-deadlines-backoff-backpressure",
+    "title": "Retries con presupuesto: deadlines, jitter y backpressure",
+    "post": "src/content/posts/es/retries-deadlines-backoff-backpressure.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/distributed.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/dist-retries"
+  },
+  {
+    "locale": "es",
+    "slug": "sagas-compensaciones-workflows-duraderos",
+    "title": "Sagas y compensaciones: recuperar un proceso sin fingir un rollback global",
+    "post": "src/content/posts/es/sagas-compensaciones-workflows-duraderos.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/workflow.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/dist-sagas"
+  },
+  {
+    "locale": "es",
+    "slug": "secretos-rotacion-recarga-revocacion",
+    "title": "Rotar secretos: comprobar la nueva credencial antes de retirar la anterior",
+    "post": "src/content/posts/es/secretos-rotacion-recarga-revocacion.md",
+    "labs": [
+      "api-threats"
+    ],
+    "files": [
+      "packages/api-threats/credential-client.mjs",
+      "packages/api-threats/credential-evidence.json",
+      "packages/api-threats/observe-credentials.mjs",
+      "packages/api-threats/README.md"
+    ],
+    "directory": "es/api-threats-secrets"
+  },
+  {
+    "locale": "es",
+    "slug": "seguridad-api-navegador-limites-confianza",
+    "title": "Seguridad de una API web: CORS, CSRF, XSS y límites de confianza",
+    "post": "src/content/posts/es/seguridad-api-navegador-limites-confianza.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/security.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/api-security"
+  },
+  {
+    "locale": "es",
+    "slug": "selection-sort-minimo-intercambios",
+    "title": "Selection sort: pocas posiciones cambiadas, muchas comparaciones",
+    "post": "src/content/posts/es/selection-sort-minimo-intercambios.md",
+    "labs": [
+      "data-structures-algorithms"
+    ],
+    "files": [
+      "packages/data-structures-algorithms/focused.ts",
+      "packages/data-structures-algorithms/README.md"
+    ],
+    "directory": "es/dsa-11"
+  },
+  {
+    "locale": "es",
+    "slug": "sesiones-web-cookies-identidad",
+    "title": "Sesiones web: mantener la identidad sin exponerla en cada petición",
+    "post": "src/content/posts/es/sesiones-web-cookies-identidad.md",
+    "labs": [
+      "api-identity"
+    ],
+    "files": [
+      "packages/api-identity/state.mjs",
+      "packages/api-identity/README.md"
+    ],
+    "directory": "es/p026"
+  },
+  {
+    "locale": "es",
+    "slug": "sli-slo-error-budget-servicios",
+    "title": "SLI, SLO y error budgets: medir lo que el usuario necesita",
+    "post": "src/content/posts/es/sli-slo-error-budget-servicios.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/tests/core.test.mjs",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/ops-slo"
+  },
+  {
+    "locale": "es",
+    "slug": "sql-cte-ventanas-cohortes",
+    "title": "SQL para análisis: CTE, window functions y cohortes sin perder el detalle",
+    "post": "src/content/posts/es/sql-cte-ventanas-cohortes.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/sql/05-analitica.sql",
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-analytics"
+  },
+  {
+    "locale": "es",
+    "slug": "sql-injection-parametros-tenant-ordenacion",
+    "title": "SQL injection: separar valores y consultas sin perder el filtro de tenant",
+    "post": "src/content/posts/es/sql-injection-parametros-tenant-ordenacion.md",
+    "labs": [
+      "api-threats"
+    ],
+    "files": [
+      "packages/api-threats/store.mjs",
+      "packages/api-threats/tests/lab.test.mjs",
+      "packages/api-threats/README.md"
+    ],
+    "directory": "es/api-threats-sql"
+  },
+  {
+    "locale": "es",
+    "slug": "sql-joins-null-agregaciones",
+    "title": "SQL sin totales duplicados: JOIN, NULL y agregaciones",
+    "post": "src/content/posts/es/sql-joins-null-agregaciones.md",
+    "labs": [
+      "database-fundamentals"
+    ],
+    "files": [
+      "packages/database-fundamentals/sql/04-consultas.sql",
+      "packages/database-fundamentals/README.md"
+    ],
+    "directory": "es/db-sql"
+  },
+  {
+    "locale": "es",
+    "slug": "sse-websockets-reconexion-eventos-perdidos",
+    "title": "SSE y WebSockets: reconectar no recupera los eventos que has perdido",
+    "post": "src/content/posts/es/sse-websockets-reconexion-eventos-perdidos.md",
+    "labs": [
+      "realtime-frontend"
+    ],
+    "files": [
+      "packages/realtime-frontend/src/data.ts",
+      "packages/realtime-frontend/README.md"
+    ],
+    "directory": "es/p073"
+  },
+  {
+    "locale": "es",
+    "slug": "ssrf-destinos-permitidos-redirecciones",
+    "title": "SSRF: elegir un recurso no debería permitir elegir cualquier destino de red",
+    "post": "src/content/posts/es/ssrf-destinos-permitidos-redirecciones.md",
+    "labs": [
+      "api-threats"
+    ],
+    "files": [
+      "packages/api-threats/importer.mjs",
+      "packages/api-threats/README.md"
+    ],
+    "directory": "es/api-threats-ssrf"
+  },
+  {
+    "locale": "es",
+    "slug": "ssrf-dns-validacion-conexion-ip",
+    "title": "SSRF y DNS: validar una IP no basta si te conectas después a otra",
+    "post": "src/content/posts/es/ssrf-dns-validacion-conexion-ip.md",
+    "labs": [
+      "api-threats"
+    ],
+    "files": [
+      "packages/api-threats/importer.mjs",
+      "packages/api-threats/README.md"
+    ],
+    "directory": "es/api-threats-dns"
+  },
+  {
+    "locale": "es",
+    "slug": "tablas-grandes-paginacion-virtualizacion-seleccion",
+    "title": "Tablas grandes: paginación, virtualización y qué significa seleccionar todo",
+    "post": "src/content/posts/es/tablas-grandes-paginacion-virtualizacion-seleccion.md",
+    "labs": [
+      "realtime-frontend"
+    ],
+    "files": [
+      "packages/realtime-frontend/src/data.ts",
+      "packages/realtime-frontend/README.md"
+    ],
+    "directory": "es/p071"
+  },
+  {
+    "locale": "es",
+    "slug": "tcp-udp-quic-perdida-latencia",
+    "title": "TCP, UDP y QUIC: entregar todos los datos no siempre significa llegar a tiempo",
+    "post": "src/content/posts/es/tcp-udp-quic-perdida-latencia.md",
+    "labs": [
+      "computing-networks"
+    ],
+    "files": [
+      "packages/computing-networks/concepts.mjs",
+      "packages/computing-networks/README.md"
+    ],
+    "directory": "es/p006"
+  },
+  {
+    "locale": "es",
+    "slug": "tdd-pruebas-unitarias-integracion-contrato",
+    "title": "TDD sin probar detalles internos: reglas, integración y contratos",
+    "post": "src/content/posts/es/tdd-pruebas-unitarias-integracion-contrato.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/tests/core.test.mjs",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/design-tdd"
+  },
+  {
+    "locale": "es",
+    "slug": "threat-model-api-multi-tenant-pruebas",
+    "title": "Threat modeling de una API: convertir amenazas en decisiones y pruebas",
+    "post": "src/content/posts/es/threat-model-api-multi-tenant-pruebas.md",
+    "labs": [
+      "api-threats"
+    ],
+    "files": [
+      "packages/api-threats/threat-model.json",
+      "packages/api-threats/README.md"
+    ],
+    "directory": "es/p030"
+  },
+  {
+    "locale": "es",
+    "slug": "transacciones-postgresql-ejemplos-practicos",
+    "title": "Transacciones en PostgreSQL: BEGIN, COMMIT, ROLLBACK y SAVEPOINT con ejemplos",
+    "post": "src/content/posts/es/transacciones-postgresql-ejemplos-practicos.md",
+    "labs": [
+      "transactions"
+    ],
+    "files": [
+      "packages/transactions/docker-compose.yml",
+      "packages/transactions/README.md"
+    ],
+    "directory": "es/db-transactions"
+  },
+  {
+    "locale": "es",
+    "slug": "transactional-outbox-inbox-eventos",
+    "title": "Transactional Outbox e Inbox: cerrar el hueco entre guardar y publicar",
+    "post": "src/content/posts/es/transactional-outbox-inbox-eventos.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/sql/02-atomic-write.sql",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/dist-outbox"
+  },
+  {
+    "locale": "es",
+    "slug": "transformaciones-lineales-pca-perdida-informacion",
+    "title": "Transformaciones y PCA: reducir dimensiones sin confundir varianza con utilidad",
+    "post": "src/content/posts/es/transformaciones-lineales-pca-perdida-informacion.md",
+    "labs": [
+      "mathematics-statistics"
+    ],
+    "files": [
+      "packages/mathematics-statistics/foundations.py",
+      "packages/mathematics-statistics/README.md"
+    ],
+    "directory": "es/p077"
+  },
+  {
+    "locale": "es",
+    "slug": "validacion-errores-api-problem-details",
+    "title": "Validación y errores de API: del JSON recibido a una decisión de negocio",
+    "post": "src/content/posts/es/validacion-errores-api-problem-details.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/money.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/api-errors"
+  },
+  {
+    "locale": "es",
+    "slug": "validacion-pydantic-strict-null-refinements",
+    "title": "Validación con Pydantic: tipos estrictos, campos ausentes y reglas entre campos",
+    "post": "src/content/posts/es/validacion-pydantic-strict-null-refinements.md",
+    "labs": [
+      "api-validation-errors"
+    ],
+    "files": [
+      "packages/api-validation-errors/validation.py",
+      "packages/api-validation-errors/README.md"
+    ],
+    "directory": "es/api-validation-pydantic"
+  },
+  {
+    "locale": "es",
+    "slug": "validacion-runtime-json-schema-zod-pydantic",
+    "title": "Validación de APIs: separar parsing, JSON Schema y reglas de negocio",
+    "post": "src/content/posts/es/validacion-runtime-json-schema-zod-pydantic.md",
+    "labs": [
+      "api-validation-errors"
+    ],
+    "files": [
+      "packages/api-validation-errors/cases.json",
+      "packages/api-validation-errors/reservation.schema.json",
+      "packages/api-validation-errors/README.md"
+    ],
+    "directory": "es/p022"
+  },
+  {
+    "locale": "es",
+    "slug": "validacion-temporal-cross-validation-seleccion",
+    "title": "Train, validation y test: cómo evaluar el futuro sin entrenar con él",
+    "post": "src/content/posts/es/validacion-temporal-cross-validation-seleccion.md",
+    "labs": [
+      "machine-learning"
+    ],
+    "files": [
+      "packages/machine-learning/experiments.py",
+      "packages/machine-learning/README.md"
+    ],
+    "directory": "es/p092"
+  },
+  {
+    "locale": "es",
+    "slug": "validacion-zod-contratos-errores-runtime",
+    "title": "Validación con Zod: del dato desconocido a un comando comprobado",
+    "post": "src/content/posts/es/validacion-zod-contratos-errores-runtime.md",
+    "labs": [
+      "api-validation-errors"
+    ],
+    "files": [
+      "packages/api-validation-errors/server.mjs",
+      "packages/api-validation-errors/validation.mjs",
+      "packages/api-validation-errors/README.md"
+    ],
+    "directory": "es/api-validation-zod"
+  },
+  {
+    "locale": "es",
+    "slug": "vectores-matrices-tensores-similitud",
+    "title": "Vectores, matrices y tensores: qué significan las dimensiones de tus datos",
+    "post": "src/content/posts/es/vectores-matrices-tensores-similitud.md",
+    "labs": [
+      "mathematics-statistics"
+    ],
+    "files": [
+      "packages/mathematics-statistics/foundations.py",
+      "packages/mathematics-statistics/README.md"
+    ],
+    "directory": "es/p076"
+  },
+  {
+    "locale": "es",
+    "slug": "versionado-api-deprecacion-migracion-consumidores",
+    "title": "Versionar y retirar una API: convivencia, deprecación y migración de clientes",
+    "post": "src/content/posts/es/versionado-api-deprecacion-migracion-consumidores.md",
+    "labs": [
+      "api-pagination-evolution"
+    ],
+    "files": [
+      "packages/api-pagination-evolution/README.md"
+    ],
+    "directory": "es/api-version-migration"
+  },
+  {
+    "locale": "es",
+    "slug": "webhooks-firmas-inbox-eventos-desordenados",
+    "title": "Webhooks seguros: verificar bytes, persistir y tolerar eventos desordenados",
+    "post": "src/content/posts/es/webhooks-firmas-inbox-eventos-desordenados.md",
+    "labs": [
+      "reliable-services"
+    ],
+    "files": [
+      "packages/reliable-services/src/webhook.ts",
+      "packages/reliable-services/README.md"
+    ],
+    "directory": "es/dist-webhooks"
+  },
+  {
+    "locale": "es",
+    "slug": "webrtc-audio-ice-stun-turn",
+    "title": "WebRTC: de pedir el micrófono a transportar audio y cerrar la llamada",
+    "post": "src/content/posts/es/webrtc-audio-ice-stun-turn.md",
+    "labs": [
+      "realtime-frontend"
+    ],
+    "files": [
+      "packages/realtime-frontend/src/media.ts",
+      "packages/realtime-frontend/README.md"
+    ],
+    "directory": "es/p075"
+  },
+  {
+    "locale": "es",
+    "slug": "xss-dom-texto-html-contextos",
+    "title": "XSS en el DOM: mostrar texto sin convertirlo en código",
+    "post": "src/content/posts/es/xss-dom-texto-html-contextos.md",
+    "labs": [
+      "browser-security"
+    ],
+    "files": [
+      "packages/browser-security/render.mjs",
+      "packages/browser-security/README.md"
+    ],
+    "directory": "es/p029"
+  }
+]

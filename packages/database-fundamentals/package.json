@@ -1,0 +1,9 @@
+{
+  "name": "@luisrc-examples/database-fundamentals",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:integration": "node --test tests/lab.test.mjs"
+  },
+  "packageManager": "pnpm@12.8.1"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@luisrc-examples/machine-learning",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:container": "node run.mjs tests"
+  },
+  "packageManager": "pnpm@12.8.1"
+}

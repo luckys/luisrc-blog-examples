@@ -1,0 +1,13 @@
+{
+  "name": "@luisrc-examples/api-authorization",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.19.0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "serve": "node run.mjs"
+  },
+  "packageManager": "pnpm@12.8.1"
+}

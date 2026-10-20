@@ -1,0 +1,166 @@
+[
+  {
+    "source": "packages/data-structures-algorithms/explorer.html",
+    "destination": "public/assets/interactive/algorithms-series/explorer.html"
+  },
+  {
+    "source": "packages/data-structures-algorithms/explorer.mjs",
+    "destination": "public/assets/interactive/algorithms-series/explorer.mjs"
+  },
+  {
+    "source": "packages/data-structures-algorithms/model.mjs",
+    "destination": "public/assets/interactive/algorithms-series/model.mjs"
+  },
+  {
+    "source": "packages/data-structures-algorithms/steps-model.mjs",
+    "destination": "public/assets/interactive/algorithms-series/steps-model.mjs"
+  },
+  {
+    "source": "packages/data-structures-algorithms/steps.html",
+    "destination": "public/assets/interactive/algorithms-series/steps.html"
+  },
+  {
+    "source": "packages/data-structures-algorithms/steps.mjs",
+    "destination": "public/assets/interactive/algorithms-series/steps.mjs"
+  },
+  {
+    "source": "packages/api-threats/command.mjs",
+    "destination": "public/assets/interactive/api-assignment/command.mjs"
+  },
+  {
+    "source": "packages/api-threats/explorer.css",
+    "destination": "public/assets/interactive/api-assignment/explorer.css"
+  },
+  {
+    "source": "packages/api-threats/explorer.html",
+    "destination": "public/assets/interactive/api-assignment/explorer.html"
+  },
+  {
+    "source": "packages/api-threats/explorer.mjs",
+    "destination": "public/assets/interactive/api-assignment/explorer.mjs"
+  },
+  {
+    "source": "packages/api-authorization/explorer.css",
+    "destination": "public/assets/interactive/api-authorization/explorer.css"
+  },
+  {
+    "source": "packages/api-authorization/explorer.html",
+    "destination": "public/assets/interactive/api-authorization/explorer.html"
+  },
+  {
+    "source": "packages/api-authorization/explorer.mjs",
+    "destination": "public/assets/interactive/api-authorization/explorer.mjs"
+  },
+  {
+    "source": "packages/api-authorization/policy.mjs",
+    "destination": "public/assets/interactive/api-authorization/policy.mjs"
+  },
+  {
+    "source": "packages/api-pagination-evolution/explorer.html",
+    "destination": "public/assets/interactive/api-pagination/explorer.html"
+  },
+  {
+    "source": "packages/api-pagination-evolution/explorer.mjs",
+    "destination": "public/assets/interactive/api-pagination/explorer.mjs"
+  },
+  {
+    "source": "packages/api-pagination-evolution/model.mjs",
+    "destination": "public/assets/interactive/api-pagination/model.mjs"
+  },
+  {
+    "source": "packages/api-threats/admission.mjs",
+    "destination": "public/assets/interactive/api-quota/admission.mjs"
+  },
+  {
+    "source": "packages/api-threats/quota-explorer.css",
+    "destination": "public/assets/interactive/api-quota/quota-explorer.css"
+  },
+  {
+    "source": "packages/api-threats/quota-explorer.html",
+    "destination": "public/assets/interactive/api-quota/quota-explorer.html"
+  },
+  {
+    "source": "packages/api-threats/quota-explorer.mjs",
+    "destination": "public/assets/interactive/api-quota/quota-explorer.mjs"
+  },
+  {
+    "source": "packages/api-threats/quota-model.mjs",
+    "destination": "public/assets/interactive/api-quota/quota-model.mjs"
+  },
+  {
+    "source": "packages/api-threats/ssrf-evidence.json",
+    "destination": "public/assets/interactive/api-ssrf/ssrf-evidence.json"
+  },
+  {
+    "source": "packages/api-threats/ssrf-explorer.css",
+    "destination": "public/assets/interactive/api-ssrf/ssrf-explorer.css"
+  },
+  {
+    "source": "packages/api-threats/ssrf-explorer.html",
+    "destination": "public/assets/interactive/api-ssrf/ssrf-explorer.html"
+  },
+  {
+    "source": "packages/api-threats/ssrf-explorer.mjs",
+    "destination": "public/assets/interactive/api-ssrf/ssrf-explorer.mjs"
+  },
+  {
+    "source": "packages/computing-networks/concepts.mjs",
+    "destination": "public/assets/interactive/computing-series/concepts.mjs"
+  },
+  {
+    "source": "packages/computing-networks/transport-ui.mjs",
+    "destination": "public/assets/interactive/computing-series/transport-ui.mjs"
+  },
+  {
+    "source": "packages/computing-networks/transport.html",
+    "destination": "public/assets/interactive/computing-series/transport.html"
+  },
+  {
+    "source": "packages/machine-learning/explorer.html",
+    "destination": "public/assets/interactive/ml-series/explorer.html"
+  },
+  {
+    "source": "packages/machine-learning/explorer.mjs",
+    "destination": "public/assets/interactive/ml-series/explorer.mjs"
+  },
+  {
+    "source": "packages/machine-learning/validation.json",
+    "destination": "public/assets/interactive/ml-series/validation.json"
+  },
+  {
+    "source": "packages/api-pagination-evolution/results/experiments.json",
+    "destination": "assets/evidence/api-pagination-evolution/results/experiments.json"
+  },
+  {
+    "source": "packages/database-fundamentals/results/benchmark.json",
+    "destination": "assets/evidence/database-fundamentals/results/benchmark.json"
+  },
+  {
+    "source": "packages/computing-networks/results/browser.json",
+    "destination": "assets/evidence/computing-networks/results/browser.json"
+  },
+  {
+    "source": "packages/computing-networks/results/experiments.json",
+    "destination": "assets/evidence/computing-networks/results/experiments.json"
+  },
+  {
+    "source": "packages/data-structures-algorithms/results/benchmark.json",
+    "destination": "assets/evidence/data-structures-algorithms/results/benchmark.json"
+  },
+  {
+    "source": "packages/realtime-frontend/results/dom.json",
+    "destination": "assets/evidence/realtime-frontend/results/dom.json"
+  },
+  {
+    "source": "packages/machine-learning/results/experiments.json",
+    "destination": "assets/evidence/machine-learning/results/experiments.json"
+  },
+  {
+    "source": "packages/mathematics-statistics/results/calculations.json",
+    "destination": "assets/evidence/mathematics-statistics/results/calculations.json"
+  },
+  {
+    "source": "packages/reliable-services/results/load.json",
+    "destination": "assets/evidence/reliable-services/results/load.json"
+  }
+]

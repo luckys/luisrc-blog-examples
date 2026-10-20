@@ -1,0 +1,9 @@
+{
+  "name": "@luisrc-examples/mathematics-statistics",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "python3 -B -m unittest discover -s tests -v"
+  },
+  "packageManager": "pnpm@12.8.1"
+}
