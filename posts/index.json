@@ -388,6 +388,21 @@
   },
   {
     "locale": "es",
+    "slug": "cap-pacelc-particiones-latencia-consistencia",
+    "title": "CAP y PACELC: describir qué deja de garantizar una operación cuando falla la red",
+    "post": "src/content/posts/es/cap-pacelc-particiones-latencia-consistencia.md",
+    "labs": [
+      "distributed-foundations"
+    ],
+    "files": [
+      "packages/distributed-foundations/src/replication.ts",
+      "packages/distributed-foundations/tests/replication.test.mjs",
+      "packages/distributed-foundations/README.md"
+    ],
+    "directory": "es/dist-cap"
+  },
+  {
+    "locale": "es",
     "slug": "clean-architecture-capas-direccion-dependencias",
     "title": "Capas y Clean Architecture: la dirección de los imports importa más que los nombres",
     "post": "src/content/posts/es/clean-architecture-capas-direccion-dependencias.md",
@@ -475,6 +490,21 @@
       "packages/database-fundamentals/README.md"
     ],
     "directory": "es/db-concurrency"
+  },
+  {
+    "locale": "es",
+    "slug": "consenso-raft-eleccion-lider-terminos",
+    "title": "Consenso y Raft: elegir un líder no basta para confirmar un cambio",
+    "post": "src/content/posts/es/consenso-raft-eleccion-lider-terminos.md",
+    "labs": [
+      "distributed-foundations"
+    ],
+    "files": [
+      "packages/distributed-foundations/src/voting.ts",
+      "packages/distributed-foundations/tests/voting.test.mjs",
+      "packages/distributed-foundations/README.md"
+    ],
+    "directory": "es/dist-consensus"
   },
   {
     "locale": "es",
@@ -1725,6 +1755,21 @@
   },
   {
     "locale": "es",
+    "slug": "quorum-interseccion-lecturas-escrituras",
+    "title": "Quorum: qué garantiza R + W > N y qué no puedes deducir de esa fórmula",
+    "post": "src/content/posts/es/quorum-interseccion-lecturas-escrituras.md",
+    "labs": [
+      "distributed-foundations"
+    ],
+    "files": [
+      "packages/distributed-foundations/src/quorum.ts",
+      "packages/distributed-foundations/tests/quorum.test.mjs",
+      "packages/distributed-foundations/README.md"
+    ],
+    "directory": "es/dist-quorum"
+  },
+  {
+    "locale": "es",
     "slug": "rate-limiting-token-bucket-tenant",
     "title": "Token bucket: limitar solicitudes por tenant sin confundir ráfagas y concurrencia",
     "post": "src/content/posts/es/rate-limiting-token-bucket-tenant.md",
@@ -1795,6 +1840,21 @@
   },
   {
     "locale": "es",
+    "slug": "relojes-logicos-lamport-causalidad",
+    "title": "Relojes lógicos de Lamport: ordenar eventos sin confundir una hora con una causa",
+    "post": "src/content/posts/es/relojes-logicos-lamport-causalidad.md",
+    "labs": [
+      "distributed-foundations"
+    ],
+    "files": [
+      "packages/distributed-foundations/src/clock.ts",
+      "packages/distributed-foundations/tests/clock-routing.test.mjs",
+      "packages/distributed-foundations/README.md"
+    ],
+    "directory": "es/dist-clocks"
+  },
+  {
+    "locale": "es",
     "slug": "rendimiento-frontend-medir-antes-optimizar",
     "title": "Rendimiento frontend: medir antes de añadir memo y más herramientas",
     "post": "src/content/posts/es/rendimiento-frontend-medir-antes-optimizar.md",
@@ -1807,6 +1867,22 @@
       "packages/realtime-frontend/README.md"
     ],
     "directory": "es/p070"
+  },
+  {
+    "locale": "es",
+    "slug": "replicacion-consistencia-lecturas-obsoletas",
+    "title": "Replicación y consistencia: por qué una escritura confirmada todavía puede no verse",
+    "post": "src/content/posts/es/replicacion-consistencia-lecturas-obsoletas.md",
+    "labs": [
+      "distributed-foundations"
+    ],
+    "files": [
+      "packages/distributed-foundations/src/replication.ts",
+      "packages/distributed-foundations/src/demo.ts",
+      "packages/distributed-foundations/tests/replication.test.mjs",
+      "packages/distributed-foundations/README.md"
+    ],
+    "directory": "es/p048"
   },
   {
     "locale": "es",
@@ -1924,6 +2000,22 @@
       "packages/api-identity/README.md"
     ],
     "directory": "es/p026"
+  },
+  {
+    "locale": "es",
+    "slug": "sharding-claves-buckets-rebalanceo",
+    "title": "Sharding: elegir una clave también decide qué consultas y cambios serán difíciles",
+    "post": "src/content/posts/es/sharding-claves-buckets-rebalanceo.md",
+    "labs": [
+      "distributed-foundations"
+    ],
+    "files": [
+      "packages/distributed-foundations/src/routing.ts",
+      "packages/distributed-foundations/src/demo.ts",
+      "packages/distributed-foundations/tests/clock-routing.test.mjs",
+      "packages/distributed-foundations/README.md"
+    ],
+    "directory": "es/dist-sharding"
   },
   {
     "locale": "es",

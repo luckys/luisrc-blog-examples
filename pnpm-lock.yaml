@@ -252,6 +252,15 @@ importers:
         specifier: 5.9.2
         version: 5.9.2
 
+  packages/distributed-foundations:
+    devDependencies:
+      '@types/node':
+        specifier: 24.19.0
+        version: 24.19.0
+      typescript:
+        specifier: 5.9.2
+        version: 5.9.2
+
   packages/domain-design:
     devDependencies:
       '@types/node':

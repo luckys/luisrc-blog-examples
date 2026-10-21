@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 158 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 164 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -34,6 +34,10 @@ estructura, índices y conservación de fuentes; `pnpm test:labs` ejecuta los te
 locales de Node y Python estándar, sin iniciar Docker ni instalar navegadores.
 
 ## Laboratorios
+
+El paquete [distributed-foundations](packages/distributed-foundations/README.md)
+añade modelos deterministas de réplicas, quorum, voto, Lamport y routing. Ejecuta
+`pnpm --dir packages/distributed-foundations test`; no requiere red o clúster.
 
 Los comandos de esta tabla parten de la raíz. Consulta siempre el README de cada
 laboratorio antes de iniciar servicios o ejecutar pruebas de integración.

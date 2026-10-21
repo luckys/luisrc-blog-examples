@@ -14,6 +14,7 @@ const commands = [
     "computing-networks",
     "architecture-boundaries",
     "design-principles",
+    "distributed-foundations",
     "domain-design",
     "data-structures-algorithms",
     "realtime-frontend",
