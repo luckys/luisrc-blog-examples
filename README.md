@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 136 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 146 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -43,6 +43,7 @@ laboratorio antes de iniciar servicios o ejecutar pruebas de integración.
 | [transactions](packages/transactions/README.md)                             | ACID y transacciones, español                           | `pnpm --dir packages/transactions test` (requiere PostgreSQL del lab)                  |
 | [transactions-en](packages/transactions-en/README.md)                       | El mismo laboratorio traducido al inglés                | `pnpm --dir packages/transactions-en test` (requiere PostgreSQL del lab)               |
 | [database-fundamentals](packages/database-fundamentals/README.md)           | SQL, aislamiento, índices, migraciones, Redis           | `pnpm --dir packages/database-fundamentals test:integration` (requiere Docker Compose) |
+| [domain-design](packages/domain-design/README.md) | Vocabulario, agregados, revisión optimista, C4 y ADR | `pnpm --dir packages/domain-design test` y `typecheck` |
 | [data-structures-algorithms](packages/data-structures-algorithms/README.md) | Búsquedas, ordenación, árboles y grafos                 | `pnpm --dir packages/data-structures-algorithms test`                                  |
 | [reliable-services](packages/reliable-services/README.md)                   | Invariantes, concurrencia, eventos y fallos             | `pnpm --dir packages/reliable-services test`                                           |
 | [computing-networks](packages/computing-networks/README.md)                 | Procesos, memoria, HTTP y transporte                    | `pnpm --dir packages/computing-networks test`                                          |

@@ -41,6 +41,22 @@
   },
   {
     "locale": "es",
+    "slug": "adr-decisiones-arquitectura-evidencia",
+    "title": "ADR: explicar una decisión de arquitectura sin fingir que era inevitable",
+    "post": "src/content/posts/es/adr-decisiones-arquitectura-evidencia.md",
+    "labs": [
+      "domain-design"
+    ],
+    "files": [
+      "packages/domain-design/docs/adr/0001-refund-storage.md",
+      "packages/domain-design/docs/rfc/refund-storage-review.md",
+      "packages/domain-design/tests/documentation.test.mjs",
+      "packages/domain-design/README.md"
+    ],
+    "directory": "es/arch-adr"
+  },
+  {
+    "locale": "es",
     "slug": "aislamiento-mvcc-postgresql",
     "title": "Aislamiento y MVCC en PostgreSQL: por qué dos transacciones ven datos distintos",
     "post": "src/content/posts/es/aislamiento-mvcc-postgresql.md",
@@ -252,6 +268,22 @@
   },
   {
     "locale": "es",
+    "slug": "bounded-context-limites-modelos",
+    "title": "Bounded contexts: cuándo una misma palabra necesita modelos distintos",
+    "post": "src/content/posts/es/bounded-context-limites-modelos.md",
+    "labs": [
+      "domain-design"
+    ],
+    "files": [
+      "packages/domain-design/src/contexts.ts",
+      "packages/domain-design/src/return-boundary.ts",
+      "packages/domain-design/tests/domain.test.mjs",
+      "packages/domain-design/README.md"
+    ],
+    "directory": "es/domain-contexts"
+  },
+  {
+    "locale": "es",
     "slug": "bubble-sort-intercambios-adyacentes",
     "title": "Bubble sort: qué demuestra una pasada sin intercambios",
     "post": "src/content/posts/es/bubble-sort-intercambios-adyacentes.md",
@@ -305,6 +337,21 @@
       "packages/data-structures-algorithms/README.md"
     ],
     "directory": "es/dsa-07"
+  },
+  {
+    "locale": "es",
+    "slug": "c4-contexto-contenedores-componentes",
+    "title": "C4: dibujar la arquitectura sin mezclar sistemas, procesos y clases",
+    "post": "src/content/posts/es/c4-contexto-contenedores-componentes.md",
+    "labs": [
+      "domain-design"
+    ],
+    "files": [
+      "packages/domain-design/docs/architecture.json",
+      "packages/domain-design/tests/documentation.test.mjs",
+      "packages/domain-design/README.md"
+    ],
+    "directory": "es/p047"
   },
   {
     "locale": "es",
@@ -503,6 +550,21 @@
   },
   {
     "locale": "es",
+    "slug": "ddd-lenguaje-bounded-contexts",
+    "title": "Ubiquitous Language: acordar el significado antes de escribir clases",
+    "post": "src/content/posts/es/ddd-lenguaje-bounded-contexts.md",
+    "labs": [
+      "domain-design"
+    ],
+    "files": [
+      "packages/domain-design/docs/language-examples.json",
+      "packages/domain-design/tests/concepts.test.mjs",
+      "packages/domain-design/README.md"
+    ],
+    "directory": "es/p044"
+  },
+  {
+    "locale": "es",
     "slug": "derivadas-gradientes-regla-cadena",
     "title": "Derivadas y regla de la cadena: cómo cambia una pérdida al mover un parámetro",
     "post": "src/content/posts/es/derivadas-gradientes-regla-cadena.md",
@@ -587,6 +649,38 @@
   },
   {
     "locale": "es",
+    "slug": "domain-events-hechos-confirmacion",
+    "title": "Domain events: qué ha ocurrido y cuándo podemos anunciarlo",
+    "post": "src/content/posts/es/domain-events-hechos-confirmacion.md",
+    "labs": [
+      "domain-design"
+    ],
+    "files": [
+      "packages/domain-design/src/domain.ts",
+      "packages/domain-design/src/application.ts",
+      "packages/domain-design/tests/concepts.test.mjs",
+      "packages/domain-design/README.md"
+    ],
+    "directory": "es/domain-events"
+  },
+  {
+    "locale": "es",
+    "slug": "domain-services-politicas-negocio",
+    "title": "Domain services: dónde colocar una regla que no pertenece a una entidad",
+    "post": "src/content/posts/es/domain-services-politicas-negocio.md",
+    "labs": [
+      "domain-design"
+    ],
+    "files": [
+      "packages/domain-design/src/return-policy.ts",
+      "packages/domain-design/src/return-boundary.ts",
+      "packages/domain-design/tests/concepts.test.mjs",
+      "packages/domain-design/README.md"
+    ],
+    "directory": "es/domain-services"
+  },
+  {
+    "locale": "es",
     "slug": "eda-numpy-pandas-calidad-datos",
     "title": "EDA con NumPy y pandas: qué revisar antes de entrenar un modelo",
     "post": "src/content/posts/es/eda-numpy-pandas-calidad-datos.md",
@@ -629,6 +723,21 @@
       "packages/database-fundamentals/README.md"
     ],
     "directory": "es/db-storage"
+  },
+  {
+    "locale": "es",
+    "slug": "entidades-identidad-ciclo-vida",
+    "title": "Entidades en DDD: qué permanece cuando cambian los datos",
+    "post": "src/content/posts/es/entidades-identidad-ciclo-vida.md",
+    "labs": [
+      "domain-design"
+    ],
+    "files": [
+      "packages/domain-design/src/entities.ts",
+      "packages/domain-design/tests/concepts.test.mjs",
+      "packages/domain-design/README.md"
+    ],
+    "directory": "es/domain-entities"
   },
   {
     "locale": "es",
@@ -1497,6 +1606,23 @@
   },
   {
     "locale": "es",
+    "slug": "repositorios-eventos-dominio-concurrencia",
+    "title": "Repositorios: cargar y confirmar un agregado sin perder decisiones",
+    "post": "src/content/posts/es/repositorios-eventos-dominio-concurrencia.md",
+    "labs": [
+      "domain-design"
+    ],
+    "files": [
+      "packages/domain-design/src/application.ts",
+      "packages/domain-design/src/scenarios.ts",
+      "packages/domain-design/scenarios.json",
+      "packages/domain-design/tests/domain.test.mjs",
+      "packages/domain-design/README.md"
+    ],
+    "directory": "es/domain-repositories"
+  },
+  {
+    "locale": "es",
     "slug": "requisitos-capacidad-invariantes-servicio",
     "title": "Antes de elegir arquitectura: requisitos, invariantes y capacidad",
     "post": "src/content/posts/es/requisitos-capacidad-invariantes-servicio.md",
@@ -1863,6 +1989,37 @@
       "packages/api-validation-errors/README.md"
     ],
     "directory": "es/api-validation-zod"
+  },
+  {
+    "locale": "es",
+    "slug": "value-objects-agregados-invariantes",
+    "title": "Agregados: elegir la frontera que protege una invariante",
+    "post": "src/content/posts/es/value-objects-agregados-invariantes.md",
+    "labs": [
+      "domain-design"
+    ],
+    "files": [
+      "packages/domain-design/src/domain.ts",
+      "packages/domain-design/tests/domain.test.mjs",
+      "packages/domain-design/README.md"
+    ],
+    "directory": "es/domain-aggregates"
+  },
+  {
+    "locale": "es",
+    "slug": "value-objects-igualdad-inmutabilidad",
+    "title": "Value Objects: comparar valores y evitar estados inválidos",
+    "post": "src/content/posts/es/value-objects-igualdad-inmutabilidad.md",
+    "labs": [
+      "domain-design"
+    ],
+    "files": [
+      "packages/domain-design/src/domain.ts",
+      "packages/domain-design/tests/concepts.test.mjs",
+      "packages/domain-design/tests/domain.test.mjs",
+      "packages/domain-design/README.md"
+    ],
+    "directory": "es/domain-values"
   },
   {
     "locale": "es",

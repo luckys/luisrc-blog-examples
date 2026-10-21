@@ -178,5 +178,17 @@
   {
     "source": "packages/api-integration/results/experiment.json",
     "destination": "assets/evidence/api-integration/results/experiment.json"
+  },
+  {
+    "source": "packages/domain-design/explorer.html",
+    "destination": "public/assets/interactive/domain-design/explorer.html"
+  },
+  {
+    "source": "packages/domain-design/explorer.mjs",
+    "destination": "public/assets/interactive/domain-design/explorer.mjs"
+  },
+  {
+    "source": "packages/domain-design/scenarios.json",
+    "destination": "public/assets/interactive/domain-design/scenarios.json"
   }
 ]

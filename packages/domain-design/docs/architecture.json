@@ -1,0 +1,97 @@
+{
+  "status": "proposed-target-not-deployed",
+  "system": "Returns",
+  "context": [
+    { "id": "customer", "kind": "person", "name": "Comprador" },
+    { "id": "returns", "kind": "system", "name": "Gestión de devoluciones" },
+    {
+      "id": "provider",
+      "kind": "external-system",
+      "name": "Proveedor de pagos"
+    }
+  ],
+  "containers": [
+    {
+      "id": "web",
+      "parent": "returns",
+      "technology": "Browser",
+      "responsibility": "Solicitar y consultar devolución"
+    },
+    {
+      "id": "api",
+      "parent": "returns",
+      "technology": "Node.js + TypeScript",
+      "responsibility": "Decidir y confirmar solicitudes"
+    },
+    {
+      "id": "store",
+      "parent": "returns",
+      "technology": "PostgreSQL (propuesto)",
+      "responsibility": "Persistir estado y outbox"
+    },
+    {
+      "id": "worker",
+      "parent": "returns",
+      "technology": "Node.js (propuesto)",
+      "responsibility": "Solicitar el efecto y reconciliar resultados"
+    }
+  ],
+  "components": [
+    {
+      "id": "refund-application",
+      "parent": "api",
+      "responsibility": "Coordinar el caso de uso",
+      "fixture": "src/application.ts"
+    },
+    {
+      "id": "refund-rules",
+      "parent": "api",
+      "responsibility": "Proteger límite y moneda",
+      "fixture": "src/domain.ts"
+    },
+    {
+      "id": "payment-repository",
+      "parent": "api",
+      "responsibility": "Confirmar por revisión",
+      "fixture": "src/application.ts"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "customer",
+      "to": "returns",
+      "label": "Solicita y consulta una devolución"
+    },
+    {
+      "from": "returns",
+      "to": "provider",
+      "label": "Solicita y consulta un reembolso"
+    },
+    { "from": "web", "to": "api", "label": "HTTPS + JSON (objetivo)" },
+    {
+      "from": "api",
+      "to": "store",
+      "label": "Transacción de estado y outbox (objetivo)"
+    },
+    {
+      "from": "worker",
+      "to": "store",
+      "label": "Lee trabajo y confirma progreso (objetivo)"
+    },
+    {
+      "from": "worker",
+      "to": "provider",
+      "label": "API idempotente y reconciliación (objetivo)"
+    },
+    {
+      "from": "refund-application",
+      "to": "refund-rules",
+      "label": "Invoca regla en memoria"
+    },
+    {
+      "from": "refund-application",
+      "to": "payment-repository",
+      "label": "Depende del contrato Payments"
+    }
+  ]
+}

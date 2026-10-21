@@ -1,0 +1,12 @@
+[
+  {
+    "paymentState": "captured",
+    "shipment": { "orderId": "o1", "state": "in_transit" },
+    "shippingPrecondition": "awaiting-delivery"
+  },
+  {
+    "paymentState": "captured",
+    "shipment": { "orderId": "o1", "state": "delivered" },
+    "shippingPrecondition": "eligible"
+  }
+]
