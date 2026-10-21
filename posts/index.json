@@ -383,6 +383,23 @@
   },
   {
     "locale": "es",
+    "slug": "cohesion-srp-razones-cambio",
+    "title": "Cohesión y SRP: separar lo que cambia por motivos distintos",
+    "post": "src/content/posts/es/cohesion-srp-razones-cambio.md",
+    "labs": [
+      "design-principles"
+    ],
+    "files": [
+      "packages/design-principles/src/preview.ts",
+      "packages/design-principles/src/presentation.ts",
+      "packages/design-principles/src/rates.ts",
+      "packages/design-principles/tests/principles.test.mjs",
+      "packages/design-principles/README.md"
+    ],
+    "directory": "es/p043"
+  },
+  {
+    "locale": "es",
     "slug": "colas-ack-leases-trabajos-duplicados",
     "title": "Colas y workers: cuándo confirmar un trabajo y qué pasa si se repite",
     "post": "src/content/posts/es/colas-ack-leases-trabajos-duplicados.md",
@@ -622,6 +639,23 @@
   },
   {
     "locale": "es",
+    "slug": "dip-inyeccion-dependencias-sin-contenedor",
+    "title": "DIP e inyección de dependencias: quién decide el contrato y quién conecta las piezas",
+    "post": "src/content/posts/es/dip-inyeccion-dependencias-sin-contenedor.md",
+    "labs": [
+      "design-principles"
+    ],
+    "files": [
+      "packages/design-principles/src/application.ts",
+      "packages/design-principles/src/adapters/memory.ts",
+      "packages/design-principles/src/demo.ts",
+      "packages/design-principles/tests/principles.test.mjs",
+      "packages/design-principles/README.md"
+    ],
+    "directory": "es/design-dip"
+  },
+  {
+    "locale": "es",
     "slug": "distribuciones-media-percentiles-latencia",
     "title": "Distribuciones y percentiles: qué oculta una media de latencia",
     "post": "src/content/posts/es/distribuciones-media-percentiles-latencia.md",
@@ -678,6 +712,22 @@
       "packages/domain-design/README.md"
     ],
     "directory": "es/domain-services"
+  },
+  {
+    "locale": "es",
+    "slug": "dry-duplicacion-conocimiento-abstracciones",
+    "title": "DRY: cuándo dos fragmentos repiten una regla y cuándo solo se parecen",
+    "post": "src/content/posts/es/dry-duplicacion-conocimiento-abstracciones.md",
+    "labs": [
+      "design-principles"
+    ],
+    "files": [
+      "packages/design-principles/src/eligibility.ts",
+      "packages/design-principles/src/rates.ts",
+      "packages/design-principles/tests/principles.test.mjs",
+      "packages/design-principles/README.md"
+    ],
+    "directory": "es/design-dry"
   },
   {
     "locale": "es",
@@ -1133,6 +1183,39 @@
   },
   {
     "locale": "es",
+    "slug": "isp-interfaces-consumidor-capacidades",
+    "title": "ISP: interfaces pequeñas según lo que necesita cada consumidor",
+    "post": "src/content/posts/es/isp-interfaces-consumidor-capacidades.md",
+    "labs": [
+      "design-principles"
+    ],
+    "files": [
+      "packages/design-principles/src/application.ts",
+      "packages/design-principles/src/adapters/memory.ts",
+      "packages/design-principles/src/type-examples.ts",
+      "packages/design-principles/tests/principles.test.mjs",
+      "packages/design-principles/README.md"
+    ],
+    "directory": "es/design-isp"
+  },
+  {
+    "locale": "es",
+    "slug": "kiss-yagni-diseno-necesidad-actual",
+    "title": "KISS y YAGNI: resolver la necesidad actual sin cerrar el siguiente cambio",
+    "post": "src/content/posts/es/kiss-yagni-diseno-necesidad-actual.md",
+    "labs": [
+      "design-principles"
+    ],
+    "files": [
+      "packages/design-principles/src/rates.ts",
+      "packages/design-principles/src/preview.ts",
+      "packages/design-principles/tests/principles.test.mjs",
+      "packages/design-principles/README.md"
+    ],
+    "directory": "es/design-simplicity"
+  },
+  {
+    "locale": "es",
     "slug": "linux-diagnosticar-procesos-puertos-senales",
     "title": "Linux para diagnosticar un servicio: del puerto al proceso y al cierre",
     "post": "src/content/posts/es/linux-diagnosticar-procesos-puertos-senales.md",
@@ -1144,6 +1227,23 @@
       "packages/computing-networks/README.md"
     ],
     "directory": "es/p004"
+  },
+  {
+    "locale": "es",
+    "slug": "lsp-contratos-sustitucion-comportamiento",
+    "title": "LSP: tener la misma firma no garantiza el mismo contrato",
+    "post": "src/content/posts/es/lsp-contratos-sustitucion-comportamiento.md",
+    "labs": [
+      "design-principles"
+    ],
+    "files": [
+      "packages/design-principles/src/rates.ts",
+      "packages/design-principles/src/type-examples.ts",
+      "packages/design-principles/tests/rate-contract.mjs",
+      "packages/design-principles/tests/principles.test.mjs",
+      "packages/design-principles/README.md"
+    ],
+    "directory": "es/design-lsp"
   },
   {
     "locale": "es",
@@ -1330,6 +1430,21 @@
       "packages/reliable-services/README.md"
     ],
     "directory": "es/ops-signals"
+  },
+  {
+    "locale": "es",
+    "slug": "ocp-composicion-extension-tarifas",
+    "title": "OCP y composición: añadir una variación sin reescribir la regla base",
+    "post": "src/content/posts/es/ocp-composicion-extension-tarifas.md",
+    "labs": [
+      "design-principles"
+    ],
+    "files": [
+      "packages/design-principles/src/rates.ts",
+      "packages/design-principles/tests/principles.test.mjs",
+      "packages/design-principles/README.md"
+    ],
+    "directory": "es/design-ocp"
   },
   {
     "locale": "es",
