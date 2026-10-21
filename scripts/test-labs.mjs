@@ -12,6 +12,7 @@ const commands = [
     "api-authorization",
     "api-validation-errors",
     "computing-networks",
+    "architecture-boundaries",
     "design-principles",
     "domain-design",
     "data-structures-algorithms",

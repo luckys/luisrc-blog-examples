@@ -141,6 +141,25 @@
   },
   {
     "locale": "es",
+    "slug": "arquitectura-hexagonal-puertos-adaptadores",
+    "title": "Arquitectura hexagonal: cambiar el adaptador sin cambiar el caso de uso",
+    "post": "src/content/posts/es/arquitectura-hexagonal-puertos-adaptadores.md",
+    "labs": [
+      "architecture-boundaries"
+    ],
+    "files": [
+      "packages/architecture-boundaries/src/modules/shipping/ports.ts",
+      "packages/architecture-boundaries/src/modules/shipping/application.ts",
+      "packages/architecture-boundaries/src/adapters/fixture-provider.ts",
+      "packages/architecture-boundaries/src/adapters/http-provider.ts",
+      "packages/architecture-boundaries/tests/http.test.mjs",
+      "packages/architecture-boundaries/tests/application.test.mjs",
+      "packages/architecture-boundaries/README.md"
+    ],
+    "directory": "es/p045"
+  },
+  {
+    "locale": "es",
     "slug": "arrays-listas-enlazadas-costes-reales",
     "title": "Arrays y linked lists: qué operación estás pagando realmente",
     "post": "src/content/posts/es/arrays-listas-enlazadas-costes-reales.md",
@@ -369,6 +388,24 @@
   },
   {
     "locale": "es",
+    "slug": "clean-architecture-capas-direccion-dependencias",
+    "title": "Capas y Clean Architecture: la dirección de los imports importa más que los nombres",
+    "post": "src/content/posts/es/clean-architecture-capas-direccion-dependencias.md",
+    "labs": [
+      "architecture-boundaries"
+    ],
+    "files": [
+      "packages/architecture-boundaries/src/modules/shipping/domain.ts",
+      "packages/architecture-boundaries/src/modules/shipping/ports.ts",
+      "packages/architecture-boundaries/src/modules/shipping/application.ts",
+      "packages/architecture-boundaries/scripts/check-boundaries.mjs",
+      "packages/architecture-boundaries/tests/boundaries.test.mjs",
+      "packages/architecture-boundaries/README.md"
+    ],
+    "directory": "es/arch-layers"
+  },
+  {
+    "locale": "es",
     "slug": "clustering-kmeans-dbscan-estabilidad",
     "title": "Clustering: encontrar grupos no significa haber descubierto categorías reales",
     "post": "src/content/posts/es/clustering-kmeans-dbscan-estabilidad.md",
@@ -508,6 +545,23 @@
       "packages/computing-networks/README.md"
     ],
     "directory": "es/p001"
+  },
+  {
+    "locale": "es",
+    "slug": "cqrs-modelos-lectura-consistencia",
+    "title": "CQRS: separar el modelo de lectura no obliga a separar servicios",
+    "post": "src/content/posts/es/cqrs-modelos-lectura-consistencia.md",
+    "labs": [
+      "architecture-boundaries"
+    ],
+    "files": [
+      "packages/architecture-boundaries/src/modules/reporting/internal/projection.ts",
+      "packages/architecture-boundaries/src/adapters/ledger.ts",
+      "packages/architecture-boundaries/src/demo.ts",
+      "packages/architecture-boundaries/tests/application.test.mjs",
+      "packages/architecture-boundaries/README.md"
+    ],
+    "directory": "es/arch-cqrs"
   },
   {
     "locale": "es",
@@ -1359,6 +1413,41 @@
       "packages/database-fundamentals/README.md"
     ],
     "directory": "es/db-model"
+  },
+  {
+    "locale": "es",
+    "slug": "monolito-microservicios-despliegue-costes",
+    "title": "De monolito modular a microservicios: qué problema justifica pagar el coste",
+    "post": "src/content/posts/es/monolito-microservicios-despliegue-costes.md",
+    "labs": [
+      "architecture-boundaries"
+    ],
+    "files": [
+      "packages/architecture-boundaries/docs/decisions/0001-single-deployment.md",
+      "packages/architecture-boundaries/src/adapters/http-provider.ts",
+      "packages/architecture-boundaries/tests/http.test.mjs",
+      "packages/architecture-boundaries/src/demo.ts",
+      "packages/architecture-boundaries/README.md"
+    ],
+    "directory": "es/p046"
+  },
+  {
+    "locale": "es",
+    "slug": "monolito-modular-ownership-datos-api-publica",
+    "title": "Monolito modular: quién puede cambiar los datos y por dónde se entra a un módulo",
+    "post": "src/content/posts/es/monolito-modular-ownership-datos-api-publica.md",
+    "labs": [
+      "architecture-boundaries"
+    ],
+    "files": [
+      "packages/architecture-boundaries/src/modules/shipping/public.ts",
+      "packages/architecture-boundaries/src/adapters/ledger.ts",
+      "packages/architecture-boundaries/src/modules/reporting/public.ts",
+      "packages/architecture-boundaries/scripts/check-boundaries.mjs",
+      "packages/architecture-boundaries/tests/boundaries.test.mjs",
+      "packages/architecture-boundaries/README.md"
+    ],
+    "directory": "es/arch-ownership"
   },
   {
     "locale": "es",

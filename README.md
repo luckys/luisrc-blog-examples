@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 153 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 158 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -45,6 +45,7 @@ laboratorio antes de iniciar servicios o ejecutar pruebas de integración.
 | [database-fundamentals](packages/database-fundamentals/README.md)           | SQL, aislamiento, índices, migraciones, Redis           | `pnpm --dir packages/database-fundamentals test:integration` (requiere Docker Compose) |
 | [domain-design](packages/domain-design/README.md) | Vocabulario, agregados, revisión optimista, C4 y ADR | `pnpm --dir packages/domain-design test` y `typecheck` |
 | [design-principles](packages/design-principles/README.md) | Cohesión, SOLID, KISS/YAGNI y DRY | `pnpm --dir packages/design-principles test` y `typecheck` |
+| [architecture-boundaries](packages/architecture-boundaries/README.md) | Puertos, HTTP, ownership, capas y CQRS local | `pnpm --dir packages/architecture-boundaries test` y `boundaries` |
 | [data-structures-algorithms](packages/data-structures-algorithms/README.md) | Búsquedas, ordenación, árboles y grafos                 | `pnpm --dir packages/data-structures-algorithms test`                                  |
 | [reliable-services](packages/reliable-services/README.md)                   | Invariantes, concurrencia, eventos y fallos             | `pnpm --dir packages/reliable-services test`                                           |
 | [computing-networks](packages/computing-networks/README.md)                 | Procesos, memoria, HTTP y transporte                    | `pnpm --dir packages/computing-networks test`                                          |
