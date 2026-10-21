@@ -1,0 +1,111 @@
+{
+  "node": "v24.19.0",
+  "kafka": "3.9.1",
+  "client": "KafkaJS 2.2.4",
+  "imageDigest": "sha256:4ceccc577f03f51f6af8dbfda55194d0d892f4fa7913ffbded567ce3895622ed",
+  "topology": "one disposable KRaft broker/controller; RF=1; TCP loopback; no TLS or SASL",
+  "limits": [
+    "no failover or RF>1",
+    "no timed-retention/compaction test",
+    "no process kill",
+    "read model and dedup in memory; no external effects or exactly-once claim"
+  ],
+  "cases": [
+    {
+      "case": "replay",
+      "records": [
+        {
+          "partition": 1,
+          "offset": "0",
+          "id": "s-1-v1"
+        },
+        {
+          "partition": 1,
+          "offset": "1",
+          "id": "s-2-v1"
+        },
+        {
+          "partition": 1,
+          "offset": "2",
+          "id": "s-1-v2"
+        },
+        {
+          "partition": 1,
+          "offset": "3",
+          "id": "s-2-v2"
+        },
+        {
+          "partition": 1,
+          "offset": "4",
+          "id": "s-1-v3"
+        },
+        {
+          "partition": 1,
+          "offset": "5",
+          "id": "s-2-v3"
+        }
+      ],
+      "snapshot": [
+        {
+          "shipmentId": "s-1",
+          "version": 3,
+          "status": "delivered"
+        },
+        {
+          "shipmentId": "s-2",
+          "version": 3,
+          "status": "delivered"
+        }
+      ]
+    },
+    {
+      "case": "checkpoint",
+      "uncommitted": "0",
+      "repeated": "0",
+      "resumed": [
+        "1",
+        "2"
+      ],
+      "committed": "3"
+    },
+    {
+      "case": "group",
+      "before": {
+        "one": [
+          1
+        ],
+        "two": [
+          0
+        ]
+      },
+      "after": [
+        0,
+        1
+      ],
+      "received": [
+        {
+          "member": "two",
+          "partition": 0
+        },
+        {
+          "member": "one",
+          "partition": 1
+        }
+      ]
+    },
+    {
+      "case": "pressure",
+      "high": "3",
+      "initialLag": "3",
+      "pausedLag": "2",
+      "finalLag": "0"
+    },
+    {
+      "case": "floor",
+      "mechanism": "explicit DeleteRecords, not timed retention",
+      "low": "2",
+      "high": "3",
+      "survivingVersion": 3
+    }
+  ]
+}

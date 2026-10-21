@@ -1284,6 +1284,87 @@
   },
   {
     "locale": "es",
+    "slug": "kafka-consumer-groups-rebalance-asignacion",
+    "title": "Consumer groups en Kafka: repartir particiones no es repartir efectos una sola vez",
+    "post": "src/content/posts/es/kafka-consumer-groups-rebalance-asignacion.md",
+    "labs": [
+      "kafka-streaming"
+    ],
+    "files": [
+      "packages/kafka-streaming/src/collect.ts",
+      "packages/kafka-streaming/tests/broker.test.mjs",
+      "packages/kafka-streaming/README.md"
+    ],
+    "directory": "es/kafka-groups"
+  },
+  {
+    "locale": "es",
+    "slug": "kafka-consumer-lag-backpressure-pause-resume",
+    "title": "Consumer lag y backpressure: que Kafka guarde el trabajo no aumenta tu capacidad",
+    "post": "src/content/posts/es/kafka-consumer-lag-backpressure-pause-resume.md",
+    "labs": [
+      "kafka-streaming"
+    ],
+    "files": [
+      "packages/kafka-streaming/src/offsets.ts",
+      "packages/kafka-streaming/src/collect.ts",
+      "packages/kafka-streaming/tests/broker.test.mjs",
+      "packages/kafka-streaming/README.md"
+    ],
+    "directory": "es/kafka-pressure"
+  },
+  {
+    "locale": "es",
+    "slug": "kafka-offsets-commits-reconstruir-proyeccion",
+    "title": "Offsets, commits y replay: reconstruir una proyección sin repetir sus efectos",
+    "post": "src/content/posts/es/kafka-offsets-commits-reconstruir-proyeccion.md",
+    "labs": [
+      "kafka-streaming"
+    ],
+    "files": [
+      "packages/kafka-streaming/src/offsets.ts",
+      "packages/kafka-streaming/src/projection.ts",
+      "packages/kafka-streaming/src/collect.ts",
+      "packages/kafka-streaming/tests/core.test.mjs",
+      "packages/kafka-streaming/tests/broker.test.mjs",
+      "packages/kafka-streaming/README.md"
+    ],
+    "directory": "es/kafka-replay"
+  },
+  {
+    "locale": "es",
+    "slug": "kafka-particiones-claves-orden-eventos",
+    "title": "Particiones y claves en Kafka: el orden que necesitas tiene un ámbito",
+    "post": "src/content/posts/es/kafka-particiones-claves-orden-eventos.md",
+    "labs": [
+      "kafka-streaming"
+    ],
+    "files": [
+      "packages/kafka-streaming/src/client.ts",
+      "packages/kafka-streaming/src/fixtures.ts",
+      "packages/kafka-streaming/tests/broker.test.mjs",
+      "packages/kafka-streaming/README.md"
+    ],
+    "directory": "es/kafka-partitions"
+  },
+  {
+    "locale": "es",
+    "slug": "kafka-topics-log-retencion-replay",
+    "title": "Kafka y el log retenido: leer un evento no lo elimina",
+    "post": "src/content/posts/es/kafka-topics-log-retencion-replay.md",
+    "labs": [
+      "kafka-streaming"
+    ],
+    "files": [
+      "packages/kafka-streaming/scripts/broker.mjs",
+      "packages/kafka-streaming/src/client.ts",
+      "packages/kafka-streaming/tests/broker.test.mjs",
+      "packages/kafka-streaming/README.md"
+    ],
+    "directory": "es/p051"
+  },
+  {
+    "locale": "es",
     "slug": "kiss-yagni-diseno-necesidad-actual",
     "title": "KISS y YAGNI: resolver la necesidad actual sin cerrar el siguiente cambio",
     "post": "src/content/posts/es/kiss-yagni-diseno-necesidad-actual.md",

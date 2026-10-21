@@ -15,6 +15,7 @@ const commands = [
     "architecture-boundaries",
     "design-principles",
     "distributed-foundations",
+    "kafka-streaming",
     "domain-design",
     "data-structures-algorithms",
     "realtime-frontend",
