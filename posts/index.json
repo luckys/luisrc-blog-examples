@@ -70,6 +70,22 @@
   },
   {
     "locale": "es",
+    "slug": "aislamiento-tests-postgresql-rollback-schemas",
+    "title": "Aislar tests con PostgreSQL: por qué un rollback no limpia todas las conexiones",
+    "post": "src/content/posts/es/aislamiento-tests-postgresql-rollback-schemas.md",
+    "labs": [
+      "integration-contracts"
+    ],
+    "files": [
+      "packages/integration-contracts/tests/database-fixture.mjs",
+      "packages/integration-contracts/tests/postgres.test.mjs",
+      "packages/integration-contracts/src/repository.ts",
+      "packages/integration-contracts/README.md"
+    ],
+    "directory": "es/int-isolation"
+  },
+  {
+    "locale": "es",
     "slug": "algoritmos-busqueda-ordenacion-heaps-grafos",
     "title": "Algoritmos: contratos, invariantes y complejidad antes del código",
     "post": "src/content/posts/es/algoritmos-busqueda-ordenacion-heaps-grafos.md",
@@ -505,6 +521,24 @@
       "packages/distributed-foundations/README.md"
     ],
     "directory": "es/dist-consensus"
+  },
+  {
+    "locale": "es",
+    "slug": "consumer-driven-contracts-pact-provider-states",
+    "title": "Consumer-driven contracts con Pact: verificar al proveedor sin fiarse del mock",
+    "post": "src/content/posts/es/consumer-driven-contracts-pact-provider-states.md",
+    "labs": [
+      "integration-contracts"
+    ],
+    "files": [
+      "packages/integration-contracts/tests/consumer.test.mjs",
+      "packages/integration-contracts/tests/postgres.test.mjs",
+      "packages/integration-contracts/src/consumer.ts",
+      "packages/integration-contracts/contracts/ReceiptWidget-OrdersApi.json",
+      "packages/integration-contracts/evidence/verification.json",
+      "packages/integration-contracts/README.md"
+    ],
+    "directory": "es/contract-cdc"
   },
   {
     "locale": "es",
@@ -1081,6 +1115,22 @@
       "packages/reliable-services/README.md"
     ],
     "directory": "es/ops-faults"
+  },
+  {
+    "locale": "es",
+    "slug": "fixtures-factories-datos-prueba-deterministas",
+    "title": "Fixtures y factories: datos de prueba que explican el escenario",
+    "post": "src/content/posts/es/fixtures-factories-datos-prueba-deterministas.md",
+    "labs": [
+      "integration-contracts"
+    ],
+    "files": [
+      "packages/integration-contracts/src/fixtures.ts",
+      "packages/integration-contracts/tests/core.test.mjs",
+      "packages/integration-contracts/tests/database-fixture.mjs",
+      "packages/integration-contracts/README.md"
+    ],
+    "directory": "es/int-fixtures"
   },
   {
     "locale": "es",
@@ -2061,6 +2111,23 @@
   },
   {
     "locale": "es",
+    "slug": "schema-tests-contratos-api-semantica",
+    "title": "Schema tests de APIs: JSON válido no significa comportamiento compatible",
+    "post": "src/content/posts/es/schema-tests-contratos-api-semantica.md",
+    "labs": [
+      "integration-contracts"
+    ],
+    "files": [
+      "packages/integration-contracts/schemas/order-v1.json",
+      "packages/integration-contracts/src/representation.ts",
+      "packages/integration-contracts/src/consumer.ts",
+      "packages/integration-contracts/tests/postgres.test.mjs",
+      "packages/integration-contracts/README.md"
+    ],
+    "directory": "es/contract-schema"
+  },
+  {
+    "locale": "es",
     "slug": "secretos-rotacion-recarga-revocacion",
     "title": "Rotar secretos: comprobar la nueva credencial antes de retirar la anterior",
     "post": "src/content/posts/es/secretos-rotacion-recarga-revocacion.md",
@@ -2309,6 +2376,23 @@
       "packages/testing-strategy/README.md"
     ],
     "directory": "es/test-doubles"
+  },
+  {
+    "locale": "es",
+    "slug": "testcontainers-postgresql-integracion-ciclo-vida",
+    "title": "Testcontainers con PostgreSQL: que la prueba controle su dependencia",
+    "post": "src/content/posts/es/testcontainers-postgresql-integracion-ciclo-vida.md",
+    "labs": [
+      "integration-contracts"
+    ],
+    "files": [
+      "packages/integration-contracts/tests/database-fixture.mjs",
+      "packages/integration-contracts/tests/postgres.test.mjs",
+      "packages/integration-contracts/scripts/verify.mjs",
+      "packages/integration-contracts/sql/001_orders.sql",
+      "packages/integration-contracts/README.md"
+    ],
+    "directory": "es/p056"
   },
   {
     "locale": "es",

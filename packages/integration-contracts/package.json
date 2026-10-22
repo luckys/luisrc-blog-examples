@@ -1,0 +1,22 @@
+{
+  "name": "@luisrc-examples/integration-contracts",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.19.0" },
+  "scripts": {
+    "test": "node --test tests/core.test.mjs",
+    "test:consumer": "node --test tests/consumer.test.mjs",
+    "test:integration": "node scripts/verify.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": { "pg": "8.23.1" },
+  "devDependencies": {
+    "@pact-foundation/pact": "17.1.4",
+    "@testcontainers/postgresql": "12.2.1",
+    "testcontainers": "12.2.1",
+    "ajv": "8.20.0",
+    "typescript": "5.9.2",
+    "@types/node": "24.19.0",
+    "@types/pg": "8.23.1"
+  }
+}

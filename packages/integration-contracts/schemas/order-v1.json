@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "amountMinor", "currency", "status", "createdAt"],
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string", "pattern": "^o-[a-z0-9]{1,32}$" },
+    "amountMinor": { "type": "integer", "minimum": 1, "maximum": 2147483647 },
+    "currency": { "const": "EUR" },
+    "status": { "enum": ["paid", "pending"] },
+    "createdAt": { "type": "string" },
+    "label": { "type": "string" }
+  }
+}

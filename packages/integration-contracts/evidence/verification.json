@@ -1,0 +1,117 @@
+{
+  "node": "v24.19.0",
+  "versions": {
+    "pact": "17.1.4",
+    "testcontainers": "12.2.1",
+    "pg": "8.23.1"
+  },
+  "image": "postgres:18-alpine@sha256:9a8afca54e7861fd90fab5fdf4c42477a6b1cb7d293595148e674e0a3181de15",
+  "topology": "Docker local, bind 127.0.0.1, tmpfs, PostgreSQL real, schemas por escenario y HTTP loopback.",
+  "cleanup": {
+    "remainingOwnedContainers": 0
+  },
+  "limits": "Sin Pact Broker/publicación, CI deploy matrix, datos de usuario, HA, pérdida eléctrica o benchmark.",
+  "sources": {
+    "src/consumer.ts": "625893a2f933e000021a9d6cccdee7de347305c177b1f4dcabc5c986eb3dfadb",
+    "src/fixtures.ts": "3ae306c84735afabc787c5e36edc3db6889bdfcddd1f8a3f4794e7ad714cd72d",
+    "src/http.ts": "d4ba3e88490ff23854f491ba18a6e3c045bc69bea52d8796be85eb20c974102e",
+    "src/repository.ts": "c1301042ca8ae4105be66c564f4ea54b9533a0cd62d7bc3027139248d4817d7f",
+    "src/representation.ts": "49c3e28e3096b71aa31fa76048f36eb4d565731f31948939e6320b86aca935fc",
+    "tests/consumer.test.mjs": "a9eac0554eb928e44fc567a3c322979b551c20afb2e267f6e201ce79fb99e23e",
+    "tests/core.test.mjs": "0955a6f4919fc97628e2a3960d389b6f6993ac86f93f23d663778ea7183055fd",
+    "tests/database-fixture.mjs": "399ae9997e1405931e9c000ffffa6edec27e539312637a3efeea237e4e5d964b",
+    "tests/http-fixture.mjs": "c2c83f10d2224f6d9f09634c2343b93915adda35a94169f05f7f150313694c14",
+    "tests/postgres.test.mjs": "9ae6ad5ea9856dc28127baa56811eca377a357474259a58a13952b0d1229002f",
+    "scripts/verify.mjs": "a031b9c30080e750cc1c3d1868f8948a42f42c8afdce819d81829921e8b73007",
+    "sql/001_orders.sql": "5dbd73c0a289e13421dfedcd80b882dfda742875e170d0d7524308ad58000557",
+    "schemas/order-v1.json": "bb5ac34afcc03e5af015cebdae07993f5ca00673492be677d7b02c8297efb706",
+    "contracts/ReceiptWidget-OrdersApi.json": "a05cb09d4751a7d065c5e4261fa784c59877acf0d323099b41a45a35c2c5c91d"
+  },
+  "results": [
+    {
+      "name": "core",
+      "tests": 4,
+      "status": "passed"
+    },
+    {
+      "name": "consumer",
+      "tests": 2,
+      "status": "passed"
+    },
+    {
+      "name": "postgres",
+      "tests": 9,
+      "status": "passed"
+    }
+  ],
+  "cases": [
+    {
+      "case": "database",
+      "server": "18.4",
+      "uniqueCode": "23505",
+      "checkCode": "23514",
+      "loopback": true,
+      "hostVolumes": false
+    },
+    {
+      "case": "schemas",
+      "sameId": "o-1",
+      "amounts": [
+        1250,
+        9900
+      ],
+      "distinctNamespaces": true
+    },
+    {
+      "case": "rollback",
+      "distinctConnections": true,
+      "uncommittedVisible": false,
+      "ownRolledBack": true,
+      "otherCommittedSurvives": true
+    },
+    {
+      "case": "cleanup",
+      "callbackError": "planned_failure",
+      "schemaRemaining": false
+    },
+    {
+      "case": "evolution",
+      "baselineMinor": 1250,
+      "additiveMinor": 1250,
+      "v2Minor": 1250,
+      "label": "Libro",
+      "renamedStatus": 200,
+      "renamedSchemaValid": false
+    },
+    {
+      "case": "pact-baseline",
+      "verified": true,
+      "states": [
+        "missing",
+        "paid"
+      ]
+    },
+    {
+      "case": "pact-additive",
+      "verified": true,
+      "states": [
+        "missing",
+        "paid"
+      ]
+    },
+    {
+      "case": "pact-renamed",
+      "verified": false,
+      "reason": "required amountMinor missing",
+      "httpStatus": 200
+    },
+    {
+      "case": "semantics",
+      "pactVerified": true,
+      "schemaValid": true,
+      "expectedMinor": 1250,
+      "actualMinor": 12,
+      "semanticAssertionRejects": true
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "consumer": {
+    "name": "ReceiptWidget"
+  },
+  "interactions": [
+    {
+      "description": "the receipt widget requests missing order o-2",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "no orders exist"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/orders/o-2"
+      },
+      "response": {
+        "body": {
+          "content": {
+            "error": "not_found"
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "status": 404
+      },
+      "type": "Synchronous/HTTP"
+    },
+    {
+      "description": "the receipt widget requests order o-1",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "a paid order exists"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/orders/o-1"
+      },
+      "response": {
+        "body": {
+          "content": {
+            "amountMinor": 1250,
+            "currency": "EUR",
+            "id": "o-1",
+            "status": "paid"
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "matchingRules": {
+          "body": {
+            "$.amountMinor": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "integer"
+                }
+              ]
+            }
+          }
+        },
+        "status": 200
+      },
+      "type": "Synchronous/HTTP"
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "17.1.4"
+    },
+    "pactRust": {
+      "ffi": "0.5.8",
+      "models": "1.3.16"
+    },
+    "pactSpecification": {
+      "version": "4.0"
+    }
+  },
+  "provider": {
+    "name": "OrdersApi"
+  }
+}

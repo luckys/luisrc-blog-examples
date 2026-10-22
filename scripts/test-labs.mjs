@@ -17,6 +17,7 @@ const commands = [
     "distributed-foundations",
     "kafka-streaming",
     "testing-strategy",
+    "integration-contracts",
     "domain-design",
     "data-structures-algorithms",
     "realtime-frontend",
