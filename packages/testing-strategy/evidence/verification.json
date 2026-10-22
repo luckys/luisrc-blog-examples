@@ -1,0 +1,48 @@
+{
+  "node": "v24.19.0",
+  "topology": "Un proceso por archivo de tests; SQLite real, HTTP loopback con puerto efímero.",
+  "limits": "Sin PostgreSQL, navegador de aplicación, Testcontainers, pérdida eléctrica o procesos escritores concurrentes.",
+  "sources": {
+    "src/http.ts": "9e6b9d122ac473152512bf2ad1b5bebed9bf97a5cca182eacb7a3cc439194993",
+    "src/machine.ts": "4aeeef4987777c1d89f1d77f6a6385697977476b22d8b293b88f581d209335ea",
+    "src/memory.ts": "c4acd65f2d60d3d9f93655064f8b1ef693e76d499ca5b950c0909d45443f502b",
+    "src/repository.ts": "4781fdc14137440cf655d8a27f233abd603be61deee6ad8833283bd65efdebde",
+    "src/service.ts": "5ba74f94cc91d22956d502031db6a9edb122ae48f892c473146c81534ed49253",
+    "src/sqlite.ts": "ed6e9d3b6939f88f01a2d4d6a096bef2624a7666f1901d276d1ca77144f1e5bd",
+    "src/transitions.ts": "5a9c9f2f78c3102b543509c41c75cfd927f47be74af5ba0fc67b5920321eee03",
+    "tests/core.test.mjs": "2ec18375fa58e1e3e4355ea563a2b906c4bfd1362e754d97ea3fab9c3918aa2a",
+    "tests/http.test.mjs": "e5127bb0ea2fb9be56a7e9a4f832b87198aec68663a351db2e46286149a25e75",
+    "tests/repositories.test.mjs": "161fa57e9a86c0d91b9fad2d21bcb0d7983f553cfc25b8b75d55e460def25192",
+    "tests/repository-contract.mjs": "b7dca55ba8fa5f307fd7f05eb3089db9fc409652975c609689ed8808bf878c90",
+    "tests/service.test.mjs": "3de5696a950cbcfb91991e516a7d62de6b3b4fece7512df7f1f10b16b42a4a54",
+    "tests/weak.test.mjs": "8b5388c852a981c0744d5568bed5c7c6fca67a1579cbfee4c9710085425612f4",
+    "scripts/mutate.mjs": "6761c10377de5fee013d6634e7d1dd09886100a8fbf0b0aeacddfd48dc8192ee",
+    "scripts/verify.mjs": "fdeae4da709d6bf5791e17634c1121789461f9bf15844237d7434274b3a6da77"
+  },
+  "results": [
+    {
+      "name": "core-service",
+      "tests": 28,
+      "command": "node --test --test-reporter=tap tests/core.test.mjs tests/service.test.mjs",
+      "status": "passed"
+    },
+    {
+      "name": "integration",
+      "tests": 11,
+      "command": "node --test --test-reporter=tap tests/repositories.test.mjs tests/http.test.mjs",
+      "status": "passed"
+    },
+    {
+      "name": "weak-coverage",
+      "tests": 1,
+      "command": "node --test --test-reporter=tap --experimental-test-coverage --test-coverage-include=src/transitions.ts tests/weak.test.mjs",
+      "status": "passed",
+      "coverage": {
+        "file": "src/transitions.ts",
+        "lines": 100,
+        "branches": 100,
+        "functions": 100
+      }
+    }
+  ]
+}

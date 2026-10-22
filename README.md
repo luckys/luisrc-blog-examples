@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 169 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 174 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -34,6 +34,10 @@ estructura, índices y conservación de fuentes; `pnpm test:labs` ejecuta los te
 locales de Node y Python estándar, sin iniciar Docker ni instalar navegadores.
 
 ## Laboratorios
+
+El paquete [testing-strategy](packages/testing-strategy/README.md) añade pruebas
+de reglas, doubles, un contrato Map/SQLite y HTTP real. Incluye un contraejemplo
+de coverage y cuatro mutaciones manuales; sin UI E2E o Stryker ejecutados.
 
 El paquete [kafka-streaming](packages/kafka-streaming/README.md) añade tests de
 proyección y cinco casos con un broker Kafka local aislado. La integración requiere

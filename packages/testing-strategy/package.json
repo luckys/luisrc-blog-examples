@@ -1,0 +1,15 @@
+{
+  "name": "@luisrc-examples/testing-strategy",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.19.0" },
+  "scripts": {
+    "test": "node --test tests/core.test.mjs tests/service.test.mjs",
+    "test:integration": "node --test tests/repositories.test.mjs tests/http.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "coverage:weak": "node --test --experimental-test-coverage --test-coverage-include=src/transitions.ts tests/weak.test.mjs",
+    "mutation": "node scripts/mutate.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "devDependencies": { "typescript": "5.9.2", "@types/node": "24.19.0" }
+}

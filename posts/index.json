@@ -563,6 +563,25 @@
   },
   {
     "locale": "es",
+    "slug": "coverage-mutation-testing-aserciones-que-detectan-fallos",
+    "title": "Coverage al 100 % y errores sin detectar: comprobar la fuerza de las aserciones",
+    "post": "src/content/posts/es/coverage-mutation-testing-aserciones-que-detectan-fallos.md",
+    "labs": [
+      "testing-strategy"
+    ],
+    "files": [
+      "packages/testing-strategy/tests/weak.test.mjs",
+      "packages/testing-strategy/tests/core.test.mjs",
+      "packages/testing-strategy/scripts/mutate.mjs",
+      "packages/testing-strategy/scripts/verify.mjs",
+      "packages/testing-strategy/evidence/mutations.json",
+      "packages/testing-strategy/evidence/verification.json",
+      "packages/testing-strategy/README.md"
+    ],
+    "directory": "es/test-coverage"
+  },
+  {
+    "locale": "es",
     "slug": "cpu-memoria-almacenamiento-localidad",
     "title": "CPU, memoria y almacenamiento: qué estás midiendo cuando un programa tarda",
     "post": "src/content/posts/es/cpu-memoria-almacenamiento-localidad.md",
@@ -737,6 +756,22 @@
       "packages/design-principles/README.md"
     ],
     "directory": "es/design-dip"
+  },
+  {
+    "locale": "es",
+    "slug": "disenar-pruebas-invariantes-casos-limite",
+    "title": "Diseñar pruebas desde las reglas: qué resultado distinguiría un fallo",
+    "post": "src/content/posts/es/disenar-pruebas-invariantes-casos-limite.md",
+    "labs": [
+      "testing-strategy"
+    ],
+    "files": [
+      "packages/testing-strategy/tests/core.test.mjs",
+      "packages/testing-strategy/src/transitions.ts",
+      "packages/testing-strategy/src/machine.ts",
+      "packages/testing-strategy/README.md"
+    ],
+    "directory": "es/p055"
   },
   {
     "locale": "es",
@@ -2227,6 +2262,22 @@
   },
   {
     "locale": "es",
+    "slug": "tdd-maquina-estados-red-green-refactor",
+    "title": "TDD con una máquina de estados: del primer rojo a una regla que se puede cambiar",
+    "post": "src/content/posts/es/tdd-maquina-estados-red-green-refactor.md",
+    "labs": [
+      "testing-strategy"
+    ],
+    "files": [
+      "packages/testing-strategy/tests/core.test.mjs",
+      "packages/testing-strategy/src/transitions.ts",
+      "packages/testing-strategy/src/machine.ts",
+      "packages/testing-strategy/README.md"
+    ],
+    "directory": "es/test-tdd"
+  },
+  {
+    "locale": "es",
     "slug": "tdd-pruebas-unitarias-integracion-contrato",
     "title": "TDD sin probar detalles internos: reglas, integración y contratos",
     "post": "src/content/posts/es/tdd-pruebas-unitarias-integracion-contrato.md",
@@ -2238,6 +2289,26 @@
       "packages/reliable-services/README.md"
     ],
     "directory": "es/design-tdd"
+  },
+  {
+    "locale": "es",
+    "slug": "test-doubles-stubs-spies-fakes-contratos",
+    "title": "Test doubles: usar un fake sin confundirlo con la base de datos",
+    "post": "src/content/posts/es/test-doubles-stubs-spies-fakes-contratos.md",
+    "labs": [
+      "testing-strategy"
+    ],
+    "files": [
+      "packages/testing-strategy/src/service.ts",
+      "packages/testing-strategy/src/memory.ts",
+      "packages/testing-strategy/src/repository.ts",
+      "packages/testing-strategy/src/sqlite.ts",
+      "packages/testing-strategy/tests/service.test.mjs",
+      "packages/testing-strategy/tests/repository-contract.mjs",
+      "packages/testing-strategy/tests/repositories.test.mjs",
+      "packages/testing-strategy/README.md"
+    ],
+    "directory": "es/test-doubles"
   },
   {
     "locale": "es",
@@ -2294,6 +2365,24 @@
       "packages/mathematics-statistics/README.md"
     ],
     "directory": "es/p077"
+  },
+  {
+    "locale": "es",
+    "slug": "unit-integration-e2e-fronteras-piramide-pruebas",
+    "title": "Unit, integration y E2E: elegir la frontera que puede detectar el fallo",
+    "post": "src/content/posts/es/unit-integration-e2e-fronteras-piramide-pruebas.md",
+    "labs": [
+      "testing-strategy"
+    ],
+    "files": [
+      "packages/testing-strategy/src/http.ts",
+      "packages/testing-strategy/src/sqlite.ts",
+      "packages/testing-strategy/tests/http.test.mjs",
+      "packages/testing-strategy/tests/repositories.test.mjs",
+      "packages/testing-strategy/evidence/verification.json",
+      "packages/testing-strategy/README.md"
+    ],
+    "directory": "es/test-layers"
   },
   {
     "locale": "es",

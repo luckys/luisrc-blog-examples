@@ -1,0 +1,56 @@
+{
+  "node": "v24.19.0",
+  "baseline": {
+    "weak": "passed",
+    "core": "passed"
+  },
+  "sources": {
+    "src/transitions.ts": "5a9c9f2f78c3102b543509c41c75cfd927f47be74af5ba0fc67b5920321eee03",
+    "src/machine.ts": "4aeeef4987777c1d89f1d77f6a6385697977476b22d8b293b88f581d209335ea",
+    "tests/core.test.mjs": "2ec18375fa58e1e3e4355ea563a2b906c4bfd1362e754d97ea3fab9c3918aa2a",
+    "tests/weak.test.mjs": "8b5388c852a981c0744d5568bed5c7c6fca67a1579cbfee4c9710085425612f4"
+  },
+  "scope": "Cuatro mutaciones manuales seleccionadas. No ejecución de Stryker ni score global.",
+  "results": [
+    {
+      "name": "start cancela en vez de ejecutar",
+      "file": "src/transitions.ts",
+      "before": "queued: { start: 'running'",
+      "after": "queued: { start: 'cancelled'",
+      "weak": "passed",
+      "weakScope": "executed_file",
+      "strong": "killed",
+      "firstFailingTest": "matriz: queued + start -> running"
+    },
+    {
+      "name": "un éxito acepta un fallo tardío",
+      "file": "src/transitions.ts",
+      "before": "succeeded: { succeed: 'succeeded' }",
+      "after": "succeeded: { succeed: 'succeeded', fail: 'failed' }",
+      "weak": "passed",
+      "weakScope": "executed_file",
+      "strong": "killed",
+      "firstFailingTest": "terminal: succeed repetido conserva el éxito; fail no lo revierte"
+    },
+    {
+      "name": "running acepta cancelación inmediata",
+      "file": "src/transitions.ts",
+      "before": "running: { succeed: 'succeeded', fail: 'failed' }",
+      "after": "running: { succeed: 'succeeded', fail: 'failed', cancel: 'cancelled' }",
+      "weak": "passed",
+      "weakScope": "executed_file",
+      "strong": "killed",
+      "firstFailingTest": "matriz: running + cancel -> rechazo"
+    },
+    {
+      "name": "un cambio no incrementa versión",
+      "file": "src/machine.ts",
+      "before": "version: job.version + 1",
+      "after": "version: job.version",
+      "weak": "passed",
+      "weakScope": "outside_coverage_scope",
+      "strong": "killed",
+      "firstFailingTest": "apply: no muta el original, incrementa una versión y no incrementa un duplicado"
+    }
+  ]
+}
