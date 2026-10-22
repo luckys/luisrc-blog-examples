@@ -1,0 +1,107 @@
+{
+  "node": "v24.19.0",
+  "fastCheck": "4.10.2",
+  "tests": 15,
+  "status": "passed",
+  "late": {
+    "seed": 5702,
+    "path": "5:3:6:7:6",
+    "runsBeforeFailure": 6,
+    "shrinks": 4,
+    "counterexample": [
+      [
+        "submit",
+        "confirm",
+        "decline"
+      ]
+    ]
+  },
+  "duplicate": {
+    "seed": 5702,
+    "path": "7:2:0:6:6",
+    "runsBeforeFailure": 8,
+    "shrinks": 4,
+    "counterexample": [
+      [
+        "submit",
+        "confirm",
+        "confirm"
+      ]
+    ]
+  },
+  "unstable": {
+    "seed": 5702,
+    "path": "0:1",
+    "runsBeforeFailure": 1,
+    "shrinks": 1,
+    "counterexample": [
+      [
+        "after-effect"
+      ]
+    ]
+  },
+  "replay": {
+    "sameCounterexample": true
+  },
+  "race": {
+    "seed": 5703,
+    "path": "2",
+    "replayFailed": true,
+    "regression": {
+      "value": 1,
+      "report": [
+        {
+          "status": "resolved",
+          "schedulingType": "promise",
+          "taskId": 1,
+          "label": "read"
+        },
+        {
+          "status": "resolved",
+          "schedulingType": "promise",
+          "taskId": 2,
+          "label": "read"
+        },
+        {
+          "status": "resolved",
+          "schedulingType": "promise",
+          "taskId": 3,
+          "label": "write"
+        },
+        {
+          "status": "resolved",
+          "schedulingType": "promise",
+          "taskId": 4,
+          "label": "write"
+        }
+      ]
+    }
+  },
+  "mutations": {
+    "selectedDetected": 3,
+    "weakPropertySurvivor": "duplicate-capture",
+    "automaticEngine": false
+  },
+  "bounds": {
+    "sequenceLength": 40,
+    "byteArrayLength": 300,
+    "parserBytes": 256,
+    "realProcessCrash": false,
+    "network": false
+  },
+  "sources": {
+    "src/concurrency.ts": "aaff890b93f4547d7ecb21377f90f8e76e89df8eaa16986eb6e36133698cd97c",
+    "src/money.ts": "9cd42cb7e35f3f52df1ea11968a85b88599f5acea21f8684f1c749421bc6d9fb",
+    "src/parser.ts": "6e9ce1af7d611d6ecaedc5f2f050213b5cb8a37b20391c6679c6eb43345464c8",
+    "src/payment.ts": "6349af150cb42551a458283e87912cae44d46c3ade15d47f81732d20b4d89f8c",
+    "src/recovery.ts": "38a800e965f19b96b16f54348bf1ef4f0012b1a165b0f0828f456db8e95bdfa0",
+    "tests/boundaries.test.mjs": "c2a56bf1a172d22bf2e1bc4e1b85f95e77452bc6806ccd13d6bc50e4cafa308d",
+    "tests/mutations.test.mjs": "e5c5db8a6564da52bce48d96e85b2d44fc23f9440c8a0354afda331624dd4384",
+    "tests/properties.test.mjs": "46a28b7798f22f19bf7d4a884713078d79b230838a6516fb64c195f74e3cae50",
+    "tests/recovery-fixture.mjs": "4b4078ad82c890e501bb183f880fb697091e7a65104348a23550958801b0dac8",
+    "tests/search-fixture.mjs": "23db0b9268d1e9ef9955d090931ec37061471b59f9f62db9c713e7b3d48c6c8a",
+    "tests/search.test.mjs": "70b04002240ba0d6df32a2c1511fcb41dbb5bca61a869a5caf75752bc4154ea2",
+    "tests/sequence.mjs": "d60a41a179365dff6820101305d7d19953e00bbf5a6f8200b70cc295d49fdde4",
+    "scripts/verify.mjs": "1b7077bc99f616d03d41a61904daf4f6f42346c199eb55d814a664d08d92a8ef"
+  }
+}

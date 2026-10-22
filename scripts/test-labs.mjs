@@ -18,6 +18,7 @@ const commands = [
     "kafka-streaming",
     "testing-strategy",
     "integration-contracts",
+    "property-testing",
     "domain-design",
     "data-structures-algorithms",
     "realtime-frontend",

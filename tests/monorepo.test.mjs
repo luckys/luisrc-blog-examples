@@ -10,7 +10,7 @@ const exports = JSON.parse(
   await readFile("metadata/blog-exports.json", "utf8"),
 );
 
-test("workspace: los veinticuatro laboratorios tienen nombres únicos y un único lockfile", async () => {
+test("workspace: los veinticinco laboratorios tienen nombres únicos y un único lockfile", async () => {
   const workspace = YAML.parse(await readFile("pnpm-workspace.yaml", "utf8"));
   assert.deepEqual(workspace.packages, ["packages/*"]);
   const lock = YAML.parseAllDocuments(await readFile("pnpm-lock.yaml", "utf8"))
@@ -38,6 +38,7 @@ test("workspace: los veinticuatro laboratorios tienen nombres únicos y un únic
     "kafka-streaming",
     "machine-learning",
     "mathematics-statistics",
+    "property-testing",
     "realtime-frontend",
     "reliable-services",
     "testing-strategy",
@@ -63,7 +64,7 @@ test("workspace: los veinticuatro laboratorios tienen nombres únicos y un únic
 });
 
 test("artículos: todos los índices enlazan archivos reales dentro del monorepo", async () => {
-  assert.equal(posts.length, 179);
+  assert.equal(posts.length, 186);
   const unique = new Set();
   for (const post of posts) {
     const id = `${post.locale}/${post.slug}`;

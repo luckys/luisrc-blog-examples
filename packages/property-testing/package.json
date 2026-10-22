@@ -1,0 +1,12 @@
+{
+  "name": "@luisrc-examples/property-testing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "verify": "node scripts/verify.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": { "fast-check": "4.10.2" },
+  "devDependencies": { "@types/node": "24.19.0", "typescript": "5.9.2" }
+}

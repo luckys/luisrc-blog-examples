@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 179 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 186 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -34,6 +34,10 @@ estructura, índices y conservación de fuentes; `pnpm test:labs` ejecuta los te
 locales de Node y Python estándar, sin iniciar Docker ni instalar navegadores.
 
 ## Laboratorios
+
+El paquete [property-testing](packages/property-testing/README.md) genera y reduce
+contraejemplos con fast-check. Incluye replay, scheduler, fuzzing acotado, fallos
+lógicos y tres variantes manuales; sin red, crash real o Stryker ejecutados.
 
 El paquete [integration-contracts](packages/integration-contracts/README.md)
 ejecuta PostgreSQL con Testcontainers y verifica contratos Pact locales. Docker

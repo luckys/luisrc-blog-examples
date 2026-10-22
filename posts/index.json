@@ -1118,6 +1118,23 @@
   },
   {
     "locale": "es",
+    "slug": "fault-injection-respuesta-perdida-propiedades",
+    "title": "Fault injection: perder la respuesta sin duplicar el efecto",
+    "post": "src/content/posts/es/fault-injection-respuesta-perdida-propiedades.md",
+    "labs": [
+      "property-testing"
+    ],
+    "files": [
+      "packages/property-testing/src/recovery.ts",
+      "packages/property-testing/tests/recovery-fixture.mjs",
+      "packages/property-testing/tests/boundaries.test.mjs",
+      "packages/property-testing/evidence/verification.json",
+      "packages/property-testing/README.md"
+    ],
+    "directory": "es/pbt-faults"
+  },
+  {
+    "locale": "es",
     "slug": "fixtures-factories-datos-prueba-deterministas",
     "title": "Fixtures y factories: datos de prueba que explican el escenario",
     "post": "src/content/posts/es/fixtures-factories-datos-prueba-deterministas.md",
@@ -1159,6 +1176,22 @@
       "packages/realtime-frontend/README.md"
     ],
     "directory": "es/p067"
+  },
+  {
+    "locale": "es",
+    "slug": "fuzzing-parser-bytes-generadores-estructurados",
+    "title": "Fuzzing de un parser: combinar bytes extraños con entradas que sí llegan al negocio",
+    "post": "src/content/posts/es/fuzzing-parser-bytes-generadores-estructurados.md",
+    "labs": [
+      "property-testing"
+    ],
+    "files": [
+      "packages/property-testing/src/parser.ts",
+      "packages/property-testing/src/money.ts",
+      "packages/property-testing/tests/boundaries.test.mjs",
+      "packages/property-testing/README.md"
+    ],
+    "directory": "es/pbt-fuzz"
   },
   {
     "locale": "es",
@@ -1598,6 +1631,22 @@
   },
   {
     "locale": "es",
+    "slug": "model-based-testing-secuencias-pagos",
+    "title": "Model-based testing: comprobar pagos después de cada evento",
+    "post": "src/content/posts/es/model-based-testing-secuencias-pagos.md",
+    "labs": [
+      "property-testing"
+    ],
+    "files": [
+      "packages/property-testing/src/payment.ts",
+      "packages/property-testing/tests/sequence.mjs",
+      "packages/property-testing/tests/properties.test.mjs",
+      "packages/property-testing/README.md"
+    ],
+    "directory": "es/pbt-model"
+  },
+  {
+    "locale": "es",
     "slug": "modelado-relacional-integridad-datos",
     "title": "Modelado relacional e integridad: qué reglas debe proteger la base de datos",
     "post": "src/content/posts/es/modelado-relacional-integridad-datos.md",
@@ -1658,6 +1707,24 @@
       "packages/reliable-services/README.md"
     ],
     "directory": "es/design-modules"
+  },
+  {
+    "locale": "es",
+    "slug": "mutation-testing-evaluar-propiedades",
+    "title": "Mutation testing de propiedades: mil ejemplos no arreglan una regla incompleta",
+    "post": "src/content/posts/es/mutation-testing-evaluar-propiedades.md",
+    "labs": [
+      "property-testing"
+    ],
+    "files": [
+      "packages/property-testing/tests/mutations.test.mjs",
+      "packages/property-testing/src/payment.ts",
+      "packages/property-testing/src/recovery.ts",
+      "packages/property-testing/scripts/verify.mjs",
+      "packages/property-testing/evidence/verification.json",
+      "packages/property-testing/README.md"
+    ],
+    "directory": "es/pbt-mutation"
   },
   {
     "locale": "es",
@@ -1878,6 +1945,21 @@
   },
   {
     "locale": "es",
+    "slug": "property-based-testing-generadores-invariantes",
+    "title": "Property-based testing: escribir reglas y generar ejemplos que importan",
+    "post": "src/content/posts/es/property-based-testing-generadores-invariantes.md",
+    "labs": [
+      "property-testing"
+    ],
+    "files": [
+      "packages/property-testing/src/money.ts",
+      "packages/property-testing/tests/properties.test.mjs",
+      "packages/property-testing/README.md"
+    ],
+    "directory": "es/p057"
+  },
+  {
+    "locale": "es",
     "slug": "propiedades-acid-bases-de-datos",
     "title": "Propiedades ACID: qué garantiza una base de datos y qué depende de tu código",
     "post": "src/content/posts/es/propiedades-acid-bases-de-datos.md",
@@ -1933,6 +2015,22 @@
       "packages/distributed-foundations/README.md"
     ],
     "directory": "es/dist-quorum"
+  },
+  {
+    "locale": "es",
+    "slug": "race-conditions-scheduler-fast-check",
+    "title": "Race conditions con fast-check: controlar el orden en vez de añadir sleeps",
+    "post": "src/content/posts/es/race-conditions-scheduler-fast-check.md",
+    "labs": [
+      "property-testing"
+    ],
+    "files": [
+      "packages/property-testing/src/concurrency.ts",
+      "packages/property-testing/tests/search.test.mjs",
+      "packages/property-testing/evidence/verification.json",
+      "packages/property-testing/README.md"
+    ],
+    "directory": "es/pbt-races"
   },
   {
     "locale": "es",
@@ -2199,6 +2297,24 @@
       "packages/distributed-foundations/README.md"
     ],
     "directory": "es/dist-sharding"
+  },
+  {
+    "locale": "es",
+    "slug": "shrinking-replay-contraejemplos-fast-check",
+    "title": "Shrinking y replay: convertir una secuencia aleatoria en una regresión pequeña",
+    "post": "src/content/posts/es/shrinking-replay-contraejemplos-fast-check.md",
+    "labs": [
+      "property-testing"
+    ],
+    "files": [
+      "packages/property-testing/tests/search.test.mjs",
+      "packages/property-testing/tests/search-fixture.mjs",
+      "packages/property-testing/tests/sequence.mjs",
+      "packages/property-testing/src/payment.ts",
+      "packages/property-testing/evidence/verification.json",
+      "packages/property-testing/README.md"
+    ],
+    "directory": "es/pbt-shrink"
   },
   {
     "locale": "es",
