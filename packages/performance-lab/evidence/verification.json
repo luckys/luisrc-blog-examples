@@ -1,0 +1,33 @@
+{
+  "tests": 10,
+  "status": "passed",
+  "measuredLoadStages": 7,
+  "benchmarkProcesses": 3,
+  "cpuProfiles": 3,
+  "heapSnapshots": 6,
+  "rawHeapsCommitted": false,
+  "longSoakExecuted": false,
+  "sources": {
+    "src/cache.ts": "f764c734228e5cfac8e84623bb093aba06f1929ec2d73ac7d5e9ff72d4da121d",
+    "src/server.ts": "85423fdec026a9a8963acd82695466305b2623ef6b69bef44cdf1062bb78d0ce",
+    "src/statistics.ts": "cdf90b1e9b42c19f1d00554bdbb2a7c41abab36155060f75c8f8a39bcddec60b",
+    "src/windows.ts": "4916f14438480a9a6046ce381b1df09097c0fdcab99baca59e4b71b2ef95a443",
+    "src/workload.ts": "517da7d4d6e6cbd76c4e1839b97e63018c079ee013cb167b17912693712af24a",
+    "tests/core.test.mjs": "8067df9b355ce181c7386ba7e09d94d025cec6242d4b93bf5226ba2f577de71b",
+    "tests/http.test.mjs": "6d29e2b7bc1e8622a14cc212817ccb7fb4232bb8cb31c15d4f592e223199e625",
+    "tests/profiles.test.mjs": "9a7b2e59cce4be4d8dba350a98228d2cc98c93bc24c0bd0f28fe99522c67cfd7",
+    "scripts/benchmark-child.mjs": "53c07d72f5557f8a79fb3efd243a91832b3316baffc4053a82193fa3be63b507",
+    "scripts/build-public.mjs": "ce3ac5819043b44039103250be801ae9056b9a98878ce10ed2aef12bdc4c1d58",
+    "scripts/child-fixture.mjs": "0a49e7ebcdc992db9b0220dd2bad2f44b2b2a614a8a3779294dbf342982e6262",
+    "scripts/cpu-child.mjs": "12da8ea148572a2ee0f7ed74f7bd484d847ebbc32f5d244afe5f6e3428a9ef94",
+    "scripts/heap-reader.mjs": "86a7519572391a0abb092aee4f0304ab138f12e960ea99f044a7a0d88e676c2f",
+    "scripts/install-k6.mjs": "f7377d109e783df10f274dd59c0fb469003104939a9c768addc4410b76f37365",
+    "scripts/measure-load.mjs": "fdc5d602675a183976207b5eb4a9f2d020559a3015bdb21e23b50afe0a2a649e",
+    "scripts/measure-profiles.mjs": "96a3ca1516773a1a544fb6fa78be141b567aedb76d29ca66db5efc4fbfb75998",
+    "scripts/measurement-hashes.mjs": "8a0b30241468723afdf3c5e9b63a22ef2a3dc9879f7272b3be37a9b36d210518",
+    "scripts/memory-child.mjs": "b4660a6547f4facfd2d87fa5b856e371c10518342f4161fc864f73c849978da9",
+    "scripts/server-child.mjs": "4c96ce2d2aef7dc300809d57f75ba0b8f45b7a9320e12638505a6c811cf3f12d",
+    "scripts/verify.mjs": "6cb440aa6ed26ba273444d95f3043de2252b07526a004082c2a3e3fc9d30548f",
+    "k6/load.js": "6180f250664394f4f58d9c410bd119c42ca730a7d3224ca965941d1e00b4ccfc"
+  }
+}

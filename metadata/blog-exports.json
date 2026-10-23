@@ -190,5 +190,10 @@
   {
     "source": "packages/domain-design/scenarios.json",
     "destination": "public/assets/interactive/domain-design/scenarios.json"
-  }
+  },
+  { "source": "packages/performance-lab/explorer.html", "destination": "public/assets/interactive/performance-series/explorer.html" },
+  { "source": "packages/performance-lab/explorer.mjs", "destination": "public/assets/interactive/performance-series/explorer.mjs" },
+  { "source": "packages/performance-lab/measurements.json", "destination": "public/assets/interactive/performance-series/measurements.json" },
+  { "source": "packages/performance-lab/load-results.svg", "destination": "public/assets/interactive/performance-series/load-results.svg" },
+  { "source": "packages/performance-lab/memory-results.svg", "destination": "public/assets/interactive/performance-series/memory-results.svg" }
 ]

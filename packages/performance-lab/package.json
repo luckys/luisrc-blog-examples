@@ -1,0 +1,14 @@
+{
+  "name": "@luisrc-examples/performance-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "tools:install": "node scripts/install-k6.mjs",
+    "measure:load": "node scripts/measure-load.mjs",
+    "measure:profiles": "node scripts/measure-profiles.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "devDependencies": { "@types/node": "24.19.0", "typescript": "5.9.2" }
+}

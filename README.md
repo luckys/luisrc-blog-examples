@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 186 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 193 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -34,6 +34,11 @@ estructura, índices y conservación de fuentes; `pnpm test:labs` ejecuta los te
 locales de Node y Python estándar, sin iniciar Docker ni instalar navegadores.
 
 ## Laboratorios
+
+El paquete [performance-lab](packages/performance-lab/README.md) mide HTTP con k6
+en procesos separados y captura perfiles de CPU/heap de datos ficticios. Carga
+y herramientas son opt-in; sus tests rápidos y verificación usan evidencia
+archivada. Sin cloud, soak de horas o capacidad de producción certificada.
 
 El paquete [property-testing](packages/property-testing/README.md) genera y reduce
 contraejemplos con fast-check. Incluye replay, scheduler, fuzzing acotado, fallos

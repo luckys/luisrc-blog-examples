@@ -19,6 +19,7 @@ const commands = [
     "testing-strategy",
     "integration-contracts",
     "property-testing",
+    "performance-lab",
     "domain-design",
     "data-structures-algorithms",
     "realtime-frontend",
