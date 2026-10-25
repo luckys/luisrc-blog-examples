@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 270 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 294 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -190,3 +190,19 @@ del dataset y protocolo declarados.
 `packages/autodiff-foundations`: grafo escalar compartido, backward MLP instrumentado,
 contraste real con PyTorch CPU y diferencias finitas, errores deliberados y comportamiento
 de autograd. Reutiliza pesos/modelo de neural-foundations sin alterar su entrenamiento.
+
+## Optimizers and training dynamics
+
+`packages/training-dynamics`: siete artículos P098,17curvas de entrenamiento y controles
+de actualizaciones contrastados con PyTorch CPU. Reutiliza la image existente y el
+modelo de neural-foundations. Ver [README](packages/training-dynamics/README.md).
+
+## PyTorch end-to-end training
+
+`packages/pytorch-training`: siete artículos P099,entrenamiento real con loaders/módulos,
+validación y archivos de inferencia/reanudación verificados. Ver [README](packages/pytorch-training/README.md).
+
+## Generalization and stability
+
+`packages/generalization-stability`: diez artículos P100,18entrenamientos reales,
+controles de capas/estabilidad yresultados negativos preservados. Ver [README](packages/generalization-stability/README.md).

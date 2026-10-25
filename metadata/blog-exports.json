@@ -434,5 +434,101 @@
   {
     "source": "packages/autodiff-foundations/gradient-vector.svg",
     "destination": "public/assets/interactive/autodiff-foundations/gradient-vector.svg"
+  },
+  {
+    "source": "packages/training-dynamics/explorer.html",
+    "destination": "public/assets/interactive/training-dynamics/explorer.html"
+  },
+  {
+    "source": "packages/training-dynamics/explorer.mjs",
+    "destination": "public/assets/interactive/training-dynamics/explorer.mjs"
+  },
+  {
+    "source": "packages/training-dynamics/model.mjs",
+    "destination": "public/assets/interactive/training-dynamics/model.mjs"
+  },
+  {
+    "source": "packages/training-dynamics/charts.mjs",
+    "destination": "public/assets/interactive/training-dynamics/charts.mjs"
+  },
+  {
+    "source": "packages/training-dynamics/comparison.json",
+    "destination": "public/assets/interactive/training-dynamics/comparison.json"
+  },
+  {
+    "source": "packages/training-dynamics/optimizer-curves.svg",
+    "destination": "public/assets/interactive/training-dynamics/optimizer-curves.svg"
+  },
+  {
+    "source": "packages/training-dynamics/batch-curves.svg",
+    "destination": "public/assets/interactive/training-dynamics/batch-curves.svg"
+  },
+  {
+    "source": "packages/training-dynamics/learning-rates.svg",
+    "destination": "public/assets/interactive/training-dynamics/learning-rates.svg"
+  },
+  {
+    "source": "packages/pytorch-training/explorer.html",
+    "destination": "public/assets/interactive/pytorch-training/explorer.html"
+  },
+  {
+    "source": "packages/pytorch-training/explorer.mjs",
+    "destination": "public/assets/interactive/pytorch-training/explorer.mjs"
+  },
+  {
+    "source": "packages/pytorch-training/model.mjs",
+    "destination": "public/assets/interactive/pytorch-training/model.mjs"
+  },
+  {
+    "source": "packages/pytorch-training/charts.mjs",
+    "destination": "public/assets/interactive/pytorch-training/charts.mjs"
+  },
+  {
+    "source": "packages/pytorch-training/comparison.json",
+    "destination": "public/assets/interactive/pytorch-training/comparison.json"
+  },
+  {
+    "source": "packages/pytorch-training/training-curves.svg",
+    "destination": "public/assets/interactive/pytorch-training/training-curves.svg"
+  },
+  {
+    "source": "packages/pytorch-training/resume-errors.svg",
+    "destination": "public/assets/interactive/pytorch-training/resume-errors.svg"
+  },
+  {
+    "source": "packages/generalization-stability/explorer.html",
+    "destination": "public/assets/interactive/generalization-stability/explorer.html"
+  },
+  {
+    "source": "packages/generalization-stability/explorer.mjs",
+    "destination": "public/assets/interactive/generalization-stability/explorer.mjs"
+  },
+  {
+    "source": "packages/generalization-stability/model.mjs",
+    "destination": "public/assets/interactive/generalization-stability/model.mjs"
+  },
+  {
+    "source": "packages/generalization-stability/charts.mjs",
+    "destination": "public/assets/interactive/generalization-stability/charts.mjs"
+  },
+  {
+    "source": "packages/generalization-stability/comparison.json",
+    "destination": "public/assets/interactive/generalization-stability/comparison.json"
+  },
+  {
+    "source": "packages/generalization-stability/overfit-curves.svg",
+    "destination": "public/assets/interactive/generalization-stability/overfit-curves.svg"
+  },
+  {
+    "source": "packages/generalization-stability/overfit-functions.svg",
+    "destination": "public/assets/interactive/generalization-stability/overfit-functions.svg"
+  },
+  {
+    "source": "packages/generalization-stability/bias-variance.svg",
+    "destination": "public/assets/interactive/generalization-stability/bias-variance.svg"
+  },
+  {
+    "source": "packages/generalization-stability/clipping-curves.svg",
+    "destination": "public/assets/interactive/generalization-stability/clipping-curves.svg"
   }
 ]

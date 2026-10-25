@@ -1,0 +1,47 @@
+{
+  "dataset": {
+    "trainPerQuadrant": 64,
+    "validationPerQuadrant": 32,
+    "trainSeed": 101,
+    "validationSeed": 102,
+    "halfWidth": 0.45
+  },
+  "architecture": {
+    "inputs": 2,
+    "width": 4,
+    "outputs": 1,
+    "activation": "tanh"
+  },
+  "dtype": "float64",
+  "device": "cpu",
+  "epochs": 60,
+  "checkpointEpoch": 30,
+  "batchSize": 30,
+  "evaluationBatchSize": 50,
+  "loaderSeed": 420,
+  "initialSeeds": [
+    7,
+    19,
+    31
+  ],
+  "torchSeed": 700,
+  "optimizer": {
+    "lr": 0.1,
+    "momentum": 0.9,
+    "weight_decay": 0.0
+  },
+  "scheduler": {
+    "step_size": 20,
+    "gamma": 0.5
+  },
+  "numWorkers": 0,
+  "dropLast": false,
+  "limits": {
+    "testSetEvaluated": false,
+    "gpuTested": false,
+    "workersTested": false,
+    "midEpochResumeTested": false,
+    "timingBenchmark": false,
+    "productionModel": false
+  }
+}

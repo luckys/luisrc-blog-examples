@@ -1,0 +1,100 @@
+{
+  "dataset": {
+    "trainPerQuadrant": 64,
+    "validationPerQuadrant": 32,
+    "trainSeed": 101,
+    "validationSeed": 102,
+    "halfWidth": 0.45
+  },
+  "architecture": [
+    2,
+    4,
+    1
+  ],
+  "dtype": "float64",
+  "epochs": 80,
+  "batchSize": 32,
+  "orderSeed": 420,
+  "initialSeeds": [
+    7,
+    19,
+    31
+  ],
+  "optimizers": {
+    "sgd": {
+      "lr": 0.1,
+      "decay": 0.0
+    },
+    "momentum": {
+      "lr": 0.1,
+      "decay": 0.0,
+      "beta": 0.9
+    },
+    "adam": {
+      "lr": 0.01,
+      "decay": 0.0,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "epsilon": 1e-08
+    },
+    "adamw": {
+      "lr": 0.01,
+      "decay": 0.01,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "epsilon": 1e-08
+    }
+  },
+  "ablations": [
+    {
+      "name": "sgd-slow",
+      "optimizer": "sgd",
+      "lr": 0.001
+    },
+    {
+      "name": "sgd-large",
+      "optimizer": "sgd",
+      "lr": 1.0
+    },
+    {
+      "name": "sgd-batch16",
+      "optimizer": "sgd",
+      "batchSize": 16
+    },
+    {
+      "name": "sgd-full",
+      "optimizer": "sgd",
+      "batchSize": 256
+    },
+    {
+      "name": "momentum-cosine",
+      "optimizer": "momentum",
+      "schedule": "warmup_cosine"
+    }
+  ],
+  "schedule": {
+    "warmupUpdates": 40,
+    "minFactor": 0.1
+  },
+  "accumulation": {
+    "sizes": [
+      5,
+      5,
+      3
+    ],
+    "microSize": 10,
+    "epochs": 5
+  },
+  "limits": {
+    "optimizerRanking": false,
+    "timingBenchmark": false,
+    "testSetEvaluated": false,
+    "memoryMeasured": false,
+    "gpuTested": false,
+    "distributedTested": false
+  }
+}

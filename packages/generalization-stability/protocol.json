@@ -1,0 +1,74 @@
+{
+  "data": {
+    "trainCount": 24,
+    "validationCount": 256,
+    "trainSeed": 101,
+    "validationSeed": 102,
+    "noiseStd": 0.25,
+    "outlierIndex": 8,
+    "outlierShift": 1.25,
+    "gridCount": 101
+  },
+  "model": {
+    "inputs": 1,
+    "width": 64,
+    "hiddenLayers": 2,
+    "outputs": 1,
+    "activation": "relu"
+  },
+  "dtype": "float64",
+  "epochs": 2000,
+  "monitorEvery": 10,
+  "initialSeeds": [
+    7,
+    19,
+    31
+  ],
+  "dropoutSeed": 700,
+  "lr": 0.01,
+  "variants": {
+    "baseline": {},
+    "dropout": {
+      "dropout": 0.15
+    },
+    "weight_decay": {
+      "weightDecay": 0.01
+    },
+    "batch_norm": {
+      "normalization": "batch"
+    },
+    "layer_norm": {
+      "normalization": "layer"
+    },
+    "early_stopping": {
+      "early": true
+    }
+  },
+  "earlyStopping": {
+    "patience": 10,
+    "minDelta": 0.0
+  },
+  "normalization": {
+    "epsilon": 1e-05,
+    "momentum": 0.1
+  },
+  "biasVariance": {
+    "datasets": 32,
+    "trainCount": 24,
+    "firstSeed": 200,
+    "degrees": [
+      1,
+      5,
+      15
+    ],
+    "ridge": 0.0001,
+    "noiseStd": 0.25
+  },
+  "limits": {
+    "testSetEvaluated": false,
+    "gpuTested": false,
+    "timingBenchmark": false,
+    "universalRanking": false,
+    "populationBiasEstimatedExactly": false
+  }
+}

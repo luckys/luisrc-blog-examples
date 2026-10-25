@@ -36,6 +36,9 @@ const commands = [
     "reliable-services",
     "mathematics-statistics",
     "neural-foundations",
+    "training-dynamics",
+    "pytorch-training",
+    "generalization-stability",
   ].map((lab) => ["--dir", `packages/${lab}`, "test"]),
   [
     "--dir",

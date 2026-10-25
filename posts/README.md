@@ -305,3 +305,36 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - [Backpropagation en una MLP: derivar pesos, bias y tanh con sus dimensiones](es/dl-backprop/README.md).
 - [Gradient checking: comprobar un backward sin confiar solo en que la loss baje](es/dl-gradcheck/README.md).
 - [Autograd en PyTorch: qué calcula backward y qué puede cortar el grafo](es/dl-autodiff/README.md).
+
+## Optimizers and training dynamics
+
+- **es · p098**: [Epochs y batches: qué estás comparando cuando una red aprende antes](es/p098/README.md)
+- **es · dl-sgd**: [SGD y learning rate: por qué un gradiente correcto puede dar un mal paso](es/dl-sgd/README.md)
+- **es · dl-momentum**: [Momentum: qué recuerda el optimizador entre dos batches](es/dl-momentum/README.md)
+- **es · dl-adam**: [Adam: dos estimaciones por parámetro y una escala que cambia](es/dl-adam/README.md)
+- **es · dl-adamw**: [AdamW y weight decay: por qué añadir L2 a Adam cambia otra cosa](es/dl-adamw/README.md)
+- **es · dl-schedules**: [Learning rate schedules: poner un reloj al tamaño del paso](es/dl-schedules/README.md)
+- **es · dl-accumulation**: [Gradient accumulation: sumar trabajo pequeño sin cambiar el batch que optimizas](es/dl-accumulation/README.md)
+
+## PyTorch end-to-end training
+
+- **es · p099**: [Tensores en PyTorch: una shape incorrecta puede cambiar el problema](es/p099/README.md)
+- **es · dl-dataloader**: [Dataset y DataLoader: quién decide qué muestras llegan al modelo](es/dl-dataloader/README.md)
+- **es · dl-module**: [nn.Module: registrar parámetros y construir un forward que devuelve logits](es/dl-module/README.md)
+- **es · dl-torch-loop**: [Un training loop en PyTorch: qué cambia en zero_grad, backward y step](es/dl-torch-loop/README.md)
+- **es · dl-evaluation**: [train, eval y no_grad: tres decisiones que no hacen lo mismo](es/dl-evaluation/README.md)
+- **es · dl-checkpoint**: [Guardar un modelo PyTorch: recuperar las mismas predicciones](es/dl-checkpoint/README.md)
+- **es · dl-resume**: [Reanudar un entrenamiento PyTorch: por qué guardar los pesos no basta](es/dl-resume/README.md)
+
+## Generalization and stability
+
+- **es · p100**: [Overfitting y underfitting: interpretar las curvas antes de cambiar la red](es/p100/README.md)
+- **es · dl-bias-variance**: [Bias y variance: qué cambia cuando cambia la muestra de entrenamiento](es/dl-bias-variance/README.md)
+- **es · dl-initialization**: [Initialization: cómo llegan activaciones y gradientes a la primera actualización](es/dl-initialization/README.md)
+- **es · dl-activation-stability**: [Activations y gradientes: saturación, ReLU inactiva y productos a través de capas](es/dl-activation-stability/README.md)
+- **es · dl-batchnorm**: [BatchNorm: normalizar un canal también introduce estado y dependencia del batch](es/dl-batchnorm/README.md)
+- **es · dl-layernorm**: [LayerNorm: elegir los ejes que normalizas cambia la representación](es/dl-layernorm/README.md)
+- **es · dl-dropout**: [Dropout: qué se elimina, qué se escala y por qué no siempre mejora](es/dl-dropout/README.md)
+- **es · dl-weight-decay**: [Weight decay: decidir qué contraer y comprobar qué ocurre fuera de train](es/dl-weight-decay/README.md)
+- **es · dl-early-stopping**: [Early stopping: detenerse y recuperar el mejor checkpoint son dos decisiones](es/dl-early-stopping/README.md)
+- **es · dl-gradient-clipping**: [Gradient clipping: limitar el gradiente no garantiza limitar cualquier optimizer step](es/dl-gradient-clipping/README.md)

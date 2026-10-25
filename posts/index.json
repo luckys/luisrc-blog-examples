@@ -4227,5 +4227,520 @@
       "packages/neural-foundations/results/training.json"
     ],
     "directory": "es/dl-autodiff"
+  },
+  {
+    "locale": "es",
+    "slug": "adam-momentos-bias-correction-epsilon",
+    "title": "Adam: dos estimaciones por parámetro y una escala que cambia",
+    "post": "src/content/posts/es/adam-momentos-bias-correction-epsilon.md",
+    "labs": [
+      "training-dynamics",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/training-dynamics/optimizers.py",
+      "packages/training-dynamics/training.py",
+      "packages/training-dynamics/experiments.py",
+      "packages/training-dynamics/protocol.json",
+      "packages/training-dynamics/tests/test_optimizers.py",
+      "packages/training-dynamics/tests/test_training.py",
+      "packages/training-dynamics/results/training.json",
+      "packages/training-dynamics/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/dl-adam"
+  },
+  {
+    "locale": "es",
+    "slug": "adamw-weight-decay-regularizacion-l2",
+    "title": "AdamW y weight decay: por qué añadir L2 a Adam cambia otra cosa",
+    "post": "src/content/posts/es/adamw-weight-decay-regularizacion-l2.md",
+    "labs": [
+      "training-dynamics",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/training-dynamics/optimizers.py",
+      "packages/training-dynamics/training.py",
+      "packages/training-dynamics/experiments.py",
+      "packages/training-dynamics/protocol.json",
+      "packages/training-dynamics/tests/test_optimizers.py",
+      "packages/training-dynamics/tests/test_training.py",
+      "packages/training-dynamics/results/training.json",
+      "packages/training-dynamics/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/dl-adamw"
+  },
+  {
+    "locale": "es",
+    "slug": "epochs-batches-minibatches-comparar-entrenamientos",
+    "title": "Epochs y batches: qué estás comparando cuando una red aprende antes",
+    "post": "src/content/posts/es/epochs-batches-minibatches-comparar-entrenamientos.md",
+    "labs": [
+      "training-dynamics",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/training-dynamics/optimizers.py",
+      "packages/training-dynamics/training.py",
+      "packages/training-dynamics/experiments.py",
+      "packages/training-dynamics/protocol.json",
+      "packages/training-dynamics/tests/test_optimizers.py",
+      "packages/training-dynamics/tests/test_training.py",
+      "packages/training-dynamics/results/training.json",
+      "packages/training-dynamics/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/p098"
+  },
+  {
+    "locale": "es",
+    "slug": "gradient-accumulation-microbatches-media-ponderada",
+    "title": "Gradient accumulation: sumar trabajo pequeño sin cambiar el batch que optimizas",
+    "post": "src/content/posts/es/gradient-accumulation-microbatches-media-ponderada.md",
+    "labs": [
+      "training-dynamics",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/training-dynamics/optimizers.py",
+      "packages/training-dynamics/training.py",
+      "packages/training-dynamics/experiments.py",
+      "packages/training-dynamics/protocol.json",
+      "packages/training-dynamics/tests/test_optimizers.py",
+      "packages/training-dynamics/tests/test_training.py",
+      "packages/training-dynamics/results/training.json",
+      "packages/training-dynamics/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/dl-accumulation"
+  },
+  {
+    "locale": "es",
+    "slug": "learning-rate-schedules-warmup-cosine-updates",
+    "title": "Learning rate schedules: poner un reloj al tamaño del paso",
+    "post": "src/content/posts/es/learning-rate-schedules-warmup-cosine-updates.md",
+    "labs": [
+      "training-dynamics",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/training-dynamics/optimizers.py",
+      "packages/training-dynamics/training.py",
+      "packages/training-dynamics/experiments.py",
+      "packages/training-dynamics/protocol.json",
+      "packages/training-dynamics/tests/test_optimizers.py",
+      "packages/training-dynamics/tests/test_training.py",
+      "packages/training-dynamics/results/training.json",
+      "packages/training-dynamics/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/dl-schedules"
+  },
+  {
+    "locale": "es",
+    "slug": "momentum-gradientes-estado-optimizador",
+    "title": "Momentum: qué recuerda el optimizador entre dos batches",
+    "post": "src/content/posts/es/momentum-gradientes-estado-optimizador.md",
+    "labs": [
+      "training-dynamics",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/training-dynamics/optimizers.py",
+      "packages/training-dynamics/training.py",
+      "packages/training-dynamics/experiments.py",
+      "packages/training-dynamics/protocol.json",
+      "packages/training-dynamics/tests/test_optimizers.py",
+      "packages/training-dynamics/tests/test_training.py",
+      "packages/training-dynamics/results/training.json",
+      "packages/training-dynamics/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/dl-momentum"
+  },
+  {
+    "locale": "es",
+    "slug": "sgd-learning-rate-diagnosticar-pasos",
+    "title": "SGD y learning rate: por qué un gradiente correcto puede dar un mal paso",
+    "post": "src/content/posts/es/sgd-learning-rate-diagnosticar-pasos.md",
+    "labs": [
+      "training-dynamics",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/training-dynamics/optimizers.py",
+      "packages/training-dynamics/training.py",
+      "packages/training-dynamics/experiments.py",
+      "packages/training-dynamics/protocol.json",
+      "packages/training-dynamics/tests/test_optimizers.py",
+      "packages/training-dynamics/tests/test_training.py",
+      "packages/training-dynamics/results/training.json",
+      "packages/training-dynamics/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/dl-sgd"
+  },
+  {
+    "locale": "es",
+    "slug": "pytorch-tensores-shapes-dtype-broadcasting",
+    "title": "Tensores en PyTorch: una shape incorrecta puede cambiar el problema",
+    "post": "src/content/posts/es/pytorch-tensores-shapes-dtype-broadcasting.md",
+    "labs": [
+      "pytorch-training",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/pytorch-training/pipeline.py",
+      "packages/pytorch-training/checkpoints.py",
+      "packages/pytorch-training/probes.py",
+      "packages/pytorch-training/experiments.py",
+      "packages/pytorch-training/protocol.json",
+      "packages/pytorch-training/tests/test_pipeline.py",
+      "packages/pytorch-training/tests/test_contracts.py",
+      "packages/pytorch-training/results/training.json",
+      "packages/pytorch-training/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/p099"
+  },
+  {
+    "locale": "es",
+    "slug": "pytorch-dataset-dataloader-orden-batches",
+    "title": "Dataset y DataLoader: quién decide qué muestras llegan al modelo",
+    "post": "src/content/posts/es/pytorch-dataset-dataloader-orden-batches.md",
+    "labs": [
+      "pytorch-training",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/pytorch-training/pipeline.py",
+      "packages/pytorch-training/checkpoints.py",
+      "packages/pytorch-training/probes.py",
+      "packages/pytorch-training/experiments.py",
+      "packages/pytorch-training/protocol.json",
+      "packages/pytorch-training/tests/test_pipeline.py",
+      "packages/pytorch-training/tests/test_contracts.py",
+      "packages/pytorch-training/results/training.json",
+      "packages/pytorch-training/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/dl-dataloader"
+  },
+  {
+    "locale": "es",
+    "slug": "pytorch-nn-module-linear-parametros-logits",
+    "title": "nn.Module: registrar parámetros y construir un forward que devuelve logits",
+    "post": "src/content/posts/es/pytorch-nn-module-linear-parametros-logits.md",
+    "labs": [
+      "pytorch-training",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/pytorch-training/pipeline.py",
+      "packages/pytorch-training/checkpoints.py",
+      "packages/pytorch-training/probes.py",
+      "packages/pytorch-training/experiments.py",
+      "packages/pytorch-training/protocol.json",
+      "packages/pytorch-training/tests/test_pipeline.py",
+      "packages/pytorch-training/tests/test_contracts.py",
+      "packages/pytorch-training/results/training.json",
+      "packages/pytorch-training/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/dl-module"
+  },
+  {
+    "locale": "es",
+    "slug": "pytorch-training-loop-zero-grad-backward-step",
+    "title": "Un training loop en PyTorch: qué cambia en zero_grad, backward y step",
+    "post": "src/content/posts/es/pytorch-training-loop-zero-grad-backward-step.md",
+    "labs": [
+      "pytorch-training",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/pytorch-training/pipeline.py",
+      "packages/pytorch-training/checkpoints.py",
+      "packages/pytorch-training/probes.py",
+      "packages/pytorch-training/experiments.py",
+      "packages/pytorch-training/protocol.json",
+      "packages/pytorch-training/tests/test_pipeline.py",
+      "packages/pytorch-training/tests/test_contracts.py",
+      "packages/pytorch-training/results/training.json",
+      "packages/pytorch-training/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/dl-torch-loop"
+  },
+  {
+    "locale": "es",
+    "slug": "pytorch-train-eval-no-grad-validacion",
+    "title": "train, eval y no_grad: tres decisiones que no hacen lo mismo",
+    "post": "src/content/posts/es/pytorch-train-eval-no-grad-validacion.md",
+    "labs": [
+      "pytorch-training",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/pytorch-training/pipeline.py",
+      "packages/pytorch-training/checkpoints.py",
+      "packages/pytorch-training/probes.py",
+      "packages/pytorch-training/experiments.py",
+      "packages/pytorch-training/protocol.json",
+      "packages/pytorch-training/tests/test_pipeline.py",
+      "packages/pytorch-training/tests/test_contracts.py",
+      "packages/pytorch-training/results/training.json",
+      "packages/pytorch-training/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/dl-evaluation"
+  },
+  {
+    "locale": "es",
+    "slug": "pytorch-guardar-cargar-state-dict-predicciones",
+    "title": "Guardar un modelo PyTorch: recuperar las mismas predicciones",
+    "post": "src/content/posts/es/pytorch-guardar-cargar-state-dict-predicciones.md",
+    "labs": [
+      "pytorch-training",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/pytorch-training/pipeline.py",
+      "packages/pytorch-training/checkpoints.py",
+      "packages/pytorch-training/probes.py",
+      "packages/pytorch-training/experiments.py",
+      "packages/pytorch-training/protocol.json",
+      "packages/pytorch-training/tests/test_pipeline.py",
+      "packages/pytorch-training/tests/test_contracts.py",
+      "packages/pytorch-training/results/training.json",
+      "packages/pytorch-training/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/dl-checkpoint"
+  },
+  {
+    "locale": "es",
+    "slug": "pytorch-reanudar-checkpoint-optimizador-scheduler-rng",
+    "title": "Reanudar un entrenamiento PyTorch: por qué guardar los pesos no basta",
+    "post": "src/content/posts/es/pytorch-reanudar-checkpoint-optimizador-scheduler-rng.md",
+    "labs": [
+      "pytorch-training",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/pytorch-training/pipeline.py",
+      "packages/pytorch-training/checkpoints.py",
+      "packages/pytorch-training/probes.py",
+      "packages/pytorch-training/experiments.py",
+      "packages/pytorch-training/protocol.json",
+      "packages/pytorch-training/tests/test_pipeline.py",
+      "packages/pytorch-training/tests/test_contracts.py",
+      "packages/pytorch-training/results/training.json",
+      "packages/pytorch-training/README.md",
+      "packages/neural-foundations/neural.py"
+    ],
+    "directory": "es/dl-resume"
+  },
+  {
+    "locale": "es",
+    "slug": "overfitting-underfitting-curvas-error-generalizacion",
+    "title": "Overfitting y underfitting: interpretar las curvas antes de cambiar la red",
+    "post": "src/content/posts/es/overfitting-underfitting-curvas-error-generalizacion.md",
+    "labs": [
+      "generalization-stability"
+    ],
+    "files": [
+      "packages/generalization-stability/training.py",
+      "packages/generalization-stability/probes.py",
+      "packages/generalization-stability/experiments.py",
+      "packages/generalization-stability/protocol.json",
+      "packages/generalization-stability/tests/test_training.py",
+      "packages/generalization-stability/tests/test_probes.py",
+      "packages/generalization-stability/results/training.json",
+      "packages/generalization-stability/README.md"
+    ],
+    "directory": "es/p100"
+  },
+  {
+    "locale": "es",
+    "slug": "bias-variance-descomposicion-error-muestras",
+    "title": "Bias y variance: qué cambia cuando cambia la muestra de entrenamiento",
+    "post": "src/content/posts/es/bias-variance-descomposicion-error-muestras.md",
+    "labs": [
+      "generalization-stability"
+    ],
+    "files": [
+      "packages/generalization-stability/training.py",
+      "packages/generalization-stability/probes.py",
+      "packages/generalization-stability/experiments.py",
+      "packages/generalization-stability/protocol.json",
+      "packages/generalization-stability/tests/test_training.py",
+      "packages/generalization-stability/tests/test_probes.py",
+      "packages/generalization-stability/results/training.json",
+      "packages/generalization-stability/README.md"
+    ],
+    "directory": "es/dl-bias-variance"
+  },
+  {
+    "locale": "es",
+    "slug": "initialization-xavier-he-simetria-gradientes",
+    "title": "Initialization: cómo llegan activaciones y gradientes a la primera actualización",
+    "post": "src/content/posts/es/initialization-xavier-he-simetria-gradientes.md",
+    "labs": [
+      "generalization-stability"
+    ],
+    "files": [
+      "packages/generalization-stability/training.py",
+      "packages/generalization-stability/probes.py",
+      "packages/generalization-stability/experiments.py",
+      "packages/generalization-stability/protocol.json",
+      "packages/generalization-stability/tests/test_training.py",
+      "packages/generalization-stability/tests/test_probes.py",
+      "packages/generalization-stability/results/training.json",
+      "packages/generalization-stability/README.md"
+    ],
+    "directory": "es/dl-initialization"
+  },
+  {
+    "locale": "es",
+    "slug": "activations-saturacion-relu-gradientes-profundidad",
+    "title": "Activations y gradientes: saturación, ReLU inactiva y productos a través de capas",
+    "post": "src/content/posts/es/activations-saturacion-relu-gradientes-profundidad.md",
+    "labs": [
+      "generalization-stability"
+    ],
+    "files": [
+      "packages/generalization-stability/training.py",
+      "packages/generalization-stability/probes.py",
+      "packages/generalization-stability/experiments.py",
+      "packages/generalization-stability/protocol.json",
+      "packages/generalization-stability/tests/test_training.py",
+      "packages/generalization-stability/tests/test_probes.py",
+      "packages/generalization-stability/results/training.json",
+      "packages/generalization-stability/README.md"
+    ],
+    "directory": "es/dl-activation-stability"
+  },
+  {
+    "locale": "es",
+    "slug": "batchnorm-estadisticas-batch-running-train-eval",
+    "title": "BatchNorm: normalizar un canal también introduce estado y dependencia del batch",
+    "post": "src/content/posts/es/batchnorm-estadisticas-batch-running-train-eval.md",
+    "labs": [
+      "generalization-stability"
+    ],
+    "files": [
+      "packages/generalization-stability/training.py",
+      "packages/generalization-stability/probes.py",
+      "packages/generalization-stability/experiments.py",
+      "packages/generalization-stability/protocol.json",
+      "packages/generalization-stability/tests/test_training.py",
+      "packages/generalization-stability/tests/test_probes.py",
+      "packages/generalization-stability/results/training.json",
+      "packages/generalization-stability/README.md"
+    ],
+    "directory": "es/dl-batchnorm"
+  },
+  {
+    "locale": "es",
+    "slug": "layernorm-ejes-features-batchnorm-diferencias",
+    "title": "LayerNorm: elegir los ejes que normalizas cambia la representación",
+    "post": "src/content/posts/es/layernorm-ejes-features-batchnorm-diferencias.md",
+    "labs": [
+      "generalization-stability"
+    ],
+    "files": [
+      "packages/generalization-stability/training.py",
+      "packages/generalization-stability/probes.py",
+      "packages/generalization-stability/experiments.py",
+      "packages/generalization-stability/protocol.json",
+      "packages/generalization-stability/tests/test_training.py",
+      "packages/generalization-stability/tests/test_probes.py",
+      "packages/generalization-stability/results/training.json",
+      "packages/generalization-stability/README.md"
+    ],
+    "directory": "es/dl-layernorm"
+  },
+  {
+    "locale": "es",
+    "slug": "dropout-mascaras-escalado-generalizacion",
+    "title": "Dropout: qué se elimina, qué se escala y por qué no siempre mejora",
+    "post": "src/content/posts/es/dropout-mascaras-escalado-generalizacion.md",
+    "labs": [
+      "generalization-stability"
+    ],
+    "files": [
+      "packages/generalization-stability/training.py",
+      "packages/generalization-stability/probes.py",
+      "packages/generalization-stability/experiments.py",
+      "packages/generalization-stability/protocol.json",
+      "packages/generalization-stability/tests/test_training.py",
+      "packages/generalization-stability/tests/test_probes.py",
+      "packages/generalization-stability/results/training.json",
+      "packages/generalization-stability/README.md"
+    ],
+    "directory": "es/dl-dropout"
+  },
+  {
+    "locale": "es",
+    "slug": "weight-decay-grupos-parametros-generalizacion",
+    "title": "Weight decay: decidir qué contraer y comprobar qué ocurre fuera de train",
+    "post": "src/content/posts/es/weight-decay-grupos-parametros-generalizacion.md",
+    "labs": [
+      "generalization-stability"
+    ],
+    "files": [
+      "packages/generalization-stability/training.py",
+      "packages/generalization-stability/probes.py",
+      "packages/generalization-stability/experiments.py",
+      "packages/generalization-stability/protocol.json",
+      "packages/generalization-stability/tests/test_training.py",
+      "packages/generalization-stability/tests/test_probes.py",
+      "packages/generalization-stability/results/training.json",
+      "packages/generalization-stability/README.md"
+    ],
+    "directory": "es/dl-weight-decay"
+  },
+  {
+    "locale": "es",
+    "slug": "early-stopping-patience-mejor-checkpoint",
+    "title": "Early stopping: detenerse y recuperar el mejor checkpoint son dos decisiones",
+    "post": "src/content/posts/es/early-stopping-patience-mejor-checkpoint.md",
+    "labs": [
+      "generalization-stability"
+    ],
+    "files": [
+      "packages/generalization-stability/training.py",
+      "packages/generalization-stability/probes.py",
+      "packages/generalization-stability/experiments.py",
+      "packages/generalization-stability/protocol.json",
+      "packages/generalization-stability/tests/test_training.py",
+      "packages/generalization-stability/tests/test_probes.py",
+      "packages/generalization-stability/results/training.json",
+      "packages/generalization-stability/README.md"
+    ],
+    "directory": "es/dl-early-stopping"
+  },
+  {
+    "locale": "es",
+    "slug": "gradient-clipping-norma-paso-estabilidad",
+    "title": "Gradient clipping: limitar el gradiente no garantiza limitar cualquier optimizer step",
+    "post": "src/content/posts/es/gradient-clipping-norma-paso-estabilidad.md",
+    "labs": [
+      "generalization-stability"
+    ],
+    "files": [
+      "packages/generalization-stability/training.py",
+      "packages/generalization-stability/probes.py",
+      "packages/generalization-stability/experiments.py",
+      "packages/generalization-stability/protocol.json",
+      "packages/generalization-stability/tests/test_training.py",
+      "packages/generalization-stability/tests/test_probes.py",
+      "packages/generalization-stability/results/training.json",
+      "packages/generalization-stability/README.md"
+    ],
+    "directory": "es/dl-gradient-clipping"
   }
 ]
