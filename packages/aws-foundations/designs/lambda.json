@@ -1,0 +1,12 @@
+{
+  "kind": "authored_architecture_not_deployed",
+  "region": "us-east-1",
+  "compute": "Lambda Event Functions on-demand x86",
+  "ingress": "API Gateway HTTP API",
+  "customerVpcAttachment": false,
+  "database": "DynamoDB catalogue, same-region GetItem with ConsistentRead true",
+  "identity": "execution role with GetItem on catalogue table",
+  "limitsToVerify": ["concurrency_and_scaling_quotas", "cold_and_warm_latency", "dependency_capacity", "cost_of_database_and_logs"],
+  "operationsOwnedByTeam": ["dependencies", "handler_configuration", "authorization", "data_model", "observability", "release_and_recovery"],
+  "platformManaged": ["hosts", "managed_runtime_updates_subject_to_update_mode", "invocation_placement"]
+}

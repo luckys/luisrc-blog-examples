@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 211 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 225 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -34,6 +34,18 @@ estructura, índices y conservación de fuentes; `pnpm test:labs` ejecuta los te
 locales de Node y Python estándar, sin iniciar Docker ni instalar navegadores.
 
 ## Laboratorios
+
+El paquete [aws-foundations](packages/aws-foundations/README.md) está en preparación
+para P064: contratos locales y estimaciones parciales con tarifas públicas de AWS.
+Sus artículos, diagramas y visor todavía no están terminados; no despliega en AWS.
+
+El paquete [progressive-delivery](packages/progressive-delivery/README.md) ejecuta
+pipeline local, audit runtime y despliegues Docker con rolling, blue-green, canary,
+flags y rollback de image compatible con SQL. Candidato negativo, sin producción.
+
+El paquete [container-environments](packages/container-environments/README.md) levanta
+API, PostgreSQL y Redis mediante Compose. Cache de build, caídas, recreación, volumen
+y dos setups vacíos reales; sin scan, backup restore o despliegue remoto.
 
 El paquete [incident-response](packages/incident-response/README.md) reproduce un
 incidente sintético con HTTP y dos procesos reales. Nueve tests, cronología, runbook

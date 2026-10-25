@@ -1,0 +1,361 @@
+{
+  "currency": "USD",
+  "region": "us-east-1",
+  "sources": [
+    {
+      "service": "AWSLambda",
+      "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSLambda/current/us-east-1/index.json",
+      "versionedUrl": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSLambda/20261022183959/us-east-1/index.json",
+      "retrievedAt": "2026-10-25T11:33:33.990Z",
+      "publicationDate": "2026-10-22T18:39:59Z",
+      "version": "20261022183959",
+      "rawCatalogueSha256": "d0fc94179f8e546998c2e39ed739a41b2f5758728994366809bb4d1b45ba4e6e",
+      "selected": [
+        {
+          "product": {
+            "sku": "GU2ZS9HVP6QTQ7KE",
+            "productFamily": "Serverless",
+            "attributes": {
+              "servicecode": "AWSLambda",
+              "location": "US East (N. Virginia)",
+              "locationType": "AWS Region",
+              "group": "AWS-Lambda-Requests",
+              "groupDescription": "Invocation call for a Lambda function",
+              "usagetype": "Request",
+              "operation": "",
+              "regionCode": "us-east-1",
+              "servicename": "AWS Lambda"
+            }
+          },
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "offerTermCode": "JRTCKXETXF",
+          "dimension": {
+            "rateCode": "GU2ZS9HVP6QTQ7KE.JRTCKXETXF.6YS6EN2CT7",
+            "description": "AWS Lambda - Total Requests - US East (Northern Virginia)",
+            "beginRange": "0",
+            "endRange": "Inf",
+            "unit": "Requests",
+            "pricePerUnit": {
+              "USD": "0.0000002000"
+            },
+            "appliesTo": []
+          }
+        },
+        {
+          "product": {
+            "sku": "TG3M4CAGBA3NYQBH",
+            "productFamily": "Serverless",
+            "attributes": {
+              "servicecode": "AWSLambda",
+              "location": "US East (N. Virginia)",
+              "locationType": "AWS Region",
+              "group": "AWS-Lambda-Duration",
+              "groupDescription": "Invocation duration weighted by memory assigned to function, measured in GB-s",
+              "usagetype": "Lambda-GB-Second",
+              "operation": "",
+              "regionCode": "us-east-1",
+              "servicename": "AWS Lambda"
+            }
+          },
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "offerTermCode": "JRTCKXETXF",
+          "dimension": {
+            "rateCode": "TG3M4CAGBA3NYQBH.JRTCKXETXF.CUKFZ388N3",
+            "description": "AWS Lambda - Total Compute - US East (Northern Virginia)-Tier-1",
+            "beginRange": "0",
+            "endRange": "6000000000",
+            "unit": "Lambda-GB-Second",
+            "pricePerUnit": {
+              "USD": "0.0000166667"
+            },
+            "appliesTo": []
+          }
+        }
+      ]
+    },
+    {
+      "service": "AmazonApiGateway",
+      "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonApiGateway/current/us-east-1/index.json",
+      "versionedUrl": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonApiGateway/20261013003044/us-east-1/index.json",
+      "retrievedAt": "2026-10-25T11:33:34.506Z",
+      "publicationDate": "2026-10-13T00:30:44Z",
+      "version": "20261013003044",
+      "rawCatalogueSha256": "0bdd35785508b1a116cec8df403951d2d68ee036d2f7c9f486fd8ca499b738bc",
+      "selected": [
+        {
+          "product": {
+            "sku": "FC2TWT2UEPTBKVBX",
+            "productFamily": "API Calls",
+            "attributes": {
+              "servicecode": "AmazonApiGateway",
+              "description": "HTTP API Requests",
+              "location": "US East (N. Virginia)",
+              "locationType": "AWS Region",
+              "usagetype": "USE1-ApiGatewayHttpRequest",
+              "operation": "ApiGatewayHttpApi",
+              "regionCode": "us-east-1",
+              "servicename": "Amazon API Gateway"
+            }
+          },
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "offerTermCode": "JRTCKXETXF",
+          "dimension": {
+            "rateCode": "FC2TWT2UEPTBKVBX.JRTCKXETXF.9NXBCPDZYR",
+            "description": "$1/million requests - API Gateway HTTP API (first 300 million)",
+            "beginRange": "0",
+            "endRange": "300000000",
+            "unit": "Requests",
+            "pricePerUnit": {
+              "USD": "0.0000010000"
+            },
+            "appliesTo": []
+          }
+        }
+      ]
+    },
+    {
+      "service": "AmazonECS",
+      "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonECS/current/us-east-1/index.json",
+      "versionedUrl": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonECS/20261019224317/us-east-1/index.json",
+      "retrievedAt": "2026-10-25T11:33:35.370Z",
+      "publicationDate": "2026-10-19T22:43:17Z",
+      "version": "20261019224317",
+      "rawCatalogueSha256": "b30483c1fc2e9446987bae34cbbd593ece4995f0adb1cb6e25e2d4471f14e612",
+      "selected": [
+        {
+          "product": {
+            "sku": "8CESGAFWKAJ98PME",
+            "productFamily": "Compute",
+            "attributes": {
+              "servicecode": "AmazonECS",
+              "location": "US East (N. Virginia)",
+              "locationType": "AWS Region",
+              "tenancy": "Shared",
+              "usagetype": "USE1-Fargate-vCPU-Hours:perCPU",
+              "operation": "",
+              "cputype": "perCPU",
+              "regionCode": "us-east-1",
+              "servicename": "Amazon Elastic Container Service"
+            }
+          },
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "offerTermCode": "JRTCKXETXF",
+          "dimension": {
+            "rateCode": "8CESGAFWKAJ98PME.JRTCKXETXF.6YS6EN2CT7",
+            "description": "AWS Fargate - vCPU - US East (N.Virginia)",
+            "beginRange": "0",
+            "endRange": "Inf",
+            "unit": "hours",
+            "pricePerUnit": {
+              "USD": "0.0404800000"
+            },
+            "appliesTo": []
+          }
+        },
+        {
+          "product": {
+            "sku": "PBZNQUSEXZUC34C9",
+            "productFamily": "Compute",
+            "attributes": {
+              "servicecode": "AmazonECS",
+              "location": "US East (N. Virginia)",
+              "locationType": "AWS Region",
+              "tenancy": "Shared",
+              "usagetype": "USE1-Fargate-GB-Hours",
+              "operation": "",
+              "memorytype": "perGB",
+              "regionCode": "us-east-1",
+              "servicename": "Amazon Elastic Container Service"
+            }
+          },
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "offerTermCode": "JRTCKXETXF",
+          "dimension": {
+            "rateCode": "PBZNQUSEXZUC34C9.JRTCKXETXF.6YS6EN2CT7",
+            "description": "AWS Fargate - Memory  - US East (N.Virginia)",
+            "beginRange": "0",
+            "endRange": "Inf",
+            "unit": "hours",
+            "pricePerUnit": {
+              "USD": "0.0044450000"
+            },
+            "appliesTo": []
+          }
+        }
+      ]
+    },
+    {
+      "service": "AWSELB",
+      "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSELB/current/us-east-1/index.json",
+      "versionedUrl": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSELB/20260911124544/us-east-1/index.json",
+      "retrievedAt": "2026-10-25T11:33:35.735Z",
+      "publicationDate": "2026-09-11T12:45:44Z",
+      "version": "20260911124544",
+      "rawCatalogueSha256": "c34f95e97c33d8b32b25eecb2e2008ba651a11ba3bc69794200f5749dcb9d463",
+      "selected": [
+        {
+          "product": {
+            "sku": "37CUWUT8GSNQEPUV",
+            "productFamily": "Load Balancer-Application",
+            "attributes": {
+              "servicecode": "AWSELB",
+              "location": "US East (N. Virginia)",
+              "locationType": "AWS Region",
+              "group": "ELB:Balancing",
+              "groupDescription": "LoadBalancer hourly usage by Application Load Balancer",
+              "usagetype": "LoadBalancerUsage",
+              "operation": "LoadBalancing:Application",
+              "regionCode": "us-east-1",
+              "servicename": "Elastic Load Balancing"
+            }
+          },
+          "effectiveDate": "2026-08-01T00:00:00Z",
+          "offerTermCode": "JRTCKXETXF",
+          "dimension": {
+            "rateCode": "37CUWUT8GSNQEPUV.JRTCKXETXF.6YS6EN2CT7",
+            "description": "$0.0225 per Application LoadBalancer-hour (or partial hour)",
+            "beginRange": "0",
+            "endRange": "Inf",
+            "unit": "Hrs",
+            "pricePerUnit": {
+              "USD": "0.0225000000"
+            },
+            "appliesTo": []
+          }
+        },
+        {
+          "product": {
+            "sku": "P2XGEJ8N3KU52WA8",
+            "productFamily": "Load Balancer-Application",
+            "attributes": {
+              "servicecode": "AWSELB",
+              "location": "US East (N. Virginia)",
+              "locationType": "AWS Region",
+              "group": "ELB:Balancing",
+              "groupDescription": "Used Application Load Balancer capacity units-hr",
+              "usagetype": "LCUUsage",
+              "operation": "LoadBalancing:Application",
+              "regionCode": "us-east-1",
+              "servicename": "Elastic Load Balancing"
+            }
+          },
+          "effectiveDate": "2026-08-01T00:00:00Z",
+          "offerTermCode": "JRTCKXETXF",
+          "dimension": {
+            "rateCode": "P2XGEJ8N3KU52WA8.JRTCKXETXF.6YS6EN2CT7",
+            "description": "$0.008 per used Application load balancer capacity unit-hour (or partial hour)",
+            "beginRange": "0",
+            "endRange": "Inf",
+            "unit": "LCU-Hrs",
+            "pricePerUnit": {
+              "USD": "0.0080000000"
+            },
+            "appliesTo": []
+          }
+        }
+      ]
+    },
+    {
+      "service": "AmazonVPC",
+      "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonVPC/current/us-east-1/index.json",
+      "versionedUrl": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonVPC/20261016224321/us-east-1/index.json",
+      "retrievedAt": "2026-10-25T11:33:36.122Z",
+      "publicationDate": "2026-10-16T22:43:21Z",
+      "version": "20261016224321",
+      "rawCatalogueSha256": "85367cb441bc050ea66796736a4605b4a937f9b2a8639a7103270c7eac941a1c",
+      "selected": [
+        {
+          "product": {
+            "sku": "EN2N5TATXE673A3B",
+            "productFamily": "VpcEndpoint",
+            "attributes": {
+              "servicecode": "AmazonVPC",
+              "location": "US East (N. Virginia)",
+              "locationType": "AWS Region",
+              "endpointType": "PrivateLink",
+              "group": "VPCE:VpcEndpoint",
+              "groupDescription": "Hourly charge for VPC Endpoints",
+              "usagetype": "USE1-VpcEndpoint-Hours",
+              "operation": "VpcEndpoint",
+              "regionCode": "us-east-1",
+              "servicename": "Amazon Virtual Private Cloud"
+            }
+          },
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "offerTermCode": "JRTCKXETXF",
+          "dimension": {
+            "rateCode": "EN2N5TATXE673A3B.JRTCKXETXF.6YS6EN2CT7",
+            "description": "$0.01 per VPC Endpoint Hour",
+            "beginRange": "0",
+            "endRange": "Inf",
+            "unit": "Hrs",
+            "pricePerUnit": {
+              "USD": "0.0100000000"
+            },
+            "appliesTo": []
+          }
+        },
+        {
+          "product": {
+            "sku": "DQYYEZBCWSW5XS2R",
+            "productFamily": "VpcEndpoint",
+            "attributes": {
+              "servicecode": "AmazonVPC",
+              "location": "US East (N. Virginia)",
+              "locationType": "AWS Region",
+              "endpointType": "PrivateLink",
+              "group": "VPCE:VpcEndpoint",
+              "groupDescription": "Charge for per GB data processed by VPC Endpoints",
+              "usagetype": "USE1-VpcEndpoint-Bytes",
+              "operation": "VpcEndpoint",
+              "regionCode": "us-east-1",
+              "servicename": "Amazon Virtual Private Cloud"
+            }
+          },
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "offerTermCode": "JRTCKXETXF",
+          "dimension": {
+            "rateCode": "DQYYEZBCWSW5XS2R.JRTCKXETXF.D7RZ6WCPVW",
+            "description": "$0.01 per GB for upto 1 PB monthly data processed by VPC Endpoints",
+            "beginRange": "0",
+            "endRange": "1048576",
+            "unit": "GB",
+            "pricePerUnit": {
+              "USD": "0.0100000000"
+            },
+            "appliesTo": []
+          }
+        },
+        {
+          "product": {
+            "sku": "4GQUNXTFWVSGPUZK",
+            "attributes": {
+              "servicecode": "AmazonVPC",
+              "location": "US East (N. Virginia)",
+              "locationType": "AWS Region",
+              "group": "VPCPublicIPv4Address",
+              "groupDescription": "Hourly charge for In-use Public IPv4 Addresses",
+              "usagetype": "USE1-PublicIPv4:InUseAddress",
+              "operation": "",
+              "regionCode": "us-east-1",
+              "servicename": "Amazon Virtual Private Cloud"
+            }
+          },
+          "effectiveDate": "2026-10-01T00:00:00Z",
+          "offerTermCode": "JRTCKXETXF",
+          "dimension": {
+            "rateCode": "4GQUNXTFWVSGPUZK.JRTCKXETXF.6YS6EN2CT7",
+            "description": "$0.005 per In-use public IPv4 address per hour",
+            "beginRange": "0",
+            "endRange": "Inf",
+            "unit": "Hrs",
+            "pricePerUnit": {
+              "USD": "0.0050000000"
+            },
+            "appliesTo": []
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -262,5 +262,37 @@
   {
     "source": "packages/incident-response/recovery.svg",
     "destination": "public/assets/interactive/incident-response/recovery.svg"
+  },
+  {
+    "source": "packages/container-environments/explorer.html",
+    "destination": "public/assets/interactive/container-environments/explorer.html"
+  },
+  {
+    "source": "packages/container-environments/explorer.mjs",
+    "destination": "public/assets/interactive/container-environments/explorer.mjs"
+  },
+  {
+    "source": "packages/container-environments/replay.json",
+    "destination": "public/assets/interactive/container-environments/replay.json"
+  },
+  {
+    "source": "packages/container-environments/image-sizes.svg",
+    "destination": "public/assets/interactive/container-environments/image-sizes.svg"
+  },
+  {
+    "source": "packages/progressive-delivery/explorer.html",
+    "destination": "public/assets/interactive/progressive-delivery/explorer.html"
+  },
+  {
+    "source": "packages/progressive-delivery/explorer.mjs",
+    "destination": "public/assets/interactive/progressive-delivery/explorer.mjs"
+  },
+  {
+    "source": "packages/progressive-delivery/replay.json",
+    "destination": "public/assets/interactive/progressive-delivery/replay.json"
+  },
+  {
+    "source": "packages/progressive-delivery/canary-outcomes.svg",
+    "destination": "public/assets/interactive/progressive-delivery/canary-outcomes.svg"
   }
 ]

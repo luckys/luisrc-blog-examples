@@ -1,0 +1,7 @@
+{
+  "defaults": { "requests": 1000000, "hours": 730, "memoryMb": 512, "billedMs": 100, "payloadBytes": 1024, "tasks": 2, "taskVcpu": 0.25, "taskMemoryGb": 0.5, "interfaceServices": 3, "zones": 2, "interfaceGb": 20, "publicIpv4": 2, "assumedLcu": 0.1 },
+  "cases": [
+    { "id": "intermittent", "name": "Poco tráfico y capacidad ECS permanente", "inputs": {}, "assumptions": ["100ms billed average is assumed, not measured", "two 0.25vCPU tasks stay provisioned 730h", "0.1LCU/h and20GB endpoint data assumed", "neither design has verified AWS capacity"] },
+    { "id": "steady", "name": "Tráfico sostenido con tasks mayores", "inputs": { "requests": 100000000, "taskVcpu": 1, "taskMemoryGb": 2, "assumedLcu": 4, "interfaceGb": 100 }, "assumptions": ["100M calls and100ms billed average assumed", "two 1vCPU tasks stay provisioned 730h", "4LCU/h and100GB endpoint data assumed", "request volume does not prove this task count can serve it"] }
+  ]
+}

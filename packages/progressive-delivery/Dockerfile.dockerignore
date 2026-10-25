@@ -1,0 +1,12 @@
+**
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!packages/
+!packages/progressive-delivery/
+!packages/progressive-delivery/package.json
+!packages/progressive-delivery/tsconfig.json
+!packages/progressive-delivery/src/
+!packages/progressive-delivery/src/**
+!packages/progressive-delivery/variants/
+!packages/progressive-delivery/variants/*.json

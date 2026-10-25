@@ -1,0 +1,10 @@
+**
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!packages/
+!packages/container-environments/
+!packages/container-environments/package.json
+!packages/container-environments/tsconfig.json
+!packages/container-environments/src/
+!packages/container-environments/src/**

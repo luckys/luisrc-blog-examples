@@ -1,0 +1,10 @@
+{
+  "kind": "authored_standard_queue_contract_not_deployed",
+  "functionTimeout": 10,
+  "batchWindow": 5,
+  "visibilityTimeout": 90,
+  "partialFailures": true,
+  "responseType": "ReportBatchItemFailures",
+  "deadLetterMaxReceiveCount": 5,
+  "durableIdempotencyImplemented": false
+}

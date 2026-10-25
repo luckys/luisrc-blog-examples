@@ -231,6 +231,15 @@ importers:
         specifier: 5.9.2
         version: 5.9.2
 
+  packages/aws-foundations:
+    devDependencies:
+      '@types/node':
+        specifier: 24.19.0
+        version: 24.19.0
+      typescript:
+        specifier: 5.9.2
+        version: 5.9.2
+
   packages/browser-security:
     devDependencies:
       '@playwright/test':
@@ -238,6 +247,25 @@ importers:
         version: 1.56.1
 
   packages/computing-networks: {}
+
+  packages/container-environments:
+    dependencies:
+      '@redis/client':
+        specifier: 6.3.0
+        version: 6.3.0(@opentelemetry/api@1.10.0)
+      pg:
+        specifier: 8.23.1
+        version: 8.23.1
+    devDependencies:
+      '@types/node':
+        specifier: 24.19.0
+        version: 24.19.0
+      '@types/pg':
+        specifier: 8.23.1
+        version: 8.23.1
+      typescript:
+        specifier: 5.9.2
+        version: 5.9.2
 
   packages/data-structures-algorithms: {}
 
@@ -375,6 +403,22 @@ importers:
       '@types/node':
         specifier: 24.19.0
         version: 24.19.0
+      typescript:
+        specifier: 5.9.2
+        version: 5.9.2
+
+  packages/progressive-delivery:
+    dependencies:
+      pg:
+        specifier: 8.23.1
+        version: 8.23.1
+    devDependencies:
+      '@types/node':
+        specifier: 24.19.0
+        version: 24.19.0
+      '@types/pg':
+        specifier: 8.23.1
+        version: 8.23.1
       typescript:
         specifier: 5.9.2
         version: 5.9.2
@@ -970,6 +1014,18 @@ packages:
 
   '@protobufjs/utf8@1.1.2':
     resolution: {integrity: sha512-b1UQwcEZ4yCnMCD8DAL1VlbvBJE9/IX4FTIp7BG1xYpf29SLazLSrqUkj4w7Y5y7cCVP6E5tcqqcI0xemPkHug==}
+
+  '@redis/client@6.3.0':
+    resolution: {integrity: sha512-fHrjwGCBvAANGi+TuRuwKi83sIOzgHr8eh+Uf48w3fSX7Hhrz174NrWqfJhAC2vnN0d/tfaZpdr6+o6JC3QHwg==}
+    engines: {node: '>= 20.0.0'}
+    peerDependencies:
+      '@node-rs/xxhash': ^1.1.0
+      '@opentelemetry/api': '>=1 <2'
+    peerDependenciesMeta:
+      '@node-rs/xxhash':
+        optional: true
+      '@opentelemetry/api':
+        optional: true
 
   '@rolldown/binding-android-arm-eabi@1.2.13':
     resolution: {integrity: sha512-Vu/NICrgdRvUOeaJZIyB2FP63s6fO/4ud5l8dXmxDx9yDyn+mN0y+gsvsVviSli+T361Aqo0h46EuMoobrwawA==}
@@ -2875,6 +2931,10 @@ snapshots:
   '@protobufjs/pool@1.1.0': {}
 
   '@protobufjs/utf8@1.1.2': {}
+
+  '@redis/client@6.3.0(@opentelemetry/api@1.10.0)':
+    optionalDependencies:
+      '@opentelemetry/api': 1.10.0
 
   '@rolldown/binding-android-arm-eabi@1.2.13':
     optional: true

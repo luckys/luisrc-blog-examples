@@ -1,0 +1,11 @@
+{
+  "kind": "authored_operating_contract_not_deployed",
+  "engine": "PostgreSQL on RDS",
+  "publiclyAccessible": false,
+  "multiAZ": true,
+  "backupRetentionDays": 7,
+  "restoreTested": false,
+  "failoverTested": false,
+  "queryCapacityMeasured": false,
+  "ownerDecisions": ["schema_and_indexes", "least_privilege_db_roles", "maintenance_window", "restore_exercise", "connection_budget", "RPO_RTO_targets"]
+}

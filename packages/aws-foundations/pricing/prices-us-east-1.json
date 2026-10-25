@@ -1,0 +1,33 @@
+{
+  "capturedAt": "2026-10-25T11:33:36.124Z",
+  "currency": "USD",
+  "region": "us-east-1",
+  "mode": "on_demand_linux_x86_event_functions",
+  "rates": {
+    "lambdaRequest": 2e-7,
+    "lambdaGbSecond": 0.0000166667,
+    "httpApiRequest": 0.000001,
+    "fargateVcpuHour": 0.04048,
+    "fargateGbHour": 0.004445,
+    "albHour": 0.0225,
+    "albLcuHour": 0.008,
+    "endpointAzHour": 0.01,
+    "endpointGb": 0.01,
+    "publicIpv4Hour": 0.005
+  },
+  "exclusions": [
+    "free_tier",
+    "credits",
+    "taxes",
+    "savings_plans",
+    "spot",
+    "database",
+    "logs_ingestion_and_storage",
+    "internet_data_transfer",
+    "cross_az_data",
+    "storage",
+    "s3_sqs_workloads",
+    "engineering_time",
+    "failover_capacity_validation"
+  ]
+}

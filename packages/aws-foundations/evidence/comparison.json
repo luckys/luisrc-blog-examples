@@ -1,0 +1,400 @@
+{
+  "capturedAt": "2026-10-25T11:37:55.308Z",
+  "kind": "calculated_design_comparison_with_local_contract_observations",
+  "sources": {
+    "package.json": "257120dc1fdbc759653d733f913487a1d7733bfe1d230e579ea06d04b05c1a4f",
+    "tsconfig.json": "1b51e5887a74c1d36a5c549fc863cfa1f781cbddd713e048ab3dca708d390718",
+    "scenarios.json": "47e30cf156ce6c9960d5f346dd7d0146a3c134db3def9aa87cddf5ca9357ca23",
+    "cost-model.mjs": "5bbcfdd1d5c50c24dd0a258ef917b7b07929aa1f45e2d3dc6bf9a68e65f55c73",
+    "src/catalogue.ts": "123244d413382346f0bb8e34a113d00900e4ec460400984e496b935a60115e13",
+    "src/contracts.ts": "fb538635be80fb9904702180a75fdee3d2d0958dc7b82b02edc44dcc9e4c65a2",
+    "src/costs.ts": "c9d54000bb82f266d61c41cffbe99b56d24ba5c0518b3d0a42dad0955ce2ed75",
+    "src/http.ts": "b11624001bdf5aa9caf5df847e93e13efc1264ee1c8cef147be1b65571ca410b",
+    "scripts/capture-prices.mjs": "242455d817c5c7fae0941ac478217794eb77939d7282c071b29eccc5cab178af",
+    "scripts/exercise.mjs": "51cb80322c6bf7d2dcf9529934f26bc0d1b1e94701815ae06554c903165890c4",
+    "scripts/export-model.mjs": "87d6c011cc7cfc300bbf881042c841fa3a4c8bbb9f8a35c4fbef2dd757d553c1",
+    "scripts/hashes.mjs": "1d51ef39977372e36b2a36b9d0dae20beb9136aedbc8808219fe334db324237a",
+    "scripts/pricing.mjs": "cda0df46a0e7a0c25b7df0c98d16b525fb12978eba56de2f3993dc174cd2ed55",
+    "scripts/verify.mjs": "71af79e1255527fd5e4112b570c2b1bd4b2a8cb8f318152ea221698d1744aeaf",
+    "tests/adapters.test.mjs": "9c92e2e347583a6ed6ff3c9644a6055209c27709c6469e6715abec047d98722e",
+    "tests/contracts.test.mjs": "6fc2575e80bece47379f3d73710c8de46d191735d07d58cfcd5f42db17717bb9",
+    "tests/costs.test.mjs": "a622c270a025ad7ea73eeaf86a5cc9a69a2e33911d297ac066cbcdb69f34d3ef",
+    "tests/pricing.test.mjs": "d2eccf530b931780a24fd447fd8e11a1502eeb242ec66e9b78e9f5b568feeaa7",
+    "pricing/catalogue-excerpts.json": "4b572301e25f20cfc9c640e908579d923baf4693924a15ebe594ec016305ee05",
+    "pricing/prices-us-east-1.json": "34a4ad9465b67d01fd50c5d7c78e81597e1f0a83b0c2e4c3f7dec25f75d41801",
+    "designs/ecs.json": "45d53908c644fb3f91e69c25c2936a64069c7dcb80f6bf01f5807ae4ea6cd7c6",
+    "designs/lambda.json": "8b474c71536005faffe81bb7d4893e7f6682c7bcd7fad87338257d9261c8fe36",
+    "designs/queue-plan.json": "d5f8868cb6192d86112b57920c595b3041d8bed5a60cde14154c778d93bbe57e",
+    "designs/rds-plan.json": "c777825709e0e0d8f3d5f90543aa42c396c21b52ceba3ff07157d94a9cf79d99",
+    "designs/task-fragment.json": "6bd0b103f03611b26c5bc552f1a1cbbe9a794308fea58a982ad058836c7bfe00"
+  },
+  "pricing": {
+    "capturedAt": "2026-10-25T11:33:36.124Z",
+    "currency": "USD",
+    "region": "us-east-1",
+    "mode": "on_demand_linux_x86_event_functions",
+    "rates": {
+      "lambdaRequest": 2e-7,
+      "lambdaGbSecond": 0.0000166667,
+      "httpApiRequest": 0.000001,
+      "fargateVcpuHour": 0.04048,
+      "fargateGbHour": 0.004445,
+      "albHour": 0.0225,
+      "albLcuHour": 0.008,
+      "endpointAzHour": 0.01,
+      "endpointGb": 0.01,
+      "publicIpv4Hour": 0.005
+    },
+    "exclusions": [
+      "free_tier",
+      "credits",
+      "taxes",
+      "savings_plans",
+      "spot",
+      "database",
+      "logs_ingestion_and_storage",
+      "internet_data_transfer",
+      "cross_az_data",
+      "storage",
+      "s3_sqs_workloads",
+      "engineering_time",
+      "failover_capacity_validation"
+    ]
+  },
+  "designs": {
+    "lambda": {
+      "kind": "authored_architecture_not_deployed",
+      "region": "us-east-1",
+      "compute": "Lambda Event Functions on-demand x86",
+      "ingress": "API Gateway HTTP API",
+      "customerVpcAttachment": false,
+      "database": "DynamoDB catalogue, same-region GetItem with ConsistentRead true",
+      "identity": "execution role with GetItem on catalogue table",
+      "limitsToVerify": [
+        "concurrency_and_scaling_quotas",
+        "cold_and_warm_latency",
+        "dependency_capacity",
+        "cost_of_database_and_logs"
+      ],
+      "operationsOwnedByTeam": [
+        "dependencies",
+        "handler_configuration",
+        "authorization",
+        "data_model",
+        "observability",
+        "release_and_recovery"
+      ],
+      "platformManaged": [
+        "hosts",
+        "managed_runtime_updates_subject_to_update_mode",
+        "invocation_placement"
+      ]
+    },
+    "ecs": {
+      "kind": "authored_architecture_not_deployed",
+      "region": "us-east-1",
+      "compute": "ECS Fargate Linux x86",
+      "ingress": "public Application Load Balancer",
+      "network": {
+        "zones": 2,
+        "publicTaskIp": false,
+        "services": [
+          "ecr.api",
+          "ecr.dkr",
+          "logs"
+        ],
+        "gateways": [
+          "s3",
+          "dynamodb"
+        ],
+        "externalInternetRequired": false
+      },
+      "natGateway": false,
+      "database": "DynamoDB catalogue, same-region GetItem with ConsistentRead true",
+      "identity": {
+        "taskRole": "catalogue GetItem",
+        "executionRole": "ECR pull and CloudWatch logs, separate from task role"
+      },
+      "limitsToVerify": [
+        "task_throughput_and_latency",
+        "scaling_delay",
+        "one_az_loss",
+        "endpoint_dns_and_security_groups",
+        "actual_alb_lcu"
+      ],
+      "operationsOwnedByTeam": [
+        "container_image_and_dependencies",
+        "task_definition",
+        "service_scaling",
+        "network_paths",
+        "authorization",
+        "data_model",
+        "observability",
+        "release_and_recovery"
+      ],
+      "platformManaged": [
+        "Fargate_hosts",
+        "task_placement_subject_to_service_configuration"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "intermittent",
+      "name": "Poco tráfico y capacidad ECS permanente",
+      "inputs": {},
+      "assumptions": [
+        "100ms billed average is assumed, not measured",
+        "two 0.25vCPU tasks stay provisioned 730h",
+        "0.1LCU/h and20GB endpoint data assumed",
+        "neither design has verified AWS capacity"
+      ],
+      "input": {
+        "requests": 1000000,
+        "hours": 730,
+        "memoryMb": 512,
+        "billedMs": 100,
+        "payloadBytes": 1024,
+        "tasks": 2,
+        "taskVcpu": 0.25,
+        "taskMemoryGb": 0.5,
+        "interfaceServices": 3,
+        "zones": 2,
+        "interfaceGb": 20,
+        "publicIpv4": 2,
+        "assumedLcu": 0.1
+      },
+      "result": {
+        "lambda": {
+          "lines": {
+            "requests": 0.2,
+            "compute": 0.833335,
+            "httpApi": 1
+          },
+          "subtotal": 2.033335,
+          "units": {
+            "gbSeconds": 50000,
+            "billedInvocations": 1000000
+          }
+        },
+        "ecs": {
+          "lines": {
+            "compute": 18.02005,
+            "albHours": 16.425,
+            "albLcu": 0.584,
+            "endpointHours": 43.8,
+            "endpointData": 0.2,
+            "publicIpv4": 7.3
+          },
+          "subtotal": 86.32905,
+          "units": {
+            "taskHours": 1460,
+            "endpointAzHours": 4380
+          }
+        },
+        "currency": "USD",
+        "scope": "modeled_infrastructure_subtotal",
+        "capacityValidated": false,
+        "precisionUsd": 1e-8
+      }
+    },
+    {
+      "id": "steady",
+      "name": "Tráfico sostenido con tasks mayores",
+      "inputs": {
+        "requests": 100000000,
+        "taskVcpu": 1,
+        "taskMemoryGb": 2,
+        "assumedLcu": 4,
+        "interfaceGb": 100
+      },
+      "assumptions": [
+        "100M calls and100ms billed average assumed",
+        "two 1vCPU tasks stay provisioned 730h",
+        "4LCU/h and100GB endpoint data assumed",
+        "request volume does not prove this task count can serve it"
+      ],
+      "input": {
+        "requests": 100000000,
+        "hours": 730,
+        "memoryMb": 512,
+        "billedMs": 100,
+        "payloadBytes": 1024,
+        "tasks": 2,
+        "taskVcpu": 1,
+        "taskMemoryGb": 2,
+        "interfaceServices": 3,
+        "zones": 2,
+        "interfaceGb": 100,
+        "publicIpv4": 2,
+        "assumedLcu": 4
+      },
+      "result": {
+        "lambda": {
+          "lines": {
+            "requests": 20,
+            "compute": 83.3335,
+            "httpApi": 100
+          },
+          "subtotal": 203.3335,
+          "units": {
+            "gbSeconds": 5000000,
+            "billedInvocations": 100000000
+          }
+        },
+        "ecs": {
+          "lines": {
+            "compute": 72.0802,
+            "albHours": 16.425,
+            "albLcu": 23.36,
+            "endpointHours": 43.8,
+            "endpointData": 1,
+            "publicIpv4": 7.3
+          },
+          "subtotal": 163.9652,
+          "units": {
+            "taskHours": 1460,
+            "endpointAzHours": 4380
+          }
+        },
+        "currency": "USD",
+        "scope": "modeled_infrastructure_subtotal",
+        "capacityValidated": false,
+        "precisionUsd": 1e-8
+      }
+    }
+  ],
+  "contracts": {
+    "kind": "local_preflight_not_aws_enforcement",
+    "policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Action": [
+            "dynamodb:GetItem"
+          ],
+          "Resource": [
+            "arn:aws:dynamodb:us-east-1:000000000000:table/catalogue"
+          ]
+        }
+      ]
+    },
+    "getItemInput": {
+      "TableName": "catalogue",
+      "Key": {
+        "id": {
+          "S": "book-1"
+        }
+      },
+      "ConsistentRead": true
+    },
+    "objectKey": "tenants/tenant-a/documents/report-1.json",
+    "queueResult": {
+      "batchItemFailures": [
+        {
+          "itemIdentifier": "b"
+        }
+      ]
+    },
+    "dbReview": {
+      "configuredAsRequested": true,
+      "restoreDeclaredTested": false,
+      "restoreVerified": false,
+      "openWork": [
+        "restore_evidence_not_verified"
+      ]
+    }
+  },
+  "observations": [
+    {
+      "method": "GET",
+      "path": "/catalogue/book-1",
+      "http": {
+        "status": 200,
+        "body": {
+          "id": "book-1",
+          "name": "Libro ficticio",
+          "priceCents": 10000
+        }
+      },
+      "localLambda": {
+        "statusCode": 200,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": "{\"id\":\"book-1\",\"name\":\"Libro ficticio\",\"priceCents\":10000}",
+        "isBase64Encoded": false
+      },
+      "lambdaInvocation": "local_adapter_only_not_AWS"
+    },
+    {
+      "method": "GET",
+      "path": "/catalogue/missing",
+      "http": {
+        "status": 404,
+        "body": {
+          "error": "not_found"
+        }
+      },
+      "localLambda": {
+        "statusCode": 404,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": "{\"error\":\"not_found\"}",
+        "isBase64Encoded": false
+      },
+      "lambdaInvocation": "local_adapter_only_not_AWS"
+    },
+    {
+      "method": "POST",
+      "path": "/catalogue/book-1",
+      "http": {
+        "status": 405,
+        "body": {
+          "error": "method_not_allowed"
+        }
+      },
+      "localLambda": {
+        "statusCode": 405,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": "{\"error\":\"method_not_allowed\"}",
+        "isBase64Encoded": false
+      },
+      "lambdaInvocation": "local_adapter_only_not_AWS"
+    },
+    {
+      "method": "GET",
+      "path": "/catalogue/failure",
+      "http": {
+        "status": 503,
+        "body": {
+          "error": "dependency_unavailable"
+        }
+      },
+      "localLambda": {
+        "statusCode": 503,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": "{\"error\":\"dependency_unavailable\"}",
+        "isBase64Encoded": false
+      },
+      "lambdaInvocation": "local_adapter_only_not_AWS"
+    }
+  ],
+  "loopbackOrigin": "http://127.0.0.1:38921",
+  "serverClosed": true,
+  "limits": {
+    "awsDeployment": false,
+    "awsPerformanceMeasured": false,
+    "awsIamEnforcementTested": false,
+    "realAwsBill": false,
+    "completeTco": false,
+    "databaseRestoreTested": false,
+    "actualSqsDeliveryTested": false
+  }
+}

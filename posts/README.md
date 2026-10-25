@@ -222,3 +222,23 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - [ES · On-call y coordinación: quién decide, quién actúa y qué necesita un relevo](es/inc-oncall/README.md)
 - [ES · Postmortems sin culpables: reconstruir causas y decisiones sin reescribir el pasado](es/inc-postmortem/README.md)
 - [ES · Acciones de un postmortem: cerrar una mejora con pruebas, no con una tarea marcada](es/inc-actions/README.md)
+
+## Ampliación de Docker y entornos reproducibles
+
+- **es · p062**: [Docker: qué comparte una image y qué cambia al crear un container](es/p062/README.md)
+- **es · docker-layers**: [Dockerfile y build cache: cambiar código sin reinstalar dependencias](es/docker-layers/README.md)
+- **es · docker-stages**: [Multi-stage builds: compilar TypeScript y entregar solo lo necesario](es/docker-stages/README.md)
+- **es · docker-compose**: [Redes y readiness en Docker Compose: por qué localhost apunta al lugar equivocado](es/docker-compose/README.md)
+- **es · docker-volumes**: [Volúmenes en Docker: qué sobrevive a recrear un container](es/docker-volumes/README.md)
+- **es · docker-security**: [Seguridad de images y containers: reducir permisos y mantener las dependencias](es/docker-security/README.md)
+
+## Ampliación de CI/CD y despliegues progresivos
+
+- **es · p063**: [CI/CD: qué demuestra un pipeline y cuándo debe detener una entrega](es/p063/README.md)
+- **es · cd-artifacts**: [Artefactos inmutables: desplegar lo que probaste y conservar una vuelta atrás](es/cd-artifacts/README.md)
+- **es · cd-flags**: [Feature flags: separar el deploy del comportamiento que reciben los usuarios](es/cd-flags/README.md)
+- **es · cd-smoke**: [Smoke tests: detectar una release incorrecta aunque responda 200](es/cd-smoke/README.md)
+- **es · cd-rolling**: [Rolling deployments: convivir con dos versiones sin perder compatibilidad](es/cd-rolling/README.md)
+- **es · cd-bluegreen**: [Blue-green deployments: cambiar tráfico sin olvidar la base de datos](es/cd-bluegreen/README.md)
+- **es · cd-canary**: [Canary releases: comparar el candidato con un control antes de ampliar](es/cd-canary/README.md)
+- **es · cd-rollback**: [Rollback de aplicación y esquema: volver a una versión que todavía entiende los datos](es/cd-rollback/README.md)

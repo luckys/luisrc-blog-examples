@@ -1,0 +1,11 @@
+{
+  "family": "catalogue-example",
+  "requiresCompatibilities": ["FARGATE"],
+  "networkMode": "awsvpc",
+  "cpu": "256",
+  "memory": "512",
+  "runtimePlatform": { "cpuArchitecture": "X86_64", "operatingSystemFamily": "LINUX" },
+  "taskRoleArn": "arn:aws:iam::000000000000:role/catalogue-reader",
+  "executionRoleArn": "arn:aws:iam::000000000000:role/catalogue-execution",
+  "containerDefinitions": [{ "name": "api", "image": "000000000000.dkr.ecr.us-east-1.amazonaws.com/catalogue@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "user": "node", "readonlyRootFilesystem": true, "essential": true, "portMappings": [{ "containerPort": 3000, "protocol": "tcp" }], "logConfiguration": { "logDriver": "awslogs", "options": { "awslogs-group": "/example/catalogue", "awslogs-region": "us-east-1", "awslogs-stream-prefix": "api" } } }]
+}

@@ -3191,5 +3191,256 @@
       "packages/incident-response/README.md"
     ],
     "directory": "es/inc-actions"
+  },
+  {
+    "locale": "es",
+    "slug": "docker-images-containers-entorno-reproducible",
+    "title": "Docker: qué comparte una image y qué cambia al crear un container",
+    "post": "src/content/posts/es/docker-images-containers-entorno-reproducible.md",
+    "labs": [
+      "container-environments"
+    ],
+    "files": [
+      "packages/container-environments/Dockerfile",
+      "packages/container-environments/compose.yaml",
+      "packages/container-environments/src/server.ts",
+      "packages/container-environments/scripts/exercise.mjs",
+      "packages/container-environments/evidence/compose.json",
+      "packages/container-environments/README.md"
+    ],
+    "directory": "es/p062"
+  },
+  {
+    "locale": "es",
+    "slug": "dockerfile-layers-build-cache-dependencias",
+    "title": "Dockerfile y build cache: cambiar código sin reinstalar dependencias",
+    "post": "src/content/posts/es/dockerfile-layers-build-cache-dependencias.md",
+    "labs": [
+      "container-environments"
+    ],
+    "files": [
+      "packages/container-environments/Dockerfile",
+      "packages/container-environments/Dockerfile.dockerignore",
+      "packages/container-environments/package.json",
+      "packages/container-environments/scripts/exercise.mjs",
+      "packages/container-environments/evidence/compose.json",
+      "packages/container-environments/README.md"
+    ],
+    "directory": "es/docker-layers"
+  },
+  {
+    "locale": "es",
+    "slug": "multi-stage-build-typescript-runtime",
+    "title": "Multi-stage builds: compilar TypeScript y entregar solo lo necesario",
+    "post": "src/content/posts/es/multi-stage-build-typescript-runtime.md",
+    "labs": [
+      "container-environments"
+    ],
+    "files": [
+      "packages/container-environments/Dockerfile",
+      "packages/container-environments/package.json",
+      "packages/container-environments/tsconfig.json",
+      "packages/container-environments/src/notes.ts",
+      "packages/container-environments/tests/notes.test.mjs",
+      "packages/container-environments/README.md"
+    ],
+    "directory": "es/docker-stages"
+  },
+  {
+    "locale": "es",
+    "slug": "docker-compose-redes-readiness-localhost",
+    "title": "Redes y readiness en Docker Compose: por qué localhost apunta al lugar equivocado",
+    "post": "src/content/posts/es/docker-compose-redes-readiness-localhost.md",
+    "labs": [
+      "container-environments"
+    ],
+    "files": [
+      "packages/container-environments/compose.yaml",
+      "packages/container-environments/src/server.ts",
+      "packages/container-environments/src/notes.ts",
+      "packages/container-environments/scripts/exercise.mjs",
+      "packages/container-environments/evidence/compose.json",
+      "packages/container-environments/README.md"
+    ],
+    "directory": "es/docker-compose"
+  },
+  {
+    "locale": "es",
+    "slug": "docker-volumenes-recrear-containers-datos",
+    "title": "Volúmenes en Docker: qué sobrevive a recrear un container",
+    "post": "src/content/posts/es/docker-volumenes-recrear-containers-datos.md",
+    "labs": [
+      "container-environments"
+    ],
+    "files": [
+      "packages/container-environments/compose.yaml",
+      "packages/container-environments/sql/01-schema.sql",
+      "packages/container-environments/scripts/exercise.mjs",
+      "packages/container-environments/evidence/compose.json",
+      "packages/container-environments/README.md"
+    ],
+    "directory": "es/docker-volumes"
+  },
+  {
+    "locale": "es",
+    "slug": "docker-seguridad-images-permisos-dependencias",
+    "title": "Seguridad de images y containers: reducir permisos y mantener las dependencias",
+    "post": "src/content/posts/es/docker-seguridad-images-permisos-dependencias.md",
+    "labs": [
+      "container-environments"
+    ],
+    "files": [
+      "packages/container-environments/Dockerfile",
+      "packages/container-environments/Dockerfile.dockerignore",
+      "packages/container-environments/compose.yaml",
+      "packages/container-environments/scripts/exercise.mjs",
+      "packages/container-environments/evidence/compose.json",
+      "packages/container-environments/README.md"
+    ],
+    "directory": "es/docker-security"
+  },
+  {
+    "locale": "es",
+    "slug": "ci-cd-pipeline-gates-evidencia",
+    "title": "CI/CD: qué demuestra un pipeline y cuándo debe detener una entrega",
+    "post": "src/content/posts/es/ci-cd-pipeline-gates-evidencia.md",
+    "labs": [
+      "progressive-delivery"
+    ],
+    "files": [
+      "packages/progressive-delivery/scripts/pipeline.mjs",
+      "packages/progressive-delivery/src/gates.ts",
+      "packages/progressive-delivery/tests/core.test.mjs",
+      "packages/progressive-delivery/Dockerfile",
+      "packages/progressive-delivery/evidence/delivery.json",
+      "packages/progressive-delivery/README.md"
+    ],
+    "directory": "es/p063"
+  },
+  {
+    "locale": "es",
+    "slug": "artefactos-inmutables-promocion-rollback",
+    "title": "Artefactos inmutables: desplegar lo que probaste y conservar una vuelta atrás",
+    "post": "src/content/posts/es/artefactos-inmutables-promocion-rollback.md",
+    "labs": [
+      "progressive-delivery"
+    ],
+    "files": [
+      "packages/progressive-delivery/Dockerfile",
+      "packages/progressive-delivery/variants/stable.json",
+      "packages/progressive-delivery/variants/candidate.json",
+      "packages/progressive-delivery/scripts/pipeline.mjs",
+      "packages/progressive-delivery/scripts/exercise.mjs",
+      "packages/progressive-delivery/README.md"
+    ],
+    "directory": "es/cd-artifacts"
+  },
+  {
+    "locale": "es",
+    "slug": "feature-flags-deploy-release-comportamiento",
+    "title": "Feature flags: separar el deploy del comportamiento que reciben los usuarios",
+    "post": "src/content/posts/es/feature-flags-deploy-release-comportamiento.md",
+    "labs": [
+      "progressive-delivery"
+    ],
+    "files": [
+      "packages/progressive-delivery/src/product.ts",
+      "packages/progressive-delivery/src/router.ts",
+      "packages/progressive-delivery/src/rollout.ts",
+      "packages/progressive-delivery/tests/core.test.mjs",
+      "packages/progressive-delivery/tests/router.test.mjs",
+      "packages/progressive-delivery/README.md"
+    ],
+    "directory": "es/cd-flags"
+  },
+  {
+    "locale": "es",
+    "slug": "smoke-tests-release-correcta-http-200",
+    "title": "Smoke tests: detectar una release incorrecta aunque responda 200",
+    "post": "src/content/posts/es/smoke-tests-release-correcta-http-200.md",
+    "labs": [
+      "progressive-delivery"
+    ],
+    "files": [
+      "packages/progressive-delivery/src/gates.ts",
+      "packages/progressive-delivery/scripts/smoke.mjs",
+      "packages/progressive-delivery/scripts/exercise.mjs",
+      "packages/progressive-delivery/tests/core.test.mjs",
+      "packages/progressive-delivery/evidence/delivery.json",
+      "packages/progressive-delivery/README.md"
+    ],
+    "directory": "es/cd-smoke"
+  },
+  {
+    "locale": "es",
+    "slug": "rolling-deployments-versiones-compatibilidad",
+    "title": "Rolling deployments: convivir con dos versiones sin perder compatibilidad",
+    "post": "src/content/posts/es/rolling-deployments-versiones-compatibilidad.md",
+    "labs": [
+      "progressive-delivery"
+    ],
+    "files": [
+      "packages/progressive-delivery/compose.yaml",
+      "packages/progressive-delivery/src/router.ts",
+      "packages/progressive-delivery/scripts/exercise.mjs",
+      "packages/progressive-delivery/sql/02-expand.sql",
+      "packages/progressive-delivery/evidence/delivery.json",
+      "packages/progressive-delivery/README.md"
+    ],
+    "directory": "es/cd-rolling"
+  },
+  {
+    "locale": "es",
+    "slug": "blue-green-deployments-trafico-base-datos",
+    "title": "Blue-green deployments: cambiar tráfico sin olvidar la base de datos",
+    "post": "src/content/posts/es/blue-green-deployments-trafico-base-datos.md",
+    "labs": [
+      "progressive-delivery"
+    ],
+    "files": [
+      "packages/progressive-delivery/compose.yaml",
+      "packages/progressive-delivery/src/rollout.ts",
+      "packages/progressive-delivery/src/router.ts",
+      "packages/progressive-delivery/scripts/exercise.mjs",
+      "packages/progressive-delivery/evidence/delivery.json",
+      "packages/progressive-delivery/README.md"
+    ],
+    "directory": "es/cd-bluegreen"
+  },
+  {
+    "locale": "es",
+    "slug": "canary-releases-candidato-control-muestras",
+    "title": "Canary releases: comparar el candidato con un control antes de ampliar",
+    "post": "src/content/posts/es/canary-releases-candidato-control-muestras.md",
+    "labs": [
+      "progressive-delivery"
+    ],
+    "files": [
+      "packages/progressive-delivery/src/rollout.ts",
+      "packages/progressive-delivery/src/gates.ts",
+      "packages/progressive-delivery/scripts/exercise.mjs",
+      "packages/progressive-delivery/tests/core.test.mjs",
+      "packages/progressive-delivery/evidence/delivery.json",
+      "packages/progressive-delivery/README.md"
+    ],
+    "directory": "es/cd-canary"
+  },
+  {
+    "locale": "es",
+    "slug": "rollback-aplicacion-esquema-datos-compatibles",
+    "title": "Rollback de aplicación y esquema: volver a una versión que todavía entiende los datos",
+    "post": "src/content/posts/es/rollback-aplicacion-esquema-datos-compatibles.md",
+    "labs": [
+      "progressive-delivery"
+    ],
+    "files": [
+      "packages/progressive-delivery/sql/02-expand.sql",
+      "packages/progressive-delivery/sql/03-unsafe-contract.sql",
+      "packages/progressive-delivery/src/server.ts",
+      "packages/progressive-delivery/scripts/exercise.mjs",
+      "packages/progressive-delivery/evidence/delivery.json",
+      "packages/progressive-delivery/README.md"
+    ],
+    "directory": "es/cd-rollback"
   }
 ]

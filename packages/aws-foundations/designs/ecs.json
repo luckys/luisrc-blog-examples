@@ -1,0 +1,13 @@
+{
+  "kind": "authored_architecture_not_deployed",
+  "region": "us-east-1",
+  "compute": "ECS Fargate Linux x86",
+  "ingress": "public Application Load Balancer",
+  "network": { "zones": 2, "publicTaskIp": false, "services": ["ecr.api", "ecr.dkr", "logs"], "gateways": ["s3", "dynamodb"], "externalInternetRequired": false },
+  "natGateway": false,
+  "database": "DynamoDB catalogue, same-region GetItem with ConsistentRead true",
+  "identity": { "taskRole": "catalogue GetItem", "executionRole": "ECR pull and CloudWatch logs, separate from task role" },
+  "limitsToVerify": ["task_throughput_and_latency", "scaling_delay", "one_az_loss", "endpoint_dns_and_security_groups", "actual_alb_lcu"],
+  "operationsOwnedByTeam": ["container_image_and_dependencies", "task_definition", "service_scaling", "network_paths", "authorization", "data_model", "observability", "release_and_recovery"],
+  "platformManaged": ["Fargate_hosts", "task_placement_subject_to_service_configuration"]
+}
