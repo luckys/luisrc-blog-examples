@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 193 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 211 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -34,6 +34,19 @@ estructura, índices y conservación de fuentes; `pnpm test:labs` ejecuta los te
 locales de Node y Python estándar, sin iniciar Docker ni instalar navegadores.
 
 ## Laboratorios
+
+El paquete [incident-response](packages/incident-response/README.md) reproduce un
+incidente sintético con HTTP y dos procesos reales. Nueve tests, cronología, runbook
+y acciones con evidencia. Cola en memoria, sin guardia humana o deploy ejecutados.
+
+El paquete [service-objectives](packages/service-objectives/README.md) simula SLI,
+maduración, ventanas, presupuestos y condiciones multi-window. Doce tests y modelo
+compartido con el visor. Sin tráfico real, paging, Prometheus o política aplicada a CI.
+
+El paquete [observability-lab](packages/observability-lab/README.md) traza React →
+API → worker en procesos distintos con OpenTelemetry. Nueve tests rápidos y cinco
+escenarios Chromium opt-in; histograma SDK y reservoir de exemplars explícito.
+Sin broker durable, OTLP, Collector, backend o ingestión Prometheus ejecutada.
 
 El paquete [performance-lab](packages/performance-lab/README.md) mide HTTP con k6
 en procesos separados y captura perfiles de CPU/heap de datos ficticios. Carga

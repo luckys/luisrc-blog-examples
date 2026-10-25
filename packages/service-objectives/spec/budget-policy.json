@@ -1,0 +1,12 @@
+{
+  "format": "lab-policy-v1",
+  "purpose": "prioritize reliability without hiding customer failures",
+  "normal": "changes follow the normal review and rollout policy",
+  "exhausted": "pause discretionary releases, prioritize reliability work and review the causes",
+  "exceptions": ["urgent security fix", "mitigation or fix for the active failure"],
+  "exceptionApproval": "service owner + incident lead, with reason and rollback plan recorded",
+  "dataIncomplete": "investigate missing telemetry; do not classify the period as compliant",
+  "recovery": "return through review when the agreed window meets the objective and mitigation is checked",
+  "reviewOwner": "reporting-service-owner-fictional",
+  "automatedEnforcement": false
+}

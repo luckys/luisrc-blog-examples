@@ -1,0 +1,15 @@
+{
+  "kind": "authored_tabletop_example_not_actual_page",
+  "incident": "zero-batch-lab",
+  "roles": { "commander": "lab-ic", "operations": "lab-ops", "communications": "lab-comms" },
+  "handoff": {
+    "scope": "reports fixture, only owned API and worker child processes",
+    "facts": "three accepted jobs stalled; API live; no production users",
+    "hypotheses": "zero batch selection, supported by config, ticks and attempts",
+    "changes": "admission paused; batch size restored; prior jobs retained",
+    "nextAction": "verify payloads, then review the guarded configuration candidate",
+    "acknowledgedBy": "lab-relief-placeholder-not-human-ack"
+  },
+  "statusDraft": "Se han observado trabajos aceptados sin completar. Se contiene entrada mientras se comprueba el procesamiento. El próximo comunicado debe distinguir hechos nuevos de hipótesis. No se promete una hora de recuperación.",
+  "deliveredToPeople": false
+}

@@ -1,0 +1,6 @@
+[
+  { "id": "A01", "kind": "prevent", "owner": "reports-maintainer-fictional", "reviewDate": "2026-11-07", "state": "verified_in_fixture", "criterion": "zero rejected atomically; revision and batch size unchanged; new jobs still complete", "proof": "guard_rejects_zero" },
+  { "id": "A02", "kind": "detect", "owner": "reports-ops-fictional", "reviewDate": "2026-11-07", "state": "open", "criterion": "observe oldest pending age and lack of progress; test notification routing before claiming coverage", "proof": null },
+  { "id": "A03", "kind": "recover", "owner": "reports-ops-fictional", "reviewDate": "2026-11-07", "state": "verified_in_fixture", "criterion": "pause, preserve five accepted IDs, drain, resume two jobs and verify all seven payloads", "proof": "recovery_preserves_work" },
+  { "id": "A04", "kind": "limit_loss", "owner": "reports-storage-fictional", "reviewDate": "2026-11-14", "state": "open", "criterion": "decide durable queue and restart recovery; execute crash test before closing", "proof": null }
+]

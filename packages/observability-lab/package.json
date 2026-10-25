@@ -1,0 +1,30 @@
+{
+  "name": "@luisrc-examples/observability-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "build:ui": "node scripts/build-ui.mjs",
+    "start": "node src/server.ts",
+    "measure": "node scripts/measure.mjs"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "1.10.0",
+    "@opentelemetry/context-async-hooks": "3.0.0",
+    "@opentelemetry/core": "3.0.0",
+    "@opentelemetry/resources": "3.0.0",
+    "@opentelemetry/sdk-metrics": "3.0.0",
+    "@opentelemetry/sdk-trace": "3.0.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "@types/node": "24.19.0",
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
+    "esbuild": "0.25.10",
+    "typescript": "5.9.2"
+  }
+}

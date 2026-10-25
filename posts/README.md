@@ -195,3 +195,30 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · dist-webhooks**: [Webhooks seguros: verificar bytes, persistir y tolerar eventos desordenados](es/dist-webhooks/README.md)
 - **es · p075**: [WebRTC: de pedir el micrófono a transportar audio y cerrar la llamada](es/p075/README.md)
 - **es · p029**: [XSS en el DOM: mostrar texto sin convertirlo en código](es/p029/README.md)
+
+## Ampliación de observabilidad
+
+- [Logs e identidades](es/p059/README.md)
+- [Spans y ciclo de vida](es/obs-spans/README.md)
+- [Propagación React → API → worker](es/obs-propagation/README.md)
+- [Sampling](es/obs-sampling/README.md)
+- [Métricas e histogramas](es/obs-metrics/README.md)
+- [Exemplars](es/obs-exemplars/README.md)
+
+## Ampliación de SLI, SLO y presupuesto
+
+- [SLI del endpoint](es/p060/README.md)
+- [Cohortes asíncronas](es/slo-cohorts/README.md)
+- [Ventanas y cobertura](es/slo-windows/README.md)
+- [Presupuesto y política](es/slo-budget/README.md)
+- [Burn rate](es/slo-burn/README.md)
+- [Alertas multi-window](es/slo-alerts/README.md)
+
+## Ampliación de respuesta a incidentes
+
+- [ES · Triage de incidentes: separar el síntoma, la hipótesis y lo que sabemos](es/p061/README.md)
+- [ES · Mitigar un incidente: reducir el daño y comprobar la recuperación del usuario](es/inc-mitigation/README.md)
+- [ES · Runbooks: convertir una receta de comandos en decisiones con límites](es/inc-runbooks/README.md)
+- [ES · On-call y coordinación: quién decide, quién actúa y qué necesita un relevo](es/inc-oncall/README.md)
+- [ES · Postmortems sin culpables: reconstruir causas y decisiones sin reescribir el pasado](es/inc-postmortem/README.md)
+- [ES · Acciones de un postmortem: cerrar una mejora con pruebas, no con una tarea marcada](es/inc-actions/README.md)

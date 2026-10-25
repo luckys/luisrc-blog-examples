@@ -1,0 +1,14 @@
+{
+  "format": "lab-v1-not-openslo",
+  "service": "reports-api-fictional",
+  "route": "GET /reports/{id}",
+  "measurementBoundary": "simulated client outcome, not just server HTTP status",
+  "eligibility": "valid user requests for this route; synthetic, other routes and malformed requests counted separately",
+  "availabilityGood": "200 with valid body, or expected404 with valid body",
+  "latencyGood": "availabilityGood AND durationMs <= latencyThresholdMs",
+  "latencyThresholdMs": 300,
+  "targetPpm": 999000,
+  "window": { "kind": "rolling", "minutes": 43200 },
+  "owner": "reporting-oncall-fictional",
+  "review": "review with product after collecting real traffic; not a commercial promise"
+}

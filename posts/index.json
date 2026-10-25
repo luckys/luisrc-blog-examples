@@ -1065,6 +1065,25 @@
   },
   {
     "locale": "es",
+    "slug": "exemplars-openmetrics-histograma-traza",
+    "title": "Exemplars: abrir una traza desde un histograma sin crear una serie por petición",
+    "post": "src/content/posts/es/exemplars-openmetrics-histograma-traza.md",
+    "labs": [
+      "observability-lab"
+    ],
+    "files": [
+      "packages/observability-lab/src/metrics.ts",
+      "packages/observability-lab/tests/metrics.test.mjs",
+      "packages/observability-lab/explorer.html",
+      "packages/observability-lab/explorer.mjs",
+      "packages/observability-lab/measurements.json",
+      "packages/observability-lab/evidence/browser.json",
+      "packages/observability-lab/README.md"
+    ],
+    "directory": "es/obs-exemplars"
+  },
+  {
+    "locale": "es",
     "slug": "experimentos-ab-p-value-efecto-potencia",
     "title": "Experimentos A/B: separar tamaño del efecto, incertidumbre y p-value",
     "post": "src/content/posts/es/experimentos-ab-p-value-efecto-potencia.md",
@@ -1565,6 +1584,23 @@
   },
   {
     "locale": "es",
+    "slug": "logs-estructurados-identidades-correlacion",
+    "title": "Logs estructurados: qué identifica una petición y qué identifica una operación",
+    "post": "src/content/posts/es/logs-estructurados-identidades-correlacion.md",
+    "labs": [
+      "observability-lab"
+    ],
+    "files": [
+      "packages/observability-lab/src/logging.ts",
+      "packages/observability-lab/tests/core.test.mjs",
+      "packages/observability-lab/tests/http.test.mjs",
+      "packages/observability-lab/evidence/browser.json",
+      "packages/observability-lab/README.md"
+    ],
+    "directory": "es/p059"
+  },
+  {
+    "locale": "es",
     "slug": "lsp-contratos-sustitucion-comportamiento",
     "title": "LSP: tener la misma firma no garantiza el mismo contrato",
     "post": "src/content/posts/es/lsp-contratos-sustitucion-comportamiento.md",
@@ -1683,6 +1719,23 @@
       "packages/machine-learning/README.md"
     ],
     "directory": "es/p093"
+  },
+  {
+    "locale": "es",
+    "slug": "metricas-opentelemetry-histogramas-cardinalidad",
+    "title": "Métricas con OpenTelemetry: histogramas agregables y labels con límites",
+    "post": "src/content/posts/es/metricas-opentelemetry-histogramas-cardinalidad.md",
+    "labs": [
+      "observability-lab"
+    ],
+    "files": [
+      "packages/observability-lab/src/metrics.ts",
+      "packages/observability-lab/src/worker.ts",
+      "packages/observability-lab/tests/metrics.test.mjs",
+      "packages/observability-lab/evidence/browser.json",
+      "packages/observability-lab/README.md"
+    ],
+    "directory": "es/obs-metrics"
   },
   {
     "locale": "es",
@@ -1900,6 +1953,23 @@
   },
   {
     "locale": "es",
+    "slug": "opentelemetry-spans-contexto-ciclo-vida",
+    "title": "Spans con OpenTelemetry: delimitar trabajo sin convertir cada función en una traza",
+    "post": "src/content/posts/es/opentelemetry-spans-contexto-ciclo-vida.md",
+    "labs": [
+      "observability-lab"
+    ],
+    "files": [
+      "packages/observability-lab/src/tracing.ts",
+      "packages/observability-lab/src/worker.ts",
+      "packages/observability-lab/tests/core.test.mjs",
+      "packages/observability-lab/evidence/browser.json",
+      "packages/observability-lab/README.md"
+    ],
+    "directory": "es/obs-spans"
+  },
+  {
+    "locale": "es",
     "slug": "paginacion-escrituras-concurrentes-snapshots",
     "title": "Paginación bajo escrituras: qué conserva keyset y qué necesita un snapshot",
     "post": "src/content/posts/es/paginacion-escrituras-concurrentes-snapshots.md",
@@ -2028,6 +2098,25 @@
       "packages/computing-networks/README.md"
     ],
     "directory": "es/p003"
+  },
+  {
+    "locale": "es",
+    "slug": "propagacion-trazas-react-api-worker",
+    "title": "Propagar una traza desde React hasta un worker en otro proceso",
+    "post": "src/content/posts/es/propagacion-trazas-react-api-worker.md",
+    "labs": [
+      "observability-lab"
+    ],
+    "files": [
+      "packages/observability-lab/web/app.tsx",
+      "packages/observability-lab/src/server.ts",
+      "packages/observability-lab/src/worker.ts",
+      "packages/observability-lab/src/tracing.ts",
+      "packages/observability-lab/scripts/measure.mjs",
+      "packages/observability-lab/evidence/browser.json",
+      "packages/observability-lab/README.md"
+    ],
+    "directory": "es/obs-propagation"
   },
   {
     "locale": "es",
@@ -2292,6 +2381,23 @@
       "packages/reliable-services/README.md"
     ],
     "directory": "es/dist-sagas"
+  },
+  {
+    "locale": "es",
+    "slug": "sampling-trazas-parent-based-head-tail",
+    "title": "Sampling de trazas: qué desaparece cuando no guardas todos los spans",
+    "post": "src/content/posts/es/sampling-trazas-parent-based-head-tail.md",
+    "labs": [
+      "observability-lab"
+    ],
+    "files": [
+      "packages/observability-lab/src/tracing.ts",
+      "packages/observability-lab/web/app.tsx",
+      "packages/observability-lab/tests/core.test.mjs",
+      "packages/observability-lab/evidence/browser.json",
+      "packages/observability-lab/README.md"
+    ],
+    "directory": "es/obs-sampling"
   },
   {
     "locale": "es",
@@ -2875,5 +2981,215 @@
       "packages/browser-security/README.md"
     ],
     "directory": "es/p029"
+  },
+  {
+    "locale": "es",
+    "slug": "sli-disponibilidad-latencia-eventos-elegibles",
+    "title": "Definir un SLI: qué cuenta como una respuesta buena y qué entra en el denominador",
+    "post": "src/content/posts/es/sli-disponibilidad-latencia-eventos-elegibles.md",
+    "labs": [
+      "service-objectives"
+    ],
+    "files": [
+      "packages/service-objectives/src/sli.ts",
+      "packages/service-objectives/src/fixtures.ts",
+      "packages/service-objectives/tests/sli.test.mjs",
+      "packages/service-objectives/spec/objectives.json",
+      "packages/service-objectives/README.md"
+    ],
+    "directory": "es/p060"
+  },
+  {
+    "locale": "es",
+    "slug": "sli-asincronos-cohortes-deadline-resolucion",
+    "title": "SLI asíncronos: esperar a que una operación pueda incumplir su plazo",
+    "post": "src/content/posts/es/sli-asincronos-cohortes-deadline-resolucion.md",
+    "labs": [
+      "service-objectives"
+    ],
+    "files": [
+      "packages/service-objectives/src/cohorts.ts",
+      "packages/service-objectives/src/fixtures.ts",
+      "packages/service-objectives/tests/sli.test.mjs",
+      "packages/service-objectives/evidence/simulation.json",
+      "packages/service-objectives/README.md"
+    ],
+    "directory": "es/slo-cohorts"
+  },
+  {
+    "locale": "es",
+    "slug": "slo-ventanas-rolling-calendario-datos-ausentes",
+    "title": "Ventanas de un SLO: qué cambia entre rolling, calendario y datos que faltan",
+    "post": "src/content/posts/es/slo-ventanas-rolling-calendario-datos-ausentes.md",
+    "labs": [
+      "service-objectives"
+    ],
+    "files": [
+      "packages/service-objectives/src/windows.ts",
+      "packages/service-objectives/tests/alerts.test.mjs",
+      "packages/service-objectives/spec/objectives.json",
+      "packages/service-objectives/README.md"
+    ],
+    "directory": "es/slo-windows"
+  },
+  {
+    "locale": "es",
+    "slug": "error-budget-calculo-politica-decisiones",
+    "title": "Error budgets: calcular el margen de fallo y acordar qué hacer cuando se agota",
+    "post": "src/content/posts/es/error-budget-calculo-politica-decisiones.md",
+    "labs": [
+      "service-objectives"
+    ],
+    "files": [
+      "packages/service-objectives/src/budget.ts",
+      "packages/service-objectives/tests/budget.test.mjs",
+      "packages/service-objectives/spec/budget-policy.json",
+      "packages/service-objectives/evidence/simulation.json",
+      "packages/service-objectives/README.md"
+    ],
+    "directory": "es/slo-budget"
+  },
+  {
+    "locale": "es",
+    "slug": "burn-rate-presupuesto-errores-trafico",
+    "title": "Burn rate: cuánto más rápido se consume el presupuesto y cuándo importa el tráfico",
+    "post": "src/content/posts/es/burn-rate-presupuesto-errores-trafico.md",
+    "labs": [
+      "service-objectives"
+    ],
+    "files": [
+      "packages/service-objectives/src/budget.ts",
+      "packages/service-objectives/src/simulation.ts",
+      "packages/service-objectives/tests/budget.test.mjs",
+      "packages/service-objectives/scripts/simulate.mjs",
+      "packages/service-objectives/evidence/simulation.json",
+      "packages/service-objectives/README.md"
+    ],
+    "directory": "es/slo-burn"
+  },
+  {
+    "locale": "es",
+    "slug": "alertas-multi-window-burn-rate-accionables",
+    "title": "Alertas multi-window: detectar consumo peligroso sin seguir avisando de un fallo recuperado",
+    "post": "src/content/posts/es/alertas-multi-window-burn-rate-accionables.md",
+    "labs": [
+      "service-objectives"
+    ],
+    "files": [
+      "packages/service-objectives/src/alerts.ts",
+      "packages/service-objectives/src/simulation.ts",
+      "packages/service-objectives/tests/alerts.test.mjs",
+      "packages/service-objectives/spec/alert-runbook.md",
+      "packages/service-objectives/explorer.html",
+      "packages/service-objectives/explorer.mjs",
+      "packages/service-objectives/evidence/simulation.json",
+      "packages/service-objectives/README.md"
+    ],
+    "directory": "es/slo-alerts"
+  },
+  {
+    "locale": "es",
+    "slug": "incidentes-triage-sintomas-hipotesis-evidencia",
+    "title": "Triage de incidentes: separar el síntoma, la hipótesis y lo que sabemos",
+    "post": "src/content/posts/es/incidentes-triage-sintomas-hipotesis-evidencia.md",
+    "labs": [
+      "incident-response"
+    ],
+    "files": [
+      "packages/incident-response/src/config.ts",
+      "packages/incident-response/src/worker.ts",
+      "packages/incident-response/scripts/exercise.mjs",
+      "packages/incident-response/tests/http.test.mjs",
+      "packages/incident-response/evidence/incident.json",
+      "packages/incident-response/README.md"
+    ],
+    "directory": "es/p061"
+  },
+  {
+    "locale": "es",
+    "slug": "mitigar-incidente-verificar-recuperacion",
+    "title": "Mitigar un incidente: reducir el daño y comprobar la recuperación del usuario",
+    "post": "src/content/posts/es/mitigar-incidente-verificar-recuperacion.md",
+    "labs": [
+      "incident-response"
+    ],
+    "files": [
+      "packages/incident-response/src/server.ts",
+      "packages/incident-response/scripts/exercise.mjs",
+      "packages/incident-response/tests/http.test.mjs",
+      "packages/incident-response/evidence/incident.json",
+      "packages/incident-response/README.md"
+    ],
+    "directory": "es/inc-mitigation"
+  },
+  {
+    "locale": "es",
+    "slug": "runbooks-precondiciones-pasos-salida-segura",
+    "title": "Runbooks: convertir una receta de comandos en decisiones con límites",
+    "post": "src/content/posts/es/runbooks-precondiciones-pasos-salida-segura.md",
+    "labs": [
+      "incident-response"
+    ],
+    "files": [
+      "packages/incident-response/docs/runbook.md",
+      "packages/incident-response/src/config.ts",
+      "packages/incident-response/scripts/fixture.mjs",
+      "packages/incident-response/scripts/exercise.mjs",
+      "packages/incident-response/tests/config.test.mjs",
+      "packages/incident-response/README.md"
+    ],
+    "directory": "es/inc-runbooks"
+  },
+  {
+    "locale": "es",
+    "slug": "on-call-coordinacion-incidentes-handoff",
+    "title": "On-call y coordinación: quién decide, quién actúa y qué necesita un relevo",
+    "post": "src/content/posts/es/on-call-coordinacion-incidentes-handoff.md",
+    "labs": [
+      "incident-response"
+    ],
+    "files": [
+      "packages/incident-response/docs/coordination.json",
+      "packages/incident-response/src/review.ts",
+      "packages/incident-response/tests/review.test.mjs",
+      "packages/incident-response/README.md"
+    ],
+    "directory": "es/inc-oncall"
+  },
+  {
+    "locale": "es",
+    "slug": "postmortems-blameless-cronologia-causas",
+    "title": "Postmortems sin culpables: reconstruir causas y decisiones sin reescribir el pasado",
+    "post": "src/content/posts/es/postmortems-blameless-cronologia-causas.md",
+    "labs": [
+      "incident-response"
+    ],
+    "files": [
+      "packages/incident-response/scripts/exercise.mjs",
+      "packages/incident-response/scripts/verify.mjs",
+      "packages/incident-response/evidence/postmortem.md",
+      "packages/incident-response/evidence/incident.json",
+      "packages/incident-response/README.md"
+    ],
+    "directory": "es/inc-postmortem"
+  },
+  {
+    "locale": "es",
+    "slug": "acciones-postmortem-regresion-evidencia-cierre",
+    "title": "Acciones de un postmortem: cerrar una mejora con pruebas, no con una tarea marcada",
+    "post": "src/content/posts/es/acciones-postmortem-regresion-evidencia-cierre.md",
+    "labs": [
+      "incident-response"
+    ],
+    "files": [
+      "packages/incident-response/docs/actions.json",
+      "packages/incident-response/src/config.ts",
+      "packages/incident-response/src/review.ts",
+      "packages/incident-response/tests/config.test.mjs",
+      "packages/incident-response/tests/review.test.mjs",
+      "packages/incident-response/evidence/incident.json",
+      "packages/incident-response/README.md"
+    ],
+    "directory": "es/inc-actions"
   }
 ]

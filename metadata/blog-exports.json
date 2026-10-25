@@ -191,9 +191,76 @@
     "source": "packages/domain-design/scenarios.json",
     "destination": "public/assets/interactive/domain-design/scenarios.json"
   },
-  { "source": "packages/performance-lab/explorer.html", "destination": "public/assets/interactive/performance-series/explorer.html" },
-  { "source": "packages/performance-lab/explorer.mjs", "destination": "public/assets/interactive/performance-series/explorer.mjs" },
-  { "source": "packages/performance-lab/measurements.json", "destination": "public/assets/interactive/performance-series/measurements.json" },
-  { "source": "packages/performance-lab/load-results.svg", "destination": "public/assets/interactive/performance-series/load-results.svg" },
-  { "source": "packages/performance-lab/memory-results.svg", "destination": "public/assets/interactive/performance-series/memory-results.svg" }
+  {
+    "source": "packages/performance-lab/explorer.html",
+    "destination": "public/assets/interactive/performance-series/explorer.html"
+  },
+  {
+    "source": "packages/performance-lab/explorer.mjs",
+    "destination": "public/assets/interactive/performance-series/explorer.mjs"
+  },
+  {
+    "source": "packages/performance-lab/measurements.json",
+    "destination": "public/assets/interactive/performance-series/measurements.json"
+  },
+  {
+    "source": "packages/performance-lab/load-results.svg",
+    "destination": "public/assets/interactive/performance-series/load-results.svg"
+  },
+  {
+    "source": "packages/performance-lab/memory-results.svg",
+    "destination": "public/assets/interactive/performance-series/memory-results.svg"
+  },
+  {
+    "source": "packages/observability-lab/explorer.html",
+    "destination": "public/assets/interactive/observability-series/explorer.html"
+  },
+  {
+    "source": "packages/observability-lab/explorer.mjs",
+    "destination": "public/assets/interactive/observability-series/explorer.mjs"
+  },
+  {
+    "source": "packages/observability-lab/measurements.json",
+    "destination": "public/assets/interactive/observability-series/measurements.json"
+  },
+  {
+    "source": "packages/observability-lab/signals.svg",
+    "destination": "public/assets/interactive/observability-series/signals.svg"
+  },
+  {
+    "source": "packages/service-objectives/explorer.html",
+    "destination": "public/assets/interactive/service-objectives/explorer.html"
+  },
+  {
+    "source": "packages/service-objectives/explorer.mjs",
+    "destination": "public/assets/interactive/service-objectives/explorer.mjs"
+  },
+  {
+    "source": "packages/service-objectives/model.mjs",
+    "destination": "public/assets/interactive/service-objectives/model.mjs"
+  },
+  {
+    "source": "packages/service-objectives/scenarios.json",
+    "destination": "public/assets/interactive/service-objectives/scenarios.json"
+  },
+  {
+    "source": "packages/service-objectives/burn-rate.svg",
+    "destination": "public/assets/interactive/service-objectives/burn-rate.svg"
+  },
+  {
+    "source": "packages/incident-response/explorer.html",
+    "destination": "public/assets/interactive/incident-response/explorer.html"
+  },
+  {
+    "source": "packages/incident-response/explorer.mjs",
+    "destination": "public/assets/interactive/incident-response/explorer.mjs"
+  },
+  {
+    "source": "packages/incident-response/replay.json",
+    "destination": "public/assets/interactive/incident-response/replay.json"
+  },
+  {
+    "source": "packages/incident-response/recovery.svg",
+    "destination": "public/assets/interactive/incident-response/recovery.svg"
+  }
 ]
