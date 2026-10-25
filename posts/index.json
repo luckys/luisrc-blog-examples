@@ -3901,5 +3901,331 @@
       "packages/kubernetes-workloads/README.md"
     ],
     "directory": "es/k8s-hpa"
+  },
+  {
+    "locale": "es",
+    "slug": "rps-concurrencia-ley-little-capacidad",
+    "title": "RPS y concurrencia: cuántas peticiones hay dentro de tu servicio",
+    "post": "src/content/posts/es/rps-concurrencia-ley-little-capacidad.md",
+    "labs": [
+      "capacity-costs"
+    ],
+    "files": [
+      "packages/capacity-costs/src/model.ts",
+      "packages/capacity-costs/tests/model.test.mjs",
+      "packages/capacity-costs/scenarios.json",
+      "packages/capacity-costs/scripts/calculate.mjs",
+      "packages/capacity-costs/evidence/calculations.json",
+      "packages/capacity-costs/README.md"
+    ],
+    "directory": "es/p066"
+  },
+  {
+    "locale": "es",
+    "slug": "utilizacion-cpu-replicas-margen-capacidad",
+    "title": "Utilización y réplicas: dimensionar con margen sin inventar un porcentaje universal",
+    "post": "src/content/posts/es/utilizacion-cpu-replicas-margen-capacidad.md",
+    "labs": [
+      "capacity-costs"
+    ],
+    "files": [
+      "packages/capacity-costs/src/model.ts",
+      "packages/capacity-costs/tests/model.test.mjs",
+      "packages/capacity-costs/scenarios.json",
+      "packages/capacity-costs/scripts/calculate.mjs",
+      "packages/capacity-costs/evidence/calculations.json",
+      "packages/capacity-costs/README.md"
+    ],
+    "directory": "es/cap-utilization"
+  },
+  {
+    "locale": "es",
+    "slug": "cuellos-botella-capacidad-dependencias",
+    "title": "Cuellos de botella: por qué seis réplicas no siempre procesan más trabajo",
+    "post": "src/content/posts/es/cuellos-botella-capacidad-dependencias.md",
+    "labs": [
+      "capacity-costs"
+    ],
+    "files": [
+      "packages/capacity-costs/src/model.ts",
+      "packages/capacity-costs/tests/model.test.mjs",
+      "packages/capacity-costs/scenarios.json",
+      "packages/capacity-costs/scripts/calculate.mjs",
+      "packages/capacity-costs/evidence/calculations.json",
+      "packages/capacity-costs/README.md"
+    ],
+    "directory": "es/cap-bottlenecks"
+  },
+  {
+    "locale": "es",
+    "slug": "autoscaling-colas-arranque-picos",
+    "title": "Autoscaling y colas: qué ocurre mientras llegan las nuevas réplicas",
+    "post": "src/content/posts/es/autoscaling-colas-arranque-picos.md",
+    "labs": [
+      "capacity-costs"
+    ],
+    "files": [
+      "packages/capacity-costs/src/model.ts",
+      "packages/capacity-costs/tests/model.test.mjs",
+      "packages/capacity-costs/scenarios.json",
+      "packages/capacity-costs/scripts/calculate.mjs",
+      "packages/capacity-costs/evidence/calculations.json",
+      "packages/capacity-costs/README.md"
+    ],
+    "directory": "es/cap-autoscaling"
+  },
+  {
+    "locale": "es",
+    "slug": "estimar-costes-servicio-tres-escenarios",
+    "title": "Estimar costes: tres perfiles de tráfico y un presupuesto que muestra sus supuestos",
+    "post": "src/content/posts/es/estimar-costes-servicio-tres-escenarios.md",
+    "labs": [
+      "capacity-costs"
+    ],
+    "files": [
+      "packages/capacity-costs/src/model.ts",
+      "packages/capacity-costs/tests/model.test.mjs",
+      "packages/capacity-costs/scenarios.json",
+      "packages/capacity-costs/scripts/calculate.mjs",
+      "packages/capacity-costs/evidence/calculations.json",
+      "packages/capacity-costs/README.md"
+    ],
+    "directory": "es/cap-estimates"
+  },
+  {
+    "locale": "es",
+    "slug": "reservas-compromisos-descuentos-capacidad",
+    "title": "Reservas y compromisos: pagar menos por hora no siempre reduce el gasto",
+    "post": "src/content/posts/es/reservas-compromisos-descuentos-capacidad.md",
+    "labs": [
+      "capacity-costs"
+    ],
+    "files": [
+      "packages/capacity-costs/src/model.ts",
+      "packages/capacity-costs/tests/model.test.mjs",
+      "packages/capacity-costs/scenarios.json",
+      "packages/capacity-costs/scripts/calculate.mjs",
+      "packages/capacity-costs/evidence/calculations.json",
+      "packages/capacity-costs/README.md"
+    ],
+    "directory": "es/cap-commitments"
+  },
+  {
+    "locale": "es",
+    "slug": "finops-coste-peticion-asignacion-presupuesto",
+    "title": "FinOps: convertir el coste por petición en una decisión que puedas revisar",
+    "post": "src/content/posts/es/finops-coste-peticion-asignacion-presupuesto.md",
+    "labs": [
+      "capacity-costs"
+    ],
+    "files": [
+      "packages/capacity-costs/src/model.ts",
+      "packages/capacity-costs/tests/model.test.mjs",
+      "packages/capacity-costs/scenarios.json",
+      "packages/capacity-costs/scripts/calculate.mjs",
+      "packages/capacity-costs/evidence/calculations.json",
+      "packages/capacity-costs/README.md"
+    ],
+    "directory": "es/cap-finops"
+  },
+  {
+    "locale": "es",
+    "slug": "perceptron-neurona-pesos-bias-xor",
+    "title": "Perceptrón y neurona artificial: qué pueden decidir unos pesos y un bias",
+    "post": "src/content/posts/es/perceptron-neurona-pesos-bias-xor.md",
+    "labs": [
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/neural-foundations/neural.py",
+      "packages/neural-foundations/protocol.json",
+      "packages/neural-foundations/experiments.py",
+      "packages/neural-foundations/tests/test_neural.py",
+      "packages/neural-foundations/results/training.json",
+      "packages/neural-foundations/README.md"
+    ],
+    "directory": "es/p096"
+  },
+  {
+    "locale": "es",
+    "slug": "dense-layers-batches-matrices-dimensiones",
+    "title": "Dense layers: leer una red neuronal como operaciones entre matrices",
+    "post": "src/content/posts/es/dense-layers-batches-matrices-dimensiones.md",
+    "labs": [
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/neural-foundations/neural.py",
+      "packages/neural-foundations/protocol.json",
+      "packages/neural-foundations/experiments.py",
+      "packages/neural-foundations/tests/test_neural.py",
+      "packages/neural-foundations/results/training.json",
+      "packages/neural-foundations/README.md"
+    ],
+    "directory": "es/dl-dense"
+  },
+  {
+    "locale": "es",
+    "slug": "activations-tanh-sigmoid-relu-no-linealidad",
+    "title": "Activations: qué cambia tanh, sigmoid o ReLU dentro de una red",
+    "post": "src/content/posts/es/activations-tanh-sigmoid-relu-no-linealidad.md",
+    "labs": [
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/neural-foundations/neural.py",
+      "packages/neural-foundations/protocol.json",
+      "packages/neural-foundations/experiments.py",
+      "packages/neural-foundations/tests/test_neural.py",
+      "packages/neural-foundations/results/training.json",
+      "packages/neural-foundations/README.md"
+    ],
+    "directory": "es/dl-activations"
+  },
+  {
+    "locale": "es",
+    "slug": "mlp-numpy-entrenar-xor-pesos-curvas",
+    "title": "Una MLP con NumPy: entrenar XOR y observar dónde falla",
+    "post": "src/content/posts/es/mlp-numpy-entrenar-xor-pesos-curvas.md",
+    "labs": [
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/neural-foundations/neural.py",
+      "packages/neural-foundations/protocol.json",
+      "packages/neural-foundations/experiments.py",
+      "packages/neural-foundations/tests/test_neural.py",
+      "packages/neural-foundations/results/training.json",
+      "packages/neural-foundations/README.md"
+    ],
+    "directory": "es/dl-xor"
+  },
+  {
+    "locale": "es",
+    "slug": "representaciones-aprendidas-limites-aproximacion-universal",
+    "title": "Representaciones aprendidas: qué significa que una red pueda aproximar una función",
+    "post": "src/content/posts/es/representaciones-aprendidas-limites-aproximacion-universal.md",
+    "labs": [
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/neural-foundations/neural.py",
+      "packages/neural-foundations/protocol.json",
+      "packages/neural-foundations/experiments.py",
+      "packages/neural-foundations/tests/test_neural.py",
+      "packages/neural-foundations/results/training.json",
+      "packages/neural-foundations/README.md"
+    ],
+    "directory": "es/dl-representations"
+  },
+  {
+    "locale": "es",
+    "slug": "computational-graph-regla-cadena-caminos",
+    "title": "Computational graph: seguir los caminos de una pérdida antes de derivarla",
+    "post": "src/content/posts/es/computational-graph-regla-cadena-caminos.md",
+    "labs": [
+      "autodiff-foundations",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/autodiff-foundations/manual.py",
+      "packages/autodiff-foundations/framework.py",
+      "packages/autodiff-foundations/protocol.json",
+      "packages/autodiff-foundations/tests/test_manual.py",
+      "packages/autodiff-foundations/tests/test_torch.py",
+      "packages/autodiff-foundations/results/gradients.json",
+      "packages/autodiff-foundations/README.md",
+      "packages/neural-foundations/neural.py",
+      "packages/neural-foundations/results/training.json"
+    ],
+    "directory": "es/p097"
+  },
+  {
+    "locale": "es",
+    "slug": "binary-cross-entropy-logits-gradiente-promedio",
+    "title": "Binary cross entropy: de dónde sale el gradiente p menos y",
+    "post": "src/content/posts/es/binary-cross-entropy-logits-gradiente-promedio.md",
+    "labs": [
+      "autodiff-foundations",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/autodiff-foundations/manual.py",
+      "packages/autodiff-foundations/framework.py",
+      "packages/autodiff-foundations/protocol.json",
+      "packages/autodiff-foundations/tests/test_manual.py",
+      "packages/autodiff-foundations/tests/test_torch.py",
+      "packages/autodiff-foundations/results/gradients.json",
+      "packages/autodiff-foundations/README.md",
+      "packages/neural-foundations/neural.py",
+      "packages/neural-foundations/results/training.json"
+    ],
+    "directory": "es/dl-loss-gradient"
+  },
+  {
+    "locale": "es",
+    "slug": "backpropagation-matrices-dense-bias-tanh",
+    "title": "Backpropagation en una MLP: derivar pesos, bias y tanh con sus dimensiones",
+    "post": "src/content/posts/es/backpropagation-matrices-dense-bias-tanh.md",
+    "labs": [
+      "autodiff-foundations",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/autodiff-foundations/manual.py",
+      "packages/autodiff-foundations/framework.py",
+      "packages/autodiff-foundations/protocol.json",
+      "packages/autodiff-foundations/tests/test_manual.py",
+      "packages/autodiff-foundations/tests/test_torch.py",
+      "packages/autodiff-foundations/results/gradients.json",
+      "packages/autodiff-foundations/README.md",
+      "packages/neural-foundations/neural.py",
+      "packages/neural-foundations/results/training.json"
+    ],
+    "directory": "es/dl-backprop"
+  },
+  {
+    "locale": "es",
+    "slug": "gradient-checking-diferencias-finitas-epsilon",
+    "title": "Gradient checking: comprobar un backward sin confiar solo en que la loss baje",
+    "post": "src/content/posts/es/gradient-checking-diferencias-finitas-epsilon.md",
+    "labs": [
+      "autodiff-foundations",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/autodiff-foundations/manual.py",
+      "packages/autodiff-foundations/framework.py",
+      "packages/autodiff-foundations/protocol.json",
+      "packages/autodiff-foundations/tests/test_manual.py",
+      "packages/autodiff-foundations/tests/test_torch.py",
+      "packages/autodiff-foundations/results/gradients.json",
+      "packages/autodiff-foundations/README.md",
+      "packages/neural-foundations/neural.py",
+      "packages/neural-foundations/results/training.json"
+    ],
+    "directory": "es/dl-gradcheck"
+  },
+  {
+    "locale": "es",
+    "slug": "pytorch-autograd-leaf-detach-acumulacion-vjp",
+    "title": "Autograd en PyTorch: qué calcula backward y qué puede cortar el grafo",
+    "post": "src/content/posts/es/pytorch-autograd-leaf-detach-acumulacion-vjp.md",
+    "labs": [
+      "autodiff-foundations",
+      "neural-foundations"
+    ],
+    "files": [
+      "packages/autodiff-foundations/manual.py",
+      "packages/autodiff-foundations/framework.py",
+      "packages/autodiff-foundations/protocol.json",
+      "packages/autodiff-foundations/tests/test_manual.py",
+      "packages/autodiff-foundations/tests/test_torch.py",
+      "packages/autodiff-foundations/results/gradients.json",
+      "packages/autodiff-foundations/README.md",
+      "packages/neural-foundations/neural.py",
+      "packages/neural-foundations/results/training.json"
+    ],
+    "directory": "es/dl-autodiff"
   }
 ]

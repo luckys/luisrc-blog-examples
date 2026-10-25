@@ -350,5 +350,89 @@
   {
     "source": "packages/kubernetes-workloads/hpa-observations.svg",
     "destination": "public/assets/interactive/kubernetes-workloads/hpa-observations.svg"
+  },
+  {
+    "source": "packages/capacity-costs/explorer.html",
+    "destination": "public/assets/interactive/capacity-costs/explorer.html"
+  },
+  {
+    "source": "packages/capacity-costs/explorer.mjs",
+    "destination": "public/assets/interactive/capacity-costs/explorer.mjs"
+  },
+  {
+    "source": "packages/capacity-costs/model.mjs",
+    "destination": "public/assets/interactive/capacity-costs/model.mjs"
+  },
+  {
+    "source": "packages/capacity-costs/chart.mjs",
+    "destination": "public/assets/interactive/capacity-costs/chart.mjs"
+  },
+  {
+    "source": "packages/capacity-costs/comparison.json",
+    "destination": "public/assets/interactive/capacity-costs/comparison.json"
+  },
+  {
+    "source": "packages/capacity-costs/cost-scenarios.svg",
+    "destination": "public/assets/interactive/capacity-costs/cost-scenarios.svg"
+  },
+  {
+    "source": "packages/neural-foundations/explorer.html",
+    "destination": "public/assets/interactive/neural-foundations/explorer.html"
+  },
+  {
+    "source": "packages/neural-foundations/explorer.mjs",
+    "destination": "public/assets/interactive/neural-foundations/explorer.mjs"
+  },
+  {
+    "source": "packages/neural-foundations/inference.mjs",
+    "destination": "public/assets/interactive/neural-foundations/inference.mjs"
+  },
+  {
+    "source": "packages/neural-foundations/charts.mjs",
+    "destination": "public/assets/interactive/neural-foundations/charts.mjs"
+  },
+  {
+    "source": "packages/neural-foundations/training.json",
+    "destination": "public/assets/interactive/neural-foundations/training.json"
+  },
+  {
+    "source": "packages/neural-foundations/training-curves.svg",
+    "destination": "public/assets/interactive/neural-foundations/training-curves.svg"
+  },
+  {
+    "source": "packages/neural-foundations/decision-maps.svg",
+    "destination": "public/assets/interactive/neural-foundations/decision-maps.svg"
+  },
+  {
+    "source": "packages/neural-foundations/activations.svg",
+    "destination": "public/assets/interactive/neural-foundations/activations.svg"
+  },
+  {
+    "source": "packages/autodiff-foundations/explorer.html",
+    "destination": "public/assets/interactive/autodiff-foundations/explorer.html"
+  },
+  {
+    "source": "packages/autodiff-foundations/explorer.mjs",
+    "destination": "public/assets/interactive/autodiff-foundations/explorer.mjs"
+  },
+  {
+    "source": "packages/autodiff-foundations/model.mjs",
+    "destination": "public/assets/interactive/autodiff-foundations/model.mjs"
+  },
+  {
+    "source": "packages/autodiff-foundations/charts.mjs",
+    "destination": "public/assets/interactive/autodiff-foundations/charts.mjs"
+  },
+  {
+    "source": "packages/autodiff-foundations/comparison.json",
+    "destination": "public/assets/interactive/autodiff-foundations/comparison.json"
+  },
+  {
+    "source": "packages/autodiff-foundations/error-sweep.svg",
+    "destination": "public/assets/interactive/autodiff-foundations/error-sweep.svg"
+  },
+  {
+    "source": "packages/autodiff-foundations/gradient-vector.svg",
+    "destination": "public/assets/interactive/autodiff-foundations/gradient-vector.svg"
   }
 ]

@@ -1,0 +1,7 @@
+{
+  "points":[[-1,-1],[-1,1],[1,-1],[1,1]], "targets":[[0],[1],[1],[0]],
+  "cases":[{"id":"initial-7","seed":7},{"id":"initial-31","seed":31},{"id":"trained-7","checkpoint":3000}],
+  "width":4,"dtype":"float64","reduction":"mean","epsilons":[0.1,0.001,0.00001,0.0000001,0.000000001,0.00000000001,0.0000000000001],
+  "check":{"epsilon":0.00001,"atol":0.00000001,"rtol":0.00001},
+  "scalarPoints":[{"w":2,"x":3},{"w":-1,"x":2},{"w":0,"x":3},{"w":0.5,"x":-1.5}]
+}

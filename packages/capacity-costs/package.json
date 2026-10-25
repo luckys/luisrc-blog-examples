@@ -1,0 +1,16 @@
+{
+  "name": "@luisrc-examples/capacity-costs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "exercise": "node scripts/exercise.mjs",
+    "verify": "node scripts/verify.mjs",
+    "render": "node render-results.mjs",
+    "typecheck": "pnpm --package=typescript@5.9.2 dlx tsc --project tsconfig.json"
+  },
+  "engines": {
+    "node": ">=24.19.0"
+  },
+  "packageManager": "pnpm@12.8.1"
+}

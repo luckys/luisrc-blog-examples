@@ -14,7 +14,9 @@ const commands = [
     "computing-networks",
     "container-environments",
     "architecture-boundaries",
+    "autodiff-foundations",
     "aws-foundations",
+    "capacity-costs",
     "design-principles",
     "declarative-infrastructure",
     "distributed-foundations",
@@ -33,6 +35,7 @@ const commands = [
     "realtime-frontend",
     "reliable-services",
     "mathematics-statistics",
+    "neural-foundations",
   ].map((lab) => ["--dir", `packages/${lab}`, "test"]),
   [
     "--dir",

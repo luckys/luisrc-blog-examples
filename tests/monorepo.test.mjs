@@ -10,7 +10,7 @@ const exports = JSON.parse(
   await readFile("metadata/blog-exports.json", "utf8"),
 );
 
-test("workspace: los treinta y cuatro laboratorios tienen nombres únicos y un único lockfile", async () => {
+test("workspace: los treinta y siete laboratorios tienen nombres únicos y un único lockfile", async () => {
   const workspace = YAML.parse(await readFile("pnpm-workspace.yaml", "utf8"));
   assert.deepEqual(workspace.packages, ["packages/*"]);
   const lock = YAML.parseAllDocuments(await readFile("pnpm-lock.yaml", "utf8"))
@@ -27,8 +27,10 @@ test("workspace: los treinta y cuatro laboratorios tienen nombres únicos y un �
     "api-threats",
     "api-validation-errors",
     "architecture-boundaries",
+    "autodiff-foundations",
     "aws-foundations",
     "browser-security",
+    "capacity-costs",
     "computing-networks",
     "container-environments",
     "data-structures-algorithms",
@@ -43,6 +45,7 @@ test("workspace: los treinta y cuatro laboratorios tienen nombres únicos y un �
     "kubernetes-workloads",
     "machine-learning",
     "mathematics-statistics",
+    "neural-foundations",
     "observability-lab",
     "performance-lab",
     "progressive-delivery",
@@ -76,7 +79,7 @@ test("workspace: los treinta y cuatro laboratorios tienen nombres únicos y un �
 });
 
 test("artículos: todos los índices enlazan archivos reales dentro del monorepo", async () => {
-  assert.equal(posts.length, 253);
+  assert.equal(posts.length, 270);
   const unique = new Set();
   for (const post of posts) {
     const id = `${post.locale}/${post.slug}`;
@@ -131,7 +134,7 @@ test("migración: las fuentes ejecutables originales se conservan byte a byte", 
 });
 
 test("exportación: solo recursos estáticos explícitos, sin servidores, secretos o dependencias", async () => {
-  assert.equal(exports.length, 88);
+  assert.equal(exports.length, 109);
   const destinations = new Set();
   for (const entry of exports) {
     assert.ok(!destinations.has(entry.destination));

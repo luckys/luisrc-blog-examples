@@ -1,0 +1,6 @@
+{
+  "dataset": {"name": "bounded-four-cluster-xor-v1", "halfWidth": 0.45, "trainPerQuadrant": 64, "validationPerQuadrant": 32, "testPerQuadrant": 64, "trainSeed": 101, "validationSeed": 102, "testSeed": 103},
+  "training": {"width": 4, "epochs": 3000, "learningRate": 0.1, "recordEvery": 150, "seeds": [7, 19, 31], "dtype": "float64", "optimizer": "full_batch_gradient_descent", "earlyStopping": false, "testSelection": false},
+  "grid": {"size": 25, "min": -1.6, "max": 1.6},
+  "probePoints": [[-1,-1],[-1,1],[1,-1],[1,1],[0,0],[0.3,-0.7],[-1.4,0.8],[0.8,1.4]]
+}

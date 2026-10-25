@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+/comparison.json.pending
+/results/gradients.json.pending

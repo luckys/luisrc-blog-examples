@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 253 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 270 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -177,3 +177,16 @@ git push -u origin main
 
 Los enlaces nuevos del blog usan `blob/main`. Hasta crear y subir este repositorio
 en GitHub devolverán 404. La migración local no crea el repositorio remoto ni hace push.
+
+`packages/capacity-costs`: tres perfiles de demanda, capacidad CPU y dependencia,
+simulación fluida de escalado, presupuesto parcial exacto, compromisos ficticios
+y reparto reconciliado; no mide un proveedor ni valida una factura.
+
+`packages/neural-foundations`: MLP NumPy sobre XOR sintético, baseline y control
+negativo, cinco entrenamientos reproducibles, comparación de gradientes e inferencia
+del visor contrastada con NumPy. No generalización o calibración acreditadas fuera
+del dataset y protocolo declarados.
+
+`packages/autodiff-foundations`: grafo escalar compartido, backward MLP instrumentado,
+contraste real con PyTorch CPU y diferencias finitas, errores deliberados y comportamiento
+de autograd. Reutiliza pesos/modelo de neural-foundations sin alterar su entrenamiento.

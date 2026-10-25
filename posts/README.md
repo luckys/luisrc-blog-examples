@@ -279,3 +279,29 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · k8s-secrets**: [Secrets y RBAC: codificar un valor no decide quién puede leerlo](es/k8s-secrets/README.md)
 - **es · k8s-resources**: [Requests y limits: reservar sitio, limitar consumo y entender un OOMKilled](es/k8s-resources/README.md)
 - **es · k8s-hpa**: [HPA: observar cómo las métricas cambian las réplicas de una API](es/k8s-hpa/README.md)
+
+## Capacidad y costes: siete entregas específicas
+
+- [RPS y concurrencia: cuántas peticiones hay dentro de tu servicio](es/p066/README.md).
+- [Utilización y réplicas: dimensionar con margen sin inventar un porcentaje universal](es/cap-utilization/README.md).
+- [Cuellos de botella: por qué seis réplicas no siempre procesan más trabajo](es/cap-bottlenecks/README.md).
+- [Autoscaling y colas: qué ocurre mientras llegan las nuevas réplicas](es/cap-autoscaling/README.md).
+- [Estimar costes: tres perfiles de tráfico y un presupuesto que muestra sus supuestos](es/cap-estimates/README.md).
+- [Reservas y compromisos: pagar menos por hora no siempre reduce el gasto](es/cap-commitments/README.md).
+- [FinOps: convertir el coste por petición en una decisión que puedas revisar](es/cap-finops/README.md).
+
+## Fundamentos de redes neuronales: cinco entregas P096
+
+- [Perceptrón y neurona artificial: qué pueden decidir unos pesos y un bias](es/p096/README.md).
+- [Dense layers: leer una red neuronal como operaciones entre matrices](es/dl-dense/README.md).
+- [Activations: qué cambia tanh, sigmoid o ReLU dentro de una red](es/dl-activations/README.md).
+- [Una MLP con NumPy: entrenar XOR y observar dónde falla](es/dl-xor/README.md).
+- [Representaciones aprendidas: qué significa que una red pueda aproximar una función](es/dl-representations/README.md).
+
+## Forward, backward y autodiff: cinco entregas P097
+
+- [Computational graph: seguir los caminos de una pérdida antes de derivarla](es/p097/README.md).
+- [Binary cross entropy: de dónde sale el gradiente p menos y](es/dl-loss-gradient/README.md).
+- [Backpropagation en una MLP: derivar pesos, bias y tanh con sus dimensiones](es/dl-backprop/README.md).
+- [Gradient checking: comprobar un backward sin confiar solo en que la loss baje](es/dl-gradcheck/README.md).
+- [Autograd en PyTorch: qué calcula backward y qué puede cortar el grafo](es/dl-autodiff/README.md).

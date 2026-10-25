@@ -1,0 +1,14 @@
+{
+  "kind": "hypothetical_inputs_not_a_provider_quote",
+  "shape": { "cpuMs": 10, "cpuCores": 1, "target": 0.6, "spare": 1, "min": 2, "max": 8 },
+  "rates": { "replicaHour": "60000", "fixedMonth": "30000000", "requestMillion": "1000000", "storageGiBMonth": "100000", "egressGiB": "90000" },
+  "pricing": { "days": 30, "bytesPerRequest": 10000, "storageGiB": 50, "successBps": 9990 },
+  "policy": { "interval": 15, "startup": 30, "downHold": 60, "queueLimit": 1000, "dbRps": 800 },
+  "profiles": [
+    { "id": "steady", "name": "Tráfico estable", "segments": [{ "hours": 24, "rps": 8 }] },
+    { "id": "office", "name": "Horario concentrado", "segments": [{ "hours": 16, "rps": 10 }, { "hours": 8, "rps": 120 }] },
+    { "id": "campaign", "name": "Campaña de una hora", "segments": [{ "hours": 23, "rps": 20 }, { "hours": 1, "rps": 300 }] }
+  ],
+  "exclusions": ["database", "load_balancer", "logs", "backups", "taxes", "engineering", "cross_zone_transfer", "startup_and_rollout_overlap", "real_discount_terms"],
+  "money": { "currency": "USD", "unit": "microUSD", "scale": 1000000, "rounding": "ceil_each_line_to_microUSD", "ratesAreFictional": true }
+}
