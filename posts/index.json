@@ -3442,5 +3442,464 @@
       "packages/progressive-delivery/README.md"
     ],
     "directory": "es/cd-rollback"
+  },
+  {
+    "locale": "es",
+    "slug": "api-lambda-ecs-costes-supuestos",
+    "title": "Una API en Lambda o ECS: comparar costes sin inventar rendimiento",
+    "post": "src/content/posts/es/api-lambda-ecs-costes-supuestos.md",
+    "labs": [
+      "aws-foundations"
+    ],
+    "files": [
+      "packages/aws-foundations/src/costs.ts",
+      "packages/aws-foundations/scripts/pricing.mjs",
+      "packages/aws-foundations/pricing/catalogue-excerpts.json",
+      "packages/aws-foundations/pricing/prices-us-east-1.json",
+      "packages/aws-foundations/scenarios.json",
+      "packages/aws-foundations/evidence/comparison.json",
+      "packages/aws-foundations/README.md"
+    ],
+    "directory": "es/aws-choice"
+  },
+  {
+    "locale": "es",
+    "slug": "aws-dynamodb-claves-access-patterns",
+    "title": "DynamoDB: empezar por las consultas antes de elegir las claves",
+    "post": "src/content/posts/es/aws-dynamodb-claves-access-patterns.md",
+    "labs": [
+      "aws-foundations"
+    ],
+    "files": [
+      "packages/aws-foundations/src/contracts.ts",
+      "packages/aws-foundations/src/catalogue.ts",
+      "packages/aws-foundations/designs/lambda.json",
+      "packages/aws-foundations/tests/contracts.test.mjs",
+      "packages/aws-foundations/README.md"
+    ],
+    "directory": "es/aws-dynamodb"
+  },
+  {
+    "locale": "es",
+    "slug": "aws-ec2-maquina-virtual-operacion",
+    "title": "EC2: ejecutar una aplicación también significa operar su máquina",
+    "post": "src/content/posts/es/aws-ec2-maquina-virtual-operacion.md",
+    "labs": [
+      "aws-foundations"
+    ],
+    "files": [
+      "packages/aws-foundations/src/http.ts",
+      "packages/aws-foundations/src/catalogue.ts",
+      "packages/aws-foundations/tests/adapters.test.mjs",
+      "packages/aws-foundations/README.md"
+    ],
+    "directory": "es/aws-ec2"
+  },
+  {
+    "locale": "es",
+    "slug": "aws-ecs-fargate-tasks-servicios",
+    "title": "ECS con Fargate: gestionar tasks sin administrar los hosts",
+    "post": "src/content/posts/es/aws-ecs-fargate-tasks-servicios.md",
+    "labs": [
+      "aws-foundations"
+    ],
+    "files": [
+      "packages/aws-foundations/designs/task-fragment.json",
+      "packages/aws-foundations/designs/ecs.json",
+      "packages/aws-foundations/src/costs.ts",
+      "packages/aws-foundations/README.md"
+    ],
+    "directory": "es/aws-ecs"
+  },
+  {
+    "locale": "es",
+    "slug": "aws-iam-roles-politicas-permisos",
+    "title": "IAM: dar permisos a un servicio sin repartir claves permanentes",
+    "post": "src/content/posts/es/aws-iam-roles-politicas-permisos.md",
+    "labs": [
+      "aws-foundations"
+    ],
+    "files": [
+      "packages/aws-foundations/src/contracts.ts",
+      "packages/aws-foundations/tests/contracts.test.mjs",
+      "packages/aws-foundations/designs/task-fragment.json",
+      "packages/aws-foundations/README.md"
+    ],
+    "directory": "es/aws-iam"
+  },
+  {
+    "locale": "es",
+    "slug": "aws-lambda-eventos-concurrencia-limites",
+    "title": "Lambda: ejecutar por eventos con concurrencia, límites y tiempo facturado",
+    "post": "src/content/posts/es/aws-lambda-eventos-concurrencia-limites.md",
+    "labs": [
+      "aws-foundations"
+    ],
+    "files": [
+      "packages/aws-foundations/src/catalogue.ts",
+      "packages/aws-foundations/src/costs.ts",
+      "packages/aws-foundations/tests/adapters.test.mjs",
+      "packages/aws-foundations/designs/lambda.json",
+      "packages/aws-foundations/README.md"
+    ],
+    "directory": "es/aws-lambda"
+  },
+  {
+    "locale": "es",
+    "slug": "aws-rds-postgresql-backups-operacion",
+    "title": "RDS: gestionar PostgreSQL sin delegar el diseño ni la recuperación",
+    "post": "src/content/posts/es/aws-rds-postgresql-backups-operacion.md",
+    "labs": [
+      "aws-foundations"
+    ],
+    "files": [
+      "packages/aws-foundations/designs/rds-plan.json",
+      "packages/aws-foundations/src/contracts.ts",
+      "packages/aws-foundations/tests/contracts.test.mjs",
+      "packages/aws-foundations/README.md"
+    ],
+    "directory": "es/aws-rds"
+  },
+  {
+    "locale": "es",
+    "slug": "aws-s3-objetos-keys-acceso",
+    "title": "S3: guardar objetos y controlar su acceso sin tratarlo como un disco",
+    "post": "src/content/posts/es/aws-s3-objetos-keys-acceso.md",
+    "labs": [
+      "aws-foundations"
+    ],
+    "files": [
+      "packages/aws-foundations/src/contracts.ts",
+      "packages/aws-foundations/tests/contracts.test.mjs",
+      "packages/aws-foundations/README.md"
+    ],
+    "directory": "es/aws-s3"
+  },
+  {
+    "locale": "es",
+    "slug": "aws-sqs-visibilidad-reintentos-batches",
+    "title": "SQS: consumir mensajes con visibilidad, reintentos y fallos parciales",
+    "post": "src/content/posts/es/aws-sqs-visibilidad-reintentos-batches.md",
+    "labs": [
+      "aws-foundations"
+    ],
+    "files": [
+      "packages/aws-foundations/src/contracts.ts",
+      "packages/aws-foundations/designs/queue-plan.json",
+      "packages/aws-foundations/tests/contracts.test.mjs",
+      "packages/aws-foundations/README.md"
+    ],
+    "directory": "es/aws-sqs"
+  },
+  {
+    "locale": "es",
+    "slug": "aws-vpc-subnets-rutas-endpoints",
+    "title": "VPC, subnets y endpoints: dibujar por dónde puede salir una petición",
+    "post": "src/content/posts/es/aws-vpc-subnets-rutas-endpoints.md",
+    "labs": [
+      "aws-foundations"
+    ],
+    "files": [
+      "packages/aws-foundations/designs/ecs.json",
+      "packages/aws-foundations/src/contracts.ts",
+      "packages/aws-foundations/pricing/prices-us-east-1.json",
+      "packages/aws-foundations/tests/contracts.test.mjs",
+      "packages/aws-foundations/README.md"
+    ],
+    "directory": "es/aws-vpc"
+  },
+  {
+    "locale": "es",
+    "slug": "cloud-iaas-paas-serverless-responsabilidad",
+    "title": "IaaS, PaaS y serverless: qué trabajo delegas y qué sigue siendo tuyo",
+    "post": "src/content/posts/es/cloud-iaas-paas-serverless-responsabilidad.md",
+    "labs": [
+      "aws-foundations"
+    ],
+    "files": [
+      "packages/aws-foundations/designs/lambda.json",
+      "packages/aws-foundations/designs/ecs.json",
+      "packages/aws-foundations/scenarios.json",
+      "packages/aws-foundations/evidence/comparison.json",
+      "packages/aws-foundations/README.md"
+    ],
+    "directory": "es/p064"
+  },
+  {
+    "locale": "es",
+    "slug": "terraform-configuracion-plan-apply-infraestructura",
+    "title": "Terraform: describir infraestructura, revisar el plan y comprobar el resultado",
+    "post": "src/content/posts/es/terraform-configuracion-plan-apply-infraestructura.md",
+    "labs": [
+      "declarative-infrastructure"
+    ],
+    "files": [
+      "packages/declarative-infrastructure/terraform/main.tf",
+      "packages/declarative-infrastructure/scripts/exercise.mjs",
+      "packages/declarative-infrastructure/evidence/terraform.json",
+      "packages/declarative-infrastructure/README.md"
+    ],
+    "directory": "es/p065"
+  },
+  {
+    "locale": "es",
+    "slug": "terraform-providers-versiones-lockfile",
+    "title": "Providers de Terraform: fijar versiones y saber qué valida cada herramienta",
+    "post": "src/content/posts/es/terraform-providers-versiones-lockfile.md",
+    "labs": [
+      "declarative-infrastructure"
+    ],
+    "files": [
+      "packages/declarative-infrastructure/terraform/versions.tf",
+      "packages/declarative-infrastructure/terraform/.terraform.lock.hcl",
+      "packages/declarative-infrastructure/tools.json",
+      "packages/declarative-infrastructure/README.md"
+    ],
+    "directory": "es/tf-providers"
+  },
+  {
+    "locale": "es",
+    "slug": "terraform-state-backend-locking-secretos",
+    "title": "Terraform state: relacionar recursos, coordinar cambios y proteger datos sensibles",
+    "post": "src/content/posts/es/terraform-state-backend-locking-secretos.md",
+    "labs": [
+      "declarative-infrastructure"
+    ],
+    "files": [
+      "packages/declarative-infrastructure/terraform/versions.tf",
+      "packages/declarative-infrastructure/terraform/modules/catalogue/main.tf",
+      "packages/declarative-infrastructure/scripts/exercise.mjs",
+      "packages/declarative-infrastructure/README.md"
+    ],
+    "directory": "es/tf-state"
+  },
+  {
+    "locale": "es",
+    "slug": "terraform-modulos-variables-outputs-contratos",
+    "title": "Módulos de Terraform: agrupar una decisión con variables y outputs claros",
+    "post": "src/content/posts/es/terraform-modulos-variables-outputs-contratos.md",
+    "labs": [
+      "declarative-infrastructure"
+    ],
+    "files": [
+      "packages/declarative-infrastructure/terraform/main.tf",
+      "packages/declarative-infrastructure/terraform/modules/catalogue/variables.tf",
+      "packages/declarative-infrastructure/terraform/modules/catalogue/main.tf",
+      "packages/declarative-infrastructure/README.md"
+    ],
+    "directory": "es/tf-modules"
+  },
+  {
+    "locale": "es",
+    "slug": "terraform-drift-refresh-reconciliar-cambios",
+    "title": "Drift en Terraform: detectar un cambio manual y decidir qué conservar",
+    "post": "src/content/posts/es/terraform-drift-refresh-reconciliar-cambios.md",
+    "labs": [
+      "declarative-infrastructure"
+    ],
+    "files": [
+      "packages/declarative-infrastructure/terraform/modules/catalogue/main.tf",
+      "packages/declarative-infrastructure/scripts/exercise.mjs",
+      "packages/declarative-infrastructure/scripts/plan.mjs",
+      "packages/declarative-infrastructure/evidence/terraform.json",
+      "packages/declarative-infrastructure/README.md"
+    ],
+    "directory": "es/tf-drift"
+  },
+  {
+    "locale": "es",
+    "slug": "terraform-planes-guardados-reemplazos-recuperacion",
+    "title": "Planes guardados y reemplazos: aplicar el cambio revisado sin prometer un rollback automático",
+    "post": "src/content/posts/es/terraform-planes-guardados-reemplazos-recuperacion.md",
+    "labs": [
+      "declarative-infrastructure"
+    ],
+    "files": [
+      "packages/declarative-infrastructure/terraform/modules/catalogue/main.tf",
+      "packages/declarative-infrastructure/scripts/plan.mjs",
+      "packages/declarative-infrastructure/scripts/exercise.mjs",
+      "packages/declarative-infrastructure/evidence/terraform.json",
+      "packages/declarative-infrastructure/README.md"
+    ],
+    "directory": "es/tf-changes"
+  },
+  {
+    "locale": "es",
+    "slug": "kubernetes-pods-api-controladores",
+    "title": "Kubernetes: qué es un Pod y quién mantiene la aplicación ejecutándose",
+    "post": "src/content/posts/es/kubernetes-pods-api-controladores.md",
+    "labs": [
+      "kubernetes-workloads"
+    ],
+    "files": [
+      "packages/kubernetes-workloads/manifests/deployment.json",
+      "packages/kubernetes-workloads/scripts/exercise.mjs",
+      "packages/kubernetes-workloads/evidence/kubernetes.json",
+      "packages/kubernetes-workloads/README.md"
+    ],
+    "directory": "es/k8s-pods"
+  },
+  {
+    "locale": "es",
+    "slug": "kubernetes-deployments-replicasets-rollout",
+    "title": "Deployment y ReplicaSet: cambiar de versión y recuperar la anterior",
+    "post": "src/content/posts/es/kubernetes-deployments-replicasets-rollout.md",
+    "labs": [
+      "kubernetes-workloads"
+    ],
+    "files": [
+      "packages/kubernetes-workloads/manifests/deployment.json",
+      "packages/kubernetes-workloads/Dockerfile",
+      "packages/kubernetes-workloads/scripts/exercise.mjs",
+      "packages/kubernetes-workloads/README.md"
+    ],
+    "directory": "es/k8s-deployments"
+  },
+  {
+    "locale": "es",
+    "slug": "kubernetes-services-endpointslices-dns",
+    "title": "Services, EndpointSlices y DNS: encontrar una API aunque cambien sus Pods",
+    "post": "src/content/posts/es/kubernetes-services-endpointslices-dns.md",
+    "labs": [
+      "kubernetes-workloads"
+    ],
+    "files": [
+      "packages/kubernetes-workloads/manifests/service.json",
+      "packages/kubernetes-workloads/manifests/client-pod.json",
+      "packages/kubernetes-workloads/scripts/exercise.mjs",
+      "packages/kubernetes-workloads/README.md"
+    ],
+    "directory": "es/k8s-services"
+  },
+  {
+    "locale": "es",
+    "slug": "kubernetes-ingress-controller-host-rutas",
+    "title": "Ingress: una regla HTTP necesita un controller que la ejecute",
+    "post": "src/content/posts/es/kubernetes-ingress-controller-host-rutas.md",
+    "labs": [
+      "kubernetes-workloads"
+    ],
+    "files": [
+      "packages/kubernetes-workloads/manifests/ingress.json",
+      "packages/kubernetes-workloads/scripts/request.mjs",
+      "packages/kubernetes-workloads/scripts/exercise.mjs",
+      "packages/kubernetes-workloads/README.md"
+    ],
+    "directory": "es/k8s-ingress"
+  },
+  {
+    "locale": "es",
+    "slug": "kubernetes-startup-probe-inicializacion",
+    "title": "Startup probe: dar tiempo al arranque sin convertirlo en un bucle de reinicios",
+    "post": "src/content/posts/es/kubernetes-startup-probe-inicializacion.md",
+    "labs": [
+      "kubernetes-workloads"
+    ],
+    "files": [
+      "packages/kubernetes-workloads/manifests/slow-start-pod.json",
+      "packages/kubernetes-workloads/manifests/no-startup-pod.json",
+      "packages/kubernetes-workloads/app/server.mjs",
+      "packages/kubernetes-workloads/README.md"
+    ],
+    "directory": "es/k8s-startup"
+  },
+  {
+    "locale": "es",
+    "slug": "kubernetes-readiness-probe-trafico",
+    "title": "Readiness probe: retirar tráfico sin reiniciar el container",
+    "post": "src/content/posts/es/kubernetes-readiness-probe-trafico.md",
+    "labs": [
+      "kubernetes-workloads"
+    ],
+    "files": [
+      "packages/kubernetes-workloads/manifests/deployment.json",
+      "packages/kubernetes-workloads/app/server.mjs",
+      "packages/kubernetes-workloads/scripts/exercise.mjs",
+      "packages/kubernetes-workloads/README.md"
+    ],
+    "directory": "es/k8s-readiness"
+  },
+  {
+    "locale": "es",
+    "slug": "kubernetes-liveness-probe-reinicios",
+    "title": "Liveness probe: cuándo reiniciar ayuda y cuándo multiplica el problema",
+    "post": "src/content/posts/es/kubernetes-liveness-probe-reinicios.md",
+    "labs": [
+      "kubernetes-workloads"
+    ],
+    "files": [
+      "packages/kubernetes-workloads/manifests/deployment.json",
+      "packages/kubernetes-workloads/app/server.mjs",
+      "packages/kubernetes-workloads/scripts/exercise.mjs",
+      "packages/kubernetes-workloads/README.md"
+    ],
+    "directory": "es/k8s-liveness"
+  },
+  {
+    "locale": "es",
+    "slug": "kubernetes-configmaps-env-volumenes",
+    "title": "ConfigMaps: por qué cambia un archivo y una variable de entorno sigue igual",
+    "post": "src/content/posts/es/kubernetes-configmaps-env-volumenes.md",
+    "labs": [
+      "kubernetes-workloads"
+    ],
+    "files": [
+      "packages/kubernetes-workloads/manifests/configmap.json",
+      "packages/kubernetes-workloads/manifests/deployment.json",
+      "packages/kubernetes-workloads/app/server.mjs",
+      "packages/kubernetes-workloads/README.md"
+    ],
+    "directory": "es/k8s-config"
+  },
+  {
+    "locale": "es",
+    "slug": "kubernetes-secrets-serviceaccounts-rbac",
+    "title": "Secrets y RBAC: codificar un valor no decide quién puede leerlo",
+    "post": "src/content/posts/es/kubernetes-secrets-serviceaccounts-rbac.md",
+    "labs": [
+      "kubernetes-workloads"
+    ],
+    "files": [
+      "packages/kubernetes-workloads/manifests/secret.json",
+      "packages/kubernetes-workloads/manifests/service-account.json",
+      "packages/kubernetes-workloads/manifests/reader-role.json",
+      "packages/kubernetes-workloads/manifests/reader-binding.json",
+      "packages/kubernetes-workloads/README.md"
+    ],
+    "directory": "es/k8s-secrets"
+  },
+  {
+    "locale": "es",
+    "slug": "kubernetes-requests-limits-scheduling-oom",
+    "title": "Requests y limits: reservar sitio, limitar consumo y entender un OOMKilled",
+    "post": "src/content/posts/es/kubernetes-requests-limits-scheduling-oom.md",
+    "labs": [
+      "kubernetes-workloads"
+    ],
+    "files": [
+      "packages/kubernetes-workloads/manifests/deployment.json",
+      "packages/kubernetes-workloads/manifests/unschedulable-pod.json",
+      "packages/kubernetes-workloads/manifests/oom-pod.json",
+      "packages/kubernetes-workloads/scripts/exercise.mjs",
+      "packages/kubernetes-workloads/README.md"
+    ],
+    "directory": "es/k8s-resources"
+  },
+  {
+    "locale": "es",
+    "slug": "kubernetes-hpa-metricas-escalado",
+    "title": "HPA: observar cómo las métricas cambian las réplicas de una API",
+    "post": "src/content/posts/es/kubernetes-hpa-metricas-escalado.md",
+    "labs": [
+      "kubernetes-workloads"
+    ],
+    "files": [
+      "packages/kubernetes-workloads/manifests/hpa.json",
+      "packages/kubernetes-workloads/app/server.mjs",
+      "packages/kubernetes-workloads/scripts/exercise.mjs",
+      "packages/kubernetes-workloads/evidence/kubernetes.json",
+      "packages/kubernetes-workloads/README.md"
+    ],
+    "directory": "es/k8s-hpa"
   }
 ]

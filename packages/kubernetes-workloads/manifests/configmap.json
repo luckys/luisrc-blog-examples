@@ -1,0 +1,11 @@
+{
+  "apiVersion": "v1",
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "catalogue-settings"
+  },
+  "data": {
+    "settings.json": "{\"message\": \"volume-v1\", \"ready\": true, \"live\": true}",
+    "envMessage": "env-v1"
+  }
+}

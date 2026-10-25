@@ -22,5 +22,6 @@ assert.equal(report.contracts.dbReview.restoreVerified, false)
 assert.deepEqual(report.contracts.queueResult.batchItemFailures, [{ itemIdentifier: 'b' }])
 assert.equal(report.serverClosed, true); assert.ok(Object.values(report.limits).every((v) => v === false))
 const publicData = await json('comparison.json')
-assert.deepEqual(publicData.cases, report.cases); assert.deepEqual(publicData.observations, report.observations)
+const { sources: _sources, loopbackOrigin: _origin, ...publicReport } = report
+assert.deepEqual(publicData, publicReport)
 console.log('Tarifas, cálculos, contratos y hashes verificados offline; no se consultó ni desplegó AWS.')

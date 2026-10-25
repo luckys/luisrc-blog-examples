@@ -10,9 +10,15 @@ export async function catalogueRequest(method: string, path: string, read: Reade
   } catch { return { statusCode: 503, body: { error: 'dependency_unavailable' } } }
 }
 
+export function catalogueHeaders(statusCode: number): Record<string, string> {
+  const headers: Record<string, string> = { 'content-type': 'application/json' }
+  if (statusCode === 405) headers.allow = 'GET'
+  return headers
+}
+
 export function lambdaAdapter(read: Reader) {
   return async (event: { rawPath: string; requestContext: { http: { method: string } } }) => {
     const result = await catalogueRequest(event.requestContext.http.method, event.rawPath, read)
-    return { statusCode: result.statusCode, headers: { 'content-type': 'application/json' }, body: JSON.stringify(result.body), isBase64Encoded: false }
+    return { statusCode: result.statusCode, headers: catalogueHeaders(result.statusCode), body: JSON.stringify(result.body), isBase64Encoded: false }
   }
 }

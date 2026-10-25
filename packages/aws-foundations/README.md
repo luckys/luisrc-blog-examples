@@ -1,8 +1,8 @@
-# AWS foundations — en preparación
+# AWS foundations: servicios, contratos y costes declarados
 
-Laboratorio inicial de P064. Los once artículos previstos, sus diagramas y el
-comparador visual están pendientes. Este paquete conserva el trabajo implementado
-sin presentar la serie como terminada.
+Laboratorio compartido por once drafts españoles de P064. Incluye contratos
+locales, tarifas archivadas, dos diseños, gráfico derivado y comparador estático.
+No es un despliegue AWS ni un emulador de sus servicios.
 
 ## Ejecutar desde la raíz del monorepo
 
@@ -12,6 +12,7 @@ pnpm --dir packages/aws-foundations test
 pnpm --dir packages/aws-foundations typecheck
 pnpm --dir packages/aws-foundations exercise
 pnpm --dir packages/aws-foundations verify
+(cd packages/aws-foundations && node render-results.mjs)
 ```
 
 `exercise` compila el modelo, compara dos diseños declarados y prueba cuatro
@@ -42,8 +43,20 @@ desplegable.
 - Contratos locales de permisos, keys, red, batches Standard y planes de DB.
   No evalúan IAM real ni verifican entregas SQS, escrituras S3 o restores RDS.
 - Modelo puro en `src/costs.ts`; `cost-model.mjs` es su exportación compilada,
-  destinada al futuro comparador estático.
+  compartida con el comparador estático.
 
 Consultar `evidence/comparison.json` para la captura y sus límites. La selección
 de tarifas y sus hashes permiten comprobar consistencia; no constituyen una
 attestation firmada por AWS.
+
+## Gráfico y comparador
+
+`render-results.mjs` deriva `cost-summary.svg` de `comparison.json`. El visor
+`explorer.html/mjs` importa `cost-model.mjs` y carga solo el informe estático.
+Los campos editables cambian supuestos, no tareas o recursos de AWS. No hay un
+recálculo de capacidad, LCU o GB de red al modificar el tráfico.
+
+Después de cambiar fuentes o tarifas, repetir exercise, verify y el render con node.
+Desde la raíz, `BLOG_ROOT=/ruta/al/blog pnpm blog:sync` sincroniza únicamente la
+allowlist pública; la evidencia completa con hashes permanece aquí. No modificar
+las copias del blog como si fueran las fuentes canónicas.

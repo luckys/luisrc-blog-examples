@@ -1,22 +1,22 @@
 {
-  "capturedAt": "2026-10-25T11:37:55.308Z",
+  "capturedAt": "2026-10-25T12:10:51.810Z",
   "kind": "calculated_design_comparison_with_local_contract_observations",
   "sources": {
     "package.json": "257120dc1fdbc759653d733f913487a1d7733bfe1d230e579ea06d04b05c1a4f",
     "tsconfig.json": "1b51e5887a74c1d36a5c549fc863cfa1f781cbddd713e048ab3dca708d390718",
     "scenarios.json": "47e30cf156ce6c9960d5f346dd7d0146a3c134db3def9aa87cddf5ca9357ca23",
     "cost-model.mjs": "5bbcfdd1d5c50c24dd0a258ef917b7b07929aa1f45e2d3dc6bf9a68e65f55c73",
-    "src/catalogue.ts": "123244d413382346f0bb8e34a113d00900e4ec460400984e496b935a60115e13",
+    "src/catalogue.ts": "34c5201a52b041e460bd3787260c7748c485fa519533a9d9fb20b376703284ad",
     "src/contracts.ts": "fb538635be80fb9904702180a75fdee3d2d0958dc7b82b02edc44dcc9e4c65a2",
     "src/costs.ts": "c9d54000bb82f266d61c41cffbe99b56d24ba5c0518b3d0a42dad0955ce2ed75",
-    "src/http.ts": "b11624001bdf5aa9caf5df847e93e13efc1264ee1c8cef147be1b65571ca410b",
+    "src/http.ts": "2625418d368eab84c7731e1a9ea312e7dc72c4a623993b0f447421a3a13fa488",
     "scripts/capture-prices.mjs": "242455d817c5c7fae0941ac478217794eb77939d7282c071b29eccc5cab178af",
     "scripts/exercise.mjs": "51cb80322c6bf7d2dcf9529934f26bc0d1b1e94701815ae06554c903165890c4",
     "scripts/export-model.mjs": "87d6c011cc7cfc300bbf881042c841fa3a4c8bbb9f8a35c4fbef2dd757d553c1",
     "scripts/hashes.mjs": "1d51ef39977372e36b2a36b9d0dae20beb9136aedbc8808219fe334db324237a",
     "scripts/pricing.mjs": "cda0df46a0e7a0c25b7df0c98d16b525fb12978eba56de2f3993dc174cd2ed55",
-    "scripts/verify.mjs": "71af79e1255527fd5e4112b570c2b1bd4b2a8cb8f318152ea221698d1744aeaf",
-    "tests/adapters.test.mjs": "9c92e2e347583a6ed6ff3c9644a6055209c27709c6469e6715abec047d98722e",
+    "scripts/verify.mjs": "00f843a8dbec304f367549988a3e7840870060b6ad5a21204f7bdb32eba14f80",
+    "tests/adapters.test.mjs": "e086b01860179c4d5bce086479ae518d21f484b7be254f47ca78b198e9552bca",
     "tests/contracts.test.mjs": "6fc2575e80bece47379f3d73710c8de46d191735d07d58cfcd5f42db17717bb9",
     "tests/costs.test.mjs": "a622c270a025ad7ea73eeaf86a5cc9a69a2e33911d297ac066cbcdb69f34d3ef",
     "tests/pricing.test.mjs": "d2eccf530b931780a24fd447fd8e11a1502eeb242ec66e9b78e9f5b568feeaa7",
@@ -26,7 +26,7 @@
     "designs/lambda.json": "8b474c71536005faffe81bb7d4893e7f6682c7bcd7fad87338257d9261c8fe36",
     "designs/queue-plan.json": "d5f8868cb6192d86112b57920c595b3041d8bed5a60cde14154c778d93bbe57e",
     "designs/rds-plan.json": "c777825709e0e0d8f3d5f90543aa42c396c21b52ceba3ff07157d94a9cf79d99",
-    "designs/task-fragment.json": "6bd0b103f03611b26c5bc552f1a1cbbe9a794308fea58a982ad058836c7bfe00"
+    "designs/task-fragment.json": "c8618d76cc93002e9a29bfb0622f6f761d13fa5fe63ef4b59b63bea9fdebcf8d"
   },
   "pricing": {
     "capturedAt": "2026-10-25T11:33:36.124Z",
@@ -359,7 +359,8 @@
       "localLambda": {
         "statusCode": 405,
         "headers": {
-          "content-type": "application/json"
+          "content-type": "application/json",
+          "allow": "GET"
         },
         "body": "{\"error\":\"method_not_allowed\"}",
         "isBase64Encoded": false
@@ -386,7 +387,7 @@
       "lambdaInvocation": "local_adapter_only_not_AWS"
     }
   ],
-  "loopbackOrigin": "http://127.0.0.1:38921",
+  "loopbackOrigin": "http://127.0.0.1:35375",
   "serverClosed": true,
   "limits": {
     "awsDeployment": false,

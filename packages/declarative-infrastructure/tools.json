@@ -1,0 +1,5 @@
+{
+  "terraform": "hashicorp/terraform:1.15.3@sha256:a12a7a9301bbab26589c0a353d5bdfc68bd1a52aa818cbdd698bf0dec094bd61",
+  "k3s": "rancher/k3s:v1.35.9-k3s1@sha256:ec9868c6a38d4e8c1869832fb5fd1eb8473c39794a0b44d2b952e7ba911951bc",
+  "provider": "hashicorp/kubernetes 3.4.0"
+}

@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 225 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 253 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -35,9 +35,17 @@ locales de Node y Python estándar, sin iniciar Docker ni instalar navegadores.
 
 ## Laboratorios
 
-El paquete [aws-foundations](packages/aws-foundations/README.md) está en preparación
-para P064: contratos locales y estimaciones parciales con tarifas públicas de AWS.
-Sus artículos, diagramas y visor todavía no están terminados; no despliega en AWS.
+El paquete [kubernetes-workloads](packages/kubernetes-workloads/README.md) observa
+Pods, versiones, rutas, probes, configuración, RBAC, OOM y HPA reales sobre K3s.
+Once drafts complementan el bloque Terraform de P065.
+
+El paquete [declarative-infrastructure](packages/declarative-infrastructure/README.md)
+usa Terraform y K3s reales para seis recursos propios, drift, state, planes
+obsoletos, reemplazo y teardown. Bloque Terraform de P065, complementado por kubernetes-workloads.
+
+El paquete [aws-foundations](packages/aws-foundations/README.md) acompaña once drafts
+de P064: contratos locales, tarifas públicas, gráfico y comparador de subtotales.
+No despliega en AWS ni demuestra capacidad o facturación reales.
 
 El paquete [progressive-delivery](packages/progressive-delivery/README.md) ejecuta
 pipeline local, audit runtime y despliegues Docker con rolling, blue-green, canary,

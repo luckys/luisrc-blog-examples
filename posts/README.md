@@ -242,3 +242,40 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · cd-bluegreen**: [Blue-green deployments: cambiar tráfico sin olvidar la base de datos](es/cd-bluegreen/README.md)
 - **es · cd-canary**: [Canary releases: comparar el candidato con un control antes de ampliar](es/cd-canary/README.md)
 - **es · cd-rollback**: [Rollback de aplicación y esquema: volver a una versión que todavía entiende los datos](es/cd-rollback/README.md)
+
+## AWS: servicios, responsabilidades y costes
+
+- **es · p064**: [IaaS, PaaS y serverless: qué trabajo delegas y qué sigue siendo tuyo](es/p064/README.md)
+- **es · aws-iam**: [IAM: dar permisos a un servicio sin repartir claves permanentes](es/aws-iam/README.md)
+- **es · aws-vpc**: [VPC, subnets y endpoints: dibujar por dónde puede salir una petición](es/aws-vpc/README.md)
+- **es · aws-ec2**: [EC2: ejecutar una aplicación también significa operar su máquina](es/aws-ec2/README.md)
+- **es · aws-lambda**: [Lambda: ejecutar por eventos con concurrencia, límites y tiempo facturado](es/aws-lambda/README.md)
+- **es · aws-ecs**: [ECS con Fargate: gestionar tasks sin administrar los hosts](es/aws-ecs/README.md)
+- **es · aws-s3**: [S3: guardar objetos y controlar su acceso sin tratarlo como un disco](es/aws-s3/README.md)
+- **es · aws-sqs**: [SQS: consumir mensajes con visibilidad, reintentos y fallos parciales](es/aws-sqs/README.md)
+- **es · aws-rds**: [RDS: gestionar PostgreSQL sin delegar el diseño ni la recuperación](es/aws-rds/README.md)
+- **es · aws-dynamodb**: [DynamoDB: empezar por las consultas antes de elegir las claves](es/aws-dynamodb/README.md)
+- **es · aws-choice**: [Una API en Lambda o ECS: comparar costes sin inventar rendimiento](es/aws-choice/README.md)
+
+## Terraform: plan, state y reconciliación
+
+- **es · p065**: [Terraform: describir infraestructura, revisar el plan y comprobar el resultado](es/p065/README.md)
+- **es · tf-providers**: [Providers de Terraform: fijar versiones y saber qué valida cada herramienta](es/tf-providers/README.md)
+- **es · tf-state**: [Terraform state: relacionar recursos, coordinar cambios y proteger datos sensibles](es/tf-state/README.md)
+- **es · tf-modules**: [Módulos de Terraform: agrupar una decisión con variables y outputs claros](es/tf-modules/README.md)
+- **es · tf-drift**: [Drift en Terraform: detectar un cambio manual y decidir qué conservar](es/tf-drift/README.md)
+- **es · tf-changes**: [Planes guardados y reemplazos: aplicar el cambio revisado sin prometer un rollback automático](es/tf-changes/README.md)
+
+## Kubernetes: workloads, tráfico y escalado
+
+- **es · k8s-pods**: [Kubernetes: qué es un Pod y quién mantiene la aplicación ejecutándose](es/k8s-pods/README.md)
+- **es · k8s-deployments**: [Deployment y ReplicaSet: cambiar de versión y recuperar la anterior](es/k8s-deployments/README.md)
+- **es · k8s-services**: [Services, EndpointSlices y DNS: encontrar una API aunque cambien sus Pods](es/k8s-services/README.md)
+- **es · k8s-ingress**: [Ingress: una regla HTTP necesita un controller que la ejecute](es/k8s-ingress/README.md)
+- **es · k8s-startup**: [Startup probe: dar tiempo al arranque sin convertirlo en un bucle de reinicios](es/k8s-startup/README.md)
+- **es · k8s-readiness**: [Readiness probe: retirar tráfico sin reiniciar el container](es/k8s-readiness/README.md)
+- **es · k8s-liveness**: [Liveness probe: cuándo reiniciar ayuda y cuándo multiplica el problema](es/k8s-liveness/README.md)
+- **es · k8s-config**: [ConfigMaps: por qué cambia un archivo y una variable de entorno sigue igual](es/k8s-config/README.md)
+- **es · k8s-secrets**: [Secrets y RBAC: codificar un valor no decide quién puede leerlo](es/k8s-secrets/README.md)
+- **es · k8s-resources**: [Requests y limits: reservar sitio, limitar consumo y entender un OOMKilled](es/k8s-resources/README.md)
+- **es · k8s-hpa**: [HPA: observar cómo las métricas cambian las réplicas de una API](es/k8s-hpa/README.md)

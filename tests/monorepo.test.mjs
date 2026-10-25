@@ -10,7 +10,7 @@ const exports = JSON.parse(
   await readFile("metadata/blog-exports.json", "utf8"),
 );
 
-test("workspace: los treinta y dos laboratorios tienen nombres únicos y un único lockfile", async () => {
+test("workspace: los treinta y cuatro laboratorios tienen nombres únicos y un único lockfile", async () => {
   const workspace = YAML.parse(await readFile("pnpm-workspace.yaml", "utf8"));
   assert.deepEqual(workspace.packages, ["packages/*"]);
   const lock = YAML.parseAllDocuments(await readFile("pnpm-lock.yaml", "utf8"))
@@ -33,12 +33,14 @@ test("workspace: los treinta y dos laboratorios tienen nombres únicos y un úni
     "container-environments",
     "data-structures-algorithms",
     "database-fundamentals",
+    "declarative-infrastructure",
     "design-principles",
     "distributed-foundations",
     "domain-design",
     "incident-response",
     "integration-contracts",
     "kafka-streaming",
+    "kubernetes-workloads",
     "machine-learning",
     "mathematics-statistics",
     "observability-lab",
@@ -60,7 +62,10 @@ test("workspace: los treinta y dos laboratorios tienen nombres únicos y un úni
     assert.ok(!names.has(pkg.name), pkg.name);
     names.add(pkg.name);
     assert.equal(pkg.private, true);
-    assert.ok(lock.importers[`packages/${lab}`], lab);
+    const dependencies = { ...pkg.dependencies, ...pkg.devDependencies, ...pkg.optionalDependencies };
+    // pnpm12 omits newly added workspaces with no dependencies from importers.
+    // Packages with dependencies must still have a lockfile entry.
+    if (Object.keys(dependencies).length) assert.ok(lock.importers[`packages/${lab}`], lab);
     await assert.rejects(access(`packages/${lab}/pnpm-lock.yaml`), {
       code: "ENOENT",
     });
@@ -71,7 +76,7 @@ test("workspace: los treinta y dos laboratorios tienen nombres únicos y un úni
 });
 
 test("artículos: todos los índices enlazan archivos reales dentro del monorepo", async () => {
-  assert.equal(posts.length, 225);
+  assert.equal(posts.length, 253);
   const unique = new Set();
   for (const post of posts) {
     const id = `${post.locale}/${post.slug}`;
@@ -126,7 +131,7 @@ test("migración: las fuentes ejecutables originales se conservan byte a byte", 
 });
 
 test("exportación: solo recursos estáticos explícitos, sin servidores, secretos o dependencias", async () => {
-  assert.equal(exports.length, 74);
+  assert.equal(exports.length, 88);
   const destinations = new Set();
   for (const entry of exports) {
     assert.ok(!destinations.has(entry.destination));

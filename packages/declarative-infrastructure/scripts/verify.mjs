@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict'
+import { readFile } from 'node:fs/promises'
+import { hashes } from './hashes.mjs'
+const source = await readFile('evidence/terraform.json', 'utf8'), report = JSON.parse(source)
+assert.equal(report.kind, 'local_terraform_kubernetes_observation')
+assert.deepEqual(report.sources, await hashes())
+assert.deepEqual(report.events.map((e) => e.id), ['cluster_ready', 'image_imported', 'initialized_validated', 'create_planned', 'applied_http_ready', 'no_changes', 'pod_reconciled_without_apply', 'drift_detected', 'drift_repaired', 'stale_plan_rejected', 'replacement_planned', 'replacement_applied', 'refresh_only_does_not_repair', 'normal_apply_restores_config', 'destroyed_owned_resources', 'local_cluster_removed'])
+for (const [i, event] of report.events.entries()) {
+  assert.equal(event.seq, i + 1); assert.equal(event.kind, 'observed')
+  if (i) assert.ok(event.elapsedMs >= report.events[i - 1].elapsedMs)
+}
+const event = (id) => report.events.find((e) => e.id === id).facts
+assert.equal(event('create_planned').counts.create, 6)
+assert.equal(event('create_planned').secretDataMarkedSensitive, true)
+assert.equal(event('applied_http_ready').stateContainsDummyValue, true)
+assert.equal(event('applied_http_ready').resourcesInState, 6)
+assert.equal(event('applied_http_ready').secretValueExported, false)
+assert.equal(event('no_changes').exitCode, 0)
+const pod = event('pod_reconciled_without_apply'); assert.notEqual(pod.beforeUid, pod.afterUid); assert.equal(pod.terraformPlan.exitCode, 0)
+assert.equal(event('drift_detected').plan.counts.update, 1)
+assert.equal(event('drift_detected').http.body.message, 'manual-drift')
+assert.equal(event('drift_repaired').plan.exitCode, 0)
+assert.equal(event('stale_plan_rejected').rejected, true); assert.equal(event('stale_plan_rejected').http.body.message, 'new-state-b')
+assert.equal(event('replacement_planned').counts.replace, 1)
+assert.equal(event('replacement_applied').oldConfigMapAbsent, true)
+assert.equal(event('refresh_only_does_not_repair').refreshPlan.changes.length, 0)
+assert.equal(event('refresh_only_does_not_repair').refreshPlan.observedDrift.counts.update, 1)
+assert.equal(event('refresh_only_does_not_repair').normalPlan.counts.update, 1)
+assert.equal(event('refresh_only_does_not_repair').http.body.message, 'refresh-only-drift')
+assert.equal(event('normal_apply_restores_config').plan.exitCode, 0)
+assert.equal(event('destroyed_owned_resources').namespaceAbsent, true)
+assert.equal(event('destroyed_owned_resources').resourcesInState, 0)
+assert.equal(event('destroyed_owned_resources').counts.delete, 6)
+assert.equal(event('local_cluster_removed').containerAbsent, true)
+assert.equal(event('local_cluster_removed').networkAbsent, true)
+assert.ok(Object.values(report.limits).every((v) => v === false))
+assert.ok(!source.includes('public-lab-fixture-not-a-real-secret'))
+assert.ok(!source.includes('client-key-data') && !source.includes('BEGIN PRIVATE KEY'))
+const { sources, ...replay } = report
+assert.deepEqual(JSON.parse(await readFile('replay.json')), replay)
+console.log('Dieciséis fases, planes, drift, contratos HTTP y limpieza verificados offline; no inicia Docker.')

@@ -1,0 +1,29 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "name": "unschedulable"
+  },
+  "spec": {
+    "restartPolicy": "Never",
+    "automountServiceAccountToken": false,
+    "containers": [
+      {
+        "name": "api",
+        "image": "LAB_IMAGE_V1",
+        "imagePullPolicy": "Never",
+        "command": [
+          "node",
+          "-e",
+          "setInterval(()=>{},1000)"
+        ],
+        "resources": {
+          "requests": {
+            "cpu": "999999",
+            "memory": "32Mi"
+          }
+        }
+      }
+    ]
+  }
+}

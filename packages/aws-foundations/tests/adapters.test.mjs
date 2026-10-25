@@ -16,6 +16,10 @@ test('misma lectura en HTTP loopback real y evento Lambda v2 local, sin invocar 
       const http = await fetch(origin + path, { method })
       assert.equal(http.status, event.statusCode); assert.deepEqual(await http.json(), JSON.parse(event.body))
       assert.equal(event.isBase64Encoded, false)
+      if (http.status === 405) {
+        assert.equal(http.headers.get('allow'), 'GET')
+        assert.equal(event.headers.allow, 'GET')
+      }
     }
   } finally { await new Promise((resolve) => server.close(resolve)) }
 })

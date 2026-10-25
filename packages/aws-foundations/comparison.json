@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-25T11:37:55.308Z",
+  "capturedAt": "2026-10-25T12:10:51.810Z",
   "kind": "calculated_design_comparison_with_local_contract_observations",
   "pricing": {
     "capturedAt": "2026-10-25T11:33:36.124Z",
@@ -332,7 +332,8 @@
       "localLambda": {
         "statusCode": 405,
         "headers": {
-          "content-type": "application/json"
+          "content-type": "application/json",
+          "allow": "GET"
         },
         "body": "{\"error\":\"method_not_allowed\"}",
         "isBase64Encoded": false

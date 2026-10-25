@@ -1,0 +1,133 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "catalogue"
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "matchLabels": {
+        "app": "catalogue"
+      }
+    },
+    "strategy": {
+      "type": "RollingUpdate",
+      "rollingUpdate": {
+        "maxSurge": 1,
+        "maxUnavailable": 0
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "catalogue"
+        }
+      },
+      "spec": {
+        "serviceAccountName": "catalogue",
+        "automountServiceAccountToken": false,
+        "securityContext": {
+          "runAsNonRoot": true,
+          "runAsUser": 1000,
+          "fsGroup": 1000
+        },
+        "containers": [
+          {
+            "name": "api",
+            "image": "LAB_IMAGE_V1",
+            "imagePullPolicy": "Never",
+            "ports": [
+              {
+                "name": "http",
+                "containerPort": 3000
+              }
+            ],
+            "env": [
+              {
+                "name": "STARTUP_DELAY_MS",
+                "value": "0"
+              },
+              {
+                "name": "ENV_MESSAGE",
+                "valueFrom": {
+                  "configMapKeyRef": {
+                    "name": "catalogue-settings",
+                    "key": "envMessage"
+                  }
+                }
+              },
+              {
+                "name": "LAB_CREDENTIAL",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "name": "catalogue-dummy",
+                    "key": "credential"
+                  }
+                }
+              }
+            ],
+            "volumeMounts": [
+              {
+                "name": "settings",
+                "mountPath": "/config",
+                "readOnly": true
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "50m",
+                "memory": "32Mi"
+              },
+              "limits": {
+                "cpu": "250m",
+                "memory": "96Mi"
+              }
+            },
+            "startupProbe": {
+              "httpGet": {
+                "path": "/startup",
+                "port": "http"
+              },
+              "periodSeconds": 1,
+              "failureThreshold": 30
+            },
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/ready",
+                "port": "http"
+              },
+              "periodSeconds": 2,
+              "failureThreshold": 1
+            },
+            "livenessProbe": {
+              "httpGet": {
+                "path": "/live",
+                "port": "http"
+              },
+              "periodSeconds": 2,
+              "failureThreshold": 2
+            },
+            "securityContext": {
+              "allowPrivilegeEscalation": false,
+              "readOnlyRootFilesystem": true,
+              "capabilities": {
+                "drop": [
+                  "ALL"
+                ]
+              }
+            }
+          }
+        ],
+        "volumes": [
+          {
+            "name": "settings",
+            "configMap": {
+              "name": "catalogue-settings"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

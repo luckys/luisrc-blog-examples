@@ -5,3 +5,7 @@ allowBuilds:
   esbuild: true
   # Only prints dependency-version warnings; no generated runtime is needed.
   protobufjs: false
+  # Telemetry is unnecessary; SSH native optimizations are optional for local labs.
+  '@scarf/scarf': false
+  cpu-features: false
+  ssh2: false

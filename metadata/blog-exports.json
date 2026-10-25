@@ -294,5 +294,61 @@
   {
     "source": "packages/progressive-delivery/canary-outcomes.svg",
     "destination": "public/assets/interactive/progressive-delivery/canary-outcomes.svg"
+  },
+  {
+    "source": "packages/aws-foundations/explorer.html",
+    "destination": "public/assets/interactive/aws-foundations/explorer.html"
+  },
+  {
+    "source": "packages/aws-foundations/explorer.mjs",
+    "destination": "public/assets/interactive/aws-foundations/explorer.mjs"
+  },
+  {
+    "source": "packages/aws-foundations/comparison.json",
+    "destination": "public/assets/interactive/aws-foundations/comparison.json"
+  },
+  {
+    "source": "packages/aws-foundations/cost-model.mjs",
+    "destination": "public/assets/interactive/aws-foundations/cost-model.mjs"
+  },
+  {
+    "source": "packages/aws-foundations/cost-summary.svg",
+    "destination": "public/assets/interactive/aws-foundations/cost-summary.svg"
+  },
+  {
+    "source": "packages/declarative-infrastructure/explorer.html",
+    "destination": "public/assets/interactive/declarative-infrastructure/explorer.html"
+  },
+  {
+    "source": "packages/declarative-infrastructure/explorer.mjs",
+    "destination": "public/assets/interactive/declarative-infrastructure/explorer.mjs"
+  },
+  {
+    "source": "packages/declarative-infrastructure/replay.json",
+    "destination": "public/assets/interactive/declarative-infrastructure/replay.json"
+  },
+  {
+    "source": "packages/declarative-infrastructure/plan-actions.svg",
+    "destination": "public/assets/interactive/declarative-infrastructure/plan-actions.svg"
+  },
+  {
+    "source": "packages/kubernetes-workloads/explorer.html",
+    "destination": "public/assets/interactive/kubernetes-workloads/explorer.html"
+  },
+  {
+    "source": "packages/kubernetes-workloads/explorer.mjs",
+    "destination": "public/assets/interactive/kubernetes-workloads/explorer.mjs"
+  },
+  {
+    "source": "packages/kubernetes-workloads/chart.mjs",
+    "destination": "public/assets/interactive/kubernetes-workloads/chart.mjs"
+  },
+  {
+    "source": "packages/kubernetes-workloads/replay.json",
+    "destination": "public/assets/interactive/kubernetes-workloads/replay.json"
+  },
+  {
+    "source": "packages/kubernetes-workloads/hpa-observations.svg",
+    "destination": "public/assets/interactive/kubernetes-workloads/hpa-observations.svg"
   }
 ]

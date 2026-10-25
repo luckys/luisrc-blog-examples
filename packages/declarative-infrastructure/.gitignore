@@ -1,0 +1,6 @@
+/.artifacts/
+/terraform/.terraform/
+/terraform/*.tfstate*
+/terraform/*.tfplan
+/terraform/*tfvars*
+/terraform/kubeconfig*
