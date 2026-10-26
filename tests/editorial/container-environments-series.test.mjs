@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile, readdir, access } from 'node:fs/promises'
@@ -6,7 +7,7 @@ import YAML from 'yaml'
 import { blogPath } from '../../scripts/blog-path.mjs'
 
 const root = 'packages/container-environments/'
-const manifest = JSON.parse(await readFile(blogPath('docs/editorial/container-environments-series.json')))
+const manifest = JSON.parse(await readFile(editorialPath('container-environments-series.json')))
 const ids = ['P062', 'DOCKER-LAYERS', 'DOCKER-STAGES', 'DOCKER-COMPOSE', 'DOCKER-VOLUMES', 'DOCKER-SECURITY']
 const posts = await Promise.all(manifest.articles.map(async (entry) => ({ entry,
   source: await readFile(blogPath(`src/content/posts/es/${entry.slug}.md`), 'utf8') })))

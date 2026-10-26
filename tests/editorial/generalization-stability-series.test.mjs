@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from'node:test'
 import assert from'node:assert/strict'
 import{readFile,readdir,access}from'node:fs/promises'
@@ -6,7 +7,7 @@ import YAML from'yaml'
 import{blogPath}from'../../scripts/blog-path.mjs'
 import{curvesChart,fitChart,biasChart,clippingChart}from'../../packages/generalization-stability/charts.mjs'
 const root='packages/generalization-stability/',json=async p=>JSON.parse(await readFile(p))
-const m=await json(blogPath('docs/editorial/generalization-stability-series.json')),d=await json(root+'comparison.json')
+const m=await json(editorialPath('generalization-stability-series.json')),d=await json(root+'comparison.json')
 const posts=await Promise.all(m.articles.map(async a=>({a,s:await readFile(blogPath('src/content/posts/es/'+a.slug+'.md'),'utf8')})))
 const near=(a,b,t=1e-10)=>assert.ok(Math.abs(a-b)<=t,`${a} != ${b}`),compact=s=>s.replace(/\s/g,'').replaceAll('"',"'")
 test('generalization: diez preguntas P100, drafts y dependencias en orden',async()=>{

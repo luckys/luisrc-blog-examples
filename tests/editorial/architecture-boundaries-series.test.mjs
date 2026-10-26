@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from "node:test";
 import assert from "node:assert/strict";
 import { access, readFile, readdir } from "node:fs/promises";
@@ -6,7 +7,7 @@ import { blogPath } from "../../scripts/blog-path.mjs";
 
 const manifest = JSON.parse(
   await readFile(
-    blogPath("docs/editorial/architecture-boundaries-series.json"),
+    editorialPath("architecture-boundaries-series.json"),
   ),
 );
 const ids = ["P045", "ARCH-LAYERS", "ARCH-OWNERSHIP", "ARCH-CQRS", "P046"];

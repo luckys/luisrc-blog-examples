@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import {readFile,access,readdir}from'node:fs/promises'
@@ -7,7 +8,7 @@ import{blogPath}from'../../scripts/blog-path.mjs'
 import{infer}from'../../packages/neural-foundations/inference.mjs'
 import{lossChart}from'../../packages/neural-foundations/charts.mjs'
 const root='packages/neural-foundations/',json=async p=>JSON.parse(await readFile(p))
-const manifest=await json(blogPath('docs/editorial/neural-foundations-series.json')),data=await json(root+'training.json')
+const manifest=await json(editorialPath('neural-foundations-series.json')),data=await json(root+'training.json')
 const posts=await Promise.all(manifest.articles.map(async entry=>({entry,source:await readFile(blogPath('src/content/posts/es/'+entry.slug+'.md'),'utf8')})))
 const compact=s=>s.replace(/\s/g,'').replaceAll('"',"'")
 test('neural: cinco drafts P096 con preguntas y objetivos específicos, dependencias anteriores',async()=>{

@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import {readFile,readdir,access} from 'node:fs/promises'
@@ -7,7 +8,7 @@ import {blogPath} from '../../scripts/blog-path.mjs'
 import {selectRuns} from '../../packages/training-dynamics/model.mjs'
 import {curveChart} from '../../packages/training-dynamics/charts.mjs'
 const root='packages/training-dynamics/',json=async p=>JSON.parse(await readFile(p))
-const m=await json(blogPath('docs/editorial/training-dynamics-series.json')),data=await json(root+'comparison.json')
+const m=await json(editorialPath('training-dynamics-series.json')),data=await json(root+'comparison.json')
 const posts=await Promise.all(m.articles.map(async a=>({a,s:await readFile(blogPath('src/content/posts/es/'+a.slug+'.md'),'utf8')})))
 const near=(a,b,t=1e-12)=>assert.ok(Math.abs(a-b)<=t,`${a} != ${b}`),compact=s=>s.replace(/\s/g,'').replaceAll('"',"'")
 test('training: siete preguntas P098 con orden y metadatos de drafts españoles',async()=>{

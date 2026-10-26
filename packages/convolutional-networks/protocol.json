@@ -1,0 +1,62 @@
+{
+  "imageSize": 24,
+  "classes": [
+    "horizontal",
+    "vertical",
+    "diagonal-down",
+    "diagonal-up"
+  ],
+  "source": {
+    "trainPerClass": 64,
+    "validationPerClass": 32,
+    "trainSeed": 101,
+    "validationSeed": 102,
+    "background": 0.05,
+    "contrast": 0.85,
+    "noise": 0.035,
+    "thickness": [
+      1,
+      2
+    ]
+  },
+  "target": {
+    "trainPerClass": 8,
+    "validationPerClass": 32,
+    "trainSeed": 201,
+    "validationSeed": 202,
+    "background": 0.25,
+    "contrast": 0.5,
+    "noise": 0.08,
+    "thickness": [
+      2,
+      3
+    ],
+    "labels": "axis-aligned=0, diagonal=1"
+  },
+  "centerJitter": 4,
+  "halfLength": [
+    6,
+    10
+  ],
+  "seeds": [
+    7,
+    19,
+    31
+  ],
+  "epochs": 40,
+  "sourceBatch": 32,
+  "targetBatch": 16,
+  "sourceShuffleSeed": 420,
+  "targetShuffleSeed": 1420,
+  "learningRate": 0.01,
+  "fineTuneBackboneRate": 0.001,
+  "targetModes": [
+    "scratch",
+    "random_frozen",
+    "frozen",
+    "fine_tune"
+  ],
+  "checkpoint": "last, without validation selection",
+  "dtype": "float32 training, float64 arithmetic probes",
+  "testSplit": false
+}

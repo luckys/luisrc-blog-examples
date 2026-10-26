@@ -1,0 +1,73 @@
+{
+  "vocabulary": {
+    "PAD": 0,
+    "bit0": 1,
+    "bit1": 2,
+    "distractors": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "QUERY": 7,
+    "BOS": 8,
+    "EOS": 9
+  },
+  "vocabularySize": 10,
+  "embeddingSize": 8,
+  "hiddenSize": 16,
+  "seeds": [
+    7,
+    19,
+    31
+  ],
+  "memory": {
+    "trainCount": 512,
+    "validationCount": 256,
+    "trainSeed": 101,
+    "validationSeed": 102,
+    "trainLengths": [
+      4,
+      12
+    ],
+    "epochs": 80,
+    "batchSize": 64,
+    "shuffleSeed": 420,
+    "kinds": [
+      "rnn",
+      "lstm",
+      "gru"
+    ],
+    "lengthProbes": [
+      4,
+      8,
+      12,
+      24,
+      48,
+      96
+    ],
+    "probeCount": 128,
+    "probeSeedBase": 1000,
+    "traceLengths": [
+      12,
+      48
+    ]
+  },
+  "continuation": {
+    "trainCount": 128,
+    "validationCount": 64,
+    "trainSeed": 501,
+    "validationSeed": 502,
+    "tokens": 8,
+    "epochs": 60,
+    "batchSize": 32,
+    "shuffleSeed": 1420,
+    "prefixTokens": 2,
+    "kind": "gru"
+  },
+  "learningRate": 0.01,
+  "clipNorm": 1.0,
+  "checkpoint": "last, no validation selection",
+  "dtype": "float32 training, float64 cell and gradient controls",
+  "testSplit": false
+}

@@ -530,5 +530,109 @@
   {
     "source": "packages/generalization-stability/clipping-curves.svg",
     "destination": "public/assets/interactive/generalization-stability/clipping-curves.svg"
+  },
+  {
+    "source": "packages/convolutional-networks/explorer.html",
+    "destination": "public/assets/interactive/convolutional-networks/explorer.html"
+  },
+  {
+    "source": "packages/convolutional-networks/explorer.mjs",
+    "destination": "public/assets/interactive/convolutional-networks/explorer.mjs"
+  },
+  {
+    "source": "packages/convolutional-networks/model.mjs",
+    "destination": "public/assets/interactive/convolutional-networks/model.mjs"
+  },
+  {
+    "source": "packages/convolutional-networks/charts.mjs",
+    "destination": "public/assets/interactive/convolutional-networks/charts.mjs"
+  },
+  {
+    "source": "packages/convolutional-networks/comparison.json",
+    "destination": "public/assets/interactive/convolutional-networks/comparison.json"
+  },
+  {
+    "source": "packages/convolutional-networks/source-curves.svg",
+    "destination": "public/assets/interactive/convolutional-networks/source-curves.svg"
+  },
+  {
+    "source": "packages/convolutional-networks/transfer-curves.svg",
+    "destination": "public/assets/interactive/convolutional-networks/transfer-curves.svg"
+  },
+  {
+    "source": "packages/convolutional-networks/feature-maps.svg",
+    "destination": "public/assets/interactive/convolutional-networks/feature-maps.svg"
+  },
+  {
+    "source": "packages/recurrent-sequences/explorer.html",
+    "destination": "public/assets/interactive/recurrent-sequences/explorer.html"
+  },
+  {
+    "source": "packages/recurrent-sequences/explorer.mjs",
+    "destination": "public/assets/interactive/recurrent-sequences/explorer.mjs"
+  },
+  {
+    "source": "packages/recurrent-sequences/model.mjs",
+    "destination": "public/assets/interactive/recurrent-sequences/model.mjs"
+  },
+  {
+    "source": "packages/recurrent-sequences/charts.mjs",
+    "destination": "public/assets/interactive/recurrent-sequences/charts.mjs"
+  },
+  {
+    "source": "packages/recurrent-sequences/comparison.json",
+    "destination": "public/assets/interactive/recurrent-sequences/comparison.json"
+  },
+  {
+    "source": "packages/recurrent-sequences/memory-curves.svg",
+    "destination": "public/assets/interactive/recurrent-sequences/memory-curves.svg"
+  },
+  {
+    "source": "packages/recurrent-sequences/length-curves.svg",
+    "destination": "public/assets/interactive/recurrent-sequences/length-curves.svg"
+  },
+  {
+    "source": "packages/recurrent-sequences/gradient-controls.svg",
+    "destination": "public/assets/interactive/recurrent-sequences/gradient-controls.svg"
+  },
+  {
+    "source": "packages/recurrent-sequences/embedding-table.svg",
+    "destination": "public/assets/interactive/recurrent-sequences/embedding-table.svg"
+  },
+  {
+    "source": "packages/attention-transformer/explorer.html",
+    "destination": "public/assets/interactive/attention-transformer/explorer.html"
+  },
+  {
+    "source": "packages/attention-transformer/explorer.mjs",
+    "destination": "public/assets/interactive/attention-transformer/explorer.mjs"
+  },
+  {
+    "source": "packages/attention-transformer/model.mjs",
+    "destination": "public/assets/interactive/attention-transformer/model.mjs"
+  },
+  {
+    "source": "packages/attention-transformer/charts.mjs",
+    "destination": "public/assets/interactive/attention-transformer/charts.mjs"
+  },
+  {
+    "source": "packages/attention-transformer/comparison.json",
+    "destination": "public/assets/interactive/attention-transformer/comparison.json"
+  },
+  {
+    "source": "packages/attention-transformer/attention-weights.svg",
+    "destination": "public/assets/interactive/attention-transformer/attention-weights.svg"
+  },
+  {
+    "source": "packages/attention-transformer/scale-entropy.svg",
+    "destination": "public/assets/interactive/attention-transformer/scale-entropy.svg"
+  },
+  {
+    "source": "packages/attention-transformer/position-signals.svg",
+    "destination": "public/assets/interactive/attention-transformer/position-signals.svg"
+  },
+  {
+    "source": "packages/attention-transformer/causal-gradient.svg",
+    "destination": "public/assets/interactive/attention-transformer/causal-gradient.svg"
   }
 ]

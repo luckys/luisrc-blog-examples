@@ -1,0 +1,10 @@
+{
+  "image": "quay.io/jupyter/pytorch-notebook@sha256:7d0701eb4492de8facbb90845c7d4d4dd9da84d3f72e321f5f7be1962047ad11",
+  "platform": "linux/amd64",
+  "cpus": 2,
+  "memory": "2g",
+  "threads": 1,
+  "python": "3.13.17",
+  "numpy": "2.5.4",
+  "torch": "2.14.1+cpu"
+}

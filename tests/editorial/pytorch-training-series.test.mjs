@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import {readFile,readdir,access} from 'node:fs/promises'
@@ -7,7 +8,7 @@ import {blogPath} from '../../scripts/blog-path.mjs'
 import {vector} from '../../packages/pytorch-training/model.mjs'
 import {curveChart,resumeErrors} from '../../packages/pytorch-training/charts.mjs'
 const root='packages/pytorch-training/',json=async p=>JSON.parse(await readFile(p))
-const m=await json(blogPath('docs/editorial/pytorch-training-series.json')),data=await json(root+'comparison.json')
+const m=await json(editorialPath('pytorch-training-series.json')),data=await json(root+'comparison.json')
 const posts=await Promise.all(m.articles.map(async a=>({a,s:await readFile(blogPath('src/content/posts/es/'+a.slug+'.md'),'utf8')})))
 const compact=s=>s.replace(/\s/g,'').replaceAll('"',"'"),near=(a,b,t=1e-12)=>assert.ok(Math.abs(a-b)<=t,`${a} != ${b}`)
 test('pytorch: siete preguntas P099, drafts españoles y dependencias en orden',async()=>{

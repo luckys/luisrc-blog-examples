@@ -1,0 +1,47 @@
+{
+  "modelSize": 8,
+  "heads": 2,
+  "feedForwardSize": 16,
+  "vocabularySize": 12,
+  "seeds": [
+    7,
+    19,
+    31
+  ],
+  "batchSize": 2,
+  "sourceLength": 4,
+  "targetLength": 5,
+  "sourceValidLengths": [
+    4,
+    2
+  ],
+  "targetValidLengths": [
+    5,
+    3
+  ],
+  "inputSeeds": [
+    101,
+    102
+  ],
+  "scaleProbeDimensions": [
+    1,
+    4,
+    16,
+    64
+  ],
+  "scaleProbeQueries": 512,
+  "scaleProbeKeys": 8,
+  "scaleProbeSeed": 303,
+  "positionalBase": 10000,
+  "positionCount": 16,
+  "dtype": "float64",
+  "training": false,
+  "dropout": 0.0,
+  "norm": "pre-norm with separate final norm",
+  "maskedRows": "reject if no allowed key",
+  "limits": {
+    "benchmark": false,
+    "semanticInterpretation": false,
+    "gpu": false
+  }
+}

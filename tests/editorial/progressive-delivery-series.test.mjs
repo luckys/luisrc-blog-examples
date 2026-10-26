@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile, readdir, access } from 'node:fs/promises'
@@ -7,7 +8,7 @@ import { blogPath } from '../../scripts/blog-path.mjs'
 import { bucket, rolloutDecision } from '../../packages/progressive-delivery/src/rollout.ts'
 
 const root = 'packages/progressive-delivery/'
-const manifest = JSON.parse(await readFile(blogPath('docs/editorial/progressive-delivery-series.json')))
+const manifest = JSON.parse(await readFile(editorialPath('progressive-delivery-series.json')))
 const ids = ['P063', 'CD-ARTIFACTS', 'CD-FLAGS', 'CD-SMOKE', 'CD-ROLLING', 'CD-BLUEGREEN', 'CD-CANARY', 'CD-ROLLBACK']
 const posts = await Promise.all(manifest.articles.map(async (entry) => ({ entry,
   source: await readFile(blogPath(`src/content/posts/es/${entry.slug}.md`), 'utf8') })))

@@ -1,0 +1,271 @@
+{
+  "name": "Reconstruir un Transformer: matrices, máscaras y posiciones",
+  "locale": "es",
+  "status": "draft",
+  "lab": "attention-transformer",
+  "roadmapScope": "P103: Q/K/V, scaled dot-product, masks, multi-head attention, positional encodings, encoder/decoder y causal attention, con implementación explícita y controles numéricos. P104–P105 pendientes.",
+  "dependencyFiles": [],
+  "articles": [
+    {
+      "id": "P103",
+      "roadmapId": "P103",
+      "slug": "attention-qkv-consultas-claves-valores",
+      "title": "Atención con Q/K/V: consultar y combinar una secuencia sin reducirla a un solo estado",
+      "question": "Cómo una consulta produce una combinación de valores a partir de compatibilidades con claves",
+      "prerequisites": [
+        "P076",
+        "P084",
+        "P099",
+        "P102"
+      ],
+      "objectives": [
+        "Reconstruir Q/K/V y la suma ponderada",
+        "Seguir los ejes de queries, keys y features",
+        "Distinguir parámetros aprendidos y coeficientes calculados"
+      ],
+      "commonErrors": [
+        "Interpretar atención como búsqueda exacta de un token",
+        "Normalizar sobre el eje de queries",
+        "Atribuir semántica a pesos sin entrenar"
+      ],
+      "files": [
+        "attention.py",
+        "transformer.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_attention.py",
+        "tests/test_transformer.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-ATTENTION-SCALE",
+      "roadmapId": "P103",
+      "slug": "scaled-dot-product-attention-softmax-estable",
+      "title": "Scaled dot-product: por qué dividir antes de softmax y cómo evitar overflow",
+      "question": "Qué controla la escala del producto escalar y qué no garantiza",
+      "prerequisites": [
+        "P103"
+      ],
+      "objectives": [
+        "Relacionar dimensión y escala bajo supuestos explícitos",
+        "Calcular softmax con desplazamiento estable",
+        "Interpretar entropía y concentración sin convertirlas en calidad"
+      ],
+      "commonErrors": [
+        "Confundir estabilidad numérica con calibración",
+        "Prometer varianza uno sin comprobar los supuestos",
+        "Restar el máximo de todo el batch en vez de cada fila"
+      ],
+      "files": [
+        "attention.py",
+        "transformer.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_attention.py",
+        "tests/test_transformer.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-ATTENTION-MASKS",
+      "roadmapId": "P103",
+      "slug": "attention-masks-padding-bool-permitido-excluido",
+      "title": "Máscaras de atención: no confundir permitido, padding y posición futura",
+      "question": "Cómo traducir una política de acceso a claves sin invertir su significado entre APIs",
+      "prerequisites": [
+        "DL-ATTENTION-SCALE"
+      ],
+      "objectives": [
+        "Combinar padding de keys y restricciones causales",
+        "Contrastar convenciones booleanas y aditivas",
+        "Definir el caso sin ninguna clave permitida"
+      ],
+      "commonErrors": [
+        "Pasar la misma máscara booleana a APIs con semántica inversa",
+        "Suponer que enmascarar keys anula las queries de padding",
+        "Multiplicar scores excluidos por cero antes de softmax"
+      ],
+      "files": [
+        "attention.py",
+        "transformer.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_attention.py",
+        "tests/test_transformer.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-MULTIHEAD",
+      "roadmapId": "P103",
+      "slug": "multi-head-attention-split-concat-proyeccion",
+      "title": "Multi-head attention: separar perspectivas y volver a reunir sus resultados",
+      "question": "Qué se divide entre heads y cómo vuelve a producirse un vector por query",
+      "prerequisites": [
+        "DL-ATTENTION-MASKS"
+      ],
+      "objectives": [
+        "Seguir reshape, transpose, concat y proyección final",
+        "Calcular dimensiones y presupuesto de parámetros",
+        "Contrastar cada head con la implementación nativa"
+      ],
+      "commonErrors": [
+        "Mezclar el eje temporal con el de heads",
+        "Prometer más parámetros solo por aumentar heads con ancho fijo",
+        "Suponer que cada head aprende una función humana distinta"
+      ],
+      "files": [
+        "attention.py",
+        "transformer.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_attention.py",
+        "tests/test_transformer.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-POSITIONAL",
+      "roadmapId": "P103",
+      "slug": "positional-encodings-sinusoidales-orden-permutaciones",
+      "title": "Positional encodings: dar coordenadas a una atención que respeta las permutaciones",
+      "question": "Qué aporta la posición y qué cambia cuando se reordenan tokens o pares token-posición",
+      "prerequisites": [
+        "DL-MULTIHEAD"
+      ],
+      "objectives": [
+        "Calcular señales sinusoidales por posición y dimensión",
+        "Contrastar equivarianza sin posiciones",
+        "Distinguir posición absoluta de invariancia a desplazamientos"
+      ],
+      "commonErrors": [
+        "Confundir equivarianza con salida constante",
+        "Prometer extrapolación solo porque la fórmula acepta más posiciones",
+        "Permutar tokens y posiciones juntos para probar que el modelo ignora el orden"
+      ],
+      "files": [
+        "attention.py",
+        "transformer.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_attention.py",
+        "tests/test_transformer.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-TRANSFORMER-BLOCK",
+      "roadmapId": "P103",
+      "slug": "transformer-block-residual-layernorm-ffn-pre-norm",
+      "title": "Un bloque Transformer: atención, residual, LayerNorm y FFN resuelven tareas distintas",
+      "question": "Qué transforma cada subcapa y dónde se normaliza en el bloque del laboratorio",
+      "prerequisites": [
+        "DL-POSITIONAL",
+        "DL-LAYERNORM"
+      ],
+      "objectives": [
+        "Reconstruir un bloque pre-norm completo",
+        "Separar mezcla entre posiciones y transformación por posición",
+        "Contrastar el bloque con una capa nativa de pesos copiados"
+      ],
+      "commonErrors": [
+        "Llamar Transformer a una sola multiplicación de atención",
+        "Atribuir pre-norm al bloque post-norm original",
+        "Garantizar identidad residual cuando hay una normalización final"
+      ],
+      "files": [
+        "transformer.py",
+        "attention.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_attention.py",
+        "tests/test_transformer.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-ENCODER-DECODER",
+      "roadmapId": "P103",
+      "slug": "transformer-encoder-decoder-cross-attention-contexto",
+      "title": "Encoder y decoder: quién consulta a quién en cross-attention",
+      "question": "Cómo se combinan contexto de origen y prefijo de destino sin filtrar el futuro",
+      "prerequisites": [
+        "DL-TRANSFORMER-BLOCK"
+      ],
+      "objectives": [
+        "Distinguir self-attention y cross-attention por origen de Q/K/V",
+        "Seguir longitudes de origen y destino diferentes",
+        "Comprobar acceso al origen y aislamiento de su padding"
+      ],
+      "commonErrors": [
+        "Aplicar causalidad al origen como si fuera un target futuro",
+        "Tomar K/V del prefijo cuando deberían venir del encoder",
+        "Interpretar una salida no entrenada como una traducción aprendida"
+      ],
+      "files": [
+        "transformer.py",
+        "attention.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_attention.py",
+        "tests/test_transformer.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-CAUSAL-ATTENTION",
+      "roadmapId": "P103",
+      "slug": "causal-attention-transformer-futuro-paralelismo",
+      "title": "Atención causal: demostrar que el futuro no cambia el prefijo",
+      "question": "Qué permite calcular en paralelo una máscara causal y qué sigue siendo secuencial al generar",
+      "prerequisites": [
+        "DL-ENCODER-DECODER",
+        "DL-TEACHER-FORCING"
+      ],
+      "objectives": [
+        "Contrastar invariancia del prefijo y su gradiente al futuro",
+        "Separar entrenamiento con targets desplazados y generación",
+        "Contar el almacenamiento cuadrático sin llamarlo un benchmark"
+      ],
+      "commonErrors": [
+        "Usar una máscara como única prueba de ausencia de fuga end to end",
+        "Confundir causalidad con ahorro automático de memoria",
+        "Interpretar cero fuga como calidad predictiva"
+      ],
+      "files": [
+        "probes.py",
+        "attention.py",
+        "transformer.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_attention.py",
+        "tests/test_transformer.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    }
+  ]
+}

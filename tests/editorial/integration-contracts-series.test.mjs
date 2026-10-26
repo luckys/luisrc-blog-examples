@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { access, readFile, readdir } from 'node:fs/promises'
@@ -5,7 +6,7 @@ import { createHash } from 'node:crypto'
 import YAML from 'yaml'
 import { blogPath } from '../../scripts/blog-path.mjs'
 
-const manifest = JSON.parse(await readFile(blogPath('docs/editorial/integration-contracts-series.json')))
+const manifest = JSON.parse(await readFile(editorialPath('integration-contracts-series.json')))
 const ids = ['P056', 'INT-FIXTURES', 'INT-ISOLATION', 'CONTRACT-SCHEMA', 'CONTRACT-CDC']
 const posts = await Promise.all(manifest.articles.map(async (entry) => ({
   entry, source: await readFile(blogPath(`src/content/posts/es/${entry.slug}.md`), 'utf8'),

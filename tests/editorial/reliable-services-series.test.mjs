@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import { blogPath } from "../../scripts/blog-path.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -6,7 +7,7 @@ import YAML from "yaml";
 
 const manifest = JSON.parse(
   await readFile(
-    blogPath("docs/editorial/reliable-services-series.json"),
+    editorialPath("reliable-services-series.json"),
     "utf8",
   ),
 );
@@ -20,7 +21,7 @@ test("ruta: 24 artículos en cuatro series, solo español y sin dependencias cir
   assert.equal(entries.length, 24);
   const database = YAML.parse(
     await readFile(
-      blogPath("docs/editorial/database-fundamentals.yaml"),
+      editorialPath("database-fundamentals.yaml"),
       "utf8",
     ),
   );

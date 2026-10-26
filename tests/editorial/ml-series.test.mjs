@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import { blogPath } from "../../scripts/blog-path.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -7,7 +8,7 @@ import YAML from "yaml";
 import { evaluate } from "../../packages/machine-learning/explorer.mjs";
 
 const manifest = JSON.parse(
-  await readFile(blogPath("docs/editorial/ml-series.json"), "utf8"),
+  await readFile(editorialPath("ml-series.json"), "utf8"),
 );
 const result = JSON.parse(
   await readFile("packages/machine-learning/results/experiments.json", "utf8"),

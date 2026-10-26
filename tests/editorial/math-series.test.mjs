@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import { blogPath } from "../../scripts/blog-path.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -7,7 +8,7 @@ import YAML from "yaml";
 import { trajectory } from "../../packages/mathematics-statistics/simulator.mjs";
 
 const manifest = JSON.parse(
-  await readFile(blogPath("docs/editorial/math-series.json"), "utf8"),
+  await readFile(editorialPath("math-series.json"), "utf8"),
 );
 const normalize = (text) => text.replace(/\s+/g, "");
 const result = JSON.parse(

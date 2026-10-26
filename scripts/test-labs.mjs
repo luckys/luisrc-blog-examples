@@ -39,6 +39,9 @@ const commands = [
     "training-dynamics",
     "pytorch-training",
     "generalization-stability",
+    "convolutional-networks",
+    "recurrent-sequences",
+    "attention-transformer",
   ].map((lab) => ["--dir", `packages/${lab}`, "test"]),
   [
     "--dir",

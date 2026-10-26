@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
@@ -5,7 +6,7 @@ import YAML from 'yaml'
 import { blogPath } from '../../scripts/blog-path.mjs'
 
 const manifest = JSON.parse(
-  await readFile(blogPath('docs/editorial/api-contracts-series.json')),
+  await readFile(editorialPath('api-contracts-series.json')),
 )
 const entries = manifest.articles.filter((article) => article.roadmapId === 'P031')
 const compact = (text) => text.replace(/\s/g, '').replaceAll('"', "'")

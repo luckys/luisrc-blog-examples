@@ -1,0 +1,284 @@
+{
+  "name": "Cómo aprende una red de una secuencia: estados, puertas y generación",
+  "locale": "es",
+  "status": "draft",
+  "lab": "recurrent-sequences",
+  "roadmapScope": "P102: embeddings, hidden state, variable lengths, RNN, LSTM, GRU, vanishing gradients y teacher forcing. Predictor entrenado y dependencias largas contrastadas. P103 continúa en attention-transformer-series.json; P104–P105 pendientes.",
+  "dependencyFiles": [],
+  "articles": [
+    {
+      "id": "P102",
+      "roadmapId": "P102",
+      "slug": "embeddings-tokens-tabla-vectores-padding",
+      "title": "Embeddings: convertir símbolos en vectores sin inventar un orden entre sus IDs",
+      "question": "Qué aprende una tabla de embeddings y qué significa seleccionar una fila",
+      "prerequisites": [
+        "P099",
+        "P100"
+      ],
+      "objectives": [
+        "Distinguir ID de categoría y magnitud numérica",
+        "Relacionar lookup y one-hot con una matriz aprendida",
+        "Comprobar gradientes repetidos y el tratamiento de padding"
+      ],
+      "commonErrors": [
+        "Interpretar la distancia entre IDs como similitud",
+        "Dar significado semántico a vectores aleatorios",
+        "Confundir un embedding de padding cero con detener la recurrencia"
+      ],
+      "files": [
+        "networks.py",
+        "data.py",
+        "cells.py",
+        "training.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_cells.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-HIDDEN-STATE",
+      "roadmapId": "P102",
+      "slug": "hidden-state-recurrencia-estado-pesos",
+      "title": "Hidden state: qué conserva una red entre símbolos y qué aprende entre batches",
+      "question": "Cómo distinguir el estado de una secuencia de los parámetros compartidos",
+      "prerequisites": [
+        "P102"
+      ],
+      "objectives": [
+        "Seguir el estado por una secuencia",
+        "Distinguir salida por paso y estado final",
+        "Decidir cuándo reiniciar o conservar estado"
+      ],
+      "commonErrors": [
+        "Arrastrar estado entre ejemplos independientes",
+        "Confundir h_t con pesos aprendidos",
+        "Suponer que un vector finito conserva toda la historia"
+      ],
+      "files": [
+        "networks.py",
+        "data.py",
+        "cells.py",
+        "training.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_cells.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-SEQUENCE-LENGTHS",
+      "roadmapId": "P102",
+      "slug": "secuencias-longitudes-variables-padding-packed",
+      "title": "Longitudes variables: evitar que padding se convierta en parte de la secuencia",
+      "question": "Cómo formar batches sin confundir el final real con el último índice rellenado",
+      "prerequisites": [
+        "DL-HIDDEN-STATE"
+      ],
+      "objectives": [
+        "Separar padding del contrato de longitudes",
+        "Contrastar packed batches con ejecuciones individuales",
+        "Normalizar una loss enmascarada por elementos válidos"
+      ],
+      "commonErrors": [
+        "Tomar output[:, -1] con secuencias rellenadas",
+        "Suponer que embedding cero congela h_t",
+        "Permutar longitudes sin conservar el orden de muestras"
+      ],
+      "files": [
+        "networks.py",
+        "data.py",
+        "cells.py",
+        "training.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_cells.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-RNN",
+      "roadmapId": "P102",
+      "slug": "rnn-tanh-unroll-bptt-memoria",
+      "title": "RNN con tanh: compartir una transición y entrenarla a través del tiempo",
+      "question": "Cómo funciona una recurrencia simple y qué demuestra un predictor de memoria",
+      "prerequisites": [
+        "DL-SEQUENCE-LENGTHS"
+      ],
+      "objectives": [
+        "Reconstruir la transición y el unroll",
+        "Entender la acumulación temporal del gradiente",
+        "Leer el presupuesto y resultados del predictor de un bit"
+      ],
+      "commonErrors": [
+        "Aprender pesos nuevos para cada instante",
+        "Afirmar que toda RNN falla con secuencias largas",
+        "Confundir menos parámetros con menor coste medido"
+      ],
+      "files": [
+        "cells.py",
+        "data.py",
+        "networks.py",
+        "training.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_cells.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-LSTM",
+      "roadmapId": "P102",
+      "slug": "lstm-cell-state-input-forget-output-gates",
+      "title": "LSTM: seguir qué se conserva, qué se escribe y qué se expone",
+      "question": "Qué cambia al separar cell state y hidden state con puertas aprendidas",
+      "prerequisites": [
+        "DL-RNN"
+      ],
+      "objectives": [
+        "Reconstruir input, forget, candidate y output",
+        "Distinguir camino directo de memoria y derivada total",
+        "Relacionar h_n y c_n con la implementación moderna"
+      ],
+      "commonErrors": [
+        "Tratar puertas como decisiones booleanas",
+        "Garantizar gradiente constante en toda LSTM",
+        "Atribuir la forget gate moderna sin matices a la primera publicación"
+      ],
+      "files": [
+        "cells.py",
+        "data.py",
+        "networks.py",
+        "training.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_cells.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-GRU",
+      "roadmapId": "P102",
+      "slug": "gru-reset-update-candidato-convencion-pytorch",
+      "title": "GRU: combinar estado y candidato sin una cell state separada",
+      "question": "Cómo actúan reset y update y por qué importa la convención del candidato",
+      "prerequisites": [
+        "DL-LSTM"
+      ],
+      "objectives": [
+        "Reconstruir las dos puertas y la combinación final",
+        "Contrastar las convenciones de reset antes o después de la matriz",
+        "Comparar parámetros sin prometer superioridad universal"
+      ],
+      "commonErrors": [
+        "Confundir reset y update",
+        "Intercambiar multiplicación elemento a elemento y producto matricial",
+        "Suponer que menos puertas garantiza más rendimiento"
+      ],
+      "files": [
+        "cells.py",
+        "data.py",
+        "networks.py",
+        "training.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_cells.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-RECURRENT-GRADIENTS",
+      "roadmapId": "P102",
+      "slug": "rnn-vanishing-exploding-gradients-dependencias-largas",
+      "title": "Gradientes a través del tiempo: perder sensibilidad no equivale a olvidar al predecir",
+      "question": "Qué significan los productos de Jacobianos y cómo contrastarlos sin forzar un fracaso",
+      "prerequisites": [
+        "DL-GRU",
+        "DL-GRADIENT-CLIPPING"
+      ],
+      "objectives": [
+        "Calcular controles escalares de contracción y expansión",
+        "Separar derivada local y memoria en el forward",
+        "Evaluar longitudes fuera del rango de entrenamiento sin vender un benchmark"
+      ],
+      "commonErrors": [
+        "Diagnosticar olvido solo por un gradiente pequeño",
+        "Creer que clipping recupera gradientes desaparecidos",
+        "Ocultar resultados planos porque no encajan en el relato"
+      ],
+      "files": [
+        "probes.py",
+        "data.py",
+        "cells.py",
+        "networks.py",
+        "training.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_cells.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-TEACHER-FORCING",
+      "roadmapId": "P102",
+      "slug": "teacher-forcing-generacion-autoregresiva-evaluacion",
+      "title": "Teacher forcing: entrenar con el pasado correcto y generar con el propio",
+      "question": "Cómo separar el contexto real de entrenamiento del contexto generado en un rollout",
+      "prerequisites": [
+        "DL-RECURRENT-GRADIENTS"
+      ],
+      "objectives": [
+        "Desplazar inputs y targets sin filtrar el futuro",
+        "Evaluar teacher forcing y generación por caminos distintos",
+        "Declarar alcance de patrones repetidos y perturbaciones artificiales"
+      ],
+      "commonErrors": [
+        "Usar el target actual como entrada para predecirlo",
+        "Afirmar generalización sobre ocho patrones repetidos",
+        "Inventar una brecha natural de errores a partir de una perturbación forzada"
+      ],
+      "files": [
+        "training.py",
+        "data.py",
+        "cells.py",
+        "networks.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_cells.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    }
+  ]
+}

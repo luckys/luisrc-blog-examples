@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { access, readFile, readdir } from 'node:fs/promises'
@@ -8,7 +9,7 @@ import { buildReport } from '../../packages/service-objectives/src/report.ts'
 import { WindowIndex } from '../../packages/service-objectives/src/windows.ts'
 import { evaluateAlerts } from '../../packages/service-objectives/src/alerts.ts'
 
-const manifest = JSON.parse(await readFile(blogPath('docs/editorial/service-objectives-series.json')))
+const manifest = JSON.parse(await readFile(editorialPath('service-objectives-series.json')))
 const ids = ['P060', 'SLO-COHORTS', 'SLO-WINDOWS', 'SLO-BUDGET', 'SLO-BURN', 'SLO-ALERTS']
 const root = 'packages/service-objectives/'
 const posts = await Promise.all(manifest.articles.map(async (entry) => ({ entry,

@@ -1,0 +1,312 @@
+{
+  "name": "Cómo trabaja una CNN: de la ventana a la representación aprendida",
+  "locale": "es",
+  "status": "draft",
+  "lab": "convolutional-networks",
+  "roadmapScope": "P101 completo: convolution, kernel, padding, stride, pooling, receptive field, feature maps, arquitecturas CNN y transfer learning. CNN entrenada y mapas reales. P102 continúa en recurrent-sequences-series.json; P103–P105 pendientes.",
+  "dependencyFiles": [],
+  "articles": [
+    {
+      "id": "P101",
+      "roadmapId": "P101",
+      "slug": "cnn-convolution-kernel-cross-correlation",
+      "title": "Convolution y kernels: calcular una CNN ventana a ventana",
+      "question": "Qué se multiplica en una convolution y qué se comparte al recorrer la imagen",
+      "prerequisites": [
+        "P085",
+        "P099",
+        "P100"
+      ],
+      "objectives": [
+        "Reconstruir una salida como suma de productos",
+        "Distinguir convolution matemática y cross-correlation",
+        "Explicar qué aprende el kernel y qué decide la arquitectura"
+      ],
+      "commonErrors": [
+        "Invertir el kernel al contrastar con Conv2d",
+        "Confundir una salida con un kernel",
+        "Atribuir significado semántico a un filtro sin comprobarlo"
+      ],
+      "files": [
+        "geometry.py",
+        "networks.py",
+        "training.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_probes.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-CONV-GEOMETRY",
+      "roadmapId": "P101",
+      "slug": "cnn-padding-stride-dilation-shapes",
+      "title": "Padding, stride y dilation: calcular el tamaño y la posición de cada salida",
+      "question": "Cómo anticipar el tamaño y las coordenadas sin ensayar tensores al azar",
+      "prerequisites": [
+        "P101"
+      ],
+      "objectives": [
+        "Calcular el kernel efectivo y el tamaño de salida",
+        "Distinguir avance de ventana y separación entre muestras",
+        "Elegir padding y reconocer sus efectos de borde"
+      ],
+      "commonErrors": [
+        "Suponer que same funciona con cualquier stride",
+        "Contar los huecos de dilation como pesos nuevos",
+        "Añadir padding simétrico a un kernel par para conservar tamaño"
+      ],
+      "files": [
+        "geometry.py",
+        "networks.py",
+        "training.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_probes.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-POOLING",
+      "roadmapId": "P101",
+      "slug": "cnn-pooling-downsampling-gradientes-aliasing",
+      "title": "Pooling: qué información conserva y qué pierde una CNN al reducir un mapa",
+      "question": "Qué cambia al sustituir una región por su máximo o su media",
+      "prerequisites": [
+        "DL-CONV-GEOMETRY"
+      ],
+      "objectives": [
+        "Calcular max y average pooling y sus gradientes",
+        "Identificar pérdida de posición y aliasing",
+        "Distinguir las convenciones de padding de cada operación"
+      ],
+      "commonErrors": [
+        "Prometer invariancia ante cualquier desplazamiento",
+        "Rellenar max pooling con ceros sobre entradas negativas",
+        "Ignorar el divisor de average pooling junto al borde"
+      ],
+      "files": [
+        "probes.py",
+        "geometry.py",
+        "networks.py",
+        "training.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_probes.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-RECEPTIVE-FIELD",
+      "roadmapId": "P101",
+      "slug": "cnn-receptive-field-soporte-gradientes",
+      "title": "Receptive field: qué parte de la imagen puede afectar a una activación",
+      "question": "Cómo relacionar una celda profunda con coordenadas de la imagen original",
+      "prerequisites": [
+        "DL-POOLING"
+      ],
+      "objectives": [
+        "Derivar tamaño, salto y centro del soporte teórico",
+        "Separar soporte teórico de gradiente local",
+        "Reconocer padding y agregación global en los límites"
+      ],
+      "commonErrors": [
+        "Identificar receptive field con importancia para la clase",
+        "Confundir salto espacial y tamaño del soporte",
+        "Contar padding como píxeles observados"
+      ],
+      "files": [
+        "geometry.py",
+        "networks.py",
+        "training.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_probes.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-CONV-CHANNELS",
+      "roadmapId": "P101",
+      "slug": "cnn-canales-filtros-parametros-compartidos",
+      "title": "Canales y filtros: cómo una convolution combina varios mapas",
+      "question": "Qué significa un banco de filtros y de dónde salen sus parámetros",
+      "prerequisites": [
+        "DL-RECEPTIVE-FIELD"
+      ],
+      "objectives": [
+        "Sumar contribuciones de todos los canales de entrada",
+        "Calcular parámetros y shapes NCHW",
+        "Explicar los supuestos del weight sharing"
+      ],
+      "commonErrors": [
+        "Crear un bias por posición de salida",
+        "Asignar un canal de salida independiente por canal de entrada",
+        "Confundir compartir pesos con perder toda información espacial"
+      ],
+      "files": [
+        "networks.py",
+        "geometry.py",
+        "training.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_probes.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-CNN-TRAIN",
+      "roadmapId": "P101",
+      "slug": "cnn-pequena-entrenamiento-protocolo-logits",
+      "title": "Entrenar una CNN pequeña: datos, logits y un protocolo que se puede repetir",
+      "question": "Cómo pasar de operadores aislados a un clasificador entrenado verificable",
+      "prerequisites": [
+        "DL-CONV-CHANNELS",
+        "DL-TORCH-LOOP"
+      ],
+      "objectives": [
+        "Construir datasets separados y declarar el presupuesto",
+        "Recorrer la arquitectura hasta logits y CrossEntropyLoss",
+        "Leer curvas sin extrapolar un dataset sintético a imágenes reales"
+      ],
+      "commonErrors": [
+        "Aplicar softmax antes de CrossEntropyLoss",
+        "Escoger después el ejemplo que mejor sale",
+        "Tomar accuracy perfecta como prueba de visión general"
+      ],
+      "files": [
+        "training.py",
+        "geometry.py",
+        "networks.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_probes.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-FEATURE-MAPS",
+      "roadmapId": "P101",
+      "slug": "cnn-feature-maps-activaciones-interpretacion",
+      "title": "Feature maps: inspeccionar una CNN sin inventar lo que ha aprendido",
+      "question": "Cómo leer activaciones reales conservando coordenadas, signos y escalas",
+      "prerequisites": [
+        "DL-CNN-TRAIN"
+      ],
+      "objectives": [
+        "Capturar mapas antes y después de ReLU sin alterar el forward",
+        "Comparar mapas con escala compartida y local",
+        "Separar activación, gradiente y explicación de la predicción"
+      ],
+      "commonErrors": [
+        "Comparar brillo entre mapas autoescalados",
+        "Llamar detector de una clase a un canal por una imagen",
+        "Interpretar un gradiente nulo como irrelevancia global"
+      ],
+      "files": [
+        "training.py",
+        "geometry.py",
+        "networks.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_probes.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-CNN-ARCHITECTURES",
+      "roadmapId": "P101",
+      "slug": "cnn-arquitecturas-vgg-resnet-residual-blocks",
+      "title": "Arquitecturas CNN: qué cambia al apilar kernels o añadir un residual block",
+      "question": "Qué decisiones estructurales hay detrás de distintas familias de CNN",
+      "prerequisites": [
+        "DL-FEATURE-MAPS",
+        "DL-BATCHNORM"
+      ],
+      "objectives": [
+        "Comparar una cadena local con stacks pequeños y shortcuts",
+        "Implementar una suma residual con shapes compatibles",
+        "Distinguir un bloque didáctico de una arquitectura entrenada completa"
+      ],
+      "commonErrors": [
+        "Sumar tensores de canales o resolución diferentes",
+        "Prometer gradiente constante por añadir un shortcut",
+        "Presentar dos kernels pequeños como equivalentes a uno grande"
+      ],
+      "files": [
+        "networks.py",
+        "geometry.py",
+        "training.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_probes.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-TRANSFER-LEARNING",
+      "roadmapId": "P101",
+      "slug": "cnn-transfer-learning-freeze-fine-tuning-controles",
+      "title": "Transfer learning en una CNN: comparar freeze, fine-tuning y empezar de cero",
+      "question": "Cuándo una representación aprendida ayuda en otra tarea y cómo comprobarlo",
+      "prerequisites": [
+        "DL-CNN-ARCHITECTURES",
+        "DL-CHECKPOINT"
+      ],
+      "objectives": [
+        "Reutilizar un backbone conservando una head nueva",
+        "Separar freeze, eval y no_grad con controles reales",
+        "Comparar cuatro alternativas sin garantizar una mejora por transferir"
+      ],
+      "commonErrors": [
+        "Congelar pesos sin definir el modo de las capas",
+        "Confundir pretraining con pesos aleatorios congelados",
+        "Atribuir la diferencia observada a una sola causa no aislada"
+      ],
+      "files": [
+        "networks.py",
+        "geometry.py",
+        "training.py",
+        "probes.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_probes.py",
+        "tests/test_training.py",
+        "results/training.json",
+        "README.md"
+      ]
+    }
+  ]
+}

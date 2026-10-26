@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import { blogPath } from "../../scripts/blog-path.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -7,7 +8,7 @@ import { simulateChange } from "../../packages/api-pagination-evolution/model.mj
 import YAML from "yaml";
 
 const manifest = JSON.parse(
-  await readFile(blogPath("docs/editorial/api-contracts-series.json"), "utf8"),
+  await readFile(editorialPath("api-contracts-series.json"), "utf8"),
 );
 // Estas regresiones conservan las doce entregas de contratos P020–P025.
 // Identidad y el orden completo se verifican en api-identity-series.test.mjs.

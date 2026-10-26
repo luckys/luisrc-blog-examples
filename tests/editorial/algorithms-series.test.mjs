@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import { blogPath } from "../../scripts/blog-path.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -14,7 +15,7 @@ import {
 import { median } from "../../packages/data-structures-algorithms/benchmark.mjs";
 
 const manifest = JSON.parse(
-  await readFile(blogPath("docs/editorial/algorithms-series.json"), "utf8"),
+  await readFile(editorialPath("algorithms-series.json"), "utf8"),
 );
 const posts = await Promise.all(
   manifest.articles.map((entry) =>

@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 294 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 319 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -206,3 +206,16 @@ validación y archivos de inferencia/reanudación verificados. Ver [README](pack
 
 `packages/generalization-stability`: diez artículos P100,18entrenamientos reales,
 controles de capas/estabilidad yresultados negativos preservados. Ver [README](packages/generalization-stability/README.md).
+
+El paquete [convolutional-networks](packages/convolutional-networks/README.md) acompaña
+nueve drafts P101: quince CNN entrenadas, mapas reales y controles de transfer learning.
+
+[recurrent-sequences](packages/recurrent-sequences/README.md): ocho drafts P102,
+12 modelos entrenados, estados/puertas reales y generación sin futuro proporcionado.
+
+[attention-transformer](packages/attention-transformer/README.md): ocho drafts P103,
+matrices explícitas, controles nativos y pruebas de causalidad; sin entrenamiento.
+
+## Trabajo editorial y herramientas del blog
+
+La [documentación editorial](docs/editorial/README.md) y los [scripts de revisión y render](tools/blog) viven aquí. Se ejecutan desde este monorepo indicando `BLOG_ROOT`, sin volver a copiar código de laboratorio al blog.

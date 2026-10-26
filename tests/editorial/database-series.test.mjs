@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import { blogPath } from "../../scripts/blog-path.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -77,7 +78,7 @@ test("cada bloque SQL identificado coincide con el archivo descargable", async (
 test("el inventario mantiene orden de lectura y prerrequisitos sin ciclos", async () => {
   const manifest = YAML.parse(
     await readFile(
-      blogPath("docs/editorial/database-fundamentals.yaml"),
+      editorialPath("database-fundamentals.yaml"),
       "utf8",
     ),
   );

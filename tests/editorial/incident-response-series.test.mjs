@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { access, readFile, readdir } from 'node:fs/promises'
@@ -6,7 +7,7 @@ import YAML from 'yaml'
 import { blogPath } from '../../scripts/blog-path.mjs'
 import { actionHasEvidence } from '../../packages/incident-response/src/review.ts'
 
-const manifest = JSON.parse(await readFile(blogPath('docs/editorial/incident-response-series.json')))
+const manifest = JSON.parse(await readFile(editorialPath('incident-response-series.json')))
 const ids = ['P061', 'INC-MITIGATION', 'INC-RUNBOOKS', 'INC-ONCALL', 'INC-POSTMORTEM', 'INC-ACTIONS']
 const root = 'packages/incident-response/'
 const posts = await Promise.all(manifest.articles.map(async (entry) => ({ entry,

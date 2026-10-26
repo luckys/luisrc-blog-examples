@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import { blogPath } from "../../scripts/blog-path.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -11,7 +12,7 @@ import {
 } from "../../packages/computing-networks/concepts.mjs";
 
 const manifest = JSON.parse(
-  await readFile(blogPath("docs/editorial/computing-series.json"), "utf8"),
+  await readFile(editorialPath("computing-series.json"), "utf8"),
 );
 const results = JSON.parse(
   await readFile(

@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { access, readFile, readdir } from 'node:fs/promises'
@@ -7,7 +8,7 @@ import { blogPath } from '../../scripts/blog-path.mjs'
 import { summarize, percentile } from '../../packages/performance-lab/src/statistics.ts'
 import { groupWindows } from '../../packages/performance-lab/src/windows.ts'
 
-const manifest = JSON.parse(await readFile(blogPath('docs/editorial/performance-series.json')))
+const manifest = JSON.parse(await readFile(editorialPath('performance-series.json')))
 const ids = ['P058', 'PERF-MODELS', 'PERF-SATURATION', 'PERF-SOAK', 'PERF-BENCH', 'PERF-CPU', 'PERF-MEMORY']
 const posts = await Promise.all(manifest.articles.map(async (entry) => ({
   entry, source: await readFile(blogPath(`src/content/posts/es/${entry.slug}.md`), 'utf8'),

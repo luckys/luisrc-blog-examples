@@ -4742,5 +4742,580 @@
       "packages/generalization-stability/README.md"
     ],
     "directory": "es/dl-gradient-clipping"
+  },
+  {
+    "locale": "es",
+    "slug": "cnn-convolution-kernel-cross-correlation",
+    "title": "Convolution y kernels: calcular una CNN ventana a ventana",
+    "post": "src/content/posts/es/cnn-convolution-kernel-cross-correlation.md",
+    "labs": [
+      "convolutional-networks"
+    ],
+    "files": [
+      "packages/convolutional-networks/geometry.py",
+      "packages/convolutional-networks/networks.py",
+      "packages/convolutional-networks/training.py",
+      "packages/convolutional-networks/probes.py",
+      "packages/convolutional-networks/experiments.py",
+      "packages/convolutional-networks/verify.py",
+      "packages/convolutional-networks/protocol.json",
+      "packages/convolutional-networks/tests/test_probes.py",
+      "packages/convolutional-networks/tests/test_training.py",
+      "packages/convolutional-networks/results/training.json",
+      "packages/convolutional-networks/README.md"
+    ],
+    "directory": "es/p101"
+  },
+  {
+    "locale": "es",
+    "slug": "cnn-padding-stride-dilation-shapes",
+    "title": "Padding, stride y dilation: calcular el tamaño y la posición de cada salida",
+    "post": "src/content/posts/es/cnn-padding-stride-dilation-shapes.md",
+    "labs": [
+      "convolutional-networks"
+    ],
+    "files": [
+      "packages/convolutional-networks/geometry.py",
+      "packages/convolutional-networks/networks.py",
+      "packages/convolutional-networks/training.py",
+      "packages/convolutional-networks/probes.py",
+      "packages/convolutional-networks/experiments.py",
+      "packages/convolutional-networks/verify.py",
+      "packages/convolutional-networks/protocol.json",
+      "packages/convolutional-networks/tests/test_probes.py",
+      "packages/convolutional-networks/tests/test_training.py",
+      "packages/convolutional-networks/results/training.json",
+      "packages/convolutional-networks/README.md"
+    ],
+    "directory": "es/dl-conv-geometry"
+  },
+  {
+    "locale": "es",
+    "slug": "cnn-pooling-downsampling-gradientes-aliasing",
+    "title": "Pooling: qué información conserva y qué pierde una CNN al reducir un mapa",
+    "post": "src/content/posts/es/cnn-pooling-downsampling-gradientes-aliasing.md",
+    "labs": [
+      "convolutional-networks"
+    ],
+    "files": [
+      "packages/convolutional-networks/probes.py",
+      "packages/convolutional-networks/geometry.py",
+      "packages/convolutional-networks/networks.py",
+      "packages/convolutional-networks/training.py",
+      "packages/convolutional-networks/experiments.py",
+      "packages/convolutional-networks/verify.py",
+      "packages/convolutional-networks/protocol.json",
+      "packages/convolutional-networks/tests/test_probes.py",
+      "packages/convolutional-networks/tests/test_training.py",
+      "packages/convolutional-networks/results/training.json",
+      "packages/convolutional-networks/README.md"
+    ],
+    "directory": "es/dl-pooling"
+  },
+  {
+    "locale": "es",
+    "slug": "cnn-receptive-field-soporte-gradientes",
+    "title": "Receptive field: qué parte de la imagen puede afectar a una activación",
+    "post": "src/content/posts/es/cnn-receptive-field-soporte-gradientes.md",
+    "labs": [
+      "convolutional-networks"
+    ],
+    "files": [
+      "packages/convolutional-networks/geometry.py",
+      "packages/convolutional-networks/networks.py",
+      "packages/convolutional-networks/training.py",
+      "packages/convolutional-networks/probes.py",
+      "packages/convolutional-networks/experiments.py",
+      "packages/convolutional-networks/verify.py",
+      "packages/convolutional-networks/protocol.json",
+      "packages/convolutional-networks/tests/test_probes.py",
+      "packages/convolutional-networks/tests/test_training.py",
+      "packages/convolutional-networks/results/training.json",
+      "packages/convolutional-networks/README.md"
+    ],
+    "directory": "es/dl-receptive-field"
+  },
+  {
+    "locale": "es",
+    "slug": "cnn-canales-filtros-parametros-compartidos",
+    "title": "Canales y filtros: cómo una convolution combina varios mapas",
+    "post": "src/content/posts/es/cnn-canales-filtros-parametros-compartidos.md",
+    "labs": [
+      "convolutional-networks"
+    ],
+    "files": [
+      "packages/convolutional-networks/networks.py",
+      "packages/convolutional-networks/geometry.py",
+      "packages/convolutional-networks/training.py",
+      "packages/convolutional-networks/probes.py",
+      "packages/convolutional-networks/experiments.py",
+      "packages/convolutional-networks/verify.py",
+      "packages/convolutional-networks/protocol.json",
+      "packages/convolutional-networks/tests/test_probes.py",
+      "packages/convolutional-networks/tests/test_training.py",
+      "packages/convolutional-networks/results/training.json",
+      "packages/convolutional-networks/README.md"
+    ],
+    "directory": "es/dl-conv-channels"
+  },
+  {
+    "locale": "es",
+    "slug": "cnn-pequena-entrenamiento-protocolo-logits",
+    "title": "Entrenar una CNN pequeña: datos, logits y un protocolo que se puede repetir",
+    "post": "src/content/posts/es/cnn-pequena-entrenamiento-protocolo-logits.md",
+    "labs": [
+      "convolutional-networks"
+    ],
+    "files": [
+      "packages/convolutional-networks/training.py",
+      "packages/convolutional-networks/geometry.py",
+      "packages/convolutional-networks/networks.py",
+      "packages/convolutional-networks/probes.py",
+      "packages/convolutional-networks/experiments.py",
+      "packages/convolutional-networks/verify.py",
+      "packages/convolutional-networks/protocol.json",
+      "packages/convolutional-networks/tests/test_probes.py",
+      "packages/convolutional-networks/tests/test_training.py",
+      "packages/convolutional-networks/results/training.json",
+      "packages/convolutional-networks/README.md"
+    ],
+    "directory": "es/dl-cnn-train"
+  },
+  {
+    "locale": "es",
+    "slug": "cnn-feature-maps-activaciones-interpretacion",
+    "title": "Feature maps: inspeccionar una CNN sin inventar lo que ha aprendido",
+    "post": "src/content/posts/es/cnn-feature-maps-activaciones-interpretacion.md",
+    "labs": [
+      "convolutional-networks"
+    ],
+    "files": [
+      "packages/convolutional-networks/training.py",
+      "packages/convolutional-networks/geometry.py",
+      "packages/convolutional-networks/networks.py",
+      "packages/convolutional-networks/probes.py",
+      "packages/convolutional-networks/experiments.py",
+      "packages/convolutional-networks/verify.py",
+      "packages/convolutional-networks/protocol.json",
+      "packages/convolutional-networks/tests/test_probes.py",
+      "packages/convolutional-networks/tests/test_training.py",
+      "packages/convolutional-networks/results/training.json",
+      "packages/convolutional-networks/README.md"
+    ],
+    "directory": "es/dl-feature-maps"
+  },
+  {
+    "locale": "es",
+    "slug": "cnn-arquitecturas-vgg-resnet-residual-blocks",
+    "title": "Arquitecturas CNN: qué cambia al apilar kernels o añadir un residual block",
+    "post": "src/content/posts/es/cnn-arquitecturas-vgg-resnet-residual-blocks.md",
+    "labs": [
+      "convolutional-networks"
+    ],
+    "files": [
+      "packages/convolutional-networks/networks.py",
+      "packages/convolutional-networks/geometry.py",
+      "packages/convolutional-networks/training.py",
+      "packages/convolutional-networks/probes.py",
+      "packages/convolutional-networks/experiments.py",
+      "packages/convolutional-networks/verify.py",
+      "packages/convolutional-networks/protocol.json",
+      "packages/convolutional-networks/tests/test_probes.py",
+      "packages/convolutional-networks/tests/test_training.py",
+      "packages/convolutional-networks/results/training.json",
+      "packages/convolutional-networks/README.md"
+    ],
+    "directory": "es/dl-cnn-architectures"
+  },
+  {
+    "locale": "es",
+    "slug": "cnn-transfer-learning-freeze-fine-tuning-controles",
+    "title": "Transfer learning en una CNN: comparar freeze, fine-tuning y empezar de cero",
+    "post": "src/content/posts/es/cnn-transfer-learning-freeze-fine-tuning-controles.md",
+    "labs": [
+      "convolutional-networks"
+    ],
+    "files": [
+      "packages/convolutional-networks/networks.py",
+      "packages/convolutional-networks/geometry.py",
+      "packages/convolutional-networks/training.py",
+      "packages/convolutional-networks/probes.py",
+      "packages/convolutional-networks/experiments.py",
+      "packages/convolutional-networks/verify.py",
+      "packages/convolutional-networks/protocol.json",
+      "packages/convolutional-networks/tests/test_probes.py",
+      "packages/convolutional-networks/tests/test_training.py",
+      "packages/convolutional-networks/results/training.json",
+      "packages/convolutional-networks/README.md"
+    ],
+    "directory": "es/dl-transfer-learning"
+  },
+  {
+    "locale": "es",
+    "slug": "embeddings-tokens-tabla-vectores-padding",
+    "title": "Embeddings: convertir símbolos en vectores sin inventar un orden entre sus IDs",
+    "post": "src/content/posts/es/embeddings-tokens-tabla-vectores-padding.md",
+    "labs": [
+      "recurrent-sequences"
+    ],
+    "files": [
+      "packages/recurrent-sequences/networks.py",
+      "packages/recurrent-sequences/data.py",
+      "packages/recurrent-sequences/cells.py",
+      "packages/recurrent-sequences/training.py",
+      "packages/recurrent-sequences/probes.py",
+      "packages/recurrent-sequences/experiments.py",
+      "packages/recurrent-sequences/verify.py",
+      "packages/recurrent-sequences/protocol.json",
+      "packages/recurrent-sequences/tests/test_cells.py",
+      "packages/recurrent-sequences/tests/test_training.py",
+      "packages/recurrent-sequences/results/training.json",
+      "packages/recurrent-sequences/README.md"
+    ],
+    "directory": "es/p102"
+  },
+  {
+    "locale": "es",
+    "slug": "hidden-state-recurrencia-estado-pesos",
+    "title": "Hidden state: qué conserva una red entre símbolos y qué aprende entre batches",
+    "post": "src/content/posts/es/hidden-state-recurrencia-estado-pesos.md",
+    "labs": [
+      "recurrent-sequences"
+    ],
+    "files": [
+      "packages/recurrent-sequences/networks.py",
+      "packages/recurrent-sequences/data.py",
+      "packages/recurrent-sequences/cells.py",
+      "packages/recurrent-sequences/training.py",
+      "packages/recurrent-sequences/probes.py",
+      "packages/recurrent-sequences/experiments.py",
+      "packages/recurrent-sequences/verify.py",
+      "packages/recurrent-sequences/protocol.json",
+      "packages/recurrent-sequences/tests/test_cells.py",
+      "packages/recurrent-sequences/tests/test_training.py",
+      "packages/recurrent-sequences/results/training.json",
+      "packages/recurrent-sequences/README.md"
+    ],
+    "directory": "es/dl-hidden-state"
+  },
+  {
+    "locale": "es",
+    "slug": "secuencias-longitudes-variables-padding-packed",
+    "title": "Longitudes variables: evitar que padding se convierta en parte de la secuencia",
+    "post": "src/content/posts/es/secuencias-longitudes-variables-padding-packed.md",
+    "labs": [
+      "recurrent-sequences"
+    ],
+    "files": [
+      "packages/recurrent-sequences/networks.py",
+      "packages/recurrent-sequences/data.py",
+      "packages/recurrent-sequences/cells.py",
+      "packages/recurrent-sequences/training.py",
+      "packages/recurrent-sequences/probes.py",
+      "packages/recurrent-sequences/experiments.py",
+      "packages/recurrent-sequences/verify.py",
+      "packages/recurrent-sequences/protocol.json",
+      "packages/recurrent-sequences/tests/test_cells.py",
+      "packages/recurrent-sequences/tests/test_training.py",
+      "packages/recurrent-sequences/results/training.json",
+      "packages/recurrent-sequences/README.md"
+    ],
+    "directory": "es/dl-sequence-lengths"
+  },
+  {
+    "locale": "es",
+    "slug": "rnn-tanh-unroll-bptt-memoria",
+    "title": "RNN con tanh: compartir una transición y entrenarla a través del tiempo",
+    "post": "src/content/posts/es/rnn-tanh-unroll-bptt-memoria.md",
+    "labs": [
+      "recurrent-sequences"
+    ],
+    "files": [
+      "packages/recurrent-sequences/cells.py",
+      "packages/recurrent-sequences/data.py",
+      "packages/recurrent-sequences/networks.py",
+      "packages/recurrent-sequences/training.py",
+      "packages/recurrent-sequences/probes.py",
+      "packages/recurrent-sequences/experiments.py",
+      "packages/recurrent-sequences/verify.py",
+      "packages/recurrent-sequences/protocol.json",
+      "packages/recurrent-sequences/tests/test_cells.py",
+      "packages/recurrent-sequences/tests/test_training.py",
+      "packages/recurrent-sequences/results/training.json",
+      "packages/recurrent-sequences/README.md"
+    ],
+    "directory": "es/dl-rnn"
+  },
+  {
+    "locale": "es",
+    "slug": "lstm-cell-state-input-forget-output-gates",
+    "title": "LSTM: seguir qué se conserva, qué se escribe y qué se expone",
+    "post": "src/content/posts/es/lstm-cell-state-input-forget-output-gates.md",
+    "labs": [
+      "recurrent-sequences"
+    ],
+    "files": [
+      "packages/recurrent-sequences/cells.py",
+      "packages/recurrent-sequences/data.py",
+      "packages/recurrent-sequences/networks.py",
+      "packages/recurrent-sequences/training.py",
+      "packages/recurrent-sequences/probes.py",
+      "packages/recurrent-sequences/experiments.py",
+      "packages/recurrent-sequences/verify.py",
+      "packages/recurrent-sequences/protocol.json",
+      "packages/recurrent-sequences/tests/test_cells.py",
+      "packages/recurrent-sequences/tests/test_training.py",
+      "packages/recurrent-sequences/results/training.json",
+      "packages/recurrent-sequences/README.md"
+    ],
+    "directory": "es/dl-lstm"
+  },
+  {
+    "locale": "es",
+    "slug": "gru-reset-update-candidato-convencion-pytorch",
+    "title": "GRU: combinar estado y candidato sin una cell state separada",
+    "post": "src/content/posts/es/gru-reset-update-candidato-convencion-pytorch.md",
+    "labs": [
+      "recurrent-sequences"
+    ],
+    "files": [
+      "packages/recurrent-sequences/cells.py",
+      "packages/recurrent-sequences/data.py",
+      "packages/recurrent-sequences/networks.py",
+      "packages/recurrent-sequences/training.py",
+      "packages/recurrent-sequences/probes.py",
+      "packages/recurrent-sequences/experiments.py",
+      "packages/recurrent-sequences/verify.py",
+      "packages/recurrent-sequences/protocol.json",
+      "packages/recurrent-sequences/tests/test_cells.py",
+      "packages/recurrent-sequences/tests/test_training.py",
+      "packages/recurrent-sequences/results/training.json",
+      "packages/recurrent-sequences/README.md"
+    ],
+    "directory": "es/dl-gru"
+  },
+  {
+    "locale": "es",
+    "slug": "rnn-vanishing-exploding-gradients-dependencias-largas",
+    "title": "Gradientes a través del tiempo: perder sensibilidad no equivale a olvidar al predecir",
+    "post": "src/content/posts/es/rnn-vanishing-exploding-gradients-dependencias-largas.md",
+    "labs": [
+      "recurrent-sequences"
+    ],
+    "files": [
+      "packages/recurrent-sequences/probes.py",
+      "packages/recurrent-sequences/data.py",
+      "packages/recurrent-sequences/cells.py",
+      "packages/recurrent-sequences/networks.py",
+      "packages/recurrent-sequences/training.py",
+      "packages/recurrent-sequences/experiments.py",
+      "packages/recurrent-sequences/verify.py",
+      "packages/recurrent-sequences/protocol.json",
+      "packages/recurrent-sequences/tests/test_cells.py",
+      "packages/recurrent-sequences/tests/test_training.py",
+      "packages/recurrent-sequences/results/training.json",
+      "packages/recurrent-sequences/README.md"
+    ],
+    "directory": "es/dl-recurrent-gradients"
+  },
+  {
+    "locale": "es",
+    "slug": "teacher-forcing-generacion-autoregresiva-evaluacion",
+    "title": "Teacher forcing: entrenar con el pasado correcto y generar con el propio",
+    "post": "src/content/posts/es/teacher-forcing-generacion-autoregresiva-evaluacion.md",
+    "labs": [
+      "recurrent-sequences"
+    ],
+    "files": [
+      "packages/recurrent-sequences/training.py",
+      "packages/recurrent-sequences/data.py",
+      "packages/recurrent-sequences/cells.py",
+      "packages/recurrent-sequences/networks.py",
+      "packages/recurrent-sequences/probes.py",
+      "packages/recurrent-sequences/experiments.py",
+      "packages/recurrent-sequences/verify.py",
+      "packages/recurrent-sequences/protocol.json",
+      "packages/recurrent-sequences/tests/test_cells.py",
+      "packages/recurrent-sequences/tests/test_training.py",
+      "packages/recurrent-sequences/results/training.json",
+      "packages/recurrent-sequences/README.md"
+    ],
+    "directory": "es/dl-teacher-forcing"
+  },
+  {
+    "locale": "es",
+    "slug": "attention-qkv-consultas-claves-valores",
+    "title": "Atención con Q/K/V: consultar y combinar una secuencia sin reducirla a un solo estado",
+    "post": "src/content/posts/es/attention-qkv-consultas-claves-valores.md",
+    "labs": [
+      "attention-transformer"
+    ],
+    "files": [
+      "packages/attention-transformer/attention.py",
+      "packages/attention-transformer/transformer.py",
+      "packages/attention-transformer/probes.py",
+      "packages/attention-transformer/experiments.py",
+      "packages/attention-transformer/verify.py",
+      "packages/attention-transformer/protocol.json",
+      "packages/attention-transformer/tests/test_attention.py",
+      "packages/attention-transformer/tests/test_transformer.py",
+      "packages/attention-transformer/results/observations.json",
+      "packages/attention-transformer/README.md"
+    ],
+    "directory": "es/p103"
+  },
+  {
+    "locale": "es",
+    "slug": "scaled-dot-product-attention-softmax-estable",
+    "title": "Scaled dot-product: por qué dividir antes de softmax y cómo evitar overflow",
+    "post": "src/content/posts/es/scaled-dot-product-attention-softmax-estable.md",
+    "labs": [
+      "attention-transformer"
+    ],
+    "files": [
+      "packages/attention-transformer/attention.py",
+      "packages/attention-transformer/transformer.py",
+      "packages/attention-transformer/probes.py",
+      "packages/attention-transformer/experiments.py",
+      "packages/attention-transformer/verify.py",
+      "packages/attention-transformer/protocol.json",
+      "packages/attention-transformer/tests/test_attention.py",
+      "packages/attention-transformer/tests/test_transformer.py",
+      "packages/attention-transformer/results/observations.json",
+      "packages/attention-transformer/README.md"
+    ],
+    "directory": "es/dl-attention-scale"
+  },
+  {
+    "locale": "es",
+    "slug": "attention-masks-padding-bool-permitido-excluido",
+    "title": "Máscaras de atención: no confundir permitido, padding y posición futura",
+    "post": "src/content/posts/es/attention-masks-padding-bool-permitido-excluido.md",
+    "labs": [
+      "attention-transformer"
+    ],
+    "files": [
+      "packages/attention-transformer/attention.py",
+      "packages/attention-transformer/transformer.py",
+      "packages/attention-transformer/probes.py",
+      "packages/attention-transformer/experiments.py",
+      "packages/attention-transformer/verify.py",
+      "packages/attention-transformer/protocol.json",
+      "packages/attention-transformer/tests/test_attention.py",
+      "packages/attention-transformer/tests/test_transformer.py",
+      "packages/attention-transformer/results/observations.json",
+      "packages/attention-transformer/README.md"
+    ],
+    "directory": "es/dl-attention-masks"
+  },
+  {
+    "locale": "es",
+    "slug": "multi-head-attention-split-concat-proyeccion",
+    "title": "Multi-head attention: separar perspectivas y volver a reunir sus resultados",
+    "post": "src/content/posts/es/multi-head-attention-split-concat-proyeccion.md",
+    "labs": [
+      "attention-transformer"
+    ],
+    "files": [
+      "packages/attention-transformer/attention.py",
+      "packages/attention-transformer/transformer.py",
+      "packages/attention-transformer/probes.py",
+      "packages/attention-transformer/experiments.py",
+      "packages/attention-transformer/verify.py",
+      "packages/attention-transformer/protocol.json",
+      "packages/attention-transformer/tests/test_attention.py",
+      "packages/attention-transformer/tests/test_transformer.py",
+      "packages/attention-transformer/results/observations.json",
+      "packages/attention-transformer/README.md"
+    ],
+    "directory": "es/dl-multihead"
+  },
+  {
+    "locale": "es",
+    "slug": "positional-encodings-sinusoidales-orden-permutaciones",
+    "title": "Positional encodings: dar coordenadas a una atención que respeta las permutaciones",
+    "post": "src/content/posts/es/positional-encodings-sinusoidales-orden-permutaciones.md",
+    "labs": [
+      "attention-transformer"
+    ],
+    "files": [
+      "packages/attention-transformer/attention.py",
+      "packages/attention-transformer/transformer.py",
+      "packages/attention-transformer/probes.py",
+      "packages/attention-transformer/experiments.py",
+      "packages/attention-transformer/verify.py",
+      "packages/attention-transformer/protocol.json",
+      "packages/attention-transformer/tests/test_attention.py",
+      "packages/attention-transformer/tests/test_transformer.py",
+      "packages/attention-transformer/results/observations.json",
+      "packages/attention-transformer/README.md"
+    ],
+    "directory": "es/dl-positional"
+  },
+  {
+    "locale": "es",
+    "slug": "transformer-block-residual-layernorm-ffn-pre-norm",
+    "title": "Un bloque Transformer: atención, residual, LayerNorm y FFN resuelven tareas distintas",
+    "post": "src/content/posts/es/transformer-block-residual-layernorm-ffn-pre-norm.md",
+    "labs": [
+      "attention-transformer"
+    ],
+    "files": [
+      "packages/attention-transformer/transformer.py",
+      "packages/attention-transformer/attention.py",
+      "packages/attention-transformer/probes.py",
+      "packages/attention-transformer/experiments.py",
+      "packages/attention-transformer/verify.py",
+      "packages/attention-transformer/protocol.json",
+      "packages/attention-transformer/tests/test_attention.py",
+      "packages/attention-transformer/tests/test_transformer.py",
+      "packages/attention-transformer/results/observations.json",
+      "packages/attention-transformer/README.md"
+    ],
+    "directory": "es/dl-transformer-block"
+  },
+  {
+    "locale": "es",
+    "slug": "transformer-encoder-decoder-cross-attention-contexto",
+    "title": "Encoder y decoder: quién consulta a quién en cross-attention",
+    "post": "src/content/posts/es/transformer-encoder-decoder-cross-attention-contexto.md",
+    "labs": [
+      "attention-transformer"
+    ],
+    "files": [
+      "packages/attention-transformer/transformer.py",
+      "packages/attention-transformer/attention.py",
+      "packages/attention-transformer/probes.py",
+      "packages/attention-transformer/experiments.py",
+      "packages/attention-transformer/verify.py",
+      "packages/attention-transformer/protocol.json",
+      "packages/attention-transformer/tests/test_attention.py",
+      "packages/attention-transformer/tests/test_transformer.py",
+      "packages/attention-transformer/results/observations.json",
+      "packages/attention-transformer/README.md"
+    ],
+    "directory": "es/dl-encoder-decoder"
+  },
+  {
+    "locale": "es",
+    "slug": "causal-attention-transformer-futuro-paralelismo",
+    "title": "Atención causal: demostrar que el futuro no cambia el prefijo",
+    "post": "src/content/posts/es/causal-attention-transformer-futuro-paralelismo.md",
+    "labs": [
+      "attention-transformer"
+    ],
+    "files": [
+      "packages/attention-transformer/probes.py",
+      "packages/attention-transformer/attention.py",
+      "packages/attention-transformer/transformer.py",
+      "packages/attention-transformer/experiments.py",
+      "packages/attention-transformer/verify.py",
+      "packages/attention-transformer/protocol.json",
+      "packages/attention-transformer/tests/test_attention.py",
+      "packages/attention-transformer/tests/test_transformer.py",
+      "packages/attention-transformer/results/observations.json",
+      "packages/attention-transformer/README.md"
+    ],
+    "directory": "es/dl-causal-attention"
   }
 ]

@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import { blogPath } from "../../scripts/blog-path.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -5,7 +6,7 @@ import { readFile, readdir } from "node:fs/promises";
 import YAML from "yaml";
 
 const manifest = JSON.parse(
-  await readFile(blogPath("docs/editorial/frontend-series.json"), "utf8"),
+  await readFile(editorialPath("frontend-series.json"), "utf8"),
 );
 const entries = manifest.articles;
 const normalize = (text) => text.replace(/\s+/g, "");
@@ -14,7 +15,7 @@ test("frontend: nueve borradores españoles ordenados y prerrequisitos sin ciclo
   assert.equal(entries.length, 9);
   const reliable = JSON.parse(
     await readFile(
-      blogPath("docs/editorial/reliable-services-series.json"),
+      editorialPath("reliable-services-series.json"),
       "utf8",
     ),
   );

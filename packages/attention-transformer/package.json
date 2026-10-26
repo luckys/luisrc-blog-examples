@@ -1,0 +1,14 @@
+{
+  "name": "@luisrc-examples/attention-transformer",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.8.1",
+  "scripts": {
+    "runtime:fetch": "node fetch-runtime.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:container": "node run.mjs tests",
+    "exercise": "node run.mjs results",
+    "verify": "node run.mjs verify",
+    "render": "node render-results.mjs"
+  }
+}

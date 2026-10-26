@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile, access, readdir } from 'node:fs/promises'
@@ -8,7 +9,7 @@ import { blogPath } from '../../scripts/blog-path.mjs'
 import { calculate } from '../../packages/capacity-costs/scripts/calculate.mjs'
 const root='packages/capacity-costs/'
 const json=async p=>JSON.parse(await readFile(p))
-const manifest=await json(blogPath('docs/editorial/capacity-costs-series.json'))
+const manifest=await json(editorialPath('capacity-costs-series.json'))
 const report=await json(root+'comparison.json')
 const posts=await Promise.all(manifest.articles.map(async entry=>({entry,source:await readFile(blogPath('src/content/posts/es/'+entry.slug+'.md'),'utf8')})))
 const compact=s=>s.replace(/\s/g,'').replaceAll('"',"'").replaceAll(';','').replace(/,(?=[)}\]])/g,'')

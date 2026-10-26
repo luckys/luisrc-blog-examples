@@ -10,7 +10,7 @@ const exports = JSON.parse(
   await readFile("metadata/blog-exports.json", "utf8"),
 );
 
-test("workspace: los cuarenta laboratorios tienen nombres únicos y un único lockfile", async () => {
+test("workspace: los cuarenta y tres laboratorios tienen nombres únicos y un único lockfile", async () => {
   const workspace = YAML.parse(await readFile("pnpm-workspace.yaml", "utf8"));
   assert.deepEqual(workspace.packages, ["packages/*"]);
   const lock = YAML.parseAllDocuments(await readFile("pnpm-lock.yaml", "utf8"))
@@ -27,12 +27,14 @@ test("workspace: los cuarenta laboratorios tienen nombres únicos y un único lo
     "api-threats",
     "api-validation-errors",
     "architecture-boundaries",
+    "attention-transformer",
     "autodiff-foundations",
     "aws-foundations",
     "browser-security",
     "capacity-costs",
     "computing-networks",
     "container-environments",
+    "convolutional-networks",
     "data-structures-algorithms",
     "database-fundamentals",
     "declarative-infrastructure",
@@ -53,6 +55,7 @@ test("workspace: los cuarenta laboratorios tienen nombres únicos y un único lo
     "property-testing",
     "pytorch-training",
     "realtime-frontend",
+    "recurrent-sequences",
     "reliable-services",
     "service-objectives",
     "testing-strategy",
@@ -82,7 +85,7 @@ test("workspace: los cuarenta laboratorios tienen nombres únicos y un único lo
 });
 
 test("artículos: todos los índices enlazan archivos reales dentro del monorepo", async () => {
-  assert.equal(posts.length, 294);
+  assert.equal(posts.length, 319);
   const unique = new Set();
   for (const post of posts) {
     const id = `${post.locale}/${post.slug}`;
@@ -137,7 +140,7 @@ test("migración: las fuentes ejecutables originales se conservan byte a byte", 
 });
 
 test("exportación: solo recursos estáticos explícitos, sin servidores, secretos o dependencias", async () => {
-  assert.equal(exports.length, 133);
+  assert.equal(exports.length, 159);
   const destinations = new Set();
   for (const entry of exports) {
     assert.ok(!destinations.has(entry.destination));

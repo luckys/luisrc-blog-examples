@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile, access, readdir } from 'node:fs/promises'
@@ -6,7 +7,7 @@ import YAML from 'yaml'
 import { blogPath } from '../../scripts/blog-path.mjs'
 const json = async (file) => JSON.parse(await readFile(file))
 const root = 'packages/declarative-infrastructure/'
-const manifest = await json(blogPath('docs/editorial/terraform-series.json'))
+const manifest = await json(editorialPath('terraform-series.json'))
 const evidence = await json(root + 'evidence/terraform.json')
 const posts = await Promise.all(manifest.articles.map(async (entry) => ({ entry, source: await readFile(blogPath('src/content/posts/es/' + entry.slug + '.md'), 'utf8') })))
 const compact = (s) => s.replace(/\s/g, '').replaceAll('"', "'").replaceAll(';', '').replace(/,(?=[)}\]])/g, '')
@@ -15,7 +16,7 @@ const event = (id) => evidence.events.find((e) => e.id === id).facts
 test('Terraform: seis drafts con dependencias y alcance P065 en dos bloques', async () => {
   assert.deepEqual(manifest.articles.map((a) => a.id), ['P065', 'TF-PROVIDERS', 'TF-STATE', 'TF-MODULES', 'TF-DRIFT', 'TF-CHANGES'])
   assert.match(manifest.roadmapScope, /cobertura conjunta/)
-  const complement = await json(blogPath('docs/editorial/kubernetes-series.json'))
+  const complement = await json(editorialPath('kubernetes-series.json'))
   assert.equal(complement.articles.length, 11)
   for (const a of complement.articles) await access(blogPath('src/content/posts/es/' + a.slug + '.md'))
   const known = new Set(), seen = new Set(); let date = -Infinity
@@ -34,7 +35,7 @@ test('Terraform: seis drafts con dependencias y alcance P065 en dos bloques', as
     for (const heading of ['## Código completo y pruebas', '## Garantías y límites', '## Ejercicio:', '## Referencias']) assert.ok(source.includes(heading))
     for (const file of entry.files) await access(root + file)
   }
-  const route = await readFile(blogPath('docs/editorial/ruta-terraform-kubernetes.md'), 'utf8')
+  const route = await readFile(editorialPath('ruta-terraform-kubernetes.md'), 'utf8')
   assert.match(route, /Bloque Kubernetes/); assert.match(route, /HPA/)
   assert.match(posts[0].source, /bloque Kubernetes.*completa/)
 })

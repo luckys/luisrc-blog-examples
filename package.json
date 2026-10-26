@@ -11,9 +11,14 @@
     "test:labs": "node scripts/test-labs.mjs",
     "test:editorial": "node --test tests/editorial/*.test.mjs",
     "test:browser": "pnpm --filter @luisrc-examples/browser-security test && pnpm --filter @luisrc-examples/realtime-frontend test:browser",
-    "blog:sync": "node scripts/sync-blog-assets.mjs"
+    "blog:sync": "node scripts/sync-blog-assets.mjs",
+    "blog:tool": "node scripts/blog-tool.mjs"
   },
   "devDependencies": {
+    "@d2lang/d2": "0.1.34",
+    "@playwright/test": "1.56.1",
+    "echarts": "6.1.0",
+    "hast-util-from-html-isomorphic": "2.0.0",
     "yaml": "2.9.1"
   }
 }

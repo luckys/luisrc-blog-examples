@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from'node:test'
 import assert from'node:assert/strict'
 import{readFile,readdir,access}from'node:fs/promises'
@@ -7,7 +8,7 @@ import{blogPath}from'../../scripts/blog-path.mjs'
 import{scalarTrace}from'../../packages/autodiff-foundations/model.mjs'
 import{errorChart,gradientChart}from'../../packages/autodiff-foundations/charts.mjs'
 const root='packages/autodiff-foundations/',json=async p=>JSON.parse(await readFile(p))
-const manifest=await json(blogPath('docs/editorial/autodiff-foundations-series.json')),data=await json(root+'comparison.json')
+const manifest=await json(editorialPath('autodiff-foundations-series.json')),data=await json(root+'comparison.json')
 const posts=await Promise.all(manifest.articles.map(async entry=>({entry,source:await readFile(blogPath('src/content/posts/es/'+entry.slug+'.md'),'utf8')})))
 const near=(a,b,tol=1e-12)=>assert.ok(Math.abs(a-b)<=tol,`${a} != ${b}`)
 const compact=s=>s.replace(/\s/g,'').replaceAll('"',"'")

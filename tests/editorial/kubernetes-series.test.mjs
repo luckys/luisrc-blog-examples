@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile, readdir, access } from 'node:fs/promises'
@@ -6,7 +7,7 @@ import YAML from 'yaml'
 import { blogPath } from '../../scripts/blog-path.mjs'
 import { chartSeries } from '../../packages/kubernetes-workloads/chart.mjs'
 const root = 'packages/kubernetes-workloads/', json = async (file) => JSON.parse(await readFile(file))
-const manifest = await json(blogPath('docs/editorial/kubernetes-series.json'))
+const manifest = await json(editorialPath('kubernetes-series.json'))
 const evidence = await json(root + 'evidence/kubernetes.json')
 const posts = await Promise.all(manifest.articles.map(async (entry) => ({ entry, source: await readFile(blogPath('src/content/posts/es/' + entry.slug + '.md'), 'utf8') })))
 const event = (id) => evidence.events.find((e) => e.id === id).facts

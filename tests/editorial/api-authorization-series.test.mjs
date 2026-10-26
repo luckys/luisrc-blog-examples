@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import { blogPath } from "../../scripts/blog-path.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -5,7 +6,7 @@ import { readFile } from "node:fs/promises";
 import YAML from "yaml";
 
 const manifest = JSON.parse(
-  await readFile(blogPath("docs/editorial/api-contracts-series.json"), "utf8"),
+  await readFile(editorialPath("api-contracts-series.json"), "utf8"),
 );
 const entries = manifest.articles.filter((entry) => entry.roadmapId === "P028");
 

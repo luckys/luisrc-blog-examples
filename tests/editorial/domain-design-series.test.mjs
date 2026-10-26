@@ -1,3 +1,4 @@
+import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
@@ -5,7 +6,7 @@ import YAML from "yaml";
 import { blogPath } from "../../scripts/blog-path.mjs";
 
 const manifest = JSON.parse(
-  await readFile(blogPath("docs/editorial/domain-design-series.json")),
+  await readFile(editorialPath("domain-design-series.json")),
 );
 const compact = (text) =>
   text
