@@ -2,7 +2,7 @@
 
 Inventario generado desde el catálogo de 175 fichas y los artículos españoles reales. No es una certificación de completitud editorial ni de laboratorios.
 
-IDs con borrador propio: **78**. Solo material relacionado: **19**. Sin artículo identificado: **78**.
+IDs con borrador propio: **80**. Solo material relacionado: **19**. Sin artículo identificado: **76**.
 
 Cada ficha requiere revisión contra su temario obligatorio, laboratorio y Definition of Done. Un artículo agrupado no completa automáticamente varias fichas.
 
@@ -164,8 +164,8 @@ P063 se amplía en ocho drafts: pipeline/gates, artefactos, flags, smoke, rollin
 - P101. Redes convolucionales CNN: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/cnn-convolution-kernel-cross-correlation.md).
 - P102. Redes para secuencias: RNN, LSTM y GRU: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/embeddings-tokens-tabla-vectores-padding.md).
 - P103. Atención y Transformer: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/attention-qkv-consultas-claves-valores.md).
-- P104. Pretraining, transfer learning y fine-tuning: pendiente.
-- P105. Entrenamiento eficiente en GPU: pendiente.
+- P104. Pretraining, transfer learning y fine-tuning: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/self-supervision-denoising-aprender-sin-etiquetas.md).
+- P105. Entrenamiento eficiente en GPU: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/cpu-gpu-cuda-medir-entrenamiento-sincronizacion.md).
 
 ## Serie 11. NLP, LLM, RAG y agentes (posts 106–121)
 

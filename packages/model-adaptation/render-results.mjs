@@ -1,0 +1,11 @@
+import{readFile,writeFile}from'node:fs/promises';
+import{lineChart,barChart}from'./charts.mjs';
+import{labels}from'./model.mjs';
+const data=JSON.parse(await readFile(new URL('comparison.json',import.meta.url)));
+const pre=lineChart(data.pretraining.map(r=>({name:'Seed '+r.seed,points:r.curve.map(v=>({step:v.step,value:v.validationMSE}))})),'Pretraining · reconstrucción limpia',{maximum:.6,xMax:400,yLabel:'MSE en validation'});
+const adaptation=barChart(data.protocol.modes.map(mode=>({name:labels[mode],value:data.adaptations.filter(r=>r.mode===mode).reduce((s,r)=>s+r.test.accuracy,0)/3})),'Adaptación · media de tres seeds');
+const retained=data.adaptations.filter(r=>r.seed===7&&r.sourceMSE!==null);
+const retention=barChart(retained.map(r=>({name:labels[r.mode],value:r.sourceMSE})),'Retención · seed 7 · módulo activo',{maximum:8,label:'MSE source test · decoder original'});
+const contrast=barChart(data.contrastive.temperatures.map(v=>({name:'T='+v.temperature,value:v.loss})),'Tres pares · sin entrenamiento',{maximum:1,label:'Loss contrastiva bidireccional'});
+for(const[name,svg]of Object.entries({'pretraining.svg':pre,'adaptation.svg':adaptation,'retention.svg':retention,'contrastive.svg':contrast}))await writeFile(new URL(name,import.meta.url),svg+'\n');
+console.log('Four figures rendered from archived observations');

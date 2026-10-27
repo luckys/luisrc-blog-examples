@@ -1,0 +1,16 @@
+{
+ "name": "@luisrc-examples/gpu-training",
+ "private": true,
+ "type": "module",
+ "packageManager": "pnpm@12.8.1",
+ "scripts": {
+  "runtime:fetch": "node fetch-runtime.mjs",
+  "preflight": "node run.mjs preflight",
+  "test:container": "node run.mjs tests",
+  "exercise": "node run.mjs results",
+  "verify": "node verify-report.mjs",
+  "reobserve": "node run.mjs observe",
+  "test": "node --test tests/*.test.mjs",
+  "render": "node render-results.mjs"
+ }
+}

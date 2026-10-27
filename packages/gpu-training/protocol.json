@@ -1,0 +1,23 @@
+{
+  "model": {"input": 512, "hidden": 1024, "classes": 16, "hiddenLayers": 2},
+  "seed": 17,
+  "dataSeed": 223,
+  "batches": [32, 128, 512],
+  "devices": ["cpu", "cuda"],
+  "precisions": {"cpu": ["fp32"], "cuda": ["fp32", "fp16", "bf16"]},
+  "cpuThreads": 1,
+  "warmupSteps": 8,
+  "stepsPerSample": 10,
+  "samples": 5,
+  "orderSeed": 909,
+  "optimizer": {"name": "AdamW", "learningRate": 0.001, "weightDecay": 0.01, "foreach": false},
+  "timing": "perf_counter with device synchronize before and after each ten-update sample; data resident; includes zero_grad/forward/loss/backward/optimizer",
+  "memory": "reset peaks after warmup; allocated/reserved include live model, optimizer, batch and measured activations, not global nvidia-smi usage",
+  "memoryFraction": 0.25,
+  "transfer": {"bytes": [1048576, 16777216], "samples": 5, "copiesPerSample": 10, "warmupCopies": 4, "modes": ["pageable_blocking", "pinned_nonblocking"]},
+  "precisionControlBatch": 64,
+  "accumulation": {"sampleCount": 21, "microbatches": [8,8,5], "learningRate": 0.01, "optimizer": "SGD one step", "precision": "fp32"},
+  "profiler": {"device": "cuda", "precision": "fp32", "batch": 128, "steps": 3, "recordShapes": true, "profileMemory": true},
+  "determinism": {"algorithms": true, "tf32": false, "cublasWorkspace": ":4096:8", "probeSteps": 3},
+  "limits": {"gpuMemoryCap": "25% process allocator budget; no intentional full-device OOM", "qualityBenchmark": false, "endToEndDatasetPipeline": false, "crossDeviceBitwisePromise": false}
+}

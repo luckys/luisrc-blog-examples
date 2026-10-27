@@ -634,5 +634,77 @@
   {
     "source": "packages/attention-transformer/causal-gradient.svg",
     "destination": "public/assets/interactive/attention-transformer/causal-gradient.svg"
+  },
+  {
+    "source": "packages/model-adaptation/explorer.html",
+    "destination": "public/assets/interactive/model-adaptation/explorer.html"
+  },
+  {
+    "source": "packages/model-adaptation/explorer.mjs",
+    "destination": "public/assets/interactive/model-adaptation/explorer.mjs"
+  },
+  {
+    "source": "packages/model-adaptation/model.mjs",
+    "destination": "public/assets/interactive/model-adaptation/model.mjs"
+  },
+  {
+    "source": "packages/model-adaptation/charts.mjs",
+    "destination": "public/assets/interactive/model-adaptation/charts.mjs"
+  },
+  {
+    "source": "packages/model-adaptation/comparison.json",
+    "destination": "public/assets/interactive/model-adaptation/comparison.json"
+  },
+  {
+    "source": "packages/model-adaptation/pretraining.svg",
+    "destination": "public/assets/interactive/model-adaptation/pretraining.svg"
+  },
+  {
+    "source": "packages/model-adaptation/adaptation.svg",
+    "destination": "public/assets/interactive/model-adaptation/adaptation.svg"
+  },
+  {
+    "source": "packages/model-adaptation/retention.svg",
+    "destination": "public/assets/interactive/model-adaptation/retention.svg"
+  },
+  {
+    "source": "packages/model-adaptation/contrastive.svg",
+    "destination": "public/assets/interactive/model-adaptation/contrastive.svg"
+  },
+  {
+    "source": "packages/gpu-training/explorer.html",
+    "destination": "public/assets/interactive/gpu-training/explorer.html"
+  },
+  {
+    "source": "packages/gpu-training/explorer.mjs",
+    "destination": "public/assets/interactive/gpu-training/explorer.mjs"
+  },
+  {
+    "source": "packages/gpu-training/model.mjs",
+    "destination": "public/assets/interactive/gpu-training/model.mjs"
+  },
+  {
+    "source": "packages/gpu-training/charts.mjs",
+    "destination": "public/assets/interactive/gpu-training/charts.mjs"
+  },
+  {
+    "source": "packages/gpu-training/comparison.json",
+    "destination": "public/assets/interactive/gpu-training/comparison.json"
+  },
+  {
+    "source": "packages/gpu-training/cpu-gpu.svg",
+    "destination": "public/assets/interactive/gpu-training/cpu-gpu.svg"
+  },
+  {
+    "source": "packages/gpu-training/memory.svg",
+    "destination": "public/assets/interactive/gpu-training/memory.svg"
+  },
+  {
+    "source": "packages/gpu-training/transfer.svg",
+    "destination": "public/assets/interactive/gpu-training/transfer.svg"
+  },
+  {
+    "source": "packages/gpu-training/training-time.svg",
+    "destination": "public/assets/interactive/gpu-training/training-time.svg"
   }
 ]

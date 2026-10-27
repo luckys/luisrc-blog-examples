@@ -1,0 +1,309 @@
+{
+  "name": "Adaptar modelos: del pretraining a LoRA y forgetting",
+  "locale": "es",
+  "status": "draft",
+  "lab": "model-adaptation",
+  "roadmapScope": "P104: self-supervision, pretraining, contrastive objectives, freeze/unfreeze, full tuning, PEFT, LoRA, adapters y forgetting. P105 continúa en gpu-training; model-adaptation no mide VRAM.",
+  "dependencyFiles": [],
+  "articles": [
+    {
+      "id": "P104",
+      "roadmapId": "P104",
+      "slug": "self-supervision-denoising-aprender-sin-etiquetas",
+      "title": "Self-supervision: aprender a reconstruir antes de pedir etiquetas",
+      "question": "Cómo convertir observaciones sin etiquetas en pares de entrenamiento sin filtrar el target",
+      "prerequisites": [
+        "P092",
+        "P099",
+        "P103"
+      ],
+      "objectives": [
+        "Separar la observación limpia del input corrompido",
+        "Derivar la señal de aprendizaje sin etiquetas de clase",
+        "Reconocer qué información puede aprender a conservar"
+      ],
+      "commonErrors": [
+        "Usar una etiqueta humana sin reconocerlo",
+        "Reconstruir el ruido entregándolo también como target",
+        "Dar por útil una representación solo por su loss de pretraining"
+      ],
+      "files": [
+        "data.py",
+        "models.py",
+        "objectives.py",
+        "training.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_models.py",
+        "tests/test_data.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-PRETRAINING",
+      "roadmapId": "P104",
+      "slug": "pretraining-transfer-learning-baseline-test-no-visto",
+      "title": "Pretraining y transfer learning: comprobar si empezar con pesos aprendidos ayuda",
+      "question": "Cómo separar lo aprendido en una tarea previa de la mejora real en la tarea destino",
+      "prerequisites": [
+        "P104"
+      ],
+      "objectives": [
+        "Separar pretraining, transfer y fine-tuning",
+        "Definir baselines y holdouts antes de entrenar",
+        "Interpretar una comparación sin ocultar el coste previo"
+      ],
+      "commonErrors": [
+        "Mezclar ejemplos de test con el corpus previo",
+        "Confundir un head nuevo con una clase ya aprendida",
+        "Atribuir causalmente cada diferencia al pretraining"
+      ],
+      "files": [
+        "data.py",
+        "models.py",
+        "objectives.py",
+        "training.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_models.py",
+        "tests/test_data.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-CONTRASTIVE",
+      "roadmapId": "P104",
+      "slug": "contrastive-learning-positivos-negativos-temperatura",
+      "title": "Contrastive learning: qué acerca los positivos y qué problema plantean los negativos",
+      "question": "Cómo un objetivo contrastivo usa identidades de pares y un denominador de alternativas",
+      "prerequisites": [
+        "DL-PRETRAINING"
+      ],
+      "objectives": [
+        "Construir logits a partir de embeddings normalizados",
+        "Calcular la loss bidireccional de tres pares",
+        "Analizar temperatura, falsos negativos y colapso"
+      ],
+      "commonErrors": [
+        "Declarar positiva cualquier transformación",
+        "Confundir pares alineados con etiquetas de clase",
+        "Interpretar una loss menor como calidad downstream"
+      ],
+      "files": [
+        "data.py",
+        "models.py",
+        "objectives.py",
+        "training.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_models.py",
+        "tests/test_data.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-FREEZE",
+      "roadmapId": "P104",
+      "slug": "freeze-unfreeze-backbone-optimizer-gradientes",
+      "title": "Freeze y unfreeze: qué deja de aprender y cómo volver a entrenarlo",
+      "question": "Cómo congelar pesos y reconstruir la participación del optimizer al descongelarlos",
+      "prerequisites": [
+        "DL-CONTRASTIVE"
+      ],
+      "objectives": [
+        "Distinguir requires_grad, no_grad y eval",
+        "Introducir parámetros en el optimizer al descongelar",
+        "Contrastar un head fijo y un calendario gradual"
+      ],
+      "commonErrors": [
+        "Cambiar requires_grad sin añadir parámetros al optimizer",
+        "Cortar gradientes que necesita una rama LoRA",
+        "Suponer que eval congela los pesos"
+      ],
+      "files": [
+        "data.py",
+        "models.py",
+        "objectives.py",
+        "training.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_models.py",
+        "tests/test_data.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-FULL-TUNING",
+      "roadmapId": "P104",
+      "slug": "full-fine-tuning-adaptar-pesos-sin-perder-baseline",
+      "title": "Full fine-tuning: adaptar todos los pesos sin dar por ganada la transferencia",
+      "question": "Qué libertad de ajuste ofrece entrenar todo el encoder y qué comparación permite evaluarla",
+      "prerequisites": [
+        "DL-FREEZE"
+      ],
+      "objectives": [
+        "Seguir el gradiente de clasificación hasta el encoder",
+        "Comparar scratch y pretrained con head idéntico",
+        "Interpretar variación entre seeds sin un ganador universal"
+      ],
+      "commonErrors": [
+        "Llamar justo a un presupuesto que omite el pretraining",
+        "Buscar configuraciones usando test",
+        "Suponer que más parámetros entrenables garantizan generalización"
+      ],
+      "files": [
+        "data.py",
+        "models.py",
+        "objectives.py",
+        "training.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_models.py",
+        "tests/test_data.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-PEFT",
+      "roadmapId": "P104",
+      "slug": "peft-parametros-entrenables-memoria-coste-real",
+      "title": "PEFT: contar parámetros entrenables sin confundirlos con toda la memoria",
+      "question": "Qué recursos puede ahorrar una adaptación pequeña y cuáles siguen dependiendo del modelo base",
+      "prerequisites": [
+        "DL-FULL-TUNING"
+      ],
+      "objectives": [
+        "Descomponer pesos, gradientes, estado y activaciones",
+        "Contar parámetros específicos de cada estrategia",
+        "Separar bytes teóricos de memoria observada"
+      ],
+      "commonErrors": [
+        "Llamar VRAM medida a una fórmula de bytes",
+        "Olvidar el head de clasificación en el ahorro",
+        "Suponer que congelar elimina el forward del backbone"
+      ],
+      "files": [
+        "data.py",
+        "models.py",
+        "objectives.py",
+        "training.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_models.py",
+        "tests/test_data.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-LORA",
+      "roadmapId": "P104",
+      "slug": "lora-rango-bajo-inicializacion-merge",
+      "title": "LoRA: adaptar una matriz con dos factores y comprobar su merge",
+      "question": "Cómo una actualización de rango limitado cambia la función sin entrenar la matriz base",
+      "prerequisites": [
+        "DL-PEFT"
+      ],
+      "objectives": [
+        "Derivar dimensiones y número de parámetros de A y B",
+        "Explicar por qué B empieza en cero y A no",
+        "Contrastar ejecución separada y pesos fusionados"
+      ],
+      "commonErrors": [
+        "Inicializar los dos factores a cero",
+        "Confundir rango de la actualización con rango del modelo",
+        "Fusionar dos veces sobre la misma base"
+      ],
+      "files": [
+        "data.py",
+        "models.py",
+        "objectives.py",
+        "training.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_models.py",
+        "tests/test_data.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-ADAPTERS",
+      "roadmapId": "P104",
+      "slug": "adapters-bottleneck-residual-peft",
+      "title": "Adapters: añadir una corrección no lineal a una representación congelada",
+      "question": "Cómo un bottleneck residual aprende una corrección y por qué no equivale a LoRA",
+      "prerequisites": [
+        "DL-LORA"
+      ],
+      "objectives": [
+        "Seguir la proyección de bajada y de subida",
+        "Inicializar la rama con salida cero",
+        "Distinguir modificación activa de base almacenada"
+      ],
+      "commonErrors": [
+        "Llamar réplica del paper a un adapter didáctico distinto",
+        "Prometer merge lineal de una rama ReLU",
+        "Afirmar que base intacta implica comportamiento intacto"
+      ],
+      "files": [
+        "data.py",
+        "models.py",
+        "objectives.py",
+        "training.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_models.py",
+        "tests/test_data.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-FORGETTING",
+      "roadmapId": "P104",
+      "slug": "forgetting-evaluar-tarea-anterior-despues-fine-tuning",
+      "title": "Forgetting: medir qué cambia en la tarea anterior después de adaptar",
+      "question": "Cómo separar degradación con el módulo activo, preservación de pesos y recuperación de la base",
+      "prerequisites": [
+        "DL-ADAPTERS"
+      ],
+      "objectives": [
+        "Evaluar la tarea anterior con el decoder original",
+        "Separar una proxy de retención de capacidades generales",
+        "Elegir mitigaciones con sus costes y métricas"
+      ],
+      "commonErrors": [
+        "Afirmar ausencia de forgetting porque los pesos base no cambian",
+        "Confundir magnitudes de losses de tareas diferentes",
+        "Escoger mitigaciones mirando repetidamente el test"
+      ],
+      "files": [
+        "data.py",
+        "models.py",
+        "objectives.py",
+        "training.py",
+        "experiments.py",
+        "verify.py",
+        "protocol.json",
+        "tests/test_models.py",
+        "tests/test_data.py",
+        "results/observations.json",
+        "README.md"
+      ]
+    }
+  ]
+}

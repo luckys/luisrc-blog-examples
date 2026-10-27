@@ -5317,5 +5317,420 @@
       "packages/attention-transformer/README.md"
     ],
     "directory": "es/dl-causal-attention"
+  },
+  {
+    "locale": "es",
+    "slug": "self-supervision-denoising-aprender-sin-etiquetas",
+    "title": "Self-supervision: aprender a reconstruir antes de pedir etiquetas",
+    "post": "src/content/posts/es/self-supervision-denoising-aprender-sin-etiquetas.md",
+    "labs": [
+      "model-adaptation"
+    ],
+    "files": [
+      "packages/model-adaptation/data.py",
+      "packages/model-adaptation/models.py",
+      "packages/model-adaptation/objectives.py",
+      "packages/model-adaptation/training.py",
+      "packages/model-adaptation/experiments.py",
+      "packages/model-adaptation/verify.py",
+      "packages/model-adaptation/protocol.json",
+      "packages/model-adaptation/tests/test_models.py",
+      "packages/model-adaptation/tests/test_data.py",
+      "packages/model-adaptation/results/observations.json",
+      "packages/model-adaptation/README.md"
+    ],
+    "directory": "es/p104"
+  },
+  {
+    "locale": "es",
+    "slug": "pretraining-transfer-learning-baseline-test-no-visto",
+    "title": "Pretraining y transfer learning: comprobar si empezar con pesos aprendidos ayuda",
+    "post": "src/content/posts/es/pretraining-transfer-learning-baseline-test-no-visto.md",
+    "labs": [
+      "model-adaptation"
+    ],
+    "files": [
+      "packages/model-adaptation/data.py",
+      "packages/model-adaptation/models.py",
+      "packages/model-adaptation/objectives.py",
+      "packages/model-adaptation/training.py",
+      "packages/model-adaptation/experiments.py",
+      "packages/model-adaptation/verify.py",
+      "packages/model-adaptation/protocol.json",
+      "packages/model-adaptation/tests/test_models.py",
+      "packages/model-adaptation/tests/test_data.py",
+      "packages/model-adaptation/results/observations.json",
+      "packages/model-adaptation/README.md"
+    ],
+    "directory": "es/dl-pretraining"
+  },
+  {
+    "locale": "es",
+    "slug": "contrastive-learning-positivos-negativos-temperatura",
+    "title": "Contrastive learning: qué acerca los positivos y qué problema plantean los negativos",
+    "post": "src/content/posts/es/contrastive-learning-positivos-negativos-temperatura.md",
+    "labs": [
+      "model-adaptation"
+    ],
+    "files": [
+      "packages/model-adaptation/data.py",
+      "packages/model-adaptation/models.py",
+      "packages/model-adaptation/objectives.py",
+      "packages/model-adaptation/training.py",
+      "packages/model-adaptation/experiments.py",
+      "packages/model-adaptation/verify.py",
+      "packages/model-adaptation/protocol.json",
+      "packages/model-adaptation/tests/test_models.py",
+      "packages/model-adaptation/tests/test_data.py",
+      "packages/model-adaptation/results/observations.json",
+      "packages/model-adaptation/README.md"
+    ],
+    "directory": "es/dl-contrastive"
+  },
+  {
+    "locale": "es",
+    "slug": "freeze-unfreeze-backbone-optimizer-gradientes",
+    "title": "Freeze y unfreeze: qué deja de aprender y cómo volver a entrenarlo",
+    "post": "src/content/posts/es/freeze-unfreeze-backbone-optimizer-gradientes.md",
+    "labs": [
+      "model-adaptation"
+    ],
+    "files": [
+      "packages/model-adaptation/data.py",
+      "packages/model-adaptation/models.py",
+      "packages/model-adaptation/objectives.py",
+      "packages/model-adaptation/training.py",
+      "packages/model-adaptation/experiments.py",
+      "packages/model-adaptation/verify.py",
+      "packages/model-adaptation/protocol.json",
+      "packages/model-adaptation/tests/test_models.py",
+      "packages/model-adaptation/tests/test_data.py",
+      "packages/model-adaptation/results/observations.json",
+      "packages/model-adaptation/README.md"
+    ],
+    "directory": "es/dl-freeze"
+  },
+  {
+    "locale": "es",
+    "slug": "full-fine-tuning-adaptar-pesos-sin-perder-baseline",
+    "title": "Full fine-tuning: adaptar todos los pesos sin dar por ganada la transferencia",
+    "post": "src/content/posts/es/full-fine-tuning-adaptar-pesos-sin-perder-baseline.md",
+    "labs": [
+      "model-adaptation"
+    ],
+    "files": [
+      "packages/model-adaptation/data.py",
+      "packages/model-adaptation/models.py",
+      "packages/model-adaptation/objectives.py",
+      "packages/model-adaptation/training.py",
+      "packages/model-adaptation/experiments.py",
+      "packages/model-adaptation/verify.py",
+      "packages/model-adaptation/protocol.json",
+      "packages/model-adaptation/tests/test_models.py",
+      "packages/model-adaptation/tests/test_data.py",
+      "packages/model-adaptation/results/observations.json",
+      "packages/model-adaptation/README.md"
+    ],
+    "directory": "es/dl-full-tuning"
+  },
+  {
+    "locale": "es",
+    "slug": "peft-parametros-entrenables-memoria-coste-real",
+    "title": "PEFT: contar parámetros entrenables sin confundirlos con toda la memoria",
+    "post": "src/content/posts/es/peft-parametros-entrenables-memoria-coste-real.md",
+    "labs": [
+      "model-adaptation"
+    ],
+    "files": [
+      "packages/model-adaptation/data.py",
+      "packages/model-adaptation/models.py",
+      "packages/model-adaptation/objectives.py",
+      "packages/model-adaptation/training.py",
+      "packages/model-adaptation/experiments.py",
+      "packages/model-adaptation/verify.py",
+      "packages/model-adaptation/protocol.json",
+      "packages/model-adaptation/tests/test_models.py",
+      "packages/model-adaptation/tests/test_data.py",
+      "packages/model-adaptation/results/observations.json",
+      "packages/model-adaptation/README.md"
+    ],
+    "directory": "es/dl-peft"
+  },
+  {
+    "locale": "es",
+    "slug": "lora-rango-bajo-inicializacion-merge",
+    "title": "LoRA: adaptar una matriz con dos factores y comprobar su merge",
+    "post": "src/content/posts/es/lora-rango-bajo-inicializacion-merge.md",
+    "labs": [
+      "model-adaptation"
+    ],
+    "files": [
+      "packages/model-adaptation/data.py",
+      "packages/model-adaptation/models.py",
+      "packages/model-adaptation/objectives.py",
+      "packages/model-adaptation/training.py",
+      "packages/model-adaptation/experiments.py",
+      "packages/model-adaptation/verify.py",
+      "packages/model-adaptation/protocol.json",
+      "packages/model-adaptation/tests/test_models.py",
+      "packages/model-adaptation/tests/test_data.py",
+      "packages/model-adaptation/results/observations.json",
+      "packages/model-adaptation/README.md"
+    ],
+    "directory": "es/dl-lora"
+  },
+  {
+    "locale": "es",
+    "slug": "adapters-bottleneck-residual-peft",
+    "title": "Adapters: añadir una corrección no lineal a una representación congelada",
+    "post": "src/content/posts/es/adapters-bottleneck-residual-peft.md",
+    "labs": [
+      "model-adaptation"
+    ],
+    "files": [
+      "packages/model-adaptation/data.py",
+      "packages/model-adaptation/models.py",
+      "packages/model-adaptation/objectives.py",
+      "packages/model-adaptation/training.py",
+      "packages/model-adaptation/experiments.py",
+      "packages/model-adaptation/verify.py",
+      "packages/model-adaptation/protocol.json",
+      "packages/model-adaptation/tests/test_models.py",
+      "packages/model-adaptation/tests/test_data.py",
+      "packages/model-adaptation/results/observations.json",
+      "packages/model-adaptation/README.md"
+    ],
+    "directory": "es/dl-adapters"
+  },
+  {
+    "locale": "es",
+    "slug": "forgetting-evaluar-tarea-anterior-despues-fine-tuning",
+    "title": "Forgetting: medir qué cambia en la tarea anterior después de adaptar",
+    "post": "src/content/posts/es/forgetting-evaluar-tarea-anterior-despues-fine-tuning.md",
+    "labs": [
+      "model-adaptation"
+    ],
+    "files": [
+      "packages/model-adaptation/data.py",
+      "packages/model-adaptation/models.py",
+      "packages/model-adaptation/objectives.py",
+      "packages/model-adaptation/training.py",
+      "packages/model-adaptation/experiments.py",
+      "packages/model-adaptation/verify.py",
+      "packages/model-adaptation/protocol.json",
+      "packages/model-adaptation/tests/test_models.py",
+      "packages/model-adaptation/tests/test_data.py",
+      "packages/model-adaptation/results/observations.json",
+      "packages/model-adaptation/README.md"
+    ],
+    "directory": "es/dl-forgetting"
+  },
+  {
+    "locale": "es",
+    "slug": "cpu-gpu-cuda-medir-entrenamiento-sincronizacion",
+    "title": "CPU, GPU y CUDA: medir el entrenamiento sin confundir envío y ejecución",
+    "post": "src/content/posts/es/cpu-gpu-cuda-medir-entrenamiento-sincronizacion.md",
+    "labs": [
+      "gpu-training"
+    ],
+    "files": [
+      "packages/gpu-training/workload.py",
+      "packages/gpu-training/measure.py",
+      "packages/gpu-training/controls.py",
+      "packages/gpu-training/profiling.py",
+      "packages/gpu-training/case.py",
+      "packages/gpu-training/experiments.py",
+      "packages/gpu-training/run.mjs",
+      "packages/gpu-training/verify-report.mjs",
+      "packages/gpu-training/protocol.json",
+      "packages/gpu-training/runtime.json",
+      "packages/gpu-training/tests/test_workload.py",
+      "packages/gpu-training/results/observations.json",
+      "packages/gpu-training/results/profiler-trace.json",
+      "packages/gpu-training/README.md"
+    ],
+    "directory": "es/p105"
+  },
+  {
+    "locale": "es",
+    "slug": "vram-pytorch-allocated-reserved-activaciones",
+    "title": "VRAM en PyTorch: por qué los parámetros no explican toda la memoria",
+    "post": "src/content/posts/es/vram-pytorch-allocated-reserved-activaciones.md",
+    "labs": [
+      "gpu-training"
+    ],
+    "files": [
+      "packages/gpu-training/workload.py",
+      "packages/gpu-training/measure.py",
+      "packages/gpu-training/controls.py",
+      "packages/gpu-training/profiling.py",
+      "packages/gpu-training/case.py",
+      "packages/gpu-training/experiments.py",
+      "packages/gpu-training/run.mjs",
+      "packages/gpu-training/verify-report.mjs",
+      "packages/gpu-training/protocol.json",
+      "packages/gpu-training/runtime.json",
+      "packages/gpu-training/tests/test_workload.py",
+      "packages/gpu-training/results/observations.json",
+      "packages/gpu-training/results/profiler-trace.json",
+      "packages/gpu-training/README.md"
+    ],
+    "directory": "es/dl-gpu-memory"
+  },
+  {
+    "locale": "es",
+    "slug": "gpu-transferencias-pinned-memory-non-blocking",
+    "title": "Transferencias a GPU: qué cambian pinned memory y non_blocking",
+    "post": "src/content/posts/es/gpu-transferencias-pinned-memory-non-blocking.md",
+    "labs": [
+      "gpu-training"
+    ],
+    "files": [
+      "packages/gpu-training/workload.py",
+      "packages/gpu-training/measure.py",
+      "packages/gpu-training/controls.py",
+      "packages/gpu-training/profiling.py",
+      "packages/gpu-training/case.py",
+      "packages/gpu-training/experiments.py",
+      "packages/gpu-training/run.mjs",
+      "packages/gpu-training/verify-report.mjs",
+      "packages/gpu-training/protocol.json",
+      "packages/gpu-training/runtime.json",
+      "packages/gpu-training/tests/test_workload.py",
+      "packages/gpu-training/results/observations.json",
+      "packages/gpu-training/results/profiler-trace.json",
+      "packages/gpu-training/README.md"
+    ],
+    "directory": "es/dl-gpu-transfer"
+  },
+  {
+    "locale": "es",
+    "slug": "gpu-batching-throughput-latencia-memoria",
+    "title": "Batching en GPU: procesar más ejemplos no equivale a aprender mejor",
+    "post": "src/content/posts/es/gpu-batching-throughput-latencia-memoria.md",
+    "labs": [
+      "gpu-training"
+    ],
+    "files": [
+      "packages/gpu-training/workload.py",
+      "packages/gpu-training/measure.py",
+      "packages/gpu-training/controls.py",
+      "packages/gpu-training/profiling.py",
+      "packages/gpu-training/case.py",
+      "packages/gpu-training/experiments.py",
+      "packages/gpu-training/run.mjs",
+      "packages/gpu-training/verify-report.mjs",
+      "packages/gpu-training/protocol.json",
+      "packages/gpu-training/runtime.json",
+      "packages/gpu-training/tests/test_workload.py",
+      "packages/gpu-training/results/observations.json",
+      "packages/gpu-training/results/profiler-trace.json",
+      "packages/gpu-training/README.md"
+    ],
+    "directory": "es/dl-gpu-batching"
+  },
+  {
+    "locale": "es",
+    "slug": "mixed-precision-autocast-fp16-bf16-gradscaler",
+    "title": "Mixed precision: qué hace autocast y por qué FP16 puede necesitar GradScaler",
+    "post": "src/content/posts/es/mixed-precision-autocast-fp16-bf16-gradscaler.md",
+    "labs": [
+      "gpu-training"
+    ],
+    "files": [
+      "packages/gpu-training/workload.py",
+      "packages/gpu-training/measure.py",
+      "packages/gpu-training/controls.py",
+      "packages/gpu-training/profiling.py",
+      "packages/gpu-training/case.py",
+      "packages/gpu-training/experiments.py",
+      "packages/gpu-training/run.mjs",
+      "packages/gpu-training/verify-report.mjs",
+      "packages/gpu-training/protocol.json",
+      "packages/gpu-training/runtime.json",
+      "packages/gpu-training/tests/test_workload.py",
+      "packages/gpu-training/results/observations.json",
+      "packages/gpu-training/results/profiler-trace.json",
+      "packages/gpu-training/README.md"
+    ],
+    "directory": "es/dl-gpu-amp"
+  },
+  {
+    "locale": "es",
+    "slug": "pytorch-profiler-cpu-kernels-tiempo-wall",
+    "title": "PyTorch Profiler: leer CPU y kernels sin sumar tiempos que se solapan",
+    "post": "src/content/posts/es/pytorch-profiler-cpu-kernels-tiempo-wall.md",
+    "labs": [
+      "gpu-training"
+    ],
+    "files": [
+      "packages/gpu-training/workload.py",
+      "packages/gpu-training/measure.py",
+      "packages/gpu-training/controls.py",
+      "packages/gpu-training/profiling.py",
+      "packages/gpu-training/case.py",
+      "packages/gpu-training/experiments.py",
+      "packages/gpu-training/run.mjs",
+      "packages/gpu-training/verify-report.mjs",
+      "packages/gpu-training/protocol.json",
+      "packages/gpu-training/runtime.json",
+      "packages/gpu-training/tests/test_workload.py",
+      "packages/gpu-training/results/observations.json",
+      "packages/gpu-training/results/profiler-trace.json",
+      "packages/gpu-training/README.md"
+    ],
+    "directory": "es/dl-gpu-profiler"
+  },
+  {
+    "locale": "es",
+    "slug": "gpu-determinism-seeds-tiempos-reproducibles",
+    "title": "Determinism en GPU: reproducir cálculos sin prometer tiempos idénticos",
+    "post": "src/content/posts/es/gpu-determinism-seeds-tiempos-reproducibles.md",
+    "labs": [
+      "gpu-training"
+    ],
+    "files": [
+      "packages/gpu-training/workload.py",
+      "packages/gpu-training/measure.py",
+      "packages/gpu-training/controls.py",
+      "packages/gpu-training/profiling.py",
+      "packages/gpu-training/case.py",
+      "packages/gpu-training/experiments.py",
+      "packages/gpu-training/run.mjs",
+      "packages/gpu-training/verify-report.mjs",
+      "packages/gpu-training/protocol.json",
+      "packages/gpu-training/runtime.json",
+      "packages/gpu-training/tests/test_workload.py",
+      "packages/gpu-training/results/observations.json",
+      "packages/gpu-training/results/profiler-trace.json",
+      "packages/gpu-training/README.md"
+    ],
+    "directory": "es/dl-gpu-determinism"
+  },
+  {
+    "locale": "es",
+    "slug": "gradient-accumulation-gpu-microbatches-desiguales",
+    "title": "Gradient accumulation: un batch lógico, varios backward y un solo step",
+    "post": "src/content/posts/es/gradient-accumulation-gpu-microbatches-desiguales.md",
+    "labs": [
+      "gpu-training"
+    ],
+    "files": [
+      "packages/gpu-training/workload.py",
+      "packages/gpu-training/measure.py",
+      "packages/gpu-training/controls.py",
+      "packages/gpu-training/profiling.py",
+      "packages/gpu-training/case.py",
+      "packages/gpu-training/experiments.py",
+      "packages/gpu-training/run.mjs",
+      "packages/gpu-training/verify-report.mjs",
+      "packages/gpu-training/protocol.json",
+      "packages/gpu-training/runtime.json",
+      "packages/gpu-training/tests/test_workload.py",
+      "packages/gpu-training/results/observations.json",
+      "packages/gpu-training/results/profiler-trace.json",
+      "packages/gpu-training/README.md"
+    ],
+    "directory": "es/dl-gpu-accumulation"
   }
 ]

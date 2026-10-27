@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 319 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 336 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -219,3 +219,13 @@ matrices explícitas, controles nativos y pruebas de causalidad; sin entrenamien
 ## Trabajo editorial y herramientas del blog
 
 La [documentación editorial](docs/editorial/README.md) y los [scripts de revisión y render](tools/blog) viven aquí. Se ejecutan desde este monorepo indicando `BLOG_ROOT`, sin volver a copiar código de laboratorio al blog.
+
+El paquete [model-adaptation](packages/model-adaptation/README.md) acompaña nueve
+drafts P104: tres pretrainings de denoising, 21 adaptaciones y test reservado;
+baselines lineal/scratch, freeze/full, LoRA/adapters y retención con decoder fijo.
+No mide GPU ni ejecuta entrenamiento contrastivo completo.
+
+El paquete [gpu-training](packages/gpu-training/README.md) acompaña ocho drafts P105:
+12 configuraciones reales CPU/CUDA, tiempos y VRAM, copias H2D, controles
+numéricos y traza de 219 kernels. El benchmark usa datos residentes repetidos
+y CPU con un thread; no compara calidad ni un pipeline completo.

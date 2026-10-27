@@ -366,3 +366,26 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · dl-transformer-block**: [Un bloque Transformer: atención, residual, LayerNorm y FFN resuelven tareas distintas](es/dl-transformer-block/README.md)
 - **es · dl-encoder-decoder**: [Encoder y decoder: quién consulta a quién en cross-attention](es/dl-encoder-decoder/README.md)
 - **es · dl-causal-attention**: [Atención causal: demostrar que el futuro no cambia el prefijo](es/dl-causal-attention/README.md)
+
+## Adaptación de modelos · P104
+
+- **es · p104**: [Self-supervision: aprender a reconstruir antes de pedir etiquetas](es/p104/README.md)
+- **es · dl-pretraining**: [Pretraining y transfer learning: comprobar si empezar con pesos aprendidos ayuda](es/dl-pretraining/README.md)
+- **es · dl-contrastive**: [Contrastive learning: qué acerca los positivos y qué problema plantean los negativos](es/dl-contrastive/README.md)
+- **es · dl-freeze**: [Freeze y unfreeze: qué deja de aprender y cómo volver a entrenarlo](es/dl-freeze/README.md)
+- **es · dl-full-tuning**: [Full fine-tuning: adaptar todos los pesos sin dar por ganada la transferencia](es/dl-full-tuning/README.md)
+- **es · dl-peft**: [PEFT: contar parámetros entrenables sin confundirlos con toda la memoria](es/dl-peft/README.md)
+- **es · dl-lora**: [LoRA: adaptar una matriz con dos factores y comprobar su merge](es/dl-lora/README.md)
+- **es · dl-adapters**: [Adapters: añadir una corrección no lineal a una representación congelada](es/dl-adapters/README.md)
+- **es · dl-forgetting**: [Forgetting: medir qué cambia en la tarea anterior después de adaptar](es/dl-forgetting/README.md)
+
+## Entrenamiento en GPU · P105
+
+- **es · p105**: [CPU, GPU y CUDA: medir el entrenamiento sin confundir envío y ejecución](es/p105/README.md)
+- **es · dl-gpu-memory**: [VRAM en PyTorch: por qué los parámetros no explican toda la memoria](es/dl-gpu-memory/README.md)
+- **es · dl-gpu-transfer**: [Transferencias a GPU: qué cambian pinned memory y non_blocking](es/dl-gpu-transfer/README.md)
+- **es · dl-gpu-batching**: [Batching en GPU: procesar más ejemplos no equivale a aprender mejor](es/dl-gpu-batching/README.md)
+- **es · dl-gpu-amp**: [Mixed precision: qué hace autocast y por qué FP16 puede necesitar GradScaler](es/dl-gpu-amp/README.md)
+- **es · dl-gpu-accumulation**: [Gradient accumulation: un batch lógico, varios backward y un solo step](es/dl-gpu-accumulation/README.md)
+- **es · dl-gpu-profiler**: [PyTorch Profiler: leer CPU y kernels sin sumar tiempos que se solapan](es/dl-gpu-profiler/README.md)
+- **es · dl-gpu-determinism**: [Determinism en GPU: reproducir cálculos sin prometer tiempos idénticos](es/dl-gpu-determinism/README.md)

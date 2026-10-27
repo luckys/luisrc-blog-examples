@@ -1,9 +1,9 @@
 {
   "objective": "Completar en español todas las fichas del roadmap, por series, con ejemplos y recursos estáticos e interactivos pertinentes.",
   "counts": {
-    "draft_exists": 78,
+    "draft_exists": 80,
     "related_only": 19,
-    "not_written": 78
+    "not_written": 76
   },
   "completionProven": false,
   "criteria": "draft_exists indica archivo con ID, no aceptación de todos los requisitos. related_only exige ampliar o escribir una ficha. No renombrar IDs para aparentar cobertura.",
@@ -1301,16 +1301,24 @@
         {
           "id": "P104",
           "title": "Pretraining, transfer learning y fine-tuning",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/self-supervision-denoising-aprender-sin-etiquetas.md",
+            "slug": "self-supervision-denoising-aprender-sin-etiquetas",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         },
         {
           "id": "P105",
           "title": "Entrenamiento eficiente en GPU",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/cpu-gpu-cuda-medir-entrenamiento-sincronizacion.md",
+            "slug": "cpu-gpu-cuda-medir-entrenamiento-sincronizacion",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         }

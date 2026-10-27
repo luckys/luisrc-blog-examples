@@ -3,7 +3,7 @@
   "locale": "es",
   "status": "draft",
   "lab": "attention-transformer",
-  "roadmapScope": "P103: Q/K/V, scaled dot-product, masks, multi-head attention, positional encodings, encoder/decoder y causal attention, con implementación explícita y controles numéricos. P104–P105 pendientes.",
+  "roadmapScope": "P103: Q/K/V, scaled dot-product, masks, multi-head attention, positional encodings, encoder/decoder y causal attention, con implementación explícita y controles numéricos. P104 continúa en model-adaptation; P105 continúa en gpu-training.",
   "dependencyFiles": [],
   "articles": [
     {

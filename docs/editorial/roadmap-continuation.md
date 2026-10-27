@@ -1,5 +1,117 @@
 # Continuación del objetivo editorial completo
 
+## Continuación vigente: P105 desarrollado en ocho drafts
+
+El último turno fue progreso. P104 y P105 suman 17 drafts nuevos sin commit.
+Ver [ruta GPU](ruta-entrenamiento-gpu.md), [manifiesto](gpu-training-series.json),
+[glosario](gpu-training-glossary.md) y [revisión](gpu-training-review.md).
+Español, draft true/status draft, Luis Ramírez Calle, independiente de PaySafe.
+Código completo en `packages/gpu-training`; ocho D2/SVG, cuatro plots y visor
+en el blog. Ocho extractos corresponden al código ejecutado.
+
+P105 usa GPU real: RTX 5070 Laptop, sm120, PyTorch 2.14.0+cu130, CUDA 13.0,
+Python 3.12.3. Captura del 26 de octubre a las 23:51:33 UTC. Runtime fijado por
+digest. Docker no tenía runtime NVIDIA/CDI: se montaron tres nodos y cuatro
+archivos concretos del driver readonly, sin editar driver ni daemon. Sin red,
+usuario 1000:100, cap-drop ALL, 2 CPUs/4 GiB, timeout 300 s. Solo se elimina el
+contenedor propio; la imagen queda disponible para repetir.
+
+Doce casos: CPU FP32 y CUDA FP32/FP16/BF16 por batches 32/128/512. Cada caso
+corre en un proceso nuevo, con ocho warmup y cinco muestras de diez iteraciones.
+MLP 512→1024→1024→16, 1.591.312 parámetros, pesos FP32, AdamW 0.001,
+weight decay 0.01, foreach false. Sin Dropout ni BatchNorm. Datos residentes y
+repetidos: no es calidad ni pipeline completo. CPU usa un thread. FP32 fue más
+rápido que AMP aquí; conservar el resultado. Peaks reiniciados tras warmup.
+
+Cuatro transferencias H2D de 1/16 MiB: pageable bloqueante frente a pinned no
+bloqueante, preparación excluida. No aísla pinning ni demuestra overlap.
+Probe inicial FP16/BF16: 63/64 argmax iguales a FP32. Acumulación de 21 filas,
+microbatches 8/8/5, un step SGD: error ponderado 3.725e-9 frente a 3.274e-4
+incorrecto. Profiler separado: 219 kernels, duración sumada 1064.807 µs;
+esa suma no es wall time. Repetir tres updates en la misma GPU/runtime dio
+pesos iguales; no promete igualdad entre versiones o tiempos idénticos.
+
+Once hashes. Verify audita estadísticas, fuentes y traza; NO vuelve a ejecutar
+el benchmark. Reobserve ejecuta otra captura y guarda el reporte separado en
+/tmp. No modificar fuentes numéricas sin regenerar una observación identificada.
+
+Pasan tres tests Python CUDA, cuatro JS, 209 editoriales/estructurales y 17 del
+blog. Chromium: 18 vistas a 1440/360, informe final
+`/tmp/gpu-training-layout.2sI4Aq/report.json`. Por ancho: doce casos/60 filas,
+cuatro copias/20 filas, tres probes y microbatches, cuarenta filas del profiler.
+Teclado, scroll horizontal/vertical, links e iframes; sin pageerrors ni overflow
+global. Doce figuras inspeccionadas; tres diagramas rehechos para mejorar móvil.
+Visor inicial sin scroll residual: `/tmp/gpu-training-visuals.fLr57e/report.json`.
+Build: 50 rutas; Pagefind diez páginas/4280 palabras/dos idiomas, drafts fuera.
+46 projects/45 labs, 336 índices/177 exports; lockfile intacto (pnpm offline/frozen).
+Inventario 80 draft_exists / 19 related_only / 76 not_written indica existencia,
+no aceptación del objetivo completo.
+
+Incidencia resuelta: el slug inicial de accumulation coincidía con el artículo
+DL-ACCUMULATION. Se restauró intacto y se creó una URL GPU propia, con enlace y
+dependencia de la teoría anterior. Los cinco posts históricos sin ID siguen
+válidos; la comprobación de unicidad solo considera IDs definidos.
+
+### Siguiente bloque: Serie 11 / P106 NLP y búsqueda léxica
+
+Leer la ficha completa del roadmap original. Temario: corpus, normalización,
+tokenización, stemming, lemmatization, n-grams, TF-IDF, BM25 y BPE/WordPiece.
+Laboratorio obligatorio: buscador BM25 con errores analizados y etiquetas de
+consulta guardadas. Dividir conceptos en posts específicos; código en examples,
+posts/recursos en blog y planificación/tools en examples. Consultar fuentes
+primarias y fijar corpus, consultas/gold y evaluación antes de optimizar.
+No sustituir recuperación léxica por un servicio externo LLM.
+
+El objetivo completo sigue abierto; mantener gaps P026, Stripe P045 y soak P058.
+Serie 02 solo estructuras/algoritmos. Sin commit/push, publicación, traducción
+o audio automáticos. Últimos commits: blog 89bc6b1/examples b591162.
+Servidor propio 2503878 cerrado tras QA; ningún contenedor GPU propio activo.
+
+
+## Continuación vigente: P104 desarrollado en nueve drafts
+
+El último turno fue progreso: añadió nueve artículos P104 y el laboratorio
+`model-adaptation`. No hay commit nuevo. Ver [ruta](ruta-adaptacion-modelos.md),
+[manifiesto](model-adaptation-series.json), [glosario](model-adaptation-glossary.md)
+y [revisión](model-adaptation-review.md). Español, draft true/status draft,
+Luis Ramírez Calle, independiente de PaySafe. Código completo en examples;
+nueve D2/SVG, cuatro plots y visor en el blog. Nueve extractos ejecutados.
+
+Protocolo declarado antes de resultados: tres pretrainings y 21 adaptaciones,
+siete estrategias por tres seeds, datos sintéticos con frontera lineal y 256 filas
+target test reservadas. Scratch iguala/supera full; conservar ese resultado.
+Retención con decoder original y módulo activo: pesos base intactos no implican
+comportamiento intacto. Contrastive: cálculo y gradientes de tres pares, sin
+entrenamiento SimCLR. El laboratorio P104 no es un benchmark de GPU.
+
+Verify repite entrenamientos, predicciones y curvas; once hashes numéricos.
+Pasan nueve tests Python, tres JS, 203 editoriales/estructurales y 17 del blog.
+Chromium: 20 vistas a 1440/360; informe inicial
+`/tmp/model-adaptation-layout.2OKVCg/report.json` (final), 13 figuras y cuatro
+secciones inspeccionadas. Se muestra en notación científica la loss pequeña de
+T=0.1 para evitar un cero aparente. El check final terminó correctamente.
+Servidor propio cerrado con astro dev stop tras completar QA.
+Build: 50 rutas, Pagefind diez páginas/4280 palabras/dos idiomas, drafts fuera.
+45 workspace projects/44 labs, 328 índices/168 exports. Inventario 79/19/77
+significa existencia, no aceptación global.
+
+### Siguiente bloque: P105 con GPU real disponible
+
+Preflight actual: NVIDIA GeForce RTX 5070 Laptop GPU, 8151 MiB, driver 595.99.02;
+`/dev/nvidia0` y `nvidia-smi` presentes. Elegir runtime CUDA compatible y fijado
+por digest: la imagen actual usa PyTorch CPU. No modificar el driver del usuario.
+Fijar el protocolo antes de medir: warmup, synchronize, repeticiones, batches,
+precisiones, VRAM allocated/reserved, controles de calidad FP32 y OOM acotado.
+Dividir CPU/GPU/transferencias, batching, mixed precision, accumulation, profiling
+y determinism en posts específicos. El preflight no satisface el gate P105.
+
+El objetivo de 175 fichas sigue abierto. Mantener gaps P026, Stripe P045 y soak
+P058. Serie 02 solo estructuras/algoritmos. Sin publicación, traducción, audio,
+commit o push automáticos. El usuario pidió los commits anteriores antes de
+reactivar el objetivo y ya estaban hechos: blog 89bc6b1/examples b591162.
+Los cambios P104 quedan para la próxima revisión. Detener el dev server propio
+tras terminar QA y comprobar el estado real al retomar.
+
 ## Continuación vigente: P103 escrito y organización editorial trasladada
 
 P101, P102 y P103 suman25drafts nuevos en español de Luis Ramírez Calle,

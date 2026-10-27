@@ -1,0 +1,300 @@
+{
+  "name": "Entrenar en GPU: cómputo, memoria y mediciones fiables",
+  "locale": "es",
+  "status": "draft",
+  "lab": "gpu-training",
+  "roadmapScope": "P105: CPU/GPU/CUDA, VRAM, transfers, batching, mixed precision, grad accumulation, profiler y determinism. Ocho drafts y doce configuraciones CPU/CUDA reales con tiempo/VRAM, controles y traza. P106–P175 y gaps previos siguen pendientes.",
+  "dependencyFiles": [],
+  "articles": [
+    {
+      "id": "P105",
+      "roadmapId": "P105",
+      "slug": "cpu-gpu-cuda-medir-entrenamiento-sincronizacion",
+      "title": "CPU, GPU y CUDA: medir el entrenamiento sin confundir envío y ejecución",
+      "question": "Qué cambia al enviar operaciones a GPU y cómo medir un update completo",
+      "prerequisites": [
+        "P099",
+        "P104"
+      ],
+      "objectives": [
+        "Separar host y device",
+        "Delimitar la región medida y sincronizar",
+        "Comparar CPU y GPU con sus restricciones"
+      ],
+      "commonErrors": [
+        "Cronometrar solo el envío asíncrono",
+        "Suponer que mover el modelo mueve los inputs",
+        "Presentar un thread CPU como rendimiento de toda la máquina"
+      ],
+      "files": [
+        "workload.py",
+        "measure.py",
+        "controls.py",
+        "profiling.py",
+        "case.py",
+        "experiments.py",
+        "run.mjs",
+        "verify-report.mjs",
+        "protocol.json",
+        "runtime.json",
+        "tests/test_workload.py",
+        "results/observations.json",
+        "results/profiler-trace.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-GPU-MEMORY",
+      "roadmapId": "P105",
+      "slug": "vram-pytorch-allocated-reserved-activaciones",
+      "title": "VRAM en PyTorch: por qué los parámetros no explican toda la memoria",
+      "question": "Qué ocupan pesos, estados y activaciones y qué muestran allocated/reserved",
+      "prerequisites": [
+        "P105"
+      ],
+      "objectives": [
+        "Contar arrays analíticos sin llamarlos peak observado",
+        "Medir picos tras warmup",
+        "Distinguir allocator y memoria global del dispositivo"
+      ],
+      "commonErrors": [
+        "Confundir reserved con una fuga",
+        "Usar empty_cache como solución a tensores vivos",
+        "Restar pesos para llamar activaciones a todo lo restante"
+      ],
+      "files": [
+        "workload.py",
+        "measure.py",
+        "controls.py",
+        "profiling.py",
+        "case.py",
+        "experiments.py",
+        "run.mjs",
+        "verify-report.mjs",
+        "protocol.json",
+        "runtime.json",
+        "tests/test_workload.py",
+        "results/observations.json",
+        "results/profiler-trace.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-GPU-TRANSFER",
+      "roadmapId": "P105",
+      "slug": "gpu-transferencias-pinned-memory-non-blocking",
+      "title": "Transferencias a GPU: qué cambian pinned memory y non_blocking",
+      "question": "Cómo medir copias H2D y qué falta para demostrar overlap",
+      "prerequisites": [
+        "DL-GPU-MEMORY"
+      ],
+      "objectives": [
+        "Separar preparación de host y copia medida",
+        "Comparar dos estrategias completas de transferencia",
+        "Mantener fuente y destino válidos hasta completar"
+      ],
+      "commonErrors": [
+        "Afirmar overlap por non_blocking=True",
+        "Ignorar el coste de pinning",
+        "Mutar la fuente antes de acabar una copia"
+      ],
+      "files": [
+        "workload.py",
+        "measure.py",
+        "controls.py",
+        "profiling.py",
+        "case.py",
+        "experiments.py",
+        "run.mjs",
+        "verify-report.mjs",
+        "protocol.json",
+        "runtime.json",
+        "tests/test_workload.py",
+        "results/observations.json",
+        "results/profiler-trace.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-GPU-BATCHING",
+      "roadmapId": "P105",
+      "slug": "gpu-batching-throughput-latencia-memoria",
+      "title": "Batching en GPU: procesar más ejemplos no equivale a aprender mejor",
+      "question": "Cómo batch cambia tiempo por update, throughput y pico de memoria",
+      "prerequisites": [
+        "DL-GPU-TRANSFER"
+      ],
+      "objectives": [
+        "Derivar ejemplos por segundo de muestras reales",
+        "Relacionar batch y activaciones",
+        "Separar presupuesto de updates y de ejemplos"
+      ],
+      "commonErrors": [
+        "Confundir throughput con latencia por petición",
+        "Comparar igual número de updates como igual número de ejemplos",
+        "Elegir batch solo por el mayor throughput"
+      ],
+      "files": [
+        "workload.py",
+        "measure.py",
+        "controls.py",
+        "profiling.py",
+        "case.py",
+        "experiments.py",
+        "run.mjs",
+        "verify-report.mjs",
+        "protocol.json",
+        "runtime.json",
+        "tests/test_workload.py",
+        "results/observations.json",
+        "results/profiler-trace.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-GPU-AMP",
+      "roadmapId": "P105",
+      "slug": "mixed-precision-autocast-fp16-bf16-gradscaler",
+      "title": "Mixed precision: qué hace autocast y por qué FP16 puede necesitar GradScaler",
+      "question": "Cómo combinar precisiones en operaciones sin convertir todos los pesos",
+      "prerequisites": [
+        "DL-GPU-BATCHING"
+      ],
+      "objectives": [
+        "Distinguir formatos de operación y de parámetros",
+        "Seguir escala, backward y step del optimizer",
+        "Contrastar logits/loss con FP32 y registrar diferencias"
+      ],
+      "commonErrors": [
+        "Convertir todo a half y llamarlo autocast",
+        "Escalar después de que un gradiente ya haya sufrido underflow",
+        "Dar por probada la misma calidad con logits cercanos"
+      ],
+      "files": [
+        "workload.py",
+        "measure.py",
+        "controls.py",
+        "profiling.py",
+        "case.py",
+        "experiments.py",
+        "run.mjs",
+        "verify-report.mjs",
+        "protocol.json",
+        "runtime.json",
+        "tests/test_workload.py",
+        "results/observations.json",
+        "results/profiler-trace.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-GPU-ACCUMULATION",
+      "roadmapId": "P105",
+      "slug": "gradient-accumulation-gpu-microbatches-desiguales",
+      "title": "Gradient accumulation: un batch lógico, varios backward y un solo step",
+      "question": "Cómo ponderar microbatches desiguales sin cambiar el objetivo",
+      "prerequisites": [
+        "DL-GPU-AMP",
+        "DL-ACCUMULATION"
+      ],
+      "objectives": [
+        "Derivar pesos por tamaño real",
+        "Comparar updates completos y acumulados",
+        "Reconocer límites con BatchNorm, Dropout y AMP"
+      ],
+      "commonErrors": [
+        "Promediar por igual microbatches desiguales",
+        "Hacer optimizer.step en cada microbatch",
+        "Reiniciar gradientes antes de cada backward"
+      ],
+      "files": [
+        "workload.py",
+        "measure.py",
+        "controls.py",
+        "profiling.py",
+        "case.py",
+        "experiments.py",
+        "run.mjs",
+        "verify-report.mjs",
+        "protocol.json",
+        "runtime.json",
+        "tests/test_workload.py",
+        "results/observations.json",
+        "results/profiler-trace.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-GPU-PROFILER",
+      "roadmapId": "P105",
+      "slug": "pytorch-profiler-cpu-kernels-tiempo-wall",
+      "title": "PyTorch Profiler: leer CPU y kernels sin sumar tiempos que se solapan",
+      "question": "Qué pregunta responde una traza instrumentada y cómo contrastarla con wall time",
+      "prerequisites": [
+        "DL-GPU-ACCUMULATION"
+      ],
+      "objectives": [
+        "Leer self time, total y shapes",
+        "Exigir evidencia de kernels CUDA reales",
+        "Separar observación instrumentada del benchmark"
+      ],
+      "commonErrors": [
+        "Confundir self CPU con ejecución de kernels",
+        "Sumar duraciones anidadas o solapadas",
+        "Publicar tiempos de profiler como latencia sin instrumentación"
+      ],
+      "files": [
+        "workload.py",
+        "measure.py",
+        "controls.py",
+        "profiling.py",
+        "case.py",
+        "experiments.py",
+        "run.mjs",
+        "verify-report.mjs",
+        "protocol.json",
+        "runtime.json",
+        "tests/test_workload.py",
+        "results/observations.json",
+        "results/profiler-trace.json",
+        "README.md"
+      ]
+    },
+    {
+      "id": "DL-GPU-DETERMINISM",
+      "roadmapId": "P105",
+      "slug": "gpu-determinism-seeds-tiempos-reproducibles",
+      "title": "Determinism en GPU: reproducir cálculos sin prometer tiempos idénticos",
+      "question": "Qué controla una seed y qué debe mantenerse fijo para interpretar una repetición",
+      "prerequisites": [
+        "DL-GPU-PROFILER"
+      ],
+      "objectives": [
+        "Fijar RNG, algoritmos y entorno",
+        "Probar repetición acotada en mismo runtime",
+        "Conservar muestras y variabilidad temporal"
+      ],
+      "commonErrors": [
+        "Usar una seed como garantía entre versiones",
+        "Comparar timings con igualdad exacta",
+        "Ocultar una medición adversa al repetir"
+      ],
+      "files": [
+        "workload.py",
+        "measure.py",
+        "controls.py",
+        "profiling.py",
+        "case.py",
+        "experiments.py",
+        "run.mjs",
+        "verify-report.mjs",
+        "protocol.json",
+        "runtime.json",
+        "tests/test_workload.py",
+        "results/observations.json",
+        "results/profiler-trace.json",
+        "README.md"
+      ]
+    }
+  ]
+}

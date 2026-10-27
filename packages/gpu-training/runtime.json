@@ -1,0 +1,9 @@
+{
+  "image": "pytorch/pytorch@sha256:9c99fafa01edfaa3d16da8c209b38b5970bb6fd6e72725ef60efc901489f70c6",
+  "platform": "linux/amd64",
+  "cpus": 2,
+  "memory": "4g",
+  "threads": 1,
+  "gpuAccess": "explicit device nodes and read-only host driver library files; no system configuration edits",
+  "devices": ["/dev/nvidia0", "/dev/nvidiactl", "/dev/nvidia-uvm"]
+}
