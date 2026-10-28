@@ -1,0 +1,222 @@
+[
+  {
+    "id": "Q01",
+    "split": "dev",
+    "text": "indice b tree",
+    "relevant": [
+      "D01"
+    ],
+    "category": "accent",
+    "intent": "Encontrar el índice B-tree, aunque falten tildes.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q02",
+    "split": "dev",
+    "text": "índice compuesto columnas",
+    "relevant": [
+      "D02"
+    ],
+    "category": "exact",
+    "intent": "Consultar el orden de columnas de un índice compuesto.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q03",
+    "split": "dev",
+    "text": "rollback transacción",
+    "relevant": [
+      "D03"
+    ],
+    "category": "exact",
+    "intent": "Revertir una transacción pendiente.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q04",
+    "split": "dev",
+    "text": "copias seguridad restauración",
+    "relevant": [
+      "D06",
+      "D07"
+    ],
+    "category": "morphology",
+    "intent": "Restaurar y comprobar una copia de seguridad.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q05",
+    "split": "dev",
+    "text": "hash contraseña",
+    "relevant": [
+      "D08"
+    ],
+    "category": "overlap",
+    "intent": "Guardar una contraseña con hash, no cifrar mensajes.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q06",
+    "split": "dev",
+    "text": "idempotencia reintentos",
+    "relevant": [
+      "D10"
+    ],
+    "category": "morphology",
+    "intent": "Evitar duplicar efectos al reintentar.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q07",
+    "split": "dev",
+    "text": "paginacion keyset",
+    "relevant": [
+      "D05"
+    ],
+    "category": "accent",
+    "intent": "Consultar paginación basada en la última clave.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q08",
+    "split": "dev",
+    "text": "tokens acceso",
+    "relevant": [
+      "D16"
+    ],
+    "category": "polysemy",
+    "intent": "Autorizar peticiones con tokens.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q09",
+    "split": "dev",
+    "text": "fuga memoria",
+    "relevant": [
+      "D12"
+    ],
+    "category": "exact",
+    "intent": "Diagnosticar objetos retenidos.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q10",
+    "split": "dev",
+    "text": "anios retencion",
+    "relevant": [
+      "D20"
+    ],
+    "category": "spelling",
+    "intent": "Consultar la duración de retención escrita con anios.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q11",
+    "split": "test",
+    "text": "deadlock bloqueos",
+    "relevant": [
+      "D04"
+    ],
+    "category": "exact",
+    "intent": "Explicar espera circular y víctima de deadlock.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q12",
+    "split": "test",
+    "text": "restaurar respaldo",
+    "relevant": [
+      "D06",
+      "D07"
+    ],
+    "category": "synonym",
+    "intent": "Recuperar una copia; respaldo es una paráfrasis.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q13",
+    "split": "test",
+    "text": "contraseñas hash",
+    "relevant": [
+      "D08"
+    ],
+    "category": "morphology",
+    "intent": "Guardar contraseñas con hash.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q14",
+    "split": "test",
+    "text": "caducidad cache",
+    "relevant": [
+      "D11"
+    ],
+    "category": "accent",
+    "intent": "Comprender el TTL de caché.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q15",
+    "split": "test",
+    "text": "cancelación goroutine",
+    "relevant": [
+      "D13"
+    ],
+    "category": "exact",
+    "intent": "Solicitar cancelación a una goroutine.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q16",
+    "split": "test",
+    "text": "secuencia perezosa python",
+    "relevant": [
+      "D14"
+    ],
+    "category": "exact",
+    "intent": "Producir valores sin construir la lista.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q17",
+    "split": "test",
+    "text": "prestamos rust",
+    "relevant": [
+      "D15"
+    ],
+    "category": "synonym",
+    "intent": "Consultar borrowing usando una traducción ausente del documento.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q18",
+    "split": "test",
+    "text": "logs sin secretos",
+    "relevant": [
+      "D18"
+    ],
+    "category": "negation",
+    "intent": "Prevenir que los logs incluyan secretos; el incidente D19 no es una guía preventiva.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q19",
+    "split": "test",
+    "text": "toknizacion",
+    "relevant": [
+      "D17"
+    ],
+    "category": "typo",
+    "intent": "Consultar tokenización con una omisión de letras.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  },
+  {
+    "id": "Q20",
+    "split": "test",
+    "text": "índice glucémico",
+    "relevant": [],
+    "category": "out_of_scope",
+    "intent": "La colección no explica índices glucémicos.",
+    "judgment": "didactic author labels; every other corpus document judged nonrelevant"
+  }
+]

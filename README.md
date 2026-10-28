@@ -229,3 +229,5 @@ El paquete [gpu-training](packages/gpu-training/README.md) acompaña ocho drafts
 12 configuraciones reales CPU/CUDA, tiempos y VRAM, copias H2D, controles
 numéricos y traza de 219 kernels. El benchmark usa datos residentes repetidos
 y CPU con un thread; no compara calidad ni un pipeline completo.
+
+[lexical-search](packages/lexical-search/README.md): once drafts P106, corpus original, BM25/TF-IDF, seis contrastes y 120 rankings etiquetados. Incluye errores de recuperación y trazas de BPE/WordPiece; sin modelos externos.

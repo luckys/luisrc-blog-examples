@@ -1,9 +1,9 @@
 {
   "objective": "Completar en español todas las fichas del roadmap, por series, con ejemplos y recursos estáticos e interactivos pertinentes.",
   "counts": {
-    "draft_exists": 80,
+    "draft_exists": 81,
     "related_only": 19,
-    "not_written": 76
+    "not_written": 75
   },
   "completionProven": false,
   "criteria": "draft_exists indica archivo con ID, no aceptación de todos los requisitos. related_only exige ampliar o escribir una ficha. No renombrar IDs para aparentar cobertura.",
@@ -1331,8 +1331,12 @@
         {
           "id": "P106",
           "title": "Fundamentos de NLP y búsqueda de texto",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/corpus-busqueda-lexica-documentos-consultas-relevancia.md",
+            "slug": "corpus-busqueda-lexica-documentos-consultas-relevancia",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         },

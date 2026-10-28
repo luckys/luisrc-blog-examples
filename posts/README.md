@@ -389,3 +389,17 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · dl-gpu-accumulation**: [Gradient accumulation: un batch lógico, varios backward y un solo step](es/dl-gpu-accumulation/README.md)
 - **es · dl-gpu-profiler**: [PyTorch Profiler: leer CPU y kernels sin sumar tiempos que se solapan](es/dl-gpu-profiler/README.md)
 - **es · dl-gpu-determinism**: [Determinism en GPU: reproducir cálculos sin prometer tiempos idénticos](es/dl-gpu-determinism/README.md)
+
+## Lexical search · P106
+
+- **es · p106**: [Corpus de búsqueda: decidir qué documento responde a una consulta](es/p106/README.md)
+- **es · nlp-normalization**: [Normalizar texto sin borrar diferencias que importan](es/nlp-normalization/README.md)
+- **es · nlp-tokenization**: [Tokenización: qué pierde un buscador al decidir dónde empieza una palabra](es/nlp-tokenization/README.md)
+- **es · nlp-stemming**: [Stemming: agrupar variantes también puede mezclar palabras distintas](es/nlp-stemming/README.md)
+- **es · nlp-lemma**: [Lemmatization: por qué un diccionario no resuelve toda la morfología](es/nlp-lemma/README.md)
+- **es · nlp-ngrams**: [N-grams: recuperar una errata sin llenar el ranking de parecidos](es/nlp-ngrams/README.md)
+- **es · nlp-tfidf**: [TF-IDF: de contar palabras a comparar vectores de documentos](es/nlp-tfidf/README.md)
+- **es · nlp-bm25**: [BM25 por dentro: postings, saturación y longitud de documentos](es/nlp-bm25/README.md)
+- **es · nlp-evaluation**: [Evaluar un buscador: el promedio no explica qué consulta acaba de fallar](es/nlp-evaluation/README.md)
+- **es · nlp-bpe**: [BPE: cómo aprender subwords uniendo pares frecuentes](es/nlp-bpe/README.md)
+- **es · nlp-wordpiece**: [WordPiece: elegir la subword más larga también puede acabar en UNK](es/nlp-wordpiece/README.md)

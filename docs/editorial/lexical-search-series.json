@@ -1,0 +1,432 @@
+{
+  "name": "Búsqueda de texto: del corpus a BM25 y subwords",
+  "locale": "es",
+  "status": "draft",
+  "lab": "lexical-search",
+  "roadmapScope": "P106 completo en once artículos: corpus, normalización, tokenización, stemming, lemmatization, n-grams, TF-IDF, BM25, evaluación, BPE y WordPiece. P107 y siguientes continúan pendientes.",
+  "dependencyFiles": [],
+  "articles": [
+    {
+      "id": "P106",
+      "roadmapId": "P106",
+      "slug": "corpus-busqueda-lexica-documentos-consultas-relevancia",
+      "title": "Corpus de búsqueda: decidir qué documento responde a una consulta",
+      "prerequisites": [
+        "DB-SQL",
+        "DB-ANALYTICS",
+        "P086"
+      ],
+      "question": "Cómo fijar unidad documental, procedencia y etiquetas antes del ranking",
+      "objectives": [
+        "Delimitar documentos y consultas",
+        "Guardar juicios de relevancia explícitos",
+        "Separar corpus didáctico de benchmark representativo"
+      ],
+      "commonErrors": [
+        "Llamar gold a los primeros resultados",
+        "Confundir fragmento y documento",
+        "Tratar un documento no juzgado como irrelevante"
+      ],
+      "files": [
+        "analysis.mjs",
+        "retrieval.mjs",
+        "evaluation.mjs",
+        "subwords.mjs",
+        "experiments.mjs",
+        "exercise.mjs",
+        "verify.mjs",
+        "corpus.json",
+        "queries.json",
+        "lexicon.json",
+        "protocol.json",
+        "tests/search.test.mjs",
+        "results/observations.json",
+        "README.md"
+      ],
+      "snippet": "buildIndex"
+    },
+    {
+      "id": "NLP-NORMALIZATION",
+      "roadmapId": "P106",
+      "slug": "normalizacion-texto-unicode-tildes-nfc-busqueda",
+      "title": "Normalizar texto sin borrar diferencias que importan",
+      "prerequisites": [
+        "P106"
+      ],
+      "question": "Qué equivalencias crea la normalización y cómo conservar el original",
+      "objectives": [
+        "Distinguir NFC de accent folding",
+        "Preservar ñ y texto original",
+        "Versionar el analyzer completo"
+      ],
+      "commonErrors": [
+        "Eliminar todas las marcas Unicode",
+        "Confundir normalizar con corregir erratas",
+        "Usar offsets normalizados sobre el original"
+      ],
+      "files": [
+        "analysis.mjs",
+        "retrieval.mjs",
+        "evaluation.mjs",
+        "subwords.mjs",
+        "experiments.mjs",
+        "exercise.mjs",
+        "verify.mjs",
+        "corpus.json",
+        "queries.json",
+        "lexicon.json",
+        "protocol.json",
+        "tests/search.test.mjs",
+        "results/observations.json",
+        "README.md"
+      ],
+      "snippet": "normalize"
+    },
+    {
+      "id": "NLP-TOKENIZATION",
+      "roadmapId": "P106",
+      "slug": "tokenizacion-texto-palabras-identificadores-negacion",
+      "title": "Tokenización: qué pierde un buscador al decidir dónde empieza una palabra",
+      "prerequisites": [
+        "NLP-NORMALIZATION"
+      ],
+      "question": "Cómo los límites de token cambian vocabulario y coincidencias",
+      "objectives": [
+        "Explicar término y ocurrencia",
+        "Probar símbolos y límites",
+        "Conservar negación sin prometer comprensión"
+      ],
+      "commonErrors": [
+        "Separar solo por espacios",
+        "Equiparar C++ y C# sin detectarlo",
+        "Aplicar stopwords antes de evaluar"
+      ],
+      "files": [
+        "analysis.mjs",
+        "retrieval.mjs",
+        "evaluation.mjs",
+        "subwords.mjs",
+        "experiments.mjs",
+        "exercise.mjs",
+        "verify.mjs",
+        "corpus.json",
+        "queries.json",
+        "lexicon.json",
+        "protocol.json",
+        "tests/search.test.mjs",
+        "results/observations.json",
+        "README.md"
+      ],
+      "snippet": "tokenize"
+    },
+    {
+      "id": "NLP-STEMMING",
+      "roadmapId": "P106",
+      "slug": "stemming-busqueda-reducir-sufijos-falsas-coincidencias",
+      "title": "Stemming: agrupar variantes también puede mezclar palabras distintas",
+      "prerequisites": [
+        "NLP-TOKENIZATION"
+      ],
+      "question": "Qué gana y pierde una regla que reduce terminaciones",
+      "objectives": [
+        "Distinguir stem y palabra de diccionario",
+        "Mostrar over/under-stemming",
+        "Comparar ranking antes y después"
+      ],
+      "commonErrors": [
+        "Llamar Snowball a quitar dos sufijos",
+        "Suponer que menos vocabulario implica más calidad",
+        "Confundir stemming con sinónimos"
+      ],
+      "files": [
+        "analysis.mjs",
+        "retrieval.mjs",
+        "evaluation.mjs",
+        "subwords.mjs",
+        "experiments.mjs",
+        "exercise.mjs",
+        "verify.mjs",
+        "corpus.json",
+        "queries.json",
+        "lexicon.json",
+        "protocol.json",
+        "tests/search.test.mjs",
+        "results/observations.json",
+        "README.md"
+      ],
+      "snippet": "pluralStem"
+    },
+    {
+      "id": "NLP-LEMMA",
+      "roadmapId": "P106",
+      "slug": "lemmatization-lookup-contexto-ambiguedad-busqueda",
+      "title": "Lemmatization: por qué un diccionario no resuelve toda la morfología",
+      "prerequisites": [
+        "NLP-STEMMING"
+      ],
+      "question": "Qué información hace falta para convertir una forma en su lema",
+      "objectives": [
+        "Distinguir lema y stem",
+        "Limitar honestamente un lookup",
+        "Separar morfología y expansión semántica"
+      ],
+      "commonErrors": [
+        "Inventar el lema de fue sin contexto",
+        "Confundir lookup con un tagger",
+        "Ampliar con sinónimos y llamarlo lemmatization"
+      ],
+      "files": [
+        "analysis.mjs",
+        "retrieval.mjs",
+        "evaluation.mjs",
+        "subwords.mjs",
+        "experiments.mjs",
+        "exercise.mjs",
+        "verify.mjs",
+        "corpus.json",
+        "queries.json",
+        "lexicon.json",
+        "protocol.json",
+        "tests/search.test.mjs",
+        "results/observations.json",
+        "README.md"
+      ],
+      "snippet": "lemmaLookup"
+    },
+    {
+      "id": "NLP-NGRAMS",
+      "roadmapId": "P106",
+      "slug": "n-grams-palabras-caracteres-busqueda-errores",
+      "title": "N-grams: recuperar una errata sin llenar el ranking de parecidos",
+      "prerequisites": [
+        "NLP-LEMMA"
+      ],
+      "question": "Cómo ventanas de palabras y caracteres cambian recall y ruido",
+      "objectives": [
+        "Diferenciar word y character n-grams",
+        "Calcular crecimiento de ocurrencias",
+        "Examinar regresiones por coincidencias parciales"
+      ],
+      "commonErrors": [
+        "Llamar semántica a compartir tres letras",
+        "Confundir trigramas con BPE",
+        "Ocultar regresiones tras el promedio"
+      ],
+      "files": [
+        "analysis.mjs",
+        "retrieval.mjs",
+        "evaluation.mjs",
+        "subwords.mjs",
+        "experiments.mjs",
+        "exercise.mjs",
+        "verify.mjs",
+        "corpus.json",
+        "queries.json",
+        "lexicon.json",
+        "protocol.json",
+        "tests/search.test.mjs",
+        "results/observations.json",
+        "README.md"
+      ],
+      "snippet": "charNgrams"
+    },
+    {
+      "id": "NLP-TFIDF",
+      "roadmapId": "P106",
+      "slug": "tf-idf-cosine-pesos-terminos-busqueda",
+      "title": "TF-IDF: de contar palabras a comparar vectores de documentos",
+      "prerequisites": [
+        "NLP-NGRAMS"
+      ],
+      "question": "Cómo frecuencia, rareza y normalización construyen un score sparse",
+      "objectives": [
+        "Distinguir TF y DF",
+        "Construir IDF suavizado",
+        "Calcular cosine sin confundirlo con probabilidad"
+      ],
+      "commonErrors": [
+        "Contar ocurrencias como DF",
+        "Ajustar vocabulario con consultas test",
+        "Comparar scores de métodos como misma escala"
+      ],
+      "files": [
+        "analysis.mjs",
+        "retrieval.mjs",
+        "evaluation.mjs",
+        "subwords.mjs",
+        "experiments.mjs",
+        "exercise.mjs",
+        "verify.mjs",
+        "corpus.json",
+        "queries.json",
+        "lexicon.json",
+        "protocol.json",
+        "tests/search.test.mjs",
+        "results/observations.json",
+        "README.md"
+      ],
+      "snippet": "cosineScore"
+    },
+    {
+      "id": "NLP-BM25",
+      "roadmapId": "P106",
+      "slug": "bm25-indice-invertido-saturacion-longitud-documentos",
+      "title": "BM25 por dentro: postings, saturación y longitud de documentos",
+      "prerequisites": [
+        "NLP-TFIDF"
+      ],
+      "question": "Cómo obtener un ranking explicable con frecuencia y longitud",
+      "objectives": [
+        "Seguir candidatos OR por postings",
+        "Descomponer BM25 por término",
+        "Interpretar k1 y b con curvas"
+      ],
+      "commonErrors": [
+        "Sumar scores como probabilidad de relevancia",
+        "Multiplicar TF por repeticiones de query sin declararlo",
+        "Comparar implementación didáctica y Lucene como idénticas"
+      ],
+      "files": [
+        "analysis.mjs",
+        "retrieval.mjs",
+        "evaluation.mjs",
+        "subwords.mjs",
+        "experiments.mjs",
+        "exercise.mjs",
+        "verify.mjs",
+        "corpus.json",
+        "queries.json",
+        "lexicon.json",
+        "protocol.json",
+        "tests/search.test.mjs",
+        "results/observations.json",
+        "README.md"
+      ],
+      "snippet": "bm25Contribution"
+    },
+    {
+      "id": "NLP-EVALUATION",
+      "roadmapId": "P106",
+      "slug": "evaluar-busqueda-bm25-precision-recall-mrr-errores",
+      "title": "Evaluar un buscador: el promedio no explica qué consulta acaba de fallar",
+      "prerequisites": [
+        "NLP-BM25"
+      ],
+      "question": "Cómo medir top-k con etiquetas y conservar errores fuera de alcance",
+      "objectives": [
+        "Calcular P@3 R@3 y MRR@3",
+        "Separar queries sin respuesta",
+        "Relacionar métricas con errores concretos"
+      ],
+      "commonErrors": [
+        "Cambiar etiquetas al ver el ranking",
+        "Contar queries sin respuesta como recall perfecto",
+        "Presentar fixtures diseñadas como test ciego"
+      ],
+      "files": [
+        "analysis.mjs",
+        "retrieval.mjs",
+        "evaluation.mjs",
+        "subwords.mjs",
+        "experiments.mjs",
+        "exercise.mjs",
+        "verify.mjs",
+        "corpus.json",
+        "queries.json",
+        "lexicon.json",
+        "protocol.json",
+        "tests/search.test.mjs",
+        "results/observations.json",
+        "README.md"
+      ],
+      "snippet": "metrics"
+    },
+    {
+      "id": "NLP-BPE",
+      "roadmapId": "P106",
+      "slug": "bpe-subwords-aprender-merges-tokenizacion",
+      "title": "BPE: cómo aprender subwords uniendo pares frecuentes",
+      "prerequisites": [
+        "NLP-EVALUATION"
+      ],
+      "question": "Cómo entrenar y aplicar merges sin confundir subwords con morfemas",
+      "objectives": [
+        "Separar aprendizaje e inferencia",
+        "Seguir frecuencia y orden de merges",
+        "Reconocer límites del alfabeto y byte fallback"
+      ],
+      "commonErrors": [
+        "Tratar subwords como raíces lingüísticas",
+        "Entrenar otro tokenizer para un modelo ya entrenado",
+        "Dar un carácter desconocido por token válido del modelo"
+      ],
+      "files": [
+        "analysis.mjs",
+        "retrieval.mjs",
+        "evaluation.mjs",
+        "subwords.mjs",
+        "experiments.mjs",
+        "exercise.mjs",
+        "verify.mjs",
+        "corpus.json",
+        "queries.json",
+        "lexicon.json",
+        "protocol.json",
+        "tests/search.test.mjs",
+        "results/observations.json",
+        "README.md"
+      ],
+      "snippet": "trainBpe"
+    },
+    {
+      "id": "NLP-WORDPIECE",
+      "roadmapId": "P106",
+      "slug": "wordpiece-greedy-vocabulario-unk-diferencias-bpe",
+      "title": "WordPiece: elegir la subword más larga también puede acabar en UNK",
+      "prerequisites": [
+        "NLP-BPE"
+      ],
+      "question": "Cómo segmentar con vocabulario fijo y fallar sin inventar tokens",
+      "objectives": [
+        "Seguir longest-match por posición",
+        "Explicar prefijo de continuación",
+        "Contrastar inferencia con BPE sin atribuir un trainer ausente"
+      ],
+      "commonErrors": [
+        "Confundir ## con texto de la entrada",
+        "Guardar un prefijo válido tras fallo de palabra completa",
+        "Afirmar que el trainer original está en esta demo"
+      ],
+      "files": [
+        "analysis.mjs",
+        "retrieval.mjs",
+        "evaluation.mjs",
+        "subwords.mjs",
+        "experiments.mjs",
+        "exercise.mjs",
+        "verify.mjs",
+        "corpus.json",
+        "queries.json",
+        "lexicon.json",
+        "protocol.json",
+        "tests/search.test.mjs",
+        "results/observations.json",
+        "README.md"
+      ],
+      "snippet": "wordPiece"
+    }
+  ],
+  "roadmapPrerequisites": [
+    "P033",
+    "P086"
+  ],
+  "prerequisiteMapping": {
+    "P033": {
+      "articles": [
+        "DB-SQL",
+        "DB-ANALYTICS"
+      ],
+      "acceptance": "related coverage only; original P033 remains unproven"
+    }
+  }
+}

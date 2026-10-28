@@ -2,7 +2,7 @@
 
 Inventario generado desde el catálogo de 175 fichas y los artículos españoles reales. No es una certificación de completitud editorial ni de laboratorios.
 
-IDs con borrador propio: **80**. Solo material relacionado: **19**. Sin artículo identificado: **76**.
+IDs con borrador propio: **81**. Solo material relacionado: **19**. Sin artículo identificado: **75**.
 
 Cada ficha requiere revisión contra su temario obligatorio, laboratorio y Definition of Done. Un artículo agrupado no completa automáticamente varias fichas.
 
@@ -169,7 +169,7 @@ P063 se amplía en ocho drafts: pipeline/gates, artefactos, flags, smoke, rollin
 
 ## Serie 11. NLP, LLM, RAG y agentes (posts 106–121)
 
-- P106. Fundamentos de NLP y búsqueda de texto: pendiente.
+- P106. Fundamentos de NLP y búsqueda de texto: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/corpus-busqueda-lexica-documentos-consultas-relevancia.md).
 - P107. Named Entity Recognition y etiquetado de spans: pendiente.
 - P108. Cómo funcionan los modelos de lenguaje: pendiente.
 - P109. Inferencia y generación de texto con LLM: pendiente.

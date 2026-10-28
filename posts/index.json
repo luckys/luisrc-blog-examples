@@ -5732,5 +5732,291 @@
       "packages/gpu-training/README.md"
     ],
     "directory": "es/dl-gpu-accumulation"
+  },
+  {
+    "locale": "es",
+    "slug": "corpus-busqueda-lexica-documentos-consultas-relevancia",
+    "title": "Corpus de búsqueda: decidir qué documento responde a una consulta",
+    "post": "src/content/posts/es/corpus-busqueda-lexica-documentos-consultas-relevancia.md",
+    "labs": [
+      "lexical-search"
+    ],
+    "files": [
+      "packages/lexical-search/analysis.mjs",
+      "packages/lexical-search/retrieval.mjs",
+      "packages/lexical-search/evaluation.mjs",
+      "packages/lexical-search/subwords.mjs",
+      "packages/lexical-search/experiments.mjs",
+      "packages/lexical-search/exercise.mjs",
+      "packages/lexical-search/verify.mjs",
+      "packages/lexical-search/corpus.json",
+      "packages/lexical-search/queries.json",
+      "packages/lexical-search/lexicon.json",
+      "packages/lexical-search/protocol.json",
+      "packages/lexical-search/tests/search.test.mjs",
+      "packages/lexical-search/results/observations.json",
+      "packages/lexical-search/README.md"
+    ],
+    "directory": "es/p106"
+  },
+  {
+    "locale": "es",
+    "slug": "normalizacion-texto-unicode-tildes-nfc-busqueda",
+    "title": "Normalizar texto sin borrar diferencias que importan",
+    "post": "src/content/posts/es/normalizacion-texto-unicode-tildes-nfc-busqueda.md",
+    "labs": [
+      "lexical-search"
+    ],
+    "files": [
+      "packages/lexical-search/analysis.mjs",
+      "packages/lexical-search/retrieval.mjs",
+      "packages/lexical-search/evaluation.mjs",
+      "packages/lexical-search/subwords.mjs",
+      "packages/lexical-search/experiments.mjs",
+      "packages/lexical-search/exercise.mjs",
+      "packages/lexical-search/verify.mjs",
+      "packages/lexical-search/corpus.json",
+      "packages/lexical-search/queries.json",
+      "packages/lexical-search/lexicon.json",
+      "packages/lexical-search/protocol.json",
+      "packages/lexical-search/tests/search.test.mjs",
+      "packages/lexical-search/results/observations.json",
+      "packages/lexical-search/README.md"
+    ],
+    "directory": "es/nlp-normalization"
+  },
+  {
+    "locale": "es",
+    "slug": "tokenizacion-texto-palabras-identificadores-negacion",
+    "title": "Tokenización: qué pierde un buscador al decidir dónde empieza una palabra",
+    "post": "src/content/posts/es/tokenizacion-texto-palabras-identificadores-negacion.md",
+    "labs": [
+      "lexical-search"
+    ],
+    "files": [
+      "packages/lexical-search/analysis.mjs",
+      "packages/lexical-search/retrieval.mjs",
+      "packages/lexical-search/evaluation.mjs",
+      "packages/lexical-search/subwords.mjs",
+      "packages/lexical-search/experiments.mjs",
+      "packages/lexical-search/exercise.mjs",
+      "packages/lexical-search/verify.mjs",
+      "packages/lexical-search/corpus.json",
+      "packages/lexical-search/queries.json",
+      "packages/lexical-search/lexicon.json",
+      "packages/lexical-search/protocol.json",
+      "packages/lexical-search/tests/search.test.mjs",
+      "packages/lexical-search/results/observations.json",
+      "packages/lexical-search/README.md"
+    ],
+    "directory": "es/nlp-tokenization"
+  },
+  {
+    "locale": "es",
+    "slug": "stemming-busqueda-reducir-sufijos-falsas-coincidencias",
+    "title": "Stemming: agrupar variantes también puede mezclar palabras distintas",
+    "post": "src/content/posts/es/stemming-busqueda-reducir-sufijos-falsas-coincidencias.md",
+    "labs": [
+      "lexical-search"
+    ],
+    "files": [
+      "packages/lexical-search/analysis.mjs",
+      "packages/lexical-search/retrieval.mjs",
+      "packages/lexical-search/evaluation.mjs",
+      "packages/lexical-search/subwords.mjs",
+      "packages/lexical-search/experiments.mjs",
+      "packages/lexical-search/exercise.mjs",
+      "packages/lexical-search/verify.mjs",
+      "packages/lexical-search/corpus.json",
+      "packages/lexical-search/queries.json",
+      "packages/lexical-search/lexicon.json",
+      "packages/lexical-search/protocol.json",
+      "packages/lexical-search/tests/search.test.mjs",
+      "packages/lexical-search/results/observations.json",
+      "packages/lexical-search/README.md"
+    ],
+    "directory": "es/nlp-stemming"
+  },
+  {
+    "locale": "es",
+    "slug": "lemmatization-lookup-contexto-ambiguedad-busqueda",
+    "title": "Lemmatization: por qué un diccionario no resuelve toda la morfología",
+    "post": "src/content/posts/es/lemmatization-lookup-contexto-ambiguedad-busqueda.md",
+    "labs": [
+      "lexical-search"
+    ],
+    "files": [
+      "packages/lexical-search/analysis.mjs",
+      "packages/lexical-search/retrieval.mjs",
+      "packages/lexical-search/evaluation.mjs",
+      "packages/lexical-search/subwords.mjs",
+      "packages/lexical-search/experiments.mjs",
+      "packages/lexical-search/exercise.mjs",
+      "packages/lexical-search/verify.mjs",
+      "packages/lexical-search/corpus.json",
+      "packages/lexical-search/queries.json",
+      "packages/lexical-search/lexicon.json",
+      "packages/lexical-search/protocol.json",
+      "packages/lexical-search/tests/search.test.mjs",
+      "packages/lexical-search/results/observations.json",
+      "packages/lexical-search/README.md"
+    ],
+    "directory": "es/nlp-lemma"
+  },
+  {
+    "locale": "es",
+    "slug": "n-grams-palabras-caracteres-busqueda-errores",
+    "title": "N-grams: recuperar una errata sin llenar el ranking de parecidos",
+    "post": "src/content/posts/es/n-grams-palabras-caracteres-busqueda-errores.md",
+    "labs": [
+      "lexical-search"
+    ],
+    "files": [
+      "packages/lexical-search/analysis.mjs",
+      "packages/lexical-search/retrieval.mjs",
+      "packages/lexical-search/evaluation.mjs",
+      "packages/lexical-search/subwords.mjs",
+      "packages/lexical-search/experiments.mjs",
+      "packages/lexical-search/exercise.mjs",
+      "packages/lexical-search/verify.mjs",
+      "packages/lexical-search/corpus.json",
+      "packages/lexical-search/queries.json",
+      "packages/lexical-search/lexicon.json",
+      "packages/lexical-search/protocol.json",
+      "packages/lexical-search/tests/search.test.mjs",
+      "packages/lexical-search/results/observations.json",
+      "packages/lexical-search/README.md"
+    ],
+    "directory": "es/nlp-ngrams"
+  },
+  {
+    "locale": "es",
+    "slug": "tf-idf-cosine-pesos-terminos-busqueda",
+    "title": "TF-IDF: de contar palabras a comparar vectores de documentos",
+    "post": "src/content/posts/es/tf-idf-cosine-pesos-terminos-busqueda.md",
+    "labs": [
+      "lexical-search"
+    ],
+    "files": [
+      "packages/lexical-search/analysis.mjs",
+      "packages/lexical-search/retrieval.mjs",
+      "packages/lexical-search/evaluation.mjs",
+      "packages/lexical-search/subwords.mjs",
+      "packages/lexical-search/experiments.mjs",
+      "packages/lexical-search/exercise.mjs",
+      "packages/lexical-search/verify.mjs",
+      "packages/lexical-search/corpus.json",
+      "packages/lexical-search/queries.json",
+      "packages/lexical-search/lexicon.json",
+      "packages/lexical-search/protocol.json",
+      "packages/lexical-search/tests/search.test.mjs",
+      "packages/lexical-search/results/observations.json",
+      "packages/lexical-search/README.md"
+    ],
+    "directory": "es/nlp-tfidf"
+  },
+  {
+    "locale": "es",
+    "slug": "bm25-indice-invertido-saturacion-longitud-documentos",
+    "title": "BM25 por dentro: postings, saturación y longitud de documentos",
+    "post": "src/content/posts/es/bm25-indice-invertido-saturacion-longitud-documentos.md",
+    "labs": [
+      "lexical-search"
+    ],
+    "files": [
+      "packages/lexical-search/analysis.mjs",
+      "packages/lexical-search/retrieval.mjs",
+      "packages/lexical-search/evaluation.mjs",
+      "packages/lexical-search/subwords.mjs",
+      "packages/lexical-search/experiments.mjs",
+      "packages/lexical-search/exercise.mjs",
+      "packages/lexical-search/verify.mjs",
+      "packages/lexical-search/corpus.json",
+      "packages/lexical-search/queries.json",
+      "packages/lexical-search/lexicon.json",
+      "packages/lexical-search/protocol.json",
+      "packages/lexical-search/tests/search.test.mjs",
+      "packages/lexical-search/results/observations.json",
+      "packages/lexical-search/README.md"
+    ],
+    "directory": "es/nlp-bm25"
+  },
+  {
+    "locale": "es",
+    "slug": "evaluar-busqueda-bm25-precision-recall-mrr-errores",
+    "title": "Evaluar un buscador: el promedio no explica qué consulta acaba de fallar",
+    "post": "src/content/posts/es/evaluar-busqueda-bm25-precision-recall-mrr-errores.md",
+    "labs": [
+      "lexical-search"
+    ],
+    "files": [
+      "packages/lexical-search/analysis.mjs",
+      "packages/lexical-search/retrieval.mjs",
+      "packages/lexical-search/evaluation.mjs",
+      "packages/lexical-search/subwords.mjs",
+      "packages/lexical-search/experiments.mjs",
+      "packages/lexical-search/exercise.mjs",
+      "packages/lexical-search/verify.mjs",
+      "packages/lexical-search/corpus.json",
+      "packages/lexical-search/queries.json",
+      "packages/lexical-search/lexicon.json",
+      "packages/lexical-search/protocol.json",
+      "packages/lexical-search/tests/search.test.mjs",
+      "packages/lexical-search/results/observations.json",
+      "packages/lexical-search/README.md"
+    ],
+    "directory": "es/nlp-evaluation"
+  },
+  {
+    "locale": "es",
+    "slug": "bpe-subwords-aprender-merges-tokenizacion",
+    "title": "BPE: cómo aprender subwords uniendo pares frecuentes",
+    "post": "src/content/posts/es/bpe-subwords-aprender-merges-tokenizacion.md",
+    "labs": [
+      "lexical-search"
+    ],
+    "files": [
+      "packages/lexical-search/analysis.mjs",
+      "packages/lexical-search/retrieval.mjs",
+      "packages/lexical-search/evaluation.mjs",
+      "packages/lexical-search/subwords.mjs",
+      "packages/lexical-search/experiments.mjs",
+      "packages/lexical-search/exercise.mjs",
+      "packages/lexical-search/verify.mjs",
+      "packages/lexical-search/corpus.json",
+      "packages/lexical-search/queries.json",
+      "packages/lexical-search/lexicon.json",
+      "packages/lexical-search/protocol.json",
+      "packages/lexical-search/tests/search.test.mjs",
+      "packages/lexical-search/results/observations.json",
+      "packages/lexical-search/README.md"
+    ],
+    "directory": "es/nlp-bpe"
+  },
+  {
+    "locale": "es",
+    "slug": "wordpiece-greedy-vocabulario-unk-diferencias-bpe",
+    "title": "WordPiece: elegir la subword más larga también puede acabar en UNK",
+    "post": "src/content/posts/es/wordpiece-greedy-vocabulario-unk-diferencias-bpe.md",
+    "labs": [
+      "lexical-search"
+    ],
+    "files": [
+      "packages/lexical-search/analysis.mjs",
+      "packages/lexical-search/retrieval.mjs",
+      "packages/lexical-search/evaluation.mjs",
+      "packages/lexical-search/subwords.mjs",
+      "packages/lexical-search/experiments.mjs",
+      "packages/lexical-search/exercise.mjs",
+      "packages/lexical-search/verify.mjs",
+      "packages/lexical-search/corpus.json",
+      "packages/lexical-search/queries.json",
+      "packages/lexical-search/lexicon.json",
+      "packages/lexical-search/protocol.json",
+      "packages/lexical-search/tests/search.test.mjs",
+      "packages/lexical-search/results/observations.json",
+      "packages/lexical-search/README.md"
+    ],
+    "directory": "es/nlp-wordpiece"
   }
 ]

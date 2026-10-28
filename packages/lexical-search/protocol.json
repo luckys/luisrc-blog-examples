@@ -1,0 +1,63 @@
+{
+  "scope": "P106 lexical retrieval, original synthetic Spanish collection; no representative benchmark claim",
+  "corpus": "20 original title+body documents, equal weight, no title boost, IDs stable",
+  "judgments": "20 queries, all 400 pairs judged; binary arrays list relevant IDs, all others zero; one no-answer query",
+  "split": "Q01-Q10 dev; Q11-Q20 test. Labels fixed before first scoring. This is constructed didactic data, not blind independent human evaluation.",
+  "variants": [
+    "bm25-literal",
+    "bm25-fold",
+    "bm25-plural",
+    "bm25-lookup",
+    "bm25-char3",
+    "tfidf-fold"
+  ],
+  "selection": "No winning configuration selected and no test-driven tuning. Six preregistered contrasts, no hyperparameter search.",
+  "normalization": "NFC, lowercase es; fold only áéíóúü to aeiouu, preserve ñ. No stopword removal.",
+  "tokenization": "Unicode letters/marks/numbers regex; code identifiers split at punctuation; not a universal tokenizer",
+  "bm25": {
+    "k1": 1.2,
+    "b": 0.75,
+    "idf": "log(1+(N-df+0.5)/(df+0.5))",
+    "query": "unique analyzed terms; OR candidates; only positive scores; ID lexicographic tie-break"
+  },
+  "tfidf": {
+    "tf": "raw count",
+    "idf": "log((1+N)/(1+df))+1",
+    "norm": "L2 each document and query; unknown query terms ignored"
+  },
+  "metrics": {
+    "k": 3,
+    "answerable": "macro P@3 with fixed denominator 3, R@3, reciprocal rank truncated at 3; average over 19 answerable only, separately by split",
+    "unanswerable": "report false matches for Q20 separately; no invented recall for empty relevant set"
+  },
+  "subwords": {
+    "corpus": {
+      "bajo": 5,
+      "bajos": 2,
+      "baja": 3,
+      "caja": 2
+    },
+    "merges": 5,
+    "bpe": "character-level, word boundaries, frequency ties by code point, ordered learned merges",
+    "wordpiece": "inference with fixed toy vocabulary, longest match, whole-word UNK on failure; no WordPiece trainer",
+    "vocabulary": [
+      "[UNK]",
+      "bajo",
+      "baja",
+      "caja",
+      "##s",
+      "c",
+      "##a",
+      "##j",
+      "##o"
+    ]
+  },
+  "reproducibility": "Node >=24.19.0, no network/dependencies; report records Node/ICU/Unicode and source hashes; verify recomputes all scores and compares at 1e-12",
+  "limitations": [
+    "No search latency/scale benchmark",
+    "No neural lemmatizer or complete Snowball; plural reducer and lookup are deliberately limited",
+    "No byte-level BPE; WordPiece trainer not implemented",
+    "No semantic understanding or relevance probability",
+    "No factual instructions from returned text executed"
+  ]
+}

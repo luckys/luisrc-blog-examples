@@ -1,0 +1,14 @@
+{
+  "name": "@luisrc-examples/lexical-search",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "exercise": "node exercise.mjs",
+    "verify": "node verify.mjs",
+    "render": "node render.mjs"
+  },
+  "engines": {
+    "node": ">=24.19.0"
+  }
+}

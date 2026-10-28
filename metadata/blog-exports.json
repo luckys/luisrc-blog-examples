@@ -706,5 +706,53 @@
   {
     "source": "packages/gpu-training/training-time.svg",
     "destination": "public/assets/interactive/gpu-training/training-time.svg"
+  },
+  {
+    "source": "packages/lexical-search/explorer.html",
+    "destination": "public/assets/interactive/lexical-search/explorer.html"
+  },
+  {
+    "source": "packages/lexical-search/explorer.mjs",
+    "destination": "public/assets/interactive/lexical-search/explorer.mjs"
+  },
+  {
+    "source": "packages/lexical-search/charts.mjs",
+    "destination": "public/assets/interactive/lexical-search/charts.mjs"
+  },
+  {
+    "source": "packages/lexical-search/analysis.mjs",
+    "destination": "public/assets/interactive/lexical-search/analysis.mjs"
+  },
+  {
+    "source": "packages/lexical-search/retrieval.mjs",
+    "destination": "public/assets/interactive/lexical-search/retrieval.mjs"
+  },
+  {
+    "source": "packages/lexical-search/evaluation.mjs",
+    "destination": "public/assets/interactive/lexical-search/evaluation.mjs"
+  },
+  {
+    "source": "packages/lexical-search/subwords.mjs",
+    "destination": "public/assets/interactive/lexical-search/subwords.mjs"
+  },
+  {
+    "source": "packages/lexical-search/comparison.json",
+    "destination": "public/assets/interactive/lexical-search/comparison.json"
+  },
+  {
+    "source": "packages/lexical-search/test-recall.svg",
+    "destination": "public/assets/interactive/lexical-search/test-recall.svg"
+  },
+  {
+    "source": "packages/lexical-search/vocabulary.svg",
+    "destination": "public/assets/interactive/lexical-search/vocabulary.svg"
+  },
+  {
+    "source": "packages/lexical-search/saturation.svg",
+    "destination": "public/assets/interactive/lexical-search/saturation.svg"
+  },
+  {
+    "source": "packages/lexical-search/length.svg",
+    "destination": "public/assets/interactive/lexical-search/length.svg"
   }
 ]

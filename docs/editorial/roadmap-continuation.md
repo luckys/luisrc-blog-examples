@@ -1,5 +1,75 @@
 # Continuación del objetivo editorial completo
 
+## Continuación vigente: P106 desarrollado en once drafts
+
+El último turno fue progreso. Se completó el bloque P106 en once posts, con once
+diagramas D2/SVG, cuatro figuras y visor interactivo. Español, draft true/status
+draft, Luis Ramírez Calle, independiente de PaySafe. Código completo en
+`packages/lexical-search`; solo assets estáticos se exportan al blog.
+Ver [ruta](ruta-busqueda-lexica.md), [manifiesto](lexical-search-series.json),
+[glosario](lexical-search-glossary.md) y [revisión](lexical-search-review.md).
+
+IDs en orden: P106, NLP-NORMALIZATION, NLP-TOKENIZATION, NLP-STEMMING, NLP-LEMMA,
+NLP-NGRAMS, NLP-TFIDF, NLP-BM25, NLP-EVALUATION, NLP-BPE, NLP-WORDPIECE.
+El prerrequisito P033 del roadmap no tiene ID exacto existente; se enlazan
+DB-SQL/DB-ANALYTICS conservando el gap de aceptación de P033, sin renombrar IDs.
+
+Corpus original de veinte documentos título+cuerpo, veinte queries con intención,
+diez dev/diez test. Todos los cuatrocientos pares juzgados por una convención
+didáctica explícita antes del scoring, sin evaluación ciega ni representatividad.
+Seis contrastes fijos, sin tuning o selección de ganador. Q20 fuera de alcance
+se informa aparte; métricas null y nueve test con respuesta, no diez.
+
+Captura 2026-10-27T18:40:34.660Z, Node24.19.0/ICU78.3/Unicode17.0. BM25 k1=1.2,
+b=.75, IDF positiva, términos query únicos, OR, scores positivos y empate por ID.
+TF-IDF rawTF/smoothIDF/L2. NFC/lowercase es, fold áéíóúü conserva ñ. No stopwords.
+Plural reducer incompleto NO Snowball; lookup trece entradas NO tagger contextual.
+Char3 dentro de palabras por puntos de código. BPE aprende cinco merges sobre
+cuatro palabras, caracteres y fallback ilustrativo, no byte-level/model IDs.
+WordPiece es solo inferencia greedy, vocabulario fijo, whole-word UNK, no trainer.
+
+Resultados preservados: test fold P@3 .296296/R@3 .833333/MRR@3 .888889 frente a
+char3 .370370/1/.925926. Char3 rescata Q19 pero empeora Q17 de D15 primero a
+D06/D07/D15. Q10 mejora por retencion sin corregir anios. Q12 sigue perdiendo
+D06 con palabras. Q20 devuelve falsos relevantes; Q18 no prueba negación.
+No generalizar calidad comercial ni confundir score y probabilidad.
+
+Nueve hashes; verify recalcula todos los rankings/contribuciones/métricas y
+trazas. No modificar fuentes numéricas sin capturar e identificar otro resultado.
+Nueve tests JS, 214 editoriales/estructura y 17 del blog verdes. Build 50 rutas,
+Pagefind diez páginas/4280 palabras/dos idiomas, drafts fuera. pnpm offline/frozen
+47 projects/46 labs, lock intacto. 347 índices y 189 exports.
+
+Navegador: `/tmp/lexical-search-layout.LzhMVG/report.json`, 24 vistas a 1440/360,
+120 rankings por ancho con scores/contribuciones, tres splits, siete subword
+probes, teclado/scroll y queries libres; sin pageerrors/global overflow.
+Se corrigió overflow real de output y navegación defectuosa del propio check.
+Quince figuras inspeccionadas; ocho capturas limpias, scroll inicial cero:
+`/tmp/lexical-search-visuals.ByTDU2/report.json`. Ver revisión para límites.
+
+El objetivo de 175 fichas sigue abierto. Inventario 81/19/75 significa existencia,
+no aceptación. Mantener gaps P026, Stripe P045 y soak P058. Serie02 solo datos y
+algoritmos. No publicar, traducir, generar audio ni hacer commits/push automáticos.
+P104/P105 SÍ están comiteados por petición anterior: blog 2d38206 y examples
+9a37040. El usuario solicitó guardar todos los cambios de P106 mediante commits
+el 28 de octubre de 2026; consultar git log en ambos repositorios. El servidor local
+propio PID2613323 quedó cerrado al terminar QA.
+
+### Siguiente bloque: P107, NER y spans
+
+Leer la ficha P107 completa del roadmap principal. Prerrequisitos P092, P093,
+P106 y P104. Separar anotación/spans/offsets, BIO, rule-based, modelo entrenado,
+entity-level precision/recall/F1 y errores de límites. Gate: ENTRENAR un detector
+de nombres/organizaciones con conjunto anotado y revisar confusiones. Un matcher
+de reglas o llamar un servicio externo no sustituye ese entrenamiento.
+
+Fijar corpus/splits/anotaciones/protocolo antes de entrenar; evitar fuga por
+plantillas o entidades repetidas y no inventar calidad sobre un test trivial.
+El laboratorio vive en examples, artículos/diagramas/visores en blog y material
+editorial/tools en examples. Consultar fuentes primarias, usar pnpm al instalar.
+
+## Historial anterior: estado de cada entrega en su momento
+
 ## Continuación vigente: P105 desarrollado en ocho drafts
 
 El último turno fue progreso. P104 y P105 suman 17 drafts nuevos sin commit.
