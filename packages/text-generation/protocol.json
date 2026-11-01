@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "status": "fixed before sampling or latency measurement",
+  "roadmap": "P109",
+  "source": {
+    "package": "language-models",
+    "modelSeed": 7,
+    "checkpoint": "results/observations.json",
+    "selection": "seed 7 fixed for controlled decoding contrasts, not best P108 test seed"
+  },
+  "prompts": [
+    "el equipo",
+    "la ingeniera consulta los"
+  ],
+  "samplingSeeds": [
+    11,
+    23,
+    47
+  ],
+  "maxNewTokens": 10,
+  "contextPolicy": "reject initial prompt over16; stop context_limit before forward over16; no implicit sliding window",
+  "strategies": [
+    {
+      "id": "greedy",
+      "mode": "greedy",
+      "temperature": 1,
+      "topK": null,
+      "topP": null
+    },
+    {
+      "id": "sample",
+      "mode": "sample",
+      "temperature": 1,
+      "topK": null,
+      "topP": null
+    },
+    {
+      "id": "temperature-half",
+      "mode": "sample",
+      "temperature": 0.5,
+      "topK": null,
+      "topP": null
+    },
+    {
+      "id": "temperature-high",
+      "mode": "sample",
+      "temperature": 1.5,
+      "topK": null,
+      "topP": null
+    },
+    {
+      "id": "top-k-2",
+      "mode": "sample",
+      "temperature": 1,
+      "topK": 2,
+      "topP": null
+    },
+    {
+      "id": "top-p-08",
+      "mode": "sample",
+      "temperature": 1,
+      "topK": null,
+      "topP": 0.8
+    }
+  ],
+  "filterOrder": "temperature -> exact top-k by descending probability/ascending ID -> renormalize -> minimal top-p prefix including threshold-crossing token -> renormalize; tests cover composition although measured variants use one truncation at most",
+  "rng": "LCG32: state=(1664525*state+1013904223) mod2^32; u=state/2^32; one draw per sampled token; inverse CDF in vocabulary ID order; greedy consumes no draw",
+  "specialTokens": "no token suppression; EOS emitted and logged then stop; PAD/BOS/UNK remain possible if model assigns mass",
+  "controls": [
+    "maxNewTokens=1 with first prompt; max_new_tokens reason if no earlier EOS",
+    "21 IDs of prompt (BOS +20 el tokens): reject by default",
+    "same long prompt with explicit left_preserve_bos window: keep BOS+last15 IDs and reset positions, diagnostic out of training context",
+    "fixed-logits fixtures for ties, exact top-p crossing, renormalization and CDF boundaries"
+  ],
+  "streaming": {
+    "transport": "real JSONL stdout flush after each inference step; consumer sends request on stdin after ready; no artificial sleeps; no HTTP/SSE claim",
+    "model": "same frozen model seed7",
+    "prompt": "el equipo",
+    "strategy": "greedy",
+    "warmupRequests": 2,
+    "measuredRequests": 5,
+    "maxNewTokens": 10,
+    "clock": "producer perf_counter_ns and consumer hrtime.bigint, relative durations only; never compare absolute timestamps across processes",
+    "metrics": "client TTFT from stdin request write to first token line, total until done, mean inter-token gap=(last-first)/(n-1) when n>1; retain producer timings and chunk/coalescing arrivals",
+    "excluded": "model imports/loading and container startup precede ready; no tokenization of arbitrary text; no GPU, KV-cache, concurrency or network benchmark"
+  },
+  "selection": "all36 rollouts and controls retained; no strategy winner or best sample selection; repeated greedy seeds intentionally retained",
+  "limits": [
+    "tiny 3205-parameter causal model and known synthetic grammar, not LLM quality",
+    "reusing trained weights, not fine-tuning; all model probabilities differ from filtered selection probabilities",
+    "three sampling seeds are examples, not diversity/quality population estimates",
+    "timings illustrative on this CPU/pipe; replay in blog is not live inference/streaming",
+    "no certainty that decoding filters fix grammar, facts or calibration"
+  ]
+}

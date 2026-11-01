@@ -1,0 +1,15 @@
+{
+  "image": "quay.io/jupyter/pytorch-notebook@sha256:7d0701eb4492de8facbb90845c7d4d4dd9da84d3f72e321f5f7be1962047ad11",
+  "platform": "linux/amd64",
+  "python": "3.13.17",
+  "pydantic": "2.14.1",
+  "jsonschema": "4.26.0",
+  "node": "24.19.0",
+  "transformersJs": "3.8.1",
+  "model": "onnx-community/Qwen2.5-0.5B-Instruct",
+  "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+  "dtype": "q4",
+  "device": "cpu",
+  "intraOpNumThreads": 2,
+  "interOpNumThreads": 1
+}

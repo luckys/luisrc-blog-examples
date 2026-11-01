@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "status": "fixed_before_embedding_inference",
+  "purpose": "Separate semantic relevance from numerical neighbor recall and search-only latency.",
+  "semantic": {
+    "corpus": "Unmodified P106 original synthetic 20 Spanish documents",
+    "queries": "Unmodified P106 dev10/test10, author-known judgments; no new blind test claim",
+    "input": "title + one space + body; query unchanged",
+    "baseline": "P106 BM25 fold, k1=1.2 b=.75; same analyzer for corpus/query; no tuning",
+    "dense": "384d mean pooling with attention mask, normalized float32 vectors; cosine exhaustive ranking; all candidates including negative scores",
+    "k": 3,
+    "metrics": "P@3 with fixed denominator3, R@3, truncated RR@3, macro over answerable queries separately dev/test; negative query separately",
+    "abstention": "None. Do not calibrate a threshold on Q20 or reinterpret similarity as probability."
+  },
+  "encoder": {
+    "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+    "dtype": "q8",
+    "device": "cpu",
+    "dimensions": 384,
+    "maxTokens": 128,
+    "pooling": "attention-mask weighted mean including unmasked special tokens; no normalization before saving raw vectors",
+    "batchSize": 8,
+    "intraOpNumThreads": 2,
+    "interOpNumThreads": 1,
+    "provenance": "Fixed converted ONNX snapshot and hashes, not original full-precision model or API"
+  },
+  "indexControl": {
+    "documents": 1000,
+    "composition": "20 semantic documents plus 980 deterministic original synthetic support records; all genuinely encoded by the same model",
+    "relevance": "No semantic labels for the 980 controls. Their experiment evaluates numerical nearest-neighbor approximation only.",
+    "k": 10,
+    "reference": "FAISS FlatL2 over the same normalized float32 vectors; squared L2",
+    "hnswM": [4, 16],
+    "efConstruction": 40,
+    "efSearch": [4, 16, 64],
+    "insertionOrder": "semantic IDs D01..D20, then S0001..S0980; single native thread; native default graph RNG, not an exposed controlled seed",
+    "annRecall": "Intersection of ANN top10 IDs with the stored exact FlatL2 top10 / 10, mean across20 queries. Exact-boundary ties may make set recall sensitive; retain distances and boundary gaps.",
+    "warmupRounds": 3,
+    "measurementRounds": 30,
+    "schedule": "round-major, strategies in declared order, queries Q01..Q20; no best-run selection",
+    "timing": "performance.now around synchronous native search only, preencoded inputs, result allocation included; record every request; no end-to-end or concurrency claim",
+    "pgvector": "Separate PostgreSQL run, exact and HNSW cosine with plans verified; pg client query timing includes IPC; never compare it as pure native kernel time"
+  },
+  "selection": "No model selection, tuning, post-result label edits or favorable retry; preserve regressions, unchanged results and negative-query neighbors.",
+  "limits": "Tiny synthetic corpus and author-known judgments; not a benchmark of models, production scale, user relevance or security. Index control has no semantic gold."
+}

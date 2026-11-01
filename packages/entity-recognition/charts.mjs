@@ -1,0 +1,10 @@
+export function lossChart(loss) {
+  const points=loss.flatMap((value,i)=>i%20===0||i===80||i===800||i===loss.length-1?[(48+i/(loss.length-1)*276).toFixed(2)+','+(220-value/1.7*160).toFixed(2)]:[]).join(' ');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="360" height="290" viewBox="0 0 360 290" role="img" aria-labelledby="loss-title"><title id="loss-title">Cross-entropy de train frente a pasos full-batch</title><rect width="360" height="290" fill="#0f172a"/><g fill="#e2e8f0" font-family="sans-serif" font-size="15"><text x="16" y="25">Cross-entropy de train</text><path d="M48 50 V220 H330" fill="none" stroke="#94a3b8"/><text x="12" y="65">1,7</text><text x="24" y="225">0</text><text x="48" y="246">0</text><text x="176" y="246">${Math.floor((loss.length-1)/2)}</text><text x="289" y="246">${loss.length-1}</text><text x="100" y="274">Pasos full-batch</text><polyline points="${points}" fill="none" stroke="#22d3ee" stroke-width="3"/></g></svg>`;
+}
+export function f1Chart(variants) {
+  const series=[['train','#22d3ee'],['dev','#fbbf24'],['test','#c4b5fd']];
+  let svg='<svg xmlns="http://www.w3.org/2000/svg" width="360" height="300" viewBox="0 0 360 300" role="img" aria-labelledby="f1-title"><title id="f1-title">F1 exacto por split en los pasos 80, 800 y 1600</title><rect width="360" height="300" fill="#0f172a"/><g fill="#e2e8f0" font-family="sans-serif" font-size="15"><text x="16" y="25">F1 exacto por split</text><path d="M48 50 V220 H330" fill="none" stroke="#94a3b8"/><text x="20" y="60">1</text><text x="20" y="224">0</text><text x="45" y="245">80</text><text x="165" y="245">800</text><text x="290" y="245">1600</text>';
+  for(let s=0;s<series.length;s++){const[split,color]=series[s],points=variants.map((v,i)=>(52+i*128)+','+(220-v.metrics[split].exact.f1*160));svg+=`<polyline points="${points.join(' ')}" fill="none" stroke="${color}" stroke-width="3"/>`;variants.forEach((v,i)=>svg+=`<circle cx="${52+i*128}" cy="${220-v.metrics[split].exact.f1*160}" r="${5-s}" fill="${color}"/>`);svg+=`<text x="${24+s*112}" y="280" fill="${color}">${split}</text>`;}
+  return svg+'</g></svg>';
+}

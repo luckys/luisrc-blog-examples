@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 336 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 383 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -231,3 +231,13 @@ numéricos y traza de 219 kernels. El benchmark usa datos residentes repetidos
 y CPU con un thread; no compara calidad ni un pipeline completo.
 
 [lexical-search](packages/lexical-search/README.md): once drafts P106, corpus original, BM25/TF-IDF, seis contrastes y 120 rankings etiquetados. Incluye errores de recuperación y trazas de BPE/WordPiece; sin modelos externos.
+
+[entity-recognition](packages/entity-recognition/README.md): P107 en siete drafts: spans Unicode, BIO, reglas, entrenamiento real, convergencia y errores. Conserva el fracaso inicial y la baja generalización.
+
+[language-models](packages/language-models/README.md): P108 en seis drafts. Transformer causal pequeño entrenado, distribuciones completas, métricas, figuras y visor de predicciones guardadas.
+
+[text-generation](packages/text-generation/README.md): P109 en siete drafts. 36 generaciones congeladas, filtros contrastados y streaming real medido, con diagramas y visor de capturas.
+
+[structured-extraction](packages/structured-extraction/README.md): P110 en siete drafts; 24 respuestas reales, validación estricta, evidencias y propuestas locales de herramientas. Diagramas, figuras y visor de capturas.
+
+[vector-retrieval](packages/vector-retrieval/README.md): P111 desarrollado en drafts; encoder real, comparación BM25/vector y capturas FAISS/pgvector. Nueve borradores escritos; figuras y visor de geometría, índices, relevancia y medición. Revisión final completada; sin publicación.

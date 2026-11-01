@@ -1,0 +1,25 @@
+# Qué predice un modelo de lenguaje: probabilidades, no una única respuesta
+
+Laboratorio compartido P108. Modelo causal entrenado, probabilidades completas y controles.
+
+- [README.md](../../../packages/language-models/README.md)
+- [corpus.json](../../../packages/language-models/corpus.json)
+- [protocol.json](../../../packages/language-models/protocol.json)
+- [tokenizer.mjs](../../../packages/language-models/tokenizer.mjs)
+- [prepare.mjs](../../../packages/language-models/prepare.mjs)
+- [tokenized.json](../../../packages/language-models/tokenized.json)
+- [runtime.json](../../../packages/language-models/runtime.json)
+- [fetch-runtime.mjs](../../../packages/language-models/fetch-runtime.mjs)
+- [model.py](../../../packages/language-models/model.py)
+- [experiments.py](../../../packages/language-models/experiments.py)
+- [run.mjs](../../../packages/language-models/run.mjs)
+- [verify.py](../../../packages/language-models/verify.py)
+- [results/observations.json](../../../packages/language-models/results/observations.json)
+- [analysis.mjs](../../../packages/language-models/analysis.mjs)
+- [charts.mjs](../../../packages/language-models/charts.mjs)
+- [render.mjs](../../../packages/language-models/render.mjs)
+- [viewer-data.json](../../../packages/language-models/viewer-data.json)
+- [tests/tokenizer.test.mjs](../../../packages/language-models/tests/tokenizer.test.mjs)
+- [tests/observations.test.mjs](../../../packages/language-models/tests/observations.test.mjs)
+- [tests/analysis.test.mjs](../../../packages/language-models/tests/analysis.test.mjs)
+- [tests/test_model.py](../../../packages/language-models/tests/test_model.py)

@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "status": "fixed before first model fitting",
+  "roadmap": "P108",
+  "scope": "Train one tiny causal Transformer LM architecture from scratch; inspect full next-token distributions. No pretrained LLM or language competence claim.",
+  "tokenizer": {
+    "normalization": "none",
+    "rule": "Unicode letters/marks/numbers or individual non-whitespace symbols, no case folding",
+    "vocabularyFit": "train only, code-point sorted",
+    "specialTokens": [
+      "<PAD>",
+      "<BOS>",
+      "<EOS>",
+      "<UNK>"
+    ],
+    "unseen": "UNK",
+    "boundaries": "BOS and EOS per sentence"
+  },
+  "architecture": {
+    "kind": "one pre-LayerNorm causal self-attention block, no cross-attention",
+    "dModel": 16,
+    "heads": 2,
+    "ffn": 32,
+    "positions": 16,
+    "activation": "GELU exact",
+    "dropout": 0,
+    "head": "untied affine vocabulary projection",
+    "finalLayerNorm": true,
+    "layerNormEps": 1e-05
+  },
+  "training": {
+    "seeds": [
+      7,
+      19,
+      31
+    ],
+    "dtype": "float64",
+    "optimizer": "Adam",
+    "learningRate": 0.01,
+    "weightDecay": 0,
+    "updates": 300,
+    "batching": "full train batch, no shuffle",
+    "loss": "mean next-token cross-entropy over teacher-forced input BOS..dot and targets first word..EOS",
+    "selection": "final fixed step only, report all three seeds; no winner selection"
+  },
+  "splitRule": "All 6*3*4=72 authored combinations; (subjectIndex+verbIndex+objectIndex)%5: 0 test,1 dev,otherwise train",
+  "splitCounts": {
+    "train": 44,
+    "dev": 14,
+    "test": 14
+  },
+  "controls": [
+    "unigram target frequencies fit train only, no context",
+    "alter future suffix keeping four-token prefix identical: causal prefix logits must stay fixed",
+    "same suffix contrast with causal mask disabled: diagnostic only, NOT a trained masked LM",
+    "export full probabilities/logits, log-loss, token accuracy and sample IDs for every split"
+  ],
+  "probes": [
+    "",
+    "el",
+    "el equipo",
+    "el equipo revisa",
+    "la ingeniera consulta",
+    "la ingeniera consulta los",
+    "el servicio publica la propuesta."
+  ],
+  "limits": [
+    "Closed synthetic grammar and shared templates/prefixes across splits, not independent natural-language test",
+    "Some next tokens have multiple valid continuations; a single observed target is not the only meaningful continuation",
+    "No held-out domain or grammar, no publication benchmark, no latency/GPU claims",
+    "Training only causal decoder-style LM; encoder masked LM and encoder-decoder explained separately without attributing an absent experiment",
+    "Context cap16positions, one sentence at a time; BOS/EOS, not chat template"
+  ]
+}

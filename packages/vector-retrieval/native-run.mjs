@@ -1,0 +1,10 @@
+import {createRequire} from 'node:module';
+import {dirname,join} from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const target=process.argv[2];
+if(!['probe-native.mjs','bench-native.mjs'].includes(target))throw Error('Unknown native task');
+const require=createRequire(import.meta.url),release=join(dirname(require.resolve('faiss-napi/package.json')),'build/Release');
+const env={...process.env,OMP_NUM_THREADS:'1',MKL_NUM_THREADS:'1',OPENBLAS_NUM_THREADS:'1',LD_LIBRARY_PATH:release+(process.env.LD_LIBRARY_PATH?':'+process.env.LD_LIBRARY_PATH:'')};
+const result=spawnSync(process.execPath,[fileURLToPath(new URL(target,import.meta.url))],{env,stdio:'inherit',timeout:300000});
+if(result.error)throw result.error;process.exitCode=result.status??1;

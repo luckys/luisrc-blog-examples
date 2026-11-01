@@ -1,0 +1,701 @@
+{
+  "kind": "actual_pipe_generation_stream_measurements",
+  "capturedAt": "2026-10-28T23:51:16.571Z",
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "Intel(R) Core(TM) Ultra 9 285H",
+    "container": "quay.io/jupyter/pytorch-notebook@sha256:7d0701eb4492de8facbb90845c7d4d4dd9da84d3f72e321f5f7be1962047ad11",
+    "producer": {
+      "type": "ready",
+      "python": "3.13.17",
+      "torch": "2.14.1+cpu",
+      "modelSeed": 7,
+      "threads": 1
+    }
+  },
+  "protocol": {
+    "transport": "real JSONL stdout flush after each inference step; consumer sends request on stdin after ready; no artificial sleeps; no HTTP/SSE claim",
+    "model": "same frozen model seed7",
+    "prompt": "el equipo",
+    "strategy": "greedy",
+    "warmupRequests": 2,
+    "measuredRequests": 5,
+    "maxNewTokens": 10,
+    "clock": "producer perf_counter_ns and consumer hrtime.bigint, relative durations only; never compare absolute timestamps across processes",
+    "metrics": "client TTFT from stdin request write to first token line, total until done, mean inter-token gap=(last-first)/(n-1) when n>1; retain producer timings and chunk/coalescing arrivals",
+    "excluded": "model imports/loading and container startup precede ready; no tokenization of arbitrary text; no GPU, KV-cache, concurrency or network benchmark"
+  },
+  "sourceHashes": {
+    "protocol.json": "1cb0bce1f5f857e69b3e8767b7f00174016a8c043d79bf6d390fbb2069678393",
+    "runtime.json": "7188aae1bad82dfa99113c90357625c8d59af4c3d3c27db2df6175205075ad53",
+    "inputs.json": "5035cc7614252ea69e3008f5ce268078f2a7fdf6d67c6b0e0f1d2d4423c87088",
+    "generation.py": "50e90070c33552308309f73b9d2574c01258801537c83ad8c6e0040967290877",
+    "stream.py": "90b1f2e614c59e592d4e55220ebf82b5029f72f61a0383c669429296baa5690a",
+    "stream-client.mjs": "a6a42f82bc5cdb66b1ed2ee7bdd7e4fecc02254ae30ffc4b2b4683f0b03fcf14",
+    "stream-metrics.mjs": "cc8183965838611ffcd6de0699b2f046056019ac7e99438ee9461888f9ea3782",
+    "../language-models/model.py": "d6133c12f15fdeefab78039ef652f952e0bfa7c8d4279b9c866dfbe8edbfb2df",
+    "../language-models/results/observations.json": "bb225097a525afa9e70b529f069985c399ef3d42d88dec6971dc2b5fe7adb26c"
+  },
+  "startupMs": 1719.252941,
+  "requests": [
+    {
+      "id": "R1",
+      "warmup": true,
+      "events": [
+        {
+          "type": "token",
+          "id": "R1",
+          "index": 0,
+          "token": 19,
+          "text": "revisa",
+          "producerElapsedMs": 1.400171,
+          "inferenceStepMs": 1.396157,
+          "modelProbability": 0.3406152259570547,
+          "receivedMs": 2.950796,
+          "chunk": 2
+        },
+        {
+          "type": "token",
+          "id": "R1",
+          "index": 1,
+          "token": 14,
+          "text": "la",
+          "producerElapsedMs": 1.717549,
+          "inferenceStepMs": 0.270514,
+          "modelProbability": 0.50324387159274,
+          "receivedMs": 3.21494,
+          "chunk": 3
+        },
+        {
+          "type": "token",
+          "id": "R1",
+          "index": 2,
+          "token": 16,
+          "text": "propuesta",
+          "producerElapsedMs": 1.964219,
+          "inferenceStepMs": 0.219069,
+          "modelProbability": 0.9985206447585068,
+          "receivedMs": 3.21494,
+          "chunk": 3
+        },
+        {
+          "type": "token",
+          "id": "R1",
+          "index": 3,
+          "token": 4,
+          "text": ".",
+          "producerElapsedMs": 2.182972,
+          "inferenceStepMs": 0.195729,
+          "modelProbability": 0.9993234727980835,
+          "receivedMs": 3.399519,
+          "chunk": 4
+        },
+        {
+          "type": "token",
+          "id": "R1",
+          "index": 4,
+          "token": 2,
+          "text": "<EOS>",
+          "producerElapsedMs": 2.388846,
+          "inferenceStepMs": 0.185114,
+          "modelProbability": 0.9987939330357289,
+          "receivedMs": 3.525376,
+          "chunk": 5
+        },
+        {
+          "type": "done",
+          "id": "R1",
+          "reason": "eos",
+          "generatedIds": [
+            19,
+            14,
+            16,
+            4,
+            2
+          ],
+          "producerElapsedMs": 2.410435,
+          "receivedMs": 3.525376,
+          "chunk": 5
+        }
+      ],
+      "consumer": {
+        "tokens": 5,
+        "ttftMs": 2.950796,
+        "totalMs": 3.525376,
+        "meanInterTokenMs": 0.14364500000000002
+      },
+      "producer": {
+        "tokens": 5,
+        "ttftMs": 1.400171,
+        "totalMs": 2.410435,
+        "meanInterTokenMs": 0.24716875
+      }
+    },
+    {
+      "id": "R2",
+      "warmup": true,
+      "events": [
+        {
+          "type": "token",
+          "id": "R2",
+          "index": 0,
+          "token": 19,
+          "text": "revisa",
+          "producerElapsedMs": 0.415353,
+          "inferenceStepMs": 0.407478,
+          "modelProbability": 0.3406152259570547,
+          "receivedMs": 0.977458,
+          "chunk": 6
+        },
+        {
+          "type": "token",
+          "id": "R2",
+          "index": 1,
+          "token": 14,
+          "text": "la",
+          "producerElapsedMs": 0.665571,
+          "inferenceStepMs": 0.213808,
+          "modelProbability": 0.50324387159274,
+          "receivedMs": 1.17788,
+          "chunk": 7
+        },
+        {
+          "type": "token",
+          "id": "R2",
+          "index": 2,
+          "token": 16,
+          "text": "propuesta",
+          "producerElapsedMs": 0.875231,
+          "inferenceStepMs": 0.186126,
+          "modelProbability": 0.9985206447585068,
+          "receivedMs": 1.273008,
+          "chunk": 8
+        },
+        {
+          "type": "token",
+          "id": "R2",
+          "index": 3,
+          "token": 4,
+          "text": ".",
+          "producerElapsedMs": 1.075138,
+          "inferenceStepMs": 0.179704,
+          "modelProbability": 0.9993234727980835,
+          "receivedMs": 1.640067,
+          "chunk": 9
+        },
+        {
+          "type": "token",
+          "id": "R2",
+          "index": 4,
+          "token": 2,
+          "text": "<EOS>",
+          "producerElapsedMs": 1.271231,
+          "inferenceStepMs": 0.176584,
+          "modelProbability": 0.9987939330357289,
+          "receivedMs": 1.788786,
+          "chunk": 10
+        },
+        {
+          "type": "done",
+          "id": "R2",
+          "reason": "eos",
+          "generatedIds": [
+            19,
+            14,
+            16,
+            4,
+            2
+          ],
+          "producerElapsedMs": 1.297667,
+          "receivedMs": 1.788786,
+          "chunk": 10
+        }
+      ],
+      "consumer": {
+        "tokens": 5,
+        "ttftMs": 0.977458,
+        "totalMs": 1.788786,
+        "meanInterTokenMs": 0.20283199999999998
+      },
+      "producer": {
+        "tokens": 5,
+        "ttftMs": 0.415353,
+        "totalMs": 1.297667,
+        "meanInterTokenMs": 0.21396949999999998
+      }
+    },
+    {
+      "id": "R3",
+      "warmup": false,
+      "events": [
+        {
+          "type": "token",
+          "id": "R3",
+          "index": 0,
+          "token": 19,
+          "text": "revisa",
+          "producerElapsedMs": 0.393975,
+          "inferenceStepMs": 0.386772,
+          "modelProbability": 0.3406152259570547,
+          "receivedMs": 0.85249,
+          "chunk": 11
+        },
+        {
+          "type": "token",
+          "id": "R3",
+          "index": 1,
+          "token": 14,
+          "text": "la",
+          "producerElapsedMs": 0.660856,
+          "inferenceStepMs": 0.230275,
+          "modelProbability": 0.50324387159274,
+          "receivedMs": 3.338462,
+          "chunk": 12
+        },
+        {
+          "type": "token",
+          "id": "R3",
+          "index": 2,
+          "token": 16,
+          "text": "propuesta",
+          "producerElapsedMs": 0.874028,
+          "inferenceStepMs": 0.186912,
+          "modelProbability": 0.9985206447585068,
+          "receivedMs": 3.338462,
+          "chunk": 12
+        },
+        {
+          "type": "token",
+          "id": "R3",
+          "index": 3,
+          "token": 4,
+          "text": ".",
+          "producerElapsedMs": 1.075155,
+          "inferenceStepMs": 0.179073,
+          "modelProbability": 0.9993234727980835,
+          "receivedMs": 3.338462,
+          "chunk": 12
+        },
+        {
+          "type": "token",
+          "id": "R3",
+          "index": 4,
+          "token": 2,
+          "text": "<EOS>",
+          "producerElapsedMs": 1.275421,
+          "inferenceStepMs": 0.178398,
+          "modelProbability": 0.9987939330357289,
+          "receivedMs": 3.338462,
+          "chunk": 12
+        },
+        {
+          "type": "done",
+          "id": "R3",
+          "reason": "eos",
+          "generatedIds": [
+            19,
+            14,
+            16,
+            4,
+            2
+          ],
+          "producerElapsedMs": 1.295875,
+          "receivedMs": 3.338462,
+          "chunk": 12
+        }
+      ],
+      "consumer": {
+        "tokens": 5,
+        "ttftMs": 0.85249,
+        "totalMs": 3.338462,
+        "meanInterTokenMs": 0.621493
+      },
+      "producer": {
+        "tokens": 5,
+        "ttftMs": 0.393975,
+        "totalMs": 1.295875,
+        "meanInterTokenMs": 0.2203615
+      }
+    },
+    {
+      "id": "R4",
+      "warmup": false,
+      "events": [
+        {
+          "type": "token",
+          "id": "R4",
+          "index": 0,
+          "token": 19,
+          "text": "revisa",
+          "producerElapsedMs": 0.399234,
+          "inferenceStepMs": 0.389781,
+          "modelProbability": 0.3406152259570547,
+          "receivedMs": 1.527344,
+          "chunk": 13
+        },
+        {
+          "type": "token",
+          "id": "R4",
+          "index": 1,
+          "token": 14,
+          "text": "la",
+          "producerElapsedMs": 0.648878,
+          "inferenceStepMs": 0.212356,
+          "modelProbability": 0.50324387159274,
+          "receivedMs": 1.527344,
+          "chunk": 13
+        },
+        {
+          "type": "token",
+          "id": "R4",
+          "index": 2,
+          "token": 16,
+          "text": "propuesta",
+          "producerElapsedMs": 0.873999,
+          "inferenceStepMs": 0.202011,
+          "modelProbability": 0.9985206447585068,
+          "receivedMs": 1.95232,
+          "chunk": 14
+        },
+        {
+          "type": "token",
+          "id": "R4",
+          "index": 3,
+          "token": 4,
+          "text": ".",
+          "producerElapsedMs": 1.077112,
+          "inferenceStepMs": 0.181129,
+          "modelProbability": 0.9993234727980835,
+          "receivedMs": 1.95232,
+          "chunk": 14
+        },
+        {
+          "type": "token",
+          "id": "R4",
+          "index": 4,
+          "token": 2,
+          "text": "<EOS>",
+          "producerElapsedMs": 1.280728,
+          "inferenceStepMs": 0.183912,
+          "modelProbability": 0.9987939330357289,
+          "receivedMs": 2.225618,
+          "chunk": 15
+        },
+        {
+          "type": "done",
+          "id": "R4",
+          "reason": "eos",
+          "generatedIds": [
+            19,
+            14,
+            16,
+            4,
+            2
+          ],
+          "producerElapsedMs": 1.299847,
+          "receivedMs": 2.225618,
+          "chunk": 15
+        }
+      ],
+      "consumer": {
+        "tokens": 5,
+        "ttftMs": 1.527344,
+        "totalMs": 2.225618,
+        "meanInterTokenMs": 0.17456849999999996
+      },
+      "producer": {
+        "tokens": 5,
+        "ttftMs": 0.399234,
+        "totalMs": 1.299847,
+        "meanInterTokenMs": 0.22037350000000003
+      }
+    },
+    {
+      "id": "R5",
+      "warmup": false,
+      "events": [
+        {
+          "type": "token",
+          "id": "R5",
+          "index": 0,
+          "token": 19,
+          "text": "revisa",
+          "producerElapsedMs": 0.39918,
+          "inferenceStepMs": 0.390543,
+          "modelProbability": 0.3406152259570547,
+          "receivedMs": 1.125774,
+          "chunk": 16
+        },
+        {
+          "type": "token",
+          "id": "R5",
+          "index": 1,
+          "token": 14,
+          "text": "la",
+          "producerElapsedMs": 0.665509,
+          "inferenceStepMs": 0.229332,
+          "modelProbability": 0.50324387159274,
+          "receivedMs": 1.492166,
+          "chunk": 17
+        },
+        {
+          "type": "token",
+          "id": "R5",
+          "index": 2,
+          "token": 16,
+          "text": "propuesta",
+          "producerElapsedMs": 0.882938,
+          "inferenceStepMs": 0.193708,
+          "modelProbability": 0.9985206447585068,
+          "receivedMs": 1.492166,
+          "chunk": 17
+        },
+        {
+          "type": "token",
+          "id": "R5",
+          "index": 3,
+          "token": 4,
+          "text": ".",
+          "producerElapsedMs": 1.080325,
+          "inferenceStepMs": 0.176785,
+          "modelProbability": 0.9993234727980835,
+          "receivedMs": 1.638047,
+          "chunk": 18
+        },
+        {
+          "type": "token",
+          "id": "R5",
+          "index": 4,
+          "token": 2,
+          "text": "<EOS>",
+          "producerElapsedMs": 1.27958,
+          "inferenceStepMs": 0.179333,
+          "modelProbability": 0.9987939330357289,
+          "receivedMs": 1.703851,
+          "chunk": 19
+        },
+        {
+          "type": "done",
+          "id": "R5",
+          "reason": "eos",
+          "generatedIds": [
+            19,
+            14,
+            16,
+            4,
+            2
+          ],
+          "producerElapsedMs": 1.299827,
+          "receivedMs": 1.703851,
+          "chunk": 19
+        }
+      ],
+      "consumer": {
+        "tokens": 5,
+        "ttftMs": 1.125774,
+        "totalMs": 1.703851,
+        "meanInterTokenMs": 0.14451925
+      },
+      "producer": {
+        "tokens": 5,
+        "ttftMs": 0.39918,
+        "totalMs": 1.299827,
+        "meanInterTokenMs": 0.2201
+      }
+    },
+    {
+      "id": "R6",
+      "warmup": false,
+      "events": [
+        {
+          "type": "token",
+          "id": "R6",
+          "index": 0,
+          "token": 19,
+          "text": "revisa",
+          "producerElapsedMs": 0.198166,
+          "inferenceStepMs": 0.194638,
+          "modelProbability": 0.3406152259570547,
+          "receivedMs": 0.664029,
+          "chunk": 20
+        },
+        {
+          "type": "token",
+          "id": "R6",
+          "index": 1,
+          "token": 14,
+          "text": "la",
+          "producerElapsedMs": 0.394949,
+          "inferenceStepMs": 0.177195,
+          "modelProbability": 0.50324387159274,
+          "receivedMs": 0.73302,
+          "chunk": 21
+        },
+        {
+          "type": "token",
+          "id": "R6",
+          "index": 2,
+          "token": 16,
+          "text": "propuesta",
+          "producerElapsedMs": 0.580098,
+          "inferenceStepMs": 0.167219,
+          "modelProbability": 0.9985206447585068,
+          "receivedMs": 1.345223,
+          "chunk": 22
+        },
+        {
+          "type": "token",
+          "id": "R6",
+          "index": 3,
+          "token": 4,
+          "text": ".",
+          "producerElapsedMs": 0.770021,
+          "inferenceStepMs": 0.172505,
+          "modelProbability": 0.9993234727980835,
+          "receivedMs": 1.345223,
+          "chunk": 22
+        },
+        {
+          "type": "token",
+          "id": "R6",
+          "index": 4,
+          "token": 2,
+          "text": "<EOS>",
+          "producerElapsedMs": 0.960938,
+          "inferenceStepMs": 0.17192,
+          "modelProbability": 0.9987939330357289,
+          "receivedMs": 1.537236,
+          "chunk": 23
+        },
+        {
+          "type": "done",
+          "id": "R6",
+          "reason": "eos",
+          "generatedIds": [
+            19,
+            14,
+            16,
+            4,
+            2
+          ],
+          "producerElapsedMs": 0.981507,
+          "receivedMs": 1.537236,
+          "chunk": 23
+        }
+      ],
+      "consumer": {
+        "tokens": 5,
+        "ttftMs": 0.664029,
+        "totalMs": 1.537236,
+        "meanInterTokenMs": 0.21830175000000002
+      },
+      "producer": {
+        "tokens": 5,
+        "ttftMs": 0.198166,
+        "totalMs": 0.981507,
+        "meanInterTokenMs": 0.190693
+      }
+    },
+    {
+      "id": "R7",
+      "warmup": false,
+      "events": [
+        {
+          "type": "token",
+          "id": "R7",
+          "index": 0,
+          "token": 19,
+          "text": "revisa",
+          "producerElapsedMs": 0.395865,
+          "inferenceStepMs": 0.386372,
+          "modelProbability": 0.3406152259570547,
+          "receivedMs": 1.496733,
+          "chunk": 24
+        },
+        {
+          "type": "token",
+          "id": "R7",
+          "index": 1,
+          "token": 14,
+          "text": "la",
+          "producerElapsedMs": 0.644445,
+          "inferenceStepMs": 0.212236,
+          "modelProbability": 0.50324387159274,
+          "receivedMs": 1.72717,
+          "chunk": 25
+        },
+        {
+          "type": "token",
+          "id": "R7",
+          "index": 2,
+          "token": 16,
+          "text": "propuesta",
+          "producerElapsedMs": 0.856799,
+          "inferenceStepMs": 0.189342,
+          "modelProbability": 0.9985206447585068,
+          "receivedMs": 1.72717,
+          "chunk": 25
+        },
+        {
+          "type": "token",
+          "id": "R7",
+          "index": 3,
+          "token": 4,
+          "text": ".",
+          "producerElapsedMs": 1.054897,
+          "inferenceStepMs": 0.176273,
+          "modelProbability": 0.9993234727980835,
+          "receivedMs": 1.72717,
+          "chunk": 25
+        },
+        {
+          "type": "token",
+          "id": "R7",
+          "index": 4,
+          "token": 2,
+          "text": "<EOS>",
+          "producerElapsedMs": 1.255245,
+          "inferenceStepMs": 0.180991,
+          "modelProbability": 0.9987939330357289,
+          "receivedMs": 1.946817,
+          "chunk": 26
+        },
+        {
+          "type": "done",
+          "id": "R7",
+          "reason": "eos",
+          "generatedIds": [
+            19,
+            14,
+            16,
+            4,
+            2
+          ],
+          "producerElapsedMs": 1.274477,
+          "receivedMs": 1.946817,
+          "chunk": 26
+        }
+      ],
+      "consumer": {
+        "tokens": 5,
+        "ttftMs": 1.496733,
+        "totalMs": 1.946817,
+        "meanInterTokenMs": 0.11252099999999998
+      },
+      "producer": {
+        "tokens": 5,
+        "ttftMs": 0.395865,
+        "totalMs": 1.274477,
+        "meanInterTokenMs": 0.21484499999999998
+      }
+    }
+  ],
+  "measuredMedians": {
+    "ttftMs": 1.125774,
+    "totalMs": 1.946817,
+    "meanInterTokenMs": 0.17456849999999996
+  },
+  "limits": "Local Docker stdin/stdout pipe, full forward per token, no KV cache; startup excluded after ready; consumer arrival may coalesce tokens; no HTTP, network, throughput/concurrency benchmark or timing reproducibility claim"
+}

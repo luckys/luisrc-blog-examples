@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "scope": "flat contiguous PER/ORG mentions in original Spanish strings",
+  "offsetUnit": "Unicode code points",
+  "interval": "[start,end)",
+  "normalization": "none",
+  "labels": [
+    "O",
+    "B-PER",
+    "I-PER",
+    "B-ORG",
+    "I-ORG"
+  ],
+  "splits": {
+    "train": 16,
+    "dev": 8,
+    "test": 8
+  },
+  "annotationPolicy": [
+    "PER includes full personal name and internal particles, excludes titles",
+    "ORG includes full organization name and internal particles, excludes generic company/association prefix unless part of name",
+    "No nested, overlapping, discontinuous entities or entity linking",
+    "All unannotated text is outside scope; language/product names are not ORG",
+    "No real personal records; one author, no inter-annotator agreement measured"
+  ],
+  "evaluation": "exact label/start/end per document; micro P/R/F1, counts and errors by type; token accuracy supplemental only",
+  "plannedTraining": {
+    "model": "linear softmax BIO token classifier with lexical/context/shape features; not Transformer",
+    "fitVocabulary": "train only",
+    "epochs": 80,
+    "learningRate": 0.05,
+    "seeds": [
+      7,
+      19,
+      31
+    ],
+    "selection": "fixed protocol; no test-driven tuning; report all seeds"
+  },
+  "status": "frozen before first fitting; no trained results yet",
+  "limitations": [
+    "32 hand-authored sentences, not representative or blind",
+    "Entity strings may repeat across splits for ambiguity stress (Alba); full mentions otherwise separated",
+    "Some syntactic structures repeat; not a template-family holdout",
+    "No conclusions about production quality or pretrained Transformers"
+  ]
+}

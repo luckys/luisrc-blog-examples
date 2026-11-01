@@ -1,0 +1,17 @@
+{
+  "name": "@luisrc-examples/language-models",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "runtime:fetch": "node fetch-runtime.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:container": "node run.mjs tests",
+    "exercise": "node run.mjs results",
+    "verify": "node run.mjs verify",
+    "data:prepare": "node prepare.mjs",
+    "render": "node render.mjs"
+  },
+  "engines": {
+    "node": ">=24.19.0"
+  }
+}

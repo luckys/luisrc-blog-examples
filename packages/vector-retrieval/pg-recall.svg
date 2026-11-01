@@ -1,0 +1,56 @@
+<svg role="img" aria-labelledby="figure-title" width="360" height="380" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 360 380"><title id="figure-title">pgvector: recall de vecinos top10</title>
+<rect width="360" height="380" x="0" y="0" fill="#0f172a"></rect>
+<path d="M48 305.5L332 305.5" fill="none" pointer-events="visible" stroke="#334155" class="vector-figure-cls-0"></path>
+<path d="M48 256.5L332 256.5" fill="none" pointer-events="visible" stroke="#334155" class="vector-figure-cls-0"></path>
+<path d="M48 207.5L332 207.5" fill="none" pointer-events="visible" stroke="#334155" class="vector-figure-cls-0"></path>
+<path d="M48 159.5L332 159.5" fill="none" pointer-events="visible" stroke="#334155" class="vector-figure-cls-0"></path>
+<path d="M48 110.5L332 110.5" fill="none" pointer-events="visible" stroke="#334155" class="vector-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:14px;font-family:sans-serif;" y="7" transform="translate(190 335)" fill="#e2e8f0">ef_search</text>
+<path d="M48 305.5L332 305.5" fill="none" pointer-events="visible" stroke="#94a3b8" stroke-linecap="round" class="vector-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(40 305)" fill="#e2e8f0">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(40 256.25)" fill="#e2e8f0">0,25</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(40 207.5)" fill="#e2e8f0">0,5</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(40 158.75)" fill="#e2e8f0">0,75</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(40 110)" fill="#e2e8f0">1</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="6.5" transform="translate(95.3333 313)" fill="#e2e8f0">4</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="6.5" transform="translate(190 313)" fill="#e2e8f0">16</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="6.5" transform="translate(284.6667 313)" fill="#e2e8f0">64</text>
+<g clip-path="url(#vector-figure-c0)">
+<path d="M95.3 235.8L190 158.8L284.7 135.4" fill="none" pointer-events="visible" stroke="#38bdf8" stroke-width="2" stroke-linejoin="bevel" class="vector-figure-cls-1"></path>
+</g>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(4,0,0,4,95.3333,235.775)" fill="#fff" stroke="#38bdf8" stroke-width="0.5" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="vector-figure-cls-2"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(4,0,0,4,190,158.75)" fill="#fff" stroke="#38bdf8" stroke-width="0.5" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="vector-figure-cls-2"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(4,0,0,4,284.6667,135.35)" fill="#fff" stroke="#38bdf8" stroke-width="0.5" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="vector-figure-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:14px;font-family:sans-serif;" y="-7" transform="translate(95.3333 225.775)" fill="#e2e8f0">0,355</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:14px;font-family:sans-serif;" y="-7" transform="translate(190 148.75)" fill="#e2e8f0">0,75</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:14px;font-family:sans-serif;" y="-7" transform="translate(284.6667 125.35)" fill="#e2e8f0">0,87</text>
+<path d="M-5 -5l265.5 0l0 73l-265.5 0Z" transform="translate(17 15)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#3c3c41" stroke-width="0" class="vector-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:17px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="8.5" transform="translate(17 15)" fill="#e2e8f0">pgvector: recall de vecinos</text>
+<path d="M0 27l255.5 0l0 36l-255.4 0Z" transform="translate(17 15)" fill="none" pointer-events="visible" class="vector-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="36" transform="translate(17 15)" fill="#94a3b8">20 consultas; referencia exacta PostgreSQL</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="54" transform="translate(17 15)" fill="#94a3b8">M16; efConstruction40; iterative_scan off</text>
+<defs >
+<clipPath id="vector-figure-c0">
+<path d="M47 109l286 0l0 197l-286 0Z" fill="#000" class="vector-figure-cls-3"></path>
+</clipPath>
+</defs>
+<style ><![CDATA[
+.vector-figure-cls-0:hover {
+pointer-events:none;
+}
+.vector-figure-cls-3:hover {
+cursor:pointer;
+fill:rgba(0,0,0,1);
+}
+.vector-figure-cls-1:hover {
+cursor:pointer;
+}
+.vector-figure-cls-2:hover {
+cursor:pointer;
+fill:rgba(255,255,255,1);
+}
+
+]]>
+
+</style>
+</svg>

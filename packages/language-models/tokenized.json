@@ -1,0 +1,2899 @@
+{
+  "kind": "fixed_tokenized_language_corpus",
+  "vocabulary": [
+    "<PAD>",
+    "<BOS>",
+    "<EOS>",
+    "<UNK>",
+    ".",
+    "analista",
+    "consulta",
+    "datos",
+    "el",
+    "empresa",
+    "equipo",
+    "informe",
+    "ingeniera",
+    "ingeniero",
+    "la",
+    "los",
+    "propuesta",
+    "publica",
+    "resultados",
+    "revisa",
+    "servicio"
+  ],
+  "records": [
+    {
+      "id": "L001",
+      "text": "la ingeniera revisa el informe.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 0,
+        "verb": 0,
+        "object": 0
+      },
+      "ids": [
+        1,
+        14,
+        12,
+        19,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        12,
+        19,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        14,
+        12,
+        19,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L002",
+      "text": "la ingeniera revisa la propuesta.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 0,
+        "verb": 0,
+        "object": 1
+      },
+      "ids": [
+        1,
+        14,
+        12,
+        19,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        12,
+        19,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        14,
+        12,
+        19,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L003",
+      "text": "la ingeniera revisa los resultados.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 0,
+        "verb": 0,
+        "object": 2
+      },
+      "ids": [
+        1,
+        14,
+        12,
+        19,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        12,
+        19,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        14,
+        12,
+        19,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L004",
+      "text": "la ingeniera revisa los datos.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 0,
+        "verb": 0,
+        "object": 3
+      },
+      "ids": [
+        1,
+        14,
+        12,
+        19,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        12,
+        19,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        14,
+        12,
+        19,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L005",
+      "text": "la ingeniera consulta el informe.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 0,
+        "verb": 1,
+        "object": 0
+      },
+      "ids": [
+        1,
+        14,
+        12,
+        6,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        12,
+        6,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        14,
+        12,
+        6,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L006",
+      "text": "la ingeniera consulta la propuesta.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 0,
+        "verb": 1,
+        "object": 1
+      },
+      "ids": [
+        1,
+        14,
+        12,
+        6,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        12,
+        6,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        14,
+        12,
+        6,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L007",
+      "text": "la ingeniera consulta los resultados.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 0,
+        "verb": 1,
+        "object": 2
+      },
+      "ids": [
+        1,
+        14,
+        12,
+        6,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        12,
+        6,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        14,
+        12,
+        6,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L008",
+      "text": "la ingeniera consulta los datos.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 0,
+        "verb": 1,
+        "object": 3
+      },
+      "ids": [
+        1,
+        14,
+        12,
+        6,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        12,
+        6,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        14,
+        12,
+        6,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L009",
+      "text": "la ingeniera publica el informe.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 0,
+        "verb": 2,
+        "object": 0
+      },
+      "ids": [
+        1,
+        14,
+        12,
+        17,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        12,
+        17,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        14,
+        12,
+        17,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L010",
+      "text": "la ingeniera publica la propuesta.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 0,
+        "verb": 2,
+        "object": 1
+      },
+      "ids": [
+        1,
+        14,
+        12,
+        17,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        12,
+        17,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        14,
+        12,
+        17,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L011",
+      "text": "la ingeniera publica los resultados.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 0,
+        "verb": 2,
+        "object": 2
+      },
+      "ids": [
+        1,
+        14,
+        12,
+        17,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        12,
+        17,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        14,
+        12,
+        17,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L012",
+      "text": "la ingeniera publica los datos.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 0,
+        "verb": 2,
+        "object": 3
+      },
+      "ids": [
+        1,
+        14,
+        12,
+        17,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        12,
+        17,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        14,
+        12,
+        17,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L013",
+      "text": "el ingeniero revisa el informe.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 1,
+        "verb": 0,
+        "object": 0
+      },
+      "ids": [
+        1,
+        8,
+        13,
+        19,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        13,
+        19,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        8,
+        13,
+        19,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L014",
+      "text": "el ingeniero revisa la propuesta.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 1,
+        "verb": 0,
+        "object": 1
+      },
+      "ids": [
+        1,
+        8,
+        13,
+        19,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        13,
+        19,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        8,
+        13,
+        19,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L015",
+      "text": "el ingeniero revisa los resultados.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 1,
+        "verb": 0,
+        "object": 2
+      },
+      "ids": [
+        1,
+        8,
+        13,
+        19,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        13,
+        19,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        8,
+        13,
+        19,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L016",
+      "text": "el ingeniero revisa los datos.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 1,
+        "verb": 0,
+        "object": 3
+      },
+      "ids": [
+        1,
+        8,
+        13,
+        19,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        13,
+        19,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        8,
+        13,
+        19,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L017",
+      "text": "el ingeniero consulta el informe.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 1,
+        "verb": 1,
+        "object": 0
+      },
+      "ids": [
+        1,
+        8,
+        13,
+        6,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        13,
+        6,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        8,
+        13,
+        6,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L018",
+      "text": "el ingeniero consulta la propuesta.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 1,
+        "verb": 1,
+        "object": 1
+      },
+      "ids": [
+        1,
+        8,
+        13,
+        6,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        13,
+        6,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        8,
+        13,
+        6,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L019",
+      "text": "el ingeniero consulta los resultados.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 1,
+        "verb": 1,
+        "object": 2
+      },
+      "ids": [
+        1,
+        8,
+        13,
+        6,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        13,
+        6,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        8,
+        13,
+        6,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L020",
+      "text": "el ingeniero consulta los datos.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 1,
+        "verb": 1,
+        "object": 3
+      },
+      "ids": [
+        1,
+        8,
+        13,
+        6,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        13,
+        6,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        8,
+        13,
+        6,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L021",
+      "text": "el ingeniero publica el informe.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 1,
+        "verb": 2,
+        "object": 0
+      },
+      "ids": [
+        1,
+        8,
+        13,
+        17,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        13,
+        17,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        8,
+        13,
+        17,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L022",
+      "text": "el ingeniero publica la propuesta.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 1,
+        "verb": 2,
+        "object": 1
+      },
+      "ids": [
+        1,
+        8,
+        13,
+        17,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        13,
+        17,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        8,
+        13,
+        17,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L023",
+      "text": "el ingeniero publica los resultados.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 1,
+        "verb": 2,
+        "object": 2
+      },
+      "ids": [
+        1,
+        8,
+        13,
+        17,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        13,
+        17,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        8,
+        13,
+        17,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L024",
+      "text": "el ingeniero publica los datos.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 1,
+        "verb": 2,
+        "object": 3
+      },
+      "ids": [
+        1,
+        8,
+        13,
+        17,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        13,
+        17,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        8,
+        13,
+        17,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L025",
+      "text": "la analista revisa el informe.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 2,
+        "verb": 0,
+        "object": 0
+      },
+      "ids": [
+        1,
+        14,
+        5,
+        19,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        5,
+        19,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        14,
+        5,
+        19,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L026",
+      "text": "la analista revisa la propuesta.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 2,
+        "verb": 0,
+        "object": 1
+      },
+      "ids": [
+        1,
+        14,
+        5,
+        19,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        5,
+        19,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        14,
+        5,
+        19,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L027",
+      "text": "la analista revisa los resultados.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 2,
+        "verb": 0,
+        "object": 2
+      },
+      "ids": [
+        1,
+        14,
+        5,
+        19,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        5,
+        19,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        14,
+        5,
+        19,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L028",
+      "text": "la analista revisa los datos.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 2,
+        "verb": 0,
+        "object": 3
+      },
+      "ids": [
+        1,
+        14,
+        5,
+        19,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        5,
+        19,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        14,
+        5,
+        19,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L029",
+      "text": "la analista consulta el informe.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 2,
+        "verb": 1,
+        "object": 0
+      },
+      "ids": [
+        1,
+        14,
+        5,
+        6,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        5,
+        6,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        14,
+        5,
+        6,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L030",
+      "text": "la analista consulta la propuesta.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 2,
+        "verb": 1,
+        "object": 1
+      },
+      "ids": [
+        1,
+        14,
+        5,
+        6,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        5,
+        6,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        14,
+        5,
+        6,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L031",
+      "text": "la analista consulta los resultados.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 2,
+        "verb": 1,
+        "object": 2
+      },
+      "ids": [
+        1,
+        14,
+        5,
+        6,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        5,
+        6,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        14,
+        5,
+        6,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L032",
+      "text": "la analista consulta los datos.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 2,
+        "verb": 1,
+        "object": 3
+      },
+      "ids": [
+        1,
+        14,
+        5,
+        6,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        5,
+        6,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        14,
+        5,
+        6,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L033",
+      "text": "la analista publica el informe.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 2,
+        "verb": 2,
+        "object": 0
+      },
+      "ids": [
+        1,
+        14,
+        5,
+        17,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        5,
+        17,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        14,
+        5,
+        17,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L034",
+      "text": "la analista publica la propuesta.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 2,
+        "verb": 2,
+        "object": 1
+      },
+      "ids": [
+        1,
+        14,
+        5,
+        17,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        5,
+        17,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        14,
+        5,
+        17,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L035",
+      "text": "la analista publica los resultados.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 2,
+        "verb": 2,
+        "object": 2
+      },
+      "ids": [
+        1,
+        14,
+        5,
+        17,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        5,
+        17,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        14,
+        5,
+        17,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L036",
+      "text": "la analista publica los datos.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 2,
+        "verb": 2,
+        "object": 3
+      },
+      "ids": [
+        1,
+        14,
+        5,
+        17,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        5,
+        17,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        14,
+        5,
+        17,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L037",
+      "text": "el equipo revisa el informe.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 3,
+        "verb": 0,
+        "object": 0
+      },
+      "ids": [
+        1,
+        8,
+        10,
+        19,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        10,
+        19,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        8,
+        10,
+        19,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L038",
+      "text": "el equipo revisa la propuesta.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 3,
+        "verb": 0,
+        "object": 1
+      },
+      "ids": [
+        1,
+        8,
+        10,
+        19,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        10,
+        19,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        8,
+        10,
+        19,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L039",
+      "text": "el equipo revisa los resultados.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 3,
+        "verb": 0,
+        "object": 2
+      },
+      "ids": [
+        1,
+        8,
+        10,
+        19,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        10,
+        19,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        8,
+        10,
+        19,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L040",
+      "text": "el equipo revisa los datos.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 3,
+        "verb": 0,
+        "object": 3
+      },
+      "ids": [
+        1,
+        8,
+        10,
+        19,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        10,
+        19,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        8,
+        10,
+        19,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L041",
+      "text": "el equipo consulta el informe.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 3,
+        "verb": 1,
+        "object": 0
+      },
+      "ids": [
+        1,
+        8,
+        10,
+        6,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        10,
+        6,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        8,
+        10,
+        6,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L042",
+      "text": "el equipo consulta la propuesta.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 3,
+        "verb": 1,
+        "object": 1
+      },
+      "ids": [
+        1,
+        8,
+        10,
+        6,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        10,
+        6,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        8,
+        10,
+        6,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L043",
+      "text": "el equipo consulta los resultados.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 3,
+        "verb": 1,
+        "object": 2
+      },
+      "ids": [
+        1,
+        8,
+        10,
+        6,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        10,
+        6,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        8,
+        10,
+        6,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L044",
+      "text": "el equipo consulta los datos.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 3,
+        "verb": 1,
+        "object": 3
+      },
+      "ids": [
+        1,
+        8,
+        10,
+        6,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        10,
+        6,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        8,
+        10,
+        6,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L045",
+      "text": "el equipo publica el informe.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 3,
+        "verb": 2,
+        "object": 0
+      },
+      "ids": [
+        1,
+        8,
+        10,
+        17,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        10,
+        17,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        8,
+        10,
+        17,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L046",
+      "text": "el equipo publica la propuesta.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 3,
+        "verb": 2,
+        "object": 1
+      },
+      "ids": [
+        1,
+        8,
+        10,
+        17,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        10,
+        17,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        8,
+        10,
+        17,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L047",
+      "text": "el equipo publica los resultados.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 3,
+        "verb": 2,
+        "object": 2
+      },
+      "ids": [
+        1,
+        8,
+        10,
+        17,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        10,
+        17,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        8,
+        10,
+        17,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L048",
+      "text": "el equipo publica los datos.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 3,
+        "verb": 2,
+        "object": 3
+      },
+      "ids": [
+        1,
+        8,
+        10,
+        17,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        10,
+        17,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        8,
+        10,
+        17,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L049",
+      "text": "la empresa revisa el informe.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 4,
+        "verb": 0,
+        "object": 0
+      },
+      "ids": [
+        1,
+        14,
+        9,
+        19,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        9,
+        19,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        14,
+        9,
+        19,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L050",
+      "text": "la empresa revisa la propuesta.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 4,
+        "verb": 0,
+        "object": 1
+      },
+      "ids": [
+        1,
+        14,
+        9,
+        19,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        9,
+        19,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        14,
+        9,
+        19,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L051",
+      "text": "la empresa revisa los resultados.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 4,
+        "verb": 0,
+        "object": 2
+      },
+      "ids": [
+        1,
+        14,
+        9,
+        19,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        9,
+        19,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        14,
+        9,
+        19,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L052",
+      "text": "la empresa revisa los datos.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 4,
+        "verb": 0,
+        "object": 3
+      },
+      "ids": [
+        1,
+        14,
+        9,
+        19,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        9,
+        19,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        14,
+        9,
+        19,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L053",
+      "text": "la empresa consulta el informe.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 4,
+        "verb": 1,
+        "object": 0
+      },
+      "ids": [
+        1,
+        14,
+        9,
+        6,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        9,
+        6,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        14,
+        9,
+        6,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L054",
+      "text": "la empresa consulta la propuesta.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 4,
+        "verb": 1,
+        "object": 1
+      },
+      "ids": [
+        1,
+        14,
+        9,
+        6,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        9,
+        6,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        14,
+        9,
+        6,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L055",
+      "text": "la empresa consulta los resultados.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 4,
+        "verb": 1,
+        "object": 2
+      },
+      "ids": [
+        1,
+        14,
+        9,
+        6,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        9,
+        6,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        14,
+        9,
+        6,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L056",
+      "text": "la empresa consulta los datos.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 4,
+        "verb": 1,
+        "object": 3
+      },
+      "ids": [
+        1,
+        14,
+        9,
+        6,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        9,
+        6,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        14,
+        9,
+        6,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L057",
+      "text": "la empresa publica el informe.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 4,
+        "verb": 2,
+        "object": 0
+      },
+      "ids": [
+        1,
+        14,
+        9,
+        17,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        9,
+        17,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        14,
+        9,
+        17,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L058",
+      "text": "la empresa publica la propuesta.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 4,
+        "verb": 2,
+        "object": 1
+      },
+      "ids": [
+        1,
+        14,
+        9,
+        17,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        9,
+        17,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        14,
+        9,
+        17,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L059",
+      "text": "la empresa publica los resultados.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 4,
+        "verb": 2,
+        "object": 2
+      },
+      "ids": [
+        1,
+        14,
+        9,
+        17,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        9,
+        17,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        14,
+        9,
+        17,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L060",
+      "text": "la empresa publica los datos.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 4,
+        "verb": 2,
+        "object": 3
+      },
+      "ids": [
+        1,
+        14,
+        9,
+        17,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        14,
+        9,
+        17,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        14,
+        9,
+        17,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L061",
+      "text": "el servicio revisa el informe.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 5,
+        "verb": 0,
+        "object": 0
+      },
+      "ids": [
+        1,
+        8,
+        20,
+        19,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        20,
+        19,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        8,
+        20,
+        19,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L062",
+      "text": "el servicio revisa la propuesta.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 5,
+        "verb": 0,
+        "object": 1
+      },
+      "ids": [
+        1,
+        8,
+        20,
+        19,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        20,
+        19,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        8,
+        20,
+        19,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L063",
+      "text": "el servicio revisa los resultados.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 5,
+        "verb": 0,
+        "object": 2
+      },
+      "ids": [
+        1,
+        8,
+        20,
+        19,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        20,
+        19,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        8,
+        20,
+        19,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L064",
+      "text": "el servicio revisa los datos.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 5,
+        "verb": 0,
+        "object": 3
+      },
+      "ids": [
+        1,
+        8,
+        20,
+        19,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        20,
+        19,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        8,
+        20,
+        19,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L065",
+      "text": "el servicio consulta el informe.",
+      "split": "dev",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 5,
+        "verb": 1,
+        "object": 0
+      },
+      "ids": [
+        1,
+        8,
+        20,
+        6,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        20,
+        6,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        8,
+        20,
+        6,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L066",
+      "text": "el servicio consulta la propuesta.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 5,
+        "verb": 1,
+        "object": 1
+      },
+      "ids": [
+        1,
+        8,
+        20,
+        6,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        20,
+        6,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        8,
+        20,
+        6,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L067",
+      "text": "el servicio consulta los resultados.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 5,
+        "verb": 1,
+        "object": 2
+      },
+      "ids": [
+        1,
+        8,
+        20,
+        6,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        20,
+        6,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        8,
+        20,
+        6,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L068",
+      "text": "el servicio consulta los datos.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 5,
+        "verb": 1,
+        "object": 3
+      },
+      "ids": [
+        1,
+        8,
+        20,
+        6,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        20,
+        6,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        8,
+        20,
+        6,
+        15,
+        7,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L069",
+      "text": "el servicio publica el informe.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 5,
+        "verb": 2,
+        "object": 0
+      },
+      "ids": [
+        1,
+        8,
+        20,
+        17,
+        8,
+        11,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        20,
+        17,
+        8,
+        11,
+        4
+      ],
+      "target": [
+        8,
+        20,
+        17,
+        8,
+        11,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L070",
+      "text": "el servicio publica la propuesta.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 5,
+        "verb": 2,
+        "object": 1
+      },
+      "ids": [
+        1,
+        8,
+        20,
+        17,
+        14,
+        16,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        20,
+        17,
+        14,
+        16,
+        4
+      ],
+      "target": [
+        8,
+        20,
+        17,
+        14,
+        16,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L071",
+      "text": "el servicio publica los resultados.",
+      "split": "train",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 5,
+        "verb": 2,
+        "object": 2
+      },
+      "ids": [
+        1,
+        8,
+        20,
+        17,
+        15,
+        18,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        20,
+        17,
+        15,
+        18,
+        4
+      ],
+      "target": [
+        8,
+        20,
+        17,
+        15,
+        18,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "L072",
+      "text": "el servicio publica los datos.",
+      "split": "test",
+      "provenance": "original synthetic compositional grammar v1",
+      "factors": {
+        "subject": 5,
+        "verb": 2,
+        "object": 3
+      },
+      "ids": [
+        1,
+        8,
+        20,
+        17,
+        15,
+        7,
+        4,
+        2
+      ],
+      "input": [
+        1,
+        8,
+        20,
+        17,
+        15,
+        7,
+        4
+      ],
+      "target": [
+        8,
+        20,
+        17,
+        15,
+        7,
+        4,
+        2
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "text": "",
+      "ids": [
+        1
+      ]
+    },
+    {
+      "text": "el",
+      "ids": [
+        1,
+        8
+      ]
+    },
+    {
+      "text": "el equipo",
+      "ids": [
+        1,
+        8,
+        10
+      ]
+    },
+    {
+      "text": "el equipo revisa",
+      "ids": [
+        1,
+        8,
+        10,
+        19
+      ]
+    },
+    {
+      "text": "la ingeniera consulta",
+      "ids": [
+        1,
+        14,
+        12,
+        6
+      ]
+    },
+    {
+      "text": "la ingeniera consulta los",
+      "ids": [
+        1,
+        14,
+        12,
+        6,
+        15
+      ]
+    },
+    {
+      "text": "el servicio publica la propuesta.",
+      "ids": [
+        1,
+        8,
+        20,
+        17,
+        14,
+        16,
+        4
+      ]
+    }
+  ]
+}

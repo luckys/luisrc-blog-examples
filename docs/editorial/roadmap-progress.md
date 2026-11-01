@@ -2,7 +2,7 @@
 
 Inventario generado desde el catálogo de 175 fichas y los artículos españoles reales. No es una certificación de completitud editorial ni de laboratorios.
 
-IDs con borrador propio: **81**. Solo material relacionado: **19**. Sin artículo identificado: **75**.
+IDs con borrador propio: **86**. Solo material relacionado: **19**. Sin artículo identificado: **70**.
 
 Cada ficha requiere revisión contra su temario obligatorio, laboratorio y Definition of Done. Un artículo agrupado no completa automáticamente varias fichas.
 
@@ -170,11 +170,11 @@ P063 se amplía en ocho drafts: pipeline/gates, artefactos, flags, smoke, rollin
 ## Serie 11. NLP, LLM, RAG y agentes (posts 106–121)
 
 - P106. Fundamentos de NLP y búsqueda de texto: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/corpus-busqueda-lexica-documentos-consultas-relevancia.md).
-- P107. Named Entity Recognition y etiquetado de spans: pendiente.
-- P108. Cómo funcionan los modelos de lenguaje: pendiente.
-- P109. Inferencia y generación de texto con LLM: pendiente.
-- P110. Prompt engineering y structured outputs: pendiente.
-- P111. Embeddings y recuperación vectorial: pendiente.
+- P107. Named Entity Recognition y etiquetado de spans: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/ner-anotar-entidades-spans-offsets-unicode.md).
+- P108. Cómo funcionan los modelos de lenguaje: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/lm-predecir-siguiente-token-probabilidades.md).
+- P109. Inferencia y generación de texto con LLM: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/generacion-autoregresiva-greedy-sampling.md).
+- P110. Prompt engineering y structured outputs: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/prompt-engineering-instrucciones-roles-contexto.md).
+- P111. Embeddings y recuperación vectorial: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/embeddings-texto-encoder-pooling-busqueda-semantica.md).
 - P112. Ingesta documental, OCR y chunking para RAG: pendiente.
 - P113. Retrieval léxico, denso e híbrido: pendiente.
 - P114. Reranking, grounding y trazabilidad de fuentes: pendiente.

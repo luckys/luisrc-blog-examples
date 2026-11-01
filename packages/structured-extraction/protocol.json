@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "status": "fixed_before_inference",
+  "task": "Extraer menciones de personas y organizaciones nombradas que se presentan como datos del documento; no nombres contenidos exclusivamente en instrucciones, ni proyectos explícitamente negados como organizaciones. No inferir relaciones laborales.",
+  "variants": [
+    "instructions",
+    "schema",
+    "few-shot"
+  ],
+  "decode": {
+    "do_sample": false,
+    "max_new_tokens": 192,
+    "repetition_penalty": 1
+  },
+  "records": 8,
+  "runOrder": "variant-major, document E01..E08",
+  "selection": "No tuning, no retries, no winner selection. Preserve malformed JSON, refusal, truncation, false positives, omissions and unchanged outputs.",
+  "evaluation": "Original synthetic fixtures with author judgments, not blind and not a benchmark. Report parsing/schema/lexical anchoring independently; effective entity TP/FP/FN on accepted outputs. Failed outputs become empty predictions. Exact case-sensitive type+text set, quote excluded from identity.",
+  "evidenceLimit": "Exact source substring and value-inside-quote are lexical anchoring only. They do not prove entity type, truth, instruction/data separation or completeness.",
+  "fewShot": "Two fixed original examples, names disjoint from measured records; deliberately shared task conventions, not a generalization claim.",
+  "toolScope": "Fixed local dispatcher tests only. No external tool side effect and no claim that model tool-calling was evaluated.",
+  "sourceLimits": {
+    "maxCodePoints": 1600,
+    "maxJsonBytes": 32768
+  },
+  "modelBudget": "24 greedy requests, max192 new tokens each. No measured latency comparison; inference elapsed is diagnostic only.",
+  "provenance": "Record exact chat messages, token IDs, generated token IDs, raw decoded string and hashes before validation. Never silently strip fences or repair JSON."
+}

@@ -1,0 +1,498 @@
+[
+  {
+    "id": "N01",
+    "split": "train",
+    "text": "La ingeniera Ana Torres trabaja en Nube Clara.",
+    "spans": [
+      {
+        "start": 13,
+        "end": 23,
+        "label": "PER",
+        "text": "Ana Torres"
+      },
+      {
+        "start": 35,
+        "end": 45,
+        "label": "ORG",
+        "text": "Nube Clara"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N02",
+    "split": "train",
+    "text": "Faro Digital contrató a Mario Vidal.",
+    "spans": [
+      {
+        "start": 0,
+        "end": 12,
+        "label": "ORG",
+        "text": "Faro Digital"
+      },
+      {
+        "start": 24,
+        "end": 35,
+        "label": "PER",
+        "text": "Mario Vidal"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N03",
+    "split": "train",
+    "text": "La reunión con Elena Ruiz será el lunes.",
+    "spans": [
+      {
+        "start": 15,
+        "end": 25,
+        "label": "PER",
+        "text": "Elena Ruiz"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N04",
+    "split": "train",
+    "text": "Pablo León revisó el informe de Atlas Verde.",
+    "spans": [
+      {
+        "start": 0,
+        "end": 10,
+        "label": "PER",
+        "text": "Pablo León"
+      },
+      {
+        "start": 32,
+        "end": 43,
+        "label": "ORG",
+        "text": "Atlas Verde"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N05",
+    "split": "train",
+    "text": "El equipo de Brisa Labs presentó una demo.",
+    "spans": [
+      {
+        "start": 13,
+        "end": 23,
+        "label": "ORG",
+        "text": "Brisa Labs"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N06",
+    "split": "train",
+    "text": "Ayer escribió Sofía Marín desde la oficina.",
+    "spans": [
+      {
+        "start": 14,
+        "end": 25,
+        "label": "PER",
+        "text": "Sofía Marín"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N07",
+    "split": "train",
+    "text": "Delta Sistemas publica una vacante.",
+    "spans": [
+      {
+        "start": 0,
+        "end": 14,
+        "label": "ORG",
+        "text": "Delta Sistemas"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N08",
+    "split": "train",
+    "text": "El técnico Hugo Gil respondió a Lago Azul.",
+    "spans": [
+      {
+        "start": 11,
+        "end": 19,
+        "label": "PER",
+        "text": "Hugo Gil"
+      },
+      {
+        "start": 32,
+        "end": 41,
+        "label": "ORG",
+        "text": "Lago Azul"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N09",
+    "split": "train",
+    "text": "La directora Lucía Sol firmó para Red Norte.",
+    "spans": [
+      {
+        "start": 13,
+        "end": 22,
+        "label": "PER",
+        "text": "Lucía Sol"
+      },
+      {
+        "start": 34,
+        "end": 43,
+        "label": "ORG",
+        "text": "Red Norte"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N10",
+    "split": "train",
+    "text": "Diego Paz y Inés Roca colaboran.",
+    "spans": [
+      {
+        "start": 0,
+        "end": 9,
+        "label": "PER",
+        "text": "Diego Paz"
+      },
+      {
+        "start": 12,
+        "end": 21,
+        "label": "PER",
+        "text": "Inés Roca"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N11",
+    "split": "train",
+    "text": "Se reunieron Sur Abierto y Cobre Software.",
+    "spans": [
+      {
+        "start": 13,
+        "end": 24,
+        "label": "ORG",
+        "text": "Sur Abierto"
+      },
+      {
+        "start": 27,
+        "end": 41,
+        "label": "ORG",
+        "text": "Cobre Software"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N12",
+    "split": "train",
+    "text": "📨 Contacta con Álvaro Mora en Trébol Datos.",
+    "spans": [
+      {
+        "start": 15,
+        "end": 26,
+        "label": "PER",
+        "text": "Álvaro Mora"
+      },
+      {
+        "start": 30,
+        "end": 42,
+        "label": "ORG",
+        "text": "Trébol Datos"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N13",
+    "split": "train",
+    "text": "Taller del Río envió el contrato a Nora Sanz.",
+    "spans": [
+      {
+        "start": 0,
+        "end": 14,
+        "label": "ORG",
+        "text": "Taller del Río"
+      },
+      {
+        "start": 35,
+        "end": 44,
+        "label": "PER",
+        "text": "Nora Sanz"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N14",
+    "split": "train",
+    "text": "La empresa Alba invitó a la doctora Eva Cano.",
+    "spans": [
+      {
+        "start": 11,
+        "end": 15,
+        "label": "ORG",
+        "text": "Alba"
+      },
+      {
+        "start": 36,
+        "end": 44,
+        "label": "PER",
+        "text": "Eva Cano"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N15",
+    "split": "train",
+    "text": "El lunes revisamos el contrato sin incidencias.",
+    "spans": [],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N16",
+    "split": "train",
+    "text": "Python procesa el archivo, pero no identifica a nadie.",
+    "spans": [],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N17",
+    "split": "dev",
+    "text": "Carla Soto representa a Órbita Apps.",
+    "spans": [
+      {
+        "start": 0,
+        "end": 10,
+        "label": "PER",
+        "text": "Carla Soto"
+      },
+      {
+        "start": 24,
+        "end": 35,
+        "label": "ORG",
+        "text": "Órbita Apps"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N18",
+    "split": "dev",
+    "text": "La compañía Vela Roja fichó a Raúl Costa.",
+    "spans": [
+      {
+        "start": 12,
+        "end": 21,
+        "label": "ORG",
+        "text": "Vela Roja"
+      },
+      {
+        "start": 30,
+        "end": 40,
+        "label": "PER",
+        "text": "Raúl Costa"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N19",
+    "split": "dev",
+    "text": "Escribe a Alba Nieto después de comer.",
+    "spans": [
+      {
+        "start": 10,
+        "end": 20,
+        "label": "PER",
+        "text": "Alba Nieto"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N20",
+    "split": "dev",
+    "text": "La asociación Puente de Cristal busca apoyo.",
+    "spans": [
+      {
+        "start": 14,
+        "end": 31,
+        "label": "ORG",
+        "text": "Puente de Cristal"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N21",
+    "split": "dev",
+    "text": "Tomás Vera remitió un mensaje.",
+    "spans": [
+      {
+        "start": 0,
+        "end": 10,
+        "label": "PER",
+        "text": "Tomás Vera"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N22",
+    "split": "dev",
+    "text": "La directora de Cauce Abierto llegó temprano.",
+    "spans": [
+      {
+        "start": 16,
+        "end": 29,
+        "label": "ORG",
+        "text": "Cauce Abierto"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N23",
+    "split": "dev",
+    "text": "Lunes es el nombre de la columna del calendario.",
+    "spans": [],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N24",
+    "split": "dev",
+    "text": "La torre se ve desde el río.",
+    "spans": [],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N25",
+    "split": "test",
+    "text": "La analista Julia Ramos llamó a Prisma Tech.",
+    "spans": [
+      {
+        "start": 12,
+        "end": 23,
+        "label": "PER",
+        "text": "Julia Ramos"
+      },
+      {
+        "start": 32,
+        "end": 43,
+        "label": "ORG",
+        "text": "Prisma Tech"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N26",
+    "split": "test",
+    "text": "Tejido del Sur eligió a Óscar Ferrer.",
+    "spans": [
+      {
+        "start": 0,
+        "end": 14,
+        "label": "ORG",
+        "text": "Tejido del Sur"
+      },
+      {
+        "start": 24,
+        "end": 36,
+        "label": "PER",
+        "text": "Óscar Ferrer"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N27",
+    "split": "test",
+    "text": "Alba trabaja hoy desde casa.",
+    "spans": [
+      {
+        "start": 0,
+        "end": 4,
+        "label": "PER",
+        "text": "Alba"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N28",
+    "split": "test",
+    "text": "El portavoz de Horizonte no dio su nombre.",
+    "spans": [
+      {
+        "start": 15,
+        "end": 24,
+        "label": "ORG",
+        "text": "Horizonte"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N29",
+    "split": "test",
+    "text": "María del Mar firmó la propuesta.",
+    "spans": [
+      {
+        "start": 0,
+        "end": 13,
+        "label": "PER",
+        "text": "María del Mar"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N30",
+    "split": "test",
+    "text": "🧑🏽‍💻 Iván Peña escribió a Álamo Redes.",
+    "spans": [
+      {
+        "start": 5,
+        "end": 14,
+        "label": "PER",
+        "text": "Iván Peña"
+      },
+      {
+        "start": 26,
+        "end": 37,
+        "label": "ORG",
+        "text": "Álamo Redes"
+      }
+    ],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N31",
+    "split": "test",
+    "text": "Rust aparece en el título del documento.",
+    "spans": [],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  },
+  {
+    "id": "N32",
+    "split": "test",
+    "text": "Mañana revisaremos el acta en la sala norte.",
+    "spans": [],
+    "provenance": "original synthetic Spanish sentence, author annotated, v1"
+  }
+]

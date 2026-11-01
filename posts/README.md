@@ -74,6 +74,7 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · p011**: [Estructuras de datos: elige según lo que necesitas hacer con los datos](es/p011/README.md)
 - **es · api-evolution**: [Evolucionar una API sin romper clientes: contratos y cursor pagination](es/api-evolution/README.md)
 - **es · p025**: [Compatibilidad de APIs: detectar breaking changes con contract tests](es/p025/README.md)
+- **es · obs-exemplars**: [Exemplars: abrir una traza desde un histograma sin crear una serie por petición](es/obs-exemplars/README.md)
 - **es · p083**: [Experimentos A/B: separar tamaño del efecto, incertidumbre y p-value](es/p083/README.md)
 - **es · p095**: [Experimentos reproducibles de ML: cómo saber qué cambio mejoró el modelo](es/p095/README.md)
 - **es · db-plans**: [EXPLAIN ANALYZE en PostgreSQL: cómo investigar una consulta lenta](es/db-plans/README.md)
@@ -107,6 +108,7 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · design-simplicity**: [KISS y YAGNI: resolver la necesidad actual sin cerrar el siguiente cambio](es/design-simplicity/README.md)
 - **es · p058**: [Latencia y percentiles: qué mide el p99 y qué puede esconder](es/p058/README.md)
 - **es · p004**: [Linux para diagnosticar un servicio: del puerto al proceso y al cierre](es/p004/README.md)
+- **es · p059**: [Logs estructurados: qué identifica una petición y qué identifica una operación](es/p059/README.md)
 - **es · design-lsp**: [LSP: tener la misma firma no garantiza el mismo contrato](es/design-lsp/README.md)
 - **es · p086**: [Machine Learning empieza por definir qué quieres predecir y cuándo](es/p086/README.md)
 - **es · design-states**: [Máquinas de estados: impedir transiciones que el negocio no permite](es/design-states/README.md)
@@ -115,6 +117,7 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · perf-memory**: [Memory profiling: seguir referencias antes de llamar fuga a una subida de RAM](es/perf-memory/README.md)
 - **es · dsa-13**: [Merge sort: ordenar al mezclar y conservar los empates](es/dsa-13/README.md)
 - **es · p093**: [Métricas de Machine Learning: qué errores oculta un buen porcentaje](es/p093/README.md)
+- **es · obs-metrics**: [Métricas con OpenTelemetry: histogramas agregables y labels con límites](es/obs-metrics/README.md)
 - **es · perf-bench**: [Microbenchmarks: comparar dos implementaciones sin cambiar el problema](es/perf-bench/README.md)
 - **es · db-migrations**: [Migraciones de base de datos: cambia el esquema sin romper las versiones anteriores](es/db-migrations/README.md)
 - **es · pbt-model**: [Model-based testing: comprobar pagos después de cada evento](es/pbt-model/README.md)
@@ -129,6 +132,7 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · ops-signals**: [Observabilidad de una operación: seguirla de la API al worker](es/ops-signals/README.md)
 - **es · design-ocp**: [OCP y composición: añadir una variación sin reescribir la regla base](es/design-ocp/README.md)
 - **es · api-oidc-validation**: [Validar un ID token: firma, JWKS y claims que tu aplicación espera](es/api-oidc-validation/README.md)
+- **es · obs-spans**: [Spans con OpenTelemetry: delimitar trabajo sin convertir cada función en una traza](es/obs-spans/README.md)
 - **es · api-pagination-consistency**: [Paginación bajo escrituras: qué conserva keyset y qué necesita un snapshot](es/api-pagination-consistency/README.md)
 - **es · p024**: [Paginación de APIs: OFFSET, keyset y cursores con un orden estable](es/p024/README.md)
 - **es · api-pagination-performance**: [Medir paginación en PostgreSQL: índices, filtros y planes de ejecución](es/api-pagination-performance/README.md)
@@ -138,6 +142,7 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · p088**: [Preprocesamiento sin data leakage: por qué dividir antes de ajustar](es/p088/README.md)
 - **es · p080**: [Probabilidad y Bayes: una alerta no es la probabilidad de que haya un problema](es/p080/README.md)
 - **es · p003**: [Procesos, hilos y memoria virtual: por qué async no evita un bloqueo de CPU](es/p003/README.md)
+- **es · obs-propagation**: [Propagar una traza desde React hasta un worker en otro proceso](es/obs-propagation/README.md)
 - **es · p057**: [Property-based testing: escribir reglas y generar ejemplos que importan](es/p057/README.md)
 - **es · db-acid**: [Propiedades ACID: qué garantiza una base de datos y qué depende de tu código](es/db-acid/README.md)
 - **es · ops-load**: [Pruebas de carga: leer percentiles sin esconder la saturación](es/ops-load/README.md)
@@ -156,6 +161,7 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · design-requirements**: [Antes de elegir arquitectura: requisitos, invariantes y capacidad](es/design-requirements/README.md)
 - **es · dist-retries**: [Retries con presupuesto: deadlines, jitter y backpressure](es/dist-retries/README.md)
 - **es · dist-sagas**: [Sagas y compensaciones: recuperar un proceso sin fingir un rollback global](es/dist-sagas/README.md)
+- **es · obs-sampling**: [Sampling de trazas: qué desaparece cuando no guardas todos los spans](es/obs-sampling/README.md)
 - **es · perf-saturation**: [Saturación y stress testing: medir trabajo útil y comprobar la recuperación](es/perf-saturation/README.md)
 - **es · contract-schema**: [Schema tests de APIs: JSON válido no significa comportamiento compatible](es/contract-schema/README.md)
 - **es · api-threats-secrets**: [Rotar secretos: comprobar la nueva credencial antes de retirar la anterior](es/api-threats-secrets/README.md)
@@ -195,45 +201,24 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · dist-webhooks**: [Webhooks seguros: verificar bytes, persistir y tolerar eventos desordenados](es/dist-webhooks/README.md)
 - **es · p075**: [WebRTC: de pedir el micrófono a transportar audio y cerrar la llamada](es/p075/README.md)
 - **es · p029**: [XSS en el DOM: mostrar texto sin convertirlo en código](es/p029/README.md)
-
-## Ampliación de observabilidad
-
-- [Logs e identidades](es/p059/README.md)
-- [Spans y ciclo de vida](es/obs-spans/README.md)
-- [Propagación React → API → worker](es/obs-propagation/README.md)
-- [Sampling](es/obs-sampling/README.md)
-- [Métricas e histogramas](es/obs-metrics/README.md)
-- [Exemplars](es/obs-exemplars/README.md)
-
-## Ampliación de SLI, SLO y presupuesto
-
-- [SLI del endpoint](es/p060/README.md)
-- [Cohortes asíncronas](es/slo-cohorts/README.md)
-- [Ventanas y cobertura](es/slo-windows/README.md)
-- [Presupuesto y política](es/slo-budget/README.md)
-- [Burn rate](es/slo-burn/README.md)
-- [Alertas multi-window](es/slo-alerts/README.md)
-
-## Ampliación de respuesta a incidentes
-
-- [ES · Triage de incidentes: separar el síntoma, la hipótesis y lo que sabemos](es/p061/README.md)
-- [ES · Mitigar un incidente: reducir el daño y comprobar la recuperación del usuario](es/inc-mitigation/README.md)
-- [ES · Runbooks: convertir una receta de comandos en decisiones con límites](es/inc-runbooks/README.md)
-- [ES · On-call y coordinación: quién decide, quién actúa y qué necesita un relevo](es/inc-oncall/README.md)
-- [ES · Postmortems sin culpables: reconstruir causas y decisiones sin reescribir el pasado](es/inc-postmortem/README.md)
-- [ES · Acciones de un postmortem: cerrar una mejora con pruebas, no con una tarea marcada](es/inc-actions/README.md)
-
-## Ampliación de Docker y entornos reproducibles
-
+- **es · p060**: [Definir un SLI: qué cuenta como una respuesta buena y qué entra en el denominador](es/p060/README.md)
+- **es · slo-cohorts**: [SLI asíncronos: esperar a que una operación pueda incumplir su plazo](es/slo-cohorts/README.md)
+- **es · slo-windows**: [Ventanas de un SLO: qué cambia entre rolling, calendario y datos que faltan](es/slo-windows/README.md)
+- **es · slo-budget**: [Error budgets: calcular el margen de fallo y acordar qué hacer cuando se agota](es/slo-budget/README.md)
+- **es · slo-burn**: [Burn rate: cuánto más rápido se consume el presupuesto y cuándo importa el tráfico](es/slo-burn/README.md)
+- **es · slo-alerts**: [Alertas multi-window: detectar consumo peligroso sin seguir avisando de un fallo recuperado](es/slo-alerts/README.md)
+- **es · p061**: [Triage de incidentes: separar el síntoma, la hipótesis y lo que sabemos](es/p061/README.md)
+- **es · inc-mitigation**: [Mitigar un incidente: reducir el daño y comprobar la recuperación del usuario](es/inc-mitigation/README.md)
+- **es · inc-runbooks**: [Runbooks: convertir una receta de comandos en decisiones con límites](es/inc-runbooks/README.md)
+- **es · inc-oncall**: [On-call y coordinación: quién decide, quién actúa y qué necesita un relevo](es/inc-oncall/README.md)
+- **es · inc-postmortem**: [Postmortems sin culpables: reconstruir causas y decisiones sin reescribir el pasado](es/inc-postmortem/README.md)
+- **es · inc-actions**: [Acciones de un postmortem: cerrar una mejora con pruebas, no con una tarea marcada](es/inc-actions/README.md)
 - **es · p062**: [Docker: qué comparte una image y qué cambia al crear un container](es/p062/README.md)
 - **es · docker-layers**: [Dockerfile y build cache: cambiar código sin reinstalar dependencias](es/docker-layers/README.md)
 - **es · docker-stages**: [Multi-stage builds: compilar TypeScript y entregar solo lo necesario](es/docker-stages/README.md)
 - **es · docker-compose**: [Redes y readiness en Docker Compose: por qué localhost apunta al lugar equivocado](es/docker-compose/README.md)
 - **es · docker-volumes**: [Volúmenes en Docker: qué sobrevive a recrear un container](es/docker-volumes/README.md)
 - **es · docker-security**: [Seguridad de images y containers: reducir permisos y mantener las dependencias](es/docker-security/README.md)
-
-## Ampliación de CI/CD y despliegues progresivos
-
 - **es · p063**: [CI/CD: qué demuestra un pipeline y cuándo debe detener una entrega](es/p063/README.md)
 - **es · cd-artifacts**: [Artefactos inmutables: desplegar lo que probaste y conservar una vuelta atrás](es/cd-artifacts/README.md)
 - **es · cd-flags**: [Feature flags: separar el deploy del comportamiento que reciben los usuarios](es/cd-flags/README.md)
@@ -242,32 +227,23 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · cd-bluegreen**: [Blue-green deployments: cambiar tráfico sin olvidar la base de datos](es/cd-bluegreen/README.md)
 - **es · cd-canary**: [Canary releases: comparar el candidato con un control antes de ampliar](es/cd-canary/README.md)
 - **es · cd-rollback**: [Rollback de aplicación y esquema: volver a una versión que todavía entiende los datos](es/cd-rollback/README.md)
-
-## AWS: servicios, responsabilidades y costes
-
-- **es · p064**: [IaaS, PaaS y serverless: qué trabajo delegas y qué sigue siendo tuyo](es/p064/README.md)
-- **es · aws-iam**: [IAM: dar permisos a un servicio sin repartir claves permanentes](es/aws-iam/README.md)
-- **es · aws-vpc**: [VPC, subnets y endpoints: dibujar por dónde puede salir una petición](es/aws-vpc/README.md)
+- **es · aws-choice**: [Una API en Lambda o ECS: comparar costes sin inventar rendimiento](es/aws-choice/README.md)
+- **es · aws-dynamodb**: [DynamoDB: empezar por las consultas antes de elegir las claves](es/aws-dynamodb/README.md)
 - **es · aws-ec2**: [EC2: ejecutar una aplicación también significa operar su máquina](es/aws-ec2/README.md)
-- **es · aws-lambda**: [Lambda: ejecutar por eventos con concurrencia, límites y tiempo facturado](es/aws-lambda/README.md)
 - **es · aws-ecs**: [ECS con Fargate: gestionar tasks sin administrar los hosts](es/aws-ecs/README.md)
+- **es · aws-iam**: [IAM: dar permisos a un servicio sin repartir claves permanentes](es/aws-iam/README.md)
+- **es · aws-lambda**: [Lambda: ejecutar por eventos con concurrencia, límites y tiempo facturado](es/aws-lambda/README.md)
+- **es · aws-rds**: [RDS: gestionar PostgreSQL sin delegar el diseño ni la recuperación](es/aws-rds/README.md)
 - **es · aws-s3**: [S3: guardar objetos y controlar su acceso sin tratarlo como un disco](es/aws-s3/README.md)
 - **es · aws-sqs**: [SQS: consumir mensajes con visibilidad, reintentos y fallos parciales](es/aws-sqs/README.md)
-- **es · aws-rds**: [RDS: gestionar PostgreSQL sin delegar el diseño ni la recuperación](es/aws-rds/README.md)
-- **es · aws-dynamodb**: [DynamoDB: empezar por las consultas antes de elegir las claves](es/aws-dynamodb/README.md)
-- **es · aws-choice**: [Una API en Lambda o ECS: comparar costes sin inventar rendimiento](es/aws-choice/README.md)
-
-## Terraform: plan, state y reconciliación
-
+- **es · aws-vpc**: [VPC, subnets y endpoints: dibujar por dónde puede salir una petición](es/aws-vpc/README.md)
+- **es · p064**: [IaaS, PaaS y serverless: qué trabajo delegas y qué sigue siendo tuyo](es/p064/README.md)
 - **es · p065**: [Terraform: describir infraestructura, revisar el plan y comprobar el resultado](es/p065/README.md)
 - **es · tf-providers**: [Providers de Terraform: fijar versiones y saber qué valida cada herramienta](es/tf-providers/README.md)
 - **es · tf-state**: [Terraform state: relacionar recursos, coordinar cambios y proteger datos sensibles](es/tf-state/README.md)
 - **es · tf-modules**: [Módulos de Terraform: agrupar una decisión con variables y outputs claros](es/tf-modules/README.md)
 - **es · tf-drift**: [Drift en Terraform: detectar un cambio manual y decidir qué conservar](es/tf-drift/README.md)
 - **es · tf-changes**: [Planes guardados y reemplazos: aplicar el cambio revisado sin prometer un rollback automático](es/tf-changes/README.md)
-
-## Kubernetes: workloads, tráfico y escalado
-
 - **es · k8s-pods**: [Kubernetes: qué es un Pod y quién mantiene la aplicación ejecutándose](es/k8s-pods/README.md)
 - **es · k8s-deployments**: [Deployment y ReplicaSet: cambiar de versión y recuperar la anterior](es/k8s-deployments/README.md)
 - **es · k8s-services**: [Services, EndpointSlices y DNS: encontrar una API aunque cambien sus Pods](es/k8s-services/README.md)
@@ -279,45 +255,30 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · k8s-secrets**: [Secrets y RBAC: codificar un valor no decide quién puede leerlo](es/k8s-secrets/README.md)
 - **es · k8s-resources**: [Requests y limits: reservar sitio, limitar consumo y entender un OOMKilled](es/k8s-resources/README.md)
 - **es · k8s-hpa**: [HPA: observar cómo las métricas cambian las réplicas de una API](es/k8s-hpa/README.md)
-
-## Capacidad y costes: siete entregas específicas
-
-- [RPS y concurrencia: cuántas peticiones hay dentro de tu servicio](es/p066/README.md).
-- [Utilización y réplicas: dimensionar con margen sin inventar un porcentaje universal](es/cap-utilization/README.md).
-- [Cuellos de botella: por qué seis réplicas no siempre procesan más trabajo](es/cap-bottlenecks/README.md).
-- [Autoscaling y colas: qué ocurre mientras llegan las nuevas réplicas](es/cap-autoscaling/README.md).
-- [Estimar costes: tres perfiles de tráfico y un presupuesto que muestra sus supuestos](es/cap-estimates/README.md).
-- [Reservas y compromisos: pagar menos por hora no siempre reduce el gasto](es/cap-commitments/README.md).
-- [FinOps: convertir el coste por petición en una decisión que puedas revisar](es/cap-finops/README.md).
-
-## Fundamentos de redes neuronales: cinco entregas P096
-
-- [Perceptrón y neurona artificial: qué pueden decidir unos pesos y un bias](es/p096/README.md).
-- [Dense layers: leer una red neuronal como operaciones entre matrices](es/dl-dense/README.md).
-- [Activations: qué cambia tanh, sigmoid o ReLU dentro de una red](es/dl-activations/README.md).
-- [Una MLP con NumPy: entrenar XOR y observar dónde falla](es/dl-xor/README.md).
-- [Representaciones aprendidas: qué significa que una red pueda aproximar una función](es/dl-representations/README.md).
-
-## Forward, backward y autodiff: cinco entregas P097
-
-- [Computational graph: seguir los caminos de una pérdida antes de derivarla](es/p097/README.md).
-- [Binary cross entropy: de dónde sale el gradiente p menos y](es/dl-loss-gradient/README.md).
-- [Backpropagation en una MLP: derivar pesos, bias y tanh con sus dimensiones](es/dl-backprop/README.md).
-- [Gradient checking: comprobar un backward sin confiar solo en que la loss baje](es/dl-gradcheck/README.md).
-- [Autograd en PyTorch: qué calcula backward y qué puede cortar el grafo](es/dl-autodiff/README.md).
-
-## Optimizers and training dynamics
-
-- **es · p098**: [Epochs y batches: qué estás comparando cuando una red aprende antes](es/p098/README.md)
-- **es · dl-sgd**: [SGD y learning rate: por qué un gradiente correcto puede dar un mal paso](es/dl-sgd/README.md)
-- **es · dl-momentum**: [Momentum: qué recuerda el optimizador entre dos batches](es/dl-momentum/README.md)
+- **es · p066**: [RPS y concurrencia: cuántas peticiones hay dentro de tu servicio](es/p066/README.md)
+- **es · cap-utilization**: [Utilización y réplicas: dimensionar con margen sin inventar un porcentaje universal](es/cap-utilization/README.md)
+- **es · cap-bottlenecks**: [Cuellos de botella: por qué seis réplicas no siempre procesan más trabajo](es/cap-bottlenecks/README.md)
+- **es · cap-autoscaling**: [Autoscaling y colas: qué ocurre mientras llegan las nuevas réplicas](es/cap-autoscaling/README.md)
+- **es · cap-estimates**: [Estimar costes: tres perfiles de tráfico y un presupuesto que muestra sus supuestos](es/cap-estimates/README.md)
+- **es · cap-commitments**: [Reservas y compromisos: pagar menos por hora no siempre reduce el gasto](es/cap-commitments/README.md)
+- **es · cap-finops**: [FinOps: convertir el coste por petición en una decisión que puedas revisar](es/cap-finops/README.md)
+- **es · p096**: [Perceptrón y neurona artificial: qué pueden decidir unos pesos y un bias](es/p096/README.md)
+- **es · dl-dense**: [Dense layers: leer una red neuronal como operaciones entre matrices](es/dl-dense/README.md)
+- **es · dl-activations**: [Activations: qué cambia tanh, sigmoid o ReLU dentro de una red](es/dl-activations/README.md)
+- **es · dl-xor**: [Una MLP con NumPy: entrenar XOR y observar dónde falla](es/dl-xor/README.md)
+- **es · dl-representations**: [Representaciones aprendidas: qué significa que una red pueda aproximar una función](es/dl-representations/README.md)
+- **es · p097**: [Computational graph: seguir los caminos de una pérdida antes de derivarla](es/p097/README.md)
+- **es · dl-loss-gradient**: [Binary cross entropy: de dónde sale el gradiente p menos y](es/dl-loss-gradient/README.md)
+- **es · dl-backprop**: [Backpropagation en una MLP: derivar pesos, bias y tanh con sus dimensiones](es/dl-backprop/README.md)
+- **es · dl-gradcheck**: [Gradient checking: comprobar un backward sin confiar solo en que la loss baje](es/dl-gradcheck/README.md)
+- **es · dl-autodiff**: [Autograd en PyTorch: qué calcula backward y qué puede cortar el grafo](es/dl-autodiff/README.md)
 - **es · dl-adam**: [Adam: dos estimaciones por parámetro y una escala que cambia](es/dl-adam/README.md)
 - **es · dl-adamw**: [AdamW y weight decay: por qué añadir L2 a Adam cambia otra cosa](es/dl-adamw/README.md)
-- **es · dl-schedules**: [Learning rate schedules: poner un reloj al tamaño del paso](es/dl-schedules/README.md)
+- **es · p098**: [Epochs y batches: qué estás comparando cuando una red aprende antes](es/p098/README.md)
 - **es · dl-accumulation**: [Gradient accumulation: sumar trabajo pequeño sin cambiar el batch que optimizas](es/dl-accumulation/README.md)
-
-## PyTorch end-to-end training
-
+- **es · dl-schedules**: [Learning rate schedules: poner un reloj al tamaño del paso](es/dl-schedules/README.md)
+- **es · dl-momentum**: [Momentum: qué recuerda el optimizador entre dos batches](es/dl-momentum/README.md)
+- **es · dl-sgd**: [SGD y learning rate: por qué un gradiente correcto puede dar un mal paso](es/dl-sgd/README.md)
 - **es · p099**: [Tensores en PyTorch: una shape incorrecta puede cambiar el problema](es/p099/README.md)
 - **es · dl-dataloader**: [Dataset y DataLoader: quién decide qué muestras llegan al modelo](es/dl-dataloader/README.md)
 - **es · dl-module**: [nn.Module: registrar parámetros y construir un forward que devuelve logits](es/dl-module/README.md)
@@ -325,9 +286,6 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · dl-evaluation**: [train, eval y no_grad: tres decisiones que no hacen lo mismo](es/dl-evaluation/README.md)
 - **es · dl-checkpoint**: [Guardar un modelo PyTorch: recuperar las mismas predicciones](es/dl-checkpoint/README.md)
 - **es · dl-resume**: [Reanudar un entrenamiento PyTorch: por qué guardar los pesos no basta](es/dl-resume/README.md)
-
-## Generalization and stability
-
 - **es · p100**: [Overfitting y underfitting: interpretar las curvas antes de cambiar la red](es/p100/README.md)
 - **es · dl-bias-variance**: [Bias y variance: qué cambia cuando cambia la muestra de entrenamiento](es/dl-bias-variance/README.md)
 - **es · dl-initialization**: [Initialization: cómo llegan activaciones y gradientes a la primera actualización](es/dl-initialization/README.md)
@@ -338,7 +296,6 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · dl-weight-decay**: [Weight decay: decidir qué contraer y comprobar qué ocurre fuera de train](es/dl-weight-decay/README.md)
 - **es · dl-early-stopping**: [Early stopping: detenerse y recuperar el mejor checkpoint son dos decisiones](es/dl-early-stopping/README.md)
 - **es · dl-gradient-clipping**: [Gradient clipping: limitar el gradiente no garantiza limitar cualquier optimizer step](es/dl-gradient-clipping/README.md)
-
 - **es · p101**: [Convolution y kernels: calcular una CNN ventana a ventana](es/p101/README.md)
 - **es · dl-conv-geometry**: [Padding, stride y dilation: calcular el tamaño y la posición de cada salida](es/dl-conv-geometry/README.md)
 - **es · dl-pooling**: [Pooling: qué información conserva y qué pierde una CNN al reducir un mapa](es/dl-pooling/README.md)
@@ -348,7 +305,6 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · dl-feature-maps**: [Feature maps: inspeccionar una CNN sin inventar lo que ha aprendido](es/dl-feature-maps/README.md)
 - **es · dl-cnn-architectures**: [Arquitecturas CNN: qué cambia al apilar kernels o añadir un residual block](es/dl-cnn-architectures/README.md)
 - **es · dl-transfer-learning**: [Transfer learning en una CNN: comparar freeze, fine-tuning y empezar de cero](es/dl-transfer-learning/README.md)
-
 - **es · p102**: [Embeddings: convertir símbolos en vectores sin inventar un orden entre sus IDs](es/p102/README.md)
 - **es · dl-hidden-state**: [Hidden state: qué conserva una red entre símbolos y qué aprende entre batches](es/dl-hidden-state/README.md)
 - **es · dl-sequence-lengths**: [Longitudes variables: evitar que padding se convierta en parte de la secuencia](es/dl-sequence-lengths/README.md)
@@ -357,7 +313,6 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · dl-gru**: [GRU: combinar estado y candidato sin una cell state separada](es/dl-gru/README.md)
 - **es · dl-recurrent-gradients**: [Gradientes a través del tiempo: perder sensibilidad no equivale a olvidar al predecir](es/dl-recurrent-gradients/README.md)
 - **es · dl-teacher-forcing**: [Teacher forcing: entrenar con el pasado correcto y generar con el propio](es/dl-teacher-forcing/README.md)
-
 - **es · p103**: [Atención con Q/K/V: consultar y combinar una secuencia sin reducirla a un solo estado](es/p103/README.md)
 - **es · dl-attention-scale**: [Scaled dot-product: por qué dividir antes de softmax y cómo evitar overflow](es/dl-attention-scale/README.md)
 - **es · dl-attention-masks**: [Máscaras de atención: no confundir permitido, padding y posición futura](es/dl-attention-masks/README.md)
@@ -366,9 +321,6 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · dl-transformer-block**: [Un bloque Transformer: atención, residual, LayerNorm y FFN resuelven tareas distintas](es/dl-transformer-block/README.md)
 - **es · dl-encoder-decoder**: [Encoder y decoder: quién consulta a quién en cross-attention](es/dl-encoder-decoder/README.md)
 - **es · dl-causal-attention**: [Atención causal: demostrar que el futuro no cambia el prefijo](es/dl-causal-attention/README.md)
-
-## Adaptación de modelos · P104
-
 - **es · p104**: [Self-supervision: aprender a reconstruir antes de pedir etiquetas](es/p104/README.md)
 - **es · dl-pretraining**: [Pretraining y transfer learning: comprobar si empezar con pesos aprendidos ayuda](es/dl-pretraining/README.md)
 - **es · dl-contrastive**: [Contrastive learning: qué acerca los positivos y qué problema plantean los negativos](es/dl-contrastive/README.md)
@@ -378,20 +330,14 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · dl-lora**: [LoRA: adaptar una matriz con dos factores y comprobar su merge](es/dl-lora/README.md)
 - **es · dl-adapters**: [Adapters: añadir una corrección no lineal a una representación congelada](es/dl-adapters/README.md)
 - **es · dl-forgetting**: [Forgetting: medir qué cambia en la tarea anterior después de adaptar](es/dl-forgetting/README.md)
-
-## Entrenamiento en GPU · P105
-
 - **es · p105**: [CPU, GPU y CUDA: medir el entrenamiento sin confundir envío y ejecución](es/p105/README.md)
 - **es · dl-gpu-memory**: [VRAM en PyTorch: por qué los parámetros no explican toda la memoria](es/dl-gpu-memory/README.md)
 - **es · dl-gpu-transfer**: [Transferencias a GPU: qué cambian pinned memory y non_blocking](es/dl-gpu-transfer/README.md)
 - **es · dl-gpu-batching**: [Batching en GPU: procesar más ejemplos no equivale a aprender mejor](es/dl-gpu-batching/README.md)
 - **es · dl-gpu-amp**: [Mixed precision: qué hace autocast y por qué FP16 puede necesitar GradScaler](es/dl-gpu-amp/README.md)
-- **es · dl-gpu-accumulation**: [Gradient accumulation: un batch lógico, varios backward y un solo step](es/dl-gpu-accumulation/README.md)
 - **es · dl-gpu-profiler**: [PyTorch Profiler: leer CPU y kernels sin sumar tiempos que se solapan](es/dl-gpu-profiler/README.md)
 - **es · dl-gpu-determinism**: [Determinism en GPU: reproducir cálculos sin prometer tiempos idénticos](es/dl-gpu-determinism/README.md)
-
-## Lexical search · P106
-
+- **es · dl-gpu-accumulation**: [Gradient accumulation: un batch lógico, varios backward y un solo step](es/dl-gpu-accumulation/README.md)
 - **es · p106**: [Corpus de búsqueda: decidir qué documento responde a una consulta](es/p106/README.md)
 - **es · nlp-normalization**: [Normalizar texto sin borrar diferencias que importan](es/nlp-normalization/README.md)
 - **es · nlp-tokenization**: [Tokenización: qué pierde un buscador al decidir dónde empieza una palabra](es/nlp-tokenization/README.md)
@@ -403,3 +349,39 @@ Las carpetas usan el ID editorial estable; los slugs de las páginas no cambian.
 - **es · nlp-evaluation**: [Evaluar un buscador: el promedio no explica qué consulta acaba de fallar](es/nlp-evaluation/README.md)
 - **es · nlp-bpe**: [BPE: cómo aprender subwords uniendo pares frecuentes](es/nlp-bpe/README.md)
 - **es · nlp-wordpiece**: [WordPiece: elegir la subword más larga también puede acabar en UNK](es/nlp-wordpiece/README.md)
+- **es · prompt-evaluation**: [Evaluar structured outputs: pasar los controles y acertar son métricas distintas](es/prompt-evaluation/README.md)
+- **es · p109**: [Generación autorregresiva: de una distribución al siguiente token](es/p109/README.md)
+- **es · gen-context**: [Límites de generación: EOS, tokens nuevos y truncation de contexto](es/gen-context/README.md)
+- **es · gen-determinism**: [Seeds y determinismo: qué puede repetirse al generar texto](es/gen-determinism/README.md)
+- **es · gen-streaming**: [Streaming de tokens: medir TTFT y separar emisión de llegada](es/gen-streaming/README.md)
+- **es · gen-temperature**: [Temperature: cambiar probabilidades sin añadir conocimiento](es/gen-temperature/README.md)
+- **es · gen-topk**: [Top-k: una frontera de candidatos puede cambiar toda la generación](es/gen-topk/README.md)
+- **es · gen-topp**: [Top-p: construir un nucleus y respetar el orden de los filtros](es/gen-topp/README.md)
+- **es · lm-context**: [Autoregression y teacher forcing: aprender sin mirar el token futuro](es/lm-context/README.md)
+- **es · lm-families**: [Encoder, decoder y masked LM: separar arquitectura y objetivo](es/lm-families/README.md)
+- **es · lm-inspection**: [Inspeccionar un language model pequeño sin exagerar lo que aprendió](es/lm-inspection/README.md)
+- **es · lm-loss**: [Next-token loss y perplexity: qué miden y cuándo se pueden comparar](es/lm-loss/README.md)
+- **es · p108**: [Qué predice un modelo de lenguaje: probabilidades, no una única respuesta](es/p108/README.md)
+- **es · lm-tokens**: [Tokenizer, embeddings y parámetros: el contrato de entrada de un language model](es/lm-tokens/README.md)
+- **es · ner-errors**: [Errores de NER: distinguir límites, tipos y entidades inventadas](es/ner-errors/README.md)
+- **es · p107**: [NER: decidir dónde empieza y termina una entidad](es/p107/README.md)
+- **es · ner-bio**: [BIO tags: convertir palabras etiquetadas en entidades completas](es/ner-bio/README.md)
+- **es · ner-training**: [Entrenar un detector NER: bajar la loss no garantiza reconocer entidades](es/ner-training/README.md)
+- **es · ner-metrics**: [Evaluar NER: un límite incorrecto cuenta como dos errores](es/ner-metrics/README.md)
+- **es · ner-rules**: [NER con reglas: qué resuelve un diccionario y qué se le escapa](es/ner-rules/README.md)
+- **es · ner-transformers**: [NER con Transformers: el contexto ayuda, la alineación sigue importando](es/ner-transformers/README.md)
+- **es · prompt-few-shot**: [Few-shot: enseñar el formato no garantiza una buena extracción](es/prompt-few-shot/README.md)
+- **es · p110**: [Prompt engineering: separar instrucciones, roles y documentos](es/p110/README.md)
+- **es · prompt-adversarial**: [Prompt injection en documentos: dónde termina la confianza](es/prompt-adversarial/README.md)
+- **es · prompt-evidence**: [Citas en respuestas de un LLM: comprobar el texto sin confundirlo con la verdad](es/prompt-evidence/README.md)
+- **es · prompt-schema**: [Structured outputs: validar JSON antes de usar la respuesta](es/prompt-schema/README.md)
+- **es · prompt-tools**: [Tool schemas: una propuesta del modelo todavía necesita autorización](es/prompt-tools/README.md)
+- **es · p111**: [Embeddings de texto: qué representa el vector que usamos para buscar](es/p111/README.md)
+- **es · vec-cosine**: [Cosine similarity: comparar direcciones sin convertir el score en una probabilidad](es/vec-cosine/README.md)
+- **es · vec-l2**: [Distancia L2 y normalización: cuándo cambian los vecinos que recuperas](es/vec-l2/README.md)
+- **es · vec-exact**: [Búsqueda vectorial exacta: la referencia que necesitas antes de aproximar](es/vec-exact/README.md)
+- **es · vec-hnsw**: [HNSW: buscar en un grafo sin prometer todos los vecinos exactos](es/vec-hnsw/README.md)
+- **es · vec-faiss**: [FAISS: del array de embeddings a un índice que puedes guardar y comprobar](es/vec-faiss/README.md)
+- **es · vec-pgvector**: [pgvector: guardar embeddings en PostgreSQL y comprobar cómo se buscan](es/vec-pgvector/README.md)
+- **es · vec-relevance**: [Evaluar búsqueda semántica: cuándo un embedding recupera algo útil](es/vec-relevance/README.md)
+- **es · vec-measurement**: [Recall y latencia: medir búsqueda vectorial sin comparar relojes distintos](es/vec-measurement/README.md)

@@ -1,0 +1,12 @@
+import {compareGeometry} from './geometry.mjs';
+import {dot,normalizeVector,squaredL2} from './vectors.mjs';
+const a=[3,4],b=[0,2];
+console.log(dot(a,b));
+console.log(dot(a.map(value=>2*value),b));
+console.log(dot(normalizeVector(a),normalizeVector(b)));
+const query=[1,0],first=[2,0],second=[.9,.1];
+console.log(squaredL2(query,first));
+console.log(squaredL2(query,second));
+console.log(squaredL2(normalizeVector(query),normalizeVector(first)));
+console.log(squaredL2(normalizeVector(query),normalizeVector(second)));
+console.log(JSON.stringify({base:compareGeometry(a,b),scaled:compareGeometry(a.map(value=>value*2),b),first:compareGeometry(query,first),second:compareGeometry(query,second)},null,2));

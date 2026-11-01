@@ -1,0 +1,314 @@
+{
+  "sourceHashes": {
+    "contract.py": "39193c6ec5d738123d878b97aa915e4796f4b7049c6996f83d7745cc3d5cf05e",
+    "fixtures.json": "ad69e2342002f53019cc40056f788f24081fea09611c05b9144b8cddca1c1aef",
+    "runtime.json": "0e7960a8c09b0c8ba6400f516a02930161ce20b49f13416bcabe5e0038ef9a15"
+  },
+  "rows": [
+    {
+      "id": "C01",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\": [{\"type\": \"PER\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}]}",
+      "expectedStage": "accepted",
+      "expectedSemanticCorrect": true,
+      "result": {
+        "accepted": true,
+        "stage": "accepted",
+        "errors": [],
+        "data": {
+          "entities": [
+            {
+              "type": "PER",
+              "text": "Ana Ruiz",
+              "quote": "Ana Ruiz trabaja."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "C02",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\": [{\"type\": \"ORG\", \"text\": \"Falsa\", \"quote\": \"Falsa existe.\"}]}",
+      "expectedStage": "evidence",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "evidence",
+        "errors": [
+          {
+            "index": 0,
+            "code": "quote_not_in_source"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C03",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\": [{\"type\": \"ORG\", \"text\": \"Falsa\", \"quote\": \"Ana Ruiz trabaja.\"}]}",
+      "expectedStage": "evidence",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "evidence",
+        "errors": [
+          {
+            "index": 0,
+            "code": "text_not_in_quote"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C04",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\": [{\"type\": \"ORG\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}]}",
+      "expectedStage": "accepted",
+      "expectedSemanticCorrect": false,
+      "result": {
+        "accepted": true,
+        "stage": "accepted",
+        "errors": [],
+        "data": {
+          "entities": [
+            {
+              "type": "ORG",
+              "text": "Ana Ruiz",
+              "quote": "Ana Ruiz trabaja."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "C05",
+      "source": "«Río Claro» es un proyecto, no una empresa.",
+      "raw": "{\"entities\": [{\"type\": \"ORG\", \"text\": \"Río Claro\", \"quote\": \"«Río Claro» es un proyecto, no una empresa.\"}]}",
+      "expectedStage": "accepted",
+      "expectedSemanticCorrect": false,
+      "result": {
+        "accepted": true,
+        "stage": "accepted",
+        "errors": [],
+        "data": {
+          "entities": [
+            {
+              "type": "ORG",
+              "text": "Río Claro",
+              "quote": "«Río Claro» es un proyecto, no una empresa."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "C06",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\": []}",
+      "expectedStage": "accepted",
+      "expectedSemanticCorrect": false,
+      "result": {
+        "accepted": true,
+        "stage": "accepted",
+        "errors": [],
+        "data": {
+          "entities": []
+        }
+      }
+    },
+    {
+      "id": "C07",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\": [{\"type\": \"PER\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}, {\"type\": \"PER\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}]}",
+      "expectedStage": "evidence",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "evidence",
+        "errors": [
+          {
+            "index": 1,
+            "code": "duplicate_entity"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C08",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\": [], \"secret\": \"extra\"}",
+      "expectedStage": "schema",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "schema",
+        "errors": [
+          {
+            "code": "schema_violation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C09",
+      "source": "Zoé",
+      "raw": "{\"entities\": [{\"type\": \"PER\", \"text\": \"Zoé\", \"quote\": \"Zoé\"}]}",
+      "expectedStage": "evidence",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "evidence",
+        "errors": [
+          {
+            "index": 0,
+            "code": "quote_not_in_source"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C10",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\":[],\"entities\":[]}",
+      "expectedStage": "parse",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "parse",
+        "errors": [
+          {
+            "code": "invalid_json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C11",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "```json\n{\"entities\":[]}\n```",
+      "expectedStage": "parse",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "parse",
+        "errors": [
+          {
+            "code": "invalid_json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C12",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\": [{\"type\": \"LOC\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}]}",
+      "expectedStage": "schema",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "schema",
+        "errors": [
+          {
+            "code": "schema_violation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C13",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\":NaN}",
+      "expectedStage": "parse",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "parse",
+        "errors": [
+          {
+            "code": "invalid_json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C14",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\": [{\"type\": \"PER\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}, {\"type\": \"PER\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}, {\"type\": \"PER\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}, {\"type\": \"PER\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}, {\"type\": \"PER\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}, {\"type\": \"PER\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}, {\"type\": \"PER\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}, {\"type\": \"PER\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}, {\"type\": \"PER\", \"text\": \"Ana Ruiz\", \"quote\": \"Ana Ruiz trabaja.\"}]}",
+      "expectedStage": "schema",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "schema",
+        "errors": [
+          {
+            "code": "schema_violation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C15",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\": [{\"type\": \"PER\", \"text\": \" \", \"quote\": \"Ana Ruiz trabaja.\"}]}",
+      "expectedStage": "schema",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "schema",
+        "errors": [
+          {
+            "code": "schema_violation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C16",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{\"entities\": null}",
+      "expectedStage": "schema",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "schema",
+        "errors": [
+          {
+            "code": "schema_violation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C17",
+      "source": "Ana Ruiz trabaja.",
+      "raw": "{}",
+      "expectedStage": "schema",
+      "expectedSemanticCorrect": null,
+      "result": {
+        "accepted": false,
+        "stage": "schema",
+        "errors": [
+          {
+            "code": "schema_violation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C18",
+      "source": "Sin nombres.",
+      "raw": "{\"entities\": []}",
+      "expectedStage": "accepted",
+      "expectedSemanticCorrect": true,
+      "result": {
+        "accepted": true,
+        "stage": "accepted",
+        "errors": [],
+        "data": {
+          "entities": []
+        }
+      }
+    }
+  ]
+}

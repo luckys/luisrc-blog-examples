@@ -1,0 +1,54 @@
+{
+  "package": "faiss-napi",
+  "version": "0.10.3",
+  "platform": "linux",
+  "arch": "x64",
+  "node": "v24.19.0",
+  "files": [
+    {
+      "file": "faiss-napi.node",
+      "size": 6198800,
+      "sha256": "b5af1bf72270e1ae9a84f9eb19ba552fe23c525e154493123c3d73bb6fe507fa"
+    },
+    {
+      "file": "libmkl_avx2.so",
+      "size": 48903347,
+      "sha256": "9ba44caf947feda480f62d43dfdb308e504f14831d2d25afac7a5fccf136c1df"
+    },
+    {
+      "file": "libmkl_avx512.so",
+      "size": 63342494,
+      "sha256": "11cb9f12175ff2e805f54f13baf0221424563bc17ada7a95ea22fbda657c910e"
+    },
+    {
+      "file": "libmkl_core.so",
+      "size": 74568650,
+      "sha256": "efa527c4f22f9681cd62a4d1650469fdb04838e7f6106d455de249c6b5615366"
+    },
+    {
+      "file": "libmkl_def.so",
+      "size": 41825357,
+      "sha256": "c5f22b5207fe3c3b12cc93dead1705cd040d755f5042dc036be8d1e3292a801e"
+    },
+    {
+      "file": "libmkl_gnu_thread.so",
+      "size": 30741049,
+      "sha256": "b9643eeb509657fbefe3f930777e5e99102d13a5ceb2df4add1e4321fff67a11"
+    },
+    {
+      "file": "libmkl_intel_lp64.so",
+      "size": 13120555,
+      "sha256": "a173aceb358e449f973598af811146cc64a1c4ff3ed9f7c77e5de581eb40ee21"
+    },
+    {
+      "file": "libmkl_intel_thread.so",
+      "size": 64332620,
+      "sha256": "b66a928d1ba26933fcc55ad77691fe7255b2625f98e43008d4c107ba5b241a27"
+    },
+    {
+      "file": "libmkl_sequential.so",
+      "size": 28976670,
+      "sha256": "1ea5f113d7721d1705417d48a76e98c98a813bafe5de7f1002b822d84a773e41"
+    }
+  ]
+}

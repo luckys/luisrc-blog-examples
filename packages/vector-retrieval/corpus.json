@@ -1,0 +1,162 @@
+[
+  {
+    "id": "D01",
+    "title": "Índices B-tree",
+    "body": "Un índice B-tree ayuda a localizar filas por igualdad y rango. El plan de ejecución indica si el motor lo utiliza.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D02",
+    "title": "Índices compuestos",
+    "body": "Un índice compuesto contiene varias columnas. El orden de las columnas importa para filtrar y ordenar.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D03",
+    "title": "Transacciones y rollback",
+    "body": "Una transacción agrupa cambios. Un rollback revierte cambios pendientes antes del commit.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D04",
+    "title": "Bloqueos y deadlocks",
+    "body": "Dos transacciones pueden esperar bloqueos en orden opuesto. El motor detecta un deadlock y aborta una víctima.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D05",
+    "title": "Paginación keyset",
+    "body": "La paginación keyset continúa desde la última clave. Evita recorrer todas las filas anteriores como ocurre con un offset grande.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D06",
+    "title": "Copias de seguridad",
+    "body": "Una copia de seguridad solo es útil si puedes restaurarla. Ensaya la restauración y comprueba qué datos se han recuperado.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D07",
+    "title": "Restaurar una copia",
+    "body": "Restaurar una copia de seguridad recupera los datos guardados. Verifica la integridad antes de volver a aceptar escrituras.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D08",
+    "title": "Contraseña con hash",
+    "body": "Una contraseña se guarda con un hash adecuado y salt único. No se recupera descifrando el hash.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D09",
+    "title": "Cifrado de mensajes",
+    "body": "El cifrado permite recuperar el mensaje con una clave. Cifrar no sustituye al hash de una contraseña.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D10",
+    "title": "Reintentos con idempotencia",
+    "body": "Una clave de idempotencia evita repetir el efecto de una petición. Un reintento puede producirse tras un timeout.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D11",
+    "title": "Caducidad de caché",
+    "body": "El TTL limita cuánto tiempo permanece una entrada en la caché. Invalidar una entrada elimina su valor antes de caducar.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D12",
+    "title": "Memoria del proceso",
+    "body": "Una fuga conserva objetos que ya no necesitas. Medir el heap ayuda a distinguir referencias vivas y memoria reservada.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D13",
+    "title": "Go y goroutines",
+    "body": "Una goroutine ejecuta una función concurrente. Un channel comunica valores y context permite solicitar cancelación cooperativa.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D14",
+    "title": "Python y generadores",
+    "body": "Un generador produce valores de forma perezosa. yield permite recorrer una secuencia sin construir una lista completa.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D15",
+    "title": "Rust y ownership",
+    "body": "Ownership y borrowing regulan el uso de valores y referencias. El compilador rechaza ciertos usos después de mover un valor.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D16",
+    "title": "Tokens de acceso",
+    "body": "Un token de acceso autoriza peticiones durante un intervalo. Verifica issuer, audience, firma y expiración.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D17",
+    "title": "Tokenización de texto",
+    "body": "Un tokenizer divide texto en tokens. Las palabras y las subwords son dos unidades posibles para representar una entrada.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D18",
+    "title": "Logs sin secretos",
+    "body": "Los logs no deben incluir secretos ni contraseñas. Redacta los campos sensibles antes de escribir cada evento.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D19",
+    "title": "Logs con secretos: incidente",
+    "body": "Un equipo incluyó secretos en los logs por error. El incidente obligó a rotar las credenciales y borrar las copias afectadas.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  },
+  {
+    "id": "D20",
+    "title": "Año de retención",
+    "body": "El año de retención define durante cuánto tiempo se guardan los eventos. La política distingue los años naturales de los intervalos de días.",
+    "source": "original didactic fixture",
+    "language": "es",
+    "version": 1
+  }
+]

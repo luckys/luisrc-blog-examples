@@ -1,0 +1,48 @@
+<svg role="img" aria-labelledby="figure-title" width="360" height="380" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 360 380"><title id="figure-title">Tamaño del índice serializado</title>
+<rect width="360" height="380" x="0" y="0" fill="#0f172a"></rect>
+<path d="M48 315.5L342 315.5" fill="none" pointer-events="visible" stroke="#334155" class="vector-figure-cls-0"></path>
+<path d="M48 260.5L342 260.5" fill="none" pointer-events="visible" stroke="#334155" class="vector-figure-cls-0"></path>
+<path d="M48 205.5L342 205.5" fill="none" pointer-events="visible" stroke="#334155" class="vector-figure-cls-0"></path>
+<path d="M48 151.5L342 151.5" fill="none" pointer-events="visible" stroke="#334155" class="vector-figure-cls-0"></path>
+<path d="M48 96.5L342 96.5" fill="none" pointer-events="visible" stroke="#334155" class="vector-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:14px;font-family:sans-serif;" y="-7" transform="translate(48 81)" fill="#e2e8f0">MB</text>
+<path d="M48 315.5L342 315.5" fill="none" pointer-events="visible" stroke="#94a3b8" stroke-linecap="round" class="vector-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(40 315)" fill="#e2e8f0">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(40 260.25)" fill="#e2e8f0">0,5</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(40 205.5)" fill="#e2e8f0">1</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(40 150.75)" fill="#e2e8f0">1,5</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(40 96)" fill="#e2e8f0">2</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="6.5" transform="translate(97 323)" fill="#e2e8f0">FlatL2</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="6.5" transform="translate(195 323)" fill="#e2e8f0">HNSW4</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="6.5" transform="translate(293 323)" fill="#e2e8f0">HNSW16</text>
+<path d="M76 315l42 0l0 -168.2l-42 0Z" fill="#94a3b8" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="vector-figure-cls-1"></path>
+<path d="M174 315l42 0l0 -173.6l-42 0Z" fill="#fbbf24" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="vector-figure-cls-2"></path>
+<path d="M272 315l42 0l0 -184l-42 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="vector-figure-cls-3"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(97 141.8031)" fill="#e2e8f0">1,536</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(195 136.3735)" fill="#e2e8f0">1,586</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(293 126.0301)" fill="#e2e8f0">1,68</text>
+<path d="M-5 -5l256.4 0l0 55l-256.3 0Z" transform="translate(17 15)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#3c3c41" stroke-width="0" class="vector-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:17px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="8.5" transform="translate(17 15)" fill="#e2e8f0">Tamaño del índice serializado</text>
+<path d="M0 27l246.4 0l0 18l-246.3 0Z" transform="translate(17 15)" fill="none" pointer-events="visible" class="vector-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="36" transform="translate(17 15)" fill="#94a3b8">MB decimales; no es memoria del proceso</text>
+<style ><![CDATA[
+.vector-figure-cls-0:hover {
+pointer-events:none;
+}
+.vector-figure-cls-1:hover {
+cursor:pointer;
+fill:rgba(162,179,202,1);
+}
+.vector-figure-cls-2:hover {
+cursor:pointer;
+fill:rgba(255,210,39,1);
+}
+.vector-figure-cls-3:hover {
+cursor:pointer;
+fill:rgba(61,207,255,1);
+}
+
+]]>
+
+</style>
+</svg>

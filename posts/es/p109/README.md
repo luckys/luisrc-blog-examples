@@ -1,0 +1,28 @@
+# Generación autorregresiva: de una distribución al siguiente token
+
+Laboratorio P109 compartido; fuentes y capturas reproducibles.
+
+- [README.md](../../../packages/text-generation/README.md)
+- [protocol.json](../../../packages/text-generation/protocol.json)
+- [inputs.json](../../../packages/text-generation/inputs.json)
+- [prepare.mjs](../../../packages/text-generation/prepare.mjs)
+- [runtime.json](../../../packages/text-generation/runtime.json)
+- [fetch-runtime.mjs](../../../packages/text-generation/fetch-runtime.mjs)
+- [generation.py](../../../packages/text-generation/generation.py)
+- [experiments.py](../../../packages/text-generation/experiments.py)
+- [run.mjs](../../../packages/text-generation/run.mjs)
+- [verify.py](../../../packages/text-generation/verify.py)
+- [sampling.mjs](../../../packages/text-generation/sampling.mjs)
+- [stream.py](../../../packages/text-generation/stream.py)
+- [stream-client.mjs](../../../packages/text-generation/stream-client.mjs)
+- [stream-metrics.mjs](../../../packages/text-generation/stream-metrics.mjs)
+- [verify-stream.mjs](../../../packages/text-generation/verify-stream.mjs)
+- [results/observations.json](../../../packages/text-generation/results/observations.json)
+- [results/streaming.json](../../../packages/text-generation/results/streaming.json)
+- [render.mjs](../../../packages/text-generation/render.mjs)
+- [charts.mjs](../../../packages/text-generation/charts.mjs)
+- [viewer-data.json](../../../packages/text-generation/viewer-data.json)
+- [tests/inputs.test.mjs](../../../packages/text-generation/tests/inputs.test.mjs)
+- [tests/observations.test.mjs](../../../packages/text-generation/tests/observations.test.mjs)
+- [tests/stream-metrics.test.mjs](../../../packages/text-generation/tests/stream-metrics.test.mjs)
+- [tests/test_generation.py](../../../packages/text-generation/tests/test_generation.py)

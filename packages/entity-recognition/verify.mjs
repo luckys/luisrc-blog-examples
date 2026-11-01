@@ -1,0 +1,21 @@
+import {readFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {validateRecord,toBio,fromBio,tokensOf} from './spans.mjs';
+const load=async p=>JSON.parse(await readFile(new URL(p,import.meta.url)));
+const corpus=await load('corpus.json'), capture=await load('annotation-audit.json');
+for(const [file,hash] of Object.entries(capture.sourceHashes))assert.equal(createHash('sha256').update(await readFile(new URL(file,import.meta.url))).digest('hex'),hash,file);
+for(const record of corpus){validateRecord(record);assert.deepEqual(fromBio(tokensOf(record.text),toBio(record)),record.spans.map(({text,...span})=>span));}
+const counts=['train','dev','test'].map(split=>{const rows=corpus.filter(r=>r.split===split);return {split,documents:rows.length,negative:rows.filter(r=>!r.spans.length).length,PER:rows.flatMap(r=>r.spans).filter(s=>s.label==='PER').length,ORG:rows.flatMap(r=>r.spans).filter(s=>s.label==='ORG').length};});
+assert.deepEqual(counts,capture.counts);console.log(JSON.stringify({status:'annotation contract verified independently of fitted models',counts},null,2));
+const training=await load('results/training.json');
+for(const [file,hash] of Object.entries(training.sourceHashes))assert.equal(createHash('sha256').update(await readFile(new URL(file,import.meta.url))).digest('hex'),hash,file);
+const {experiment}=await import('./experiment.mjs');
+const result=experiment(corpus,await load('protocol.json'));
+assert.deepEqual(result.rules,training.rules);assert.deepEqual(result.variants,training.variants);
+console.log('Three fixed seeds retrained; every weight, loss, prediction and metric matches the saved capture');
+const additional=await load('results/convergence.json');
+for(const [file,hash] of Object.entries(additional.sourceHashes))assert.equal(createHash('sha256').update(await readFile(new URL(file,import.meta.url))).digest('hex'),hash,file);
+const {convergence}=await import('./convergence.mjs');
+assert.deepEqual(convergence(corpus,await load('protocol.json'),await load('convergence-protocol.json')).runs,additional.runs);
+console.log('All six convergence contrasts re-fitted exactly; original failure preserved');

@@ -1,0 +1,17 @@
+{
+  "status": "fixed_before_postgres_measurement",
+  "source": "Same 1000 genuinely encoded documents and20 preencoded queries as native index control",
+  "metric": "cosine distance over normalized float32 vectors; reference is exact PostgreSQL ordering, not relevance labels",
+  "k": 10,
+  "m": 16,
+  "efConstruction": 40,
+  "efSearch": [4, 16, 64],
+  "warmupRounds": 3,
+  "measurementRounds": 30,
+  "timing": "performance.now around awaited pg client query including loopback IPC, protocol and parsing; SET commands excluded; no encoder time",
+  "schedule": "exact phase before index creation; then HNSW phase, round-major/ef-major/query Q01..Q20; cache warming and phase order not randomized",
+  "plans": "Save exact and unforced HNSW-era plan; force enable_seqscan=off to exercise ANN; require actual named HNSW index scan; iterative_scan=off",
+  "lowEf": "efSearch4 is deliberately below k10; preserve fewer returned neighbors and divide recall by exact10. Do not silently raise ef.",
+  "limits": "Tiny local synthetic index, one client, no concurrency or end-to-end latency. FAISS native timing excludes IPC and is a different scope. ANN set recall is not semantic relevance.",
+  "selection": "No tuning or retry selection, retain all requests and distances; no production claims"
+}

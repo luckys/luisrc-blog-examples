@@ -754,5 +754,193 @@
   {
     "source": "packages/lexical-search/length.svg",
     "destination": "public/assets/interactive/lexical-search/length.svg"
+  },
+  {
+    "source": "packages/entity-recognition/explorer.html",
+    "destination": "public/assets/interactive/entity-recognition/explorer.html"
+  },
+  {
+    "source": "packages/entity-recognition/explorer.mjs",
+    "destination": "public/assets/interactive/entity-recognition/explorer.mjs"
+  },
+  {
+    "source": "packages/entity-recognition/spans.mjs",
+    "destination": "public/assets/interactive/entity-recognition/spans.mjs"
+  },
+  {
+    "source": "packages/entity-recognition/corpus.json",
+    "destination": "public/assets/interactive/entity-recognition/corpus.json"
+  },
+  {
+    "source": "packages/entity-recognition/counts.svg",
+    "destination": "public/assets/interactive/entity-recognition/counts.svg"
+  },
+  {
+    "source": "packages/entity-recognition/diagnostics.mjs",
+    "destination": "public/assets/interactive/entity-recognition/diagnostics.mjs"
+  },
+  {
+    "source": "packages/entity-recognition/charts.mjs",
+    "destination": "public/assets/interactive/entity-recognition/charts.mjs"
+  },
+  {
+    "source": "packages/entity-recognition/observations.json",
+    "destination": "public/assets/interactive/entity-recognition/observations.json"
+  },
+  {
+    "source": "packages/entity-recognition/loss.svg",
+    "destination": "public/assets/interactive/entity-recognition/loss.svg"
+  },
+  {
+    "source": "packages/entity-recognition/f1.svg",
+    "destination": "public/assets/interactive/entity-recognition/f1.svg"
+  },
+  {
+    "source": "packages/language-models/explorer.html",
+    "destination": "public/assets/interactive/language-models/explorer.html"
+  },
+  {
+    "source": "packages/language-models/explorer.mjs",
+    "destination": "public/assets/interactive/language-models/explorer.mjs"
+  },
+  {
+    "source": "packages/language-models/analysis.mjs",
+    "destination": "public/assets/interactive/language-models/analysis.mjs"
+  },
+  {
+    "source": "packages/language-models/charts.mjs",
+    "destination": "public/assets/interactive/language-models/charts.mjs"
+  },
+  {
+    "source": "packages/language-models/viewer-data.json",
+    "destination": "public/assets/interactive/language-models/viewer-data.json"
+  },
+  {
+    "source": "packages/language-models/probabilities.svg",
+    "destination": "public/assets/interactive/language-models/probabilities.svg"
+  },
+  {
+    "source": "packages/language-models/loss.svg",
+    "destination": "public/assets/interactive/language-models/loss.svg"
+  },
+  {
+    "source": "packages/language-models/test-nll.svg",
+    "destination": "public/assets/interactive/language-models/test-nll.svg"
+  },
+  {
+    "source": "packages/text-generation/explorer.html",
+    "destination": "public/assets/interactive/text-generation/explorer.html"
+  },
+  {
+    "source": "packages/text-generation/explorer.mjs",
+    "destination": "public/assets/interactive/text-generation/explorer.mjs"
+  },
+  {
+    "source": "packages/text-generation/sampling.mjs",
+    "destination": "public/assets/interactive/text-generation/sampling.mjs"
+  },
+  {
+    "source": "packages/text-generation/charts.mjs",
+    "destination": "public/assets/interactive/text-generation/charts.mjs"
+  },
+  {
+    "source": "packages/text-generation/viewer-data.json",
+    "destination": "public/assets/interactive/text-generation/viewer-data.json"
+  },
+  {
+    "source": "packages/text-generation/support.svg",
+    "destination": "public/assets/interactive/text-generation/support.svg"
+  },
+  {
+    "source": "packages/text-generation/tail.svg",
+    "destination": "public/assets/interactive/text-generation/tail.svg"
+  },
+  {
+    "source": "packages/text-generation/latency.svg",
+    "destination": "public/assets/interactive/text-generation/latency.svg"
+  },
+  {
+    "source": "packages/structured-extraction/explorer.html",
+    "destination": "public/assets/interactive/structured-extraction/explorer.html"
+  },
+  {
+    "source": "packages/structured-extraction/explorer.mjs",
+    "destination": "public/assets/interactive/structured-extraction/explorer.mjs"
+  },
+  {
+    "source": "packages/structured-extraction/charts.mjs",
+    "destination": "public/assets/interactive/structured-extraction/charts.mjs"
+  },
+  {
+    "source": "packages/structured-extraction/viewer-data.json",
+    "destination": "public/assets/interactive/structured-extraction/viewer-data.json"
+  },
+  {
+    "source": "packages/structured-extraction/stages.svg",
+    "destination": "public/assets/interactive/structured-extraction/stages.svg"
+  },
+  {
+    "source": "packages/structured-extraction/entities.svg",
+    "destination": "public/assets/interactive/structured-extraction/entities.svg"
+  },
+  {
+    "source": "packages/structured-extraction/context.svg",
+    "destination": "public/assets/interactive/structured-extraction/context.svg"
+  },
+  {
+    "source": "packages/vector-retrieval/explorer.html",
+    "destination": "public/assets/interactive/vector-retrieval/explorer.html"
+  },
+  {
+    "source": "packages/vector-retrieval/explorer.mjs",
+    "destination": "public/assets/interactive/vector-retrieval/explorer.mjs"
+  },
+  {
+    "source": "packages/vector-retrieval/geometry.mjs",
+    "destination": "public/assets/interactive/vector-retrieval/geometry.mjs"
+  },
+  {
+    "source": "packages/vector-retrieval/geometry-diagram.mjs",
+    "destination": "public/assets/interactive/vector-retrieval/geometry-diagram.mjs"
+  },
+  {
+    "source": "packages/vector-retrieval/neighbor-diagram.mjs",
+    "destination": "public/assets/interactive/vector-retrieval/neighbor-diagram.mjs"
+  },
+  {
+    "source": "packages/vector-retrieval/vectors.mjs",
+    "destination": "public/assets/interactive/vector-retrieval/vectors.mjs"
+  },
+  {
+    "source": "packages/vector-retrieval/viewer-data.json",
+    "destination": "public/assets/interactive/vector-retrieval/viewer-data.json"
+  },
+  {
+    "source": "packages/vector-retrieval/native-recall.svg",
+    "destination": "public/assets/interactive/vector-retrieval/native-recall.svg"
+  },
+  {
+    "source": "packages/vector-retrieval/serialized-size.svg",
+    "destination": "public/assets/interactive/vector-retrieval/serialized-size.svg"
+  },
+  {
+    "source": "packages/vector-retrieval/quality-comparison.svg",
+    "destination": "public/assets/interactive/vector-retrieval/quality-comparison.svg"
+  },
+  {
+    "source": "packages/vector-retrieval/saved-panels.mjs",
+    "destination": "public/assets/interactive/vector-retrieval/saved-panels.mjs"
+  },
+  {
+    "source": "packages/vector-retrieval/pg-recall.svg",
+    "destination": "public/assets/interactive/vector-retrieval/pg-recall.svg"
+  },
+  {
+    "source": "packages/vector-retrieval/native-latency.svg",
+    "destination": "public/assets/interactive/vector-retrieval/native-latency.svg"
+  },
+  {
+    "source": "packages/vector-retrieval/postgres-latency.svg",
+    "destination": "public/assets/interactive/vector-retrieval/postgres-latency.svg"
   }
 ]

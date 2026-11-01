@@ -1,0 +1,10 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const root=new URL('.',import.meta.url),json=async f=>JSON.parse(await readFile(new URL(f,root))),embedding=await json('results/embeddings.json'),quality=await json('results/quality.json'),native=await json('results/native-index.json'),postgres=await json('results/postgres.json');
+for(const saved of [embedding,quality,native,postgres])for(const[file,sha]of Object.entries(saved.sourceHashes))assert.equal(createHash('sha256').update(await readFile(new URL(file,root))).digest('hex'),sha,file);
+const pack={kind:'saved_embedding_geometry_not_live_model',encodingCapturedAt:embedding.capturedAt,qualityCapturedAt:quality.capturedAt,encoder:embedding.protocol.encoder,encodingHashes:embedding.sourceHashes,qualityHashes:quality.sourceHashes,rows:embedding.rows.filter(r=>r.kind!=='index-control').map(({id,kind,text,rawVector})=>({id,kind,text,rawVector})),corpus:await json('corpus.json'),queries:await json('queries.json'),quality,indexDocuments:embedding.rows.filter(r=>r.kind!=='query').map(({id,kind,text})=>({id,kind,text})),native:{capturedAt:native.capturedAt,kind:native.kind,sourceHashes:native.sourceHashes,config:native.config,strategies:native.strategies,builds:native.builds,neighbors:native.neighbors,summaries:native.summaries}};
+pack.postgres=Object.fromEntries(['capturedAt','kind','sourceHashes','config','versions','indexBuildMs','indexBytes','plans','neighbors','summaries'].map(key=>[key,postgres[key]]));
+for(const [target,capture] of [[pack.native,native],[pack.postgres,postgres]])target.measurements=capture.measurements.map(({round,strategy,queryId,elapsedMs})=>({round,strategy,queryId,elapsedMs}));
+await writeFile(new URL('viewer-data.json',root),JSON.stringify(pack,null,2)+'\n');
+console.log('40 vectores,220 vecindarios,6600 tiempos y1000textos; sin pesos ni980vectores de control');

@@ -1,0 +1,10 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+import {recallChart,sizeChart,qualityChart,postgresRecallChart,latencyChart} from './charts.mjs';
+const root=new URL('.',import.meta.url),json=async f=>JSON.parse(await readFile(new URL(f,root)));
+const native=await json('results/native-index.json'),quality=await json('results/quality.json'),postgres=await json('results/postgres.json');
+for(const saved of [native,quality,postgres])for(const[file,sha]of Object.entries(saved.sourceHashes))assert.equal(createHash('sha256').update(await readFile(new URL(file,root))).digest('hex'),sha,file);
+for(const[file,svg]of [['native-recall.svg',recallChart(native.summaries)],['serialized-size.svg',sizeChart(native.builds)],['quality-comparison.svg',qualityChart(quality.summaries)],['pg-recall.svg',postgresRecallChart(postgres.summaries)],['native-latency.svg',latencyChart(native.summaries,'native')],['postgres-latency.svg',latencyChart(postgres.summaries,'postgres')]])await writeFile(new URL(file,root),svg);
+assert.ok(recallChart(native.summaries)===recallChart(native.summaries),'Deterministic figure output');
+console.log('Seis figuras ECharts SVG derivadas, sin inferencia ni mediciones nuevas');

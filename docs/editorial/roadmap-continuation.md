@@ -1,5 +1,268 @@
 # Continuación del objetivo editorial completo
 
+## Estado vigente: P111 desarrollado en nueve drafts verificados
+
+Progreso: PG, relevancia y medición completados. Manifiesto 9/9, español,
+draft true/status draft, autor Luis Ramírez Calle. Nueve diagramas, seis figuras y
+seis paneles interactivos. Laboratorio solo en packages/vector-retrieval, con
+catorce exports estáticos. Ver vector-retrieval-review.md y ruta editorial.
+
+Capturas originales intactas: 140 vecindarios FAISS y 80 PG, 40 rankings y 6.600
+tiempos. Se conservan regresiones Q06/Q17, Q19 sin mejora, Q20 sin respuesta y
+PG ef4 con cuatro resultados. Separados recall geométrico/relevancia y relojes
+nativo/cliente. Sin extrapolar a producción ni cambiar etiquetas por los resultados.
+
+15 JS P111, 51 JS P107–P111, 237 editorial/estructura y 17 del blog pasan.
+Verificadores de los cinco labs, build y Pagefind pasan. Chromium final:
+/tmp/vector-layout.d3DnXh/report.json. Nueve posts a 360/1440; por anchura 90
+controles, 400 parejas/153.600 componentes, 140 casos FAISS, 80 PG, 40 rankings y
+231 selecciones de tiempo. Sin overflow/JSerrors; teclado/scroll y revisión visual.
+Servidor propio PID379935 se detiene al cerrar esta entrega. No benchmarks pendientes.
+
+Siguiente P112: leer ficha completa y preparar serie focalizada de ingesta/OCR/chunking.
+Parsing/OCR/layout reales, semantic/size chunking, overlap, metadata, dedup, provenance
+e indexing; medir recuperación de dos estrategias. Prerrequisitos P106/P111. No
+escribir todo en un solo artículo ni presentar fixtures como captura de OCR real.
+
+383 índices/236 exports, 51 labs/52 workspaces. Inventario 86/19/70 no demuestra
+aceptación de 175 fichas; completionProven=false. Gaps P026/P045 Stripe/P058 soak
+preservados; Serie02 solo DSA. El objetivo global sigue activo.
+
+El usuario autorizó commit de TODOS los cambios al cerrar esta serie el 2026-11-01.
+No push/publicación/traducción/audio ni futuros commits automáticos. El estado
+inferior es histórico y no sustituye este bloque vigente.
+
+## Estado vigente: P111 con seis de nueve drafts verificados
+
+Esta continuación fue progreso: VEC-EXACT, VEC-HNSW y VEC-FAISS redactados,
+con tres diagramas nuevos. Seis drafts en español hasta FAISS, Luis Ramírez Calle,
+draft true/status draft. Ruta/manifiesto/revisión: ruta-recuperacion-vectorial.md,
+vector-retrieval-series.json y vector-retrieval-review.md. Laboratorio fuera del blog.
+
+SIGUIENTE: VEC-PGVECTOR, VEC-RELEVANCE y VEC-MEASUREMENT. Añadir modos de
+pgvector y evaluación al visor, enlazar la figura de relevancia y completar QA de
+las nueve entregas. No aceptar P111 ni el objetivo global mientras falten requisitos.
+No reejecutar benchmarks/encoder para mejorar números. Las capturas siguen intactas.
+
+Visor: control2D,400parejas reales de384componentes y140salidas nativas frente a FlatL2.
+Incluye textos de1000registros sin exportar los980vectores extra. Los980controles
+carecen de gold semántico: desconocido no se presenta como irrelevante. El diagrama
+compara conjuntos guardados y no inventa visitas al grafo. Tiempos agregan600llamadas
+por estrategia y no la consulta individual. Figuras ECharts6.1.0 de recall nativo,
+serialización y relevancia; IDs CSS normalizados y byte-exact deterministic tests.
+
+QA fase6/9:11JS,probe nativo con serialización/restauración tipada,verify readonly,
+235editorial/estructura,17blog ybuild/Pagefind pasan. Chromium completo:
+/tmp/vector-layout.hjrf19/report.json. Seis posts360/1440; por anchura90controles,
+400parejas/153600coordenadas,140vecindarios y1796inspecciones de texto/etiqueta.
+Teclado/scroll y nooverflow/noJSerrors. Seis diagramas y tres figuras inspeccionados.
+Último ajuste separa labels coincidentes de P@3; QA gráfico focalizado:
+/tmp/vector-figures.BwZ7aD/report.json. Capturas finales a380px sin margen blanco ajeno alSVG.
+
+380índices/232exports,51labs/52workspaces; inventario86/19/70 NO prueba aceptación
+completa175fichas. Mantener gapsP026/P045Stripe/P058soak ySerie02soloDSA. Caches y
+pesos ignorados; ninguna inferencia/benchmark pendiente. Servidor temporal propio
+PID323294 detenido al cerrar la fase. HEADblog8023014/examples70b26a6, sin nuevos commits.
+No commits/push/publicación/traducción/audio automáticos. Estado inferior histórico.
+
+## Estado vigente: P110 verificado; siguiente P111
+
+Esta continuación fue progreso: siete drafts, siete diagramas, tres figuras y visor
+con gráfica dinámica. Ver [ruta](ruta-structured-outputs.md),
+[manifiesto](structured-extraction-series.json) y [revisión](structured-extraction-review.md).
+7 JS/9 Python, verify readonly, 231 editorial/estructura, 17 blog y build/Pagefind pasan.
+Chromium /tmp/structured-layout.JQJBN0/report.json: posts360/1440, 24 respuestas,
+18 controles, 256 subsets, 768 filas/2304 barras por anchura, teclado y sin overflow.
+Capturas congeladas intactas; no rerun exercise. El lock histórico está archivado.
+Servidor temporal PID252741 detenido al cerrar QA; no contenedores propios pendientes.
+
+374 índices/222 exports, 50 labs/51 workspaces. Inventario85/19/71 no prueba aceptación
+ni termina las175 fichas. Gaps P026/P045 Stripe/P058 soak siguen abiertos; Serie02 solo DSA.
+HEAD blog8023014/examples70b26a6, P107-P110 sin comitear. No commits/push/publicación/audio
+ni traducciones automáticos. Siguiente P111: ficha completa, P076/P106/P108, embeddings
+reales y dataset etiquetado, BM25/vector, cosine/L2, normalization, exact/ANN, HNSW,
+FAISS, pgvector y recall/latency. No sustituir inferencia ni índices reales por fixtures.
+
+## Estado vigente: P109 desarrollado y verificado en siete drafts
+
+Esta continuación fue progreso: revisión de siete artículos, correcciones de
+redacción, dos huecos del visor resueltos y QA final. Español, draft true/status
+draft, Luis Ramírez Calle. Siete SVG conceptuales, tres figuras y visor de tres
+paneles. Ver [ruta](ruta-generacion-texto.md), [manifiesto](text-generation-series.json),
+[revisión](text-generation-review.md) y [laboratorio](../../packages/text-generation/README.md).
+
+5 JS/4 Python pasan; verify recalcula los 36 recorridos/144 tokens y controles
+con rtol1e-10/atol1e-12. Los tiempos archivados se auditan, no se fuerzan a repetirse.
+Capturas y fuentes congeladas intactas. Se recuperó la imagen por digest después
+de reiniciarse el entorno. No se cambiaron pesos ni se seleccionó otra seed.
+
+227 editorial/estructura, 17 blog, build/Pagefind pasan. Chromium final:
+`/tmp/generation-layout.spetAP/report.json`. Siete posts a360/1440; por anchura
+36 recorridos/144 decisiones/240 filtros/42 frames. Prefijos, todas las
+probabilidades, sorteos, tokens, razones de parada, relojes/chunks contrastados.
+Teclado y scroll local móvil pasan, sin errores JS ni overflow de página.
+Inspección visual de diez SVG y paneles realizada. El visor es replay; la
+captura original sí procede de inferencia con flush real. Ver revisión para límites.
+
+49 labs/50 workspaces, 367 índices/215 exports. Inventario 84 draft_exists,
+19 related_only, 72 not_written: existencia no equivale a aceptación. No se ha
+completado el objetivo de 175 fichas. Conservar huecos P026/P045 Stripe/P058 soak
+y Serie02 solo estructuras de datos/algoritmos. P107 y P108 siguen desarrollados;
+preservar sus fuentes capturadas. No rerun scripts de montaje de /tmp.
+
+Servidor temporal PID232712 detenido y sin contenedores propios de generación.
+`git diff --check` pasa en ambos repositorios.
+
+HEAD blog8023014/examples70b26a6; NER+LM+generación sin comitear. Sin nuevos commits,
+push, publicación, traducciones o audio. Siguiente P110: leer ficha completa,
+P022/P109 y fuentes primarias; definir extracción con schema y evidencia por
+campo. Un JSON válido no prueba respaldo en el texto. No sustituir inferencia
+real por fixtures al evaluar cambios de prompts.
+
+---
+
+
+## Estado vigente: P108 desarrollado en seis drafts
+
+Este turno fue progreso. Se escribieron P108,LM-TOKENS,LM-CONTEXT,LM-LOSS,
+LM-FAMILIES,LM-INSPECTION con código probado, seis diagramas, tres figuras medidas
+y visor de probabilidades completas. Español,draft true/status draft,Luis Ramírez
+Calle. Ver [ruta](ruta-modelos-lenguaje.md),[manifiesto](language-models-series.json),
+[revisión](language-models-review.md) y [lab](../../packages/language-models/README.md).
+
+Captura P108 intacta 2026-10-28T23:24:04.901196+00:00,siete hashes. Tres modelos
+causales reales,seeds7/19/31,3205parámetros,21tokens,300pasosAdam.01,float64CPU.
+72frases/44train/14dev/14test,plantillas/prefijos compartidos. No calidad general
+ni test ciego. Probe los muy improbable tras «el equipo revisa» es sesgo del split.
+No Transformer masked/encoder-decoder entrenado. NLLtest1.407849/1.222869/1.425571
+frente a unigram2.673023. Control causal0 frente a sinmáscara positivo; no es MLM.
+
+Ocho JS,tres Python,verify reentrena todo,223editorial/estructura,17blog verdes.
+Browser /tmp/lm-layout.2bseDi/report.json: seisposts+visor a360/1440,42probes,
+3024posiciones/63504probabilidades,24filas métricas,teclado,IDs/targets/matrices.
+Corregido overflowSVG móvil con width100%. Figuras/tmp/lm-figures/contact-0..2.png.
+Servidor propio PID130302 cerrado mediante astro dev stop al terminar QA. Browser/tmp/ner-playwright.
+No fuentes numéricas modificadas.360índices/207exports,48labs/49workspaces.
+
+SIGUIENTE:P109,leer ficha completa. Tema generación/logits/softmax/temperature/
+top-k/top-p/truncation/context/streaming/latency/determinism. Laboratorio:mismo
+prompt bajo estrategias de sampling,tokens registrados. Fijar protocolo antes
+de probar. Reutilizar pesos P108 sin alterarlos y documentar su scope sintético.
+Prerrequisitos P084/P108. No llamar streaming/inferencia a un replay ni omitir
+latencia si se afirma medirla. Revalorar división en posts específicos.
+
+Objetivo175fichas sigue activo. Inventario83draft_exists/19related_only/73not_written
+NO prueba aceptación total. Conservar gapsP026/P045Stripe/P058soak,Serie02solo
+estructuras/algoritmos. Sin commits/push nuevos;HEADblog8023014/examples70b26a6.
+NER+LM sin comitear en ambos repos. No publicar/traducir/audio/commits automáticos.
+No rerun scripts temporales de montaje:duplican índices/sobrescriben revisiones.
+
+---
+
+
+## Estado vigente: P107 revisado; P108 entrenado, artículos pendientes
+
+Este turno fue progreso real. P107 desarrollado en siete drafts. Se restauraron
+dependencias con pnpm frozen (locks intactos), se reentrenaron las nueve ejecuciones
+y se regeneró QA. Ver [revisión NER](entity-recognition-review.md). Browser actual:
+/tmp/ner-layout.2bljtj/report.json. Figuras: /tmp/ner-figures-restored/. El raster
+resvg no tiene recorte; no alterar fuentes correctas por artefactos de captura.
+PID59657 cerrado. No quedan contenedores propios.
+
+P108: corpus/protocolo fijados ANTES del ajuste y tres Transformers causales reales
+entrenados. Ver [ruta](ruta-modelos-lenguaje.md) y
+[lab](../../packages/language-models/README.md). SIGUIENTE ACCIÓN: escribir seis
+posts focalizados y crear diagramas y visor con probabilidades guardadas. No hay
+posts o exports P108 todavía. El temario y el objetivo total siguen abiertos.
+
+Captura 2026-10-28T23:24:04.901196+00:00, seeds 7/19/31, 300 pasos Adam .01
+full-batch, float64 CPU, 3205 parámetros, 21 tokens, contexto máximo 16,
+un bloque 16d/2heads/FFN32. 72 frases, 44 train/14 dev/14 test, con plantillas y
+prefijos compartidos: no generalización natural. Pesos, logits, probabilidades,
+losses, métricas, unigram baseline y controles archivados. No winner selection.
+Sufijo perturbado no cambia el prefijo causal (0); sin máscara sí cambia, pero
+ese control NO es un masked LM. Siete hashes: no editar corpus/protocol/runtime/
+tokenizer/tokenized/model/experiments sin preservar/versionar la captura.
+Verify reentrena y compara todo con rtol1e-10/atol1e-12 en contenedor CPU.
+Tres tests Python/cinco JS, 219 editorial/estructura y 17 blog verdes.
+NLL test 1.407849/1.222869/1.425571, unigramas 2.673023; solo descriptivo.
+
+Imagen CPU pinned recuperada en Docker; red none, 2 CPU/2 GiB/un thread,
+rootfs/bind readonly, user1000:100, timeout300s. Browser en /tmp/ner-playwright.
+data:prepare explícito, sin lifecycle automático. 48 labs/49 workspaces,
+354 índices/199 exports. Inventario 82 draft_exists/19 related_only/74 not_written
+no implica aceptación. P108 sigue not_written, correctamente: no tiene post aún.
+
+Sin nuevos commits/push. HEAD blog8023014/examples70b26a6. Cambios NER+LM en ambos
+repos. No publicar/traducir/audio/commits automáticos. Mantener las 175 fichas,
+gaps P026/P045Stripe/P058soak y Serie02 solo datos/algoritmos. No rerun scripts
+temporales de montaje: pueden duplicar índices o sobrescribir revisiones.
+
+---
+
+
+## Continuación vigente: P107 desarrollado en siete drafts
+
+Este turno fue progreso: cinco posts añadidos (siete totales),clasificador NER
+entrenado,contraste de convergencia preservando el fracaso inicial,métricas
+exactas y revisión de confusiones. Ver [revisión](entity-recognition-review.md),
+[ruta](ruta-reconocimiento-entidades.md),[manifiesto](entity-recognition-series.json)
+y [laboratorio](../../packages/entity-recognition/README.md).
+
+Nueve ejecuciones,seeds7/19/31 a80/800/1600.80todoO;800/1600trainF1=1,
+dev4/17,test4/21. Loss baja sin mejorar labels/spans de dev/test. No alterar
+las fuentes con hashes ni reemplazar capturas para ocultar resultados negativos.
+Test ya inspeccionado,solo descriptivo. No Transformer entrenado.
+
+Verificación restaurada tras perder/tmpy dependencias:16unit,219editoriales,
+17blog,verify exacto,build50rutas/Pagefind10páginas. Navegador actual:
+/tmp/ner-layout.2bljtj/report.json,640comparaciones predichas+64roundtrips.
+Figuras nuevas:/tmp/ner-figures-restored/. Servidor propioPID59657 cerrar al
+terminar QA. Locks intactos. Código completo solo examples;199exports estáticos.
+
+Siguiente:P108,cómo funcionan modelos de lenguaje.Leer ficha completa. Lab:
+visualizar predicciones con probabilidades de un modelo pequeño. No sustituir
+el mecanismo descrito por otro más fácil sin explicitarlo. Objetivo175fichas
+sigue activo.Inventario82draft_exists/19related_only/74not_written no acepta
+todo el roadmap.Conservar P026/P045Stripe/P058soak y Serie02solo datos/algoritmos.
+
+Sin nuevos commits/push.LastHEADblog8023014/examples70b26a6(P106). CambiosNER
+en ambos repositorios. No publicar/traducir/audio/commits automáticos.
+No rerun scripts/tmpde montaje:pueden duplicar índices y sobrescribir revisiones.
+
+---
+
+
+## Continuación vigente: P107 en progreso, dos drafts y primer entrenamiento
+
+Este turno fue progreso: dos posts españoles, tres SVG, visor spans/BIO, corpus y
+protocolo previos a fitting, clasificador lineal BIO realmente entrenado y captura
+negativa conservada. No afirmar que P107 está terminado. El objetivo total sigue
+activo. Ver [revisión parcial](entity-recognition-review.md),
+[manifiesto](entity-recognition-series.json) y
+[laboratorio](../../packages/entity-recognition/README.md).
+
+Siguiente acción: investigar por qué las tres seeds producen todo O pese a bajar
+la loss; fijar un protocolo adicional antes de experimentar, usar train/dev para
+la decisión y conservar intacta la primera captura. Se ha visto test, por tanto
+no llamarlo ciego/intacto después de ajustar. Faltan cinco posts y análisis de
+límites/tipos/omisiones/espurios, reglas vs Transformers y entity-level P/R/F1.
+No sustituir el entrenamiento real por reglas.
+
+Evidencias: 12 unit,217 editorial/estructura,17 blog verdes; verify reentrena y
+compara toda la captura; build50rutas,Pagefind10páginas/4280palabras/2idiomas.
+QA `/tmp/ner-layout.0l0dvh/report.json`: dos posts+visor a360/1440,64roundtrips.
+Se arreglaron overflow de tabla y figura; servidorPID2813549 cerrado.
+
+Sin nuevos commits/push. Cambios en ambos repositorios. Últimos HEAD siguen
+blog8023014/examples70b26a6 (P106). Inventario82draft_exists/19related_only/
+74not_written; existencia no aceptación. 349índices,194exports,47labs,48workspaces.
+Preservar P026,P045Stripe,P058soak,Serie02soloestructuras/algoritmos y todas las
+fichas originales. No publicar,traducir,generar audio ni comitear automáticamente.
+
+---
+
+
 ## Continuación vigente: P106 desarrollado en once drafts
 
 El último turno fue progreso. Se completó el bloque P106 en once posts, con once

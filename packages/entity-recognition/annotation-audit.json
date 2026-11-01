@@ -1,0 +1,32 @@
+{
+  "kind": "annotation_contract_only_not_model_evaluation",
+  "capturedAt": "2026-10-28T09:07:29.615743+00:00",
+  "sourceHashes": {
+    "corpus.json": "6d2d0335736a94501917650d726a95cca4825be0f99c579202ffebf0da218bfa",
+    "protocol.json": "ba245e158794356fe18ba111255490f31220d595f84536487175f23cc1c45a76",
+    "spans.mjs": "44ca7460afadd8ebbcfb12b60d47e8db0d9544c93b05ac8af4b8aa4fa5fcae02"
+  },
+  "counts": [
+    {
+      "split": "train",
+      "documents": 16,
+      "negative": 2,
+      "PER": 12,
+      "ORG": 12
+    },
+    {
+      "split": "dev",
+      "documents": 8,
+      "negative": 2,
+      "PER": 4,
+      "ORG": 4
+    },
+    {
+      "split": "test",
+      "documents": 8,
+      "negative": 2,
+      "PER": 5,
+      "ORG": 4
+    }
+  ]
+}

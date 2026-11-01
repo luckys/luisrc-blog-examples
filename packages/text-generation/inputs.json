@@ -1,0 +1,71 @@
+{
+  "vocabulary": [
+    "<PAD>",
+    "<BOS>",
+    "<EOS>",
+    "<UNK>",
+    ".",
+    "analista",
+    "consulta",
+    "datos",
+    "el",
+    "empresa",
+    "equipo",
+    "informe",
+    "ingeniera",
+    "ingeniero",
+    "la",
+    "los",
+    "propuesta",
+    "publica",
+    "resultados",
+    "revisa",
+    "servicio"
+  ],
+  "prompts": [
+    {
+      "text": "el equipo",
+      "ids": [
+        1,
+        8,
+        10
+      ]
+    },
+    {
+      "text": "la ingeniera consulta los",
+      "ids": [
+        1,
+        14,
+        12,
+        6,
+        15
+      ]
+    }
+  ],
+  "longPrompt": {
+    "text": "el el el el el el el el el el el el el el el el el el el el",
+    "ids": [
+      1,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+    ]
+  }
+}

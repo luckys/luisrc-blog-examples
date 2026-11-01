@@ -1,0 +1,10 @@
+{
+  "node": "24.19.0",
+  "transformersJs": "3.8.1",
+  "onnxRuntimeNode": "1.21.0",
+  "faissBinding": "faiss-napi@0.10.3",
+  "pgClient": "8.23.1",
+  "nativeThreads": 1,
+  "encodingThreads": 2,
+  "platform": "linux/x64"
+}

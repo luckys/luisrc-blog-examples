@@ -10,7 +10,7 @@ const exports = JSON.parse(
   await readFile("metadata/blog-exports.json", "utf8"),
 );
 
-test("workspace: los cuarenta y seis laboratorios tienen nombres únicos y un único lockfile", async () => {
+test("workspace: los cincuenta y un laboratorios tienen nombres únicos y un único lockfile", async () => {
   const workspace = YAML.parse(await readFile("pnpm-workspace.yaml", "utf8"));
   assert.deepEqual(workspace.packages, ["packages/*"]);
   const lock = YAML.parseAllDocuments(await readFile("pnpm-lock.yaml", "utf8"))
@@ -41,12 +41,14 @@ test("workspace: los cuarenta y seis laboratorios tienen nombres únicos y un ú
     "design-principles",
     "distributed-foundations",
     "domain-design",
+    "entity-recognition",
     "generalization-stability",
     "gpu-training",
     "incident-response",
     "integration-contracts",
     "kafka-streaming",
     "kubernetes-workloads",
+    "language-models",
     "lexical-search",
     "machine-learning",
     "mathematics-statistics",
@@ -61,10 +63,13 @@ test("workspace: los cuarenta y seis laboratorios tienen nombres únicos y un ú
     "recurrent-sequences",
     "reliable-services",
     "service-objectives",
+    "structured-extraction",
     "testing-strategy",
+    "text-generation",
     "training-dynamics",
     "transactions",
     "transactions-en",
+    "vector-retrieval",
   ]);
   const names = new Set();
   for (const lab of labs) {
@@ -88,7 +93,7 @@ test("workspace: los cuarenta y seis laboratorios tienen nombres únicos y un ú
 });
 
 test("artículos: todos los índices enlazan archivos reales dentro del monorepo", async () => {
-  assert.equal(posts.length, 347);
+  assert.equal(posts.length, 383);
   const unique = new Set();
   for (const post of posts) {
     const id = `${post.locale}/${post.slug}`;
@@ -143,7 +148,7 @@ test("migración: las fuentes ejecutables originales se conservan byte a byte", 
 });
 
 test("exportación: solo recursos estáticos explícitos, sin servidores, secretos o dependencias", async () => {
-  assert.equal(exports.length, 189);
+  assert.equal(exports.length, 236);
   const destinations = new Set();
   for (const entry of exports) {
     assert.ok(!destinations.has(entry.destination));

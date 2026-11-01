@@ -1,9 +1,9 @@
 {
   "objective": "Completar en español todas las fichas del roadmap, por series, con ejemplos y recursos estáticos e interactivos pertinentes.",
   "counts": {
-    "draft_exists": 81,
+    "draft_exists": 86,
     "related_only": 19,
-    "not_written": 75
+    "not_written": 70
   },
   "completionProven": false,
   "criteria": "draft_exists indica archivo con ID, no aceptación de todos los requisitos. related_only exige ampliar o escribir una ficha. No renombrar IDs para aparentar cobertura.",
@@ -1343,40 +1343,60 @@
         {
           "id": "P107",
           "title": "Named Entity Recognition y etiquetado de spans",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/ner-anotar-entidades-spans-offsets-unicode.md",
+            "slug": "ner-anotar-entidades-spans-offsets-unicode",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         },
         {
           "id": "P108",
           "title": "Cómo funcionan los modelos de lenguaje",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/lm-predecir-siguiente-token-probabilidades.md",
+            "slug": "lm-predecir-siguiente-token-probabilidades",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         },
         {
           "id": "P109",
           "title": "Inferencia y generación de texto con LLM",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/generacion-autoregresiva-greedy-sampling.md",
+            "slug": "generacion-autoregresiva-greedy-sampling",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         },
         {
           "id": "P110",
           "title": "Prompt engineering y structured outputs",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/prompt-engineering-instrucciones-roles-contexto.md",
+            "slug": "prompt-engineering-instrucciones-roles-contexto",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         },
         {
           "id": "P111",
           "title": "Embeddings y recuperación vectorial",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/embeddings-texto-encoder-pooling-busqueda-semantica.md",
+            "slug": "embeddings-texto-encoder-pooling-busqueda-semantica",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         },

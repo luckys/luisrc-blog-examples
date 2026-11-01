@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "reason": "The original 80-epoch run reduced train loss but every seed predicted only O, including train. Diagnose insufficient optimization steps without changing data or features.",
+  "fixedBeforeFitting": true,
+  "baseProtocol": "protocol.json",
+  "epochs": [800, 1600],
+  "learningRate": 0.05,
+  "seeds": [7, 19, 31],
+  "changes": "Only number of full-batch updates; same initialization per seed, labels, features, corpus, loss and constrained decoder",
+  "selection": "No winner or hyperparameter selected. Report all six fixed contrasts, including failures and regressions.",
+  "evaluationCaveat": "Initial test predictions have already been inspected. Later test numbers are descriptive on known synthetic fixtures, never untouched/blind validation.",
+  "decisionBasis": "Train all-O collapse and falling train loss, not test performance. No new dictionary entries, label edits, feature changes, thresholds or split changes."
+}

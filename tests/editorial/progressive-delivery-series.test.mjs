@@ -1,3 +1,4 @@
+import {readCapturedSource} from '../../scripts/captured-source.mjs';
 import {editorialPath} from '../../scripts/editorial-path.mjs'
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -74,7 +75,7 @@ test('CI/CD: ocho gates locales y contenido efectivamente ejecutado por slot', a
   assert.equal(evidence.kind, 'local_progressive_delivery_observation')
   assert.equal(Object.keys(evidence.sources).length, 26)
   for (const [file, sha] of Object.entries(evidence.sources))
-    assert.equal(createHash('sha256').update(await readFile(root + file)).digest('hex'), sha, file)
+    assert.equal(createHash('sha256').update(await readCapturedSource(root, file, sha)).digest('hex'), sha, file)
   assert.equal(evidence.events.length, 18)
   for (const [i, e] of evidence.events.entries()) {
     assert.equal(e.seq, i + 1); assert.equal(e.kind, 'observed')

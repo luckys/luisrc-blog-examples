@@ -1,0 +1,482 @@
+{
+  "capture": "2026-10-29T17:35:10.874Z",
+  "sourceHashes": {
+    "contract.py": "39193c6ec5d738123d878b97aa915e4796f4b7049c6996f83d7745cc3d5cf05e",
+    "run-python.mjs": "2b85c5c4288fde571d9995e29f3e58631c7fcdd61ab980b19c99d0465d54a2f9",
+    "runtime.json": "0e7960a8c09b0c8ba6400f516a02930161ce20b49f13416bcabe5e0038ef9a15",
+    "documents.json": "ba3316de4d37d63289ec1aaebad9e9a46129c97248b4f2d4414b69a4089a1f12",
+    "extraction.schema.json": "4b766c48f937a502b8f6334e3b3ba1a7cddb330ca04a3a89d73488aaee18d9fe",
+    "results/generations.json": "1bf1d2d4b3654ef55cd29cdcfecdaee0eb534a11eb6fb14530c5c1f00faa0d0e"
+  },
+  "rows": [
+    {
+      "documentId": "E01",
+      "variant": "instructions",
+      "accepted": false,
+      "stage": "parse",
+      "errors": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E02",
+      "variant": "instructions",
+      "accepted": false,
+      "stage": "evidence",
+      "errors": [
+        {
+          "index": 0,
+          "code": "quote_not_in_source"
+        },
+        {
+          "index": 0,
+          "code": "text_not_in_quote"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "documentId": "E03",
+      "variant": "instructions",
+      "accepted": true,
+      "stage": "accepted",
+      "errors": [],
+      "data": {
+        "entities": [
+          {
+            "type": "PER",
+            "text": "Hoy Inés Vidal",
+            "quote": "Hoy Inés Vidal"
+          }
+        ]
+      },
+      "counts": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E04",
+      "variant": "instructions",
+      "accepted": false,
+      "stage": "parse",
+      "errors": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E05",
+      "variant": "instructions",
+      "accepted": false,
+      "stage": "parse",
+      "errors": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E06",
+      "variant": "instructions",
+      "accepted": false,
+      "stage": "parse",
+      "errors": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E07",
+      "variant": "instructions",
+      "accepted": false,
+      "stage": "parse",
+      "errors": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "documentId": "E08",
+      "variant": "instructions",
+      "accepted": false,
+      "stage": "parse",
+      "errors": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E01",
+      "variant": "schema",
+      "accepted": false,
+      "stage": "parse",
+      "errors": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E02",
+      "variant": "schema",
+      "accepted": false,
+      "stage": "evidence",
+      "errors": [
+        {
+          "index": 0,
+          "code": "quote_not_in_source"
+        },
+        {
+          "index": 0,
+          "code": "text_not_in_quote"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "documentId": "E03",
+      "variant": "schema",
+      "accepted": false,
+      "stage": "evidence",
+      "errors": [
+        {
+          "index": 0,
+          "code": "text_not_in_quote"
+        },
+        {
+          "index": 1,
+          "code": "text_not_in_quote"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E04",
+      "variant": "schema",
+      "accepted": false,
+      "stage": "parse",
+      "errors": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E05",
+      "variant": "schema",
+      "accepted": false,
+      "stage": "parse",
+      "errors": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E06",
+      "variant": "schema",
+      "accepted": false,
+      "stage": "parse",
+      "errors": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E07",
+      "variant": "schema",
+      "accepted": false,
+      "stage": "evidence",
+      "errors": [
+        {
+          "index": 0,
+          "code": "text_not_in_quote"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "documentId": "E08",
+      "variant": "schema",
+      "accepted": false,
+      "stage": "parse",
+      "errors": [
+        {
+          "code": "invalid_json"
+        }
+      ],
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E01",
+      "variant": "few-shot",
+      "accepted": true,
+      "stage": "accepted",
+      "errors": [],
+      "data": {
+        "entities": [
+          {
+            "type": "PER",
+            "text": "Ana Ruiz",
+            "quote": "Ana Ruiz trabaja en Faro Azul."
+          },
+          {
+            "type": "ORG",
+            "text": "Faro Azul",
+            "quote": "Ana Ruiz trabaja en Faro Azul."
+          }
+        ]
+      },
+      "counts": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "documentId": "E02",
+      "variant": "few-shot",
+      "accepted": true,
+      "stage": "accepted",
+      "errors": [],
+      "data": {
+        "entities": []
+      },
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "documentId": "E03",
+      "variant": "few-shot",
+      "accepted": true,
+      "stage": "accepted",
+      "errors": [],
+      "data": {
+        "entities": []
+      },
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E04",
+      "variant": "few-shot",
+      "accepted": true,
+      "stage": "accepted",
+      "errors": [],
+      "data": {
+        "entities": [
+          {
+            "type": "PER",
+            "text": "Alba",
+            "quote": "La empresa Alba contrató a Tomás."
+          },
+          {
+            "type": "ORG",
+            "text": "Tomás",
+            "quote": "La empresa Alba contrató a Tomás."
+          }
+        ]
+      },
+      "counts": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E05",
+      "variant": "few-shot",
+      "accepted": true,
+      "stage": "accepted",
+      "errors": [],
+      "data": {
+        "entities": []
+      },
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E06",
+      "variant": "few-shot",
+      "accepted": true,
+      "stage": "accepted",
+      "errors": [],
+      "data": {
+        "entities": []
+      },
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    },
+    {
+      "documentId": "E07",
+      "variant": "few-shot",
+      "accepted": true,
+      "stage": "accepted",
+      "errors": [],
+      "data": {
+        "entities": []
+      },
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "documentId": "E08",
+      "variant": "few-shot",
+      "accepted": true,
+      "stage": "accepted",
+      "errors": [],
+      "data": {
+        "entities": []
+      },
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2
+      }
+    }
+  ],
+  "summaries": [
+    {
+      "variant": "instructions",
+      "documents": 8,
+      "stages": {
+        "parse": 6,
+        "schema": 0,
+        "evidence": 1,
+        "accepted": 1
+      },
+      "tp": 0,
+      "fp": 1,
+      "fn": 12,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "variant": "schema",
+      "documents": 8,
+      "stages": {
+        "parse": 5,
+        "schema": 0,
+        "evidence": 3,
+        "accepted": 0
+      },
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "variant": "few-shot",
+      "documents": 8,
+      "stages": {
+        "parse": 0,
+        "schema": 0,
+        "evidence": 0,
+        "accepted": 8
+      },
+      "tp": 2,
+      "fp": 2,
+      "fn": 10,
+      "precision": 0.5,
+      "recall": 0.16666666666666666,
+      "f1": 0.25
+    }
+  ]
+}
