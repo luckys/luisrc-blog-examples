@@ -1,0 +1,51 @@
+[
+  {
+    "queryId": "Q03",
+    "variants": [
+      "¿Dónde guardar los respaldos para no depender de un solo disco?",
+      "ubicaciones de las dos copias de seguridad y fallo de un volumen"
+    ]
+  },
+  {
+    "queryId": "Q04",
+    "variants": [
+      "restauración de prueba: destino y protección de producción",
+      "¿En qué entorno hacer el ejercicio de recuperación sin modificar producción?"
+    ]
+  },
+  {
+    "queryId": "Q08",
+    "variants": [
+      "fallo en la verificación de integridad antes de recuperar datos",
+      "checksum diferente al esperado: pasos de la restauración"
+    ]
+  },
+  {
+    "queryId": "Q13",
+    "variants": [
+      "¿Cómo tratar una ausencia en caché y un fallo del servidor de origen?",
+      "cache miss y política para guardar errores del origen"
+    ]
+  },
+  {
+    "queryId": "Q17",
+    "variants": [
+      "reconstrucción del índice y momento de activar la nueva referencia",
+      "¿Cuándo puede apuntar la búsqueda al índice reconstruido?"
+    ]
+  },
+  {
+    "queryId": "Q18",
+    "variants": [
+      "identidad del documento y revisión que debe acompañar a una cita",
+      "¿Qué cambia entre revisiones y qué identificador se mantiene?"
+    ]
+  },
+  {
+    "queryId": "Q19",
+    "variants": [
+      "valor del índice glucémico del pan como alimento",
+      "¿Cómo afecta el pan a la glucemia?"
+    ]
+  }
+]

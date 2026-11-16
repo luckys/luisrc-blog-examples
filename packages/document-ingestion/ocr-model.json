@@ -1,0 +1,12 @@
+{
+  "repository": "tesseract-ocr/tessdata_fast",
+  "revision": "65727574dfcd264acbb0c3e07860e4e9e9b22185",
+  "tag": "4.1.0",
+  "file": "spa.traineddata",
+  "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/65727574dfcd264acbb0c3e07860e4e9e9b22185/spa.traineddata",
+  "sha256": "6f2e04d02774a18f01bed44b1111f2cd7f3ba7ac9dc4373cd3f898a40ea6b464",
+  "license": "Apache-2.0",
+  "integrity": "First public download establishes recorded digest before OCR; later downloads must match it.",
+  "annotatedTagObject": "a8ba5063ab8013372a20e300da0c97ee46b92b07",
+  "bytes": 2294433
+}

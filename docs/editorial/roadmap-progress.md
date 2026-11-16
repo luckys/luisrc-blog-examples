@@ -2,7 +2,7 @@
 
 Inventario generado desde el catálogo de 175 fichas y los artículos españoles reales. No es una certificación de completitud editorial ni de laboratorios.
 
-IDs con borrador propio: **86**. Solo material relacionado: **19**. Sin artículo identificado: **70**.
+IDs con borrador propio: **91**. Solo material relacionado: **19**. Sin artículo identificado: **65**.
 
 Cada ficha requiere revisión contra su temario obligatorio, laboratorio y Definition of Done. Un artículo agrupado no completa automáticamente varias fichas.
 
@@ -175,11 +175,11 @@ P063 se amplía en ocho drafts: pipeline/gates, artefactos, flags, smoke, rollin
 - P109. Inferencia y generación de texto con LLM: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/generacion-autoregresiva-greedy-sampling.md).
 - P110. Prompt engineering y structured outputs: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/prompt-engineering-instrucciones-roles-contexto.md).
 - P111. Embeddings y recuperación vectorial: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/embeddings-texto-encoder-pooling-busqueda-semantica.md).
-- P112. Ingesta documental, OCR y chunking para RAG: pendiente.
-- P113. Retrieval léxico, denso e híbrido: pendiente.
-- P114. Reranking, grounding y trazabilidad de fuentes: pendiente.
-- P115. Arquitecturas RAG y decisiones técnicas: pendiente.
-- P116. Evaluación cuantitativa de sistemas RAG: pendiente.
+- P112. Ingesta documental, OCR y chunking para RAG: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/ingesta-documental-extraer-texto-pdf-html-rag.md).
+- P113. Retrieval léxico, denso e híbrido: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/retrieval-lexico-bm25-chunks-evidencia.md).
+- P114. Reranking, grounding y trazabilidad de fuentes: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/cross-encoder-reranking-consulta-fragmento.md).
+- P115. Arquitecturas RAG y decisiones técnicas: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/arquitectura-rag-requisitos-contratos-limites.md).
+- P116. Evaluación cuantitativa de sistemas RAG: [borrador](https://github.com/luckys/luisrc/blob/posts-series/src/content/posts/es/evaluar-rag-gold-dataset-splits-etiquetas.md).
 - P117. Evaluación de LLM y LLM-as-judge: pendiente.
 - P118. Agentes de IA, herramientas y workflows: pendiente.
 - P119. MCP: hosts, clients, servers, tools y resources: pendiente.

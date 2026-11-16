@@ -1,0 +1,5185 @@
+{
+  "evaluatedAt": "2026-11-03T12:43:49.984Z",
+  "kind": "declared_contract_and_editorial_diagnostics_over_real_outputs",
+  "sourceHashes": {
+    "evaluate.mjs": "0969e2c5de5615837a6391dc169a3f51a93a54c940e0cfe3c580116c4f3685d9",
+    "core.mjs": "05bd6d8512b7075dc0adb87a0cf699cc51ece282cf80b1296c6d357b2201fd30",
+    "io.mjs": "3ab9a398b5ab6e04af1d65192452179edf7f3cf58326a3720089cc085ff4fb70",
+    "rubric.json": "3c93e9ca8bb5fd4b85af9f626e3434a17a9f99e3a2ae2ebe559bd58adce8d353",
+    "annotations.json": "eba01fdc8bb9c5f9e8ae1fb71742a8dbdb931a56c91907452801b3d0b6555898",
+    "citation-controls.json": "e4e6219f5ac7686b31d62e11503a42b5447d9b083120f6e4f30d841cbefeff10",
+    "results/inputs.json": "252ec06565162ae1e4436e57be68e1f21a963f6c02e4f1cebc01c9fa13ee66e1",
+    "results/answer-inputs.json": "9f695264a9924deff7f2b3adf355c12b3d79bc23c398ecd89b271a000672ccc3",
+    "results/generation.json": "4b4de2ee94884c655bb045a572a7adeebf2f4a1fb9b044f13369113a0f1ee550",
+    "../document-ingestion/chunking.mjs": "f77ba798643817a02ec37aa6fcbcda47568b6f7cc17de8d8c443fa0be64ee70e"
+  },
+  "rows": [
+    {
+      "id": "Q01:bm25:without",
+      "queryId": "Q01",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "4b4b7387b04887bbc11e6e07b228df55a1da08559531e60ea7a663c576e37ea1",
+      "selectedIds": [
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745"
+      ],
+      "contextTokens": 175,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q01:bm25:with",
+      "queryId": "Q01",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "d7c953b1caeeb5c0f18cbd50ea6e389a331021d3b6045f416ab13c702038f564",
+      "selectedIds": [
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f"
+      ],
+      "contextTokens": 175,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q01:rrf:without",
+      "queryId": "Q01",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "f7423d5105f30b868e8ebca2a6e3e5cf0173611096232ddeb3dad00f36b0b3c4",
+      "selectedIds": [
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53"
+      ],
+      "contextTokens": 167,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 0.2857142857142857,
+        "complete": false,
+        "factMetrics": [
+          {
+            "coverage": 0.2857142857142857,
+            "complete": false,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 2,
+                "coverage": 0.2857142857142857,
+                "complete": false
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q01:rrf:with",
+      "queryId": "Q01",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "d7c953b1caeeb5c0f18cbd50ea6e389a331021d3b6045f416ab13c702038f564",
+      "selectedIds": [
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f"
+      ],
+      "contextTokens": 175,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q02:bm25:without",
+      "queryId": "Q02",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "1b8656ab2c1832cc0b9adef33e5a8300fe30cad27cb2544229fd8e9fa83fa46b",
+      "selectedIds": [
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813"
+      ],
+      "contextTokens": 171,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_state_claims",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q02:bm25:with",
+      "queryId": "Q02",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "c30112328969f9f0983eb9da8b22e03d63d55bedd625361d8b8b1a5c498557a5",
+      "selectedIds": [
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda"
+      ],
+      "contextTokens": 177,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q02:rrf:without",
+      "queryId": "Q02",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "f1a7db0b5aa735c27bcbbb62efa91a1ed6e7c677fd173c52ec692af39743078e",
+      "selectedIds": [
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 175,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q02:rrf:with",
+      "queryId": "Q02",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "c30112328969f9f0983eb9da8b22e03d63d55bedd625361d8b8b1a5c498557a5",
+      "selectedIds": [
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda"
+      ],
+      "contextTokens": 177,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q03:bm25:without",
+      "queryId": "Q03",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "e7483da3cf74ce0a06a2ca838c0ee2029c4265f03a7a67e41086c3cd14c01d62",
+      "selectedIds": [
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df"
+      ],
+      "contextTokens": 174,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 11,
+                "matched": 11,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q03:bm25:with",
+      "queryId": "Q03",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "9713ba36bdb7c3feef0023cccc41d0360cb047ac0c6707a9e636723f5f737b3e",
+      "selectedIds": [
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745"
+      ],
+      "contextTokens": 174,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 11,
+                "matched": 11,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q03:rrf:without",
+      "queryId": "Q03",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "e7483da3cf74ce0a06a2ca838c0ee2029c4265f03a7a67e41086c3cd14c01d62",
+      "selectedIds": [
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df"
+      ],
+      "contextTokens": 174,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 11,
+                "matched": 11,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q03:rrf:with",
+      "queryId": "Q03",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "9713ba36bdb7c3feef0023cccc41d0360cb047ac0c6707a9e636723f5f737b3e",
+      "selectedIds": [
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745"
+      ],
+      "contextTokens": 174,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 11,
+                "matched": 11,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q04:bm25:without",
+      "queryId": "Q04",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "88da18622313de78a33b8cab0b76484c5663f37044f50517be20867ee60d72bb",
+      "selectedIds": [
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5",
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df"
+      ],
+      "contextTokens": 169,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 2,
+                "matched": 0,
+                "coverage": 0,
+                "complete": false
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 9,
+                "matched": 9,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 5,
+                "matched": 0,
+                "coverage": 0,
+                "complete": false
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q04:bm25:with",
+      "queryId": "Q04",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "d7bb594ee4045cd99f52db1cfab9bc84796a4d61fe39f6752688deec753702cb",
+      "selectedIds": [
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f"
+      ],
+      "contextTokens": 174,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 9,
+                "matched": 9,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 5,
+                "matched": 4,
+                "coverage": 0.8,
+                "complete": false
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q04:rrf:without",
+      "queryId": "Q04",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "b2885e5631d239eafa3a947d758b52c3ea9af4385d755da353811c3610e43477",
+      "selectedIds": [
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745"
+      ],
+      "contextTokens": 174,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 9,
+                "matched": 9,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 5,
+                "matched": 4,
+                "coverage": 0.8,
+                "complete": false
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q04:rrf:with",
+      "queryId": "Q04",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "d7bb594ee4045cd99f52db1cfab9bc84796a4d61fe39f6752688deec753702cb",
+      "selectedIds": [
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f"
+      ],
+      "contextTokens": 174,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 9,
+                "matched": 9,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 5,
+                "matched": 4,
+                "coverage": 0.8,
+                "complete": false
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q05:bm25:without",
+      "queryId": "Q05",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "c622ef8cacf2287e7f09a3d8caee7285ffcd31745d0cb51a46e235771a58991a",
+      "selectedIds": [
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5",
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df"
+      ],
+      "contextTokens": 174,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q05:bm25:with",
+      "queryId": "Q05",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "20c03186a76477e489003efdbec3280ae53be967577044fd38a5d2259d9d0a90",
+      "selectedIds": [
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 174,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q05:rrf:without",
+      "queryId": "Q05",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "456848e1f6cd379b20f3727cffd4ac8f7f43949764574ee43df6dd417c17c372",
+      "selectedIds": [
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f"
+      ],
+      "contextTokens": 174,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q05:rrf:with",
+      "queryId": "Q05",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "20c03186a76477e489003efdbec3280ae53be967577044fd38a5d2259d9d0a90",
+      "selectedIds": [
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 174,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              },
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q06:bm25:without",
+      "queryId": "Q06",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "1b2e0c28d9585f3c9f6c7b853b213ecdca92622fed905cc7a59ae7a0d006bef6",
+      "selectedIds": [
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+        "05eedd30cf030b48b7e908ac5f32b7ed9a9556d9b7e3f44a827a20b724b9e912",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 143,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 0.875,
+        "complete": false,
+        "factMetrics": [
+          {
+            "coverage": 0.875,
+            "complete": false,
+            "alternatives": [
+              {
+                "required": 8,
+                "matched": 7,
+                "coverage": 0.875,
+                "complete": false
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 88,
+        "uniqueContextUnits": 88,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q06:bm25:with",
+      "queryId": "Q06",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "f536367b02afede29ab57162f747dc345acf4d15246fefb8795f4a82995127aa",
+      "selectedIds": [
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 163,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 8,
+                "matched": 8,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q06:rrf:without",
+      "queryId": "Q06",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "6cb26eef68c782a31943b567ee556d3e742a1399d0cf00006bb37b3361813b85",
+      "selectedIds": [
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 166,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 0.875,
+        "complete": false,
+        "factMetrics": [
+          {
+            "coverage": 0.875,
+            "complete": false,
+            "alternatives": [
+              {
+                "required": 8,
+                "matched": 7,
+                "coverage": 0.875,
+                "complete": false
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q06:rrf:with",
+      "queryId": "Q06",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "6342f9e18b4d5c4958426a54bbdd4da412536e5a9adce9c5a58ccff489b492b8",
+      "selectedIds": [
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df"
+      ],
+      "contextTokens": 157,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 8,
+                "matched": 8,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q07:bm25:without",
+      "queryId": "Q07",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "42aa1b68c63b336482193c4dc21da0904b4d2d53215e4c0b0a75abcf17c1d05c",
+      "selectedIds": [
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda"
+      ],
+      "contextTokens": 168,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 4,
+                "matched": 4,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 4,
+                "matched": 4,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q07:bm25:with",
+      "queryId": "Q07",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "70f77b95482b4d9fb0c9ed2a75d3d69b76d586c0a5cc05eff38f29aea521085d",
+      "selectedIds": [
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f"
+      ],
+      "contextTokens": 168,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_state_claims",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 4,
+                "matched": 4,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 4,
+                "matched": 4,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q07:rrf:without",
+      "queryId": "Q07",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "70f77b95482b4d9fb0c9ed2a75d3d69b76d586c0a5cc05eff38f29aea521085d",
+      "selectedIds": [
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f"
+      ],
+      "contextTokens": 168,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_state_claims",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 4,
+                "matched": 4,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 4,
+                "matched": 4,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q07:rrf:with",
+      "queryId": "Q07",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "9f429a6c201ca8a7f92c1bc7cf28489d18756f07b4c25541c44ac55043d48dd8",
+      "selectedIds": [
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3"
+      ],
+      "contextTokens": 164,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 4,
+                "matched": 4,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 2,
+                "matched": 2,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 4,
+                "matched": 4,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q08:bm25:without",
+      "queryId": "Q08",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "fb7b97b3e0cb1192482bb6a59759b01db403d5b8a7ce7f3e0e5eac6951d80139",
+      "selectedIds": [
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda"
+      ],
+      "contextTokens": 168,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 9,
+                "matched": 9,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q08:bm25:with",
+      "queryId": "Q08",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "91c4043d3bb30e5b66455e1fd415401b7903bc5edfa36865999a4cda27213b29",
+      "selectedIds": [
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 168,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 9,
+                "matched": 9,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q08:rrf:without",
+      "queryId": "Q08",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "354d1238d27487c61b4e7811d373d77d79385e36646156639d2899a599652e9c",
+      "selectedIds": [
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e"
+      ],
+      "contextTokens": 164,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 9,
+                "matched": 9,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q08:rrf:with",
+      "queryId": "Q08",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "91c4043d3bb30e5b66455e1fd415401b7903bc5edfa36865999a4cda27213b29",
+      "selectedIds": [
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 168,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 9,
+                "matched": 9,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q09:bm25:without",
+      "queryId": "Q09",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "4e717b262a972c61a786ac2663ca785e1c3884b111ff9bc5c57c71d2b83761dd",
+      "selectedIds": [
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813"
+      ],
+      "contextTokens": 164,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 8,
+                "matched": 8,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q09:bm25:with",
+      "queryId": "Q09",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "8f073b399cd8e1fcf3e63be4bcda7ae9b4c504aa74c68ec7c8c235fae54fb8f7",
+      "selectedIds": [
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 168,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 8,
+                "matched": 8,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q09:rrf:without",
+      "queryId": "Q09",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "4e717b262a972c61a786ac2663ca785e1c3884b111ff9bc5c57c71d2b83761dd",
+      "selectedIds": [
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813"
+      ],
+      "contextTokens": 164,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 8,
+                "matched": 8,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q09:rrf:with",
+      "queryId": "Q09",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "8f073b399cd8e1fcf3e63be4bcda7ae9b4c504aa74c68ec7c8c235fae54fb8f7",
+      "selectedIds": [
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 168,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 8,
+                "matched": 8,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q10:bm25:without",
+      "queryId": "Q10",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "b931b971121a9f71619573b6701b10ca846a15c91e714f97b5dca74b048364eb",
+      "selectedIds": [
+        "9f1124c560278415271cef7adf8287bf597289ab6dbc5810571bbb6a4975b9cf",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "05eedd30cf030b48b7e908ac5f32b7ed9a9556d9b7e3f44a827a20b724b9e912"
+      ],
+      "contextTokens": 128,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 12,
+                "matched": 12,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 74,
+        "uniqueContextUnits": 74,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q10:bm25:with",
+      "queryId": "Q10",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "9c56e40e92d97249b53d5154459966bf2e9cc3c8cb86ca70c40ce60836f0b2f5",
+      "selectedIds": [
+        "9f1124c560278415271cef7adf8287bf597289ab6dbc5810571bbb6a4975b9cf",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f"
+      ],
+      "contextTokens": 146,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 12,
+                "matched": 12,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 82,
+        "uniqueContextUnits": 82,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q10:rrf:without",
+      "queryId": "Q10",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "b2e090cb33e3905b5e6eb0e5b9f529b918b295e88b0375629d2fe71e115eef79",
+      "selectedIds": [
+        "9f1124c560278415271cef7adf8287bf597289ab6dbc5810571bbb6a4975b9cf",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 148,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 12,
+                "matched": 12,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 82,
+        "uniqueContextUnits": 82,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q10:rrf:with",
+      "queryId": "Q10",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "9c56e40e92d97249b53d5154459966bf2e9cc3c8cb86ca70c40ce60836f0b2f5",
+      "selectedIds": [
+        "9f1124c560278415271cef7adf8287bf597289ab6dbc5810571bbb6a4975b9cf",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5",
+        "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f"
+      ],
+      "contextTokens": 146,
+      "split": "dev",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 12,
+                "matched": 12,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 82,
+        "uniqueContextUnits": 82,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q11:bm25:without",
+      "queryId": "Q11",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "f8471878fb502e96c1cf3e4845b192bd77b000b5fc0489a9cb0504945a4799f4",
+      "selectedIds": [
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 169,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q11:bm25:with",
+      "queryId": "Q11",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "8e3ca9e9723363177c6d79d98873e38f04902defa0516e3b807b9d8d90ec1150",
+      "selectedIds": [
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e"
+      ],
+      "contextTokens": 165,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q11:rrf:without",
+      "queryId": "Q11",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "8e3ca9e9723363177c6d79d98873e38f04902defa0516e3b807b9d8d90ec1150",
+      "selectedIds": [
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e"
+      ],
+      "contextTokens": 165,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q11:rrf:with",
+      "queryId": "Q11",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "8e3ca9e9723363177c6d79d98873e38f04902defa0516e3b807b9d8d90ec1150",
+      "selectedIds": [
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e"
+      ],
+      "contextTokens": 165,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q12:bm25:without",
+      "queryId": "Q12",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "3f924cd623222b6cf2e0ca8a4bd89f520388d36f50750a1eda23ffc1bae3ccb5",
+      "selectedIds": [
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 162,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q12:bm25:with",
+      "queryId": "Q12",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "b6de20a4dc2160e99a044b983d0832a8e0a0c3ebcb0d2b2647958a839eef46e0",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53"
+      ],
+      "contextTokens": 161,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q12:rrf:without",
+      "queryId": "Q12",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "10f0b14954541b4a4129d224cd23c52e963cbf647477687c44beaa14817ac926",
+      "selectedIds": [
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 162,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q12:rrf:with",
+      "queryId": "Q12",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "b6de20a4dc2160e99a044b983d0832a8e0a0c3ebcb0d2b2647958a839eef46e0",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53"
+      ],
+      "contextTokens": 161,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q13:bm25:without",
+      "queryId": "Q13",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "cc33a6dd4e5bc94d582d42b0a4e12d61bc5c212d6303502c14007b9ad3ba40b6",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53"
+      ],
+      "contextTokens": 154,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 6,
+                "matched": 6,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q13:bm25:with",
+      "queryId": "Q13",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "2d39a478e4d2ba711747da71bf9efa7aed74a9b4cb64b22703c032c92599722d",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "affd1be4e01455bef0da2728fa2fa8c2e991349b3f7a53125c1a186320688003",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53"
+      ],
+      "contextTokens": 114,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 6,
+                "matched": 6,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 69,
+        "uniqueContextUnits": 69,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q13:rrf:without",
+      "queryId": "Q13",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "c7ad677a512cf7a20946b6e54e9b3fba134a1e1e4c5a5deec835193a5341fb82",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5",
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813"
+      ],
+      "contextTokens": 163,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 6,
+                "matched": 6,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q13:rrf:with",
+      "queryId": "Q13",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "bce6df0a6f70ae9765d5645c11dfbaaa9da683803d71a9394fb59814e5e93d6a",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda"
+      ],
+      "contextTokens": 161,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 6,
+                "matched": 6,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q14:bm25:without",
+      "queryId": "Q14",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "17f6182ee7827917c3d31231193c67aed81c5da0c023ba320563663c9c726e9b",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "05eedd30cf030b48b7e908ac5f32b7ed9a9556d9b7e3f44a827a20b724b9e912",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda"
+      ],
+      "contextTokens": 148,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 88,
+        "uniqueContextUnits": 88,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q14:bm25:with",
+      "queryId": "Q14",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "3c3faba0accd4e5d22af2e3c9f0c74c4b2f81fe6e626c7f32f043238881598d1",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 169,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q14:rrf:without",
+      "queryId": "Q14",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "49037c9f102fe047668d6e53c694df994d0c37dc57080d436371bfc428089104",
+      "selectedIds": [
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "05eedd30cf030b48b7e908ac5f32b7ed9a9556d9b7e3f44a827a20b724b9e912"
+      ],
+      "contextTokens": 148,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 0,
+        "complete": false,
+        "factMetrics": [
+          {
+            "coverage": 0,
+            "complete": false,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 0,
+                "coverage": 0,
+                "complete": false
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 88,
+        "uniqueContextUnits": 88,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q14:rrf:with",
+      "queryId": "Q14",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "3c3faba0accd4e5d22af2e3c9f0c74c4b2f81fe6e626c7f32f043238881598d1",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 169,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q15:bm25:without",
+      "queryId": "Q15",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "bba4909d8c35cdea6293aaefc2ca3e5d228b3e768c52acc101760b8c42efa6f3",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 169,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q15:bm25:with",
+      "queryId": "Q15",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "74f36f026bc193af20129a0686190ec1647a17e0167145b54befb225f46f0550",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "affd1be4e01455bef0da2728fa2fa8c2e991349b3f7a53125c1a186320688003"
+      ],
+      "contextTokens": 125,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 69,
+        "uniqueContextUnits": 69,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q15:rrf:without",
+      "queryId": "Q15",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "b6a30f9f4e18b728fa7ccde5db704d44ecebe48587c915553f84b606d7914191",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3"
+      ],
+      "contextTokens": 165,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q15:rrf:with",
+      "queryId": "Q15",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "55eb7c8af33916055ad193cc94f5c669090617d8d5cd495e0177c60c8cc9934b",
+      "selectedIds": [
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53"
+      ],
+      "contextTokens": 161,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q16:bm25:without",
+      "queryId": "Q16",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "eb45c727fecf25313588781399d4cb6b8e9f74a0dab7926af8c91dcf01c00608",
+      "selectedIds": [
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 157,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 6,
+                "matched": 6,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q16:bm25:with",
+      "queryId": "Q16",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "0f600f665059bd628ef8e7481f54b7fadd6cddd86b5a32a33ce47e22c011f8af",
+      "selectedIds": [
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 155,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 6,
+                "matched": 6,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q16:rrf:without",
+      "queryId": "Q16",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "d8b008ffcf00fbe91c7ffe8c226852a3ae3c5390df17a9af5c3c21cb2c0e695c",
+      "selectedIds": [
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3"
+      ],
+      "contextTokens": 153,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 6,
+                "matched": 6,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q16:rrf:with",
+      "queryId": "Q16",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "0f600f665059bd628ef8e7481f54b7fadd6cddd86b5a32a33ce47e22c011f8af",
+      "selectedIds": [
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 155,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 6,
+                "matched": 6,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 5,
+                "matched": 5,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q17:bm25:without",
+      "queryId": "Q17",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "5f62296061d5206bf7911ca3615cd46fef53a4b463cc9473406995c39d115b17",
+      "selectedIds": [
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 157,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 8,
+                "matched": 8,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 13,
+                "matched": 13,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q17:bm25:with",
+      "queryId": "Q17",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "105c7e23a6f2007f999ffe1c58d376ca6471385bc8b56734af4ede7d837261c2",
+      "selectedIds": [
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745"
+      ],
+      "contextTokens": 162,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 8,
+                "matched": 8,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 13,
+                "matched": 13,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q17:rrf:without",
+      "queryId": "Q17",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "1b21ee32df95562e7680b926169a2f7a7ea92d0918fbd2afcdf8773e7069685c",
+      "selectedIds": [
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e"
+      ],
+      "contextTokens": 153,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 8,
+                "matched": 8,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 13,
+                "matched": 13,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q17:rrf:with",
+      "queryId": "Q17",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "b07d73ae1758cadd3ac7a0fdbee40c30dbba9924790bfa492fbb98cd832ab733",
+      "selectedIds": [
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df"
+      ],
+      "contextTokens": 156,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 1,
+        "complete": true,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 8,
+                "matched": 8,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 13,
+                "matched": 13,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q18:bm25:without",
+      "queryId": "Q18",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "6a602881653b14651d54b956c33fa446c146599dfb6b924b5977842718f8a9d3",
+      "selectedIds": [
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5"
+      ],
+      "contextTokens": 158,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 0.8333333333333334,
+        "complete": false,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 6,
+                "matched": 6,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 0.5,
+            "complete": false,
+            "alternatives": [
+              {
+                "required": 12,
+                "matched": 6,
+                "coverage": 0.5,
+                "complete": false
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q18:bm25:with",
+      "queryId": "Q18",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "12b19add0be2ac56ea17b2a55785b87018ae2a6ac5698e4a2de5ec137c08c61c",
+      "selectedIds": [
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 156,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 0.8333333333333334,
+        "complete": false,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 6,
+                "matched": 6,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 0.5,
+            "complete": false,
+            "alternatives": [
+              {
+                "required": 12,
+                "matched": 6,
+                "coverage": 0.5,
+                "complete": false
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q18:rrf:without",
+      "queryId": "Q18",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "cca93c99b985038883bce1336ee13eb902739df7bb616ea87512462266dd2666",
+      "selectedIds": [
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813"
+      ],
+      "contextTokens": 154,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 0.8333333333333334,
+        "complete": false,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 6,
+                "matched": 6,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 0.5,
+            "complete": false,
+            "alternatives": [
+              {
+                "required": 12,
+                "matched": 6,
+                "coverage": 0.5,
+                "complete": false
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q18:rrf:with",
+      "queryId": "Q18",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "12b19add0be2ac56ea17b2a55785b87018ae2a6ac5698e4a2de5ec137c08c61c",
+      "selectedIds": [
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+        "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 156,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": 0.8333333333333334,
+        "complete": false,
+        "factMetrics": [
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 6,
+                "matched": 6,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 1,
+            "complete": true,
+            "alternatives": [
+              {
+                "required": 7,
+                "matched": 7,
+                "coverage": 1,
+                "complete": true
+              }
+            ]
+          },
+          {
+            "coverage": 0.5,
+            "complete": false,
+            "alternatives": [
+              {
+                "required": 12,
+                "matched": 6,
+                "coverage": 0.5,
+                "complete": false
+              }
+            ]
+          }
+        ],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": 0,
+      "completeAnswer": false,
+      "groundedComplete": false,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": null,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q19:bm25:without",
+      "queryId": "Q19",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "63d03af022a6f0ac5ab3a7d363098b120da8e508d0409d8eb65846241336662f",
+      "selectedIds": [
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+        "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53"
+      ],
+      "contextTokens": 153,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": null,
+        "complete": null,
+        "factMetrics": [],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": null,
+      "completeAnswer": null,
+      "groundedComplete": null,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": false,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q19:bm25:with",
+      "queryId": "Q19",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "7b39d5c406f24750ee637b94c8ba2459cfde7901a81d5cc9e2707f491061c0e5",
+      "selectedIds": [
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "05eedd30cf030b48b7e908ac5f32b7ed9a9556d9b7e3f44a827a20b724b9e912",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 142,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": null,
+        "complete": null,
+        "factMetrics": [],
+        "returned": 3,
+        "contextUnits": 88,
+        "uniqueContextUnits": 88,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": null,
+      "completeAnswer": null,
+      "groundedComplete": null,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": false,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q19:rrf:without",
+      "queryId": "Q19",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "4049dfff166e3b20c9bf4fe17b31cd85d0606e0491746962b9e1d6ccf07c5b06",
+      "selectedIds": [
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 159,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_state_claims",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": null,
+        "complete": null,
+        "factMetrics": [],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": null,
+      "completeAnswer": null,
+      "groundedComplete": null,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": false,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q19:rrf:with",
+      "queryId": "Q19",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "7b39d5c406f24750ee637b94c8ba2459cfde7901a81d5cc9e2707f491061c0e5",
+      "selectedIds": [
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+        "05eedd30cf030b48b7e908ac5f32b7ed9a9556d9b7e3f44a827a20b724b9e912",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 142,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": null,
+        "complete": null,
+        "factMetrics": [],
+        "returned": 3,
+        "contextUnits": 88,
+        "uniqueContextUnits": 88,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": null,
+      "completeAnswer": null,
+      "groundedComplete": null,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": false,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q20:bm25:without",
+      "queryId": "Q20",
+      "method": "bm25",
+      "mode": "without",
+      "promptId": "4b0b92195607e7d22c666985512ca58f2a9ee34a34e459e00748614ab079a112",
+      "selectedIds": [],
+      "contextTokens": 0,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": null,
+        "complete": null,
+        "factMetrics": [],
+        "returned": 0,
+        "contextUnits": 0,
+        "uniqueContextUnits": 0,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": null,
+      "completeAnswer": null,
+      "groundedComplete": null,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": false,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q20:bm25:with",
+      "queryId": "Q20",
+      "method": "bm25",
+      "mode": "with",
+      "promptId": "4b0b92195607e7d22c666985512ca58f2a9ee34a34e459e00748614ab079a112",
+      "selectedIds": [],
+      "contextTokens": 0,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": null,
+        "complete": null,
+        "factMetrics": [],
+        "returned": 0,
+        "contextUnits": 0,
+        "uniqueContextUnits": 0,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": null,
+      "completeAnswer": null,
+      "groundedComplete": null,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": false,
+      "reachedTokenLimit": true
+    },
+    {
+      "id": "Q20:rrf:without",
+      "queryId": "Q20",
+      "method": "rrf",
+      "mode": "without",
+      "promptId": "d1a81b0514c11d965258afa432245614c3e257dc26d699374953b4e14415fbe7",
+      "selectedIds": [
+        "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5",
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813"
+      ],
+      "contextTokens": 168,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": null,
+        "complete": null,
+        "factMetrics": [],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": null,
+      "completeAnswer": null,
+      "groundedComplete": null,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": false,
+      "reachedTokenLimit": false
+    },
+    {
+      "id": "Q20:rrf:with",
+      "queryId": "Q20",
+      "method": "rrf",
+      "mode": "with",
+      "promptId": "84e679cd899792f38b3858ee848e1361d81b3ee1171ef994e533ffa07e22c304",
+      "selectedIds": [
+        "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+        "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a"
+      ],
+      "contextTokens": 166,
+      "split": "test",
+      "format": {
+        "ok": false,
+        "reason": "invalid_json",
+        "envelope": "json"
+      },
+      "operationalStatus": "technical_rejection",
+      "contextMetrics": {
+        "coverage": null,
+        "complete": null,
+        "factMetrics": [],
+        "returned": 3,
+        "contextUnits": 96,
+        "uniqueContextUnits": 96,
+        "contextRedundancy": 0
+      },
+      "claimResults": [],
+      "answerCoverage": null,
+      "completeAnswer": null,
+      "groundedComplete": null,
+      "supportedClaimRate": null,
+      "linkValidity": null,
+      "correctAbstention": false,
+      "reachedTokenLimit": true
+    }
+  ],
+  "summaries": [
+    {
+      "split": "dev",
+      "method": "bm25",
+      "mode": "without",
+      "total": 10,
+      "answerable": 10,
+      "negatives": 0,
+      "schemaAccepted": 0,
+      "technicalRejections": 10,
+      "meanContextCoverage": 0.9875,
+      "meanAnswerCoverage": 0,
+      "completeAnswers": 0,
+      "groundedAnswers": 0,
+      "modelAbstentions": 0,
+      "correctNegativeAbstentions": 0
+    },
+    {
+      "split": "dev",
+      "method": "bm25",
+      "mode": "with",
+      "total": 10,
+      "answerable": 10,
+      "negatives": 0,
+      "schemaAccepted": 0,
+      "technicalRejections": 10,
+      "meanContextCoverage": 1,
+      "meanAnswerCoverage": 0,
+      "completeAnswers": 0,
+      "groundedAnswers": 0,
+      "modelAbstentions": 0,
+      "correctNegativeAbstentions": 0
+    },
+    {
+      "split": "dev",
+      "method": "rrf",
+      "mode": "without",
+      "total": 10,
+      "answerable": 10,
+      "negatives": 0,
+      "schemaAccepted": 0,
+      "technicalRejections": 10,
+      "meanContextCoverage": 0.9160714285714284,
+      "meanAnswerCoverage": 0,
+      "completeAnswers": 0,
+      "groundedAnswers": 0,
+      "modelAbstentions": 0,
+      "correctNegativeAbstentions": 0
+    },
+    {
+      "split": "dev",
+      "method": "rrf",
+      "mode": "with",
+      "total": 10,
+      "answerable": 10,
+      "negatives": 0,
+      "schemaAccepted": 0,
+      "technicalRejections": 10,
+      "meanContextCoverage": 1,
+      "meanAnswerCoverage": 0,
+      "completeAnswers": 0,
+      "groundedAnswers": 0,
+      "modelAbstentions": 0,
+      "correctNegativeAbstentions": 0
+    },
+    {
+      "split": "test",
+      "method": "bm25",
+      "mode": "without",
+      "total": 10,
+      "answerable": 8,
+      "negatives": 2,
+      "schemaAccepted": 0,
+      "technicalRejections": 10,
+      "meanContextCoverage": 0.9791666666666666,
+      "meanAnswerCoverage": 0,
+      "completeAnswers": 0,
+      "groundedAnswers": 0,
+      "modelAbstentions": 0,
+      "correctNegativeAbstentions": 0
+    },
+    {
+      "split": "test",
+      "method": "bm25",
+      "mode": "with",
+      "total": 10,
+      "answerable": 8,
+      "negatives": 2,
+      "schemaAccepted": 0,
+      "technicalRejections": 10,
+      "meanContextCoverage": 0.9791666666666666,
+      "meanAnswerCoverage": 0,
+      "completeAnswers": 0,
+      "groundedAnswers": 0,
+      "modelAbstentions": 0,
+      "correctNegativeAbstentions": 0
+    },
+    {
+      "split": "test",
+      "method": "rrf",
+      "mode": "without",
+      "total": 10,
+      "answerable": 8,
+      "negatives": 2,
+      "schemaAccepted": 0,
+      "technicalRejections": 10,
+      "meanContextCoverage": 0.8541666666666666,
+      "meanAnswerCoverage": 0,
+      "completeAnswers": 0,
+      "groundedAnswers": 0,
+      "modelAbstentions": 0,
+      "correctNegativeAbstentions": 0
+    },
+    {
+      "split": "test",
+      "method": "rrf",
+      "mode": "with",
+      "total": 10,
+      "answerable": 8,
+      "negatives": 2,
+      "schemaAccepted": 0,
+      "technicalRejections": 10,
+      "meanContextCoverage": 0.9791666666666666,
+      "meanAnswerCoverage": 0,
+      "completeAnswers": 0,
+      "groundedAnswers": 0,
+      "modelAbstentions": 0,
+      "correctNegativeAbstentions": 0
+    }
+  ],
+  "diagnostics": [
+    {
+      "promptId": "1b8656ab2c1832cc0b9adef33e5a8300fe30cad27cb2544229fd8e9fa83fa46b",
+      "queryId": "Q02",
+      "text": "La retención de las copias de seguridad es de treinta días.",
+      "citedAliases": [
+        "S02"
+      ],
+      "support": "supported",
+      "coveredFacts": [
+        0
+      ],
+      "basisQuotes": [
+        {
+          "alias": "S02",
+          "quote": "La retención de las copias es de treinta días."
+        }
+      ],
+      "note": "La afirmación coincide con el dato de la fuente, aunque el estado global del objeto es inválido.",
+      "citations": [
+        {
+          "valid": true,
+          "alias": "S02",
+          "chunkId": "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+          "documentId": "RUNBOOK",
+          "documentVersion": "6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11",
+          "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+          "start": 220,
+          "end": 419,
+          "text": "del esquema. Antes de restaurar, comprobar que ambos coinciden con el entorno de prueba. La retención de las copias es de treinta días. Mantener dos copias en ubicaciones diferentes evita depender de",
+          "href": "source.html#alias=S02&chunk=64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f&document=RUNBOOK&version=6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11&representation=83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd&start=220&end=419"
+        }
+      ],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "1b8656ab2c1832cc0b9adef33e5a8300fe30cad27cb2544229fd8e9fa83fa46b",
+      "queryId": "Q02",
+      "text": "La retención de las copias de seguridad es de treinta días.",
+      "citedAliases": [
+        "S07"
+      ],
+      "support": "supported",
+      "coveredFacts": [
+        0
+      ],
+      "basisQuotes": [
+        {
+          "alias": "S07",
+          "quote": "La retención es de treinta días."
+        }
+      ],
+      "note": "Alternativa válida de la misma retención.",
+      "citations": [
+        {
+          "valid": true,
+          "alias": "S07",
+          "chunkId": "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+          "documentId": "COLUMNS",
+          "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+          "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+          "start": 0,
+          "end": 199,
+          "text": "Copias de seguridad La retención es de treinta días. Restaurar requiere dos pasos: 1. Verificar el manifiesto. 2. Reproducir el registro WAL. La prueba usa un directorio aislado. No se restaura sobre",
+          "href": "source.html#alias=S07&chunk=4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745&document=COLUMNS&version=89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a&representation=5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748&start=0&end=199"
+        }
+      ],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "1b8656ab2c1832cc0b9adef33e5a8300fe30cad27cb2544229fd8e9fa83fa46b",
+      "queryId": "Q02",
+      "text": "La retención de las copias de seguridad es de treinta días.",
+      "citedAliases": [
+        "S11"
+      ],
+      "support": "unsupported",
+      "coveredFacts": [
+        0
+      ],
+      "basisQuotes": [],
+      "note": "S11 existe y fue suministrada, pero trata de versión de índice y no de retención.",
+      "citations": [
+        {
+          "valid": true,
+          "alias": "S11",
+          "chunkId": "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+          "documentId": "HTML",
+          "documentVersion": "3fdc11c58f34bd03383704f105611e7810a484c9eb9029c6bc829a03b9fa70f1",
+          "representationId": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610",
+          "start": 0,
+          "end": 219,
+          "text": "AtlasQueue: mantenimiento del índice La versión del índice identifica el analizador y el corpus utilizado. Cambiar el analizador exige evaluar de nuevo las consultas. Las reconstrucciones se hacen sobre un índice nuevo.",
+          "href": "source.html#alias=S11&chunk=b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813&document=HTML&version=3fdc11c58f34bd03383704f105611e7810a484c9eb9029c6bc829a03b9fa70f1&representation=bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610&start=0&end=219"
+        }
+      ],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "9713ba36bdb7c3feef0023cccc41d0360cb047ac0c6707a9e636723f5f737b3e",
+      "queryId": "Q03",
+      "text": "Este directorio es llamado \"WAL\" (WAL Archive)",
+      "citedAliases": [],
+      "support": "unsupported",
+      "coveredFacts": [],
+      "basisQuotes": [
+        {
+          "alias": "S07",
+          "quote": "Reproducir el registro WAL."
+        }
+      ],
+      "note": "El texto fuente menciona un registro que reproducir, no el directorio inventado para guardar copias.",
+      "citations": [],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "f536367b02afede29ab57162f747dc345acf4d15246fefb8795f4a82995127aa",
+      "queryId": "Q06",
+      "text": "escritura posterior no pertenece al snapshot.",
+      "citedAliases": [
+        "S04"
+      ],
+      "support": "supported",
+      "coveredFacts": [
+        0
+      ],
+      "basisQuotes": [
+        {
+          "alias": "S04",
+          "quote": "escritura posterior no pertenece a ese snapshot."
+        }
+      ],
+      "note": "Negación correcta dentro de una salida global inválida y repetitiva.",
+      "citations": [
+        {
+          "valid": true,
+          "alias": "S04",
+          "chunkId": "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+          "documentId": "RUNBOOK",
+          "documentVersion": "6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11",
+          "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+          "start": 630,
+          "end": 830,
+          "text": "escritura posterior no pertenece a ese snapshot. El informe guarda el identificador de la copia, la fecha y los resultados de las comprobaciones. Una ejecución sin errores no demuestra que falten cero",
+          "href": "source.html#alias=S04&chunk=2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e&document=RUNBOOK&version=6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11&representation=83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd&start=630&end=830"
+        }
+      ],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "f536367b02afede29ab57162f747dc345acf4d15246fefb8795f4a82995127aa",
+      "queryId": "Q06",
+      "text": "El informe no se almacena en el contexto.",
+      "citedAliases": [
+        "S04"
+      ],
+      "support": "unsupported",
+      "coveredFacts": [],
+      "basisQuotes": [],
+      "note": "La fuente no afirma esto; impide tratar toda la salida como grounded por tener una frase correcta.",
+      "citations": [
+        {
+          "valid": true,
+          "alias": "S04",
+          "chunkId": "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+          "documentId": "RUNBOOK",
+          "documentVersion": "6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11",
+          "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+          "start": 630,
+          "end": 830,
+          "text": "escritura posterior no pertenece a ese snapshot. El informe guarda el identificador de la copia, la fecha y los resultados de las comprobaciones. Una ejecución sin errores no demuestra que falten cero",
+          "href": "source.html#alias=S04&chunk=2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e&document=RUNBOOK&version=6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11&representation=83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd&start=630&end=830"
+        }
+      ],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "70f77b95482b4d9fb0c9ed2a75d3d69b76d586c0a5cc05eff38f29aea521085d",
+      "queryId": "Q07",
+      "text": "No se puede responder a la pregunta",
+      "citedAliases": [
+        "S01"
+      ],
+      "support": "uncited_or_unresolved",
+      "coveredFacts": [],
+      "basisQuotes": [],
+      "note": "S01 no pertenece al contexto de este prompt. La salida tampoco cumple sin_respuesta sin afirmaciones.",
+      "citations": [
+        {
+          "valid": false,
+          "alias": "S01",
+          "reason": "outside_provided_context",
+          "href": null
+        }
+      ],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "8e3ca9e9723363177c6d79d98873e38f04902defa0516e3b807b9d8d90ec1150",
+      "queryId": "Q11",
+      "text": "La caché usa TTL (Time To Live) inicialmente de 300 segundos.",
+      "citedAliases": [],
+      "support": "uncited_or_unresolved",
+      "coveredFacts": [
+        0
+      ],
+      "basisQuotes": [
+        {
+          "alias": "S08",
+          "quote": "El TTL inicial es de 300 segundos."
+        }
+      ],
+      "note": "Dato correcto y disponible en contexto, pero sin una cita del modelo.",
+      "citations": [],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "8e3ca9e9723363177c6d79d98873e38f04902defa0516e3b807b9d8d90ec1150",
+      "queryId": "Q11",
+      "text": "Esta clave incluye una copia de la caché, una fecha y un resultado.",
+      "citedAliases": [],
+      "support": "contradicted",
+      "coveredFacts": [],
+      "basisQuotes": [
+        {
+          "alias": "S08",
+          "quote": "La clave incluye el idioma."
+        }
+      ],
+      "note": "Sustituye la composición de la clave por elementos del informe de otra fuente.",
+      "citations": [],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "c7ad677a512cf7a20946b6e54e9b3fba134a1e1e4c5a5deec835193a5341fb82",
+      "queryId": "Q13",
+      "text": "El error del origen no se almacena en el cache.",
+      "citedAliases": [],
+      "support": "uncited_or_unresolved",
+      "coveredFacts": [
+        1
+      ],
+      "basisQuotes": [
+        {
+          "alias": "S09",
+          "quote": "El error del origen no se almacena."
+        }
+      ],
+      "note": "Aporta uno de dos hechos, sin citas y fuera del esquema.",
+      "citations": [],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "bce6df0a6f70ae9765d5645c11dfbaaa9da683803d71a9394fb59814e5e93d6a",
+      "queryId": "Q13",
+      "text": "el error del origen no se almacena.",
+      "citedAliases": [],
+      "support": "uncited_or_unresolved",
+      "coveredFacts": [
+        1
+      ],
+      "basisQuotes": [
+        {
+          "alias": "S09",
+          "quote": "El error del origen no se almacena."
+        }
+      ],
+      "note": "Una negación correcta repetida no completa cache miss ni convierte el texto en una respuesta válida.",
+      "citations": [],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "49037c9f102fe047668d6e53c694df994d0c37dc57080d436371bfc428089104",
+      "queryId": "Q14",
+      "text": "un archivo que ha sido eliminado por un sistema operativo.",
+      "citedAliases": [
+        "CACHÉ"
+      ],
+      "support": "uncited_or_unresolved",
+      "coveredFacts": [],
+      "basisQuotes": [],
+      "note": "La etiqueta CACHÉ no es un alias del registro ni los fragmentos sostienen esa definición.",
+      "citations": [
+        {
+          "valid": false,
+          "alias": "CACHÉ",
+          "reason": "unknown_alias",
+          "href": null
+        }
+      ],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "74f36f026bc193af20129a0686190ec1647a17e0167145b54befb225f46f0550",
+      "queryId": "Q15",
+      "text": "un TTL no garantiza consistencia.",
+      "citedAliases": [
+        "T"
+      ],
+      "support": "uncited_or_unresolved",
+      "coveredFacts": [
+        0
+      ],
+      "basisQuotes": [
+        {
+          "alias": "S09",
+          "quote": "Un TTL no garantiza consistencia."
+        }
+      ],
+      "note": "La primera negación se sostiene en contexto, pero la etiqueta T no es una cita válida y el resto es contradictorio.",
+      "citations": [
+        {
+          "valid": false,
+          "alias": "T",
+          "reason": "unknown_alias",
+          "href": null
+        }
+      ],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "7b39d5c406f24750ee637b94c8ba2459cfde7901a81d5cc9e2707f491061c0e5",
+      "queryId": "Q19",
+      "text": "El índice glucémico del pan es el 13.",
+      "citedAliases": [],
+      "support": "unsupported",
+      "coveredFacts": [],
+      "basisQuotes": [],
+      "note": "Ninguna fuente proporcionada trata el índice glucémico del pan; el número es inventado.",
+      "citations": [],
+      "notAnAcceptedAnswer": true
+    },
+    {
+      "promptId": "84e679cd899792f38b3858ee848e1361d81b3ee1171ef994e533ffa07e22c304",
+      "queryId": "Q20",
+      "text": "La pregunta es de 300 segundos.",
+      "citedAliases": [
+        "S08"
+      ],
+      "support": "unsupported",
+      "coveredFacts": [],
+      "basisQuotes": [
+        {
+          "alias": "S08",
+          "quote": "El TTL inicial es de 300 segundos."
+        }
+      ],
+      "note": "Traslada una cifra de TTL a una consulta sobre telescopio. Compartir una cifra no aporta apoyo semántico.",
+      "citations": [
+        {
+          "valid": true,
+          "alias": "S08",
+          "chunkId": "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+          "documentId": "COLUMNS",
+          "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+          "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+          "start": 200,
+          "end": 414,
+          "text": "producción. Guardar el checksum esperado. Una copia no prueba recuperación. La verificación compara el contenido. Configuración de caché El TTL inicial es de 300 segundos. La clave incluye el idioma. Invalidar tras",
+          "href": "source.html#alias=S08&chunk=c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda&document=COLUMNS&version=89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a&representation=5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748&start=200&end=414"
+        }
+      ],
+      "notAnAcceptedAnswer": true
+    }
+  ],
+  "controlResults": [
+    {
+      "id": "C01",
+      "name": "Cita válida que apoya el dato",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "claim": "El TTL inicial es de 300 segundos.",
+      "expectedResolution": true,
+      "editorialSupport": "supported",
+      "quote": "El TTL inicial es de 300 segundos.",
+      "citation": {
+        "valid": true,
+        "alias": "S08",
+        "chunkId": "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "documentId": "COLUMNS",
+        "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+        "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+        "start": 200,
+        "end": 414,
+        "text": "producción. Guardar el checksum esperado. Una copia no prueba recuperación. La verificación compara el contenido. Configuración de caché El TTL inicial es de 300 segundos. La clave incluye el idioma. Invalidar tras"
+      },
+      "href": "source.html#alias=S08&chunk=c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda&document=COLUMNS&version=89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a&representation=5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748&start=200&end=414",
+      "resolved": true,
+      "error": null
+    },
+    {
+      "id": "C02",
+      "name": "Enlace válido con número contradictorio",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "claim": "El TTL inicial es de 301 segundos.",
+      "expectedResolution": true,
+      "editorialSupport": "contradicted",
+      "quote": "El TTL inicial es de 300 segundos.",
+      "citation": {
+        "valid": true,
+        "alias": "S08",
+        "chunkId": "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "documentId": "COLUMNS",
+        "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+        "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+        "start": 200,
+        "end": 414,
+        "text": "producción. Guardar el checksum esperado. Una copia no prueba recuperación. La verificación compara el contenido. Configuración de caché El TTL inicial es de 300 segundos. La clave incluye el idioma. Invalidar tras"
+      },
+      "href": "source.html#alias=S08&chunk=c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda&document=COLUMNS&version=89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a&representation=5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748&start=200&end=414",
+      "resolved": true,
+      "error": null
+    },
+    {
+      "id": "C03",
+      "name": "Enlace válido sin apoyo para la afirmación",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "claim": "El servicio siempre necesita seis réplicas de Kubernetes.",
+      "expectedResolution": true,
+      "editorialSupport": "unsupported",
+      "quote": "El TTL inicial es de 300 segundos.",
+      "citation": {
+        "valid": true,
+        "alias": "S08",
+        "chunkId": "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "documentId": "COLUMNS",
+        "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+        "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+        "start": 200,
+        "end": 414,
+        "text": "producción. Guardar el checksum esperado. Una copia no prueba recuperación. La verificación compara el contenido. Configuración de caché El TTL inicial es de 300 segundos. La clave incluye el idioma. Invalidar tras"
+      },
+      "href": "source.html#alias=S08&chunk=c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda&document=COLUMNS&version=89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a&representation=5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748&start=200&end=414",
+      "resolved": true,
+      "error": null
+    },
+    {
+      "id": "C04",
+      "name": "Alias inexistente",
+      "alias": "S99",
+      "provided": [
+        "S08"
+      ],
+      "claim": "Dato no comprobado.",
+      "expectedResolution": false,
+      "citation": {
+        "valid": false,
+        "alias": "S99",
+        "reason": "unknown_alias"
+      },
+      "href": null,
+      "resolved": false,
+      "error": "unknown_alias"
+    },
+    {
+      "id": "C05",
+      "name": "Fuente existente pero no entregada al generador",
+      "alias": "S09",
+      "provided": [
+        "S08"
+      ],
+      "claim": "Dato fuera del contexto.",
+      "expectedResolution": false,
+      "citation": {
+        "valid": false,
+        "alias": "S09",
+        "reason": "outside_provided_context"
+      },
+      "href": null,
+      "resolved": false,
+      "error": "outside_provided_context"
+    },
+    {
+      "id": "C06",
+      "name": "Versión de fuente alterada",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "mutate": {
+        "version": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "expectedResolution": false,
+      "citation": {
+        "valid": true,
+        "alias": "S08",
+        "chunkId": "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "documentId": "COLUMNS",
+        "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+        "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+        "start": 200,
+        "end": 414,
+        "text": "producción. Guardar el checksum esperado. Una copia no prueba recuperación. La verificación compara el contenido. Configuración de caché El TTL inicial es de 300 segundos. La clave incluye el idioma. Invalidar tras"
+      },
+      "href": "source.html#alias=S08&chunk=c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda&document=COLUMNS&version=0000000000000000000000000000000000000000000000000000000000000000&representation=5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748&start=200&end=414",
+      "resolved": false,
+      "error": "Identidad o versión de cita incompatible"
+    },
+    {
+      "id": "C07",
+      "name": "Rango fuera de la cita",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "mutate": {
+        "end": "999999"
+      },
+      "expectedResolution": false,
+      "citation": {
+        "valid": true,
+        "alias": "S08",
+        "chunkId": "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "documentId": "COLUMNS",
+        "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+        "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+        "start": 200,
+        "end": 414,
+        "text": "producción. Guardar el checksum esperado. Una copia no prueba recuperación. La verificación compara el contenido. Configuración de caché El TTL inicial es de 300 segundos. La clave incluye el idioma. Invalidar tras"
+      },
+      "href": "source.html#alias=S08&chunk=c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda&document=COLUMNS&version=89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a&representation=5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748&start=200&end=999999",
+      "resolved": false,
+      "error": "Rango distinto del chunk citado"
+    },
+    {
+      "id": "C08",
+      "name": "Representación alterada",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "mutate": {
+        "representation": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "expectedResolution": false,
+      "citation": {
+        "valid": true,
+        "alias": "S08",
+        "chunkId": "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "documentId": "COLUMNS",
+        "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+        "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+        "start": 200,
+        "end": 414,
+        "text": "producción. Guardar el checksum esperado. Una copia no prueba recuperación. La verificación compara el contenido. Configuración de caché El TTL inicial es de 300 segundos. La clave incluye el idioma. Invalidar tras"
+      },
+      "href": "source.html#alias=S08&chunk=c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda&document=COLUMNS&version=89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a&representation=0000000000000000000000000000000000000000000000000000000000000000&start=200&end=414",
+      "resolved": false,
+      "error": "Identidad o versión de cita incompatible"
+    },
+    {
+      "id": "C09",
+      "name": "Offset fraccionario",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "mutate": {
+        "start": "1.5"
+      },
+      "expectedResolution": false,
+      "citation": {
+        "valid": true,
+        "alias": "S08",
+        "chunkId": "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "documentId": "COLUMNS",
+        "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+        "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+        "start": 200,
+        "end": 414,
+        "text": "producción. Guardar el checksum esperado. Una copia no prueba recuperación. La verificación compara el contenido. Configuración de caché El TTL inicial es de 300 segundos. La clave incluye el idioma. Invalidar tras"
+      },
+      "href": "source.html#alias=S08&chunk=c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda&document=COLUMNS&version=89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a&representation=5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748&start=1.5&end=414",
+      "resolved": false,
+      "error": "Offsets inválidos"
+    },
+    {
+      "id": "C10",
+      "name": "Identidad de chunk alterada",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "mutate": {
+        "chunk": "unknown-chunk"
+      },
+      "expectedResolution": false,
+      "citation": {
+        "valid": true,
+        "alias": "S08",
+        "chunkId": "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+        "documentId": "COLUMNS",
+        "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+        "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+        "start": 200,
+        "end": 414,
+        "text": "producción. Guardar el checksum esperado. Una copia no prueba recuperación. La verificación compara el contenido. Configuración de caché El TTL inicial es de 300 segundos. La clave incluye el idioma. Invalidar tras"
+      },
+      "href": "source.html#alias=S08&chunk=unknown-chunk&document=COLUMNS&version=89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a&representation=5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748&start=200&end=414",
+      "resolved": false,
+      "error": "Identidad o versión de cita incompatible"
+    }
+  ],
+  "uniqueGeneration": {
+    "outputs": 61,
+    "formatCounts": {
+      "invalid_json": 58,
+      "invalid_state_claims": 3
+    },
+    "reachedTokenLimit": 23,
+    "totalGeneratedTokens": 4930,
+    "generationMs": 536570.1238140002
+  }
+}

@@ -1,0 +1,43 @@
+<svg role="img" aria-label="El contrato rechaza 61 salidas" width="360" height="380" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 360 380">
+<rect width="360" height="380" x="0" y="0" fill="#0f172a"></rect>
+<path d="M52 315.5L336 315.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 284.5L336 284.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 252.5L336 252.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 221.5L336 221.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 190.5L336 190.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 159.5L336 159.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 127.5L336 127.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 112.5L336 112.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 315.5L336 315.5" fill="none" pointer-events="visible" stroke="#54555a" stroke-linecap="round" class="grounding-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 315)" fill="#e2e8f0">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 283.7692)" fill="#e2e8f0">10</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 252.5385)" fill="#e2e8f0">20</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 221.3077)" fill="#e2e8f0">30</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 190.0769)" fill="#e2e8f0">40</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 158.8462)" fill="#e2e8f0">50</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 127.6154)" fill="#e2e8f0">60</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 112)" fill="#e2e8f0">65</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" y="6" transform="translate(123 323)" fill="#e2e8f0">JSON inválido</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" y="6" transform="translate(265 323)" fill="#e2e8f0">Estado incoherente</text>
+<path d="M102 315l42 0l0 -181.1l-42 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="grounding-figure-cls-1"></path>
+<path d="M244 315l42 0l0 -9.4l-42 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="grounding-figure-cls-1"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(123 128.8615)" fill="#e2e8f0">58</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(265 300.6308)" fill="#e2e8f0">3</text>
+<path d="M-5 -5l238.7 0l0 75l-238.7 0Z" transform="translate(17 15)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#3c3c41" stroke-width="0" class="grounding-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:17px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="8.5" transform="translate(17 15)" fill="#e2e8f0">El contrato rechaza 61 salidas</text>
+<path d="M0 27l213.9 0l0 38l-213.8 0Z" transform="translate(17 15)" fill="none" pointer-events="visible" class="grounding-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="36.5" transform="translate(17 15)" fill="#94a3b8">61 prompts únicos · 80 escenarios</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="55.5" transform="translate(17 15)" fill="#94a3b8">23 salidas alcanzaron 160 tokens</text>
+<style ><![CDATA[
+.grounding-figure-cls-0:hover {
+pointer-events:none;
+}
+.grounding-figure-cls-1:hover {
+cursor:pointer;
+fill:rgba(61,207,255,1);
+}
+
+]]>
+
+</style>
+</svg>

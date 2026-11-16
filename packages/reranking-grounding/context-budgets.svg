@@ -1,0 +1,71 @@
+<svg role="img" aria-label="Qué contexto entra realmente" width="360" height="520" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 360 520">
+<rect width="360" height="520" x="0" y="0" fill="#0f172a"></rect>
+<text dominant-baseline="central" text-anchor="start" style="font: 13px sans-serif" xml:space="preserve" y="6.5" transform="translate(12 100)" fill="#e2e8f0">Chunks seleccionados, suma de escenarios</text>
+<text dominant-baseline="central" text-anchor="start" style="font: 13px sans-serif" xml:space="preserve" y="6.5" transform="translate(12 300)" fill="#e2e8f0">Máximo observado de tokens de contexto</text>
+<path d="M52 235.5L336 235.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 215.5L336 215.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 196.5L336 196.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 176.5L336 176.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 157.5L336 157.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 138.5L336 138.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 130.5L336 130.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 435.5L336 435.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 409.5L336 409.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 382.5L336 382.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 356.5L336 356.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<path d="M52 330.5L336 330.5" fill="none" pointer-events="visible" stroke="#334155" class="grounding-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" y="6" transform="translate(194 263)" fill="#e2e8f0">Presupuesto de tokens</text>
+<path d="M52 235.5L336 235.5" fill="none" pointer-events="visible" stroke="#54555a" stroke-linecap="round" class="grounding-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" y="6" transform="translate(194 463)" fill="#e2e8f0">Presupuesto de tokens</text>
+<path d="M52 435.5L336 435.5" fill="none" pointer-events="visible" stroke="#54555a" stroke-linecap="round" class="grounding-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 235)" fill="#e2e8f0">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 215.5556)" fill="#e2e8f0">50</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 196.1111)" fill="#e2e8f0">100</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 176.6667)" fill="#e2e8f0">150</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 157.2222)" fill="#e2e8f0">200</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 137.7778)" fill="#e2e8f0">250</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 435)" fill="#e2e8f0">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 408.75)" fill="#e2e8f0">50</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 382.5)" fill="#e2e8f0">100</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 356.25)" fill="#e2e8f0">150</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 330)" fill="#e2e8f0">200</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(99.3333 243)" fill="#e2e8f0">96</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(194 243)" fill="#e2e8f0">160</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(288.6667 243)" fill="#e2e8f0">256</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(99.3333 443)" fill="#e2e8f0">96</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(194 443)" fill="#e2e8f0">160</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(288.6667 443)" fill="#e2e8f0">256</text>
+<path d="M80.3 235l38 0l0 -58.3l-38 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="grounding-figure-cls-1"></path>
+<path d="M175 235l38 0l0 -90.2l-38 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="grounding-figure-cls-1"></path>
+<path d="M269.7 235l38 0l0 -91l-38 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="grounding-figure-cls-1"></path>
+<path d="M80.3 435l38 0l0 -49.4l-38 0Z" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="grounding-figure-cls-2"></path>
+<path d="M175 435l38 0l0 -84l-38 0Z" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="grounding-figure-cls-2"></path>
+<path d="M269.7 435l38 0l0 -92.9l-38 0Z" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="grounding-figure-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(99.3333 171.6667)" fill="#e2e8f0">150</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(194 139.7778)" fill="#e2e8f0">232</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(288.6667 139)" fill="#e2e8f0">234</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(99.3333 380.65)" fill="#e2e8f0">94</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(194 346)" fill="#e2e8f0">160</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(288.6667 337.075)" fill="#e2e8f0">177</text>
+<path d="M-5 -5l260.4 0l0 75l-260.4 0Z" transform="translate(17 15)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#3c3c41" stroke-width="0" class="grounding-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:17px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="8.5" transform="translate(17 15)" fill="#e2e8f0">Qué contexto entra realmente</text>
+<path d="M0 27l250.4 0l0 38l-250.4 0Z" transform="translate(17 15)" fill="none" pointer-events="visible" class="grounding-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="36.5" transform="translate(17 15)" fill="#94a3b8">80 escenarios · cuerpos con alias</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="55.5" transform="translate(17 15)" fill="#94a3b8">Contador del contexto, no prompt completo</text>
+<style ><![CDATA[
+.grounding-figure-cls-0:hover {
+pointer-events:none;
+}
+.grounding-figure-cls-1:hover {
+cursor:pointer;
+fill:rgba(61,207,255,1);
+}
+.grounding-figure-cls-2:hover {
+cursor:pointer;
+fill:rgba(255,210,39,1);
+}
+
+]]>
+
+</style>
+</svg>

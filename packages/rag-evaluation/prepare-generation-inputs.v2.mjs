@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {read,json,digest,exists,saveNew,journal} from './generation-io.v2.mjs';
+assert.equal(await exists('results/generation-inputs.v2.json'),false,'Preserve v2 prepared inputs');
+const previous=await json('results/generation.v1.json'),original=await json('results/generation-inputs.v1.json');
+for(const row of previous.rows)assert.equal(digest(await read(row.file)),row.sha256,'Original outcome must remain intact');
+const events=(await read('results/response-v1/events.jsonl')).toString().trim().split('\n').map(JSON.parse);assert.ok(!events.some(e=>e.modelId==='B'&&['case_started','model_session_started'].includes(e.event)),'B already started: continuation not eligible');
+const never=previous.rows.filter(r=>r.modelId==='B');assert.equal(never.length,20);assert.ok(never.every(r=>r.outcome==='not_executed'));
+const normalize=code=>code.replaceAll('generation-io.v2.mjs','generation-io.v1.mjs').replaceAll('generation-inputs.v2.json','generation-inputs.v1.json').replaceAll('results/response-v2','results/response-v1');assert.equal(normalize((await read('generation-worker.v2.mjs')).toString()),(await read('generation-worker.v1.mjs')).toString(),'Model worker semantics must not change');
+const files=['prepare-generation-inputs.v2.mjs','capture-generations.v2.mjs','generation-worker.v2.mjs','generation-io.v2.mjs','generation-continuation.v2.json','results/generation.v1.json','results/generation-inputs.v1.json'];
+const sourceHashes={...original.sourceHashes,...Object.fromEntries(await Promise.all(files.map(async f=>[f,digest(await read(f))])))};
+const inputs=original.inputs.filter(r=>r.modelId==='B');assert.equal(inputs.length,20);
+await saveNew('results/generation-inputs.v2.json',{kind:'unchanged_B_inputs_after_pre_inference_dependency_failure',sourceHashes,runtime:original.runtime,inputs});console.log('20 never-executed B inputs copied exactly; no inference or A retry.');

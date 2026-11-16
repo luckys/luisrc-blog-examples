@@ -1,0 +1,28 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {buildMessages,packSources,contextEvidenceMetrics,unionUnits} from '../context-core.v1.mjs';
+const documents=[{id:'A',title:'Alpha',body:'abcdefghij',revision:1},{id:'B',title:'Beta',body:'klmnop',revision:1}];
+const corpus={documents,facts:[{id:'f1',documentId:'A',quote:'abcd',start:0,end:4},{id:'f2',documentId:'B',quote:'klm',start:0,end:3}]};
+const label={requiredFactIds:['f1','f2'],qrels:[{documentId:'A',grade:1},{documentId:'B',grade:1}]};
+// Character-based stand-in ONLY for branch tests. Native capture uses real tokenizers.
+const fakeMeasure=messages=>{const sources=JSON.parse(messages[1].content.split('\nFuentes:\n')[1]),length=5+sources.reduce((n,s)=>n+s.body.length,0);return{prompt:JSON.stringify(messages),inputIds:Array(length).fill(0)};};
+const pack=(limit,candidates=documents)=>packSources({question:'Pregunta',system:'Reglas',candidates,inputLimit:limit},fakeMeasure);
+test('prompt serializes only id,title,body and keeps system/question separate',()=>{const messages=buildMessages('Reglas','Pregunta',[{...documents[0],secretGold:'do not leak'}]);assert.equal(messages[0].role,'system');assert.equal(messages[1].role,'user');assert.doesNotMatch(messages[1].content,/secretGold|revision/);assert.deepEqual(JSON.parse(messages[1].content.split('\nFuentes:\n')[1]),[{id:'A',title:'Alpha',body:'abcdefghij'}]);});
+test('whole-source admission fits the exact input limit',()=>{const result=pack(15);assert.equal(result.status,'ready');assert.deepEqual(result.selectedIds,['A']);assert.equal(result.inputIds.length,15);assert.equal(result.attempts[1].accepted,false);});
+test('a rejected long source does not prevent trying a shorter later source',()=>{const result=pack(11);assert.deepEqual(result.selectedIds,['B']);assert.equal(result.inputIds.length,11);});
+test('system/question over budget yields no operational prompt',()=>{const result=pack(4);assert.equal(result.status,'base_over_budget');assert.equal(result.prompt,null);assert.equal(result.diagnosticInputTokens,5);assert.deepEqual(result.inputIds,[]);assert.equal(result.attempts.length,0);});
+test('an admitted empty context is distinct from an over-budget base',()=>{const result=pack(5);assert.equal(result.status,'empty_context');assert.ok(result.prompt);assert.equal(result.emptyReason,'all_candidates_over_budget');assert.equal(result.inputIds.length,5);});
+test('no retrieval candidates gives a separate reason for empty context',()=>{assert.equal(pack(5,[]).emptyReason,'no_candidates');});
+test('duplicate candidate IDs are invalid before measuring',()=>{assert.throws(()=>pack(100,[documents[0],documents[0]]),/duplicate candidate/);});
+test('nonpositive and fractional input limits are invalid',()=>{for(const limit of [0,-1,.5,NaN])assert.throws(()=>pack(limit),/input limit/);});
+test('document relevance and required fact coverage use different denominators',()=>{const m=contextEvidenceMetrics([documents[0]],corpus,label);assert.equal(m.selectedDocumentRelevance,1);assert.equal(m.requiredFactCoverage,.5);assert.equal(m.requiredEvidenceUnits,4);assert.equal(m.requiredEvidenceShareOfSourceText,.4);});
+test('empty selection has no document ratio but zero coverage when facts are required',()=>{const m=contextEvidenceMetrics([],corpus,label);assert.equal(m.selectedDocumentRelevance,null);assert.equal(m.requiredFactCoverage,0);assert.equal(m.requiredEvidenceShareOfSourceText,null);});
+test('unanswerable references keep fact coverage undefined',()=>{const m=contextEvidenceMetrics(documents,corpus,{requiredFactIds:[],qrels:label.qrels.map(r=>({...r,grade:0}))});assert.equal(m.selectedDocumentRelevance,0);assert.equal(m.requiredFactCoverage,null);assert.equal(m.requiredEvidenceShareOfSourceText,0);});
+test('overlapping evidence ranges are unioned,not double counted',()=>{assert.equal(unionUnits([{start:0,end:4},{start:2,end:6},{start:8,end:10}]),8);});
+test('UTF-16 units are not Unicode codepoint counts',()=>{const source={id:'E',title:'Emoji',body:'😀x',revision:1},c={documents:[source],facts:[{id:'emoji',documentId:'E',quote:'😀',start:0,end:2}]};const m=contextEvidenceMetrics([source],c,{requiredFactIds:['emoji'],qrels:[{documentId:'E',grade:2}]});assert.equal(m.selectedBodyUnits,3);assert.equal(m.requiredEvidenceUnits,2);assert.equal(m.requiredEvidenceShareOfSourceText,2/3);});
+test('mismatched source revision or text cannot receive credit by ID',()=>{assert.throws(()=>contextEvidenceMetrics([{...documents[0],body:'wrong'}],corpus,label),/canonical source/);assert.throws(()=>contextEvidenceMetrics([{...documents[0],revision:2}],corpus,label),/canonical source/);});
+test('duplicate selected IDs and unjudged sources are rejected',()=>{assert.throws(()=>contextEvidenceMetrics([documents[0],documents[0]],corpus,label),/duplicate selected/);assert.throws(()=>contextEvidenceMetrics([documents[0]],corpus,{...label,qrels:[]}),/missing qrel/);});
+test('invalid quote offsets do not silently become evidence',()=>{assert.throws(()=>contextEvidenceMetrics(documents,{...corpus,facts:[{...corpus.facts[0],start:1},corpus.facts[1]]},label),/evidence range/);});
+
+test('duplicate required facts cannot inflate coverage counts',()=>{assert.throws(()=>contextEvidenceMetrics(documents,corpus,{...label,requiredFactIds:['f1','f1']}),/duplicate required fact/);});
+test('empty or negative quote ranges are invalid even if slicing returns empty text',()=>{assert.throws(()=>contextEvidenceMetrics(documents,{...corpus,facts:[{...corpus.facts[0],start:-1,end:-1,quote:''},corpus.facts[1]]},label),/evidence range/);});

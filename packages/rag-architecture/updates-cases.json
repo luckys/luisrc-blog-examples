@@ -1,0 +1,222 @@
+{
+  "reads": [
+    {
+      "id": "v1-first",
+      "role": "alpha_reader",
+      "generation": "v1",
+      "k": 1,
+      "lookup": "miss",
+      "ids": [
+        "alpha-cache-v1"
+      ],
+      "accessRevision": 1
+    },
+    {
+      "id": "v1-hit",
+      "role": "alpha_reader",
+      "generation": "v1",
+      "k": 1,
+      "lookup": "hit",
+      "ids": [
+        "alpha-cache-v1"
+      ],
+      "accessRevision": 1
+    },
+    {
+      "id": "new-overlap",
+      "role": "alpha_reader",
+      "generation": "v2",
+      "k": 3,
+      "lookup": "miss",
+      "ids": [
+        "alpha-cache-v2"
+      ],
+      "accessRevision": 1
+    },
+    {
+      "id": "old-overlap",
+      "role": "alpha_reader",
+      "generation": "v1",
+      "k": 3,
+      "lookup": "miss",
+      "ids": [
+        "alpha-cache-v1"
+      ],
+      "accessRevision": 1
+    },
+    {
+      "id": "v2-hit",
+      "role": "alpha_reader",
+      "generation": "v2",
+      "k": 3,
+      "lookup": "hit",
+      "ids": [
+        "alpha-cache-v2"
+      ],
+      "accessRevision": 1
+    },
+    {
+      "id": "v2-k1",
+      "role": "alpha_reader",
+      "generation": "v2",
+      "k": 1,
+      "lookup": "miss",
+      "ids": [
+        "alpha-cache-v2"
+      ],
+      "accessRevision": 1
+    },
+    {
+      "id": "v2-k1-hit",
+      "role": "alpha_reader",
+      "generation": "v2",
+      "k": 1,
+      "lookup": "hit",
+      "ids": [
+        "alpha-cache-v2"
+      ],
+      "accessRevision": 1
+    },
+    {
+      "id": "reader-after-acl",
+      "role": "alpha_reader",
+      "generation": "v2",
+      "k": 3,
+      "lookup": "miss",
+      "ids": [],
+      "accessRevision": 2
+    },
+    {
+      "id": "reader-empty-hit",
+      "role": "alpha_reader",
+      "generation": "v2",
+      "k": 3,
+      "lookup": "hit",
+      "ids": [],
+      "accessRevision": 2
+    },
+    {
+      "id": "manager-after-acl",
+      "role": "alpha_manager",
+      "generation": "v2",
+      "k": 3,
+      "lookup": "miss",
+      "ids": [
+        "alpha-cache-v2"
+      ],
+      "accessRevision": 2
+    },
+    {
+      "id": "beta-after-activation",
+      "role": "beta_reader",
+      "generation": "v2",
+      "k": 3,
+      "lookup": "miss",
+      "ids": [
+        "beta-cache-v2"
+      ],
+      "accessRevision": 2
+    }
+  ],
+  "citations": [
+    {
+      "id": "old-version",
+      "role": "alpha_reader",
+      "reference": {
+        "generation": "v1",
+        "id": "alpha-cache-v1",
+        "revision": 1
+      },
+      "resolved": true,
+      "accessRevision": 1
+    },
+    {
+      "id": "new-version",
+      "role": "alpha_reader",
+      "reference": {
+        "generation": "v2",
+        "id": "alpha-cache-v2",
+        "revision": 2
+      },
+      "resolved": true,
+      "accessRevision": 1
+    },
+    {
+      "id": "wrong-revision",
+      "role": "alpha_reader",
+      "reference": {
+        "generation": "v1",
+        "id": "alpha-cache-v1",
+        "revision": 2
+      },
+      "resolved": false,
+      "accessRevision": 1
+    },
+    {
+      "id": "foreign-tenant",
+      "role": "alpha_reader",
+      "reference": {
+        "generation": "v1",
+        "id": "beta-cache-v1",
+        "revision": 1
+      },
+      "resolved": false,
+      "accessRevision": 1
+    },
+    {
+      "id": "unknown-generation",
+      "role": "alpha_reader",
+      "reference": {
+        "generation": "v3",
+        "id": "alpha-cache-v1",
+        "revision": 1
+      },
+      "resolved": false,
+      "accessRevision": 1
+    },
+    {
+      "id": "old-after-acl",
+      "role": "alpha_reader",
+      "reference": {
+        "generation": "v1",
+        "id": "alpha-cache-v1",
+        "revision": 1
+      },
+      "resolved": false,
+      "accessRevision": 2
+    },
+    {
+      "id": "new-after-acl",
+      "role": "alpha_reader",
+      "reference": {
+        "generation": "v2",
+        "id": "alpha-cache-v2",
+        "revision": 2
+      },
+      "resolved": false,
+      "accessRevision": 2
+    },
+    {
+      "id": "manager-old",
+      "role": "alpha_manager",
+      "reference": {
+        "generation": "v1",
+        "id": "alpha-cache-v1",
+        "revision": 1
+      },
+      "resolved": true,
+      "accessRevision": 2
+    },
+    {
+      "id": "manager-new",
+      "role": "alpha_manager",
+      "reference": {
+        "generation": "v2",
+        "id": "alpha-cache-v2",
+        "revision": 2
+      },
+      "resolved": true,
+      "accessRevision": 2
+    }
+  ]
+}

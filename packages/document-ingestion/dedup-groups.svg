@@ -1,0 +1,42 @@
+<svg role="img" aria-label="Fuentes y grupos conservados" width="360" height="380" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 360 380">
+<rect width="360" height="380" x="0" y="0" fill="#0f172a"></rect>
+<path d="M52 305.5L338 305.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 266.5L338 266.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 227.5L338 227.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 188.5L338 188.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 149.5L338 149.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 110.5L338 110.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 305.5L338 305.5" fill="none" pointer-events="visible" stroke="#54555a" stroke-linecap="round" class="ingestion-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 305)" fill="#e2e8f0">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 266)" fill="#e2e8f0">2</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 227)" fill="#e2e8f0">4</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 188)" fill="#e2e8f0">6</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 149)" fill="#e2e8f0">8</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 110)" fill="#e2e8f0">10</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(99.6667 313)" fill="#e2e8f0">Fuentes</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(195 313)" fill="#e2e8f0">Bytes</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(290.3333 313)" fill="#e2e8f0">Texto</text>
+<path d="M78.7 305l42 0l0 -175.5l-42 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="ingestion-figure-cls-1"></path>
+<path d="M174 305l42 0l0 -156l-42 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="ingestion-figure-cls-1"></path>
+<path d="M269.3 305l42 0l0 -117l-42 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="ingestion-figure-cls-1"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(99.6667 124.5)" fill="#e2e8f0">9</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(195 144)" fill="#e2e8f0">8</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(290.3333 183)" fill="#e2e8f0">6</text>
+<path d="M-5 -5l243.4 0l0 75l-243.4 0Z" transform="translate(17 15)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#3c3c41" stroke-width="0" class="ingestion-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:17px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="8.5" transform="translate(17 15)" fill="#e2e8f0">Fuentes y grupos conservados</text>
+<path d="M0 27l206.1 0l0 38l-206 0Z" transform="translate(17 15)" fill="none" pointer-events="visible" class="ingestion-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="36.5" transform="translate(17 15)" fill="#94a3b8">Mismo role; aliases conservados</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="55.5" transform="translate(17 15)" fill="#94a3b8">Incluye 3 controles fuera del corpus</text>
+<style ><![CDATA[
+.ingestion-figure-cls-0:hover {
+pointer-events:none;
+}
+.ingestion-figure-cls-1:hover {
+cursor:pointer;
+fill:rgba(61,207,255,1);
+}
+
+]]>
+
+</style>
+</svg>

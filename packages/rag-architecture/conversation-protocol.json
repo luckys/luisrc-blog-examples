@@ -1,0 +1,61 @@
+{
+  "version": "conversation-v1",
+  "fixedBeforeCapture": true,
+  "scope": "Server-side conversation ownership and current database authorization of remembered source references; no LLM, rewrite model, HTTP login or generated answer.",
+  "corpus": "Original corpus.json and principals; actual PostgreSQL RLS. New disposable execution, does not alter results/isolation.json.",
+  "transactions": "Each resume reads principal and references within one REPEATABLE READ READ ONLY transaction. Revocations commit before the next resume begins. No claim of immediate revocation inside an already-running snapshot.",
+  "references": "Conversation stores source id and revision, not trusted source text from history. Every resume reloads each reference under the current role. Any missing/disallowed/version-mismatched reference rejects the evidence set.",
+  "cases": [
+    {
+      "kind": "cache-followup",
+      "count": 4,
+      "expected": "ready"
+    },
+    {
+      "kind": "manager-followup",
+      "count": 2,
+      "expected": "ready"
+    },
+    {
+      "kind": "wrong-actor-other-tenant",
+      "count": 4,
+      "expected": "forbidden"
+    },
+    {
+      "kind": "wrong-actor-same-tenant",
+      "count": 4,
+      "expected": "forbidden"
+    },
+    {
+      "kind": "revoked-manager",
+      "count": 2,
+      "expected": "unavailable_reference"
+    },
+    {
+      "kind": "unknown-conversation",
+      "count": 1,
+      "expected": "not_found"
+    },
+    {
+      "kind": "foreign-reference-control",
+      "count": 1,
+      "expected": "unavailable_reference"
+    },
+    {
+      "kind": "stale-reference-control",
+      "count": 1,
+      "expected": "unavailable_reference"
+    },
+    {
+      "kind": "question-requests-other-identity",
+      "count": 1,
+      "expected": "ready with Alpha cache only; does not imply model prompt-injection safety"
+    },
+    {
+      "kind": "empty-references",
+      "count": 1,
+      "expected": "no_evidence"
+    }
+  ],
+  "limits": "21 authored scenarios, known fixtures, one process, deterministic ordering. Does not resolve arbitrary linguistic followups or summarize/truncate history. Stored public synthetic references are not deployable user sessions."
+}

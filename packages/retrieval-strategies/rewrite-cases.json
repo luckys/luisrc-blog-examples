@@ -1,0 +1,85 @@
+[
+  {
+    "queryId": "Q08",
+    "protected": [
+      "checksum",
+      "no"
+    ],
+    "safe": "checksum no coincide: procedimiento de restauración",
+    "unsafe": "checksum coincide: procedimiento de restauración",
+    "unsafeExpectedEquivalent": false
+  },
+  {
+    "queryId": "Q09",
+    "protected": [
+      "checksum",
+      "esperado",
+      "observado"
+    ],
+    "safe": "reglas para sustituir checksum esperado por checksum observado",
+    "unsafe": "sustituir checksum observado",
+    "unsafeExpectedEquivalent": false
+  },
+  {
+    "queryId": "Q11",
+    "protected": [
+      "TTL",
+      "clave"
+    ],
+    "safe": "caché: TTL inicial y composición de la clave",
+    "unsafe": "TTL inicial caché",
+    "unsafeExpectedEquivalent": false
+  },
+  {
+    "queryId": "Q13",
+    "protected": [
+      "cache",
+      "miss",
+      "origen",
+      "error"
+    ],
+    "safe": "cache miss: consulta al origen y almacenamiento de un error del origen",
+    "unsafe": "cache miss origen error: guardar siempre los errores",
+    "unsafeExpectedEquivalent": false
+  },
+  {
+    "queryId": "Q17",
+    "protected": [
+      "índice",
+      "referencia"
+    ],
+    "safe": "reconstruir índice: cuándo cambiar su referencia",
+    "unsafe": "reconstruir índice nuevo",
+    "unsafeExpectedEquivalent": false
+  },
+  {
+    "queryId": "Q18",
+    "protected": [
+      "identificador",
+      "versiones"
+    ],
+    "safe": "identificador estable y cita de versiones distintas del documento",
+    "unsafe": "identificador de documento",
+    "unsafeExpectedEquivalent": false
+  },
+  {
+    "queryId": "Q19",
+    "protected": [
+      "glucémico",
+      "pan"
+    ],
+    "safe": "valor del índice glucémico del pan",
+    "unsafe": "índice de documentos",
+    "unsafeExpectedEquivalent": false
+  },
+  {
+    "queryId": "Q20",
+    "protected": [
+      "telescopio",
+      "lunar"
+    ],
+    "safe": "calibración de telescopio lunar",
+    "unsafe": "calibración",
+    "unsafeExpectedEquivalent": false
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "kind": "fixed_model_comparison_plan_not_execution",
+  "choiceReason": "Two distinct sizes from one instruction-tuned family, chosen for a bounded CPU experiment before running the new test retrieval. No claim of optimal model selection.",
+  "models": [
+    {"id": "A", "repository": "onnx-community/Qwen2.5-0.5B-Instruct", "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e", "dtype": "q8", "weightFile": "onnx/model_quantized.onnx"},
+    {"id": "B", "repository": "onnx-community/Qwen2.5-1.5B-Instruct", "revision": "d54957e3af1be04546436e874a60fe386041b244", "dtype": "q8", "weightFile": "onnx/model_quantized.onnx"}
+  ],
+  "inputs": {"retrieval": "fixed BM25 fold profile from ranking-protocol.v1.json", "k": 3, "sameQuestionAndWholeSourceTextForBothModels": true, "sourceFormat": "JSON array of id,title,body; never include gold labels or required facts", "systemFile": "comparison-system.v1.txt", "inputTokenLimit": 1536, "overBudget": "record rejection; never truncate silently", "chatTemplate": "each pinned tokenizer apply_chat_template with add_generation_prompt:true", "addSpecialTokensAfterTemplate": false},
+  "generation": {"device": "cpu", "intraOpNumThreads": 1, "interOpNumThreads": 1, "do_sample": false, "num_beams": 1, "max_new_tokens": 192, "use_cache": true},
+  "cases": "all 20 authored queries; report dev/test and answerability separately",
+  "validation": "strict whole-output JSON and exact schema/status/source IDs; preserve invalid raw output, no repair",
+  "semanticEvaluation": "separate declared editorial rubric for support/completeness; do not call it independent human annotation or model judge",
+  "failurePolicy": "preserve every execution/failure; no favorable retries or parameter selection on test",
+  "status": "not_executed"
+}

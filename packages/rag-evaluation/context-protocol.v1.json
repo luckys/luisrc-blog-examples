@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "kind": "whole_source_context_and_evidence_evaluation_not_generation",
+  "inputLimits": [256, 384, 1536],
+  "comparisonInputLimit": 1536,
+  "comparisonSourceCount": 3,
+  "selection": "candidate IDs are first up to3 from fixed BM25 capture; try in ranking order; keep each whole source if complete chat fits; skip rejected source and try remaining candidates; never backfill below top3",
+  "smallBudgets": "256 and384 are didactic packing variants,not changes to the frozen A/B input limit",
+  "comparisonInvariant": "At1536 every retrieved top3 source must fit for both tokenizers and source texts/messages must match; otherwise preserve failure,do not silently alter A/B inputs",
+  "serialization": "two messages: fixed system and user containing question plus JSON array of id,title,body; no gold labels,required fact IDs or review notes",
+  "tokenization": {"library": "@huggingface/transformers", "libraryVersion": "3.8.1", "add_generation_prompt": true, "add_special_tokens": false, "padding": false, "truncation": false, "return_tensor": false},
+  "metrics": {"selectedDocumentRelevance": "selected docs with grade>=1 / selected docs; null when empty", "requiredFactCoverage": "distinct required fact IDs whose exact canonical source is selected / required facts; null when no required facts", "requiredEvidenceShareOfSourceText": "union of annotated required quote ranges in selected bodies / total selected body UTF-16 units; null when denominator0; excludes titles,system,question,JSON/template", "limitations": "structural proxies from authored gold,not Ragas scores or a semantic judge; cannot prove model use,answer faithfulness or corpus-wide completeness"},
+  "overBudgetBase": "record diagnostic token count, no operational prompt or evidence metrics",
+  "emptyContext": "base fits but zero sources; admitted input,doc ratio and evidence text fraction null; required coverage0 for answerable queries",
+  "execution": "two real tokenizers,20 queries,3limits,120compositions; no weights loaded,no generated tokens"
+}

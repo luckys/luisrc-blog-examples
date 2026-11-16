@@ -1,0 +1,73 @@
+{
+  "role": "generator",
+  "model": "onnx-community/Qwen2.5-0.5B-Instruct",
+  "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+  "dtype": "q8",
+  "baseModel": "Qwen/Qwen2.5-0.5B-Instruct",
+  "verification": "Pinned public revision; LFS SHA256 or Git blob SHA1 verified, SHA256 recorded before inference; not a publisher signature.",
+  "files": [
+    {
+      "file": "added_tokens.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/added_tokens.json",
+      "bytes": 605,
+      "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+      "gitBlob": "482ced4679301bf287ebb310bdd1790eb4514232"
+    },
+    {
+      "file": "config.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/config.json",
+      "bytes": 678,
+      "sha256": "777e01f0fbb3346eb229cb6fb278ed6533c1e4dcb9ebf4bed0f6e94ef17fa1b5",
+      "gitBlob": "eea21cd6f7909a44509a193b7fcdac194766c904"
+    },
+    {
+      "file": "generation_config.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/generation_config.json",
+      "bytes": 242,
+      "sha256": "f7e7ce458658b2d40d9eb213b91b77a8bf698845ab89360976722d7ac46928a3",
+      "gitBlob": "f602853d6100c43666f46c67b1c354fa15fe0b93"
+    },
+    {
+      "file": "onnx/model_quantized.onnx",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/onnx/model_quantized.onnx",
+      "bytes": 512096557,
+      "sha256": "41834041ab1b29eff9fc592f1a29a1844133aea35832ea9fa91682be13016100",
+      "gitBlob": "1ae4272fd2a7a1c1b93622b27ba5c2b1f99a54fd"
+    },
+    {
+      "file": "quantize_config.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/quantize_config.json",
+      "bytes": 285,
+      "sha256": "8da6e4e50ef7c210ba66a98a4256e6d60e38cef8a9a9c74d327251aaf4e78767",
+      "gitBlob": "fe8ed8e57e96406a23399494fb536c21183ecf63"
+    },
+    {
+      "file": "special_tokens_map.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/special_tokens_map.json",
+      "bytes": 613,
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "gitBlob": "ac23c0aaa2434523c494330aeb79c58395378103"
+    },
+    {
+      "file": "tokenizer.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/tokenizer.json",
+      "bytes": 7031673,
+      "sha256": "a8506e7111b80c6d8635951a02eab0f4e1a8e4e5772da83846579e97b16f61bf",
+      "gitBlob": "d24314ef7f0afd1b678c2e24c767e19f24f86b0e"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/tokenizer_config.json",
+      "bytes": 7849,
+      "sha256": "6a14243f0ae04884e597b3f032c05e15de9f417318fdcac24ab4e2680e691430",
+      "gitBlob": "24afe3594154cfee05edda73aeadf3daae0a53ba"
+    },
+    {
+      "file": "vocab.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/vocab.json",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "gitBlob": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    }
+  ]
+}

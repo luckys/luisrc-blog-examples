@@ -1,0 +1,1975 @@
+{
+  "kind": "headerless_tsv_parser_correction_without_ocr_rerun",
+  "captureTime": "2026-11-01T21:29:56.612Z",
+  "note": "Original collector assumed a TSV header and recorded an empty convenience words array despite nonempty OCR text/blocks. Original capture and original engine output remain intact. This file derives words from that unchanged TSV.",
+  "sourceHashes": {
+    "results/extraction.json": "46cceecd200f14da0e902496f5343b098ca6518434fb76ceb7db55b16dbaf1e4",
+    "ocr-tsv.mjs": "68c0676ba7a3c3ce98f538feae7fafbb276b9e45f6281e2b7651b1bbdcd2367a",
+    "derive.mjs": "e76a72ad103751b6f9412387395829690f648ecf07bd2220a81ca36a62d43c37"
+  },
+  "words": [
+    {
+      "ordinal": 0,
+      "text": "AtlasQueue:",
+      "confidence": 91.848274,
+      "bbox": [
+        81,
+        53,
+        290,
+        82
+      ]
+    },
+    {
+      "ordinal": 1,
+      "text": "recuperación",
+      "confidence": 96.784248,
+      "bbox": [
+        304,
+        53,
+        526,
+        88
+      ]
+    },
+    {
+      "ordinal": 2,
+      "text": "verificada",
+      "confidence": 96.625145,
+      "bbox": [
+        539,
+        54,
+        706,
+        81
+      ]
+    },
+    {
+      "ordinal": 3,
+      "text": "Una",
+      "confidence": 96.803635,
+      "bbox": [
+        82,
+        158,
+        124,
+        177
+      ]
+    },
+    {
+      "ordinal": 4,
+      "text": "copia",
+      "confidence": 94.944199,
+      "bbox": [
+        131,
+        158,
+        188,
+        181
+      ]
+    },
+    {
+      "ordinal": 5,
+      "text": "de",
+      "confidence": 96.692535,
+      "bbox": [
+        195,
+        158,
+        221,
+        177
+      ]
+    },
+    {
+      "ordinal": 6,
+      "text": "seguridad",
+      "confidence": 96.81971,
+      "bbox": [
+        229,
+        158,
+        332,
+        181
+      ]
+    },
+    {
+      "ordinal": 7,
+      "text": "no",
+      "confidence": 96.975647,
+      "bbox": [
+        342,
+        163,
+        366,
+        177
+      ]
+    },
+    {
+      "ordinal": 8,
+      "text": "garantiza",
+      "confidence": 96.74379,
+      "bbox": [
+        374,
+        158,
+        472,
+        181
+      ]
+    },
+    {
+      "ordinal": 9,
+      "text": "que",
+      "confidence": 97.003731,
+      "bbox": [
+        480,
+        163,
+        518,
+        181
+      ]
+    },
+    {
+      "ordinal": 10,
+      "text": "el",
+      "confidence": 97.01474,
+      "bbox": [
+        527,
+        158,
+        543,
+        177
+      ]
+    },
+    {
+      "ordinal": 11,
+      "text": "servicio",
+      "confidence": 97.008095,
+      "bbox": [
+        552,
+        158,
+        632,
+        177
+      ]
+    },
+    {
+      "ordinal": 12,
+      "text": "pueda",
+      "confidence": 96.90052,
+      "bbox": [
+        640,
+        158,
+        706,
+        181
+      ]
+    },
+    {
+      "ordinal": 13,
+      "text": "recuperarse.",
+      "confidence": 96.559059,
+      "bbox": [
+        714,
+        163,
+        846,
+        181
+      ]
+    },
+    {
+      "ordinal": 14,
+      "text": "La",
+      "confidence": 97.009071,
+      "bbox": [
+        856,
+        158,
+        881,
+        177
+      ]
+    },
+    {
+      "ordinal": 15,
+      "text": "prueba",
+      "confidence": 96.735558,
+      "bbox": [
+        889,
+        158,
+        962,
+        181
+      ]
+    },
+    {
+      "ordinal": 16,
+      "text": "debe",
+      "confidence": 96.781525,
+      "bbox": [
+        970,
+        158,
+        1022,
+        177
+      ]
+    },
+    {
+      "ordinal": 17,
+      "text": "restaurar",
+      "confidence": 96.228584,
+      "bbox": [
+        1031,
+        160,
+        1125,
+        177
+      ]
+    },
+    {
+      "ordinal": 18,
+      "text": "datos",
+      "confidence": 96.803383,
+      "bbox": [
+        81,
+        194,
+        138,
+        213
+      ]
+    },
+    {
+      "ordinal": 19,
+      "text": "y",
+      "confidence": 96.556343,
+      "bbox": [
+        146,
+        199,
+        157,
+        217
+      ]
+    },
+    {
+      "ordinal": 20,
+      "text": "comprobar",
+      "confidence": 96.971359,
+      "bbox": [
+        165,
+        194,
+        279,
+        217
+      ]
+    },
+    {
+      "ordinal": 21,
+      "text": "su",
+      "confidence": 96.83638,
+      "bbox": [
+        286,
+        199,
+        309,
+        213
+      ]
+    },
+    {
+      "ordinal": 22,
+      "text": "contenido.",
+      "confidence": 96.910645,
+      "bbox": [
+        318,
+        194,
+        426,
+        213
+      ]
+    },
+    {
+      "ordinal": 23,
+      "text": "El",
+      "confidence": 96.932838,
+      "bbox": [
+        82,
+        254,
+        100,
+        272
+      ]
+    },
+    {
+      "ordinal": 24,
+      "text": "manifiesto",
+      "confidence": 96.074921,
+      "bbox": [
+        110,
+        254,
+        216,
+        273
+      ]
+    },
+    {
+      "ordinal": 25,
+      "text": "registra",
+      "confidence": 96.383286,
+      "bbox": [
+        226,
+        254,
+        304,
+        277
+      ]
+    },
+    {
+      "ordinal": 26,
+      "text": "el",
+      "confidence": 93.306244,
+      "bbox": [
+        312,
+        255,
+        328,
+        273
+      ]
+    },
+    {
+      "ordinal": 27,
+      "text": "checksum",
+      "confidence": 42.646103,
+      "bbox": [
+        337,
+        254,
+        443,
+        273
+      ]
+    },
+    {
+      "ordinal": 28,
+      "text": "SHA-256",
+      "confidence": 92.435837,
+      "bbox": [
+        452,
+        254,
+        548,
+        273
+      ]
+    },
+    {
+      "ordinal": 29,
+      "text": "y",
+      "confidence": 96.822151,
+      "bbox": [
+        548,
+        250,
+        559,
+        281
+      ]
+    },
+    {
+      "ordinal": 30,
+      "text": "la",
+      "confidence": 96.910339,
+      "bbox": [
+        575,
+        254,
+        592,
+        273
+      ]
+    },
+    {
+      "ordinal": 31,
+      "text": "versión",
+      "confidence": 96.796326,
+      "bbox": [
+        600,
+        254,
+        675,
+        273
+      ]
+    },
+    {
+      "ordinal": 32,
+      "text": "del",
+      "confidence": 96.909134,
+      "bbox": [
+        684,
+        254,
+        714,
+        273
+      ]
+    },
+    {
+      "ordinal": 33,
+      "text": "esquema.",
+      "confidence": 96.528572,
+      "bbox": [
+        723,
+        259,
+        826,
+        277
+      ]
+    },
+    {
+      "ordinal": 34,
+      "text": "Antes",
+      "confidence": 96.528572,
+      "bbox": [
+        835,
+        254,
+        895,
+        273
+      ]
+    },
+    {
+      "ordinal": 35,
+      "text": "de",
+      "confidence": 97.016174,
+      "bbox": [
+        903,
+        255,
+        928,
+        273
+      ]
+    },
+    {
+      "ordinal": 36,
+      "text": "restaurar,",
+      "confidence": 96.725983,
+      "bbox": [
+        937,
+        256,
+        1037,
+        276
+      ]
+    },
+    {
+      "ordinal": 37,
+      "text": "comprobar",
+      "confidence": 96.657494,
+      "bbox": [
+        81,
+        290,
+        194,
+        313
+      ]
+    },
+    {
+      "ordinal": 38,
+      "text": "que",
+      "confidence": 97.011299,
+      "bbox": [
+        202,
+        295,
+        241,
+        314
+      ]
+    },
+    {
+      "ordinal": 39,
+      "text": "ambos",
+      "confidence": 96.2556,
+      "bbox": [
+        249,
+        291,
+        319,
+        309
+      ]
+    },
+    {
+      "ordinal": 40,
+      "text": "coinciden",
+      "confidence": 96.745895,
+      "bbox": [
+        328,
+        290,
+        427,
+        309
+      ]
+    },
+    {
+      "ordinal": 41,
+      "text": "con",
+      "confidence": 97.004028,
+      "bbox": [
+        436,
+        295,
+        472,
+        309
+      ]
+    },
+    {
+      "ordinal": 42,
+      "text": "el",
+      "confidence": 96.780914,
+      "bbox": [
+        481,
+        290,
+        498,
+        309
+      ]
+    },
+    {
+      "ordinal": 43,
+      "text": "entorno",
+      "confidence": 96.920746,
+      "bbox": [
+        507,
+        292,
+        586,
+        309
+      ]
+    },
+    {
+      "ordinal": 44,
+      "text": "de",
+      "confidence": 97.018379,
+      "bbox": [
+        594,
+        291,
+        620,
+        309
+      ]
+    },
+    {
+      "ordinal": 45,
+      "text": "prueba.",
+      "confidence": 96.726173,
+      "bbox": [
+        628,
+        290,
+        707,
+        314
+      ]
+    },
+    {
+      "ordinal": 46,
+      "text": "La",
+      "confidence": 96.933563,
+      "bbox": [
+        82,
+        350,
+        106,
+        369
+      ]
+    },
+    {
+      "ordinal": 47,
+      "text": "retención",
+      "confidence": 96.933563,
+      "bbox": [
+        115,
+        350,
+        210,
+        369
+      ]
+    },
+    {
+      "ordinal": 48,
+      "text": "de",
+      "confidence": 96.991669,
+      "bbox": [
+        219,
+        351,
+        245,
+        369
+      ]
+    },
+    {
+      "ordinal": 49,
+      "text": "las",
+      "confidence": 96.831573,
+      "bbox": [
+        254,
+        351,
+        282,
+        369
+      ]
+    },
+    {
+      "ordinal": 50,
+      "text": "copias",
+      "confidence": 96.640884,
+      "bbox": [
+        290,
+        351,
+        358,
+        374
+      ]
+    },
+    {
+      "ordinal": 51,
+      "text": "es",
+      "confidence": 97.000328,
+      "bbox": [
+        366,
+        355,
+        390,
+        369
+      ]
+    },
+    {
+      "ordinal": 52,
+      "text": "de",
+      "confidence": 96.793648,
+      "bbox": [
+        398,
+        350,
+        423,
+        369
+      ]
+    },
+    {
+      "ordinal": 53,
+      "text": "treinta",
+      "confidence": 96.793648,
+      "bbox": [
+        431,
+        351,
+        497,
+        369
+      ]
+    },
+    {
+      "ordinal": 54,
+      "text": "días.",
+      "confidence": 96.293083,
+      "bbox": [
+        505,
+        350,
+        555,
+        369
+      ]
+    },
+    {
+      "ordinal": 55,
+      "text": "Mantener",
+      "confidence": 97.007584,
+      "bbox": [
+        565,
+        350,
+        665,
+        369
+      ]
+    },
+    {
+      "ordinal": 56,
+      "text": "dos",
+      "confidence": 97.008522,
+      "bbox": [
+        672,
+        351,
+        709,
+        369
+      ]
+    },
+    {
+      "ordinal": 57,
+      "text": "copias",
+      "confidence": 96.667618,
+      "bbox": [
+        717,
+        351,
+        785,
+        374
+      ]
+    },
+    {
+      "ordinal": 58,
+      "text": "en",
+      "confidence": 96.632484,
+      "bbox": [
+        794,
+        355,
+        818,
+        369
+      ]
+    },
+    {
+      "ordinal": 59,
+      "text": "ubicaciones",
+      "confidence": 96.785248,
+      "bbox": [
+        828,
+        350,
+        952,
+        369
+      ]
+    },
+    {
+      "ordinal": 60,
+      "text": "diferentes",
+      "confidence": 96.736023,
+      "bbox": [
+        960,
+        350,
+        1065,
+        369
+      ]
+    },
+    {
+      "ordinal": 61,
+      "text": "evita",
+      "confidence": 96.998291,
+      "bbox": [
+        1073,
+        351,
+        1122,
+        369
+      ]
+    },
+    {
+      "ordinal": 62,
+      "text": "depender",
+      "confidence": 96.518425,
+      "bbox": [
+        81,
+        387,
+        181,
+        410
+      ]
+    },
+    {
+      "ordinal": 63,
+      "text": "de",
+      "confidence": 96.417725,
+      "bbox": [
+        189,
+        387,
+        214,
+        405
+      ]
+    },
+    {
+      "ordinal": 64,
+      "text": "un",
+      "confidence": 96.982742,
+      "bbox": [
+        223,
+        391,
+        247,
+        405
+      ]
+    },
+    {
+      "ordinal": 65,
+      "text": "único",
+      "confidence": 96.943687,
+      "bbox": [
+        256,
+        386,
+        311,
+        405
+      ]
+    },
+    {
+      "ordinal": 66,
+      "text": "volumen.",
+      "confidence": 96.639809,
+      "bbox": [
+        319,
+        387,
+        415,
+        405
+      ]
+    },
+    {
+      "ordinal": 67,
+      "text": "La",
+      "confidence": 96.440361,
+      "bbox": [
+        82,
+        447,
+        106,
+        465
+      ]
+    },
+    {
+      "ordinal": 68,
+      "text": "restauración",
+      "confidence": 96.466812,
+      "bbox": [
+        115,
+        446,
+        244,
+        465
+      ]
+    },
+    {
+      "ordinal": 69,
+      "text": "usa",
+      "confidence": 97.009148,
+      "bbox": [
+        254,
+        451,
+        290,
+        465
+      ]
+    },
+    {
+      "ordinal": 70,
+      "text": "un",
+      "confidence": 96.775795,
+      "bbox": [
+        299,
+        451,
+        323,
+        465
+      ]
+    },
+    {
+      "ordinal": 71,
+      "text": "directorio",
+      "confidence": 96.991867,
+      "bbox": [
+        331,
+        447,
+        429,
+        465
+      ]
+    },
+    {
+      "ordinal": 72,
+      "text": "aislado.",
+      "confidence": 96.908142,
+      "bbox": [
+        437,
+        447,
+        517,
+        465
+      ]
+    },
+    {
+      "ordinal": 73,
+      "text": "Nunca",
+      "confidence": 93.304504,
+      "bbox": [
+        527,
+        447,
+        595,
+        465
+      ]
+    },
+    {
+      "ordinal": 74,
+      "text": "sobrescribir",
+      "confidence": 92.831429,
+      "bbox": [
+        603,
+        447,
+        726,
+        465
+      ]
+    },
+    {
+      "ordinal": 75,
+      "text": "los",
+      "confidence": 96.924728,
+      "bbox": [
+        734,
+        447,
+        763,
+        465
+      ]
+    },
+    {
+      "ordinal": 76,
+      "text": "datos",
+      "confidence": 96.778557,
+      "bbox": [
+        771,
+        447,
+        828,
+        465
+      ]
+    },
+    {
+      "ordinal": 77,
+      "text": "de",
+      "confidence": 96.609787,
+      "bbox": [
+        836,
+        447,
+        862,
+        465
+      ]
+    },
+    {
+      "ordinal": 78,
+      "text": "producción",
+      "confidence": 96.848404,
+      "bbox": [
+        870,
+        446,
+        985,
+        470
+      ]
+    },
+    {
+      "ordinal": 79,
+      "text": "durante",
+      "confidence": 96.670723,
+      "bbox": [
+        994,
+        447,
+        1074,
+        465
+      ]
+    },
+    {
+      "ordinal": 80,
+      "text": "un",
+      "confidence": 96.970795,
+      "bbox": [
+        1083,
+        451,
+        1107,
+        465
+      ]
+    },
+    {
+      "ordinal": 81,
+      "text": "ejercicio.",
+      "confidence": 96.220123,
+      "bbox": [
+        81,
+        483,
+        173,
+        506
+      ]
+    },
+    {
+      "ordinal": 82,
+      "text": "Después",
+      "confidence": 96.544662,
+      "bbox": [
+        82,
+        542,
+        174,
+        566
+      ]
+    },
+    {
+      "ordinal": 83,
+      "text": "de",
+      "confidence": 96.544662,
+      "bbox": [
+        182,
+        543,
+        207,
+        561
+      ]
+    },
+    {
+      "ordinal": 84,
+      "text": "cargar",
+      "confidence": 96.615585,
+      "bbox": [
+        215,
+        547,
+        283,
+        566
+      ]
+    },
+    {
+      "ordinal": 85,
+      "text": "la",
+      "confidence": 96.802719,
+      "bbox": [
+        291,
+        543,
+        308,
+        561
+      ]
+    },
+    {
+      "ordinal": 86,
+      "text": "copia,",
+      "confidence": 96.54084,
+      "bbox": [
+        316,
+        543,
+        377,
+        566
+      ]
+    },
+    {
+      "ordinal": 87,
+      "text": "reproducir",
+      "confidence": 96.54084,
+      "bbox": [
+        387,
+        543,
+        494,
+        566
+      ]
+    },
+    {
+      "ordinal": 88,
+      "text": "el",
+      "confidence": 96.856445,
+      "bbox": [
+        501,
+        543,
+        518,
+        561
+      ]
+    },
+    {
+      "ordinal": 89,
+      "text": "registro",
+      "confidence": 93.28653,
+      "bbox": [
+        527,
+        543,
+        605,
+        566
+      ]
+    },
+    {
+      "ordinal": 90,
+      "text": "WAL",
+      "confidence": 93.115738,
+      "bbox": [
+        613,
+        543,
+        664,
+        560
+      ]
+    },
+    {
+      "ordinal": 91,
+      "text": "hasta",
+      "confidence": 96.845352,
+      "bbox": [
+        673,
+        543,
+        729,
+        561
+      ]
+    },
+    {
+      "ordinal": 92,
+      "text": "el",
+      "confidence": 96.979797,
+      "bbox": [
+        738,
+        543,
+        754,
+        561
+      ]
+    },
+    {
+      "ordinal": 93,
+      "text": "punto",
+      "confidence": 96.902168,
+      "bbox": [
+        763,
+        544,
+        821,
+        566
+      ]
+    },
+    {
+      "ordinal": 94,
+      "text": "acordado.",
+      "confidence": 96.711555,
+      "bbox": [
+        830,
+        543,
+        934,
+        561
+      ]
+    },
+    {
+      "ordinal": 95,
+      "text": "Una",
+      "confidence": 96.723679,
+      "bbox": [
+        944,
+        543,
+        986,
+        561
+      ]
+    },
+    {
+      "ordinal": 96,
+      "text": "escritura",
+      "confidence": 96.886749,
+      "bbox": [
+        994,
+        543,
+        1085,
+        561
+      ]
+    },
+    {
+      "ordinal": 97,
+      "text": "posterior",
+      "confidence": 96.718155,
+      "bbox": [
+        81,
+        579,
+        173,
+        602
+      ]
+    },
+    {
+      "ordinal": 98,
+      "text": "no",
+      "confidence": 96.952225,
+      "bbox": [
+        182,
+        583,
+        206,
+        597
+      ]
+    },
+    {
+      "ordinal": 99,
+      "text": "pertenece",
+      "confidence": 96.997284,
+      "bbox": [
+        214,
+        580,
+        319,
+        602
+      ]
+    },
+    {
+      "ordinal": 100,
+      "text": "a",
+      "confidence": 96.968445,
+      "bbox": [
+        328,
+        583,
+        340,
+        597
+      ]
+    },
+    {
+      "ordinal": 101,
+      "text": "ese",
+      "confidence": 96.993523,
+      "bbox": [
+        348,
+        583,
+        385,
+        597
+      ]
+    },
+    {
+      "ordinal": 102,
+      "text": "snapshot.",
+      "confidence": 96.878502,
+      "bbox": [
+        393,
+        579,
+        495,
+        602
+      ]
+    },
+    {
+      "ordinal": 103,
+      "text": "El",
+      "confidence": 96.342545,
+      "bbox": [
+        82,
+        639,
+        100,
+        657
+      ]
+    },
+    {
+      "ordinal": 104,
+      "text": "informe",
+      "confidence": 96.342545,
+      "bbox": [
+        109,
+        639,
+        187,
+        657
+      ]
+    },
+    {
+      "ordinal": 105,
+      "text": "guarda",
+      "confidence": 96.323891,
+      "bbox": [
+        195,
+        639,
+        269,
+        662
+      ]
+    },
+    {
+      "ordinal": 106,
+      "text": "el",
+      "confidence": 96.429703,
+      "bbox": [
+        277,
+        639,
+        293,
+        657
+      ]
+    },
+    {
+      "ordinal": 107,
+      "text": "identificador",
+      "confidence": 96.429703,
+      "bbox": [
+        303,
+        639,
+        431,
+        657
+      ]
+    },
+    {
+      "ordinal": 108,
+      "text": "de",
+      "confidence": 96.868965,
+      "bbox": [
+        438,
+        639,
+        464,
+        657
+      ]
+    },
+    {
+      "ordinal": 109,
+      "text": "la",
+      "confidence": 96.984444,
+      "bbox": [
+        472,
+        639,
+        489,
+        657
+      ]
+    },
+    {
+      "ordinal": 110,
+      "text": "copia,",
+      "confidence": 95.630196,
+      "bbox": [
+        497,
+        639,
+        559,
+        662
+      ]
+    },
+    {
+      "ordinal": 111,
+      "text": "la",
+      "confidence": 96.878708,
+      "bbox": [
+        569,
+        639,
+        585,
+        657
+      ]
+    },
+    {
+      "ordinal": 112,
+      "text": "fecha",
+      "confidence": 96.564377,
+      "bbox": [
+        593,
+        639,
+        651,
+        657
+      ]
+    },
+    {
+      "ordinal": 113,
+      "text": "y",
+      "confidence": 96.564377,
+      "bbox": [
+        659,
+        644,
+        669,
+        662
+      ]
+    },
+    {
+      "ordinal": 114,
+      "text": "los",
+      "confidence": 96.982635,
+      "bbox": [
+        678,
+        639,
+        707,
+        657
+      ]
+    },
+    {
+      "ordinal": 115,
+      "text": "resultados",
+      "confidence": 96.981102,
+      "bbox": [
+        716,
+        639,
+        824,
+        657
+      ]
+    },
+    {
+      "ordinal": 116,
+      "text": "de",
+      "confidence": 97.013504,
+      "bbox": [
+        832,
+        639,
+        857,
+        657
+      ]
+    },
+    {
+      "ordinal": 117,
+      "text": "las",
+      "confidence": 96.445442,
+      "bbox": [
+        866,
+        639,
+        895,
+        657
+      ]
+    },
+    {
+      "ordinal": 118,
+      "text": "comprobaciones.",
+      "confidence": 96.713379,
+      "bbox": [
+        903,
+        639,
+        1083,
+        662
+      ]
+    },
+    {
+      "ordinal": 119,
+      "text": "Una",
+      "confidence": 96.632233,
+      "bbox": [
+        1094,
+        639,
+        1135,
+        657
+      ]
+    },
+    {
+      "ordinal": 120,
+      "text": "ejecución",
+      "confidence": 97.018044,
+      "bbox": [
+        81,
+        674,
+        180,
+        698
+      ]
+    },
+    {
+      "ordinal": 121,
+      "text": "sin",
+      "confidence": 96.923355,
+      "bbox": [
+        189,
+        675,
+        217,
+        693
+      ]
+    },
+    {
+      "ordinal": 122,
+      "text": "errores",
+      "confidence": 96.928101,
+      "bbox": [
+        226,
+        679,
+        300,
+        693
+      ]
+    },
+    {
+      "ordinal": 123,
+      "text": "no",
+      "confidence": 96.986206,
+      "bbox": [
+        310,
+        679,
+        334,
+        693
+      ]
+    },
+    {
+      "ordinal": 124,
+      "text": "demuestra",
+      "confidence": 96.618286,
+      "bbox": [
+        342,
+        675,
+        454,
+        693
+      ]
+    },
+    {
+      "ordinal": 125,
+      "text": "que",
+      "confidence": 96.939095,
+      "bbox": [
+        462,
+        679,
+        501,
+        698
+      ]
+    },
+    {
+      "ordinal": 126,
+      "text": "falten",
+      "confidence": 96.939095,
+      "bbox": [
+        509,
+        675,
+        566,
+        693
+      ]
+    },
+    {
+      "ordinal": 127,
+      "text": "cero",
+      "confidence": 96.987534,
+      "bbox": [
+        575,
+        679,
+        620,
+        693
+      ]
+    },
+    {
+      "ordinal": 128,
+      "text": "registros.",
+      "confidence": 96.945404,
+      "bbox": [
+        629,
+        675,
+        724,
+        698
+      ]
+    },
+    {
+      "ordinal": 129,
+      "text": "Si",
+      "confidence": 95.109322,
+      "bbox": [
+        81,
+        734,
+        100,
+        753
+      ]
+    },
+    {
+      "ordinal": 130,
+      "text": "el",
+      "confidence": 93.302048,
+      "bbox": [
+        109,
+        735,
+        125,
+        753
+      ]
+    },
+    {
+      "ordinal": 131,
+      "text": "checksum",
+      "confidence": 91.385086,
+      "bbox": [
+        134,
+        735,
+        240,
+        753
+      ]
+    },
+    {
+      "ordinal": 132,
+      "text": "no",
+      "confidence": 97.011703,
+      "bbox": [
+        250,
+        739,
+        274,
+        753
+      ]
+    },
+    {
+      "ordinal": 133,
+      "text": "coincide,",
+      "confidence": 96.921051,
+      "bbox": [
+        282,
+        735,
+        374,
+        756
+      ]
+    },
+    {
+      "ordinal": 134,
+      "text": "detener",
+      "confidence": 96.952873,
+      "bbox": [
+        383,
+        735,
+        464,
+        753
+      ]
+    },
+    {
+      "ordinal": 135,
+      "text": "la",
+      "confidence": 96.989716,
+      "bbox": [
+        472,
+        735,
+        489,
+        753
+      ]
+    },
+    {
+      "ordinal": 136,
+      "text": "restauración",
+      "confidence": 96.652199,
+      "bbox": [
+        498,
+        734,
+        627,
+        753
+      ]
+    },
+    {
+      "ordinal": 137,
+      "text": "y",
+      "confidence": 97.022095,
+      "bbox": [
+        636,
+        740,
+        647,
+        758
+      ]
+    },
+    {
+      "ordinal": 138,
+      "text": "conservar",
+      "confidence": 96.3946,
+      "bbox": [
+        655,
+        739,
+        759,
+        753
+      ]
+    },
+    {
+      "ordinal": 139,
+      "text": "el",
+      "confidence": 96.912285,
+      "bbox": [
+        767,
+        735,
+        783,
+        753
+      ]
+    },
+    {
+      "ordinal": 140,
+      "text": "archivo",
+      "confidence": 96.912285,
+      "bbox": [
+        792,
+        735,
+        868,
+        753
+      ]
+    },
+    {
+      "ordinal": 141,
+      "text": "para",
+      "confidence": 97.015434,
+      "bbox": [
+        877,
+        739,
+        923,
+        758
+      ]
+    },
+    {
+      "ordinal": 142,
+      "text": "investigar.",
+      "confidence": 96.978889,
+      "bbox": [
+        932,
+        735,
+        1038,
+        758
+      ]
+    },
+    {
+      "ordinal": 143,
+      "text": "No",
+      "confidence": 96.910568,
+      "bbox": [
+        1048,
+        735,
+        1076,
+        753
+      ]
+    },
+    {
+      "ordinal": 144,
+      "text": "sustituir",
+      "confidence": 96.40596,
+      "bbox": [
+        81,
+        771,
+        162,
+        789
+      ]
+    },
+    {
+      "ordinal": 145,
+      "text": "el",
+      "confidence": 93.297714,
+      "bbox": [
+        170,
+        771,
+        186,
+        789
+      ]
+    },
+    {
+      "ordinal": 146,
+      "text": "checksum",
+      "confidence": 57.941643,
+      "bbox": [
+        195,
+        771,
+        301,
+        789
+      ]
+    },
+    {
+      "ordinal": 147,
+      "text": "esperado",
+      "confidence": 96.699318,
+      "bbox": [
+        310,
+        771,
+        409,
+        794
+      ]
+    },
+    {
+      "ordinal": 148,
+      "text": "por",
+      "confidence": 96.646782,
+      "bbox": [
+        417,
+        775,
+        451,
+        794
+      ]
+    },
+    {
+      "ordinal": 149,
+      "text": "el",
+      "confidence": 96.974945,
+      "bbox": [
+        458,
+        771,
+        475,
+        789
+      ]
+    },
+    {
+      "ordinal": 150,
+      "text": "observado.",
+      "confidence": 96.55072,
+      "bbox": [
+        484,
+        771,
+        600,
+        789
+      ]
+    },
+    {
+      "ordinal": 151,
+      "text": "El",
+      "confidence": 96.940262,
+      "bbox": [
+        82,
+        831,
+        100,
+        849
+      ]
+    },
+    {
+      "ordinal": 152,
+      "text": "objetivo",
+      "confidence": 96.967705,
+      "bbox": [
+        109,
+        831,
+        190,
+        854
+      ]
+    },
+    {
+      "ordinal": 153,
+      "text": "del",
+      "confidence": 96.932388,
+      "bbox": [
+        198,
+        831,
+        228,
+        849
+      ]
+    },
+    {
+      "ordinal": 154,
+      "text": "ejercicio",
+      "confidence": 96.997505,
+      "bbox": [
+        237,
+        831,
+        323,
+        854
+      ]
+    },
+    {
+      "ordinal": 155,
+      "text": "es",
+      "confidence": 96.981636,
+      "bbox": [
+        332,
+        835,
+        355,
+        849
+      ]
+    },
+    {
+      "ordinal": 156,
+      "text": "detectar",
+      "confidence": 96.946564,
+      "bbox": [
+        363,
+        831,
+        449,
+        849
+      ]
+    },
+    {
+      "ordinal": 157,
+      "text": "pérdidas",
+      "confidence": 97.014305,
+      "bbox": [
+        457,
+        831,
+        548,
+        854
+      ]
+    },
+    {
+      "ordinal": 158,
+      "text": "y",
+      "confidence": 97.015968,
+      "bbox": [
+        556,
+        836,
+        566,
+        854
+      ]
+    },
+    {
+      "ordinal": 159,
+      "text": "límites",
+      "confidence": 96.58213,
+      "bbox": [
+        575,
+        831,
+        642,
+        849
+      ]
+    },
+    {
+      "ordinal": 160,
+      "text": "del",
+      "confidence": 96.971069,
+      "bbox": [
+        650,
+        831,
+        680,
+        849
+      ]
+    },
+    {
+      "ordinal": 161,
+      "text": "procedimiento.",
+      "confidence": 96.601669,
+      "bbox": [
+        690,
+        831,
+        844,
+        854
+      ]
+    },
+    {
+      "ordinal": 162,
+      "text": "Los",
+      "confidence": 97.012657,
+      "bbox": [
+        855,
+        831,
+        891,
+        849
+      ]
+    },
+    {
+      "ordinal": 163,
+      "text": "tiempos",
+      "confidence": 96.930992,
+      "bbox": [
+        899,
+        831,
+        981,
+        854
+      ]
+    },
+    {
+      "ordinal": 164,
+      "text": "locales",
+      "confidence": 96.54306,
+      "bbox": [
+        991,
+        831,
+        1063,
+        849
+      ]
+    },
+    {
+      "ordinal": 165,
+      "text": "no",
+      "confidence": 96.436172,
+      "bbox": [
+        1072,
+        835,
+        1096,
+        849
+      ]
+    },
+    {
+      "ordinal": 166,
+      "text": "prometen",
+      "confidence": 95.882027,
+      "bbox": [
+        81,
+        868,
+        180,
+        890
+      ]
+    },
+    {
+      "ordinal": 167,
+      "text": "el",
+      "confidence": 95.882027,
+      "bbox": [
+        189,
+        867,
+        205,
+        885
+      ]
+    },
+    {
+      "ordinal": 168,
+      "text": "tiempo",
+      "confidence": 96.568871,
+      "bbox": [
+        214,
+        867,
+        284,
+        890
+      ]
+    },
+    {
+      "ordinal": 169,
+      "text": "de",
+      "confidence": 96.361641,
+      "bbox": [
+        293,
+        867,
+        318,
+        885
+      ]
+    },
+    {
+      "ordinal": 170,
+      "text": "recuperación",
+      "confidence": 96.586166,
+      "bbox": [
+        327,
+        867,
+        463,
+        890
+      ]
+    },
+    {
+      "ordinal": 171,
+      "text": "de",
+      "confidence": 96.916428,
+      "bbox": [
+        472,
+        867,
+        497,
+        885
+      ]
+    },
+    {
+      "ordinal": 172,
+      "text": "otro",
+      "confidence": 96.411652,
+      "bbox": [
+        505,
+        869,
+        545,
+        885
+      ]
+    },
+    {
+      "ordinal": 173,
+      "text": "sistema.",
+      "confidence": 96.411652,
+      "bbox": [
+        553,
+        867,
+        640,
+        885
+      ]
+    },
+    {
+      "ordinal": 174,
+      "text": "AtlasQueue",
+      "confidence": 92.41877,
+      "bbox": [
+        81,
+        1500,
+        183,
+        1516
+      ]
+    },
+    {
+      "ordinal": 175,
+      "text": "|",
+      "confidence": 96.556015,
+      "bbox": [
+        192,
+        1501,
+        193,
+        1519
+      ]
+    },
+    {
+      "ordinal": 176,
+      "text": "Página",
+      "confidence": 96.962761,
+      "bbox": [
+        203,
+        1500,
+        262,
+        1519
+      ]
+    },
+    {
+      "ordinal": 177,
+      "text": "1",
+      "confidence": 96.978096,
+      "bbox": [
+        271,
+        1501,
+        275,
+        1515
+      ]
+    }
+  ],
+  "summary": {
+    "words": 178,
+    "minConfidence": 42.646103,
+    "maxConfidence": 97.022095
+  }
+}

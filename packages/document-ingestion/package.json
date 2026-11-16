@@ -1,0 +1,32 @@
+{
+  "name": "@luisrc-examples/document-ingestion",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.19.0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "fixtures": "node make-fixtures.mjs",
+    "model:fetch": "node fetch-ocr-model.mjs",
+    "capture": "node capture.mjs",
+    "verify": "node verify.mjs",
+    "render": "node render.mjs",
+    "ledger": "node build-ledger.mjs",
+    "tokenizer:fetch": "node fetch-tokenizer.mjs",
+    "preflight": "node preflight.mjs",
+    "verify:ledger": "node verify-ledger.mjs",
+    "semantic:prepare-model": "node prepare-semantic-model.mjs",
+    "chunks:prepare": "node prepare-chunking.mjs",
+    "semantic:capture": "node capture-semantic.mjs",
+    "chunks:derive": "node derive-chunking.mjs",
+    "retrieval:capture": "node evaluate-chunks.mjs",
+    "verify:chunks": "node verify-chunking.mjs"
+  },
+  "dependencies": {
+    "pdf-lib": "1.17.1",
+    "tesseract.js": "7.0.0",
+    "hast-util-from-html-isomorphic": "2.0.0",
+    "@huggingface/transformers": "3.8.1"
+  }
+}

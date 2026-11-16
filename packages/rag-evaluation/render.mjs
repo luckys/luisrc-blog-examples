@@ -1,0 +1,9 @@
+import {writeFile} from 'node:fs/promises';
+import {readDataset,verifyDataset} from './verify.mjs';
+import {datasetDiagram} from './concepts.mjs';
+const data=await readDataset(),report=await verifyDataset(),target=file=>new URL(file,import.meta.url);
+await writeFile(target('viewer-data.json'),JSON.stringify({kind:'authored_dataset_not_model_results',data,report},null,2)+'\n');
+await writeFile(target('dataset-diagram.svg'),datasetDiagram());
+const groups=[['Dev',4,1],['Test',12,3]],scale=16;
+const svg='<svg xmlns="http://www.w3.org/2000/svg" width="360" height="460" viewBox="0 0 360 460" role="img" aria-label="Dev: 4 preguntas con respuesta y 1 sin respuesta. Test: 12 con respuesta y 3 sin respuesta."><rect width="360" height="460" rx="12" fill="#0f172a"/><g font-family="system-ui,sans-serif" fill="#e2e8f0"><text x="18" y="30" font-size="16">Composición del dataset, no calidad</text><text x="18" y="55" font-size="12">20 preguntas sintéticas · 8 grupos de tema</text>'+groups.map(([name,answerable,empty],i)=>{const y=110+i*125;return '<text x="20" y="'+(y-14)+'" font-size="14">'+name+': '+answerable+' con respuesta, '+empty+' sin respuesta</text><rect x="20" y="'+y+'" width="'+(answerable*scale)+'" height="40" fill="#38bdf8"/><rect x="'+(20+answerable*scale)+'" y="'+y+'" width="'+(empty*scale)+'" height="40" fill="#fbbf24"/>';}).join('')+'<text x="20" y="335" font-size="12">Escala: 16 px por pregunta · origen: gold v1</text><text x="20" y="365" font-size="12">Azul: respuesta en el corpus · amarillo: ausente</text><text x="20" y="405" font-size="12">0 ejecuciones de modelos en esta entrega.</text><text x="20" y="432" font-size="12">Test público y conocido por quien lo redactó.</text></g></svg>\n';
+await writeFile(target('split-counts.svg'),svg);console.log('Dataset viewer and diagrams rendered; no model inference.');

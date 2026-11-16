@@ -1,0 +1,54 @@
+{
+  "status": "fixed_before_reranker_and_answer_inference",
+  "corpus": "P113 fixed size32:13 versioned chunks,367canonical units,3synthetic known documents. Reuse20already-known questions/gold; not blind evaluation.",
+  "retrievers": [
+    "bm25",
+    "rrf"
+  ],
+  "candidateBudgets": [
+    3,
+    6,
+    10
+  ],
+  "answerCandidateBudget": 10,
+  "reranker": {
+    "model": "onnx-community/bge-reranker-v2-m3-ONNX",
+    "revision": "6f5ff65298512715a1e669753bc754d2bc8f367b",
+    "dtype": "q8",
+    "device": "cpu",
+    "maxPairTokens": 192,
+    "batchSize": 8,
+    "intraOpNumThreads": 4,
+    "interOpNumThreads": 1,
+    "output": "Single raw relevance logit per(query,passage). No sigmoid/probability interpretation. Last batch repeated to8for exported static axis; padded outputs recorded but not ranked."
+  },
+  "generator": {
+    "model": "onnx-community/Qwen2.5-0.5B-Instruct",
+    "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+    "dtype": "q8",
+    "device": "cpu",
+    "maxInputTokens": 1024,
+    "maxNewTokens": 160,
+    "doSample": false,
+    "numBeams": 1,
+    "repetitionPenalty": 1,
+    "intraOpNumThreads": 4,
+    "interOpNumThreads": 1,
+    "profile": "Tokenizer chat template, explicit generation prompt, no added special tokens after template, no truncation. One execution per unique exact prompt/profile, shared by identical scenarios."
+  },
+  "context": {
+    "maxChunks": 3,
+    "tokenBudgets": [
+      96,
+      160,
+      256
+    ],
+    "answerTokenBudget": 256,
+    "policy": "Greedy whole chunks in ranking order; count actual rendered context tokens including aliases/separators using generator tokenizer, skip over budget or over3chunks; no hidden gold,neighbor expansion or clipped text."
+  },
+  "answers": "20questions×2retrievers×with/without rerank=80scenarios. Same local generator,prompt andbudget. Include empty contexts. Preserve raw text andtoken IDs of every unique prompt,even format failures or unsupported claims. No favorable retries.",
+  "citation": "Aliases S01..S13 map to exact immutable chunks. Validate alias,provided-context membership,documentID,byte version,representationID and exact canonical UTF16range. Existing link does not prove support. Static source resolver highlights the exact source span.",
+  "evaluation": "Rubric fixed before outcomes; editorial assistant annotations after reading answers,not blind or independently adjudicated. Separate format,source-link validity,claim support,answer coverage,grounded completeness,abstention andtechnical rejection. Do not infer semantic support from mere citation existence.",
+  "selection": "Preserve all losses/unchanged cases/negative questions. No tuning prompt,weights,thresholds,contextbudget or labels after reading outcomes. A new experiment needs new paths/protocol; never overwrite these captures.",
+  "limits": "Small known synthetic corpus,no production capacity claim,no calibrated confidence/noanswer threshold. No claim that source-consistent assertions are universally true."
+}

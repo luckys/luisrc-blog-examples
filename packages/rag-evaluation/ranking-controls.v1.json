@@ -1,0 +1,14 @@
+{
+  "kind": "authored_metric_controls_not_retriever_or_model_outputs",
+  "qrels": [{"documentId": "A", "grade": 2}, {"documentId": "B", "grade": 1}, {"documentId": "C", "grade": 0}, {"documentId": "D", "grade": 0}],
+  "cases": [
+    {"id": "C01", "label": "Primera fuente útil, segunda ausente", "ranking": ["A", "C", "D"]},
+    {"id": "C02", "label": "Mismo primer acierto, ambas fuentes útiles", "ranking": ["A", "B", "D"]},
+    {"id": "C03", "label": "Mismo conjunto, primer acierto retrasado", "ranking": ["D", "A", "B"]},
+    {"id": "C04", "label": "Lista corta: faltan puestos solicitados", "ranking": ["A"]},
+    {"id": "C05", "label": "Grado alto antes que grado parcial", "ranking": ["A", "B", "C"]},
+    {"id": "C06", "label": "Grado parcial antes que grado alto", "ranking": ["B", "A", "C"]},
+    {"id": "C07", "label": "Pregunta sin documentos relevantes", "ranking": ["A", "B"], "allGradesZero": true},
+    {"id": "C08", "label": "Ningún resultado para pregunta con evidencia", "ranking": []}
+  ]
+}

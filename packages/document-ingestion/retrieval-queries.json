@@ -1,0 +1,338 @@
+[
+  {
+    "id": "Q01",
+    "split": "dev",
+    "text": "¿Qué registra el manifiesto antes de restaurar?",
+    "facts": [
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "checksum SHA-256 y la versión del esquema."
+        }
+      ]
+    ],
+    "category": "one_fact"
+  },
+  {
+    "id": "Q02",
+    "split": "dev",
+    "text": "¿Cuánto dura la retención de las copias de seguridad?",
+    "facts": [
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "treinta días."
+        },
+        {
+          "documentId": "COLUMNS",
+          "quote": "treinta días."
+        }
+      ]
+    ],
+    "category": "one_fact"
+  },
+  {
+    "id": "Q03",
+    "split": "dev",
+    "text": "¿Dónde mantener las dos copias para no depender de un volumen?",
+    "facts": [
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "dos copias en ubicaciones diferentes evita depender de un único volumen."
+        }
+      ]
+    ],
+    "category": "one_fact"
+  },
+  {
+    "id": "Q04",
+    "split": "dev",
+    "text": "¿Dónde restaurar durante una prueba y qué hacer con producción?",
+    "facts": [
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "directorio aislado."
+        },
+        {
+          "documentId": "COLUMNS",
+          "quote": "directorio aislado."
+        }
+      ],
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "Nunca sobrescribir los datos de producción durante un ejercicio."
+        },
+        {
+          "documentId": "COLUMNS",
+          "quote": "No se restaura sobre producción."
+        }
+      ]
+    ],
+    "category": "multiple_facts"
+  },
+  {
+    "id": "Q05",
+    "split": "dev",
+    "text": "¿Qué registro se reproduce al restaurar la copia?",
+    "facts": [
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "registro WAL"
+        },
+        {
+          "documentId": "COLUMNS",
+          "quote": "registro WAL"
+        }
+      ]
+    ],
+    "category": "one_fact"
+  },
+  {
+    "id": "Q06",
+    "split": "dev",
+    "text": "¿Pertenece al snapshot una escritura posterior?",
+    "facts": [
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "Una escritura posterior no pertenece a ese snapshot."
+        }
+      ]
+    ],
+    "category": "one_fact"
+  },
+  {
+    "id": "Q07",
+    "split": "dev",
+    "text": "¿Qué datos debe guardar el informe de comprobaciones?",
+    "facts": [
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "identificador de la copia"
+        }
+      ],
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "la fecha"
+        }
+      ],
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "resultados de las comprobaciones."
+        }
+      ]
+    ],
+    "category": "multiple_facts"
+  },
+  {
+    "id": "Q08",
+    "split": "dev",
+    "text": "¿Qué hacer si el checksum no coincide?",
+    "facts": [
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "detener la restauración y conservar el archivo para investigar."
+        }
+      ]
+    ],
+    "category": "one_fact"
+  },
+  {
+    "id": "Q09",
+    "split": "dev",
+    "text": "¿Se puede sustituir el checksum esperado por el observado?",
+    "facts": [
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "No sustituir el checksum esperado por el observado."
+        }
+      ]
+    ],
+    "category": "one_fact"
+  },
+  {
+    "id": "Q10",
+    "split": "dev",
+    "text": "¿Prometen los tiempos locales la recuperación de otro sistema?",
+    "facts": [
+      [
+        {
+          "documentId": "RUNBOOK",
+          "quote": "Los tiempos locales no prometen el tiempo de recuperación de otro sistema."
+        }
+      ]
+    ],
+    "category": "one_fact"
+  },
+  {
+    "id": "Q11",
+    "split": "test",
+    "text": "¿Qué TTL inicial usa la caché y qué incluye su clave?",
+    "facts": [
+      [
+        {
+          "documentId": "COLUMNS",
+          "quote": "El TTL inicial es de 300 segundos."
+        }
+      ],
+      [
+        {
+          "documentId": "COLUMNS",
+          "quote": "La clave incluye el idioma."
+        }
+      ]
+    ],
+    "category": "multiple_facts"
+  },
+  {
+    "id": "Q12",
+    "split": "test",
+    "text": "¿Cuándo invalidar la caché tras un cambio de versión?",
+    "facts": [
+      [
+        {
+          "documentId": "COLUMNS",
+          "quote": "Invalidar tras cambiar la versión."
+        }
+      ]
+    ],
+    "category": "one_fact"
+  },
+  {
+    "id": "Q13",
+    "split": "test",
+    "text": "¿Qué ocurre en un cache miss y se almacena un error del origen?",
+    "facts": [
+      [
+        {
+          "documentId": "COLUMNS",
+          "quote": "Un cache miss consulta el origen."
+        }
+      ],
+      [
+        {
+          "documentId": "COLUMNS",
+          "quote": "El error del origen no se almacena."
+        }
+      ]
+    ],
+    "category": "multiple_facts"
+  },
+  {
+    "id": "Q14",
+    "split": "test",
+    "text": "¿Qué métricas medir para la caché?",
+    "facts": [
+      [
+        {
+          "documentId": "COLUMNS",
+          "quote": "Medir hit ratio y latencia."
+        }
+      ]
+    ],
+    "category": "one_fact"
+  },
+  {
+    "id": "Q15",
+    "split": "test",
+    "text": "¿Garantiza consistencia el TTL?",
+    "facts": [
+      [
+        {
+          "documentId": "COLUMNS",
+          "quote": "Un TTL no garantiza consistencia."
+        }
+      ]
+    ],
+    "category": "one_fact"
+  },
+  {
+    "id": "Q16",
+    "split": "test",
+    "text": "¿Qué identifica la versión del índice y qué comprobar si cambia el analizador?",
+    "facts": [
+      [
+        {
+          "documentId": "HTML",
+          "quote": "el analizador y el corpus utilizado."
+        }
+      ],
+      [
+        {
+          "documentId": "HTML",
+          "quote": "evaluar de nuevo las consultas."
+        }
+      ]
+    ],
+    "category": "multiple_facts"
+  },
+  {
+    "id": "Q17",
+    "split": "test",
+    "text": "¿Cómo reconstruir el índice y cuándo cambiar su referencia?",
+    "facts": [
+      [
+        {
+          "documentId": "HTML",
+          "quote": "Las reconstrucciones se hacen sobre un índice nuevo."
+        }
+      ],
+      [
+        {
+          "documentId": "HTML",
+          "quote": "El cambio de referencia ocurre después de comprobar que conserva los documentos esperados."
+        }
+      ]
+    ],
+    "category": "multiple_facts"
+  },
+  {
+    "id": "Q18",
+    "split": "test",
+    "text": "¿Qué identificador permanece estable y cómo citar versiones distintas?",
+    "facts": [
+      [
+        {
+          "documentId": "HTML",
+          "quote": "El identificador del documento es estable;"
+        }
+      ],
+      [
+        {
+          "documentId": "HTML",
+          "quote": "la versión cambia cuando cambia el contenido."
+        }
+      ],
+      [
+        {
+          "documentId": "HTML",
+          "quote": "Dos versiones diferentes no deben compartir una cita sin especificar la revisión."
+        }
+      ]
+    ],
+    "category": "multiple_facts"
+  },
+  {
+    "id": "Q19",
+    "split": "test",
+    "text": "¿Cuál es el índice glucémico del pan?",
+    "facts": [],
+    "category": "unanswerable"
+  },
+  {
+    "id": "Q20",
+    "split": "test",
+    "text": "telescopio lunar calibración",
+    "facts": [],
+    "category": "unanswerable"
+  }
+]

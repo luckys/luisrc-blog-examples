@@ -1,0 +1,121 @@
+{
+  "kind": "authored_controls_not_model_outputs",
+  "cases": [
+    {
+      "id": "C01",
+      "name": "Cita válida que apoya el dato",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "claim": "El TTL inicial es de 300 segundos.",
+      "expectedResolution": true,
+      "editorialSupport": "supported",
+      "quote": "El TTL inicial es de 300 segundos."
+    },
+    {
+      "id": "C02",
+      "name": "Enlace válido con número contradictorio",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "claim": "El TTL inicial es de 301 segundos.",
+      "expectedResolution": true,
+      "editorialSupport": "contradicted",
+      "quote": "El TTL inicial es de 300 segundos."
+    },
+    {
+      "id": "C03",
+      "name": "Enlace válido sin apoyo para la afirmación",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "claim": "El servicio siempre necesita seis réplicas de Kubernetes.",
+      "expectedResolution": true,
+      "editorialSupport": "unsupported",
+      "quote": "El TTL inicial es de 300 segundos."
+    },
+    {
+      "id": "C04",
+      "name": "Alias inexistente",
+      "alias": "S99",
+      "provided": [
+        "S08"
+      ],
+      "claim": "Dato no comprobado.",
+      "expectedResolution": false
+    },
+    {
+      "id": "C05",
+      "name": "Fuente existente pero no entregada al generador",
+      "alias": "S09",
+      "provided": [
+        "S08"
+      ],
+      "claim": "Dato fuera del contexto.",
+      "expectedResolution": false
+    },
+    {
+      "id": "C06",
+      "name": "Versión de fuente alterada",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "mutate": {
+        "version": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "expectedResolution": false
+    },
+    {
+      "id": "C07",
+      "name": "Rango fuera de la cita",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "mutate": {
+        "end": "999999"
+      },
+      "expectedResolution": false
+    },
+    {
+      "id": "C08",
+      "name": "Representación alterada",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "mutate": {
+        "representation": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "expectedResolution": false
+    },
+    {
+      "id": "C09",
+      "name": "Offset fraccionario",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "mutate": {
+        "start": "1.5"
+      },
+      "expectedResolution": false
+    },
+    {
+      "id": "C10",
+      "name": "Identidad de chunk alterada",
+      "alias": "S08",
+      "provided": [
+        "S08"
+      ],
+      "mutate": {
+        "chunk": "unknown-chunk"
+      },
+      "expectedResolution": false
+    }
+  ]
+}

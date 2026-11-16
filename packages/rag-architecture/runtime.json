@@ -1,0 +1,9 @@
+{
+  "image": "pgvector/pgvector@sha256:7d0a41464797aeb9862dfdc0bbf1526b82cfd324cdd8036df19e3545f4a9ccb8",
+  "platform": "linux/amd64",
+  "postgresMajor": 17,
+  "cpus": 2,
+  "memoryBytes": 1073741824,
+  "network": "loopback ephemeral port; temporary synthetic databases only",
+  "authentication": "trust ONLY in disposable loopback lab; not a deployment configuration"
+}

@@ -1,0 +1,399 @@
+{
+  "kind": "all_fixed_two_checkpoint_attempts_preserved",
+  "capturedAt": "2026-11-04T08:18:42.544Z",
+  "sourceHashes": {
+    "prepare-generation-inputs.v1.mjs": "9991cd6147c27fb17e4be3469ac4de3d8736aafb47042647a47b20bbe73d6821",
+    "capture-generations.v1.mjs": "21ea6e0f2ecef5144d0d4cecc6acf025303087bd8377cef6f8de6e14dd950278",
+    "generation-worker.v1.mjs": "578b1794582b2e13d98ab25585810649bce36e45a13eaa8b6051e0f8c1dfedb6",
+    "generation-io.v1.mjs": "918c214e1b7454664378e2599ea7e75ea48ec37bd4634b51bb64cd79453d7765",
+    "response-contract.v1.mjs": "f845ad3a0da62283990ef4257030de03e2446b048f2d9f18c7fb1bbd74ec3d5c",
+    "response-evaluation.v1.mjs": "8b7d933cad0058c317d9644a94a28a1285ccb56241aebbae82cd62a06e5e0f71",
+    "response-rubric.v1.json": "eba43bd83c1ddce49cb35b92c2921f4f31ce4975e314118ce5b25bec937a5119",
+    "generation-protocol.v1.json": "e213ac751d9d1bb76522b7dd04b17c0c7c18658a6cf1a607ad871fcec6a50589",
+    "generation-models.v1.json": "4cb53fb6d58c2c5ff1314d3b5513a006741338cd095108865f47fdd5ea49cc5c",
+    "comparison-plan.v1.json": "9d4c89a51722eb57a06e66785fd10aae019fa06c4adc2433e8019c44590d43a7",
+    "comparison-system.v1.txt": "f21ff865b1288591951c8ff0f7448d202671aff1420d45ed933acd0fc8e3838b",
+    "context-tokenizers.v1.json": "260fa047a3d77ac0ce6ada242fb7fde94b8a19abdf5d50bb9fb4ac0590888609",
+    "context-dependencies.v1.json": "06903c3aa68a5d721236d52606d9ed12a623f02b9b8dd764a6f658a522a6bb1d",
+    "results/contexts.v1.json": "2c137d940534d9db8f57b627b611e71c76296c3b55a313ff8e4b1765229a8fb2",
+    "results/rankings.v1.json": "f2931908b60c284e0ef973ca62d1cc26b0b1058f4111c7af77ee538d2b49a775",
+    "corpus.json": "e86328f27a4c1740f79d2d4c7b99369adf1f4cdade85f8521c241c8a89029c3e",
+    "queries.json": "dd3a6da2b7cf43fba3d0981f1c62a19827a97434b7f5cfb0c3201c305aaf80d0",
+    "gold.json": "d76f9ec9a15ce9f9413ef154dc18208e21de57914bd4e858b8692e7934903c73",
+    "dataset-manifest.json": "5941390dc7b2a7711a6944df0024ba61b8606640c88b6ab5c7dd0b98decf16e8",
+    "results/generation-inputs.v1.json": "16d7d2560c92f89130c04cfec85b758dc9ba296d71f71f0895ed824f79148105"
+  },
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpuModel": "Intel(R) Core(TM) Ultra 9 285H",
+    "logicalCpus": 16,
+    "totalMemoryBytes": 66780352512,
+    "library": "@huggingface/transformers",
+    "libraryVersion": "3.8.1"
+  },
+  "rows": [
+    {
+      "id": "A-Q001",
+      "modelId": "A",
+      "queryId": "Q001",
+      "split": "dev",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q001.json",
+      "sha256": "db20991d7779ef104d0ff801cb6a9174deace6549acf0155618ea1c5127a62d9"
+    },
+    {
+      "id": "A-Q002",
+      "modelId": "A",
+      "queryId": "Q002",
+      "split": "dev",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q002.json",
+      "sha256": "eef734b7e62834b8001b43e8e5061fcf5a3a19d1f9f2f3594a4500660a1e4343"
+    },
+    {
+      "id": "A-Q003",
+      "modelId": "A",
+      "queryId": "Q003",
+      "split": "dev",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q003.json",
+      "sha256": "8db876ded8cb2748282b1a45a300fb0fa2009a8722a75b7adb86c12a6f3206a1"
+    },
+    {
+      "id": "A-Q004",
+      "modelId": "A",
+      "queryId": "Q004",
+      "split": "dev",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q004.json",
+      "sha256": "3254d2ea2e2025c5e4b4212c0f3b2429735aae029471ca13dd1637b30a266519"
+    },
+    {
+      "id": "A-Q005",
+      "modelId": "A",
+      "queryId": "Q005",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q005.json",
+      "sha256": "acd56e2054bd826b5fcbf511cdfe894c6fdee7244adaef962e7354a19da65645"
+    },
+    {
+      "id": "A-Q006",
+      "modelId": "A",
+      "queryId": "Q006",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q006.json",
+      "sha256": "c710e517a152664f89e2ecefb16a0c29aa589bbb74f7e9a8648caecb48f67399"
+    },
+    {
+      "id": "A-Q007",
+      "modelId": "A",
+      "queryId": "Q007",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q007.json",
+      "sha256": "df23c7558477fa4806dfc150e00fc39b705b4d1810108cbee83fd3f06e4a2c27"
+    },
+    {
+      "id": "A-Q008",
+      "modelId": "A",
+      "queryId": "Q008",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q008.json",
+      "sha256": "ed88a44cff8be0c99108fd98d74bb4170e1c69999429a73bb6dcc3a1cacda8fe"
+    },
+    {
+      "id": "A-Q009",
+      "modelId": "A",
+      "queryId": "Q009",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q009.json",
+      "sha256": "7338cb0cf6940396bdab8999af6052e074f349b6acf141b070e89f55c7b5fa2c"
+    },
+    {
+      "id": "A-Q010",
+      "modelId": "A",
+      "queryId": "Q010",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q010.json",
+      "sha256": "0be4d1b271e50e3746f7402d8bb6e22da15cf705796499a19fd74259cbd3fdb4"
+    },
+    {
+      "id": "A-Q011",
+      "modelId": "A",
+      "queryId": "Q011",
+      "split": "test",
+      "outcome": "interrupted_unknown",
+      "file": "results/response-v1/A-Q011.json",
+      "sha256": "ec9d38195e1dfb303acd1110bbd39f686f00a8a51e7e34065c49a1bf0191c05a"
+    },
+    {
+      "id": "A-Q012",
+      "modelId": "A",
+      "queryId": "Q012",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q012.json",
+      "sha256": "12a39935e20a3d42670d1fc56720ee0d3473f6f74676eb89cb79c78195d2661b"
+    },
+    {
+      "id": "A-Q013",
+      "modelId": "A",
+      "queryId": "Q013",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q013.json",
+      "sha256": "ae0b6273608e57c0593bbe5e29d483d5b2f286f96284cf7e53210d3a264d691c"
+    },
+    {
+      "id": "A-Q014",
+      "modelId": "A",
+      "queryId": "Q014",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q014.json",
+      "sha256": "37f5b51b6470d5991a5f8615c9f850677b0822e3c542620227f108d8638d9acf"
+    },
+    {
+      "id": "A-Q015",
+      "modelId": "A",
+      "queryId": "Q015",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q015.json",
+      "sha256": "fdad0263058bfc734f2ea59f40c6a48be7da9a3ffca4d59c6cd8bd043a549b67"
+    },
+    {
+      "id": "A-Q016",
+      "modelId": "A",
+      "queryId": "Q016",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q016.json",
+      "sha256": "242db65c01b69c822cc1037ebf40c795b1f01a8648a76a482cddbde0fc6f378a"
+    },
+    {
+      "id": "A-Q017",
+      "modelId": "A",
+      "queryId": "Q017",
+      "split": "dev",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q017.json",
+      "sha256": "a032746eafc312fb9e27007fbe74d4533a1dda8710f4f3720302aefa350f5afb"
+    },
+    {
+      "id": "A-Q018",
+      "modelId": "A",
+      "queryId": "Q018",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q018.json",
+      "sha256": "0901da4c20d3327213983bfd814c206b96de2a436da448b84f02b759cd591c7f"
+    },
+    {
+      "id": "A-Q019",
+      "modelId": "A",
+      "queryId": "Q019",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q019.json",
+      "sha256": "7c58bdb6dd35573feb20d5174d9accabe9fef52f56790d3a2153e80c5b3b7f21"
+    },
+    {
+      "id": "A-Q020",
+      "modelId": "A",
+      "queryId": "Q020",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v1/A-Q020.json",
+      "sha256": "06fb49ef97ce4b7d8eae2c639e01aa69afc36a2ccc47188d16d29e7961d7a523"
+    },
+    {
+      "id": "B-Q001",
+      "modelId": "B",
+      "queryId": "Q001",
+      "split": "dev",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q001.json",
+      "sha256": "14ca22aef3d130b59e9a518745ade8e4b807ed6ecda4549eb23a24479ebc021c"
+    },
+    {
+      "id": "B-Q002",
+      "modelId": "B",
+      "queryId": "Q002",
+      "split": "dev",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q002.json",
+      "sha256": "e3409dfe6197dd75e2d6c076b0b19e3e69af99a03f38f8332a487779c59a21d5"
+    },
+    {
+      "id": "B-Q003",
+      "modelId": "B",
+      "queryId": "Q003",
+      "split": "dev",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q003.json",
+      "sha256": "1397bca1d78ae27b7a1399afcc1746804a84a20423c675a1658f7e108fdccc0c"
+    },
+    {
+      "id": "B-Q004",
+      "modelId": "B",
+      "queryId": "Q004",
+      "split": "dev",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q004.json",
+      "sha256": "f8ef44e2588cca9881db47375673ef54050886a3da8996c827cfa4d3dbb2423d"
+    },
+    {
+      "id": "B-Q005",
+      "modelId": "B",
+      "queryId": "Q005",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q005.json",
+      "sha256": "11028425f50e7fc12c0c5794c1b0f73ed634582830768bebb3f85ad45ed050a7"
+    },
+    {
+      "id": "B-Q006",
+      "modelId": "B",
+      "queryId": "Q006",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q006.json",
+      "sha256": "71938a9b40550e6417249cd3d98e9ef75def42d375c062bf94869d41ea548bdc"
+    },
+    {
+      "id": "B-Q007",
+      "modelId": "B",
+      "queryId": "Q007",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q007.json",
+      "sha256": "3d70ce547bf3f28200db7e5accd903ed394b8a7fad03bf935b4944c3f2692adb"
+    },
+    {
+      "id": "B-Q008",
+      "modelId": "B",
+      "queryId": "Q008",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q008.json",
+      "sha256": "e865b9bbe2fcd67b6a94018c7ce4f1c7b6640cfbdd8fb5aa6631acbdfb30dfc5"
+    },
+    {
+      "id": "B-Q009",
+      "modelId": "B",
+      "queryId": "Q009",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q009.json",
+      "sha256": "caa3734fcba83570cf7762425baaa677b22e5b6fa6c7a847b4a553ea12092f35"
+    },
+    {
+      "id": "B-Q010",
+      "modelId": "B",
+      "queryId": "Q010",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q010.json",
+      "sha256": "a2a559e12509fd1e6c717708213f0b4333140bbfdc321c707ba6f93f16d2f6df"
+    },
+    {
+      "id": "B-Q011",
+      "modelId": "B",
+      "queryId": "Q011",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q011.json",
+      "sha256": "82a55dbe1b5512e749e604c6d528d420b466c6a9ba9f92c8d451ddf1497b3b5b"
+    },
+    {
+      "id": "B-Q012",
+      "modelId": "B",
+      "queryId": "Q012",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q012.json",
+      "sha256": "2364635dfec67ae319870ea4395a4f2aed82c42015dfaac24c3e1ad1758a0354"
+    },
+    {
+      "id": "B-Q013",
+      "modelId": "B",
+      "queryId": "Q013",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q013.json",
+      "sha256": "30c24ebd477cd7817375a23d49319db59993627539c1c7546ac481fb1be6e88d"
+    },
+    {
+      "id": "B-Q014",
+      "modelId": "B",
+      "queryId": "Q014",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q014.json",
+      "sha256": "62413c62d43a151d07709bcc329f1e2808486ed874b08f36418222c272e5ed72"
+    },
+    {
+      "id": "B-Q015",
+      "modelId": "B",
+      "queryId": "Q015",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q015.json",
+      "sha256": "fd0236009dda16c24527512f4d0d98ee9dd3c8c5aa9ebeff94f3f513f44e8cd2"
+    },
+    {
+      "id": "B-Q016",
+      "modelId": "B",
+      "queryId": "Q016",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q016.json",
+      "sha256": "913d4721a51efe61db97c6b835147cfaf3307c33823662662c323b5b98968382"
+    },
+    {
+      "id": "B-Q017",
+      "modelId": "B",
+      "queryId": "Q017",
+      "split": "dev",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q017.json",
+      "sha256": "11db546c620e296b95405fcde7c4c1219aed349c68ce3d693d2710b13707d102"
+    },
+    {
+      "id": "B-Q018",
+      "modelId": "B",
+      "queryId": "Q018",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q018.json",
+      "sha256": "ff6a15504aed416499fee51171dffd35e949d74d9bbc2a160a93ae926c97ca8d"
+    },
+    {
+      "id": "B-Q019",
+      "modelId": "B",
+      "queryId": "Q019",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q019.json",
+      "sha256": "4ae9161f25840bc79c777a0412f966b8ea102bd13b0fef61a1d24de34cc9918d"
+    },
+    {
+      "id": "B-Q020",
+      "modelId": "B",
+      "queryId": "Q020",
+      "split": "test",
+      "outcome": "not_executed",
+      "file": "results/response-v1/B-Q020.json",
+      "sha256": "6b1d8c66322780c6bf38e78ddb27c19d4250bf696d79c18ba0e9a2bde65ab176"
+    }
+  ],
+  "eventsSha256": "6891711f6edd9a733f3393ecd15309813b37a1a0778cc78cac8daae772ec6f18"
+}

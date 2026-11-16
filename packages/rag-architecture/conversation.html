@@ -1,0 +1,10 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Conversaciones RAG y permisos actuales</title>
+<style>:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0}*{box-sizing:border-box}body{padding:16px;margin:0;max-width:900px}h1{font-size:1.35rem}h2{font-size:1.1rem;margin-top:24px}p,li{line-height:1.6;overflow-wrap:anywhere}select{display:block;width:100%;max-width:650px;padding:10px;background:#1e293b;color:#fff;border:1px solid #94a3b8;border-radius:6px;font:inherit;margin:8px 0 16px}select:focus-visible,summary:focus-visible{outline:3px solid #fbbf24;outline-offset:3px}pre{padding:12px;background:#020617;border:1px solid #475569;border-radius:6px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5}#status{padding:12px;background:#1e293b;border-left:4px solid #38bdf8}svg{width:100%;max-width:400px;height:auto}strong{color:#f8fafc}</style>
+<h1>Reabrir una conversación no conserva un permiso retirado</h1><p>Veintiún casos guardados de PostgreSQL con referencias reautorizadas. Datos sintéticos públicos; este visor no autentica al lector ni ejecuta un LLM.</p>
+<label for="case">Escenario ejecutado</label><select id="case"></select><p id="status" role="status" aria-live="polite"></p>
+<h2>Identidad y pregunta de esta solicitud</h2><pre id="request"></pre>
+<h2>Qué llegó al contexto</h2><div id="flow"></div><ul id="evidence"></ul>
+<h2>Lecturas de fuentes realizadas</h2><p>Estas son lecturas de documentos. La carga del principal también consulta la base, incluso cuando se rechaza la conversación antes de leer fuentes.</p><pre id="loads"></pre>
+<details><summary>Ver resultado completo del caso</summary><pre id="outcome"></pre></details>
+<p>ready significa que se reunió evidencia autorizada, no que se generase una respuesta. Se retiró el permiso antes de iniciar la solicitud de cada caso revoked-manager. No se probó una revocación simultánea dentro de una transacción en marcha.</p>
+<script type="module" src="./conversation.mjs"></script></html>

@@ -1,0 +1,19 @@
+{
+  "name": "@luisrc-examples/rag-architecture",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.19.0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "capture": "node capture-isolation.mjs",
+    "verify": "node verify.mjs",
+    "render": "node render.mjs",
+    "verify:tokenizer": "node verify-context.mjs --tokenizer"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "3.8.1",
+    "pg": "8.23.1"
+  }
+}

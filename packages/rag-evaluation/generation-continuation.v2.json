@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "kind": "infrastructure_continuation_for_never_executed_B_only",
+  "previous": "results/generation.v1.json",
+  "cause": "B process failed during static import of the pinned Transformers.js dependency before any model_session_started or case_started event. All20 B records are not_executed. A has19 generated and1 interrupted_unknown; preserve them all.",
+  "eligibility": "Continue B only after verifying every original B record is not_executed and no B case/model session was started; do not retry any generated,execution_error or interrupted case.",
+  "environmentRepair": "pnpm frozen-lockfile restore of the same3.8.1 dependency; no model,weights,prompt,input,decoding,evaluator,rubric or gold change",
+  "workerChange": "Mechanical copy of v1 changing only IO module,input-artifact path and response output directory to v2. Model-loading and generation code are byte-equivalent after normalizing those path substitutions.",
+  "combination": "Final analysis uses all20 A records from v1 and all20 B records from v2,including every failure. Retain original20 B infrastructure records and both journals,not overwritten or treated as model responses.",
+  "limits": "A-Q011 remains interrupted_unknown without output or timing. No repeated A inference or favorable response selection. Original v1 remains a failed infrastructure attempt."
+}

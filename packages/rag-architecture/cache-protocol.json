@@ -1,0 +1,26 @@
+{
+  "version": "retrieval-cache-v1",
+  "fixedBeforeCapture": true,
+  "scope": "In-process cache of actual PostgreSQL retrieval rows. Not a generated-answer cache, distributed cache, latency benchmark or new index activation.",
+  "matrix": "22 sequential authored cases; 8 hits,13 misses including2 SQL errors,1 expiry. Actual monotonic clock, TTL3000ms; wait3100ms before expiry case.",
+  "key": [
+    "namespace version",
+    "role",
+    "tenant",
+    "maxLevel",
+    "authorizationRevision",
+    "accessRevision",
+    "indexRevision",
+    "analyzer",
+    "rankNormalization",
+    "k",
+    "exact query"
+  ],
+  "authority": "Principal and cache_state loaded from database under real role inside REPEATABLE READ READ ONLY. cache_state is admin-owned SELECT-only for application. Missing trusted scope rejects key.",
+  "indexRevision": "SHA256 of original corpus.json and schema.sql bytes with explicit separator; fixed for this experiment. No new index version claimed.",
+  "invalidation": "Revoke alpha_manager increments principal revision2; restore increments3. Document ACL update and global accessRevision2 commit atomically before new request. Old cache entries are logically unreachable under new key,not magically erased.",
+  "clock": "performance.now; timestamps only meaningful within capture process. TTL expiry observed by native waiting. Unit fake-clock controls labeled separately.",
+  "errors": "Two SELECT1/0 attempts have SQLSTATE22012, both lookup miss and both actual source queries; errors never inserted.",
+  "limits": "One process, one sequential workload, source SQL counts exclude principal/state/identity queries, known synthetic data, no concurrent revocation guarantee or stampede test. Bounded FIFO128entries, native workload does not reach eviction.",
+  "preservation": "Existing success/failure artifact refuses overwrite. New experiment requires different files/protocol."
+}

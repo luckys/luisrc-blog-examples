@@ -1,0 +1,7 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';import {createHash} from 'node:crypto';import assert from 'node:assert/strict';
+const root=new URL('.',import.meta.url),original=JSON.parse(await readFile(new URL('../reranking-grounding/generator-model-files.json',root)));
+const files=original.files.filter(file=>file.file.endsWith('.json'));assert.ok(files.some(f=>f.file==='tokenizer.json'));assert.ok(files.every(f=>!f.file.includes('/')&&f.bytes<20000000));
+await mkdir(new URL('.cache/context-tokenizer/',root),{recursive:true});
+for(const file of files){let bytes;try{bytes=await readFile(new URL('../reranking-grounding/.cache/generator/'+file.file,root));}catch(error){if(error.code!=='ENOENT')throw error;const response=await fetch(file.url,{signal:AbortSignal.timeout(30000)});if(!response.ok)throw Error('Metadata download failed: '+file.file);bytes=Buffer.from(await response.arrayBuffer());}assert.equal(bytes.length,file.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),file.sha256,file.file);await writeFile(new URL('.cache/context-tokenizer/'+file.file,root),bytes);}
+const manifest={kind:'pinned_tokenizer_json_metadata_only',model:original.model,revision:original.revision,library:'@huggingface/transformers',libraryVersion:'3.8.1',files};
+await writeFile(new URL('context-tokenizer-manifest.json',root),JSON.stringify(manifest,null,2)+'\n');console.log(JSON.stringify({metadataFiles:files.length,bytes:files.reduce((n,f)=>n+f.bytes,0),weightsDownloaded:false}));

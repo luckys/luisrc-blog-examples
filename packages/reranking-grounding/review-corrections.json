@@ -1,0 +1,15 @@
+{
+  "kind": "editorial_correction_preserving_original_capture",
+  "sourceEvaluationSha256": "6cebcf2428537af765122df52f041d61a153e98602e172e80cbd29f73bc05663",
+  "sourceAnnotationsSha256": "eba01fdc8bb9c5f9e8ae1fb71742a8dbdb931a56c91907452801b3d0b6555898",
+  "affectsOperationalMetrics": false,
+  "corrections": [
+    {
+      "promptId": "8e3ca9e9723363177c6d79d98873e38f04902defa0516e3b807b9d8d90ec1150",
+      "text": "Esta clave incluye una copia de la caché, una fecha y un resultado.",
+      "from": "contradicted",
+      "to": "unsupported",
+      "reason": "La fuente dice que la clave incluye el idioma, sin declarar que sea su único campo. Los campos añadidos carecen de apoyo; esa frase sola no demuestra una contradicción lógica. No cambia ningún rechazo ni agregado operativo."
+    }
+  ]
+}

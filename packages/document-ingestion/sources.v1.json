@@ -1,0 +1,71 @@
+[
+  {
+    "id": "RUNBOOK",
+    "file": "fixtures/digital.pdf",
+    "kind": "pdf",
+    "captureId": "RUNBOOK",
+    "role": "corpus",
+    "selection": "all-words"
+  },
+  {
+    "id": "SCAN",
+    "file": "fixtures/scanned.pdf",
+    "kind": "ocr",
+    "captureId": "SCAN",
+    "role": "corpus",
+    "selection": "corrected-tsv-all-words"
+  },
+  {
+    "id": "COLUMNS",
+    "file": "fixtures/columns.pdf",
+    "kind": "pdf",
+    "captureId": "COLUMNS",
+    "role": "corpus",
+    "selection": "known-columns-body"
+  },
+  {
+    "id": "HTML",
+    "file": "fixtures/guide.html",
+    "kind": "html",
+    "captureId": "HTML",
+    "role": "corpus",
+    "selection": "main-blocks"
+  },
+  {
+    "id": "HTML-MIRROR",
+    "file": "fixtures/guide-mirror.html",
+    "kind": "html",
+    "captureId": "HTML-MIRROR",
+    "role": "corpus",
+    "selection": "main-blocks"
+  },
+  {
+    "id": "HTML-BYTECOPY",
+    "file": "fixtures/guide-copy.html",
+    "kind": "html",
+    "captureId": "HTML",
+    "role": "corpus",
+    "selection": "main-blocks"
+  },
+  {
+    "id": "CACHE300",
+    "file": "fixtures/cache-300.txt",
+    "kind": "text",
+    "role": "control",
+    "selection": "decoded-text"
+  },
+  {
+    "id": "CACHE301",
+    "file": "fixtures/cache-301.txt",
+    "kind": "text",
+    "role": "control",
+    "selection": "decoded-text"
+  },
+  {
+    "id": "CACHE-OPPOSITE",
+    "file": "fixtures/cache-opposite.txt",
+    "kind": "text",
+    "role": "control",
+    "selection": "decoded-text"
+  }
+]

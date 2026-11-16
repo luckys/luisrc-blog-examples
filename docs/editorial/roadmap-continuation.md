@@ -1,5 +1,589 @@
 # Continuación del objetivo editorial completo
 
+## Avance en curso: comparación A/B REAL iniciada; observar antes de actuar
+
+2026-11-04. Objetivo175 activo. Cinco drafts P116 verificados; faltan cinco entregas.
+La comparación de generadores está EN CURSO, aún no existe results/generation.v1.json.
+NO volver a preparar entradas ni lanzar otro capturador sin inspeccionar procesos.
+
+Handle exec vigente57005: node packages/rag-evaluation/capture-generations.v1.mjs,
+log /tmp/p116-generations-resume.log. Última comprobación viva: controller735216,
+workerA-02PID735228. Consultar SIEMPRE:
+node packages/rag-evaluation/inspect-generation-progress.v1.mjs
+Ese script comprueba PIDs reales, no sólo un lock. Poll write_stdin del handle57005.
+
+Ejecución inicial handle89039 dejó de existir tras pausa solicitada. Se comprobó
+controller721930 y worker721941 MUERTOS antes de reanudar. Guardó10salidasA-Q001..010;
+A-Q011tenía case_started sin resultado. Al reanudar se conserva como
+interrupted_unknown,raw/generatedIdsnull, NO se repite. Quedan casos nunca iniciados.
+La reanudación creó sesiónA-02 y luego ejecutaráB. A-01 yA-02 tienen tiempos de carga
+separados; no atribuir la diferencia de latencia a tamaño del modelo sin ese límite.
+
+Preparados modelos reales con prepare-generators.v1.mjs: A512096557bytes de pesos,
+B1578954293bytes de pesos, más JSONmetadata. Revisiones ya fijadas enplanv1:
+A22942cb7d7ba4cc81bb4673549ca4d4614469b5e y Bd54957e3af1be04546436e874a60fe386041b244.
+LFS/Gitblob/SHA verificados; A reutiliza caché validada, B descargado. Pesos quedan
+.cache/generators ignorados. No instalacióndeps nueva: sigueHF3.8.1. Disco618GiBfree,
+RAM54GiBfree/62GiBtotal,16CPUs vistos; runtime fuente en generation-inputs.
+
+ANTES de decodificar se fijaron response-rubric.v1.json,generation-protocol.v1.json,
+response-contract.v1.mjs,response-evaluation.v1.mjs,helpers/worker/parent y40inputs
+sin gold en results/generation-inputs.v1.json. 73tests pasan (44previos+12schema+
+14semántica+3estado). ContratoJSONcompleto,clavesduplicadas/citasajenas/estados
+inválidos rechazados; sinfencesstrip/repair/retry. Evaluación separa fidelidad,
+completitudgold,completitudgrounded,citas ypolítica según evidencia realmenteentrada.
+UnnoanswerporQ002puedesercontextocorrecto yseguir sinresponderpreguntaanswerable.
+Todos los spansdelanswerdebenrevisarse ymatchGoldrazonado; evidenciarequierequote/
+revision/rangos de fuente PROVIDED. Semanticjudgments son revisión editorial del
+asistente, no humanos independientes ni experimentoLLMjudge. RúbricaSHA va enreviews.
+
+FROZEN: todos los archivos listados en generation-inputs.v1.sourceHashes, ahora
+con salidas reales. NO editarlos tras ver resultados. Parent/verifier nuevos que NO
+están en hashes pueden añadirse; para corregir experimentov1 conservar fuenteoriginal
+ynuevaversión/artefactodecorrección, nunca mutar para volverloverde. Scripts:
+verify-generations.v1.mjs está listo para artefactofinal (no ejecutar hasta completo),
+--tokenizers re-decodedIDs, --models rehash pesos (noinferir). Inspectprogressreadonly.
+Capturadorconsume caso startedconresultadoperdido como interrupted_unknown; sólo
+neverstartedpuedeejecutarse. Lockparent ycheckPIDs impidenduplicación. Unloadfailure
+sepreserva ynoejecutados marcados, nunca fingir que hubo inferencia.
+
+Últimos datos PARCIALES:14resultadosA=13generatedinvalid_json+1interrupted_unknown;
+Bsin resultados aún. No tomar esos números por final ni inferir ganador. Algunas
+salidasA usanprosa/Markdown e incluso TTLconfundidoconbytes; no puntuarlas
+semánticamente si contrato invalido. No leer sólo campos extraídos de texto averiado.
+Preparar artículos RAG-FAITHFULNESS/RAG-COMPLETENESS con datos reales una vezavailable;
+si hay0salidas semánticamente elegibles, null con denom0 y límites explícitos, no
+inventar éxito con controles redactados. A/Bcapítulo8,latencycost9,gates10 pendientes.
+
+Primarysources ya consultadas: arxiv.org/html/2309.15217v2 secciónFaithfulness;
+arxiv.org/abs/2305.14251 FActScore; arxiv.org/abs/2305.14627 ALCE. No ejecutamos esos
+frameworks ni apropiamos sus puntuaciones. Los controles unitarios son ficción
+separada, no outputs del modelo. No nuevos commits/push/publicación/traducción/audio.
+Conservar P11461fallidas y gapsP026/P045Stripe/P058soak. Serie02sóloDSA. Revisar
+históricos siguientes para fullscope, contadores y tests hasta el quinto draft.
+
+## Histórico: P116 cinco borradores verificados; sigue evaluación de respuestas
+
+2026-11-03. RAG-CONTEXT-RELEVANCE añadido,1979palabras; manifest5/10in_progress,
+verifiedIds5. Faltanfaithfulness,completeness,A/Breal,latency/cost,gates. Objetivo175
+activo;91draft_exists/19related_only/65not_written,completionProvenfalse.421índices/
+332exports/56labs/57workspaces. P112–P116 sincommit; noautocommit/push/publicación/
+traducción/audio. Serie02sóloDSA y gapsP026/P045Stripe/P058soak intactos.
+
+Nueva captura packages/rag-evaluation/results/contexts.v1.json,120composiciones,
+474conteosreales,2tokenizers3límites256/384/1536. DiezJSONmetadata14,082,967bytes,
+cacheignorada,no pesos. HF3.8.1añadido víaPNPMoffline. Modelos A/Bmismosfijados de
+planv1; no cambiarlos. No inferencia. 40empty_context a256 (base212–226tokens),80ready
+con fuentes320–383. Todaslasentradas384y1536idénticas porperfil/query, no ajustar
+límites para inventarescalones. Q020sólo2candidatos,otras19tienen3. 60paresA/Bcoinciden
+prompts/IDs. Baseline1536conserva todoscandidatos/mensajesiguales para futuroA/B.
+
+Selecciónnogold,whole sources,ordentop3,skipnofit,sinbackfill. Evaluadordespuésgold:
+ratioDocsRelevantes/seleccionadas (vacío=null),hechoscubiertos/requeridos (0/2=0,
+0requeridos=null),rangoanotadounión/textocuerposUTF16 (vacío=null). Proxycustom,no
+Ragas/juiciosemántico. Q008a256:221tokens,nofuentes; a384/1536:371tokens,3fuentes,
+docs2/3,hechos2/2,105/291unidades. Q007docs1/3hechos2/2. Q002sigue.5,no backups-2
+enloscandidatos. Q018tienefuentespero0relevantes,hechosnull. Ready no es answerable.
+
+CONGELADOSporhashesnuevos: context-core.v1.mjs,capture-context.v1.mjs,
+context-protocol.v1.json,context-tokenizers.v1.json,prepare-tokenizers.v1.mjs,
+context-dependencies.v1.json,comparison-plan.v1/systemv1,rankings.v1,corpus/queries/
+gold/dataset-manifest/dataset.mjs/verify.mjs. No editar ni volver a capturarv1.
+Verificador nuevo verify-contexts.v1 defaultreplaymedidas; --tokenizersreencode474.
+Ambospasan. Metadata10JSONporGitblob/SHA. Rootlockprevio1b24 no estaba referenciado,
+snapshotlocalnuevo evita mutar evidenciadependenciasvieja. Cache.node_modulesfuera
+índices. Presentación/render/nuevosverifierseditables; código congelado no.
+
+44labtests(18context+16rank+10data),266editorial/estructura,17blog pasan.
+QAfinal /tmp/rag-evaluation-layout.FrhU07/report.json:5posts360/1440,noindex,
+11SVG,120contextcasesademás20gold/16docs/112rankcases448focosporancho. Roles/IDs/
+prompts/textos/rangos/ratio/null/revisiones/teclado exactos,0errors/overflow.
+TresSVGy4UIcontextinspeccionados. Llamada README+QAauto-reviewtimeoutnoinicióproceso;
+reintentoestrechounavez completó, no rechazo seguridad ni bloqueo. Buildfinal50rutas;
+Pagefind10públicas4280palabras2idiomas. Servidor propio612461 detenido; ningún modelo, capturador, QA o servidor propio
+pendiente.
+
+SIGUIENTE RAG-FAITHFULNESS y RAG-COMPLETENESS: necesitan respuestas evaluables,
+no simular que controles escritos son salidas de modelo. Preparar carga/capturaREAL
+A/B con planv1 ycontextosbaseline1536YA FIJADOS, doscheckpointdistintos,metadatapesos
+porrevSHA. A Qwen2.5-0.5B22942cb...,B1.5Bd54957e...,q8CPU1hilo,greedy192tokens,
+JSONestrictoexactstatus/answer/citations. SinGoldenPrompt,sinrepararJSON,sinretries
+favorables. Planstatusnot_executedhistóriconosemuta. Se puede ejecutarA/Bantes de
+redactarcapítulos6/7; capítulo8explicará experimento, no cambiarordenpedagógico.
+Rúbrica/criterios deben fijarse ANTES de ver outputs; distinguir validez técnica,
+respaldo semántico,completitud,citas,answerable/noanswer. Revisión editorial≠humano
+independiente niLLMjudge (P117). Tokens/latencias se miden en capturadordesdeprimera
+carga con boundariesdeclarados; warmup/coldload yfallos completos. No nuevosdatos
+para favorecerresultado; goldv1intacto. Si falla,guardarfallo y no sustituirresultados.
+P11461fallidas,no generaciónútil/abstenciónconforme demostradas aún; conservar.
+
+## Histórico: P116 cuatro borradores verificados; sigue context relevance
+
+2026-11-03. P116manifiesto4/10,in_progress,verifiedIds los4artículos. Nuevos:
+RAG-RECALL-PRECISION, RAG-MRR, RAG-NDCG (~1670/1571/1711palabras), con 3diagramas,
+3figuras y visor ranking.html. Seis entregas pendientes y comparación real A/B.
+P1159draftsverificados; objetivo175activo,no completo. Inventario91/19/65,
+completionProvenfalse. 420índices/327exports/56labs/57workspaces.
+P112–P116 sincommit; no commit/push/publicación/traducción/audio automáticos.
+
+Nueva captura única packages/rag-evaluation/results/rankings.v1.json,20búsquedas
+BM25 reales/80evaluaciones a k1/2/3/5. No inferencia ni benchmark de latencia. Perfil
+fold,k1=1.2,b=.75,título+cuerpo,sin stemming/stopwords,score>0,tieIDascendente.
+Runner no recibe gold. Hashes congelan capture-rankings.v1/retrieval-runner.v1/
+ranking-metrics.v1/ranking-protocol.v1/ranking-controls.v1/comparison-plan.v1/
+comparison-system.v1/corpus/queries/gold/dataset-manifest/dataset.mjs/verify.mjs y
+../lexical-search/retrieval.mjs+analysis.mjs. NO editarlos. Verificador nuevo
+verify-rankings.v1 hace replay readonly exacto, no re-ejecutar el capturador.
+
+Plan de modelos y prompt fijados ANTES de observar testretrieval: Aonnx-community/
+Qwen2.5-0.5B-Instruct rev22942cb7d7ba4cc81bb4673549ca4d4614469b5e; BQwen2.5-1.5B-
+Instruct revd54957e3af1be04546436e874a60fe386041b244. HFAPI pública confirmaSHA/ruta
+onnx/model_quantized.onnx. q8CPU1hilo,greedy192tokenssalida,inputlim1536,k3,mismos
+textos fuentes completos,JSONestricto; sin gold enprompt ysinrepararsalidas. Planstatus
+not_executed es histórico de su creación, no debe mutarse tras generar resultados.
+No pesos B descargados/cargados ni generaciones nuevas. El futuro experimento debe
+validar archivos fijados yconservar todosoutputs/fallos. No cambiarlos por ver test.
+
+Métricas:relevantegrado>=1,P dividek incluso lista corta,goldvacíoP0/R/RR/nDCGnull;
+nohitcongoldpositivo0. Gain2**grade-1,discountlog2(rank+1),IDCGtodosqrels.
+Test12answerable:MRR=1 todoscutoffs,Recall@1=.75→1desde2,P@3=.5; all15P@3=.4.
+Dev4:Recall@3=.875,MRR@3=.875,nDCG@3=.8467132018086354. Q002faltabackups-2
+hasta5,Recall.5; preservar. Cuatro noanswer con candidatos, NOerrorgeneradorprobado.
+Gold no mezcla1y2positivos dentrodequery; ocho controles escritos aparte (C05/C06
+nDCG1/.7967 conP/R/RRiguales), nunca atribuir a búsquedas o modelos esos controles.
+
+264editorial/estructura,26lab,17blog pasan; verifyallpnpm pasa. Buildfinal posterior
+al wrapper de tabla se ejecuta en este cierre (consultar logs p116-four-final-build).
+QA /tmp/rag-evaluation-layout.phafTq/report.json:4posts360/1440,noindex,
+0JSerrors/overflow,20goldqueries16docs,112rankingcases/448focos porancho,8SVG.
+6SVGnuevos y4vistas inspeccionados. QAinicialDUXnKz falló por tablaRP420px; región
+scrolllocal conArrowRight lo corrige. No alterar código/datoscapturados paraeso.
+Servidor propio561421 detenido; no modelo, captura, QA o servidor propio pendiente. Sin instalaciónnueva; Node24.19,pnpm12.8.1.
+
+SIGUIENTE RAG-CONTEXT-RELEVANCE: evaluar evidencia realmente seleccionada, distinguir
+ranking top-k de contexto, presupuesto y redundancia. Usar datasetv1 y captura BM25 intactos;
+si hacefaltaprotocolo/capturanueva con hashes/versiones propios. No editar fuente
+congelada. Despuésfaithfulness/completeness,comparaciónA/Breal,latencia/coste,gates.
+Modelo-judge/calibraciónhumana esP117; no llamar revisión automática humana.
+P11461generacionesfallidas yningunaabstenciónconforme siguen sin corregirse. Gaps
+P026/P045Stripe/P058soak ySerie02sóloDSA intactos. Objetivo completo no probado.
+
+## Histórico: P115 cerrado como borradores; P116 primera entrega verificada
+
+2026-11-03. SerieP1159/9verified_drafts, auditoría explícita en rag-architecture-review.
+P116 comienza Evaluación RAG: datos, métricas y regresiones,10entregas previstas,
+1verificada,9pendientes; editorialStatein_progress. Ver ruta-evaluacion-rag.md,
+rag-evaluation-series.json y rag-evaluation-review.md. Objetivo175activo, no completo.
+Inventario91draft_exists/19related_only/65not_written,completionProvenfalse.
+417índices/321exports/56labs/57workspaces. P112–P116 sin commit. No publicación,
+traducción,audio,push o commits automáticos. Preservar todos los cambios previos.
+
+Nueva fuente española: evaluar-rag-gold-dataset-splits-etiquetas.md,2089palabras,
+drafttrue/statusdraft,autorLuis,prerrequisitosP082/P093/P113/P115. Dos diagramas,
+visor gold con todos los juicios/rangos/docversiones, fuentesTREC/NIST/Ragas.
+Labnuevo packages/rag-evaluation, sin dependencias nuevas ni instalación necesaria.
+Datos:16docs/32hechos,20queries,dev5 de2grupos/test15 de6grupos,16answerable/
+4unanswerable;320juicios:296grado0/16grado1/8grado2. RangosUTF16. No modelos
+ni retrieval ejecutados en este bloque; noA/B. Dataset sintético público conocido
+por autor, no ciego/representativo; sin revisión semántica independiente.
+
+NOEDITAR corpus.json,queries.json,gold.json de versión1: SHA en dataset-manifest.json,
+comprobado por verify.mjs. No es captura experimental ni prueba de anotación correcta.
+Cambiar versión/motivo si hay un error, no retocar gold para favorecer modelo.
+Validator/tests/render/visores aún editables (no cubiertos por fuentes de captura).
+TDD10tests,último altera copia temporal de gold y se rechaza porhash;pnpmfiltertest
+publicado probado. Primero9testsrojos/móduloausente, luego9green; hashred→10green.
+
+261editorial/estructura,17blog,10lab pasan; build50rutas,Pagefind10públicas4280palabras/
+2idiomas. QAfinal /tmp/rag-evaluation-layout.xMmXSh/report.json:360/1440,
+20queries16docs porancho,2SVG,barras/textos/referencias/splits/teclado,noindex,
+0JSerrors/overflow. Diagramas yQ008/Q018 revisados visualmente; etiquetas espaciadas.
+Servidor propio556618 detenido; nada de captura/modelo/QA/servidor propio pendiente.
+
+SIGUIENTE RAG-RECALL-PRECISION: desarrollar conceptos con ejemplo exacto y dataset
+fijado. Rubricgrado>=1como relevante binario debe declararse, no sumargradoscomoIDs.
+Gold vacío implica Recallnull; fijar denominadorPrecision@k para listas cortas y
+reportar casos/fallos/splits separados. No presentar scores aún no ejecutados.
+DespuésMRR,nDCG,context relevance,faithfulness,completeness,A/B,latencycost,gates.
+El laboratorio P116 exige comparación real de DOS MODELOS, no dos prompts/profiles.
+Fijar sus revisiones/inputs/criterios antes de test; conservar outputs/fallos; no
+usar gold en prompt. Si se usan respuestas redactadas para enseñar métrica, rótulo
+control/manual y no atribuirlas a generación. Modelo-judge/calibraciónhumana esP117.
+P11461fallidas,generaciónútil/abstenciónconforme no probadas. GapsP026/P045Stripe/
+P058soak ySerie02sóloDSA intactos. Históricos a continuación pueden tener contadores
+anteriores; estado vigente es este bloque.
+
+## Histórico: P115 nueve borradores verificados; siguiente P116
+
+2026-11-03. P115:9/9,verified_drafts; ver rag-architecture-review.md para auditoría
+requisito→artículo→evidencia. 416índices/317exports,55labs/56workspaces. Objetivo175
+activo, inventario90draft_exists/19related_only/66not_written,completionProvenfalse.
+No publicación/traducción/audio/push automáticos. P112–P115 siguen sin commit.
+
+Context design y cierre terminados. results/context.json:60composiciones,
+34ready/8base_over_budget/6no_evidence/12rejected_scope,165conteos reales con ochoJSON
+del tokenizerQwen fijado; no pesos ni inferencia. context-dependency-lock.capture.json
+nuevo preserva lock anterior de protocolos originales. No modificar fuentes
+congeladas por SHA. --tokenizer permite recontar sin modelo. T05@320 contrasta
+1fuente+H3/254tokens frente3fuentes/167tokens; @512coinciden443. Reserva64.
+results/generation-contracts.json deriva34prepared_not_executed/26not_prepared;
+executedfalse60/60. No fine-tuning o comparación de calidad real en P115.
+
+257editorial/estructura,44lab,17blog pasan; siete verifiers readonly; build50rutas,
+Pagefind10públicas/4280palabras/2idiomas. QAfinal
+/tmp/rag-architecture-layout.K2fobR/report.json:9posts,20SVG,360/1440,noindex,
+0JSerrors/overflow,teclado. 60contratos×3capas por ancho además de todos los casos
+previos. Primer testblog se solapó con build y leyó dist incompleto; rerun posterior17/17,
+sin cambios de producto. Servidor propio553764 detenido; ningún proceso pendiente.
+
+SIGUIENTE P116: evaluación cuantitativa de RAG. Gold datasets, Recall/Precision@k,
+MRR,nDCG,context relevance,faithfulness,completeness,latency/cost. Laboratorio exigido:
+benchmark etiquetado y comparación modeloA/B sin tocar testgold. No presentar el
+corpus conocido de P113–P115 como test ciego ni renombrar configuraciones como dos
+modelos. Definir datos/splits/criterios/versiones y protocolo antes de capturar.
+P11461generaciones fallidas y generación útil/noanswer conforme siguen no demostrados.
+GapsP026/P045Stripe/P058soak ySerie02sóloDSA intactos. No reducir objetivo global.
+
+## Histórico: P115 siete borradores verificados; comienza context design
+
+2026-11-03. RAG-UPDATES añadido (~2000 palabras). Manifest7/9 in_progress; faltan
+context design y RAG vs fine-tuning. 414índices/308exports,55labs/56workspaces.
+Inventario90/19/66,completionProvenfalse; objetivo175 activo. No commits/push/audio,
+publicación o traducción automáticos. Preservar capturas y todos los cambios previos.
+
+Nueva captura única packages/rag-architecture/results/updates.json, fuentes congeladas
+porSHA: updates-core/schema/protocol/cases/v2-corpus/capture más fixture/cache/baseline
+schema/runtime/corpus/lock local. No editar/repetir. 3 intentos: candidata11rechazada,
+12completaactivada,viejo puntero esperado rechazado0filas. SHARE durantevalidación/
+activación; applicationSELECTonly. Dos solicitudes RR con transacciones solapadas:
+oldbindv1→activatev2→newreadv2/commit→oldrereadpointerv1/snapshot→oldreadv1/commit.
+No benchmark concurrente. 11búsquedas,4hits,7lecturasfuentes,TTL60000sinexpirytest.
+9citas,4resueltas. ACLactualen tabla document_acl independiente decontenido; alphaCache
+nivel0→1yepoch2atómicos. Reader ya no resuelve v1/v2,manager sí; stored_access_level0
+no autoriza frente a effective access_level1. Datos antiguos no se mutan. No GC,
+rollbackav1,backup/failover/ANN/LLM uoffsets de cita nuevos. 67eventos de aplicación.
+
+verify-updates readonly pasa conreplay/cache/roles/orden/citas/hash. 6unitarias nuevas,
+32lab totales,255editorial/estructura,17blog. Build50rutas;Pagefind10públicas/4280palabras/
+2idiomas. QA /tmp/rag-architecture-layout.DWH4eq/report.json:7posts360/1440,previos56queries/
+69probes/21convos/44workflows104prefijos/22cachecases; nuevos67eventos11reads9citations
+porancho.15SVGconbounds correctos;3SVGnuevos y3vistas inspeccionados;0JSerrors/overflow,
+teclado pasa. Servidor propio548437 cerrado. Ningún proceso de captura/QA/modelo pendiente.
+
+SIGUIENTE context design. Tokenizer Qwen local de P114 en .cache/generator (sinmodelname).
+No cargar modelos/pesos. Añadir HF3.8.1 mediantepnpm a rag-architecture para conteo real;
+conservar dependency-lock.capture.json congelado y usar un snapshot NUEVO para este
+protocolo. Instrucciones/historial/evidencia separadas,conteo de chat completo yreserva,
+no truncamiento silencioso ni éxito delgenerador. No mutar fuentes deP112–P115capturadas.
+P11461generacionesfallidas sigue pendiente útilgeneration/noanswerconforme. GapsP026/
+P045Stripe/P058soak ySerie02soloDSA intactos. El cierreRAGvsfine-tuning aún no escrito.
+
+## Histórico: P115 seis borradores verificados, tres entregas pendientes
+
+2026-11-03. Completados en este bloque RAG-MULTISTEP (1705palabras) y RAG-CACHE
+(≈1950 tras aclaraciones). Manifiesto6/9,in_progress. Faltan RAG-UPDATES,
+RAG-CONTEXT-DESIGN,RAG-VS-FINETUNING. Objetivo global175 activo; no dar por completo
+P115 por ID o recuentos. 413índices/303exports,55labs/56workspaces. Inventario90/19/66,
+completionProvenfalse. P112/P113/P114/P115 sin commit. No commits/push/publicación,
+traducción/audio automáticos. Preservar todos los cambios y límites históricos.
+
+Código canónico packages/rag-architecture. Nuevas capturas únicas e inmutables:
+results/multistep.json:44workflows/60llamadasfuentes. Paradas10requirements_met,
+12call_budget,4source_budget,14no_progress,4no_results. Tareas tipadas requiredKeys y
+grafos redactados, no LLM/parser/agente. Coverage de IDs, no respuesta factual.
+Cuatro pares one-step0→follow-reference1, caso directo1call. Lectores/referencia
+restringida tienen gold autorizado vacío:coverage null. Ciclos se deduplican; refs
+ajenas0filas. Límite de frontera solo unidad, no se alcanza en matrizSQL. Nuevas
+fuentes SHA congeladas:multistep.mjs,protocol/cases/capture,fixture/schema/search/
+runtime/corpus/lock local. verify-multistep hace replay readonly sin SQL.
+
+results/cache.json:22solicitudes,8hit/13miss/1expired,14operacionesfuentes,2erroresSQL
+22012 no cacheados. Clave JSONtuple namespace/role/tenant/nivel/revprincipal/epochACL/
+indexRevision/analyzer/ranknorm/k/query exacta. Principal yestado actual se leen en
+snapshotRRreadonly antesdelookup. Revocar/restauraralpha_manager aumenta revisión2/3;
+ACLalpha-cache→1 yepochglobal2 enmisma transacción. Beta tambiénmiss porinvalidación
+global aunque sucontenido no cambie, conservado. indexRevision fijaSHAcorpus+schema,
+NO activación de nuevoíndice. TTL3000ms,esperanativa3102,695719ms. Fakeclocksolo unidad.
+FIFO128unitario,nunca expulsión enSQL. Las clavesantiguas quedan fuera del recorrido,
+no se borran instantáneamente. El script coordina ACL+epoch,no haytrigger que impida
+cambios administrativos sinbump. No concurrencia/stampede/cache distribuida/latencia/LLM.
+verify-cache reproduce timestamps originales; comparar expiresAt=savedAt+TTL evita
+redondeo de restar floats. Core/capture/protocol/cases yfuentes congeladas porSHA;
+no modificarlas ni repetir para obtener otros resultados. Reutilizar fixture concallback.
+
+QA final /tmp/rag-architecture-layout.Ag51m2/report.json:seisposts360/1440,noindex,
+0overflow/JSerrors. Porancho56queries69probes21conversaciones44workflows/104prefijos,
+22cachecases. Teclado,scrolllocal,textos,consultas,clave/revisiones,geometría/estados
+verificados. DoceSVG conbounds correctos; cuatro nuevos yUIcache/prefijo1/2inspeccionados.
+Se corrigió variable local document que sombreabaDOM en dosvisores, solo presentación.
+Se corrigieron singulares ydiagrama que ahora explicita quehit no renuevaTTL. Uncheck
+puntual falló porHMR(/tmp/rag-final-detail.JKs2z3); elQA completo final pasa trasrestart
+estable. No presentar ese fallo como modelo/protocolo. Capturas originales intactas.
+
+254editorial/estructura,17blog,26lab pasan; cuatroverificadores readonly pasan.
+Build final /tmp/p115-six-build-final.log50rutas. Pagefind /tmp/p115-six-pagefind-final.log:
+10páginas públicas/4280palabras/dosidiomas. Ninguna captura o QA propia pendiente.
+Servidor propio545198 detenido. Ningún modelo nuevo cargado/ejecutado en este bloque.
+Capturas previasP112–P114 intactas. P11461generaciones fallidas, respuesta útil y
+no-answerconforme no demostrados; no confundir éxito de arquitectura con generación.
+GapsP026/P045Stripe/P058soak ySerie02soloDSA se conservan.
+
+SIGUIENTE RAG-UPDATES: protocolo nuevo para construcción parcial rechazada,
+validación/activación real y dos solicitudes con snapshot solapado; caché por revisión
+y citas antiguas reautorizadas. Reutilizar withDatabaseFixture(callback) sin editarla
+(congelada por conversación/multistep/cache). Una ACL copiada en índice viejo no debe
+autorizar una cita prohibida ahora. Separar autoridad ACL de versión decontenido o
+explicitar una garantía más limitada, sin aparentar aislamiento inexistente.
+
+Después contextdesign: tokenizer Qwen real yaen packages/reranking-grounding/.cache/
+generator/tokenizer.json y tokenizer_config.json (sin subdirectorio modelname).
+Instalar HF3.8.1 conpnpm en rag-architecture si hacefalta, conservar snapshots de lock
+anteriores y nuevo snapshot propio para siguiente captura. Contar chat completo+
+reserva sin cargar pesos/inferir. RAG vs fine-tuning cierra la serie, con referencias
+previas sin inventar nueva evidencia de generación útil.
+
+## Histórico: P115 en curso, cuatro borradores verificados
+
+2026-11-03. Se escribieron cuatro borradores españoles: P115 contratos/requisitos,
+RAG-TENANTS permisos RLS, RAG-ISOLATION global vs separado y RAG-CONVERSATION.
+Manifiesto rag-architecture-series.json conserva nueve plannedIds e in_progress.
+Faltan cinco: multi-step, caché, actualizaciones, context design y RAG vs fine-tuning.
+No aceptar P115 completo porque exista el artículo con su ID. Objetivo global175 activo.
+
+Código canónico packages/rag-architecture. PostgreSQL17.11 real por digest, corpus12,
+cuatro roles LOGIN noadministrativos/NOBYPASSRLS. results/isolation.json: 28 casosgold
+por dos layouts=56 búsquedas; 69 controles/36 denegaciones42501. Por layout:19gold
+positivos recall autorizado1, nuevevacíos con0filas; cero exposiciones/IDs inesperados.
+Archivos físicos distintos en3DB, mismo servidor/CPU/RAM/WAL/admin. GIN24KiB vs suma48KiB,
+solo esos índices/corpus. Planes normales guardados; no claims ANN/latencia/backup.
+Trust solo contenedor loopback sintético, no autenticación web/despliegue.
+
+results/conversation.json: captura independiente,21 escenarios conocidos. 7ready,
+8forbidden,4unavailable_reference,1not_found,1no_evidence. Sesiones backend con UUID,
+propietario role+tenant y refs ID+revisión, no texto antiguo como evidencia. Relee
+principal/fuentes dentro de REPEATABLE READ READ ONLY. Revocación de dos gestores
+confirmada ANTES de nueva solicitud deja0fuentes. No revocación en snapshot activo,
+resolución lingüística, persistencia, cuotas o generación. Controls de referencias
+ajenas/revisiones erróneas son deliberados. sourceHashes congelan conversations.mjs,
+database-fixture.mjs,capture-conversation.mjs,protocol/schema/runtime/corpus/lock local.
+Reutilizar withDatabaseFixture(callback) sin editarlo; nuevas capturas/protocolos para
+próximas operaciones. No repetir ni alterar fuentes congeladas de ninguna captura.
+Ambos verificadores readonly pasan. Contenedores eliminados, ningún modelo nuevo.
+
+252 editorial/estructura,17 blog,11unitarias pasan. Últimos ajustes tabla/snippets
+pasan4pruebas focalizadas. QA final /tmp/rag-architecture-layout.PmfWvv/report.json:
+cuatro posts360/1440,56búsquedas69controles21reanudaciones porancho,geometría/textos,
+teclado/scroll local;0JSerrors/overflow. Ocho diagramas/figuras y permiso retirado
+inspeccionados. Servidor propio pid537199 detenido. Build final completado:50rutas, /tmp/p115-build-final.log. Pagefind mantiene10páginas
+públicas/4280palabras/dosidiomas. Tests posteriores al build:17/17. Sin procesos propios
+de captura, modelo o QA pendientes. No reiniciar capturas.
+
+411índices/295exports,55labs/56workspaces. Inventario90/19/66,completionProvenfalse.
+P112/P113/P114/P115sincommit. No commits/push/publicación/traducción/audio automáticos.
+PreservarP114:61generacionesfallidas, útilgeneration/noanswerconforme sin demostrar;
+gapsP026/P045Stripe/P058soak,Serie02soloDSA. No confundir arquitectura con generador útil.
+
+Siguiente acción: continuar RAG-MULTISTEP con workflow
+acotado y captura real de rutas correctas, sin progreso/ciclos/presupuesto insuficiente,
+siempre autorización antes de contexto. Después caché por ámbito/revisión, activación
+de índices con solicitudes solapadas, context design y RAG vs fine-tuning.
+Tokenizer Qwen fijado ya está en packages/reranking-grounding/.cache/generator/
+tokenizer.json y tokenizer_config.json (no en subcarpeta de nombre del modelo).
+Para contar nuevos prompts usar tokenizer real sin inferir ni cargar pesos; añadir
+dependencia HF mediante pnpm si hace falta. No mutar protocolos/capturas P112–P114.
+
+## Histórico: P114 en ocho borradores verificados; generación fallida documentada
+
+2026-11-03. Ver reranking-grounding-review.md ymanifiesto.8posts españoles,drafttrue/
+statusdraft,LuisRamírezCalle. Se añadió FORMATO como concepto propio.8diagramas,
+8figuras,8paneles yresolvedorfuentes. Código solo packages/reranking-grounding.
+407índices/284exports,54labs/55workspaces. Inventario89/19/67 ycompletionProvenfalse.
+Objetivo global175 sigue activo ysin aceptación completa;gapsP026/P045Stripe/P058soak
+preservados,Serie02soloDSA. No reducir objetivo al último conjunto de borradores.
+
+Ejecuciones reales P114:215pares BGE multilingüeq8CPU,27lotes/216outputs físicos;
+120comparaciones M3/6/10;240contextos;80escenarios;61prompts únicos y61generaciones
+Qwen0.5Bq8CPU.4930tokens,23alcanza160tokens. Se completó una vez;no proceso de modelo
+pendiente. NO repetir/tunear para obtener versión favorable ni editar archivos conSHA.
+Inputs/protocol/rubric/prompt/core/captures/io/preparación ydatos congelados. Pesos solo
+.cache ignorada. Para otro ensayo versionar nuevas rutas/protocolo ypreservar todo.
+
+Resultado crucial:58invalid_json+3invalid_state_claims=ninguna respuesta aceptada.
+80rechazos técnicos,no abstenciones correctas. El contexto RRFtest mejora.8542→.9792;
+BM25ya.9792. NO vender comoRAGfuncional ni éxito de generación. Limite pendiente:
+respuesta útil grounded yno-answerconforme no demostrados. Auditarlo antes de afirmar
+aceptación global o funcionalidad de un proyecto;los artículos explican el fallo real.
+No sustituir respuestas fallidas por redactadas ni considerar diags comoaceptadas.
+
+61salidas revisadas porasistente antesdeagregados;15extractos diagnósticos,noexhaustivos.
+Corrección review-corrections.json:Q11«incluye idioma»no excluyeotroscampos,porloque
+labelpresentación contradicted→unsupported. Ligada aSHA,originales intactos y0cambio
+operativo. UIexplicala rectificación. Modelos/prompt/criterios no se ajustarontrasresultados.
+
+5JS,248editorial/estructura,17blog,verify--tokenizer pasan. QAfinal:
+/tmp/reranking-layout.qNv96r/report.json,8posts360/1440,poranchura120rankings,
+1560resaltados,120candidatos,240contextos,80salidas,15diags,10controles,8negativos,
+13fuentes y5enlaces manipulados;0JSerrors/overflow,teclado/scrollyvisualesinspeccionados.
+Servidor propio 531354 cerrado (astro dev stop, exit 0). Build final:50 rutas.
+Pagefind final:10 páginas,4280 palabras,2 idiomas. Ninguna inferencia o QA propia pendiente.
+
+SIGUIENTE P115:arquitecturasRAG. Obligatorio conversationalRAG,multi-step,cache,
+indexupdates,tenantpermissions,RAGvsfine-tuning,contextdesign. Lab:diseño multi-tenant
+ycomparación real de índiceglobalfiltrado vsaislamiento físico. Plan en ruta-arquitecturas-rag.md: nueve entregas propuestas, sin posts/capturas aún. No convertir tests derouting en evidencia de respuestas generadas útiles:
+el falloP114permanece visible. Planificar postspequeños porconcepto ycaptura antesdeclaims.
+
+P112/P113/P114sincommit. HEADblogc2f71c5/examplescc99f36. No nuevoscommits,push,
+publicación,traducción/audio automáticos. Contexto inferior histórico,superado.
+
+## Histórico: P113 desarrollado en siete borradores verificados
+
+2026-11-03. Ver retrieval-strategies-series.json y retrieval-strategies-review.md.
+Siete borradores españoles específicos: BM25, denso, RRF, filtros, multi-query,
+rewrite y evaluación. Draft true/status draft; Luis Ramírez Calle. Siete diagramas,
+siete figuras, dos tipos de gráfico SVG dinámico y seis paneles interactivos.
+Código canónico solo packages/retrieval-strategies. 399 índices/268 exports,
+53 laboratorios/54 workspaces. Objetivo global175 aún no conseguido; inventario
+88draft_exists/19related_only/68not_written, completionProvenfalse.
+
+Capturas P113 ejecutadas y congeladas: results/inputs.json antes de inferencia;
+33 vectores MiniLM q8 CPU reales;60 rankings BM25/denso/RRF;36 filtros;7 casos
+multi-query;16 propuestas de rewrite. No retocar ranking/evaluate/protocol/entradas
+ni archivos con hashes para modificar la historia. No repetir encoder por resultados
+desfavorables. Pesos solo .cache/model ignorada, no exportados. Verificador readonly.
+
+Test8: BM25 coverage.97917/7de8, denso.77917/5de8,RRF.85417/6de8. Preservar Q14:
+evidencia primera/novenaycuarta;Q12RRFmejora denso;Q06/Q18incompletas en los tres.
+Q19negativo devuelve3 todos;Q20BM25=0,denso/RRF=3. Multi-queryQ08pierde cobertura1→0;
+Q13rewrite alterada pasa el guard y conserva retrieval1: evidencia no prueba intención.
+No test ciego, generador de paráfrasis, respuestas generadas ni benchmark de latencia.
+Filtros antes/después son respecto al corte top3 sobre scores globales; en RRF después
+de fusionar ventanas. No nativo prefilter ANN ni ACL. SVG dinámicos usan escalas declaradas.
+
+6 JS,245editorial/estructura,17blog,verify--tokenizer ybuild pasan. QA completo:
+/tmp/retrieval-layout.574F2s/report.json. Siete posts360/1440;poranchura300comparaciones,
+260pares,320fusiones,36filtros,56subconjuntos,16rewrites;sin JSerrors/overflow ycon
+teclado/scroll. Siete diagramas/siete figuras ypaneles inspeccionados; ramas corregidas.
+Servidor propio 525698 cerrado (astro dev stop, exit 0). Pagefind final:10 páginas,
+4280 palabras y2 idiomas. No quedan inferencias ni procesos de QA propios pendientes.
+
+SIGUIENTE P114: leer ficha y ruta-reranking-grounding.md. Exige RESPUESTAS con/sin
+reranking y enlaces verificados a fragmentos, no solo otra tabla de retrieval. Hay
+plan de siete entregas pequeñas; no hay posts, modelo elegido ni captura P114 todavía.
+Verificar cross encoder real compatible con español; fijar protocolo/modelos/gold/
+presupuesto/generador antes de inferir. Conservar negativos, regresiones y salidas.
+
+P112/P113 sin comitear. HEAD previos blogc2f71c5/examplescc99f36. No commits/push/
+publicación/traducción/audio automáticos. GapsP026/P045Stripe/P058soak ySerie02soloDSA
+intactos. Resto inferior es histórico y no describe el estado actual.
+
+## Histórico: P112 desarrollado en nueve borradores verificados
+
+2026-11-03. Ver document-ingestion-series.json, ruta-ingesta-documental.md y
+document-ingestion-review.md. 9/9en español,draft/statusdraft,LuisRamírezCalle.
+9diagramas,8figuras,10paneles. Código canónico solo packages/document-ingestion.
+392índices/256exports,52labs/53workspaces. Global175fichas no terminado; inventario
+87draft_exists/19related_only/69not_written,completionProvenfalse.
+
+Fase final ejecutada de verdad:44vectores MiniLMq8CPU/384d,41distancias,4particiones,
+87secuencias detokenizer,4índicesBM25 y80rankings. Gold20preguntas fijado antes.
+Umbral.35 cortó todas las fronteras;preservar ese resultado sin tuning posterior.
+Test8:coverage.97917/.8125/.96528/1;completitud7/8,6/8,7/8,8/8. Casosdesfavorables
+Q04overlap8,Q07overlap4,Q17semántico;Q18semántico favorable;Q19yQ20negativos intactos.
+No rehacer inferencia ni OCR. Capturas y sus fuentes con hashes congeladas. Verificadores
+sonreadonly; no sobrescribir resultados por hacerlos más atractivos. Nuevos ensayos con
+protocolo/rutas nuevos. El visor no contiene pesos ni ejecuta modelos/búsqueda.
+
+17JS,242editorial/estructura,17blog,verify-chunking --tokenizer ybuild/Pagefind pasan.
+QAfinal:/tmp/ingestion-layout.OIQj9O/report.json,9posts360/1440,10panelesvisibles,
+0JSerrors/overflow,teclado/scrolly17figuras/diagramasinspeccionados. Detalles en review.
+Servidor propio PID519360 cerrado por astro dev stop (exit 0). No queda ningún
+encoder, OCR, benchmark ni servidor de QA propio pendiente.
+
+SIGUIENTE P113:retrieval léxico,denso ehíbrido; comparar3retrievers con gold. Incluir
+sparse/dense,BM25,vector,RRF/otrasfusiones,metadatafilters,multi-queryyqueryrewrite.
+Reusar corpusversionado deP112, fijar partición/preguntas/modelos/protocolo ANTES de
+rankings nuevos; conservar regresiones ynegativos. No reducir P113 a comparar chunking.
+Ruta propuesta de7entregas en ruta-retrieval-hibrido.md; todavía no hay posts ni
+capturas P113. Antes de implementar, fijar el contrato experimental que recoge esa ruta.
+
+Commits previos blogc2f71c5/examplescc99f36. P112no comiteado; no commits/push/publicación/
+traducción/audioautomáticos. GapsP026/P045Stripe/P058soak ySerie02soloDSA intactos.
+Resto inferior histórico; los planes de6/9 no describen el estado actual.
+
+## Histórico: P112 en desarrollo, seis de nueve drafts verificados
+
+P112/INGEST-OCR/LAYOUT/PROVENANCE/DEDUP/SIZE escritos en español,drafttrue/statusdraft,
+LuisRamírezCalle. Seis diagramas, cinco figuras y siete paneles. 389índices/251exports,
+52labs/53workspaces. Objetivo global175fichas pendiente; inventario87/19/69 no es aceptación.
+
+Ledger real derivado:9fuentes,760unidades conorigen;8grupos bytes,6texto;3representantes
+RUNBOOK/COLUMNS/HTML para recuperación. Controles CACHE300/301/OPPOSITE excluidos.
+Jaccard11/13=.846153846 para dos pares; solo revisión,no fusionados. 367unidades del corpus.
+Ventanas16/32/48:25/13/9;47secuencias de tokenizer reales,sinencoder;máximostokens29/52/77.
+results/ledger.json ytoken-preflight.json congelados. No modificarledger/ranges/inputs/build/
+preflight/protocol/registry/tokenizer-manifest ni fuentes conSHA: nuevos protocolos por fase.
+OCR original y corrección TSV se conservan intactos; no rerun de OCR.
+
+10JS,verify-ledger --tokenizer,241editorial/estructura y17blog pasaron en fase6.
+BuildAstro50rutas. Último QA Chromium tras recuperar deps y reiniciar servidor propio:
+/tmp/ingestion-layout.jACRvx/report.json. 6posts360/1440,poranchura289PDF,712OCR,303layout,
+2HTML,1511rangos provenance,14grupos,2near-cases,47ventanas;sinJSerrors/overflow yteclado/scroll.
+Copy finalenumtraducido,hintscroll ysingular/plural revisados. Figura ySVG sinrecortes.
+Servidor propioactualPID519360 (puerto4322), confirmado vivo; detener al cerrar entrega.
+No proceso deOCR/modelo/benchmark pendiente. Los restores fueron pnpmfrozenforceignore-scripts;
+no variar locks ni usar npm/pip. pnpmexecplaywrightinstallchromium si cache desaparece.
+
+SIGUIENTE: semantic chunking con embeddings reales; overlap y evaluación de recuperación.
+Fijar protocolo ygold ANTES de esos resultados. Baseline32unidades mantiene IDs originales.
+Propuesta: sentencias Intl.Segmenter,partir las muy largas por32unidades,encoderMiniLMq8
+384d del snapshotP111,distancia entreadyacentes umbral.35 ycap32; sin tuning posterior.
+Overlap4/8 sobre32,evitar cola redundante si una ventana ya termina alfinal. BM25fold
+k1=1.2,b=.75 fijo en todas las particiones para aislar chunking; no confundir esa comparación
+con evaluar distintos retrievers. Medir cobertura de evidencia porunidades ycompletitud@3,
+permitir alternativas equivalentes (retención ydirectorio también aparecen en COLUMNS),
+consultas multifactor ynegativas. Corpus minúsculo/known,no test ciego. P112no terminado.
+Estos diseños todavía no son protocolo ejecutado: comprobar archivos actuales al continuar.
+
+Commits previos:blogc2f71c5/examplescc99f36. P112sincomitear. No futuros commits,push,
+publicación,traducción/audio automáticos. GapsP026/P045Stripe/P058soak ySerie02soloDSA intactos.
+Estado inferior histórico.
+
+## Estado vigente: P112 en desarrollo, tres de nueve drafts verificados
+
+Progreso: parsingPDF/HTML,OCR ylayout escritos en español,drafttrue/statusdraft,
+autorLuisRamírezCalle. Tres SVG conceptuales,tres figuras ECharts y visor de cuatro
+paneles. Laboratorio solo packages/document-ingestion,carpetas en inglés. Ver ruta,
+manifiesto y document-ingestion-review.md para evidencia y límites.
+
+Captura real única2026-11-01T21:29:56.612Z: Poppler24.08/Tesseract.js7/core7,modelo
+español fijado. PDFdigital178palabras,columnas110,scan0en capa de texto;OCR178.
+CER0sobre1158caracteres normalizados,escaneo limpio sintético. Confidence no es
+probabilidad;checksum42.646103 es correcto. Layout por filas mezcla columnas y
+produce435ediciones/634caracteres;regla de plantillax306 da0. No generalizar.
+
+IMPORTANTE: TSVsin cabecera causówords=[] en el colectororiginal, pero texto/blocks/
+TSV completos. No reescribir results/extraction.json ni su capture.mjs congelado.
+ocr-tsv/derive producen results/ocr-words.json sin OCRnuevo y verifican cajas con
+blocks. Los consumidores usan esa derivación. Protocol/runtime/fixture-content/
+make-fixtures/parsing/evaluation/archivolock yfuentes conhashes siguen intactos.
+Para próximas fases crear nuevos protocolos/capturas, sin alterar los existentes.
+
+5JS yverifyreadonly,240editorial/estructura,17blog ybuild/Pagefind pasan.
+Chromium:/tmp/ingestion-layout.HcHzD5/report.json;3posts360/1440, poranchura289PDF,
+712OCR,303layout,2HTML. Coordenadas/unidades,valores,teclado yscroll,sin errores ni
+overflow. Diagramas/figuras inspeccionados. Servidor propioPID431789 se detiene al
+cerrar la fase; ningúnOCR/bench pendiente. Dependencias solo con pnpm.
+
+SIGUIENTE: completar provenance(metadata,IDs/versiones,offsets yregión),dedup,
+size chunking,semantic chunking con embeddings reales,overlap eindexación ymedición
+de recuperación de dos estrategias. Son seis entregas pendientes. P112 no terminado.
+No sustituir semantic por separar párrafos ni evaluar con etiquetas posteriores.
+
+386índices/246exports,52labs/53workspaces. Inventario87/19/69 no demuestra aceptación
+de175fichas;completionProvenfalse. GapsP026/P045Stripe/P058soak preservados;Serie02soloDSA.
+Objetivo global activo. Commits previos:blogc2f71c5/examplescc99f36;P112sincomitear.
+No commits/push/publicación/traducción/audio automáticos. Estado inferior histórico.
+
 ## Estado vigente: P111 desarrollado en nueve drafts verificados
 
 Progreso: PG, relevancia y medición completados. Manifiesto 9/9, español,

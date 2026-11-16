@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {retrieveInSteps} from '../multistep.mjs';
+const principal={role:'alpha_reader',tenant:'alpha',maxLevel:0};
+const manual={id:'M',tenant:'alpha',document_key:'manual',access_level:0};
+const restore={id:'R',tenant:'alpha',document_key:'restoration',access_level:0};
+const config={principal,query:'manual',requiredKeys:['restoration'],references:{M:['R']},maxCalls:3,maxSources:3,maxQueuedReferences:8,search:async()=>[manual],loadReference:async()=>restore};
+test('a second authorized source can satisfy a typed requirement',async()=>{const result=await retrieveInSteps(config);assert.equal(result.stop,'requirements_met');assert.equal(result.calls,2);assert.deepEqual(result.documents,[manual,restore]);});
+test('the same workflow cannot exceed a one-call budget',async()=>{let loads=0;const result=await retrieveInSteps({...config,maxCalls:1,loadReference:async()=>{loads++;return restore;}});assert.equal(result.stop,'call_budget');assert.equal(result.calls,1);assert.equal(loads,0);});
+test('zero budget does not invoke search',async()=>{const result=await retrieveInSteps({...config,maxCalls:0,search:async()=>{throw Error('Unexpected query');}});assert.equal(result.calls,0);assert.deepEqual(result.documents,[]);});
+test('cycles are detected as no new reference without repeating a read',async()=>{const result=await retrieveInSteps({...config,references:{M:['M']}});assert.equal(result.stop,'no_progress');assert.equal(result.calls,1);assert.ok(result.trace.some(e=>e.reason==='already_seen'));});
+test('an inaccessible reference consumes a call but adds no evidence',async()=>{const result=await retrieveInSteps({...config,loadReference:async()=>null});assert.equal(result.stop,'no_progress');assert.equal(result.calls,2);assert.deepEqual(result.documents,[manual]);});
+test('another tenant never enters the context even if loader is defective',async()=>{await assert.rejects(retrieveInSteps({...config,loadReference:async()=>({...restore,tenant:'beta'})}),/authorized scope/);});
+test('source and frontier budgets stop different growth',async()=>{assert.equal((await retrieveInSteps({...config,maxSources:1})).stop,'source_budget');assert.equal((await retrieveInSteps({...config,references:{M:['R','S']},maxQueuedReferences:1})).stop,'frontier_budget');});
+test('a malformed budget fails before any retrieval',async()=>{await assert.rejects(retrieveInSteps({...config,maxCalls:1.5}),/maxCalls/);});

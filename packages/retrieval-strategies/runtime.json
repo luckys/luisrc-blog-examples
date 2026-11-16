@@ -1,0 +1,22 @@
+{
+  "node": "v24.19.0",
+  "icu": "78.3",
+  "unicode": "17.0",
+  "platform": "linux",
+  "arch": "x64",
+  "cpu": "Intel(R) Core(TM) Ultra 9 285H",
+  "transformersJs": "3.8.1",
+  "onnxRuntimeNode": "1.21.0",
+  "encoder": {
+    "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+    "dtype": "q8",
+    "device": "cpu",
+    "dimensions": 384,
+    "maxTokens": 128,
+    "batchSize": 8,
+    "intraOpNumThreads": 2,
+    "interOpNumThreads": 1,
+    "pooling": "attention-mask weighted mean including active special tokens, raw float32"
+  }
+}

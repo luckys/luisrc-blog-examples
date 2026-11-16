@@ -1,0 +1,50 @@
+<svg width="360" height="440" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 360 440">
+<rect width="360" height="440" x="0" y="0" fill="#0f172a"></rect>
+<path d="M42 385.5L336 385.5" fill="none" pointer-events="visible" stroke="#334155" class="cache-figure-cls-0"></path>
+<path d="M42 330.5L336 330.5" fill="none" pointer-events="visible" stroke="#334155" class="cache-figure-cls-0"></path>
+<path d="M42 276.5L336 276.5" fill="none" pointer-events="visible" stroke="#334155" class="cache-figure-cls-0"></path>
+<path d="M42 221.5L336 221.5" fill="none" pointer-events="visible" stroke="#334155" class="cache-figure-cls-0"></path>
+<path d="M42 166.5L336 166.5" fill="none" pointer-events="visible" stroke="#334155" class="cache-figure-cls-0"></path>
+<path d="M42 112.5L336 112.5" fill="none" pointer-events="visible" stroke="#334155" class="cache-figure-cls-0"></path>
+<path d="M42 385.5L336 385.5" fill="none" pointer-events="visible" stroke="#54555a" stroke-linecap="round" class="cache-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(34 385)" fill="#e2e8f0">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(34 330.4)" fill="#e2e8f0">3</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(34 275.8)" fill="#e2e8f0">6</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(34 221.2)" fill="#e2e8f0">9</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(34 166.6)" fill="#e2e8f0">12</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(34 112)" fill="#e2e8f0">15</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(91 393)" fill="#e2e8f0">Hit</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(189 393)" fill="#e2e8f0">Miss</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(287 393)" fill="#e2e8f0">Caducada</text>
+<path d="M67 385l48 0l0 -145.6l-48 0Z" fill="#4ade80" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="cache-figure-cls-1"></path>
+<path d="M165 385l48 0l0 -236.6l-48 0Z" fill="#fbbf24" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="cache-figure-cls-2"></path>
+<path d="M263 385l48 0l0 -18.2l-48 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="cache-figure-cls-3"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(91 234.4)" fill="#e2e8f0">8</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(189 143.4)" fill="#e2e8f0">13</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(287 361.8)" fill="#e2e8f0">1</text>
+<path d="M-5 -5l251.7 0l0 75l-251.7 0Z" transform="translate(17 15)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#3c3c41" stroke-width="0" class="cache-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:17px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="8.5" transform="translate(17 15)" fill="#e2e8f0">Qué ocurrió en los 22 lookups</text>
+<path d="M0 27l239.5 0l0 38l-239.5 0Z" transform="translate(17 15)" fill="none" pointer-events="visible" class="cache-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" y="36.5" transform="translate(17 15)" fill="#cbd5e1">Los dos errores SQL están entre los misses</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" y="55.5" transform="translate(17 15)" fill="#cbd5e1">Conteos de una carga sintética secuencial</text>
+<style ><![CDATA[
+.cache-figure-cls-0:hover {
+pointer-events:none;
+}
+.cache-figure-cls-1:hover {
+cursor:pointer;
+fill:rgba(81,244,140,1);
+}
+.cache-figure-cls-2:hover {
+cursor:pointer;
+fill:rgba(255,210,39,1);
+}
+.cache-figure-cls-3:hover {
+cursor:pointer;
+fill:rgba(61,207,255,1);
+}
+
+]]>
+
+</style>
+</svg>

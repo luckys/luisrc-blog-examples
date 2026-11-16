@@ -1,0 +1,30 @@
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+import {readDataset} from './verify.mjs';
+import {validateDataset} from './dataset.mjs';
+import {runRetrieval} from './retrieval-runner.v1.mjs';
+import {evaluateRanking, summarizeMetrics} from './ranking-metrics.v1.mjs';
+const root = new URL('./', import.meta.url);
+const read = file => readFile(new URL(file, root));
+const record = JSON.parse(await read('results/rankings.v1.json'));
+assert.equal(record.kind, 'actual_fixed_in_process_bm25_search_and_offline_metrics');
+for (const [file, hash] of Object.entries(record.sourceHashes)) assert.equal(createHash('sha256').update(await read(file)).digest('hex'), hash, file);
+const data = await readDataset();
+validateDataset(data);
+const protocol = JSON.parse(await read('ranking-protocol.v1.json'));
+assert.deepEqual(record.protocol, protocol);
+assert.equal(record.modelExecutions, 0);
+const replay = runRetrieval(data.corpus.documents, data.queries.rows, protocol.retriever);
+assert.equal(record.searchExecutions, replay.length);
+assert.equal(record.rows.length, replay.length);
+for (const [i, row] of replay.entries()) {
+  const label = data.gold.rows.find(g => g.queryId === row.queryId);
+  assert.deepEqual(record.rows[i], {...row, evaluations: protocol.cutoffs.map(k => evaluateRanking(row.ranking.map(r => r.id), label.qrels, k))});
+}
+assert.equal(record.cutoffEvaluations, replay.length * protocol.cutoffs.length);
+const summaries = ['dev', 'test', 'all'].flatMap(split => protocol.cutoffs.map(k => ({split, k, ...summarizeMetrics(record.rows.filter(r => split === 'all' || r.split === split).map(row => ({metrics: row.evaluations.find(m => m.k === k)})))})));
+assert.deepEqual(record.summaries, summaries);
+const plan = JSON.parse(await read('comparison-plan.v1.json'));
+assert.equal(plan.status, 'not_executed');assert.equal(plan.models.length, 2);assert.notEqual(plan.models[0].revision, plan.models[1].revision);
+console.log(JSON.stringify({verified: true, searches: replay.length, evaluations: record.cutoffEvaluations, summaries: summaries.length, modelExecutions: 0, datasetUnchanged: true}, null, 2));

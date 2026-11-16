@@ -1,0 +1,6852 @@
+{
+  "kind": "immutable_synthetic_source_registry",
+  "documents": [
+    {
+      "documentId": "RUNBOOK",
+      "documentVersion": "6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11",
+      "file": "fixtures/digital.pdf",
+      "kind": "pdf",
+      "role": "corpus",
+      "selection": "all-words",
+      "normalizationPolicy": "canonical-words-nfc-single-space/v1",
+      "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+      "contentHash": "dc7fc961b942e43b84bf0611ea07590835886da871b9489e7dfc3977c8a32ec3",
+      "text": "AtlasQueue: recuperación verificada Una copia de seguridad no garantiza que el servicio pueda recuperarse. La prueba debe restaurar datos y comprobar su contenido. El manifiesto registra el checksum SHA-256 y la versión del esquema. Antes de restaurar, comprobar que ambos coinciden con el entorno de prueba. La retención de las copias es de treinta días. Mantener dos copias en ubicaciones diferentes evita depender de un único volumen. La restauración usa un directorio aislado. Nunca sobrescribir los datos de producción durante un ejercicio. Después de cargar la copia, reproducir el registro WAL hasta el punto acordado. Una escritura posterior no pertenece a ese snapshot. El informe guarda el identificador de la copia, la fecha y los resultados de las comprobaciones. Una ejecución sin errores no demuestra que falten cero registros. Si el checksum no coincide, detener la restauración y conservar el archivo para investigar. No sustituir el checksum esperado por el observado. El objetivo del ejercicio es detectar pérdidas y límites del procedimiento. Los tiempos locales no prometen el tiempo de recuperación de otro sistema. AtlasQueue | Página 1",
+      "units": [
+        {
+          "ordinal": 0,
+          "text": "AtlasQueue:",
+          "rawText": "AtlasQueue:",
+          "start": 0,
+          "end": 11,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 0,
+            "bbox": [
+              40,
+              27.076,
+              146.02,
+              43.726
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 1,
+          "text": "recuperación",
+          "rawText": "recuperación",
+          "start": 12,
+          "end": 24,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 1,
+            "bbox": [
+              151.024,
+              27.076,
+              264.064,
+              43.726
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 2,
+          "text": "verificada",
+          "rawText": "verificada",
+          "start": 25,
+          "end": 35,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 2,
+            "bbox": [
+              269.068,
+              27.076,
+              353.11,
+              43.726
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 3,
+          "text": "Una",
+          "rawText": "Una",
+          "start": 36,
+          "end": 39,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 3,
+            "bbox": [
+              40,
+              79.384,
+              62.008,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 4,
+          "text": "copia",
+          "rawText": "copia",
+          "start": 40,
+          "end": 45,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 4,
+            "bbox": [
+              65.344,
+              79.384,
+              94.024,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 5,
+          "text": "de",
+          "rawText": "de",
+          "start": 46,
+          "end": 48,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 5,
+            "bbox": [
+              97.36,
+              79.384,
+              110.704,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 6,
+          "text": "seguridad",
+          "rawText": "seguridad",
+          "start": 49,
+          "end": 58,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 6,
+            "bbox": [
+              114.04,
+              79.384,
+              166.732,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 7,
+          "text": "no",
+          "rawText": "no",
+          "start": 59,
+          "end": 61,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 7,
+            "bbox": [
+              170.068,
+              79.384,
+              183.412,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 8,
+          "text": "garantiza",
+          "rawText": "garantiza",
+          "start": 62,
+          "end": 71,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 8,
+            "bbox": [
+              186.748,
+              79.384,
+              236.104,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 9,
+          "text": "que",
+          "rawText": "que",
+          "start": 72,
+          "end": 75,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 9,
+            "bbox": [
+              239.44,
+              79.384,
+              259.456,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 10,
+          "text": "el",
+          "rawText": "el",
+          "start": 76,
+          "end": 78,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 10,
+            "bbox": [
+              262.792,
+              79.384,
+              272.128,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 11,
+          "text": "servicio",
+          "rawText": "servicio",
+          "start": 79,
+          "end": 87,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 11,
+            "bbox": [
+              275.464,
+              79.384,
+              316.132,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 12,
+          "text": "pueda",
+          "rawText": "pueda",
+          "start": 88,
+          "end": 93,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 12,
+            "bbox": [
+              319.468,
+              79.384,
+              352.828,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 13,
+          "text": "recuperarse.",
+          "rawText": "recuperarse.",
+          "start": 94,
+          "end": 106,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 13,
+            "bbox": [
+              356.164,
+              79.384,
+              423.52,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 14,
+          "text": "La",
+          "rawText": "La",
+          "start": 107,
+          "end": 109,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 14,
+            "bbox": [
+              426.856,
+              79.384,
+              440.2,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 15,
+          "text": "prueba",
+          "rawText": "prueba",
+          "start": 110,
+          "end": 116,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 15,
+            "bbox": [
+              443.536,
+              79.384,
+              480.892,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 16,
+          "text": "debe",
+          "rawText": "debe",
+          "start": 117,
+          "end": 121,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 16,
+            "bbox": [
+              484.228,
+              79.384,
+              510.916,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 17,
+          "text": "restaurar",
+          "rawText": "restaurar",
+          "start": 122,
+          "end": 131,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 17,
+            "bbox": [
+              514.252,
+              79.384,
+              562.264,
+              90.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 18,
+          "text": "datos",
+          "rawText": "datos",
+          "start": 132,
+          "end": 137,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 18,
+            "bbox": [
+              40,
+              97.384,
+              69.352,
+              108.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 19,
+          "text": "y",
+          "rawText": "y",
+          "start": 138,
+          "end": 139,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 19,
+            "bbox": [
+              72.688,
+              97.384,
+              78.688,
+              108.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 20,
+          "text": "comprobar",
+          "rawText": "comprobar",
+          "start": 140,
+          "end": 149,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 20,
+            "bbox": [
+              82.024,
+              97.384,
+              139.372,
+              108.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 21,
+          "text": "su",
+          "rawText": "su",
+          "start": 150,
+          "end": 152,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 21,
+            "bbox": [
+              142.708,
+              97.384,
+              155.38,
+              108.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 22,
+          "text": "contenido.",
+          "rawText": "contenido.",
+          "start": 153,
+          "end": 163,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 22,
+            "bbox": [
+              158.716,
+              97.384,
+              214.084,
+              108.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 23,
+          "text": "El",
+          "rawText": "El",
+          "start": 164,
+          "end": 166,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 23,
+            "bbox": [
+              40,
+              127.384,
+              50.668,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 24,
+          "text": "manifiesto",
+          "rawText": "manifiesto",
+          "start": 167,
+          "end": 177,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 24,
+            "bbox": [
+              54.004,
+              127.384,
+              108.688,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 25,
+          "text": "registra",
+          "rawText": "registra",
+          "start": 178,
+          "end": 186,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 25,
+            "bbox": [
+              112.024,
+              127.384,
+              152.032,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 26,
+          "text": "el",
+          "rawText": "el",
+          "start": 187,
+          "end": 189,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 26,
+            "bbox": [
+              155.368,
+              127.384,
+              164.704,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 27,
+          "text": "checksum",
+          "rawText": "checksum",
+          "start": 190,
+          "end": 198,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 27,
+            "bbox": [
+              168.04,
+              127.384,
+              222.052,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 28,
+          "text": "SHA-256",
+          "rawText": "SHA-256",
+          "start": 199,
+          "end": 206,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 28,
+            "bbox": [
+              225.388,
+              127.384,
+              274.072,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 29,
+          "text": "y",
+          "rawText": "y",
+          "start": 207,
+          "end": 208,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 29,
+            "bbox": [
+              277.408,
+              127.384,
+              283.408,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 30,
+          "text": "la",
+          "rawText": "la",
+          "start": 209,
+          "end": 211,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 30,
+            "bbox": [
+              286.744,
+              127.384,
+              296.08,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 31,
+          "text": "versión",
+          "rawText": "versión",
+          "start": 212,
+          "end": 219,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 31,
+            "bbox": [
+              299.416,
+              127.384,
+              338.092,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 32,
+          "text": "del",
+          "rawText": "del",
+          "start": 220,
+          "end": 223,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 32,
+            "bbox": [
+              341.428,
+              127.384,
+              357.436,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 33,
+          "text": "esquema.",
+          "rawText": "esquema.",
+          "start": 224,
+          "end": 232,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 33,
+            "bbox": [
+              360.772,
+              127.384,
+              413.464,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 34,
+          "text": "Antes",
+          "rawText": "Antes",
+          "start": 233,
+          "end": 238,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 34,
+            "bbox": [
+              416.8,
+              127.384,
+              447.484,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 35,
+          "text": "de",
+          "rawText": "de",
+          "start": 239,
+          "end": 241,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 35,
+            "bbox": [
+              450.82,
+              127.384,
+              464.164,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 36,
+          "text": "restaurar,",
+          "rawText": "restaurar,",
+          "start": 242,
+          "end": 252,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 36,
+            "bbox": [
+              467.5,
+              127.384,
+              518.848,
+              138.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 37,
+          "text": "comprobar",
+          "rawText": "comprobar",
+          "start": 253,
+          "end": 262,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 37,
+            "bbox": [
+              40,
+              145.384,
+              97.348,
+              156.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 38,
+          "text": "que",
+          "rawText": "que",
+          "start": 263,
+          "end": 266,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 38,
+            "bbox": [
+              100.684,
+              145.384,
+              120.7,
+              156.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 39,
+          "text": "ambos",
+          "rawText": "ambos",
+          "start": 267,
+          "end": 272,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 39,
+            "bbox": [
+              124.036,
+              145.384,
+              160.048,
+              156.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 40,
+          "text": "coinciden",
+          "rawText": "coinciden",
+          "start": 273,
+          "end": 282,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 40,
+            "bbox": [
+              163.384,
+              145.384,
+              214.072,
+              156.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 41,
+          "text": "con",
+          "rawText": "con",
+          "start": 283,
+          "end": 286,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 41,
+            "bbox": [
+              217.408,
+              145.384,
+              236.752,
+              156.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 42,
+          "text": "el",
+          "rawText": "el",
+          "start": 287,
+          "end": 289,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 42,
+            "bbox": [
+              240.088,
+              145.384,
+              249.424,
+              156.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 43,
+          "text": "entorno",
+          "rawText": "entorno",
+          "start": 290,
+          "end": 297,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 43,
+            "bbox": [
+              252.76,
+              145.384,
+              293.452,
+              156.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 44,
+          "text": "de",
+          "rawText": "de",
+          "start": 298,
+          "end": 300,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 44,
+            "bbox": [
+              296.788,
+              145.384,
+              310.132,
+              156.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 45,
+          "text": "prueba.",
+          "rawText": "prueba.",
+          "start": 301,
+          "end": 308,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 45,
+            "bbox": [
+              313.468,
+              145.384,
+              354.16,
+              156.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 46,
+          "text": "La",
+          "rawText": "La",
+          "start": 309,
+          "end": 311,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 46,
+            "bbox": [
+              40,
+              175.384,
+              53.344,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 47,
+          "text": "retención",
+          "rawText": "retención",
+          "start": 312,
+          "end": 321,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 47,
+            "bbox": [
+              56.68,
+              175.384,
+              106.036,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 48,
+          "text": "de",
+          "rawText": "de",
+          "start": 322,
+          "end": 324,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 48,
+            "bbox": [
+              109.372,
+              175.384,
+              122.716,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 49,
+          "text": "las",
+          "rawText": "las",
+          "start": 325,
+          "end": 328,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 49,
+            "bbox": [
+              126.052,
+              175.384,
+              141.388,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 50,
+          "text": "copias",
+          "rawText": "copias",
+          "start": 329,
+          "end": 335,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 50,
+            "bbox": [
+              144.724,
+              175.384,
+              179.404,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 51,
+          "text": "es",
+          "rawText": "es",
+          "start": 336,
+          "end": 338,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 51,
+            "bbox": [
+              182.74,
+              175.384,
+              195.412,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 52,
+          "text": "de",
+          "rawText": "de",
+          "start": 339,
+          "end": 341,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 52,
+            "bbox": [
+              198.748,
+              175.384,
+              212.092,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 53,
+          "text": "treinta",
+          "rawText": "treinta",
+          "start": 342,
+          "end": 349,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 53,
+            "bbox": [
+              215.428,
+              175.384,
+              248.776,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 54,
+          "text": "días.",
+          "rawText": "días.",
+          "start": 350,
+          "end": 355,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 54,
+            "bbox": [
+              252.112,
+              175.384,
+              278.128,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 55,
+          "text": "Mantener",
+          "rawText": "Mantener",
+          "start": 356,
+          "end": 364,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 55,
+            "bbox": [
+              281.464,
+              175.384,
+              332.152,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 56,
+          "text": "dos",
+          "rawText": "dos",
+          "start": 365,
+          "end": 368,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 56,
+            "bbox": [
+              335.488,
+              175.384,
+              354.832,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 57,
+          "text": "copias",
+          "rawText": "copias",
+          "start": 369,
+          "end": 375,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 57,
+            "bbox": [
+              358.168,
+              175.384,
+              392.848,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 58,
+          "text": "en",
+          "rawText": "en",
+          "start": 376,
+          "end": 378,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 58,
+            "bbox": [
+              396.184,
+              175.384,
+              409.528,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 59,
+          "text": "ubicaciones",
+          "rawText": "ubicaciones",
+          "start": 379,
+          "end": 390,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 59,
+            "bbox": [
+              412.864,
+              175.384,
+              476.224,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 60,
+          "text": "diferentes",
+          "rawText": "diferentes",
+          "start": 391,
+          "end": 401,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 60,
+            "bbox": [
+              479.56,
+              175.384,
+              532.252,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 61,
+          "text": "evita",
+          "rawText": "evita",
+          "start": 402,
+          "end": 407,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 61,
+            "bbox": [
+              535.588,
+              175.384,
+              560.932,
+              186.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 62,
+          "text": "depender",
+          "rawText": "depender",
+          "start": 408,
+          "end": 416,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 62,
+            "bbox": [
+              40,
+              193.384,
+              90.7,
+              204.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 63,
+          "text": "de",
+          "rawText": "de",
+          "start": 417,
+          "end": 419,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 63,
+            "bbox": [
+              94.036,
+              193.384,
+              107.38,
+              204.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 64,
+          "text": "un",
+          "rawText": "un",
+          "start": 420,
+          "end": 422,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 64,
+            "bbox": [
+              110.716,
+              193.384,
+              124.06,
+              204.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 65,
+          "text": "único",
+          "rawText": "único",
+          "start": 423,
+          "end": 428,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 65,
+            "bbox": [
+              127.396,
+              193.384,
+              156.076,
+              204.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 66,
+          "text": "volumen.",
+          "rawText": "volumen.",
+          "start": 429,
+          "end": 437,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 66,
+            "bbox": [
+              159.412,
+              193.384,
+              208.096,
+              204.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 67,
+          "text": "La",
+          "rawText": "La",
+          "start": 438,
+          "end": 440,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 67,
+            "bbox": [
+              40,
+              223.384,
+              53.344,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 68,
+          "text": "restauración",
+          "rawText": "restauración",
+          "start": 441,
+          "end": 453,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 68,
+            "bbox": [
+              56.68,
+              223.384,
+              122.704,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 69,
+          "text": "usa",
+          "rawText": "usa",
+          "start": 454,
+          "end": 457,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 69,
+            "bbox": [
+              126.04,
+              223.384,
+              145.384,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 70,
+          "text": "un",
+          "rawText": "un",
+          "start": 458,
+          "end": 460,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 70,
+            "bbox": [
+              148.72,
+              223.384,
+              162.064,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 71,
+          "text": "directorio",
+          "rawText": "directorio",
+          "start": 461,
+          "end": 471,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 71,
+            "bbox": [
+              165.4,
+              223.384,
+              214.744,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 72,
+          "text": "aislado.",
+          "rawText": "aislado.",
+          "start": 472,
+          "end": 480,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 72,
+            "bbox": [
+              218.08,
+              223.384,
+              259.432,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 73,
+          "text": "Nunca",
+          "rawText": "Nunca",
+          "start": 481,
+          "end": 486,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 73,
+            "bbox": [
+              262.768,
+              223.384,
+              297.448,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 74,
+          "text": "sobrescribir",
+          "rawText": "sobrescribir",
+          "start": 487,
+          "end": 499,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 74,
+            "bbox": [
+              300.784,
+              223.384,
+              362.788,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 75,
+          "text": "los",
+          "rawText": "los",
+          "start": 500,
+          "end": 503,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 75,
+            "bbox": [
+              366.124,
+              223.384,
+              381.46,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 76,
+          "text": "datos",
+          "rawText": "datos",
+          "start": 504,
+          "end": 509,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 76,
+            "bbox": [
+              384.796,
+              223.384,
+              414.148,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 77,
+          "text": "de",
+          "rawText": "de",
+          "start": 510,
+          "end": 512,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 77,
+            "bbox": [
+              417.484,
+              223.384,
+              430.828,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 78,
+          "text": "producción",
+          "rawText": "producción",
+          "start": 513,
+          "end": 523,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 78,
+            "bbox": [
+              434.164,
+              223.384,
+              492.856,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 79,
+          "text": "durante",
+          "rawText": "durante",
+          "start": 524,
+          "end": 531,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 79,
+            "bbox": [
+              496.192,
+              223.384,
+              536.884,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 80,
+          "text": "un",
+          "rawText": "un",
+          "start": 532,
+          "end": 534,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 80,
+            "bbox": [
+              540.22,
+              223.384,
+              553.564,
+              234.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 81,
+          "text": "ejercicio.",
+          "rawText": "ejercicio.",
+          "start": 535,
+          "end": 545,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 81,
+            "bbox": [
+              40,
+              241.384,
+              87.34,
+              252.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 82,
+          "text": "Después",
+          "rawText": "Después",
+          "start": 546,
+          "end": 553,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 82,
+            "bbox": [
+              40,
+              271.384,
+              87.352,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 83,
+          "text": "de",
+          "rawText": "de",
+          "start": 554,
+          "end": 556,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 83,
+            "bbox": [
+              90.688,
+              271.384,
+              104.032,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 84,
+          "text": "cargar",
+          "rawText": "cargar",
+          "start": 557,
+          "end": 563,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 84,
+            "bbox": [
+              107.368,
+              271.384,
+              141.376,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 85,
+          "text": "la",
+          "rawText": "la",
+          "start": 564,
+          "end": 566,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 85,
+            "bbox": [
+              144.712,
+              271.384,
+              154.048,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 86,
+          "text": "copia,",
+          "rawText": "copia,",
+          "start": 567,
+          "end": 573,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 86,
+            "bbox": [
+              157.384,
+              271.384,
+              189.4,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 87,
+          "text": "reproducir",
+          "rawText": "reproducir",
+          "start": 574,
+          "end": 584,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 87,
+            "bbox": [
+              192.736,
+              271.384,
+              246.748,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 88,
+          "text": "el",
+          "rawText": "el",
+          "start": 585,
+          "end": 587,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 88,
+            "bbox": [
+              250.084,
+              271.384,
+              259.42,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 89,
+          "text": "registro",
+          "rawText": "registro",
+          "start": 588,
+          "end": 596,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 89,
+            "bbox": [
+              262.756,
+              271.384,
+              302.764,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 90,
+          "text": "WAL",
+          "rawText": "WAL",
+          "start": 597,
+          "end": 600,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 90,
+            "bbox": [
+              306.1,
+              271.384,
+              332.104,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 91,
+          "text": "hasta",
+          "rawText": "hasta",
+          "start": 601,
+          "end": 606,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 91,
+            "bbox": [
+              335.44,
+              271.384,
+              364.792,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 92,
+          "text": "el",
+          "rawText": "el",
+          "start": 607,
+          "end": 609,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 92,
+            "bbox": [
+              368.128,
+              271.384,
+              377.464,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 93,
+          "text": "punto",
+          "rawText": "punto",
+          "start": 610,
+          "end": 615,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 93,
+            "bbox": [
+              380.8,
+              271.384,
+              410.824,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 94,
+          "text": "acordado.",
+          "rawText": "acordado.",
+          "start": 616,
+          "end": 625,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 94,
+            "bbox": [
+              414.16,
+              271.384,
+              467.524,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 95,
+          "text": "Una",
+          "rawText": "Una",
+          "start": 626,
+          "end": 629,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 95,
+            "bbox": [
+              470.86,
+              271.384,
+              492.868,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 96,
+          "text": "escritura",
+          "rawText": "escritura",
+          "start": 630,
+          "end": 639,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 96,
+            "bbox": [
+              496.204,
+              271.384,
+              542.212,
+              282.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 97,
+          "text": "posterior",
+          "rawText": "posterior",
+          "start": 640,
+          "end": 649,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 97,
+            "bbox": [
+              40,
+              289.384,
+              86.68,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 98,
+          "text": "no",
+          "rawText": "no",
+          "start": 650,
+          "end": 652,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 98,
+            "bbox": [
+              90.016,
+              289.384,
+              103.36,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 99,
+          "text": "pertenece",
+          "rawText": "pertenece",
+          "start": 653,
+          "end": 662,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 99,
+            "bbox": [
+              106.696,
+              289.384,
+              160.06,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 100,
+          "text": "a",
+          "rawText": "a",
+          "start": 663,
+          "end": 664,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 100,
+            "bbox": [
+              163.396,
+              289.384,
+              170.068,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 101,
+          "text": "ese",
+          "rawText": "ese",
+          "start": 665,
+          "end": 668,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 101,
+            "bbox": [
+              173.404,
+              289.384,
+              192.748,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 102,
+          "text": "snapshot.",
+          "rawText": "snapshot.",
+          "start": 669,
+          "end": 678,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 102,
+            "bbox": [
+              196.084,
+              289.384,
+              248.116,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 103,
+          "text": "El",
+          "rawText": "El",
+          "start": 679,
+          "end": 681,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 103,
+            "bbox": [
+              40,
+              319.384,
+              50.668,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 104,
+          "text": "informe",
+          "rawText": "informe",
+          "start": 682,
+          "end": 689,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 104,
+            "bbox": [
+              54.004,
+              319.384,
+              94.012,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 105,
+          "text": "guarda",
+          "rawText": "guarda",
+          "start": 690,
+          "end": 696,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 105,
+            "bbox": [
+              97.348,
+              319.384,
+              134.704,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 106,
+          "text": "el",
+          "rawText": "el",
+          "start": 697,
+          "end": 699,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 106,
+            "bbox": [
+              138.04,
+              319.384,
+              147.376,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 107,
+          "text": "identificador",
+          "rawText": "identificador",
+          "start": 700,
+          "end": 713,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 107,
+            "bbox": [
+              150.712,
+              319.384,
+              215.404,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 108,
+          "text": "de",
+          "rawText": "de",
+          "start": 714,
+          "end": 716,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 108,
+            "bbox": [
+              218.74,
+              319.384,
+              232.084,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 109,
+          "text": "la",
+          "rawText": "la",
+          "start": 717,
+          "end": 719,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 109,
+            "bbox": [
+              235.42,
+              319.384,
+              244.756,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 110,
+          "text": "copia,",
+          "rawText": "copia,",
+          "start": 720,
+          "end": 726,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 110,
+            "bbox": [
+              248.092,
+              319.384,
+              280.108,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 111,
+          "text": "la",
+          "rawText": "la",
+          "start": 727,
+          "end": 729,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 111,
+            "bbox": [
+              283.444,
+              319.384,
+              292.78,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 112,
+          "text": "fecha",
+          "rawText": "fecha",
+          "start": 730,
+          "end": 735,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 112,
+            "bbox": [
+              296.116,
+              319.384,
+              325.468,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 113,
+          "text": "y",
+          "rawText": "y",
+          "start": 736,
+          "end": 737,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 113,
+            "bbox": [
+              328.804,
+              319.384,
+              334.804,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 114,
+          "text": "los",
+          "rawText": "los",
+          "start": 738,
+          "end": 741,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 114,
+            "bbox": [
+              338.14,
+              319.384,
+              353.476,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 115,
+          "text": "resultados",
+          "rawText": "resultados",
+          "start": 742,
+          "end": 752,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 115,
+            "bbox": [
+              356.812,
+              319.384,
+              412.168,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 116,
+          "text": "de",
+          "rawText": "de",
+          "start": 753,
+          "end": 755,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 116,
+            "bbox": [
+              415.504,
+              319.384,
+              428.848,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 117,
+          "text": "las",
+          "rawText": "las",
+          "start": 756,
+          "end": 759,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 117,
+            "bbox": [
+              432.184,
+              319.384,
+              447.52,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 118,
+          "text": "comprobaciones.",
+          "rawText": "comprobaciones.",
+          "start": 760,
+          "end": 775,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 118,
+            "bbox": [
+              450.856,
+              319.384,
+              542.224,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 119,
+          "text": "Una",
+          "rawText": "Una",
+          "start": 776,
+          "end": 779,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 119,
+            "bbox": [
+              545.56,
+              319.384,
+              567.568,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 120,
+          "text": "ejecución",
+          "rawText": "ejecución",
+          "start": 780,
+          "end": 789,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 120,
+            "bbox": [
+              40,
+              337.384,
+              90.688,
+              348.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 121,
+          "text": "sin",
+          "rawText": "sin",
+          "start": 790,
+          "end": 793,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 121,
+            "bbox": [
+              94.024,
+              337.384,
+              109.36,
+              348.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 122,
+          "text": "errores",
+          "rawText": "errores",
+          "start": 794,
+          "end": 801,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 122,
+            "bbox": [
+              112.696,
+              337.384,
+              150.7,
+              348.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 123,
+          "text": "no",
+          "rawText": "no",
+          "start": 802,
+          "end": 804,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 123,
+            "bbox": [
+              154.036,
+              337.384,
+              167.38,
+              348.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 124,
+          "text": "demuestra",
+          "rawText": "demuestra",
+          "start": 805,
+          "end": 814,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 124,
+            "bbox": [
+              170.716,
+              337.384,
+              227.404,
+              348.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 125,
+          "text": "que",
+          "rawText": "que",
+          "start": 815,
+          "end": 818,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 125,
+            "bbox": [
+              230.74,
+              337.384,
+              250.756,
+              348.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 126,
+          "text": "falten",
+          "rawText": "falten",
+          "start": 819,
+          "end": 825,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 126,
+            "bbox": [
+              254.092,
+              337.384,
+              283.444,
+              348.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 127,
+          "text": "cero",
+          "rawText": "cero",
+          "start": 826,
+          "end": 830,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 127,
+            "bbox": [
+              286.78,
+              337.384,
+              310.12,
+              348.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 128,
+          "text": "registros.",
+          "rawText": "registros.",
+          "start": 831,
+          "end": 841,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 128,
+            "bbox": [
+              313.456,
+              337.384,
+              362.8,
+              348.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 129,
+          "text": "Si",
+          "rawText": "Si",
+          "start": 842,
+          "end": 844,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 129,
+            "bbox": [
+              40,
+              367.384,
+              50.668,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 130,
+          "text": "el",
+          "rawText": "el",
+          "start": 845,
+          "end": 847,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 130,
+            "bbox": [
+              54.004,
+              367.384,
+              63.34,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 131,
+          "text": "checksum",
+          "rawText": "checksum",
+          "start": 848,
+          "end": 856,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 131,
+            "bbox": [
+              66.676,
+              367.384,
+              120.688,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 132,
+          "text": "no",
+          "rawText": "no",
+          "start": 857,
+          "end": 859,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 132,
+            "bbox": [
+              124.024,
+              367.384,
+              137.368,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 133,
+          "text": "coincide,",
+          "rawText": "coincide,",
+          "start": 860,
+          "end": 869,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 133,
+            "bbox": [
+              140.704,
+              367.384,
+              188.056,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 134,
+          "text": "detener",
+          "rawText": "detener",
+          "start": 870,
+          "end": 877,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 134,
+            "bbox": [
+              191.392,
+              367.384,
+              232.084,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 135,
+          "text": "la",
+          "rawText": "la",
+          "start": 878,
+          "end": 880,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 135,
+            "bbox": [
+              235.42,
+              367.384,
+              244.756,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 136,
+          "text": "restauración",
+          "rawText": "restauración",
+          "start": 881,
+          "end": 893,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 136,
+            "bbox": [
+              248.092,
+              367.384,
+              314.116,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 137,
+          "text": "y",
+          "rawText": "y",
+          "start": 894,
+          "end": 895,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 137,
+            "bbox": [
+              317.452,
+              367.384,
+              323.452,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 138,
+          "text": "conservar",
+          "rawText": "conservar",
+          "start": 896,
+          "end": 905,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 138,
+            "bbox": [
+              326.788,
+              367.384,
+              379.468,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 139,
+          "text": "el",
+          "rawText": "el",
+          "start": 906,
+          "end": 908,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 139,
+            "bbox": [
+              382.804,
+              367.384,
+              392.14,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 140,
+          "text": "archivo",
+          "rawText": "archivo",
+          "start": 909,
+          "end": 916,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 140,
+            "bbox": [
+              395.476,
+              367.384,
+              434.152,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 141,
+          "text": "para",
+          "rawText": "para",
+          "start": 917,
+          "end": 921,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 141,
+            "bbox": [
+              437.488,
+              367.384,
+              461.5,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 142,
+          "text": "investigar.",
+          "rawText": "investigar.",
+          "start": 922,
+          "end": 933,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 142,
+            "bbox": [
+              464.836,
+              367.384,
+              519.52,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 143,
+          "text": "No",
+          "rawText": "No",
+          "start": 934,
+          "end": 936,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 143,
+            "bbox": [
+              522.856,
+              367.384,
+              538.192,
+              378.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 144,
+          "text": "sustituir",
+          "rawText": "sustituir",
+          "start": 937,
+          "end": 946,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 144,
+            "bbox": [
+              40,
+              385.384,
+              81.34,
+              396.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 145,
+          "text": "el",
+          "rawText": "el",
+          "start": 947,
+          "end": 949,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 145,
+            "bbox": [
+              84.676,
+              385.384,
+              94.012,
+              396.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 146,
+          "text": "checksum",
+          "rawText": "checksum",
+          "start": 950,
+          "end": 958,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 146,
+            "bbox": [
+              97.348,
+              385.384,
+              151.36,
+              396.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 147,
+          "text": "esperado",
+          "rawText": "esperado",
+          "start": 959,
+          "end": 967,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 147,
+            "bbox": [
+              154.696,
+              385.384,
+              204.724,
+              396.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 148,
+          "text": "por",
+          "rawText": "por",
+          "start": 968,
+          "end": 971,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 148,
+            "bbox": [
+              208.06,
+              385.384,
+              225.4,
+              396.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 149,
+          "text": "el",
+          "rawText": "el",
+          "start": 972,
+          "end": 974,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 149,
+            "bbox": [
+              228.736,
+              385.384,
+              238.072,
+              396.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 150,
+          "text": "observado.",
+          "rawText": "observado.",
+          "start": 975,
+          "end": 985,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 150,
+            "bbox": [
+              241.408,
+              385.384,
+              300.772,
+              396.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 151,
+          "text": "El",
+          "rawText": "El",
+          "start": 986,
+          "end": 988,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 151,
+            "bbox": [
+              40,
+              415.384,
+              50.668,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 152,
+          "text": "objetivo",
+          "rawText": "objetivo",
+          "start": 989,
+          "end": 997,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 152,
+            "bbox": [
+              54.004,
+              415.384,
+              95.356,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 153,
+          "text": "del",
+          "rawText": "del",
+          "start": 998,
+          "end": 1001,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 153,
+            "bbox": [
+              98.692,
+              415.384,
+              114.7,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 154,
+          "text": "ejercicio",
+          "rawText": "ejercicio",
+          "start": 1002,
+          "end": 1011,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 154,
+            "bbox": [
+              118.036,
+              415.384,
+              162.04,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 155,
+          "text": "es",
+          "rawText": "es",
+          "start": 1012,
+          "end": 1014,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 155,
+            "bbox": [
+              165.376,
+              415.384,
+              178.048,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 156,
+          "text": "detectar",
+          "rawText": "detectar",
+          "start": 1015,
+          "end": 1023,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 156,
+            "bbox": [
+              181.384,
+              415.384,
+              224.74,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 157,
+          "text": "pérdidas",
+          "rawText": "pérdidas",
+          "start": 1024,
+          "end": 1032,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 157,
+            "bbox": [
+              228.076,
+              415.384,
+              274.096,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 158,
+          "text": "y",
+          "rawText": "y",
+          "start": 1033,
+          "end": 1034,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 158,
+            "bbox": [
+              277.432,
+              415.384,
+              283.432,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 159,
+          "text": "límites",
+          "rawText": "límites",
+          "start": 1035,
+          "end": 1042,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 159,
+            "bbox": [
+              286.768,
+              415.384,
+              321.436,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 160,
+          "text": "del",
+          "rawText": "del",
+          "start": 1043,
+          "end": 1046,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 160,
+            "bbox": [
+              324.772,
+              415.384,
+              340.78,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 161,
+          "text": "procedimiento.",
+          "rawText": "procedimiento.",
+          "start": 1047,
+          "end": 1061,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 161,
+            "bbox": [
+              344.116,
+              415.384,
+              422.812,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 162,
+          "text": "Los",
+          "rawText": "Los",
+          "start": 1062,
+          "end": 1065,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 162,
+            "bbox": [
+              426.148,
+              415.384,
+              445.492,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 163,
+          "text": "tiempos",
+          "rawText": "tiempos",
+          "start": 1066,
+          "end": 1073,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 163,
+            "bbox": [
+              448.828,
+              415.384,
+              490.84,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 164,
+          "text": "locales",
+          "rawText": "locales",
+          "start": 1074,
+          "end": 1081,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 164,
+            "bbox": [
+              494.176,
+              415.384,
+              531.52,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 165,
+          "text": "no",
+          "rawText": "no",
+          "start": 1082,
+          "end": 1084,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 165,
+            "bbox": [
+              534.856,
+              415.384,
+              548.2,
+              426.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 166,
+          "text": "prometen",
+          "rawText": "prometen",
+          "start": 1085,
+          "end": 1093,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 166,
+            "bbox": [
+              40,
+              433.384,
+              90.688,
+              444.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 167,
+          "text": "el",
+          "rawText": "el",
+          "start": 1094,
+          "end": 1096,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 167,
+            "bbox": [
+              94.024,
+              433.384,
+              103.36,
+              444.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 168,
+          "text": "tiempo",
+          "rawText": "tiempo",
+          "start": 1097,
+          "end": 1103,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 168,
+            "bbox": [
+              106.696,
+              433.384,
+              142.708,
+              444.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 169,
+          "text": "de",
+          "rawText": "de",
+          "start": 1104,
+          "end": 1106,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 169,
+            "bbox": [
+              146.044,
+              433.384,
+              159.388,
+              444.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 170,
+          "text": "recuperación",
+          "rawText": "recuperación",
+          "start": 1107,
+          "end": 1119,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 170,
+            "bbox": [
+              162.724,
+              433.384,
+              232.084,
+              444.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 171,
+          "text": "de",
+          "rawText": "de",
+          "start": 1120,
+          "end": 1122,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 171,
+            "bbox": [
+              235.42,
+              433.384,
+              248.764,
+              444.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 172,
+          "text": "otro",
+          "rawText": "otro",
+          "start": 1123,
+          "end": 1127,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 172,
+            "bbox": [
+              252.1,
+              433.384,
+              272.776,
+              444.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 173,
+          "text": "sistema.",
+          "rawText": "sistema.",
+          "start": 1128,
+          "end": 1136,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 173,
+            "bbox": [
+              276.112,
+              433.384,
+              320.788,
+              444.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 174,
+          "text": "AtlasQueue",
+          "rawText": "AtlasQueue",
+          "start": 1137,
+          "end": 1147,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 174,
+            "bbox": [
+              40,
+              749.82,
+              92.25,
+              759.07
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 175,
+          "text": "|",
+          "rawText": "|",
+          "start": 1148,
+          "end": 1149,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 175,
+            "bbox": [
+              95.03,
+              749.82,
+              97.63,
+              759.07
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 176,
+          "text": "Página",
+          "rawText": "Página",
+          "start": 1150,
+          "end": 1156,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 176,
+            "bbox": [
+              100.41,
+              749.82,
+              131.54,
+              759.07
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 177,
+          "text": "1",
+          "rawText": "1",
+          "start": 1157,
+          "end": 1158,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 177,
+            "bbox": [
+              134.32,
+              749.82,
+              139.88,
+              759.07
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        }
+      ]
+    },
+    {
+      "documentId": "COLUMNS",
+      "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+      "file": "fixtures/columns.pdf",
+      "kind": "pdf",
+      "role": "corpus",
+      "selection": "known-columns-body",
+      "normalizationPolicy": "canonical-words-nfc-single-space/v1",
+      "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+      "contentHash": "c00d0d85857e8626022f1ffd87180e36680cce84d4b79087ec1ef9e1c4db97eb",
+      "text": "Copias de seguridad La retención es de treinta días. Restaurar requiere dos pasos: 1. Verificar el manifiesto. 2. Reproducir el registro WAL. La prueba usa un directorio aislado. No se restaura sobre producción. Guardar el checksum esperado. Una copia no prueba recuperación. La verificación compara el contenido. Configuración de caché El TTL inicial es de 300 segundos. La clave incluye el idioma. Invalidar tras cambiar la versión. Un cache miss consulta el origen. El error del origen no se almacena. Medir hit ratio y latencia. Un TTL no garantiza consistencia. La caché es una copia descartable. El origen conserva la autoridad.",
+      "units": [
+        {
+          "ordinal": 0,
+          "text": "Copias",
+          "rawText": "Copias",
+          "start": 0,
+          "end": 6,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 4,
+            "bbox": [
+              40,
+              77.948,
+              86.676,
+              90.898
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 1,
+          "text": "de",
+          "rawText": "de",
+          "start": 7,
+          "end": 9,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 5,
+            "bbox": [
+              90.568,
+              77.948,
+              106.906,
+              90.898
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 2,
+          "text": "seguridad",
+          "rawText": "seguridad",
+          "start": 10,
+          "end": 19,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 6,
+            "bbox": [
+              110.798,
+              77.948,
+              177.704,
+              90.898
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 3,
+          "text": "La",
+          "rawText": "La",
+          "start": 20,
+          "end": 22,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 10,
+            "bbox": [
+              40,
+              109.384,
+              53.344,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 4,
+          "text": "retención",
+          "rawText": "retención",
+          "start": 23,
+          "end": 32,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 11,
+            "bbox": [
+              56.68,
+              109.384,
+              106.036,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 5,
+          "text": "es",
+          "rawText": "es",
+          "start": 33,
+          "end": 35,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 12,
+            "bbox": [
+              109.372,
+              109.384,
+              122.044,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 6,
+          "text": "de",
+          "rawText": "de",
+          "start": 36,
+          "end": 38,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 13,
+            "bbox": [
+              125.38,
+              109.384,
+              138.724,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 7,
+          "text": "treinta",
+          "rawText": "treinta",
+          "start": 39,
+          "end": 46,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 14,
+            "bbox": [
+              142.06,
+              109.384,
+              175.408,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 8,
+          "text": "días.",
+          "rawText": "días.",
+          "start": 47,
+          "end": 52,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 15,
+            "bbox": [
+              178.744,
+              109.384,
+              204.76,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 9,
+          "text": "Restaurar",
+          "rawText": "Restaurar",
+          "start": 53,
+          "end": 62,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 23,
+            "bbox": [
+              40,
+              139.384,
+              92.68,
+              150.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 10,
+          "text": "requiere",
+          "rawText": "requiere",
+          "start": 63,
+          "end": 71,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 24,
+            "bbox": [
+              96.016,
+              139.384,
+              140.032,
+              150.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 11,
+          "text": "dos",
+          "rawText": "dos",
+          "start": 72,
+          "end": 75,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 25,
+            "bbox": [
+              143.368,
+              139.384,
+              162.712,
+              150.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 12,
+          "text": "pasos:",
+          "rawText": "pasos:",
+          "start": 76,
+          "end": 82,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 26,
+            "bbox": [
+              166.048,
+              139.384,
+              201.4,
+              150.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 13,
+          "text": "1.",
+          "rawText": "1.",
+          "start": 83,
+          "end": 85,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 32,
+            "bbox": [
+              40,
+              169.384,
+              50.008,
+              180.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 14,
+          "text": "Verificar",
+          "rawText": "Verificar",
+          "start": 86,
+          "end": 95,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 33,
+            "bbox": [
+              53.344,
+              169.384,
+              97.348,
+              180.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 15,
+          "text": "el",
+          "rawText": "el",
+          "start": 96,
+          "end": 98,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 34,
+            "bbox": [
+              100.684,
+              169.384,
+              110.02,
+              180.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 16,
+          "text": "manifiesto.",
+          "rawText": "manifiesto.",
+          "start": 99,
+          "end": 110,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 35,
+            "bbox": [
+              113.356,
+              169.384,
+              171.376,
+              180.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 17,
+          "text": "2.",
+          "rawText": "2.",
+          "start": 111,
+          "end": 113,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 41,
+            "bbox": [
+              40,
+              199.384,
+              50.008,
+              210.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 18,
+          "text": "Reproducir",
+          "rawText": "Reproducir",
+          "start": 114,
+          "end": 124,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 42,
+            "bbox": [
+              53.344,
+              199.384,
+              112.024,
+              210.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 19,
+          "text": "el",
+          "rawText": "el",
+          "start": 125,
+          "end": 127,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 43,
+            "bbox": [
+              115.36,
+              199.384,
+              124.696,
+              210.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 20,
+          "text": "registro",
+          "rawText": "registro",
+          "start": 128,
+          "end": 136,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 44,
+            "bbox": [
+              128.032,
+              199.384,
+              168.04,
+              210.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 21,
+          "text": "WAL.",
+          "rawText": "WAL.",
+          "start": 137,
+          "end": 141,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 45,
+            "bbox": [
+              171.376,
+              199.384,
+              200.716,
+              210.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 22,
+          "text": "La",
+          "rawText": "La",
+          "start": 142,
+          "end": 144,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 52,
+            "bbox": [
+              40,
+              229.384,
+              53.344,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 23,
+          "text": "prueba",
+          "rawText": "prueba",
+          "start": 145,
+          "end": 151,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 53,
+            "bbox": [
+              56.68,
+              229.384,
+              94.036,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 24,
+          "text": "usa",
+          "rawText": "usa",
+          "start": 152,
+          "end": 155,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 54,
+            "bbox": [
+              97.372,
+              229.384,
+              116.716,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 25,
+          "text": "un",
+          "rawText": "un",
+          "start": 156,
+          "end": 158,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 55,
+            "bbox": [
+              120.052,
+              229.384,
+              133.396,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 26,
+          "text": "directorio",
+          "rawText": "directorio",
+          "start": 159,
+          "end": 169,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 56,
+            "bbox": [
+              136.732,
+              229.384,
+              186.076,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 27,
+          "text": "aislado.",
+          "rawText": "aislado.",
+          "start": 170,
+          "end": 178,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 57,
+            "bbox": [
+              189.412,
+              229.384,
+              230.764,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 28,
+          "text": "No",
+          "rawText": "No",
+          "start": 179,
+          "end": 181,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 65,
+            "bbox": [
+              40,
+              259.384,
+              55.336,
+              270.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 29,
+          "text": "se",
+          "rawText": "se",
+          "start": 182,
+          "end": 184,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 66,
+            "bbox": [
+              58.672,
+              259.384,
+              71.344,
+              270.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 30,
+          "text": "restaura",
+          "rawText": "restaura",
+          "start": 185,
+          "end": 193,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 67,
+            "bbox": [
+              74.68,
+              259.384,
+              118.696,
+              270.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 31,
+          "text": "sobre",
+          "rawText": "sobre",
+          "start": 194,
+          "end": 199,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 68,
+            "bbox": [
+              122.032,
+              259.384,
+              152.044,
+              270.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 32,
+          "text": "producción.",
+          "rawText": "producción.",
+          "start": 200,
+          "end": 211,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 69,
+            "bbox": [
+              155.38,
+              259.384,
+              217.408,
+              270.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 33,
+          "text": "Guardar",
+          "rawText": "Guardar",
+          "start": 212,
+          "end": 219,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 75,
+            "bbox": [
+              40,
+              289.384,
+              84.016,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 34,
+          "text": "el",
+          "rawText": "el",
+          "start": 220,
+          "end": 222,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 76,
+            "bbox": [
+              87.352,
+              289.384,
+              96.688,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 35,
+          "text": "checksum",
+          "rawText": "checksum",
+          "start": 223,
+          "end": 231,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 77,
+            "bbox": [
+              100.024,
+              289.384,
+              154.036,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 36,
+          "text": "esperado.",
+          "rawText": "esperado.",
+          "start": 232,
+          "end": 241,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 78,
+            "bbox": [
+              157.372,
+              289.384,
+              210.736,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 37,
+          "text": "Una",
+          "rawText": "Una",
+          "start": 242,
+          "end": 245,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 84,
+            "bbox": [
+              40,
+              319.384,
+              62.008,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 38,
+          "text": "copia",
+          "rawText": "copia",
+          "start": 246,
+          "end": 251,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 85,
+            "bbox": [
+              65.344,
+              319.384,
+              94.024,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 39,
+          "text": "no",
+          "rawText": "no",
+          "start": 252,
+          "end": 254,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 86,
+            "bbox": [
+              97.36,
+              319.384,
+              110.704,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 40,
+          "text": "prueba",
+          "rawText": "prueba",
+          "start": 255,
+          "end": 261,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 87,
+            "bbox": [
+              114.04,
+              319.384,
+              151.396,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 41,
+          "text": "recuperación.",
+          "rawText": "recuperación.",
+          "start": 262,
+          "end": 275,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 88,
+            "bbox": [
+              154.732,
+              319.384,
+              227.428,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 42,
+          "text": "La",
+          "rawText": "La",
+          "start": 276,
+          "end": 278,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 95,
+            "bbox": [
+              40,
+              349.384,
+              53.344,
+              360.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 43,
+          "text": "verificación",
+          "rawText": "verificación",
+          "start": 279,
+          "end": 291,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 96,
+            "bbox": [
+              56.68,
+              349.384,
+              116.692,
+              360.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 44,
+          "text": "compara",
+          "rawText": "compara",
+          "start": 292,
+          "end": 299,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 97,
+            "bbox": [
+              120.028,
+              349.384,
+              166.708,
+              360.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 45,
+          "text": "el",
+          "rawText": "el",
+          "start": 300,
+          "end": 302,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 98,
+            "bbox": [
+              170.044,
+              349.384,
+              179.38,
+              360.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 46,
+          "text": "contenido.",
+          "rawText": "contenido.",
+          "start": 303,
+          "end": 313,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 99,
+            "bbox": [
+              182.716,
+              349.384,
+              238.084,
+              360.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 47,
+          "text": "Configuración",
+          "rawText": "Configuración",
+          "start": 314,
+          "end": 327,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 7,
+            "bbox": [
+              330,
+              77.948,
+              424.892,
+              90.898
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 48,
+          "text": "de",
+          "rawText": "de",
+          "start": 328,
+          "end": 330,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 8,
+            "bbox": [
+              428.784,
+              77.948,
+              445.122,
+              90.898
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 49,
+          "text": "caché",
+          "rawText": "caché",
+          "start": 331,
+          "end": 336,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 9,
+            "bbox": [
+              449.014,
+              77.948,
+              488.704,
+              90.898
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 50,
+          "text": "El",
+          "rawText": "El",
+          "start": 337,
+          "end": 339,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 16,
+            "bbox": [
+              330,
+              109.384,
+              340.668,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 51,
+          "text": "TTL",
+          "rawText": "TTL",
+          "start": 340,
+          "end": 343,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 17,
+            "bbox": [
+              344.004,
+              109.384,
+              365.34,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 52,
+          "text": "inicial",
+          "rawText": "inicial",
+          "start": 344,
+          "end": 351,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 18,
+            "bbox": [
+              368.676,
+              109.384,
+              398.676,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 53,
+          "text": "es",
+          "rawText": "es",
+          "start": 352,
+          "end": 354,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 19,
+            "bbox": [
+              402.012,
+              109.384,
+              414.684,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 54,
+          "text": "de",
+          "rawText": "de",
+          "start": 355,
+          "end": 357,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 20,
+            "bbox": [
+              418.02,
+              109.384,
+              431.364,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 55,
+          "text": "300",
+          "rawText": "300",
+          "start": 358,
+          "end": 361,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 21,
+            "bbox": [
+              434.7,
+              109.384,
+              454.716,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 56,
+          "text": "segundos.",
+          "rawText": "segundos.",
+          "start": 362,
+          "end": 371,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 22,
+            "bbox": [
+              458.052,
+              109.384,
+              513.42,
+              120.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 57,
+          "text": "La",
+          "rawText": "La",
+          "start": 372,
+          "end": 374,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 27,
+            "bbox": [
+              330,
+              139.384,
+              343.344,
+              150.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 58,
+          "text": "clave",
+          "rawText": "clave",
+          "start": 375,
+          "end": 380,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 28,
+            "bbox": [
+              346.68,
+              139.384,
+              374.688,
+              150.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 59,
+          "text": "incluye",
+          "rawText": "incluye",
+          "start": 381,
+          "end": 388,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 29,
+            "bbox": [
+              378.024,
+              139.384,
+              415.368,
+              150.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 60,
+          "text": "el",
+          "rawText": "el",
+          "start": 389,
+          "end": 391,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 30,
+            "bbox": [
+              418.704,
+              139.384,
+              428.04,
+              150.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 61,
+          "text": "idioma.",
+          "rawText": "idioma.",
+          "start": 392,
+          "end": 399,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 31,
+            "bbox": [
+              431.376,
+              139.384,
+              470.052,
+              150.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 62,
+          "text": "Invalidar",
+          "rawText": "Invalidar",
+          "start": 400,
+          "end": 409,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 36,
+            "bbox": [
+              330,
+              169.384,
+              375.348,
+              180.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 63,
+          "text": "tras",
+          "rawText": "tras",
+          "start": 410,
+          "end": 414,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 37,
+            "bbox": [
+              378.684,
+              169.384,
+              398.688,
+              180.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 64,
+          "text": "cambiar",
+          "rawText": "cambiar",
+          "start": 415,
+          "end": 422,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 38,
+            "bbox": [
+              402.024,
+              169.384,
+              444.696,
+              180.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 65,
+          "text": "la",
+          "rawText": "la",
+          "start": 423,
+          "end": 425,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 39,
+            "bbox": [
+              448.032,
+              169.384,
+              457.368,
+              180.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 66,
+          "text": "versión.",
+          "rawText": "versión.",
+          "start": 426,
+          "end": 434,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 40,
+            "bbox": [
+              460.704,
+              169.384,
+              502.716,
+              180.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 67,
+          "text": "Un",
+          "rawText": "Un",
+          "start": 435,
+          "end": 437,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 46,
+            "bbox": [
+              330,
+              199.384,
+              345.336,
+              210.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 68,
+          "text": "cache",
+          "rawText": "cache",
+          "start": 438,
+          "end": 443,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 47,
+            "bbox": [
+              348.672,
+              199.384,
+              380.688,
+              210.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 69,
+          "text": "miss",
+          "rawText": "miss",
+          "start": 444,
+          "end": 448,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 48,
+            "bbox": [
+              384.024,
+              199.384,
+              408.684,
+              210.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 70,
+          "text": "consulta",
+          "rawText": "consulta",
+          "start": 449,
+          "end": 457,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 49,
+            "bbox": [
+              412.02,
+              199.384,
+              456.708,
+              210.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 71,
+          "text": "el",
+          "rawText": "el",
+          "start": 458,
+          "end": 460,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 50,
+            "bbox": [
+              460.044,
+              199.384,
+              469.38,
+              210.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 72,
+          "text": "origen.",
+          "rawText": "origen.",
+          "start": 461,
+          "end": 468,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 51,
+            "bbox": [
+              472.716,
+              199.384,
+              509.4,
+              210.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 73,
+          "text": "El",
+          "rawText": "El",
+          "start": 469,
+          "end": 471,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 58,
+            "bbox": [
+              330,
+              229.384,
+              340.668,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 74,
+          "text": "error",
+          "rawText": "error",
+          "start": 472,
+          "end": 477,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 59,
+            "bbox": [
+              344.004,
+              229.384,
+              369.336,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 75,
+          "text": "del",
+          "rawText": "del",
+          "start": 478,
+          "end": 481,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 60,
+            "bbox": [
+              372.672,
+              229.384,
+              388.68,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 76,
+          "text": "origen",
+          "rawText": "origen",
+          "start": 482,
+          "end": 488,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 61,
+            "bbox": [
+              392.016,
+              229.384,
+              425.364,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 77,
+          "text": "no",
+          "rawText": "no",
+          "start": 489,
+          "end": 491,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 62,
+            "bbox": [
+              428.7,
+              229.384,
+              442.044,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 78,
+          "text": "se",
+          "rawText": "se",
+          "start": 492,
+          "end": 494,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 63,
+            "bbox": [
+              445.38,
+              229.384,
+              458.052,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 79,
+          "text": "almacena.",
+          "rawText": "almacena.",
+          "start": 495,
+          "end": 504,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 64,
+            "bbox": [
+              461.388,
+              229.384,
+              516.744,
+              240.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 80,
+          "text": "Medir",
+          "rawText": "Medir",
+          "start": 505,
+          "end": 510,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 70,
+            "bbox": [
+              330,
+              259.384,
+              360,
+              270.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 81,
+          "text": "hit",
+          "rawText": "hit",
+          "start": 511,
+          "end": 514,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 71,
+            "bbox": [
+              363.336,
+              259.384,
+              376.008,
+              270.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 82,
+          "text": "ratio",
+          "rawText": "ratio",
+          "start": 515,
+          "end": 520,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 72,
+            "bbox": [
+              379.344,
+              259.384,
+              402.684,
+              270.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 83,
+          "text": "y",
+          "rawText": "y",
+          "start": 521,
+          "end": 522,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 73,
+            "bbox": [
+              406.02,
+              259.384,
+              412.02,
+              270.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 84,
+          "text": "latencia.",
+          "rawText": "latencia.",
+          "start": 523,
+          "end": 532,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 74,
+            "bbox": [
+              415.356,
+              259.384,
+              460.044,
+              270.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 85,
+          "text": "Un",
+          "rawText": "Un",
+          "start": 533,
+          "end": 535,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 79,
+            "bbox": [
+              330,
+              289.384,
+              345.336,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 86,
+          "text": "TTL",
+          "rawText": "TTL",
+          "start": 536,
+          "end": 539,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 80,
+            "bbox": [
+              348.672,
+              289.384,
+              370.008,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 87,
+          "text": "no",
+          "rawText": "no",
+          "start": 540,
+          "end": 542,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 81,
+            "bbox": [
+              373.344,
+              289.384,
+              386.688,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 88,
+          "text": "garantiza",
+          "rawText": "garantiza",
+          "start": 543,
+          "end": 552,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 82,
+            "bbox": [
+              390.024,
+              289.384,
+              439.38,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 89,
+          "text": "consistencia.",
+          "rawText": "consistencia.",
+          "start": 553,
+          "end": 566,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 83,
+            "bbox": [
+              442.716,
+              289.384,
+              512.076,
+              300.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 90,
+          "text": "La",
+          "rawText": "La",
+          "start": 567,
+          "end": 569,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 89,
+            "bbox": [
+              330,
+              319.384,
+              343.344,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 91,
+          "text": "caché",
+          "rawText": "caché",
+          "start": 570,
+          "end": 575,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 90,
+            "bbox": [
+              346.68,
+              319.384,
+              378.696,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 92,
+          "text": "es",
+          "rawText": "es",
+          "start": 576,
+          "end": 578,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 91,
+            "bbox": [
+              382.032,
+              319.384,
+              394.704,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 93,
+          "text": "una",
+          "rawText": "una",
+          "start": 579,
+          "end": 582,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 92,
+            "bbox": [
+              398.04,
+              319.384,
+              418.056,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 94,
+          "text": "copia",
+          "rawText": "copia",
+          "start": 583,
+          "end": 588,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 93,
+            "bbox": [
+              421.392,
+              319.384,
+              450.072,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 95,
+          "text": "descartable.",
+          "rawText": "descartable.",
+          "start": 589,
+          "end": 601,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 94,
+            "bbox": [
+              453.408,
+              319.384,
+              518.772,
+              330.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 96,
+          "text": "El",
+          "rawText": "El",
+          "start": 602,
+          "end": 604,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 100,
+            "bbox": [
+              330,
+              349.384,
+              340.668,
+              360.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 97,
+          "text": "origen",
+          "rawText": "origen",
+          "start": 605,
+          "end": 611,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 101,
+            "bbox": [
+              344.004,
+              349.384,
+              377.352,
+              360.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 98,
+          "text": "conserva",
+          "rawText": "conserva",
+          "start": 612,
+          "end": 620,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 102,
+            "bbox": [
+              380.688,
+              349.384,
+              429.372,
+              360.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 99,
+          "text": "la",
+          "rawText": "la",
+          "start": 621,
+          "end": 623,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 103,
+            "bbox": [
+              432.708,
+              349.384,
+              442.044,
+              360.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        },
+        {
+          "ordinal": 100,
+          "text": "autoridad.",
+          "rawText": "autoridad.",
+          "start": 624,
+          "end": 634,
+          "origin": {
+            "kind": "pdf",
+            "page": 1,
+            "wordOrdinal": 104,
+            "bbox": [
+              445.38,
+              349.384,
+              498.744,
+              360.484
+            ],
+            "coordinateSpace": "pdf-point-top-left"
+          }
+        }
+      ]
+    },
+    {
+      "documentId": "HTML",
+      "documentVersion": "3fdc11c58f34bd03383704f105611e7810a484c9eb9029c6bc829a03b9fa70f1",
+      "file": "fixtures/guide.html",
+      "kind": "html",
+      "role": "corpus",
+      "selection": "main-blocks",
+      "normalizationPolicy": "canonical-words-nfc-single-space/v1",
+      "representationId": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610",
+      "contentHash": "4978bda8833b88a2ca4ede1d77ff877c164b761f0e6eedbfdb0d99617a966ae9",
+      "text": "AtlasQueue: mantenimiento del índice La versión del índice identifica el analizador y el corpus utilizado. Cambiar el analizador exige evaluar de nuevo las consultas. Las reconstrucciones se hacen sobre un índice nuevo. El cambio de referencia ocurre después de comprobar que conserva los documentos esperados. El identificador del documento es estable; la versión cambia cuando cambia el contenido. Dos versiones diferentes no deben compartir una cita sin especificar la revisión. Una consulta sin resultados es válida. El sistema no debe inventar una respuesta para completar el top tres.",
+      "units": [
+        {
+          "ordinal": 0,
+          "text": "AtlasQueue:",
+          "rawText": "AtlasQueue:",
+          "start": 0,
+          "end": 11,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 0,
+            "blockKind": "h1",
+            "blockStart": 0,
+            "blockEnd": 11,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 1,
+          "text": "mantenimiento",
+          "rawText": "mantenimiento",
+          "start": 12,
+          "end": 25,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 0,
+            "blockKind": "h1",
+            "blockStart": 12,
+            "blockEnd": 25,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 2,
+          "text": "del",
+          "rawText": "del",
+          "start": 26,
+          "end": 29,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 0,
+            "blockKind": "h1",
+            "blockStart": 26,
+            "blockEnd": 29,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 3,
+          "text": "índice",
+          "rawText": "índice",
+          "start": 30,
+          "end": 36,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 0,
+            "blockKind": "h1",
+            "blockStart": 30,
+            "blockEnd": 36,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 4,
+          "text": "La",
+          "rawText": "La",
+          "start": 37,
+          "end": 39,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 0,
+            "blockEnd": 2,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 5,
+          "text": "versión",
+          "rawText": "versión",
+          "start": 40,
+          "end": 47,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 3,
+            "blockEnd": 10,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 6,
+          "text": "del",
+          "rawText": "del",
+          "start": 48,
+          "end": 51,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 11,
+            "blockEnd": 14,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 7,
+          "text": "índice",
+          "rawText": "índice",
+          "start": 52,
+          "end": 58,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 15,
+            "blockEnd": 21,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 8,
+          "text": "identifica",
+          "rawText": "identifica",
+          "start": 59,
+          "end": 69,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 22,
+            "blockEnd": 32,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 9,
+          "text": "el",
+          "rawText": "el",
+          "start": 70,
+          "end": 72,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 33,
+            "blockEnd": 35,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 10,
+          "text": "analizador",
+          "rawText": "analizador",
+          "start": 73,
+          "end": 83,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 36,
+            "blockEnd": 46,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 11,
+          "text": "y",
+          "rawText": "y",
+          "start": 84,
+          "end": 85,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 47,
+            "blockEnd": 48,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 12,
+          "text": "el",
+          "rawText": "el",
+          "start": 86,
+          "end": 88,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 49,
+            "blockEnd": 51,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 13,
+          "text": "corpus",
+          "rawText": "corpus",
+          "start": 89,
+          "end": 95,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 52,
+            "blockEnd": 58,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 14,
+          "text": "utilizado.",
+          "rawText": "utilizado.",
+          "start": 96,
+          "end": 106,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 59,
+            "blockEnd": 69,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 15,
+          "text": "Cambiar",
+          "rawText": "Cambiar",
+          "start": 107,
+          "end": 114,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 70,
+            "blockEnd": 77,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 16,
+          "text": "el",
+          "rawText": "el",
+          "start": 115,
+          "end": 117,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 78,
+            "blockEnd": 80,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 17,
+          "text": "analizador",
+          "rawText": "analizador",
+          "start": 118,
+          "end": 128,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 81,
+            "blockEnd": 91,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 18,
+          "text": "exige",
+          "rawText": "exige",
+          "start": 129,
+          "end": 134,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 92,
+            "blockEnd": 97,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 19,
+          "text": "evaluar",
+          "rawText": "evaluar",
+          "start": 135,
+          "end": 142,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 98,
+            "blockEnd": 105,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 20,
+          "text": "de",
+          "rawText": "de",
+          "start": 143,
+          "end": 145,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 106,
+            "blockEnd": 108,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 21,
+          "text": "nuevo",
+          "rawText": "nuevo",
+          "start": 146,
+          "end": 151,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 109,
+            "blockEnd": 114,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 22,
+          "text": "las",
+          "rawText": "las",
+          "start": 152,
+          "end": 155,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 115,
+            "blockEnd": 118,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 23,
+          "text": "consultas.",
+          "rawText": "consultas.",
+          "start": 156,
+          "end": 166,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 1,
+            "blockKind": "p",
+            "blockStart": 119,
+            "blockEnd": 129,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 24,
+          "text": "Las",
+          "rawText": "Las",
+          "start": 167,
+          "end": 170,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 0,
+            "blockEnd": 3,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 25,
+          "text": "reconstrucciones",
+          "rawText": "reconstrucciones",
+          "start": 171,
+          "end": 187,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 4,
+            "blockEnd": 20,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 26,
+          "text": "se",
+          "rawText": "se",
+          "start": 188,
+          "end": 190,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 21,
+            "blockEnd": 23,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 27,
+          "text": "hacen",
+          "rawText": "hacen",
+          "start": 191,
+          "end": 196,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 24,
+            "blockEnd": 29,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 28,
+          "text": "sobre",
+          "rawText": "sobre",
+          "start": 197,
+          "end": 202,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 30,
+            "blockEnd": 35,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 29,
+          "text": "un",
+          "rawText": "un",
+          "start": 203,
+          "end": 205,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 36,
+            "blockEnd": 38,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 30,
+          "text": "índice",
+          "rawText": "índice",
+          "start": 206,
+          "end": 212,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 39,
+            "blockEnd": 45,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 31,
+          "text": "nuevo.",
+          "rawText": "nuevo.",
+          "start": 213,
+          "end": 219,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 46,
+            "blockEnd": 52,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 32,
+          "text": "El",
+          "rawText": "El",
+          "start": 220,
+          "end": 222,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 53,
+            "blockEnd": 55,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 33,
+          "text": "cambio",
+          "rawText": "cambio",
+          "start": 223,
+          "end": 229,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 56,
+            "blockEnd": 62,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 34,
+          "text": "de",
+          "rawText": "de",
+          "start": 230,
+          "end": 232,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 63,
+            "blockEnd": 65,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 35,
+          "text": "referencia",
+          "rawText": "referencia",
+          "start": 233,
+          "end": 243,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 66,
+            "blockEnd": 76,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 36,
+          "text": "ocurre",
+          "rawText": "ocurre",
+          "start": 244,
+          "end": 250,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 77,
+            "blockEnd": 83,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 37,
+          "text": "después",
+          "rawText": "después",
+          "start": 251,
+          "end": 258,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 84,
+            "blockEnd": 91,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 38,
+          "text": "de",
+          "rawText": "de",
+          "start": 259,
+          "end": 261,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 92,
+            "blockEnd": 94,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 39,
+          "text": "comprobar",
+          "rawText": "comprobar",
+          "start": 262,
+          "end": 271,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 95,
+            "blockEnd": 104,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 40,
+          "text": "que",
+          "rawText": "que",
+          "start": 272,
+          "end": 275,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 105,
+            "blockEnd": 108,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 41,
+          "text": "conserva",
+          "rawText": "conserva",
+          "start": 276,
+          "end": 284,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 109,
+            "blockEnd": 117,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 42,
+          "text": "los",
+          "rawText": "los",
+          "start": 285,
+          "end": 288,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 118,
+            "blockEnd": 121,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 43,
+          "text": "documentos",
+          "rawText": "documentos",
+          "start": 289,
+          "end": 299,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 122,
+            "blockEnd": 132,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 44,
+          "text": "esperados.",
+          "rawText": "esperados.",
+          "start": 300,
+          "end": 310,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 2,
+            "blockKind": "p",
+            "blockStart": 133,
+            "blockEnd": 143,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 45,
+          "text": "El",
+          "rawText": "El",
+          "start": 311,
+          "end": 313,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 0,
+            "blockEnd": 2,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 46,
+          "text": "identificador",
+          "rawText": "identificador",
+          "start": 314,
+          "end": 327,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 3,
+            "blockEnd": 16,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 47,
+          "text": "del",
+          "rawText": "del",
+          "start": 328,
+          "end": 331,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 17,
+            "blockEnd": 20,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 48,
+          "text": "documento",
+          "rawText": "documento",
+          "start": 332,
+          "end": 341,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 21,
+            "blockEnd": 30,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 49,
+          "text": "es",
+          "rawText": "es",
+          "start": 342,
+          "end": 344,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 31,
+            "blockEnd": 33,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 50,
+          "text": "estable;",
+          "rawText": "estable;",
+          "start": 345,
+          "end": 353,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 34,
+            "blockEnd": 42,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 51,
+          "text": "la",
+          "rawText": "la",
+          "start": 354,
+          "end": 356,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 43,
+            "blockEnd": 45,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 52,
+          "text": "versión",
+          "rawText": "versión",
+          "start": 357,
+          "end": 364,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 46,
+            "blockEnd": 53,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 53,
+          "text": "cambia",
+          "rawText": "cambia",
+          "start": 365,
+          "end": 371,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 54,
+            "blockEnd": 60,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 54,
+          "text": "cuando",
+          "rawText": "cuando",
+          "start": 372,
+          "end": 378,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 61,
+            "blockEnd": 67,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 55,
+          "text": "cambia",
+          "rawText": "cambia",
+          "start": 379,
+          "end": 385,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 68,
+            "blockEnd": 74,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 56,
+          "text": "el",
+          "rawText": "el",
+          "start": 386,
+          "end": 388,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 75,
+            "blockEnd": 77,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 57,
+          "text": "contenido.",
+          "rawText": "contenido.",
+          "start": 389,
+          "end": 399,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 78,
+            "blockEnd": 88,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 58,
+          "text": "Dos",
+          "rawText": "Dos",
+          "start": 400,
+          "end": 403,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 89,
+            "blockEnd": 92,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 59,
+          "text": "versiones",
+          "rawText": "versiones",
+          "start": 404,
+          "end": 413,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 93,
+            "blockEnd": 102,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 60,
+          "text": "diferentes",
+          "rawText": "diferentes",
+          "start": 414,
+          "end": 424,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 103,
+            "blockEnd": 113,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 61,
+          "text": "no",
+          "rawText": "no",
+          "start": 425,
+          "end": 427,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 114,
+            "blockEnd": 116,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 62,
+          "text": "deben",
+          "rawText": "deben",
+          "start": 428,
+          "end": 433,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 117,
+            "blockEnd": 122,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 63,
+          "text": "compartir",
+          "rawText": "compartir",
+          "start": 434,
+          "end": 443,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 123,
+            "blockEnd": 132,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 64,
+          "text": "una",
+          "rawText": "una",
+          "start": 444,
+          "end": 447,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 133,
+            "blockEnd": 136,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 65,
+          "text": "cita",
+          "rawText": "cita",
+          "start": 448,
+          "end": 452,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 137,
+            "blockEnd": 141,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 66,
+          "text": "sin",
+          "rawText": "sin",
+          "start": 453,
+          "end": 456,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 142,
+            "blockEnd": 145,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 67,
+          "text": "especificar",
+          "rawText": "especificar",
+          "start": 457,
+          "end": 468,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 146,
+            "blockEnd": 157,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 68,
+          "text": "la",
+          "rawText": "la",
+          "start": 469,
+          "end": 471,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 158,
+            "blockEnd": 160,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 69,
+          "text": "revisión.",
+          "rawText": "revisión.",
+          "start": 472,
+          "end": 481,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 3,
+            "blockKind": "p",
+            "blockStart": 161,
+            "blockEnd": 170,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 70,
+          "text": "Una",
+          "rawText": "Una",
+          "start": 482,
+          "end": 485,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 0,
+            "blockEnd": 3,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 71,
+          "text": "consulta",
+          "rawText": "consulta",
+          "start": 486,
+          "end": 494,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 4,
+            "blockEnd": 12,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 72,
+          "text": "sin",
+          "rawText": "sin",
+          "start": 495,
+          "end": 498,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 13,
+            "blockEnd": 16,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 73,
+          "text": "resultados",
+          "rawText": "resultados",
+          "start": 499,
+          "end": 509,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 17,
+            "blockEnd": 27,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 74,
+          "text": "es",
+          "rawText": "es",
+          "start": 510,
+          "end": 512,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 28,
+            "blockEnd": 30,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 75,
+          "text": "válida.",
+          "rawText": "válida.",
+          "start": 513,
+          "end": 520,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 31,
+            "blockEnd": 38,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 76,
+          "text": "El",
+          "rawText": "El",
+          "start": 521,
+          "end": 523,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 39,
+            "blockEnd": 41,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 77,
+          "text": "sistema",
+          "rawText": "sistema",
+          "start": 524,
+          "end": 531,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 42,
+            "blockEnd": 49,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 78,
+          "text": "no",
+          "rawText": "no",
+          "start": 532,
+          "end": 534,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 50,
+            "blockEnd": 52,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 79,
+          "text": "debe",
+          "rawText": "debe",
+          "start": 535,
+          "end": 539,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 53,
+            "blockEnd": 57,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 80,
+          "text": "inventar",
+          "rawText": "inventar",
+          "start": 540,
+          "end": 548,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 58,
+            "blockEnd": 66,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 81,
+          "text": "una",
+          "rawText": "una",
+          "start": 549,
+          "end": 552,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 67,
+            "blockEnd": 70,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 82,
+          "text": "respuesta",
+          "rawText": "respuesta",
+          "start": 553,
+          "end": 562,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 71,
+            "blockEnd": 80,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 83,
+          "text": "para",
+          "rawText": "para",
+          "start": 563,
+          "end": 567,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 81,
+            "blockEnd": 85,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 84,
+          "text": "completar",
+          "rawText": "completar",
+          "start": 568,
+          "end": 577,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 86,
+            "blockEnd": 95,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 85,
+          "text": "el",
+          "rawText": "el",
+          "start": 578,
+          "end": 580,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 96,
+            "blockEnd": 98,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 86,
+          "text": "top",
+          "rawText": "top",
+          "start": 581,
+          "end": 584,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 99,
+            "blockEnd": 102,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        },
+        {
+          "ordinal": 87,
+          "text": "tres.",
+          "rawText": "tres.",
+          "start": 585,
+          "end": 590,
+          "origin": {
+            "kind": "html",
+            "blockIndex": 4,
+            "blockKind": "p",
+            "blockStart": 103,
+            "blockEnd": 108,
+            "offsetUnit": "UTF16 in parsed block text"
+          }
+        }
+      ]
+    }
+  ],
+  "registry": [
+    {
+      "id": "f2f7824e8a6521cbbea4079465df977e62a3202e71f1535afed153a00427dff5",
+      "documentId": "RUNBOOK",
+      "documentVersion": "6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11",
+      "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 0,
+      "last": 32,
+      "start": 0,
+      "end": 219,
+      "text": "AtlasQueue: recuperación verificada Una copia de seguridad no garantiza que el servicio pueda recuperarse. La prueba debe restaurar datos y comprobar su contenido. El manifiesto registra el checksum SHA-256 y la versión",
+      "alias": "S01"
+    },
+    {
+      "id": "64fbb5fa98690bc0b27efbab51367a8caa35f2b72c8c94b4108001c955ec140f",
+      "documentId": "RUNBOOK",
+      "documentVersion": "6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11",
+      "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 32,
+      "last": 64,
+      "start": 220,
+      "end": 419,
+      "text": "del esquema. Antes de restaurar, comprobar que ambos coinciden con el entorno de prueba. La retención de las copias es de treinta días. Mantener dos copias en ubicaciones diferentes evita depender de",
+      "alias": "S02"
+    },
+    {
+      "id": "6162fc8ba1c249349de34289960e8aaff7b6d88d203dbeab79c83ea3feebd1df",
+      "documentId": "RUNBOOK",
+      "documentVersion": "6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11",
+      "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 64,
+      "last": 96,
+      "start": 420,
+      "end": 629,
+      "text": "un único volumen. La restauración usa un directorio aislado. Nunca sobrescribir los datos de producción durante un ejercicio. Después de cargar la copia, reproducir el registro WAL hasta el punto acordado. Una",
+      "alias": "S03"
+    },
+    {
+      "id": "2408a09d35e5d8caaace10dada64b6b647d89555e0b357581c5afce0400ac23e",
+      "documentId": "RUNBOOK",
+      "documentVersion": "6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11",
+      "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 96,
+      "last": 128,
+      "start": 630,
+      "end": 830,
+      "text": "escritura posterior no pertenece a ese snapshot. El informe guarda el identificador de la copia, la fecha y los resultados de las comprobaciones. Una ejecución sin errores no demuestra que falten cero",
+      "alias": "S04"
+    },
+    {
+      "id": "3f4e64474345df9c6e3e83314cd899fa66bc491ea54d145d2474d296488fedb3",
+      "documentId": "RUNBOOK",
+      "documentVersion": "6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11",
+      "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 128,
+      "last": 160,
+      "start": 831,
+      "end": 1042,
+      "text": "registros. Si el checksum no coincide, detener la restauración y conservar el archivo para investigar. No sustituir el checksum esperado por el observado. El objetivo del ejercicio es detectar pérdidas y límites",
+      "alias": "S05"
+    },
+    {
+      "id": "9f1124c560278415271cef7adf8287bf597289ab6dbc5810571bbb6a4975b9cf",
+      "documentId": "RUNBOOK",
+      "documentVersion": "6f5e340119f360242f00966dbf5f14709f0870b20bcb36626aca3a082b085a11",
+      "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 160,
+      "last": 178,
+      "start": 1043,
+      "end": 1158,
+      "text": "del procedimiento. Los tiempos locales no prometen el tiempo de recuperación de otro sistema. AtlasQueue | Página 1",
+      "alias": "S06"
+    },
+    {
+      "id": "4988a12ab1dfd888a0a4713ec03283fa868d18d18b1beec013f0940ca6456745",
+      "documentId": "COLUMNS",
+      "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+      "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 0,
+      "last": 32,
+      "start": 0,
+      "end": 199,
+      "text": "Copias de seguridad La retención es de treinta días. Restaurar requiere dos pasos: 1. Verificar el manifiesto. 2. Reproducir el registro WAL. La prueba usa un directorio aislado. No se restaura sobre",
+      "alias": "S07"
+    },
+    {
+      "id": "c8094938510a97614af923d99227e86c5ecaf45bafe3da974fd9239e324c3bda",
+      "documentId": "COLUMNS",
+      "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+      "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 32,
+      "last": 64,
+      "start": 200,
+      "end": 414,
+      "text": "producción. Guardar el checksum esperado. Una copia no prueba recuperación. La verificación compara el contenido. Configuración de caché El TTL inicial es de 300 segundos. La clave incluye el idioma. Invalidar tras",
+      "alias": "S08"
+    },
+    {
+      "id": "5d8d7f565b39a34564164200108056f1cb9c3752cfdddd47abfdc4d25193913a",
+      "documentId": "COLUMNS",
+      "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+      "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 64,
+      "last": 96,
+      "start": 415,
+      "end": 601,
+      "text": "cambiar la versión. Un cache miss consulta el origen. El error del origen no se almacena. Medir hit ratio y latencia. Un TTL no garantiza consistencia. La caché es una copia descartable.",
+      "alias": "S09"
+    },
+    {
+      "id": "affd1be4e01455bef0da2728fa2fa8c2e991349b3f7a53125c1a186320688003",
+      "documentId": "COLUMNS",
+      "documentVersion": "89c88df9aa928b8a1ffa71e65a154289bb56c9d2af89f2ab8ab080e55cff1b7a",
+      "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 96,
+      "last": 101,
+      "start": 602,
+      "end": 634,
+      "text": "El origen conserva la autoridad.",
+      "alias": "S10"
+    },
+    {
+      "id": "b702b09f2b5f1e4024c0daacff879b085f47bfd14e4ea717a4e904a10aebd813",
+      "documentId": "HTML",
+      "documentVersion": "3fdc11c58f34bd03383704f105611e7810a484c9eb9029c6bc829a03b9fa70f1",
+      "representationId": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 0,
+      "last": 32,
+      "start": 0,
+      "end": 219,
+      "text": "AtlasQueue: mantenimiento del índice La versión del índice identifica el analizador y el corpus utilizado. Cambiar el analizador exige evaluar de nuevo las consultas. Las reconstrucciones se hacen sobre un índice nuevo.",
+      "alias": "S11"
+    },
+    {
+      "id": "11d2914e8e81fb483b7c34805d21011b532158e2314002a3dad2490af38eac53",
+      "documentId": "HTML",
+      "documentVersion": "3fdc11c58f34bd03383704f105611e7810a484c9eb9029c6bc829a03b9fa70f1",
+      "representationId": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 32,
+      "last": 64,
+      "start": 220,
+      "end": 443,
+      "text": "El cambio de referencia ocurre después de comprobar que conserva los documentos esperados. El identificador del documento es estable; la versión cambia cuando cambia el contenido. Dos versiones diferentes no deben compartir",
+      "alias": "S12"
+    },
+    {
+      "id": "05eedd30cf030b48b7e908ac5f32b7ed9a9556d9b7e3f44a827a20b724b9e912",
+      "documentId": "HTML",
+      "documentVersion": "3fdc11c58f34bd03383704f105611e7810a484c9eb9029c6bc829a03b9fa70f1",
+      "representationId": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610",
+      "policy": "word-window/v1:budget=32:overlap=0",
+      "budget": 32,
+      "first": 64,
+      "last": 88,
+      "start": 444,
+      "end": 590,
+      "text": "una cita sin especificar la revisión. Una consulta sin resultados es válida. El sistema no debe inventar una respuesta para completar el top tres.",
+      "alias": "S13"
+    }
+  ]
+}

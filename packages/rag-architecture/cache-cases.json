@@ -1,0 +1,200 @@
+[
+  {
+    "id": "first-alpha",
+    "role": "alpha_reader",
+    "query": "cache",
+    "k": 3,
+    "expectedLookup": "miss",
+    "expectedRows": 1,
+    "before": null
+  },
+  {
+    "id": "hit-alpha",
+    "role": "alpha_reader",
+    "query": "cache",
+    "k": 3,
+    "expectedLookup": "hit",
+    "expectedRows": 1,
+    "before": null
+  },
+  {
+    "id": "first-beta",
+    "role": "beta_reader",
+    "query": "cache",
+    "k": 3,
+    "expectedLookup": "miss",
+    "expectedRows": 1,
+    "before": null
+  },
+  {
+    "id": "hit-beta",
+    "role": "beta_reader",
+    "query": "cache",
+    "k": 3,
+    "expectedLookup": "hit",
+    "expectedRows": 1,
+    "before": null
+  },
+  {
+    "id": "first-manager",
+    "role": "alpha_manager",
+    "query": "rotacion",
+    "k": 3,
+    "expectedLookup": "miss",
+    "expectedRows": 1,
+    "before": null
+  },
+  {
+    "id": "hit-manager",
+    "role": "alpha_manager",
+    "query": "rotacion",
+    "k": 3,
+    "expectedLookup": "hit",
+    "expectedRows": 1,
+    "before": null
+  },
+  {
+    "id": "reader-not-manager",
+    "role": "alpha_reader",
+    "query": "rotacion",
+    "k": 3,
+    "expectedLookup": "miss",
+    "expectedRows": 0,
+    "before": null
+  },
+  {
+    "id": "other-manager",
+    "role": "beta_manager",
+    "query": "rotacion",
+    "k": 3,
+    "expectedLookup": "miss",
+    "expectedRows": 1,
+    "before": null
+  },
+  {
+    "id": "different-k",
+    "role": "alpha_reader",
+    "query": "cache",
+    "k": 1,
+    "expectedLookup": "miss",
+    "expectedRows": 1,
+    "before": null
+  },
+  {
+    "id": "hit-k1",
+    "role": "alpha_reader",
+    "query": "cache",
+    "k": 1,
+    "expectedLookup": "hit",
+    "expectedRows": 1,
+    "before": null
+  },
+  {
+    "id": "revoked-manager",
+    "role": "alpha_manager",
+    "query": "rotacion",
+    "k": 3,
+    "expectedLookup": "miss",
+    "expectedRows": 0,
+    "before": "revoke"
+  },
+  {
+    "id": "hit-revoked-empty",
+    "role": "alpha_manager",
+    "query": "rotacion",
+    "k": 3,
+    "expectedLookup": "hit",
+    "expectedRows": 0,
+    "before": null
+  },
+  {
+    "id": "restored-manager",
+    "role": "alpha_manager",
+    "query": "rotacion",
+    "k": 3,
+    "expectedLookup": "miss",
+    "expectedRows": 1,
+    "before": "restore"
+  },
+  {
+    "id": "hit-restored",
+    "role": "alpha_manager",
+    "query": "rotacion",
+    "k": 3,
+    "expectedLookup": "hit",
+    "expectedRows": 1,
+    "before": null
+  },
+  {
+    "id": "sql-error-first",
+    "role": "alpha_reader",
+    "query": "cache",
+    "k": 2,
+    "expectedLookup": "miss",
+    "expectedRows": null,
+    "before": "sql-error"
+  },
+  {
+    "id": "sql-error-again",
+    "role": "alpha_reader",
+    "query": "cache",
+    "k": 2,
+    "expectedLookup": "miss",
+    "expectedRows": null,
+    "before": "sql-error"
+  },
+  {
+    "id": "document-acl-changed",
+    "role": "alpha_reader",
+    "query": "cache",
+    "k": 3,
+    "expectedLookup": "miss",
+    "expectedRows": 0,
+    "before": "restrict-document"
+  },
+  {
+    "id": "hit-acl-empty",
+    "role": "alpha_reader",
+    "query": "cache",
+    "k": 3,
+    "expectedLookup": "hit",
+    "expectedRows": 0,
+    "before": null
+  },
+  {
+    "id": "manager-after-document-acl",
+    "role": "alpha_manager",
+    "query": "cache",
+    "k": 3,
+    "expectedLookup": "miss",
+    "expectedRows": 1,
+    "before": null
+  },
+  {
+    "id": "global-epoch-affects-beta",
+    "role": "beta_reader",
+    "query": "cache",
+    "k": 3,
+    "expectedLookup": "miss",
+    "expectedRows": 1,
+    "before": null
+  },
+  {
+    "id": "ttl-expired",
+    "role": "beta_reader",
+    "query": "cache",
+    "k": 3,
+    "expectedLookup": "expired",
+    "expectedRows": 1,
+    "before": "wait-ttl"
+  },
+  {
+    "id": "hit-after-expiry",
+    "role": "beta_reader",
+    "query": "cache",
+    "k": 3,
+    "expectedLookup": "hit",
+    "expectedRows": 1,
+    "before": null
+  }
+]

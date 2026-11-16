@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "kind": "dataset_integrity_manifest_not_experiment_result",
+  "modelRuns": 0,
+  "files": [
+    {
+      "file": "corpus.json",
+      "sha256": "e86328f27a4c1740f79d2d4c7b99369adf1f4cdade85f8521c241c8a89029c3e"
+    },
+    {
+      "file": "queries.json",
+      "sha256": "dd3a6da2b7cf43fba3d0981f1c62a19827a97434b7f5cfb0c3201c305aaf80d0"
+    },
+    {
+      "file": "gold.json",
+      "sha256": "d76f9ec9a15ce9f9413ef154dc18208e21de57914bd4e858b8692e7934903c73"
+    }
+  ],
+  "limits": [
+    "Public,synthetic,known to the author; not a blind holdout or representative user distribution.",
+    "No inter-annotator agreement or independent semantic review.",
+    "No model A/B comparison has run; that remains a P116 deliverable."
+  ]
+}

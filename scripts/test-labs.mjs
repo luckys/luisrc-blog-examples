@@ -42,6 +42,7 @@ const commands = [
     "convolutional-networks",
     "recurrent-sequences",
     "attention-transformer",
+    "rag-evaluation",
   ].map((lab) => ["--dir", `packages/${lab}`, "test"]),
   [
     "--dir",

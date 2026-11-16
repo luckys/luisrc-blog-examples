@@ -1,0 +1,22 @@
+{
+  "name": "@luisrc-examples/reranking-grounding",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.19.0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "models:fetch": "node fetch-models.mjs",
+    "prepare": "node prepare.mjs",
+    "capture:reranker": "node capture-reranker.mjs",
+    "prepare:answers": "node prepare-answers.mjs",
+    "capture:answers": "node capture-answers.mjs",
+    "evaluate": "node evaluate.mjs",
+    "verify": "node verify.mjs",
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "3.8.1"
+  }
+}

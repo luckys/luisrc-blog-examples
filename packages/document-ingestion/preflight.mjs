@@ -1,0 +1,20 @@
+import {AutoTokenizer,env} from '@huggingface/transformers';
+import {readFile,writeFile,access} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import assert from 'node:assert/strict';
+import {digest} from './ledger.mjs';
+const root=new URL('.',import.meta.url),read=file=>readFile(new URL(file,root)),json=async file=>JSON.parse(await read(file));
+try{await access(new URL('results/token-preflight.json',root));throw Error('Token preflight exists: preserve/version it first');}catch(error){if(error.code!=='ENOENT')throw error;}
+const ledger=await json('results/ledger.json'),snapshot=await json('tokenizer-files.json'),config=ledger.protocol.tokenPreflight;
+for(const[file,hash]of Object.entries(ledger.sourceHashes))assert.equal(digest(await read(file)),hash,file);
+for(const file of snapshot.files)assert.equal(digest(await read('.cache/tokenizer/'+file.file)),file.sha256,file.file);
+const installed=JSON.parse(await read('node_modules/@huggingface/transformers/package.json'));assert.equal(installed.version,config.transformersJs);
+env.allowRemoteModels=false;env.allowLocalModels=true;
+const tokenizer=await AutoTokenizer.from_pretrained(fileURLToPath(new URL('.cache/tokenizer/',root)),{local_files_only:true});
+const encoded=tokenizer(ledger.chunks.map(chunk=>chunk.text),{padding:false,truncation:false,return_tensor:false,add_special_tokens:true});
+const rows=ledger.chunks.map((chunk,i)=>({chunkId:chunk.id,documentId:chunk.documentId,budget:chunk.budget,units:chunk.last-chunk.first,modelTokenIds:encoded.input_ids[i],modelTokens:encoded.input_ids[i].length}));
+for(const row of rows)assert.ok(row.modelTokens<=config.maxTokens,'Too long: do not truncate to hide this');
+const sourceFiles=['preflight.mjs','tokenizer-files.json','ledger-protocol.json','ledger.mjs','results/ledger.json'];
+const sourceHashes=Object.fromEntries(await Promise.all(sourceFiles.map(async file=>[file,digest(await read(file))])));
+const summaries=ledger.protocol.windows.budgets.map(budget=>{const values=rows.filter(row=>row.budget===budget);return{budget,chunks:values.length,minUnits:Math.min(...values.map(row=>row.units)),maxUnits:Math.max(...values.map(row=>row.units)),minModelTokens:Math.min(...values.map(row=>row.modelTokens)),maxModelTokens:Math.max(...values.map(row=>row.modelTokens))};});
+await writeFile(new URL('results/token-preflight.json',root),JSON.stringify({capturedAt:new Date().toISOString(),kind:'actual_local_tokenizer_count_no_encoder_inference',sourceHashes,config,environment:{node:process.version,transformersJs:installed.version},rows,summaries},null,2)+'\n');console.log(JSON.stringify(summaries,null,2));

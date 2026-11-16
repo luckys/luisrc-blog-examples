@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "kind": "preregistered_response_contract_and_editorial_semantic_rubric",
+  "scope": "Spanish authored corpus and fixed A/B inputs; no independent human annotation,judge-model experiment or representative-user claim",
+  "decoding": "Preserve generated IDs and decode twice,with and without special tokens. Parser uses standard skip_special_tokens:true decode with no other rewriting. EOS IDs count as produced IDs. Never strip fences,extract a substring,repair JSON or retry a poor answer.",
+  "technicalContract": {
+    "json": "JSON.parse must consume the whole output; only outer JSON whitespace permitted; reject duplicate object keys including escaped equivalents",
+    "keys": [
+      "status",
+      "answer",
+      "citations"
+    ],
+    "types": "object,not array; status answered/no_answer; answer string; citations array of unique exact strings drawn from sources actually provided",
+    "answered": "nonblank answer and at least one citation",
+    "no_answer": "answer exactly empty string and citations exactly empty array",
+    "failure": "retain raw output and stable failure reason; no semantic-score denominator or repaired answer"
+  },
+  "semanticReview": {
+    "performer": "Editorial review by the assistant preparing this lab,not an independently calibrated human panel or separately executed judge",
+    "timing": "Judgments written after outputs,using this rubric fixed before outputs",
+    "segmentation": "Partition the entire decoded answer into exact nonoverlapping UTF-16 spans. Factual spans are independently verifiable propositions or inseparable compound claims; compound supported only when every factual component is supported. Separate independent clauses where their text permits. Non-factual spans contain discourse/formatting only; provide a reason. Leave no answer text unreviewed.",
+    "supported": "Every factual component follows from sources actually in the input; evidence quotes,source revision and UTF-16 ranges required",
+    "contradicted": "At least one factual component conflicts with provided evidence; preserve the conflicting quote and explanation",
+    "unsupported": "Provided sources neither establish the complete claim nor explicitly contradict it; explain missing support. A correct fact from corpus outside input is still unsupported here.",
+    "factMatching": "Match only the exact required fact IDs of this question when meaning,number,unit,scope and conditions are correct. Repeated mentions count once. Explain each match; a correct fact outside input can match gold while remaining unsupported for faithfulness.",
+    "citationSupport": "Citations are a global list,not claim-level links. Each supported span records one sufficient set of necessary evidence; citation coverage requires every document in that set to be cited. Do not add optional redundant evidence or infer that every listed document supports every claim.",
+    "limitations": "Exact ranges/hashes validate structural integrity,not semantic entailment. Preserve review provenance and reasons; no measured inter-annotator agreement."
+  },
+  "metrics": {
+    "faithfulness": "supported factual spans / factual spans,only technically valid answered outputs with at least1 factual span; otherwise null,never automatic1 for abstention",
+    "requiredCompleteness": "distinct correctly matched required fact IDs / required fact IDs. Valid no_answer on corpus-answerable input gets0; unanswerable gold or technical/execution failure getsnull,reported separately",
+    "groundedCompleteness": "required fact IDs matched by supported claims with citation coverage / required facts",
+    "citationCoverage": "supported factual spans with all necessary support documents cited / all factual spans; null when no factual spans",
+    "scope": "macro means show eligible counts; invalid,not executed,abstained and answered counts always accompany scores"
+  },
+  "policy": {
+    "contextAnswerable": "gold has required facts AND frozen baseline context has requiredFactCoverage1",
+    "contractPass": "technical valid; if context answerable,answered with faithfulness1,groundedCompleteness1 and citationCoverage1; otherwise valid no_answer",
+    "answerSuccess": "for corpus-answerable queries only,technical valid answered with faithfulness1,groundedCompleteness1 and citationCoverage1; an appropriate refusal due to missing retrieval evidence is still unanswered",
+    "noAnswerSuccess": "for corpus-unanswerable queries only,technically valid no_answer",
+    "comparison": "report dev/test and answerability separately; preserve Q002 retrieval deficit and every error"
+  }
+}

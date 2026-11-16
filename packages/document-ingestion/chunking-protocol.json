@@ -1,0 +1,67 @@
+{
+  "status": "fixed_before_semantic_encoding_and_retrieval",
+  "corpus": [
+    "RUNBOOK",
+    "COLUMNS",
+    "HTML"
+  ],
+  "source": "Frozen results/ledger.json canonical text. Controls and duplicate aliases excluded from indexing.",
+  "segmentation": {
+    "locale": "es",
+    "granularity": "sentence",
+    "implementation": "Intl.Segmenter in recorded Node/ICU runtime",
+    "alignment": "Only sentence ends coinciding with canonical unit end may split; other ends are ignored and recorded. Split oversized sentence pieces by unit budget.",
+    "maxUnits": 32
+  },
+  "encoder": {
+    "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+    "dtype": "q8",
+    "device": "cpu",
+    "dimensions": 384,
+    "maxTokens": 128,
+    "batchSize": 8,
+    "intraOpNumThreads": 2,
+    "interOpNumThreads": 1,
+    "pooling": "attention-mask weighted mean including active special tokens, raw float32"
+  },
+  "semantic": {
+    "budget": 32,
+    "distance": "1-cosine between adjacent sentence-piece embeddings",
+    "threshold": 0.35,
+    "rule": "Cut when distance>threshold or next piece would exceed budget; budget wins as primary reason; record both predicates. No relevance tuning.",
+    "policyVersion": "adjacent-sentence-cosine/v1"
+  },
+  "strategies": [
+    "size32",
+    "semantic32",
+    "overlap4",
+    "overlap8"
+  ],
+  "overlap": {
+    "budget": 32,
+    "values": [
+      4,
+      8
+    ],
+    "rule": "Step budget-overlap; keep final partial window; stop once a window reaches source end to avoid an entirely redundant tail."
+  },
+  "retrieval": {
+    "method": "bm25",
+    "analyzer": "P106 fold",
+    "k1": 1.2,
+    "b": 0.75,
+    "k": 3,
+    "indexedText": "chunk body only; no title enrichment or reranking",
+    "statistics": "Each partition gets its own BM25 index; changes to document frequency/length are part of the chunking effect."
+  },
+  "evaluation": {
+    "gold": "Author-selected source spans with required fact groups; alternatives inside a group are acceptable equivalent sources. Queries/labels fixed before these rankings, already-known synthetic corpus, not blind test.",
+    "coverage": "For each fact,max fraction of required canonical unit IDs covered among its alternatives; query coverage=mean across facts; macro across answerable queries.",
+    "complete": "All fact groups have at least one fully covered alternative in the union of top3 chunks.",
+    "redundancy": "1-unique retrieved canonical unit IDs / sum returned chunk units; zero with no returned context, report returned count too.",
+    "negative": "No gold facts means coverage/complete null, excluded from answerable aggregate; preserve every ranking, no calibrated abstention threshold."
+  },
+  "selection": "Retain all outputs,source hashes,negative and unchanged cases. Do not tune threshold,labels or retry selection based on metrics.",
+  "limits": "Three short synthetic known documents,no production capacity claim,no comparison between different retrievers."
+}

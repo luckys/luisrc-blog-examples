@@ -1,0 +1,55 @@
+{
+  "description": "Original synthetic Spanish operational documentation. Not a real organization or production dataset.",
+  "single": {
+    "id": "RUNBOOK",
+    "title": "AtlasQueue: recuperación verificada",
+    "paragraphs": [
+      "Una copia de seguridad no garantiza que el servicio pueda recuperarse. La prueba debe restaurar datos y comprobar su contenido.",
+      "El manifiesto registra el checksum SHA-256 y la versión del esquema. Antes de restaurar, comprobar que ambos coinciden con el entorno de prueba.",
+      "La retención de las copias es de treinta días. Mantener dos copias en ubicaciones diferentes evita depender de un único volumen.",
+      "La restauración usa un directorio aislado. Nunca sobrescribir los datos de producción durante un ejercicio.",
+      "Después de cargar la copia, reproducir el registro WAL hasta el punto acordado. Una escritura posterior no pertenece a ese snapshot.",
+      "El informe guarda el identificador de la copia, la fecha y los resultados de las comprobaciones. Una ejecución sin errores no demuestra que falten cero registros.",
+      "Si el checksum no coincide, detener la restauración y conservar el archivo para investigar. No sustituir el checksum esperado por el observado.",
+      "El objetivo del ejercicio es detectar pérdidas y límites del procedimiento. Los tiempos locales no prometen el tiempo de recuperación de otro sistema."
+    ]
+  },
+  "columns": {
+    "id": "COLUMNS",
+    "title": "AtlasQueue: dos procedimientos independientes",
+    "left": [
+      "Copias de seguridad",
+      "La retención es de treinta días.",
+      "Restaurar requiere dos pasos:",
+      "1. Verificar el manifiesto.",
+      "2. Reproducir el registro WAL.",
+      "La prueba usa un directorio aislado.",
+      "No se restaura sobre producción.",
+      "Guardar el checksum esperado.",
+      "Una copia no prueba recuperación.",
+      "La verificación compara el contenido."
+    ],
+    "right": [
+      "Configuración de caché",
+      "El TTL inicial es de 300 segundos.",
+      "La clave incluye el idioma.",
+      "Invalidar tras cambiar la versión.",
+      "Un cache miss consulta el origen.",
+      "El error del origen no se almacena.",
+      "Medir hit ratio y latencia.",
+      "Un TTL no garantiza consistencia.",
+      "La caché es una copia descartable.",
+      "El origen conserva la autoridad."
+    ]
+  },
+  "html": {
+    "id": "HTML",
+    "title": "AtlasQueue: mantenimiento del índice",
+    "paragraphs": [
+      "La versión del índice identifica el analizador y el corpus utilizado. Cambiar el analizador exige evaluar de nuevo las consultas.",
+      "Las reconstrucciones se hacen sobre un índice nuevo. El cambio de referencia ocurre después de comprobar que conserva los documentos esperados.",
+      "El identificador del documento es estable; la versión cambia cuando cambia el contenido. Dos versiones diferentes no deben compartir una cita sin especificar la revisión.",
+      "Una consulta sin resultados es válida. El sistema no debe inventar una respuesta para completar el top tres."
+    ]
+  }
+}

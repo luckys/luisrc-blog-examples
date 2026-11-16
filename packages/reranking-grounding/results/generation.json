@@ -1,0 +1,342 @@
+{
+  "capturedAt": "2026-11-03T12:37:47.749Z",
+  "kind": "all_unique_real_generations_preserved",
+  "sourceHashes": {
+    "capture-answers.mjs": "5ae5bfbf10510c00d58376420c725c8740b9d70fcb346e3f714d18696a1bbb34",
+    "io.mjs": "3ab9a398b5ab6e04af1d65192452179edf7f3cf58326a3720089cc085ff4fb70",
+    "results/inputs.json": "252ec06565162ae1e4436e57be68e1f21a963f6c02e4f1cebc01c9fa13ee66e1",
+    "results/answer-inputs.json": "9f695264a9924deff7f2b3adf355c12b3d79bc23c398ecd89b271a000672ccc3",
+    "generator-model-files.json": "beefdd9de5c6e9472ee3f4a7c8f53e295d9cfda881e0dc6154b9fd6d2b8d75a6"
+  },
+  "runtime": {
+    "node": "v24.19.0",
+    "icu": "78.3",
+    "unicode": "17.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "Intel(R) Core(TM) Ultra 9 285H",
+    "transformersJs": "3.8.1",
+    "onnxRuntimeNode": "1.21.0"
+  },
+  "config": {
+    "model": "onnx-community/Qwen2.5-0.5B-Instruct",
+    "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+    "dtype": "q8",
+    "device": "cpu",
+    "maxInputTokens": 1024,
+    "maxNewTokens": 160,
+    "doSample": false,
+    "numBeams": 1,
+    "repetitionPenalty": 1,
+    "intraOpNumThreads": 4,
+    "interOpNumThreads": 1,
+    "profile": "Tokenizer chat template, explicit generation prompt, no added special tokens after template, no truncation. One execution per unique exact prompt/profile, shared by identical scenarios."
+  },
+  "rows": [
+    {
+      "promptId": "4b4b7387b04887bbc11e6e07b228df55a1da08559531e60ea7a663c576e37ea1",
+      "file": "results/answers/4b4b7387b04887bbc11e6e07b228df55a1da08559531e60ea7a663c576e37ea1.json",
+      "sha256": "6e8607234da8f3c28785df766c30406d9c1b89a25b8b07eb9876271b33a7a2b2"
+    },
+    {
+      "promptId": "d7c953b1caeeb5c0f18cbd50ea6e389a331021d3b6045f416ab13c702038f564",
+      "file": "results/answers/d7c953b1caeeb5c0f18cbd50ea6e389a331021d3b6045f416ab13c702038f564.json",
+      "sha256": "954a78acc49a94c929b61c781e6e7bad2ebae4f23b0596a21227662c0b82a594"
+    },
+    {
+      "promptId": "f7423d5105f30b868e8ebca2a6e3e5cf0173611096232ddeb3dad00f36b0b3c4",
+      "file": "results/answers/f7423d5105f30b868e8ebca2a6e3e5cf0173611096232ddeb3dad00f36b0b3c4.json",
+      "sha256": "b3890de160d050485abce74dbdbbc2fcd631cdd159ec81ef0af8065c4684ad15"
+    },
+    {
+      "promptId": "1b8656ab2c1832cc0b9adef33e5a8300fe30cad27cb2544229fd8e9fa83fa46b",
+      "file": "results/answers/1b8656ab2c1832cc0b9adef33e5a8300fe30cad27cb2544229fd8e9fa83fa46b.json",
+      "sha256": "ceb37373cf1150acc900cfab44278c54f55f52c2be14281342250ad2820c4e45"
+    },
+    {
+      "promptId": "c30112328969f9f0983eb9da8b22e03d63d55bedd625361d8b8b1a5c498557a5",
+      "file": "results/answers/c30112328969f9f0983eb9da8b22e03d63d55bedd625361d8b8b1a5c498557a5.json",
+      "sha256": "2538676f94b569040c3fab8346a1866c27e5813989290f624bad0174aecc3501"
+    },
+    {
+      "promptId": "f1a7db0b5aa735c27bcbbb62efa91a1ed6e7c677fd173c52ec692af39743078e",
+      "file": "results/answers/f1a7db0b5aa735c27bcbbb62efa91a1ed6e7c677fd173c52ec692af39743078e.json",
+      "sha256": "2793fa13413f8334b1ec2986d69201835cc2c46484b712bdb8b4fc11d12e6338"
+    },
+    {
+      "promptId": "e7483da3cf74ce0a06a2ca838c0ee2029c4265f03a7a67e41086c3cd14c01d62",
+      "file": "results/answers/e7483da3cf74ce0a06a2ca838c0ee2029c4265f03a7a67e41086c3cd14c01d62.json",
+      "sha256": "13f9bd575ca6ef59fc867368079d2cd1be4b4fb13fd5d31eae4ed2a31519facb"
+    },
+    {
+      "promptId": "9713ba36bdb7c3feef0023cccc41d0360cb047ac0c6707a9e636723f5f737b3e",
+      "file": "results/answers/9713ba36bdb7c3feef0023cccc41d0360cb047ac0c6707a9e636723f5f737b3e.json",
+      "sha256": "76da3932814d2b2dd50370ca49ce5bf27c549c19b52b8254341a08e0dd5c703d"
+    },
+    {
+      "promptId": "88da18622313de78a33b8cab0b76484c5663f37044f50517be20867ee60d72bb",
+      "file": "results/answers/88da18622313de78a33b8cab0b76484c5663f37044f50517be20867ee60d72bb.json",
+      "sha256": "845499eace2ace55f7126bed4ea5c7be28dbb32de27ddc2af392e8cef8f0f90a"
+    },
+    {
+      "promptId": "d7bb594ee4045cd99f52db1cfab9bc84796a4d61fe39f6752688deec753702cb",
+      "file": "results/answers/d7bb594ee4045cd99f52db1cfab9bc84796a4d61fe39f6752688deec753702cb.json",
+      "sha256": "c6e7473ccb6189bd3cc35fee20088a93b9342af45a9e5b770f72ef3d999baadb"
+    },
+    {
+      "promptId": "b2885e5631d239eafa3a947d758b52c3ea9af4385d755da353811c3610e43477",
+      "file": "results/answers/b2885e5631d239eafa3a947d758b52c3ea9af4385d755da353811c3610e43477.json",
+      "sha256": "23c1ff6108b28ed5e57ecb1b8560c411f6b96ede70a7c2d4d6a2740e4feb6b06"
+    },
+    {
+      "promptId": "c622ef8cacf2287e7f09a3d8caee7285ffcd31745d0cb51a46e235771a58991a",
+      "file": "results/answers/c622ef8cacf2287e7f09a3d8caee7285ffcd31745d0cb51a46e235771a58991a.json",
+      "sha256": "2fd2a5e7014a2e6a470f0565697df878270f12a999bee8da5df2f42285f5fa80"
+    },
+    {
+      "promptId": "20c03186a76477e489003efdbec3280ae53be967577044fd38a5d2259d9d0a90",
+      "file": "results/answers/20c03186a76477e489003efdbec3280ae53be967577044fd38a5d2259d9d0a90.json",
+      "sha256": "8798cb87f2ef0cab716746e769001053003c280440560335c1e0ac4d17c3a11b"
+    },
+    {
+      "promptId": "456848e1f6cd379b20f3727cffd4ac8f7f43949764574ee43df6dd417c17c372",
+      "file": "results/answers/456848e1f6cd379b20f3727cffd4ac8f7f43949764574ee43df6dd417c17c372.json",
+      "sha256": "6bc1eace451564b6195d8538c93b90dba46c70febf4526553e7c984d54880376"
+    },
+    {
+      "promptId": "1b2e0c28d9585f3c9f6c7b853b213ecdca92622fed905cc7a59ae7a0d006bef6",
+      "file": "results/answers/1b2e0c28d9585f3c9f6c7b853b213ecdca92622fed905cc7a59ae7a0d006bef6.json",
+      "sha256": "a4608bc6f187d34b657442b4514be82286421b046a66117855423229261a31ce"
+    },
+    {
+      "promptId": "f536367b02afede29ab57162f747dc345acf4d15246fefb8795f4a82995127aa",
+      "file": "results/answers/f536367b02afede29ab57162f747dc345acf4d15246fefb8795f4a82995127aa.json",
+      "sha256": "8ef232c3b906795a4cb0f6162314c8a40e273da3cb3c354f2e8bf95d7ca25e7b"
+    },
+    {
+      "promptId": "6cb26eef68c782a31943b567ee556d3e742a1399d0cf00006bb37b3361813b85",
+      "file": "results/answers/6cb26eef68c782a31943b567ee556d3e742a1399d0cf00006bb37b3361813b85.json",
+      "sha256": "7a36dd6dcf5a71c45829024fba0536cf6dcf4c2e960b32e270ff317d8719335c"
+    },
+    {
+      "promptId": "6342f9e18b4d5c4958426a54bbdd4da412536e5a9adce9c5a58ccff489b492b8",
+      "file": "results/answers/6342f9e18b4d5c4958426a54bbdd4da412536e5a9adce9c5a58ccff489b492b8.json",
+      "sha256": "935cec0efd3c64a74644ad42172fd22e3caa4d00fba034bb524fddfe21318916"
+    },
+    {
+      "promptId": "42aa1b68c63b336482193c4dc21da0904b4d2d53215e4c0b0a75abcf17c1d05c",
+      "file": "results/answers/42aa1b68c63b336482193c4dc21da0904b4d2d53215e4c0b0a75abcf17c1d05c.json",
+      "sha256": "19b08dfb2b7e1d800a7649068f96dc793f5e34933099ba3edd89e881c22cb223"
+    },
+    {
+      "promptId": "70f77b95482b4d9fb0c9ed2a75d3d69b76d586c0a5cc05eff38f29aea521085d",
+      "file": "results/answers/70f77b95482b4d9fb0c9ed2a75d3d69b76d586c0a5cc05eff38f29aea521085d.json",
+      "sha256": "8f1f604333f089d76f761026e24f84e5ff215b7b305fcdfab852040cd1ecd249"
+    },
+    {
+      "promptId": "9f429a6c201ca8a7f92c1bc7cf28489d18756f07b4c25541c44ac55043d48dd8",
+      "file": "results/answers/9f429a6c201ca8a7f92c1bc7cf28489d18756f07b4c25541c44ac55043d48dd8.json",
+      "sha256": "b422d3c9e17372b1f410cb2c920fdabd19c982975f5238f22f2357656060298c"
+    },
+    {
+      "promptId": "fb7b97b3e0cb1192482bb6a59759b01db403d5b8a7ce7f3e0e5eac6951d80139",
+      "file": "results/answers/fb7b97b3e0cb1192482bb6a59759b01db403d5b8a7ce7f3e0e5eac6951d80139.json",
+      "sha256": "3ace28f0fea7b55a3b1e9be3aff886128fcce5d99e77b3b83acc26071667fd0a"
+    },
+    {
+      "promptId": "91c4043d3bb30e5b66455e1fd415401b7903bc5edfa36865999a4cda27213b29",
+      "file": "results/answers/91c4043d3bb30e5b66455e1fd415401b7903bc5edfa36865999a4cda27213b29.json",
+      "sha256": "18696f6bd1e11f4edb0406fa233e707ae3617700ba30ca77fac3d3c36f9c1873"
+    },
+    {
+      "promptId": "354d1238d27487c61b4e7811d373d77d79385e36646156639d2899a599652e9c",
+      "file": "results/answers/354d1238d27487c61b4e7811d373d77d79385e36646156639d2899a599652e9c.json",
+      "sha256": "1fca7845a3b6e29cef465d074a213c97b9dbf42fbacc0d6e06f862b90692b8fc"
+    },
+    {
+      "promptId": "4e717b262a972c61a786ac2663ca785e1c3884b111ff9bc5c57c71d2b83761dd",
+      "file": "results/answers/4e717b262a972c61a786ac2663ca785e1c3884b111ff9bc5c57c71d2b83761dd.json",
+      "sha256": "cffca0d6d9380f6b86f62490b4b47c9f13f8b6144c38f33c302ac7aa7a2ff750"
+    },
+    {
+      "promptId": "8f073b399cd8e1fcf3e63be4bcda7ae9b4c504aa74c68ec7c8c235fae54fb8f7",
+      "file": "results/answers/8f073b399cd8e1fcf3e63be4bcda7ae9b4c504aa74c68ec7c8c235fae54fb8f7.json",
+      "sha256": "440e7b0a6176584a724cbd0c1f2fe12c67c047d9a9675939c0208414e2c8cee3"
+    },
+    {
+      "promptId": "b931b971121a9f71619573b6701b10ca846a15c91e714f97b5dca74b048364eb",
+      "file": "results/answers/b931b971121a9f71619573b6701b10ca846a15c91e714f97b5dca74b048364eb.json",
+      "sha256": "3748927f4192aa9ab7eb431397d235d1805e71b93485fcb734add8142b65d1e9"
+    },
+    {
+      "promptId": "9c56e40e92d97249b53d5154459966bf2e9cc3c8cb86ca70c40ce60836f0b2f5",
+      "file": "results/answers/9c56e40e92d97249b53d5154459966bf2e9cc3c8cb86ca70c40ce60836f0b2f5.json",
+      "sha256": "d399475e3c17426fc330b7bb57c5244a52f63958f542d9fe3ec78d8e5b910da2"
+    },
+    {
+      "promptId": "b2e090cb33e3905b5e6eb0e5b9f529b918b295e88b0375629d2fe71e115eef79",
+      "file": "results/answers/b2e090cb33e3905b5e6eb0e5b9f529b918b295e88b0375629d2fe71e115eef79.json",
+      "sha256": "3a2962f6f438f546b1e0a0b70a9fbc51335740dee9e297db533f093daea66dcb"
+    },
+    {
+      "promptId": "f8471878fb502e96c1cf3e4845b192bd77b000b5fc0489a9cb0504945a4799f4",
+      "file": "results/answers/f8471878fb502e96c1cf3e4845b192bd77b000b5fc0489a9cb0504945a4799f4.json",
+      "sha256": "f6e09e379ad2789b6f07df9a47bd88a22f68204f57ae9959fb350207e30096c5"
+    },
+    {
+      "promptId": "8e3ca9e9723363177c6d79d98873e38f04902defa0516e3b807b9d8d90ec1150",
+      "file": "results/answers/8e3ca9e9723363177c6d79d98873e38f04902defa0516e3b807b9d8d90ec1150.json",
+      "sha256": "06412c3d709eff584b506d36e9720ae25c633f06e5d7f63368aba4475a0c6310"
+    },
+    {
+      "promptId": "3f924cd623222b6cf2e0ca8a4bd89f520388d36f50750a1eda23ffc1bae3ccb5",
+      "file": "results/answers/3f924cd623222b6cf2e0ca8a4bd89f520388d36f50750a1eda23ffc1bae3ccb5.json",
+      "sha256": "7eb52bf435e39d420101e50ef28442768e683ec755b37a1c85930f77a0b72e31"
+    },
+    {
+      "promptId": "b6de20a4dc2160e99a044b983d0832a8e0a0c3ebcb0d2b2647958a839eef46e0",
+      "file": "results/answers/b6de20a4dc2160e99a044b983d0832a8e0a0c3ebcb0d2b2647958a839eef46e0.json",
+      "sha256": "297c0d4a2f2a9f604b5491eab7fd72b186277a7594df514fbcb8137f4db058f8"
+    },
+    {
+      "promptId": "10f0b14954541b4a4129d224cd23c52e963cbf647477687c44beaa14817ac926",
+      "file": "results/answers/10f0b14954541b4a4129d224cd23c52e963cbf647477687c44beaa14817ac926.json",
+      "sha256": "84020a2a12c987c0b2d035d598deba5403e38917ec4bd0847991827b694c2414"
+    },
+    {
+      "promptId": "cc33a6dd4e5bc94d582d42b0a4e12d61bc5c212d6303502c14007b9ad3ba40b6",
+      "file": "results/answers/cc33a6dd4e5bc94d582d42b0a4e12d61bc5c212d6303502c14007b9ad3ba40b6.json",
+      "sha256": "12bf44eb7dde75fa8d1a2f011843c56f32cec30ade8d0c05f3dc07ae74680219"
+    },
+    {
+      "promptId": "2d39a478e4d2ba711747da71bf9efa7aed74a9b4cb64b22703c032c92599722d",
+      "file": "results/answers/2d39a478e4d2ba711747da71bf9efa7aed74a9b4cb64b22703c032c92599722d.json",
+      "sha256": "e4ed422aba79dcddaf66e0a6bc172eb041ef4ded484a9dc542cd3a5ab3a3eace"
+    },
+    {
+      "promptId": "c7ad677a512cf7a20946b6e54e9b3fba134a1e1e4c5a5deec835193a5341fb82",
+      "file": "results/answers/c7ad677a512cf7a20946b6e54e9b3fba134a1e1e4c5a5deec835193a5341fb82.json",
+      "sha256": "df1d9b2160a090fc12608bef1fee97fd4f6f3b799b7e745d572127b33ee7d0b4"
+    },
+    {
+      "promptId": "bce6df0a6f70ae9765d5645c11dfbaaa9da683803d71a9394fb59814e5e93d6a",
+      "file": "results/answers/bce6df0a6f70ae9765d5645c11dfbaaa9da683803d71a9394fb59814e5e93d6a.json",
+      "sha256": "0c13d0730acddb3426da4634974be1f0e53ca792a474a61bff231cfb18258d68"
+    },
+    {
+      "promptId": "17f6182ee7827917c3d31231193c67aed81c5da0c023ba320563663c9c726e9b",
+      "file": "results/answers/17f6182ee7827917c3d31231193c67aed81c5da0c023ba320563663c9c726e9b.json",
+      "sha256": "0c22da2700156d4ced5e93ec24159a2980556e64ae392028d683b7b6eca8193f"
+    },
+    {
+      "promptId": "3c3faba0accd4e5d22af2e3c9f0c74c4b2f81fe6e626c7f32f043238881598d1",
+      "file": "results/answers/3c3faba0accd4e5d22af2e3c9f0c74c4b2f81fe6e626c7f32f043238881598d1.json",
+      "sha256": "a1579414790138e6eace80557d97c940d590026713d5f73cd5ba04c0ddfdf417"
+    },
+    {
+      "promptId": "49037c9f102fe047668d6e53c694df994d0c37dc57080d436371bfc428089104",
+      "file": "results/answers/49037c9f102fe047668d6e53c694df994d0c37dc57080d436371bfc428089104.json",
+      "sha256": "d94b889da4f1b10a7bc9243e85cd674f31932fb6e2993482271b1ea26b22412a"
+    },
+    {
+      "promptId": "bba4909d8c35cdea6293aaefc2ca3e5d228b3e768c52acc101760b8c42efa6f3",
+      "file": "results/answers/bba4909d8c35cdea6293aaefc2ca3e5d228b3e768c52acc101760b8c42efa6f3.json",
+      "sha256": "de84a87c1458af5c50fc4488d303a59b94418eeba53eb2770edf88745237a982"
+    },
+    {
+      "promptId": "74f36f026bc193af20129a0686190ec1647a17e0167145b54befb225f46f0550",
+      "file": "results/answers/74f36f026bc193af20129a0686190ec1647a17e0167145b54befb225f46f0550.json",
+      "sha256": "81c5fcab9c77173b070917e7eb2050276684f9c937180d1e5ea65fe1f3bfa232"
+    },
+    {
+      "promptId": "b6a30f9f4e18b728fa7ccde5db704d44ecebe48587c915553f84b606d7914191",
+      "file": "results/answers/b6a30f9f4e18b728fa7ccde5db704d44ecebe48587c915553f84b606d7914191.json",
+      "sha256": "c8a6c5c12254fe0f762528cb17279c6e2fc6d63632ec73027fea01cc174a5dc7"
+    },
+    {
+      "promptId": "55eb7c8af33916055ad193cc94f5c669090617d8d5cd495e0177c60c8cc9934b",
+      "file": "results/answers/55eb7c8af33916055ad193cc94f5c669090617d8d5cd495e0177c60c8cc9934b.json",
+      "sha256": "ef450db5ad467f72c3b39b7429ece3b6363ce35dfce7cd96f2c56a3f04278647"
+    },
+    {
+      "promptId": "eb45c727fecf25313588781399d4cb6b8e9f74a0dab7926af8c91dcf01c00608",
+      "file": "results/answers/eb45c727fecf25313588781399d4cb6b8e9f74a0dab7926af8c91dcf01c00608.json",
+      "sha256": "7252a66f280ff2eb1543ec25750c59488cebfecb3414b1f8fda52a86ab665170"
+    },
+    {
+      "promptId": "0f600f665059bd628ef8e7481f54b7fadd6cddd86b5a32a33ce47e22c011f8af",
+      "file": "results/answers/0f600f665059bd628ef8e7481f54b7fadd6cddd86b5a32a33ce47e22c011f8af.json",
+      "sha256": "b24c2fa58af24a148969630a0c565183b8d5f8e946fc7e2bfb26718efbd482bc"
+    },
+    {
+      "promptId": "d8b008ffcf00fbe91c7ffe8c226852a3ae3c5390df17a9af5c3c21cb2c0e695c",
+      "file": "results/answers/d8b008ffcf00fbe91c7ffe8c226852a3ae3c5390df17a9af5c3c21cb2c0e695c.json",
+      "sha256": "622685a0387b310e084bd7513bca6e0d2c3c2ff380318f7a11a1149d4cb1f662"
+    },
+    {
+      "promptId": "5f62296061d5206bf7911ca3615cd46fef53a4b463cc9473406995c39d115b17",
+      "file": "results/answers/5f62296061d5206bf7911ca3615cd46fef53a4b463cc9473406995c39d115b17.json",
+      "sha256": "012133a5508c8437ac74ac6b291cc50b975565649bd5f49a09363a32c47ff190"
+    },
+    {
+      "promptId": "105c7e23a6f2007f999ffe1c58d376ca6471385bc8b56734af4ede7d837261c2",
+      "file": "results/answers/105c7e23a6f2007f999ffe1c58d376ca6471385bc8b56734af4ede7d837261c2.json",
+      "sha256": "3e1fe0e011b9e199f35264692adb6121903b6c8d534bf570db73a707b2339c1b"
+    },
+    {
+      "promptId": "1b21ee32df95562e7680b926169a2f7a7ea92d0918fbd2afcdf8773e7069685c",
+      "file": "results/answers/1b21ee32df95562e7680b926169a2f7a7ea92d0918fbd2afcdf8773e7069685c.json",
+      "sha256": "b60237f6fd696fd9ffa6ed2cf7847454b4d56092ab123b3bc2e5d42c50c25bd5"
+    },
+    {
+      "promptId": "b07d73ae1758cadd3ac7a0fdbee40c30dbba9924790bfa492fbb98cd832ab733",
+      "file": "results/answers/b07d73ae1758cadd3ac7a0fdbee40c30dbba9924790bfa492fbb98cd832ab733.json",
+      "sha256": "6005fa3301e580c6f806302038a4baaa46f2d49144c31904f79749a263c943b0"
+    },
+    {
+      "promptId": "6a602881653b14651d54b956c33fa446c146599dfb6b924b5977842718f8a9d3",
+      "file": "results/answers/6a602881653b14651d54b956c33fa446c146599dfb6b924b5977842718f8a9d3.json",
+      "sha256": "53b76dddf66858f98b41462b5ebec551a8d6bd771a99223dd3175ae4e1e2b909"
+    },
+    {
+      "promptId": "12b19add0be2ac56ea17b2a55785b87018ae2a6ac5698e4a2de5ec137c08c61c",
+      "file": "results/answers/12b19add0be2ac56ea17b2a55785b87018ae2a6ac5698e4a2de5ec137c08c61c.json",
+      "sha256": "9130830ca3f8e838633c219d3c43f52f05cf55dd03f77bfe79393eba80da9402"
+    },
+    {
+      "promptId": "cca93c99b985038883bce1336ee13eb902739df7bb616ea87512462266dd2666",
+      "file": "results/answers/cca93c99b985038883bce1336ee13eb902739df7bb616ea87512462266dd2666.json",
+      "sha256": "ed22e4a24f7a315414802ab6c1f7c34b337a626e407548d626a40e26beef43e9"
+    },
+    {
+      "promptId": "63d03af022a6f0ac5ab3a7d363098b120da8e508d0409d8eb65846241336662f",
+      "file": "results/answers/63d03af022a6f0ac5ab3a7d363098b120da8e508d0409d8eb65846241336662f.json",
+      "sha256": "94cbae15cfb537a07cae93107c44f01060291fe476c61974bf50bbc8eb7422c0"
+    },
+    {
+      "promptId": "7b39d5c406f24750ee637b94c8ba2459cfde7901a81d5cc9e2707f491061c0e5",
+      "file": "results/answers/7b39d5c406f24750ee637b94c8ba2459cfde7901a81d5cc9e2707f491061c0e5.json",
+      "sha256": "d3b6f4a0b6c566abb0bd640d3d58f32b791ddd367c30a246e2fc4c987a153a35"
+    },
+    {
+      "promptId": "4049dfff166e3b20c9bf4fe17b31cd85d0606e0491746962b9e1d6ccf07c5b06",
+      "file": "results/answers/4049dfff166e3b20c9bf4fe17b31cd85d0606e0491746962b9e1d6ccf07c5b06.json",
+      "sha256": "a73bf2ecc76303acc0d8da7c0f264dcb0c61f212296a49d3f8f9f883120f9348"
+    },
+    {
+      "promptId": "4b0b92195607e7d22c666985512ca58f2a9ee34a34e459e00748614ab079a112",
+      "file": "results/answers/4b0b92195607e7d22c666985512ca58f2a9ee34a34e459e00748614ab079a112.json",
+      "sha256": "e13eae552c6a9a95d747b5d16d05cf9cc11ae61c9f880483f2f68f0d4aae9b17"
+    },
+    {
+      "promptId": "d1a81b0514c11d965258afa432245614c3e257dc26d699374953b4e14415fbe7",
+      "file": "results/answers/d1a81b0514c11d965258afa432245614c3e257dc26d699374953b4e14415fbe7.json",
+      "sha256": "8855ae56563da1ddcec0fcf3bbf45f58d8b022471b9f632cf7a8a83da4e6d292"
+    },
+    {
+      "promptId": "84e679cd899792f38b3858ee848e1361d81b3ee1171ef994e533ffa07e22c304",
+      "file": "results/answers/84e679cd899792f38b3858ee848e1361d81b3ee1171ef994e533ffa07e22c304.json",
+      "sha256": "aea84e2b854f8b01ba4796d5825338ba7d79876576cce37d412481e5c20a92cd"
+    }
+  ]
+}

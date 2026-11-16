@@ -1,0 +1,17 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {validateResponse} from '../response-contract.v1.mjs';
+const ids=['A','B'],valid={status:'answered',answer:'Un hecho.',citations:['A']};
+const check=value=>validateResponse(JSON.stringify(value),ids);
+test('whole valid answered object is accepted',()=>{assert.deepEqual(check(valid),{valid:true,value:valid});});
+test('valid no-answer is a distinct state',()=>{assert.equal(check({status:'no_answer',answer:'',citations:[]}).valid,true);});
+test('outer JSON whitespace is accepted without rewriting content',()=>{assert.equal(validateResponse(' \n'+JSON.stringify(valid)+'\t',ids).valid,true);});
+test('markdown fences and trailing prose are not repaired',()=>{for(const raw of ['```json\n'+JSON.stringify(valid)+'\n```',JSON.stringify(valid)+' extra'])assert.equal(validateResponse(raw,ids).reason,'invalid_json');});
+test('extra fields and wrong top-level types fail the schema',()=>{for(const value of [{...valid,confidence:1},[valid],null,4])assert.equal(check(value).reason,'schema');});
+test('wrong field types and unknown status fail',()=>{for(const value of [{...valid,status:'maybe'},{...valid,answer:4},{...valid,citations:'A'},{...valid,citations:[4]}])assert.equal(check(value).reason,'schema');});
+test('answered requires content and citations',()=>{for(const value of [{...valid,answer:' '},{...valid,citations:[]}])assert.equal(check(value).reason,'state_contract');});
+test('no-answer requires exactly empty content and empty citations',()=>{for(const value of [{status:'no_answer',answer:' ',citations:[]},{status:'no_answer',answer:'No sé',citations:[]},{status:'no_answer',answer:'',citations:['A']}])assert.equal(check(value).reason,'state_contract');});
+test('a citation outside provided sources is invalid even if plausible',()=>{assert.equal(check({...valid,citations:['C']}).reason,'unknown_citation');});
+test('duplicate citations cannot inflate a denominator',()=>{assert.equal(check({...valid,citations:['A','A']}).reason,'duplicate_citation');});
+test('duplicate escaped object keys are rejected',()=>{const raw='{"status":"answered","answer":"Un hecho","citations":["A"],"\\u0073tatus":"no_answer"}';assert.equal(validateResponse(raw,ids).reason,'duplicate_keys');});
+test('punctuation in an answer string does not look like an object key',()=>{assert.equal(check({...valid,answer:'Texto con "clave": {valor} y [lista].'}).valid,true);});

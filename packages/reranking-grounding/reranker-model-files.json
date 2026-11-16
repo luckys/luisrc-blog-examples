@@ -1,0 +1,54 @@
+{
+  "role": "reranker",
+  "model": "onnx-community/bge-reranker-v2-m3-ONNX",
+  "revision": "6f5ff65298512715a1e669753bc754d2bc8f367b",
+  "dtype": "q8",
+  "baseModel": [
+    "BAAI/bge-reranker-v2-m3"
+  ],
+  "verification": "Pinned public revision; LFS SHA256 or Git blob SHA1 verified, SHA256 recorded before inference; not a publisher signature.",
+  "files": [
+    {
+      "file": "config.json",
+      "url": "https://huggingface.co/onnx-community/bge-reranker-v2-m3-ONNX/resolve/6f5ff65298512715a1e669753bc754d2bc8f367b/config.json",
+      "bytes": 848,
+      "sha256": "122e922dcfed6503c8721e6fe1daf090340c3d95ca7f3aa3a72730b321a51cfd",
+      "gitBlob": "3eae9b124f6d5bc1aa368cc9ce7c4d5dfc151f5f"
+    },
+    {
+      "file": "onnx/model_quantized.onnx",
+      "url": "https://huggingface.co/onnx-community/bge-reranker-v2-m3-ONNX/resolve/6f5ff65298512715a1e669753bc754d2bc8f367b/onnx/model_quantized.onnx",
+      "bytes": 570727094,
+      "sha256": "912fc1215c2dbff6499700534bd8d31253af01573861abbfc43afd1fab6cce5d",
+      "gitBlob": "5bc01f3edbc35d07e4d98d49438ca6f21e7ba435"
+    },
+    {
+      "file": "quantize_config.json",
+      "url": "https://huggingface.co/onnx-community/bge-reranker-v2-m3-ONNX/resolve/6f5ff65298512715a1e669753bc754d2bc8f367b/quantize_config.json",
+      "bytes": 310,
+      "sha256": "9b60b5877b9a1687b5cddbc06124a974cb7536af9dbf5295279bf73c3823170c",
+      "gitBlob": "cc312cee238f28e3c023c713ac2b09f90cc03ace"
+    },
+    {
+      "file": "special_tokens_map.json",
+      "url": "https://huggingface.co/onnx-community/bge-reranker-v2-m3-ONNX/resolve/6f5ff65298512715a1e669753bc754d2bc8f367b/special_tokens_map.json",
+      "bytes": 964,
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+      "gitBlob": "b1879d702821e753ffe4245048eee415d54a9385"
+    },
+    {
+      "file": "tokenizer.json",
+      "url": "https://huggingface.co/onnx-community/bge-reranker-v2-m3-ONNX/resolve/6f5ff65298512715a1e669753bc754d2bc8f367b/tokenizer.json",
+      "bytes": 17082900,
+      "sha256": "8bf8afbfd11306bd872018c53bfdf2e160a56f8edbcf49933324404791c148d3",
+      "gitBlob": "4984563afe51548a549b60c19c57499042d29004"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "url": "https://huggingface.co/onnx-community/bge-reranker-v2-m3-ONNX/resolve/6f5ff65298512715a1e669753bc754d2bc8f367b/tokenizer_config.json",
+      "bytes": 1203,
+      "sha256": "b87c8703482b0300d3da30e201519aa641f6a450f5eb5bf1e624afbf70c74d80",
+      "gitBlob": "95bd7c849ee6a47d5c92805af18d187239c1ba4a"
+    }
+  ]
+}

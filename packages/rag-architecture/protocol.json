@@ -1,0 +1,34 @@
+{
+  "version": "isolation-v1",
+  "fixedBeforeCapture": true,
+  "question": "Does actual database enforcement preserve tenant and access-level eligibility for retrieval and direct reads?",
+  "alternatives": [
+    "global RLS table and GIN index",
+    "separate databases with own tables/GIN indexes; same server/CPU/WAL/admin"
+  ],
+  "retriever": {
+    "kind": "PostgreSQL full text search",
+    "analyzer": "simple",
+    "query": "plainto_tsquery",
+    "ranking": "ts_rank(...,0) descending then id ascending",
+    "k": 3,
+    "approximate": false,
+    "indexUse": "Record actual role EXPLAIN; small data may use sequential scan. Index existence is not evidence that planner used it."
+  },
+  "matrix": "4 principals \u00d7 7 authored query terms \u00d7 2 layouts = 56 requests. Gold document IDs authored before native execution. Not blind evaluation.",
+  "security": "Login as each effective non-owner, non-superuser, NOBYPASSRLS role. Policies bind session_user to admin-maintained principal table. Never trust GUC tenant or tenant supplied in question.",
+  "probes": [
+    "plain-select",
+    "foreign-id",
+    "fake-tenant-setting",
+    "tenant-predicate",
+    "switch-role",
+    "disable-row-security",
+    "insert-document",
+    "change-principal",
+    "foreign-database-connect",
+    "missing-principal"
+  ],
+  "metrics": "Eligible document recall@3 for nonempty gold; null for empty gold. Count unexpected returned IDs separately. No latency benchmark, generated answer, semantic judge or ANN claim.",
+  "preservation": "Refuse to overwrite capture. On execution failure save failure artifact; do not silently retry favorable selections. A new protocol/path is required for changed inputs."
+}

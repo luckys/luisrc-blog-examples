@@ -1,0 +1,75 @@
+<svg width="360" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 360 480">
+<rect width="360" height="480" x="0" y="0" fill="#0f172a"></rect>
+<path d="M45 400.5L336 400.5" fill="none" pointer-events="visible" stroke="#334155" class="context-figure-cls-0"></path>
+<path d="M45 317.5L336 317.5" fill="none" pointer-events="visible" stroke="#334155" class="context-figure-cls-0"></path>
+<path d="M45 235.5L336 235.5" fill="none" pointer-events="visible" stroke="#334155" class="context-figure-cls-0"></path>
+<path d="M45 153.5L336 153.5" fill="none" pointer-events="visible" stroke="#334155" class="context-figure-cls-0"></path>
+<path d="M45 112.5L336 112.5" fill="none" pointer-events="visible" stroke="#334155" class="context-figure-cls-0"></path>
+<path d="M45 400.5L336 400.5" fill="none" pointer-events="visible" stroke="#54555a" stroke-linecap="round" class="context-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(37 400)" fill="#e2e8f0">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(37 317.7143)" fill="#e2e8f0">100</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(37 235.4286)" fill="#e2e8f0">200</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(37 153.1429)" fill="#e2e8f0">300</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(37 112)" fill="#e2e8f0">350</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(117.75 408)" fill="#e2e8f0">Historial</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(263.25 408)" fill="#e2e8f0">Evidencia</text>
+<path d="M92.8 400l50 0l0 -209l-50 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="context-figure-cls-1"></path>
+<path d="M238.3 400l50 0l0 -137.4l-50 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="context-figure-cls-1"></path>
+<path d="M92.8 191l50 0l0 -52.7l-50 0Z" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="context-figure-cls-2"></path>
+<path d="M238.3 262.6l50 0l0 -52.7l-50 0Z" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="context-figure-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(117.75 295.4971)" fill="#020617">254</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(263.25 331.2914)" fill="#020617">167</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(117.75 164.6629)" fill="#020617">64</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(263.25 236.2514)" fill="#020617">64</text>
+<g clip-path="url(#context-figure-c0)">
+<path d="M117.8 136.7L263.3 136.7" fill="none" pointer-events="visible" stroke="#f87171" stroke-width="2" stroke-dasharray="8,4" stroke-linejoin="bevel" class="context-figure-cls-4"></path>
+</g>
+<path d="M-5 -5l245.4 0l0 24l-245.4 0Z" transform="translate(62.3 449)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#b7b9be" stroke-width="0" class="context-figure-cls-0"></path>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0Z" transform="translate(62.3 449)" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="legend" ecmeta_silent="true" class="context-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" x="30" y="7" transform="translate(62.3 449)" fill="#e2e8f0">Entrada</text>
+<path d="M0 0l72.2 0l0 14l-72.2 0Z" transform="translate(62.3 449)" fill="none" pointer-events="visible" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="legend" class="context-figure-cls-5"></path>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0Z" transform="translate(142.54 449)" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="legend" ecmeta_silent="true" class="context-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" x="30" y="7" transform="translate(142.54 449)" fill="#e2e8f0">Reserva</text>
+<path d="M0 0l74.8 0l0 14l-74.8 0Z" transform="translate(142.54 449)" fill="none" pointer-events="visible" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="legend" class="context-figure-cls-5"></path>
+<path d="M0 7L25 7" transform="translate(226.3 449)" fill="#000" stroke="#f87171" stroke-width="2" stroke-dasharray="8,4" stroke-linecap="butt" stroke-miterlimit="10" class="context-figure-cls-0"></path>
+<path d="M18.1 7A5.6 5.6 0 1 1 18.1 6.4A5.6 5.6 0 0 1 18.1 7" transform="translate(226.3 449)" fill="#f87171" class="context-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" x="30" y="7" transform="translate(226.3 449)" fill="#e2e8f0">Límite</text>
+<path d="M-1 1l72.4 0l0 12l-72.4 0Z" transform="translate(226.3 449)" fill="none" pointer-events="visible" ecmeta_series_index="2" ecmeta_data_index="2" ecmeta_ssr_type="legend" class="context-figure-cls-5"></path>
+<path d="M-5 -5l238 0l0 74l-238 0Z" transform="translate(17 15)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#3c3c41" stroke-width="0" class="context-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:16px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="8" transform="translate(17 15)" fill="#e2e8f0">Mismo límite, distinta prioridad</text>
+<path d="M0 26l227.8 0l0 38l-227.8 0Z" transform="translate(17 15)" fill="none" pointer-events="visible" class="context-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" y="35.5" transform="translate(17 15)" fill="#cbd5e1">T05 · ventana de trabajo de 320 tokens</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" y="54.5" transform="translate(17 15)" fill="#cbd5e1">Historial: 1 fuente/1 turno · evidencia: 3/0</text>
+<defs >
+<clipPath id="context-figure-c0">
+<path d="M44 111l293 0l0 290l-293 0Z" fill="#000" class="context-figure-cls-3"></path>
+</clipPath>
+</defs>
+<style ><![CDATA[
+.context-figure-cls-0:hover {
+pointer-events:none;
+}
+.context-figure-cls-1:hover {
+cursor:pointer;
+fill:rgba(61,207,255,1);
+}
+.context-figure-cls-2:hover {
+cursor:pointer;
+fill:rgba(255,210,39,1);
+}
+.context-figure-cls-3:hover {
+cursor:pointer;
+fill:rgba(0,0,0,1);
+}
+.context-figure-cls-4:hover {
+cursor:pointer;
+}
+.context-figure-cls-5:hover {
+cursor:pointer;
+fill:rgba(0,0,0,0);
+}
+
+]]>
+
+</style>
+</svg>

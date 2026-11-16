@@ -1,0 +1,6 @@
+const escape=text=>String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
+export function rankDiagram(raw,ranked,registry,selectedId){
+ const count=raw.length,height=Math.max(140,count*32+95),y=rank=>54+rank*32,position=new Map(ranked.map((r,i)=>[r.id,i]));
+ const lines=raw.map((r,i)=>{const j=position.get(r.id),alias=registry.find(c=>c.id===r.id).alias,selected=r.id===selectedId;return `<g data-id="${escape(r.id)}" data-before="${i+1}" data-after="${j+1}"><path d="M80 ${y(i)} L275 ${y(j)}" fill="none" stroke="${selected?'#fbbf24':'#64748b'}" stroke-width="${selected?3:1}"/><text x="12" y="${y(i)+4}" fill="#e2e8f0" font-size="13">${i+1} ${alias}</text><text x="290" y="${y(j)+4}" fill="#e2e8f0" font-size="13">${j+1} ${alias}</text></g>`;}).join('');
+ return `<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Posición de los mismos candidatos antes y después, sin comparar escalas de scores" width="360" height="${height}" viewBox="0 0 360 ${height}"><text x="12" y="22" fill="#e2e8f0" font-size="14">Antes</text><text x="290" y="22" fill="#e2e8f0" font-size="14">Después</text>${lines}${count?'':'<text x="12" y="65" fill="#e2e8f0" font-size="14">Sin candidatos, no se añaden fuentes</text>'}</svg>`;
+}

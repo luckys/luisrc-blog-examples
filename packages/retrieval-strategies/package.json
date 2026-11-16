@@ -1,0 +1,20 @@
+{
+  "name": "@luisrc-examples/retrieval-strategies",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.19.0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "prepare": "node prepare.mjs",
+    "model:fetch": "node prepare-model.mjs",
+    "capture": "node capture.mjs",
+    "evaluate": "node evaluate.mjs",
+    "verify": "node verify.mjs",
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "3.8.1"
+  }
+}

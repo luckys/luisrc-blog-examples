@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "kind": "fixed_local_two_checkpoint_generation_protocol",
+  "plan": "comparison-plan.v1.json",
+  "rubric": "response-rubric.v1.json",
+  "inputArtifact": "results/contexts.v1.json",
+  "inputLimit": 1536,
+  "order": "A then B; each uses the existing query order Q001..Q020,one generation each,serially. No warmup or randomized order.",
+  "isolation": "one new Node process per model load; CPU session intra/interOpNumThreads1; no CPU affinity,isolated cores or controlled filesystem cache",
+  "generation": "use frozen plan values without sampling or favorable retries; preserve generated IDs,full decode and standard special-token-skipping decode",
+  "journal": "record case started before executing; write one exclusive result. Resume only never-started cases; a started case without a saved result is classified interrupted_unknown,never regenerated. Loading again for remaining cases is recorded as a new session.",
+  "loadFailure": "save profile load error and mark not-executed cases,continue other profile; this does not count as model comparison success",
+  "timing": {"clock": "performance.now monotonic milliseconds within one process", "tokenizerLoadMs": "local AutoTokenizer loading,after file verification", "modelLoadMs": "local AutoModelForCausalLM loading,after verification; not file download or total process startup", "prepareInputMs": "re-tokenize saved prompt into model tensors and assert exact IDs", "generateMs": "whole model.generate call,includes prefill and autoregressive decoding; first request may initialize kernels", "decodeMs": "both output text decodes after generate returns", "validateMs": "technical contract check", "caseTotalMs": "prepare+generate+decode+technical validation,excludes disk result writes,retrieval,context packing,semantic review,download and model load", "tokens": "all produced token IDs including EOS/special IDs; raw content may contain fewer visible tokens", "cpu": "process.resourceUsage user/system CPU microsecond deltas around generate; includes all process work in that interval", "memory": "process.memoryUsage RSS samples before/after generate in bytes,not a peak or model-only memory", "limits": "no TTFT/streaming/network RAG latency,cloud bill or causal speed superiority. Twenty authored queries per profile,not a production percentile benchmark."},
+  "validationAndEvaluation": "strict schema and preregistered editorial semantic rubric; no gold enters input tensors; original corpus,queries and gold unchanged"
+}

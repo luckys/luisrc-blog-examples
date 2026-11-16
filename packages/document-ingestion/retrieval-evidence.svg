@@ -1,0 +1,68 @@
+<svg role="img" aria-label="Evidencia recuperada en top 3" width="360" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 360 480">
+<rect width="360" height="480" x="0" y="0" fill="#0f172a"></rect>
+<path d="M52 390.5L336 390.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-chunks-cls-0"></path>
+<path d="M52 328.5L336 328.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-chunks-cls-0"></path>
+<path d="M52 267.5L336 267.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-chunks-cls-0"></path>
+<path d="M52 206.5L336 206.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-chunks-cls-0"></path>
+<path d="M52 144.5L336 144.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-chunks-cls-0"></path>
+<path d="M52 120.5L336 120.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-chunks-cls-0"></path>
+<path d="M52 390.5L336 390.5" fill="none" pointer-events="visible" stroke="#54555a" stroke-linecap="round" class="ingestion-chunks-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 390)" fill="#e2e8f0">0%</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 328.6364)" fill="#e2e8f0">25%</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 267.2727)" fill="#e2e8f0">50%</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 205.9091)" fill="#e2e8f0">75%</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 144.5455)" fill="#e2e8f0">100%</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(44 120)" fill="#e2e8f0">110%</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.94,-0.342,0.342,0.94,87.5,398)" fill="#e2e8f0">Tamaño</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.94,-0.342,0.342,0.94,158.5,398)" fill="#e2e8f0">Semántico</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="matrix(0.94,-0.342,0.342,0.94,229.5,398)" fill="#e2e8f0">Overlap 4</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="matrix(0.94,-0.342,0.342,0.94,300.5,398)" fill="#e2e8f0">Overlap 8</text>
+<path d="M63.4 390l23 0l0 -240.3l-23 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="ingestion-chunks-cls-1"></path>
+<path d="M134.4 390l23 0l0 -199.4l-23 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="ingestion-chunks-cls-1"></path>
+<path d="M205.4 390l23 0l0 -236.9l-23 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="ingestion-chunks-cls-1"></path>
+<path d="M276.4 390l23 0l0 -245.5l-23 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="ingestion-chunks-cls-1"></path>
+<path d="M88.7 390l23 0l0 -214.8l-23 0Z" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="ingestion-chunks-cls-2"></path>
+<path d="M159.7 390l23 0l0 -184.1l-23 0Z" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="ingestion-chunks-cls-2"></path>
+<path d="M230.7 390l23 0l0 -214.8l-23 0Z" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="ingestion-chunks-cls-2"></path>
+<path d="M301.7 390l23 0l0 -245.5l-23 0Z" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="ingestion-chunks-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:11px;font-family:sans-serif;" y="-5.5" transform="matrix(0,-1,1,0,74.85,141.6591)" fill="#e2e8f0">97,9%</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:11px;font-family:sans-serif;" y="-5.5" transform="matrix(0,-1,1,0,145.85,182.5682)" fill="#e2e8f0">81,3%</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:11px;font-family:sans-serif;" y="-5.5" transform="matrix(0,-1,1,0,216.85,145.0682)" fill="#e2e8f0">96,5%</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:11px;font-family:sans-serif;" y="-5.5" transform="matrix(0,-1,1,0,287.85,136.5455)" fill="#e2e8f0">100,0%</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:11px;font-family:sans-serif;" y="-5.5" transform="matrix(0,-1,1,0,100.15,167.2273)" fill="#e2e8f0">87,5%</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:11px;font-family:sans-serif;" y="-5.5" transform="matrix(0,-1,1,0,171.15,197.9091)" fill="#e2e8f0">75,0%</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:11px;font-family:sans-serif;" y="-5.5" transform="matrix(0,-1,1,0,242.15,167.2273)" fill="#e2e8f0">87,5%</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:11px;font-family:sans-serif;" y="-5.5" transform="matrix(0,-1,1,0,313.15,136.5455)" fill="#e2e8f0">100,0%</text>
+<path d="M-5 -5l195.7 0l0 24l-195.7 0Z" transform="translate(87.14 451)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#b7b9be" stroke-width="0" class="ingestion-chunks-cls-0"></path>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0Z" transform="translate(87.14 451)" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="legend" ecmeta_silent="true" class="ingestion-chunks-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" x="30" y="7" transform="translate(87.14 451)" fill="#e2e8f0">Cobertura</text>
+<path d="M0 0l83.5 0l0 14l-83.5 0Z" transform="translate(87.14 451)" fill="none" pointer-events="visible" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="legend" class="ingestion-chunks-cls-3"></path>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0Z" transform="translate(178.66 451)" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="legend" ecmeta_silent="true" class="ingestion-chunks-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" x="30" y="7" transform="translate(178.66 451)" fill="#e2e8f0">Completitud</text>
+<path d="M0 0l94.2 0l0 14l-94.2 0Z" transform="translate(178.66 451)" fill="none" pointer-events="visible" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="legend" class="ingestion-chunks-cls-3"></path>
+<path d="M-5 -5l280 0l0 75l-280 0Z" transform="translate(17 15)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#3c3c41" stroke-width="0" class="ingestion-chunks-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:17px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="8.5" transform="translate(17 15)" fill="#e2e8f0">Evidencia recuperada en top 3</text>
+<path d="M0 27l270 0l0 38l-270 0Z" transform="translate(17 15)" fill="none" pointer-events="visible" class="ingestion-chunks-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="36.5" transform="translate(17 15)" fill="#94a3b8">8 preguntas con respuesta · corpus conocido</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="55.5" transform="translate(17 15)" fill="#94a3b8">Los 2 negativos se muestran aparte</text>
+<style ><![CDATA[
+.ingestion-chunks-cls-0:hover {
+pointer-events:none;
+}
+.ingestion-chunks-cls-1:hover {
+cursor:pointer;
+fill:rgba(61,207,255,1);
+}
+.ingestion-chunks-cls-2:hover {
+cursor:pointer;
+fill:rgba(255,210,39,1);
+}
+.ingestion-chunks-cls-3:hover {
+cursor:pointer;
+fill:rgba(0,0,0,0);
+}
+
+]]>
+
+</style>
+</svg>

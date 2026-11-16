@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "splitMethod": "topic groups assigned before any model run; public authored benchmark, not blind",
+  "rows": [
+    {
+      "id": "Q001",
+      "group": "backups",
+      "split": "dev",
+      "question": "¿A qué hora empieza la copia diaria y cuánto tiempo se conserva?"
+    },
+    {
+      "id": "Q002",
+      "group": "backups",
+      "split": "dev",
+      "question": "¿Cuánto tiempo se conserva una copia y dónde se restaura?"
+    },
+    {
+      "id": "Q003",
+      "group": "cache",
+      "split": "dev",
+      "question": "¿Cuál es el TTL de la caché y cuántas entradas admite?"
+    },
+    {
+      "id": "Q004",
+      "group": "cache",
+      "split": "dev",
+      "question": "¿Cuántas entradas admite la caché y qué pasa al cambiar la revisión de permisos?"
+    },
+    {
+      "id": "Q005",
+      "group": "retries",
+      "split": "test",
+      "question": "¿Cuántos intentos tiene una tarea y cuál es la espera inicial?"
+    },
+    {
+      "id": "Q006",
+      "group": "retries",
+      "split": "test",
+      "question": "¿Cuál es la espera inicial y qué ocurre con la clave de idempotencia al reintentar?"
+    },
+    {
+      "id": "Q007",
+      "group": "exports",
+      "split": "test",
+      "question": "¿Cuántas filas admite una exportación y qué separador usa el CSV?"
+    },
+    {
+      "id": "Q008",
+      "group": "exports",
+      "split": "test",
+      "question": "¿Qué separador usa el CSV y qué zona horaria tienen las fechas exportadas?"
+    },
+    {
+      "id": "Q009",
+      "group": "uploads",
+      "split": "test",
+      "question": "¿Qué tamaño máximo puede tener un documento y qué formatos se aceptan?"
+    },
+    {
+      "id": "Q010",
+      "group": "uploads",
+      "split": "test",
+      "question": "¿Qué formatos se aceptan y dónde permanece el documento durante el análisis?"
+    },
+    {
+      "id": "Q011",
+      "group": "webhooks",
+      "split": "test",
+      "question": "¿Qué tamaño máximo tiene el payload y cómo se firma un webhook?"
+    },
+    {
+      "id": "Q012",
+      "group": "webhooks",
+      "split": "test",
+      "question": "¿Cómo se firma un webhook y qué antigüedad máxima se acepta para su timestamp?"
+    },
+    {
+      "id": "Q013",
+      "group": "audit",
+      "split": "test",
+      "question": "¿Cuánto se conserva la auditoría y se pueden modificar sus eventos?"
+    },
+    {
+      "id": "Q014",
+      "group": "audit",
+      "split": "test",
+      "question": "¿Se pueden modificar los eventos de auditoría y cómo se limita su consulta por tenant?"
+    },
+    {
+      "id": "Q015",
+      "group": "pagination",
+      "split": "test",
+      "question": "¿Qué tamaño de página se usa por defecto y cuál es el máximo?"
+    },
+    {
+      "id": "Q016",
+      "group": "pagination",
+      "split": "test",
+      "question": "¿Cuál es el tamaño máximo de página y qué columnas forman el orden estable?"
+    },
+    {
+      "id": "Q017",
+      "group": "backups",
+      "split": "dev",
+      "question": "¿Qué algoritmo cifra las copias de seguridad?"
+    },
+    {
+      "id": "Q018",
+      "group": "exports",
+      "split": "test",
+      "question": "¿Qué moneda se usa al exportar importes?"
+    },
+    {
+      "id": "Q019",
+      "group": "uploads",
+      "split": "test",
+      "question": "¿Qué algoritmo comprime los documentos cargados?"
+    },
+    {
+      "id": "Q020",
+      "group": "webhooks",
+      "split": "test",
+      "question": "¿Qué direcciones IP pueden enviar webhooks?"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "version": "multistep-v1",
+  "fixedBeforeCapture": true,
+  "scope": "Bounded retrieval workflow following explicitly authored reference graphs. No LLM, automatic interpretation of questions, generated answer or agent.",
+  "matrix": "4 effective login roles \u00d7 11 predefined scenarios = 44 workflows. Actual PostgreSQL RLS reads; original corpus unchanged.",
+  "task": "requiredKeys is a typed workflow requirement supplied in each authored case, not a gold document ID fed to a model. Evaluation separately compares authorized document IDs fixed before capture.",
+  "budget": "Count one SQL full-text search or one direct ID lookup as one source call; principal/identity reads excluded and reported separately. MaxCalls 0..6; maxSources 1..8; maxQueuedReferences 1..32. No duration, provider-token or latency benchmark.",
+  "references": "Graphs authored before execution, including broken/cyclic/cross-tenant controls. Only expand links of documents actually returned under current RLS. Follow ordered frontier, deduplicate attempted IDs. Links never grant access.",
+  "stops": [
+    "requirements_met",
+    "call_budget",
+    "source_budget",
+    "no_progress",
+    "no_results",
+    "frontier_budget"
+  ],
+  "transactions": "One REPEATABLE READ READ ONLY transaction per workflow, current principal loaded first. No simultaneous revocation tested.",
+  "metrics": "Authorized target-document coverage, null when target set empty. Not factual support, natural language task success or answer completeness. Preserve all outcomes.",
+  "preservation": "Do not overwrite successful or failed artifact. Changed sources or graphs require a new protocol/path."
+}

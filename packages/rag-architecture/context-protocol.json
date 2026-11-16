@@ -1,0 +1,32 @@
+{
+  "version": "context-design-v1",
+  "fixedBeforeCounting": true,
+  "model": "onnx-community/Qwen2.5-0.5B-Instruct",
+  "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+  "library": "@huggingface/transformers@3.8.1",
+  "workWindows": [
+    192,
+    320,
+    512
+  ],
+  "reservedOutputTokens": 64,
+  "maxSources": 3,
+  "policies": [
+    "history_first",
+    "evidence_first"
+  ],
+  "matrix": "10 authored scenarios \u00d7 3 client work windows \u00d7 2 packing policies =60outcomes. Rejected scope controls must not tokenize or serialize foreign source text into a prompt.",
+  "budget": "Count entire apply_chat_template output with assistant generation prefix,add_special_tokens false,padding false,truncation false. Input+reserved output<=chosen workWindow. These windows are client limits,not native model capacity; reserve is not generated output.",
+  "history_first": "Drop oldest whole history pairs only until base fits,then greedily admit whole ranked sources. No source truncation.",
+  "evidence_first": "Pack whole ranked sources without history,then append the longest contiguous suffix of newest history pairs that fits. Stop adding history at first oversized pair.",
+  "authority": "Composer receives a trusted principal and effective source access metadata from upstream. Defensive tenant/level checks do not implement authentication or replace current database authorization. T01/T02 use captured snapshotepoch1;other scenarios use declared request scope.",
+  "origins": "Candidate order/history authored. Source contents from captured v2 finalDocuments/currentACL; T10 also has one explicitly authored long source. No new SQL,retrieval scores,generation or semantic task success.",
+  "escaping": "JSON-stringify data and escape literal angle brackets before chat formatting. This prevents raw special-token delimiter strings in user data; it does not prove model resistance to semantic prompt injection.",
+  "statuses": [
+    "ready",
+    "no_evidence",
+    "base_over_budget",
+    "rejected_scope"
+  ],
+  "preservation": "Preserve all rows,including empty contexts or oversize base. Do not retune budgets/prompt after counting. Existing artifact refuses overwrite."
+}

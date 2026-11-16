@@ -1,0 +1,49 @@
+{
+  "status": "fixed_before_new_embeddings_and_rankings",
+  "corpus": "P112 size32; 13 versioned chunks from three synthetic known source documents, fixed independently of this comparison",
+  "queries": "20 P112 questions reused with source-span gold; known corpus and previously seen lexical results, not blind test. Authored variants/proposals are pedagogical controls, not LLM output.",
+  "encoder": {
+    "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+    "dtype": "q8",
+    "device": "cpu",
+    "dimensions": 384,
+    "maxTokens": 128,
+    "batchSize": 8,
+    "intraOpNumThreads": 2,
+    "interOpNumThreads": 1,
+    "pooling": "attention-mask weighted mean including active special tokens, raw float32"
+  },
+  "retrievers": [
+    "bm25",
+    "dense",
+    "rrf"
+  ],
+  "bm25": {
+    "analyzer": "P106 fold",
+    "k1": 1.2,
+    "b": 0.75,
+    "bodyOnly": true
+  },
+  "dense": {
+    "metric": "cosine_exact",
+    "candidates": "All eligible chunk vectors; no calibrated similarity threshold, includes negative scores if necessary."
+  },
+  "fusion": {
+    "method": "reciprocal_rank_fusion",
+    "constant": 60,
+    "window": 10,
+    "rankBase": 1,
+    "missing": "No contribution; union by versioned chunk ID",
+    "ties": "Descending score, then ascending codepoint chunk ID"
+  },
+  "evaluation": {
+    "k": 3,
+    "evidence": "P112 versioned source unit coverage; all fact groups need one complete alternative; negatives null and separate",
+    "splits": "10dev + 8test answerable + 2test negative, all already known"
+  },
+  "filters": "Global scores/statistics fixed. Exact full rankings filtered before top-k versus after top-k. Candidate eligibility result equivalence, not native engine prefilter execution/latency; no ACL implementation.",
+  "multiQuery": "Original plus two authored paraphrases for each selected case; deduplicate identical texts, BM25 each, RRF constant60/window10. No LLM inference or independent benchmark.",
+  "rewrite": "Authored candidate proposals with explicit protected-token guard. Missing literal normalized tokens reject to original. One unsafe proposal deliberately preserves all protected tokens to expose the guard limitation; never treat guard as proof of semantic equivalence.",
+  "limits": "Three short synthetic documents, no end-to-end generated answers or production throughput/cost claims. Preserve all outcomes; no tuning model/threshold/gold to favor a method."
+}

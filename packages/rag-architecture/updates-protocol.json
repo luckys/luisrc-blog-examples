@@ -1,0 +1,18 @@
+{
+  "version": "index-updates-v1",
+  "fixedBeforeCapture": true,
+  "scope": "Actual PostgreSQL versioned tables/GIN,validation and pointer activation; current ACL separate from content revisions. No model,ANN,latency/load or production deployment claim.",
+  "corpora": "Original12documents v1; v2 replaces the two cache documents with revision2,Alpha450/Beta75. First build omits beta-restoration-v1,then inserts it. Expected content written before execution.",
+  "activation": "Under SHARE lock on candidate table,compare exact IDs and canonical content SHA256. Conditional UPDATE pointer requires expected active content hash; invalid/incomplete or stale promotion rolls back. Application has no write grants.",
+  "attempts": [
+    "incomplete candidate rejected,pointerv1",
+    "complete candidate accepted,pointerv2",
+    "stale expected pointer rejected,pointerv2"
+  ],
+  "overlap": "Old alpha_reader request opens RR readonly,reads principal/pointerv1 before activation; new request opens after activation and readsv2; then old request rereads pointerv1 and loads old table after new request. Two overlapping transactions with deterministic interleaving,not concurrent-load benchmark.",
+  "cache": "11 retrieval requests,4hits/7misses. Namespace includes selected generation content hash and accessRevision. TTL60000ms; no expiry claim. Principal/state first read in same snapshot as source lookup.",
+  "citations": "Nine authored references across two generations,wrong revision,foreign tenant and unknown generation. Current document_acl keyed by tenant+document_key gates both tables,so old copied access_level cannot authorize a newly restricted document.",
+  "acl": "After activev2,alpha cache access becomes1 and global epoch becomes2 in one committed admin transaction. Old content remains immutable. Readers denied both revisions;manager resolves both. No trigger enforces every admin path or instantaneous revocation within older snapshots.",
+  "limits": "Full small documents,no byte/fragment citation offsets. Application read-only and tested publisher preserve contents;admins can still edit after validation. No automated garbage collection,backup,failover,distributed cache,rollback-to-v1 or generator evaluation.",
+  "preservation": "Existing success/failure artifact refuses overwrite; changed sources need new protocol/path."
+}

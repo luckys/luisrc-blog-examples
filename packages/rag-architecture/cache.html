@@ -1,0 +1,11 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Caché RAG: permisos, revisiones y caducidad</title>
+<style>:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0}*{box-sizing:border-box}body{padding:16px;margin:0;max-width:1000px}h1{font-size:1.35rem}h2{font-size:1.1rem;margin-top:24px}p,li,dd{line-height:1.6;overflow-wrap:anywhere}select{display:block;padding:10px;background:#1e293b;color:#fff;border:1px solid #94a3b8;border-radius:6px;width:100%;max-width:700px;font:inherit;margin:8px 0}select:focus-visible,summary:focus-visible{outline:3px solid #fbbf24;outline-offset:3px}pre{padding:12px;background:#020617;border:1px solid #475569;border-radius:6px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5}dt{font-weight:bold;margin-top:10px}dd{margin-left:0}svg{display:block;width:100%;max-width:420px;height:auto}#status{padding:12px;background:#1e293b;border-left:4px solid #38bdf8}</style>
+<h1>Una clave de caché necesita un ámbito y una revisión</h1><p>22 solicitudes reales guardadas de PostgreSQL y una caché en memoria. Datos sintéticos públicos, sin respuestas de un LLM. Elegir un caso no hace una nueva consulta ni modifica permisos.</p>
+<label for="cache-case">Solicitud ejecutada</label><select id="cache-case"></select><p id="status" role="status" aria-live="polite"></p>
+<h2>Principal y estado leídos de la base</h2><pre id="scope"></pre>
+<h2>Dimensiones de la clave usada</h2><details><summary>Ver la clave desglosada</summary><dl id="key"></dl></details>
+<h2>Lecturas y resultados de esta solicitud</h2><div id="counts"></div><ul id="results"></ul><p id="expiry"></p>
+<details><summary>Consulta de fuentes o error SQL</summary><pre id="queries"></pre></details>
+<details><summary>Registro completo de la solicitud</summary><pre id="record"></pre></details>
+<p>El TTL de esta caché de retrieval es de tres segundos. Los 300 o 60 segundos citados en documentos del corpus son hechos sintéticos de esos documentos, no la configuración de esta caché. Los hits siguen leyendo principal y estado; solo evitan la consulta de fuentes.</p>
+<script type="module" src="./cache-view.mjs"></script></html>

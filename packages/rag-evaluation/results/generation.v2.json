@@ -1,0 +1,226 @@
+{
+  "kind": "never_executed_B_infrastructure_continuation_preserved",
+  "capturedAt": "2026-11-04T12:50:45.322Z",
+  "sourceHashes": {
+    "prepare-generation-inputs.v1.mjs": "9991cd6147c27fb17e4be3469ac4de3d8736aafb47042647a47b20bbe73d6821",
+    "capture-generations.v1.mjs": "21ea6e0f2ecef5144d0d4cecc6acf025303087bd8377cef6f8de6e14dd950278",
+    "generation-worker.v1.mjs": "578b1794582b2e13d98ab25585810649bce36e45a13eaa8b6051e0f8c1dfedb6",
+    "generation-io.v1.mjs": "918c214e1b7454664378e2599ea7e75ea48ec37bd4634b51bb64cd79453d7765",
+    "response-contract.v1.mjs": "f845ad3a0da62283990ef4257030de03e2446b048f2d9f18c7fb1bbd74ec3d5c",
+    "response-evaluation.v1.mjs": "8b7d933cad0058c317d9644a94a28a1285ccb56241aebbae82cd62a06e5e0f71",
+    "response-rubric.v1.json": "eba43bd83c1ddce49cb35b92c2921f4f31ce4975e314118ce5b25bec937a5119",
+    "generation-protocol.v1.json": "e213ac751d9d1bb76522b7dd04b17c0c7c18658a6cf1a607ad871fcec6a50589",
+    "generation-models.v1.json": "4cb53fb6d58c2c5ff1314d3b5513a006741338cd095108865f47fdd5ea49cc5c",
+    "comparison-plan.v1.json": "9d4c89a51722eb57a06e66785fd10aae019fa06c4adc2433e8019c44590d43a7",
+    "comparison-system.v1.txt": "f21ff865b1288591951c8ff0f7448d202671aff1420d45ed933acd0fc8e3838b",
+    "context-tokenizers.v1.json": "260fa047a3d77ac0ce6ada242fb7fde94b8a19abdf5d50bb9fb4ac0590888609",
+    "context-dependencies.v1.json": "06903c3aa68a5d721236d52606d9ed12a623f02b9b8dd764a6f658a522a6bb1d",
+    "results/contexts.v1.json": "2c137d940534d9db8f57b627b611e71c76296c3b55a313ff8e4b1765229a8fb2",
+    "results/rankings.v1.json": "f2931908b60c284e0ef973ca62d1cc26b0b1058f4111c7af77ee538d2b49a775",
+    "corpus.json": "e86328f27a4c1740f79d2d4c7b99369adf1f4cdade85f8521c241c8a89029c3e",
+    "queries.json": "dd3a6da2b7cf43fba3d0981f1c62a19827a97434b7f5cfb0c3201c305aaf80d0",
+    "gold.json": "d76f9ec9a15ce9f9413ef154dc18208e21de57914bd4e858b8692e7934903c73",
+    "dataset-manifest.json": "5941390dc7b2a7711a6944df0024ba61b8606640c88b6ab5c7dd0b98decf16e8",
+    "prepare-generation-inputs.v2.mjs": "31ac2482d4ddf4c23bf3666b0a2b7da132a5249d6ebbe01eca1c06fce2fde210",
+    "capture-generations.v2.mjs": "5ac039d0afed0beb6e790b148d4ea62c5356a9afb636e80a3b94060650e98271",
+    "generation-worker.v2.mjs": "baaf490e8ead882203731de7abc43d72e955f38e3e10f05a9e93a093a1e8a178",
+    "generation-io.v2.mjs": "bce335ebc8e47c18a5e77c96a4f4ca2413a2b0e1fee379a634e7f6ddab499ce3",
+    "generation-continuation.v2.json": "744b4000284c601f7ffffcc429f54e27b1d595f84db9d452283a7dab781f268e",
+    "results/generation.v1.json": "9c0ab70ccf10a4d70fa25a701dec960344660d271261a3dabd37068a6ce8806a",
+    "results/generation-inputs.v1.json": "16d7d2560c92f89130c04cfec85b758dc9ba296d71f71f0895ed824f79148105",
+    "results/generation-inputs.v2.json": "786913fdd81aab18a6e4eb18c2da624f5200a841a68623f43a57c6b1b332a0a4"
+  },
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpuModel": "Intel(R) Core(TM) Ultra 9 285H",
+    "logicalCpus": 16,
+    "totalMemoryBytes": 66780352512,
+    "library": "@huggingface/transformers",
+    "libraryVersion": "3.8.1"
+  },
+  "rows": [
+    {
+      "id": "B-Q001",
+      "modelId": "B",
+      "queryId": "Q001",
+      "split": "dev",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q001.json",
+      "sha256": "7e741e99f3de1d0e74d89ae488652d96a88e5ed8c2b4fa05e0971f1b48cb1766"
+    },
+    {
+      "id": "B-Q002",
+      "modelId": "B",
+      "queryId": "Q002",
+      "split": "dev",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q002.json",
+      "sha256": "845ffbdd16301e225438434fe1a9439a687e34149edc557e63721e7dc1222a16"
+    },
+    {
+      "id": "B-Q003",
+      "modelId": "B",
+      "queryId": "Q003",
+      "split": "dev",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q003.json",
+      "sha256": "66689bb0a9f6640e90fdee2f0ccf96461f28f578b560c7f271bbf0f75ceae9f4"
+    },
+    {
+      "id": "B-Q004",
+      "modelId": "B",
+      "queryId": "Q004",
+      "split": "dev",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q004.json",
+      "sha256": "5ec7cc70771d4554ef039bc6dbcfac317fc765b1e13c4711aeb53418a69d813f"
+    },
+    {
+      "id": "B-Q005",
+      "modelId": "B",
+      "queryId": "Q005",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q005.json",
+      "sha256": "1d7eb0b30911b3e48a6740da807e7003c46ed13b39ab9847c21ec044824ddd49"
+    },
+    {
+      "id": "B-Q006",
+      "modelId": "B",
+      "queryId": "Q006",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q006.json",
+      "sha256": "5b022fc6b742032f042efe8d538066ecea031cd382508969c585684837568b59"
+    },
+    {
+      "id": "B-Q007",
+      "modelId": "B",
+      "queryId": "Q007",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q007.json",
+      "sha256": "f66fba8f8c5abd50b3d81354b3a00d6e32a70dd49e9de4a092d4a3cd626be951"
+    },
+    {
+      "id": "B-Q008",
+      "modelId": "B",
+      "queryId": "Q008",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q008.json",
+      "sha256": "1c6bb4b0418445a8d53c40955df14c115aca427f2b1366cdec9c603a49aa1a89"
+    },
+    {
+      "id": "B-Q009",
+      "modelId": "B",
+      "queryId": "Q009",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q009.json",
+      "sha256": "588316d4cb2748b7b166251056a7764ca5fb44f1cf514946dc35d3f58cd52f54"
+    },
+    {
+      "id": "B-Q010",
+      "modelId": "B",
+      "queryId": "Q010",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q010.json",
+      "sha256": "92a96fbff1d1b827df1deb3fd4c8c107a2a7314808decc2633ccdce454424230"
+    },
+    {
+      "id": "B-Q011",
+      "modelId": "B",
+      "queryId": "Q011",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q011.json",
+      "sha256": "574f096a364f11857edeee182a6ede53beba01a97ea49d69e37173ef19433165"
+    },
+    {
+      "id": "B-Q012",
+      "modelId": "B",
+      "queryId": "Q012",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q012.json",
+      "sha256": "986cae61573be9bafdf903f0c83fefdb660474487de4ecc1895fd90f8d2a5af7"
+    },
+    {
+      "id": "B-Q013",
+      "modelId": "B",
+      "queryId": "Q013",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q013.json",
+      "sha256": "804c58ffc3a9a9f8a9f525a6ba418a61c4c97a3cb0014474bb42d9314e5b6ced"
+    },
+    {
+      "id": "B-Q014",
+      "modelId": "B",
+      "queryId": "Q014",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q014.json",
+      "sha256": "24ecb5333dbfaebf53254b8e5b23e0122c6ca59be8a14b0b461c2528b69eda97"
+    },
+    {
+      "id": "B-Q015",
+      "modelId": "B",
+      "queryId": "Q015",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q015.json",
+      "sha256": "6a80283ed7e3fcc853fcacd355e2f28e1e2845217b080401169a4c1aaed7ebae"
+    },
+    {
+      "id": "B-Q016",
+      "modelId": "B",
+      "queryId": "Q016",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q016.json",
+      "sha256": "fd6a3eeb0b04933070bd086c821cf09bf62501a5a687d5903ece524c1c48f7ae"
+    },
+    {
+      "id": "B-Q017",
+      "modelId": "B",
+      "queryId": "Q017",
+      "split": "dev",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q017.json",
+      "sha256": "d45718d2fed952c25916e4dbeb0b3c2aa110fca66ae824628ae871db068e77ab"
+    },
+    {
+      "id": "B-Q018",
+      "modelId": "B",
+      "queryId": "Q018",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q018.json",
+      "sha256": "4f1e9c37f5c83bd262ec3008c8ad94271818001ffa2ddee83e827a281a0c7680"
+    },
+    {
+      "id": "B-Q019",
+      "modelId": "B",
+      "queryId": "Q019",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q019.json",
+      "sha256": "d78236cc1f092fcfaa7e4bef1f84cd3b767b8024e57d58afc83b2fe093a94c51"
+    },
+    {
+      "id": "B-Q020",
+      "modelId": "B",
+      "queryId": "Q020",
+      "split": "test",
+      "outcome": "generated",
+      "file": "results/response-v2/B-Q020.json",
+      "sha256": "abe834bc4898ae2d6f6793c5ae3bd5a1c2eb16c595a7c9f51333fd68a0b4d953"
+    }
+  ],
+  "eventsSha256": "aa2b351c4e50c82fdec5e905ce7d74ba4b13b13e233d452f81a640eeb940e992"
+}

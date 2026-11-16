@@ -1,0 +1,2015 @@
+{
+  "kind": "authored_dataset_not_model_results",
+  "data": {
+    "manifest": {
+      "version": 1,
+      "kind": "dataset_integrity_manifest_not_experiment_result",
+      "modelRuns": 0,
+      "files": [
+        {
+          "file": "corpus.json",
+          "sha256": "e86328f27a4c1740f79d2d4c7b99369adf1f4cdade85f8521c241c8a89029c3e"
+        },
+        {
+          "file": "queries.json",
+          "sha256": "dd3a6da2b7cf43fba3d0981f1c62a19827a97434b7f5cfb0c3201c305aaf80d0"
+        },
+        {
+          "file": "gold.json",
+          "sha256": "d76f9ec9a15ce9f9413ef154dc18208e21de57914bd4e858b8692e7934903c73"
+        }
+      ],
+      "limits": [
+        "Public,synthetic,known to the author; not a blind holdout or representative user distribution.",
+        "No inter-annotator agreement or independent semantic review.",
+        "No model A/B comparison has run; that remains a P116 deliverable."
+      ]
+    },
+    "corpus": {
+      "version": 1,
+      "origin": "authored_synthetic_operational_rules_not_real_product_policy",
+      "offsetUnit": "UTF-16 code units",
+      "documents": [
+        {
+          "id": "backups-1",
+          "group": "backups",
+          "title": "Copias de seguridad · parte 1",
+          "revision": 1,
+          "body": "La copia diaria comienza a las 01:30 UTC. Las copias se conservan durante 72 horas."
+        },
+        {
+          "id": "backups-2",
+          "group": "backups",
+          "title": "Copias de seguridad · parte 2",
+          "revision": 1,
+          "body": "La restauración se realiza en un entorno aislado. Cada restauración comprueba el hash SHA-256."
+        },
+        {
+          "id": "cache-1",
+          "group": "cache",
+          "title": "Caché de documentos · parte 1",
+          "revision": 1,
+          "body": "La caché tiene un TTL de 180 segundos. La caché admite un máximo de 64 entradas."
+        },
+        {
+          "id": "cache-2",
+          "group": "cache",
+          "title": "Caché de documentos · parte 2",
+          "revision": 1,
+          "body": "Una revisión de permisos nueva invalida la reutilización anterior. Los errores de lectura no se guardan en caché."
+        },
+        {
+          "id": "retries-1",
+          "group": "retries",
+          "title": "Reintentos de tareas · parte 1",
+          "revision": 1,
+          "body": "Una tarea admite un máximo de 4 intentos en total. La espera inicial entre intentos es de 250 milisegundos."
+        },
+        {
+          "id": "retries-2",
+          "group": "retries",
+          "title": "Reintentos de tareas · parte 2",
+          "revision": 1,
+          "body": "Todos los intentos conservan la misma clave de idempotencia. Los errores HTTP 400 no se reintentan."
+        },
+        {
+          "id": "exports-1",
+          "group": "exports",
+          "title": "Exportación de datos · parte 1",
+          "revision": 1,
+          "body": "Una exportación admite un máximo de 5000 filas. El archivo de exportación usa CSV con punto y coma como separador."
+        },
+        {
+          "id": "exports-2",
+          "group": "exports",
+          "title": "Exportación de datos · parte 2",
+          "revision": 1,
+          "body": "Las fechas exportadas usan la zona UTC. Los enlaces de exportación caducan a los 900 segundos."
+        },
+        {
+          "id": "uploads-1",
+          "group": "uploads",
+          "title": "Carga de documentos · parte 1",
+          "revision": 1,
+          "body": "Cada documento cargado tiene un límite de 12 MiB. Solo se aceptan documentos PDF y JSON."
+        },
+        {
+          "id": "uploads-2",
+          "group": "uploads",
+          "title": "Carga de documentos · parte 2",
+          "revision": 1,
+          "body": "Cada documento permanece en cuarentena hasta terminar el análisis. La huella del documento se calcula con SHA-256."
+        },
+        {
+          "id": "webhooks-1",
+          "group": "webhooks",
+          "title": "Recepción de webhooks · parte 1",
+          "revision": 1,
+          "body": "El payload de un webhook tiene un límite de 128 KiB. La firma del webhook usa HMAC-SHA256."
+        },
+        {
+          "id": "webhooks-2",
+          "group": "webhooks",
+          "title": "Recepción de webhooks · parte 2",
+          "revision": 1,
+          "body": "La antigüedad máxima del timestamp es de 300 segundos. El ID de evento se conserva para deduplicación durante 24 horas."
+        },
+        {
+          "id": "audit-1",
+          "group": "audit",
+          "title": "Registro de auditoría · parte 1",
+          "revision": 1,
+          "body": "Los eventos de auditoría se conservan durante 45 días. El registro de auditoría es append-only."
+        },
+        {
+          "id": "audit-2",
+          "group": "audit",
+          "title": "Registro de auditoría · parte 2",
+          "revision": 1,
+          "body": "La consulta de auditoría filtra por el tenant autorizado. La exportación de auditoría elimina los tokens secretos."
+        },
+        {
+          "id": "pagination-1",
+          "group": "pagination",
+          "title": "Paginación de registros · parte 1",
+          "revision": 1,
+          "body": "El tamaño de página por defecto es de 25 registros. El tamaño máximo de página es de 100 registros."
+        },
+        {
+          "id": "pagination-2",
+          "group": "pagination",
+          "title": "Paginación de registros · parte 2",
+          "revision": 1,
+          "body": "El orden estable de paginación usa created_at e id. El cursor de paginación caduca a los 30 minutos."
+        }
+      ],
+      "facts": [
+        {
+          "id": "backups-f1",
+          "documentId": "backups-1",
+          "quote": "La copia diaria comienza a las 01:30 UTC.",
+          "start": 0,
+          "end": 41
+        },
+        {
+          "id": "backups-f2",
+          "documentId": "backups-1",
+          "quote": "Las copias se conservan durante 72 horas.",
+          "start": 42,
+          "end": 83
+        },
+        {
+          "id": "backups-f3",
+          "documentId": "backups-2",
+          "quote": "La restauración se realiza en un entorno aislado.",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "id": "backups-f4",
+          "documentId": "backups-2",
+          "quote": "Cada restauración comprueba el hash SHA-256.",
+          "start": 50,
+          "end": 94
+        },
+        {
+          "id": "cache-f1",
+          "documentId": "cache-1",
+          "quote": "La caché tiene un TTL de 180 segundos.",
+          "start": 0,
+          "end": 38
+        },
+        {
+          "id": "cache-f2",
+          "documentId": "cache-1",
+          "quote": "La caché admite un máximo de 64 entradas.",
+          "start": 39,
+          "end": 80
+        },
+        {
+          "id": "cache-f3",
+          "documentId": "cache-2",
+          "quote": "Una revisión de permisos nueva invalida la reutilización anterior.",
+          "start": 0,
+          "end": 66
+        },
+        {
+          "id": "cache-f4",
+          "documentId": "cache-2",
+          "quote": "Los errores de lectura no se guardan en caché.",
+          "start": 67,
+          "end": 113
+        },
+        {
+          "id": "retries-f1",
+          "documentId": "retries-1",
+          "quote": "Una tarea admite un máximo de 4 intentos en total.",
+          "start": 0,
+          "end": 50
+        },
+        {
+          "id": "retries-f2",
+          "documentId": "retries-1",
+          "quote": "La espera inicial entre intentos es de 250 milisegundos.",
+          "start": 51,
+          "end": 107
+        },
+        {
+          "id": "retries-f3",
+          "documentId": "retries-2",
+          "quote": "Todos los intentos conservan la misma clave de idempotencia.",
+          "start": 0,
+          "end": 60
+        },
+        {
+          "id": "retries-f4",
+          "documentId": "retries-2",
+          "quote": "Los errores HTTP 400 no se reintentan.",
+          "start": 61,
+          "end": 99
+        },
+        {
+          "id": "exports-f1",
+          "documentId": "exports-1",
+          "quote": "Una exportación admite un máximo de 5000 filas.",
+          "start": 0,
+          "end": 47
+        },
+        {
+          "id": "exports-f2",
+          "documentId": "exports-1",
+          "quote": "El archivo de exportación usa CSV con punto y coma como separador.",
+          "start": 48,
+          "end": 114
+        },
+        {
+          "id": "exports-f3",
+          "documentId": "exports-2",
+          "quote": "Las fechas exportadas usan la zona UTC.",
+          "start": 0,
+          "end": 39
+        },
+        {
+          "id": "exports-f4",
+          "documentId": "exports-2",
+          "quote": "Los enlaces de exportación caducan a los 900 segundos.",
+          "start": 40,
+          "end": 94
+        },
+        {
+          "id": "uploads-f1",
+          "documentId": "uploads-1",
+          "quote": "Cada documento cargado tiene un límite de 12 MiB.",
+          "start": 0,
+          "end": 49
+        },
+        {
+          "id": "uploads-f2",
+          "documentId": "uploads-1",
+          "quote": "Solo se aceptan documentos PDF y JSON.",
+          "start": 50,
+          "end": 88
+        },
+        {
+          "id": "uploads-f3",
+          "documentId": "uploads-2",
+          "quote": "Cada documento permanece en cuarentena hasta terminar el análisis.",
+          "start": 0,
+          "end": 66
+        },
+        {
+          "id": "uploads-f4",
+          "documentId": "uploads-2",
+          "quote": "La huella del documento se calcula con SHA-256.",
+          "start": 67,
+          "end": 114
+        },
+        {
+          "id": "webhooks-f1",
+          "documentId": "webhooks-1",
+          "quote": "El payload de un webhook tiene un límite de 128 KiB.",
+          "start": 0,
+          "end": 52
+        },
+        {
+          "id": "webhooks-f2",
+          "documentId": "webhooks-1",
+          "quote": "La firma del webhook usa HMAC-SHA256.",
+          "start": 53,
+          "end": 90
+        },
+        {
+          "id": "webhooks-f3",
+          "documentId": "webhooks-2",
+          "quote": "La antigüedad máxima del timestamp es de 300 segundos.",
+          "start": 0,
+          "end": 54
+        },
+        {
+          "id": "webhooks-f4",
+          "documentId": "webhooks-2",
+          "quote": "El ID de evento se conserva para deduplicación durante 24 horas.",
+          "start": 55,
+          "end": 119
+        },
+        {
+          "id": "audit-f1",
+          "documentId": "audit-1",
+          "quote": "Los eventos de auditoría se conservan durante 45 días.",
+          "start": 0,
+          "end": 54
+        },
+        {
+          "id": "audit-f2",
+          "documentId": "audit-1",
+          "quote": "El registro de auditoría es append-only.",
+          "start": 55,
+          "end": 95
+        },
+        {
+          "id": "audit-f3",
+          "documentId": "audit-2",
+          "quote": "La consulta de auditoría filtra por el tenant autorizado.",
+          "start": 0,
+          "end": 57
+        },
+        {
+          "id": "audit-f4",
+          "documentId": "audit-2",
+          "quote": "La exportación de auditoría elimina los tokens secretos.",
+          "start": 58,
+          "end": 114
+        },
+        {
+          "id": "pagination-f1",
+          "documentId": "pagination-1",
+          "quote": "El tamaño de página por defecto es de 25 registros.",
+          "start": 0,
+          "end": 51
+        },
+        {
+          "id": "pagination-f2",
+          "documentId": "pagination-1",
+          "quote": "El tamaño máximo de página es de 100 registros.",
+          "start": 52,
+          "end": 99
+        },
+        {
+          "id": "pagination-f3",
+          "documentId": "pagination-2",
+          "quote": "El orden estable de paginación usa created_at e id.",
+          "start": 0,
+          "end": 51
+        },
+        {
+          "id": "pagination-f4",
+          "documentId": "pagination-2",
+          "quote": "El cursor de paginación caduca a los 30 minutos.",
+          "start": 52,
+          "end": 100
+        }
+      ]
+    },
+    "queries": {
+      "version": 1,
+      "splitMethod": "topic groups assigned before any model run; public authored benchmark, not blind",
+      "rows": [
+        {
+          "id": "Q001",
+          "group": "backups",
+          "split": "dev",
+          "question": "¿A qué hora empieza la copia diaria y cuánto tiempo se conserva?"
+        },
+        {
+          "id": "Q002",
+          "group": "backups",
+          "split": "dev",
+          "question": "¿Cuánto tiempo se conserva una copia y dónde se restaura?"
+        },
+        {
+          "id": "Q003",
+          "group": "cache",
+          "split": "dev",
+          "question": "¿Cuál es el TTL de la caché y cuántas entradas admite?"
+        },
+        {
+          "id": "Q004",
+          "group": "cache",
+          "split": "dev",
+          "question": "¿Cuántas entradas admite la caché y qué pasa al cambiar la revisión de permisos?"
+        },
+        {
+          "id": "Q005",
+          "group": "retries",
+          "split": "test",
+          "question": "¿Cuántos intentos tiene una tarea y cuál es la espera inicial?"
+        },
+        {
+          "id": "Q006",
+          "group": "retries",
+          "split": "test",
+          "question": "¿Cuál es la espera inicial y qué ocurre con la clave de idempotencia al reintentar?"
+        },
+        {
+          "id": "Q007",
+          "group": "exports",
+          "split": "test",
+          "question": "¿Cuántas filas admite una exportación y qué separador usa el CSV?"
+        },
+        {
+          "id": "Q008",
+          "group": "exports",
+          "split": "test",
+          "question": "¿Qué separador usa el CSV y qué zona horaria tienen las fechas exportadas?"
+        },
+        {
+          "id": "Q009",
+          "group": "uploads",
+          "split": "test",
+          "question": "¿Qué tamaño máximo puede tener un documento y qué formatos se aceptan?"
+        },
+        {
+          "id": "Q010",
+          "group": "uploads",
+          "split": "test",
+          "question": "¿Qué formatos se aceptan y dónde permanece el documento durante el análisis?"
+        },
+        {
+          "id": "Q011",
+          "group": "webhooks",
+          "split": "test",
+          "question": "¿Qué tamaño máximo tiene el payload y cómo se firma un webhook?"
+        },
+        {
+          "id": "Q012",
+          "group": "webhooks",
+          "split": "test",
+          "question": "¿Cómo se firma un webhook y qué antigüedad máxima se acepta para su timestamp?"
+        },
+        {
+          "id": "Q013",
+          "group": "audit",
+          "split": "test",
+          "question": "¿Cuánto se conserva la auditoría y se pueden modificar sus eventos?"
+        },
+        {
+          "id": "Q014",
+          "group": "audit",
+          "split": "test",
+          "question": "¿Se pueden modificar los eventos de auditoría y cómo se limita su consulta por tenant?"
+        },
+        {
+          "id": "Q015",
+          "group": "pagination",
+          "split": "test",
+          "question": "¿Qué tamaño de página se usa por defecto y cuál es el máximo?"
+        },
+        {
+          "id": "Q016",
+          "group": "pagination",
+          "split": "test",
+          "question": "¿Cuál es el tamaño máximo de página y qué columnas forman el orden estable?"
+        },
+        {
+          "id": "Q017",
+          "group": "backups",
+          "split": "dev",
+          "question": "¿Qué algoritmo cifra las copias de seguridad?"
+        },
+        {
+          "id": "Q018",
+          "group": "exports",
+          "split": "test",
+          "question": "¿Qué moneda se usa al exportar importes?"
+        },
+        {
+          "id": "Q019",
+          "group": "uploads",
+          "split": "test",
+          "question": "¿Qué algoritmo comprime los documentos cargados?"
+        },
+        {
+          "id": "Q020",
+          "group": "webhooks",
+          "split": "test",
+          "question": "¿Qué direcciones IP pueden enviar webhooks?"
+        }
+      ]
+    },
+    "gold": {
+      "version": 1,
+      "annotationMethod": "author-written required facts and exhaustive document judgments; no independent annotator or measured agreement",
+      "gradeDefinition": {
+        "0": "no required fact supported",
+        "1": "some, not all, required facts supported",
+        "2": "all required facts supported"
+      },
+      "rows": [
+        {
+          "queryId": "Q001",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "backups-f1",
+            "backups-f2"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 2
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q002",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "backups-f2",
+            "backups-f3"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 1
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 1
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q003",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "cache-f1",
+            "cache-f2"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 2
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q004",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "cache-f2",
+            "cache-f3"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 1
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 1
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q005",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "retries-f1",
+            "retries-f2"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 2
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q006",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "retries-f2",
+            "retries-f3"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 1
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 1
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q007",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "exports-f1",
+            "exports-f2"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 2
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q008",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "exports-f2",
+            "exports-f3"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 1
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 1
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q009",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "uploads-f1",
+            "uploads-f2"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 2
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q010",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "uploads-f2",
+            "uploads-f3"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 1
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 1
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q011",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "webhooks-f1",
+            "webhooks-f2"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 2
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q012",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "webhooks-f2",
+            "webhooks-f3"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 1
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 1
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q013",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "audit-f1",
+            "audit-f2"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 2
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q014",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "audit-f2",
+            "audit-f3"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 1
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 1
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q015",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "pagination-f1",
+            "pagination-f2"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 2
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q016",
+          "answerability": "answerable",
+          "requiredFactIds": [
+            "pagination-f2",
+            "pagination-f3"
+          ],
+          "reviewNote": "Pregunta y referencias redactadas para este corpus sintético; no evaluación independiente.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 1
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 1
+            }
+          ]
+        },
+        {
+          "queryId": "Q017",
+          "answerability": "unanswerable",
+          "requiredFactIds": [],
+          "reviewNote": "El corpus no especifica cifrado de las copias.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q018",
+          "answerability": "unanswerable",
+          "requiredFactIds": [],
+          "reviewNote": "El corpus no especifica moneda ni contiene importes.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q019",
+          "answerability": "unanswerable",
+          "requiredFactIds": [],
+          "reviewNote": "El corpus no especifica compresión.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        },
+        {
+          "queryId": "Q020",
+          "answerability": "unanswerable",
+          "requiredFactIds": [],
+          "reviewNote": "El corpus no incluye una lista de IP autorizadas.",
+          "qrels": [
+            {
+              "documentId": "backups-1",
+              "grade": 0
+            },
+            {
+              "documentId": "backups-2",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-1",
+              "grade": 0
+            },
+            {
+              "documentId": "cache-2",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-1",
+              "grade": 0
+            },
+            {
+              "documentId": "retries-2",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-1",
+              "grade": 0
+            },
+            {
+              "documentId": "exports-2",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-1",
+              "grade": 0
+            },
+            {
+              "documentId": "uploads-2",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-1",
+              "grade": 0
+            },
+            {
+              "documentId": "webhooks-2",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-1",
+              "grade": 0
+            },
+            {
+              "documentId": "audit-2",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-1",
+              "grade": 0
+            },
+            {
+              "documentId": "pagination-2",
+              "grade": 0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "report": {
+    "documents": 16,
+    "facts": 32,
+    "queries": 20,
+    "dev": 5,
+    "test": 15,
+    "answerable": 16,
+    "unanswerable": 4,
+    "grades": {
+      "0": 296,
+      "1": 16,
+      "2": 8
+    },
+    "groups": 8,
+    "modelRuns": 0
+  }
+}

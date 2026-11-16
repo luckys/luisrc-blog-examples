@@ -1,0 +1,16 @@
+import {createRequire} from 'node:module';
+import {cpus,arch,platform} from 'node:os';
+import assert from 'node:assert/strict';
+import {read,json,digest,requireMissing,saveNew,preserveBytes,hashes} from './io.mjs';
+await requireMissing('results/inputs.json');
+const previous=await json('../retrieval-strategies/results/inputs.json'),retrieval=await json('../retrieval-strategies/results/retrieval.json'),ledger=await json('../document-ingestion/results/ledger.json'),protocol=await json('protocol.json'),models=await Promise.all(['reranker','generator'].map(role=>json(role+'-model-files.json')));
+for(const model of models){assert.equal(model.model,protocol[model.role].model);assert.equal(model.revision,protocol[model.role].revision);assert.equal(model.dtype,protocol[model.role].dtype);}
+const registry=previous.chunks.map((chunk,i)=>({...chunk,alias:'S'+String(i+1).padStart(2,'0')})),queries=previous.queries,pairs=new Map();
+for(const query of queries)for(const method of protocol.retrievers){const ranking=retrieval.rows.find(r=>r.queryId===query.id&&r.method===method).ranking;
+ for(const row of ranking.slice(0,Math.max(...protocol.candidateBudgets))){const chunk=registry.find(c=>c.id===row.id),id=query.id+':'+chunk.id;if(!pairs.has(id))pairs.set(id,{id,queryId:query.id,chunkId:chunk.id,query:query.text,passage:chunk.text});}}
+const require=createRequire(import.meta.url),hfRequire=createRequire(require.resolve('@huggingface/transformers'));
+const runtime={node:process.version,icu:process.versions.icu,unicode:process.versions.unicode,platform:platform(),arch:arch(),cpu:cpus()[0].model,transformersJs:JSON.parse(await read('node_modules/@huggingface/transformers/package.json')).version,onnxRuntimeNode:JSON.parse(await (await import('node:fs/promises')).readFile(hfRequire.resolve('onnxruntime-node/package.json'))).version};
+assert.equal(runtime.transformersJs,'3.8.1');assert.equal(runtime.onnxRuntimeNode,'1.21.0');await preserveBytes('runtime.json',Buffer.from(JSON.stringify(runtime,null,2)+'\n'));await preserveBytes('dependency-lock.capture.json',await read('../../pnpm-lock.yaml'));
+const sources=['protocol.json','rubric.json','system-prompt.txt','core.mjs','io.mjs','prepare.mjs','capture-reranker.mjs','prepare-answers.mjs','capture-answers.mjs','reranker-model-files.json','generator-model-files.json','runtime.json','dependency-lock.capture.json','../retrieval-strategies/results/inputs.json','../retrieval-strategies/results/retrieval.json','../document-ingestion/results/ledger.json','../document-ingestion/ranges.mjs','../document-ingestion/chunking.mjs'];
+await saveNew('results/inputs.json',{preparedAt:new Date().toISOString(),kind:'fixed_reranking_and_grounded_answer_protocol_before_inference',sourceHashes:await hashes(sources),protocol,rubric:await json('rubric.json'),systemPrompt:(await read('system-prompt.txt')).toString(),runtime,registry,queries,documents:ledger.documents.filter(d=>['RUNBOOK','COLUMNS','HTML'].includes(d.documentId)),rankings:retrieval.rows.filter(row=>protocol.retrievers.includes(row.method)),pairs:[...pairs.values()]});
+console.log(JSON.stringify({queries:queries.length,chunks:registry.length,uniquePairs:pairs.size,scenarioCount:queries.length*protocol.retrievers.length*2}));

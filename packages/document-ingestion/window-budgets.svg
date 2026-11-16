@@ -1,0 +1,65 @@
+<svg role="img" aria-label="Ventanas y tokens observados en ámbitos separados" width="360" height="520" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 360 520">
+<rect width="360" height="520" x="0" y="0" fill="#0f172a"></rect>
+<text dominant-baseline="central" text-anchor="start" style="font: 14px sans-serif" xml:space="preserve" y="7" transform="translate(12 96)" fill="#e2e8f0">Cantidad de chunks</text>
+<text dominant-baseline="central" text-anchor="start" style="font: 14px sans-serif" xml:space="preserve" y="7" transform="translate(12 294)" fill="#e2e8f0">Máximo observado de tokens por chunk</text>
+<text dominant-baseline="central" text-anchor="start" style="font: 13px sans-serif" xml:space="preserve" y="6.5" transform="translate(12 498)" fill="#94a3b8">Con special tokens; sin padding ni truncation.</text>
+<path d="M52 232.5L336 232.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 196.5L336 196.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 160.5L336 160.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 124.5L336 124.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 430.5L336 430.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 394.5L336 394.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 358.5L336 358.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<path d="M52 322.5L336 322.5" fill="none" pointer-events="visible" stroke="#334155" class="ingestion-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="6.5" transform="translate(194 259)" fill="#e2e8f0">Presupuesto de unidades</text>
+<path d="M52 232.5L336 232.5" fill="none" pointer-events="visible" stroke="#54555a" stroke-linecap="round" class="ingestion-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="6.5" transform="translate(194 457)" fill="#e2e8f0">Presupuesto de unidades</text>
+<path d="M52 430.5L336 430.5" fill="none" pointer-events="visible" stroke="#54555a" stroke-linecap="round" class="ingestion-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(44 232)" fill="#e2e8f0">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(44 196)" fill="#e2e8f0">10</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(44 160)" fill="#e2e8f0">20</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(44 124)" fill="#e2e8f0">30</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(44 430)" fill="#e2e8f0">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(44 394)" fill="#e2e8f0">30</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(44 358)" fill="#e2e8f0">60</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:sans-serif;" transform="translate(44 322)" fill="#e2e8f0">90</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="6.5" transform="translate(99.3333 240)" fill="#e2e8f0">16</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="6.5" transform="translate(194 240)" fill="#e2e8f0">32</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="6.5" transform="translate(288.6667 240)" fill="#e2e8f0">48</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="6.5" transform="translate(99.3333 438)" fill="#e2e8f0">16</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="6.5" transform="translate(194 438)" fill="#e2e8f0">32</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="6.5" transform="translate(288.6667 438)" fill="#e2e8f0">48</text>
+<path d="M80.3 232l38 0l0 -90l-38 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="ingestion-figure-cls-1"></path>
+<path d="M175 232l38 0l0 -46.8l-38 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="ingestion-figure-cls-1"></path>
+<path d="M269.7 232l38 0l0 -32.4l-38 0Z" fill="#38bdf8" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="ingestion-figure-cls-1"></path>
+<path d="M80.3 430l38 0l0 -34.8l-38 0Z" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="ingestion-figure-cls-2"></path>
+<path d="M175 430l38 0l0 -62.4l-38 0Z" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="ingestion-figure-cls-2"></path>
+<path d="M269.7 430l38 0l0 -92.4l-38 0Z" fill="#fbbf24" ecmeta_series_index="1" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="ingestion-figure-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(99.3333 137)" fill="#e2e8f0">25</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(194 180.2)" fill="#e2e8f0">13</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(288.6667 194.6)" fill="#e2e8f0">9</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(99.3333 390.2)" fill="#e2e8f0">29</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(194 362.6)" fill="#e2e8f0">52</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(288.6667 332.6)" fill="#e2e8f0">77</text>
+<path d="M-5 -5l249.5 0l0 75l-249.5 0Z" transform="translate(17 15)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#3c3c41" stroke-width="0" class="ingestion-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:17px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="8.5" transform="translate(17 15)" fill="#e2e8f0">Ventanas y tokens guardados</text>
+<path d="M0 27l239.5 0l0 38l-239.5 0Z" transform="translate(17 15)" fill="none" pointer-events="visible" class="ingestion-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="36.5" transform="translate(17 15)" fill="#94a3b8">3 representantes; sin overlap</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:sans-serif;" xml:space="preserve" y="55.5" transform="translate(17 15)" fill="#94a3b8">Unidades de origen ≠ tokens del modelo</text>
+<style ><![CDATA[
+.ingestion-figure-cls-0:hover {
+pointer-events:none;
+}
+.ingestion-figure-cls-1:hover {
+cursor:pointer;
+fill:rgba(61,207,255,1);
+}
+.ingestion-figure-cls-2:hover {
+cursor:pointer;
+fill:rgba(255,210,39,1);
+}
+
+]]>
+
+</style>
+</svg>

@@ -1,0 +1,1299 @@
+{
+  "preparedAt": "2026-11-03T10:55:58.672Z",
+  "kind": "fixed_gold_and_sentence_inputs_before_semantic_inference",
+  "sourceHashes": {
+    "prepare-chunking.mjs": "49631c9998cbff8d4c65dbf4ed9e784cec45c4cfa01ef4985c738a8641bbe329",
+    "prepare-semantic-model.mjs": "342a308cdf52e0d4fe7236ddcf49bad051f18603c40d5dceb81fa8f6d4546284",
+    "chunking.mjs": "f77ba798643817a02ec37aa6fcbcda47568b6f7cc17de8d8c443fa0be64ee70e",
+    "chunking-protocol.json": "dff978bd620107c8311583af67ef1a1bdd6cc45f88bad7170bcbcf04abff1e1e",
+    "retrieval-queries.json": "df653959c1389d89872ce9d4018f87307dcfc307066a5f134a6ea4ae55aef211",
+    "results/ledger.json": "c001fe55cdb360472f089870ff3ae4cb5096210efc3461fe60a2a028e09dc833",
+    "semantic-model-files.json": "2ec2cd242629c745db158f69e3fea4deb9cd923591d4de1187a9708af4d51e85",
+    "semantic-runtime.json": "e6c67873b66f869118c2190fa1ed836bdb4cd8c84100422df98fc2ea67760d1c"
+  },
+  "protocol": {
+    "status": "fixed_before_semantic_encoding_and_retrieval",
+    "corpus": [
+      "RUNBOOK",
+      "COLUMNS",
+      "HTML"
+    ],
+    "source": "Frozen results/ledger.json canonical text. Controls and duplicate aliases excluded from indexing.",
+    "segmentation": {
+      "locale": "es",
+      "granularity": "sentence",
+      "implementation": "Intl.Segmenter in recorded Node/ICU runtime",
+      "alignment": "Only sentence ends coinciding with canonical unit end may split; other ends are ignored and recorded. Split oversized sentence pieces by unit budget.",
+      "maxUnits": 32
+    },
+    "encoder": {
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+      "dtype": "q8",
+      "device": "cpu",
+      "dimensions": 384,
+      "maxTokens": 128,
+      "batchSize": 8,
+      "intraOpNumThreads": 2,
+      "interOpNumThreads": 1,
+      "pooling": "attention-mask weighted mean including active special tokens, raw float32"
+    },
+    "semantic": {
+      "budget": 32,
+      "distance": "1-cosine between adjacent sentence-piece embeddings",
+      "threshold": 0.35,
+      "rule": "Cut when distance>threshold or next piece would exceed budget; budget wins as primary reason; record both predicates. No relevance tuning.",
+      "policyVersion": "adjacent-sentence-cosine/v1"
+    },
+    "strategies": [
+      "size32",
+      "semantic32",
+      "overlap4",
+      "overlap8"
+    ],
+    "overlap": {
+      "budget": 32,
+      "values": [
+        4,
+        8
+      ],
+      "rule": "Step budget-overlap; keep final partial window; stop once a window reaches source end to avoid an entirely redundant tail."
+    },
+    "retrieval": {
+      "method": "bm25",
+      "analyzer": "P106 fold",
+      "k1": 1.2,
+      "b": 0.75,
+      "k": 3,
+      "indexedText": "chunk body only; no title enrichment or reranking",
+      "statistics": "Each partition gets its own BM25 index; changes to document frequency/length are part of the chunking effect."
+    },
+    "evaluation": {
+      "gold": "Author-selected source spans with required fact groups; alternatives inside a group are acceptable equivalent sources. Queries/labels fixed before these rankings, already-known synthetic corpus, not blind test.",
+      "coverage": "For each fact,max fraction of required canonical unit IDs covered among its alternatives; query coverage=mean across facts; macro across answerable queries.",
+      "complete": "All fact groups have at least one fully covered alternative in the union of top3 chunks.",
+      "redundancy": "1-unique retrieved canonical unit IDs / sum returned chunk units; zero with no returned context, report returned count too.",
+      "negative": "No gold facts means coverage/complete null, excluded from answerable aggregate; preserve every ranking, no calibrated abstention threshold."
+    },
+    "selection": "Retain all outputs,source hashes,negative and unchanged cases. Do not tune threshold,labels or retry selection based on metrics.",
+    "limits": "Three short synthetic known documents,no production capacity claim,no comparison between different retrievers."
+  },
+  "runtime": {
+    "node": "v24.19.0",
+    "icu": "78.3",
+    "unicode": "17.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "Intel(R) Core(TM) Ultra 9 285H",
+    "transformersJs": "3.8.1",
+    "onnxRuntimeNode": "1.21.0",
+    "encoder": {
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+      "dtype": "q8",
+      "device": "cpu",
+      "dimensions": 384,
+      "maxTokens": 128,
+      "batchSize": 8,
+      "intraOpNumThreads": 2,
+      "interOpNumThreads": 1,
+      "pooling": "attention-mask weighted mean including active special tokens, raw float32"
+    }
+  },
+  "encoderProfile": "e2075487ba6512bd2fc77f9b0410ca1b27f506c83b74dcfccfe72c2c3ba4d924",
+  "goldQueries": [
+    {
+      "id": "Q01",
+      "split": "dev",
+      "text": "¿Qué registra el manifiesto antes de restaurar?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "checksum SHA-256 y la versión del esquema.",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 190,
+              "end": 232,
+              "requiredUnitIds": [
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "one_fact"
+    },
+    {
+      "id": "Q02",
+      "split": "dev",
+      "text": "¿Cuánto dura la retención de las copias de seguridad?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "treinta días.",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 342,
+              "end": 355,
+              "requiredUnitIds": [
+                53,
+                54
+              ]
+            },
+            {
+              "documentId": "COLUMNS",
+              "quote": "treinta días.",
+              "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+              "start": 39,
+              "end": 52,
+              "requiredUnitIds": [
+                7,
+                8
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "one_fact"
+    },
+    {
+      "id": "Q03",
+      "split": "dev",
+      "text": "¿Dónde mantener las dos copias para no depender de un volumen?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "dos copias en ubicaciones diferentes evita depender de un único volumen.",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 365,
+              "end": 437,
+              "requiredUnitIds": [
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "one_fact"
+    },
+    {
+      "id": "Q04",
+      "split": "dev",
+      "text": "¿Dónde restaurar durante una prueba y qué hacer con producción?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "directorio aislado.",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 461,
+              "end": 480,
+              "requiredUnitIds": [
+                71,
+                72
+              ]
+            },
+            {
+              "documentId": "COLUMNS",
+              "quote": "directorio aislado.",
+              "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+              "start": 159,
+              "end": 178,
+              "requiredUnitIds": [
+                26,
+                27
+              ]
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "Nunca sobrescribir los datos de producción durante un ejercicio.",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 481,
+              "end": 545,
+              "requiredUnitIds": [
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81
+              ]
+            },
+            {
+              "documentId": "COLUMNS",
+              "quote": "No se restaura sobre producción.",
+              "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+              "start": 179,
+              "end": 211,
+              "requiredUnitIds": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "multiple_facts"
+    },
+    {
+      "id": "Q05",
+      "split": "dev",
+      "text": "¿Qué registro se reproduce al restaurar la copia?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "registro WAL",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 588,
+              "end": 600,
+              "requiredUnitIds": [
+                89,
+                90
+              ]
+            },
+            {
+              "documentId": "COLUMNS",
+              "quote": "registro WAL",
+              "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+              "start": 128,
+              "end": 140,
+              "requiredUnitIds": [
+                20,
+                21
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "one_fact"
+    },
+    {
+      "id": "Q06",
+      "split": "dev",
+      "text": "¿Pertenece al snapshot una escritura posterior?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "Una escritura posterior no pertenece a ese snapshot.",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 626,
+              "end": 678,
+              "requiredUnitIds": [
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "one_fact"
+    },
+    {
+      "id": "Q07",
+      "split": "dev",
+      "text": "¿Qué datos debe guardar el informe de comprobaciones?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "identificador de la copia",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 700,
+              "end": 725,
+              "requiredUnitIds": [
+                107,
+                108,
+                109,
+                110
+              ]
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "la fecha",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 727,
+              "end": 735,
+              "requiredUnitIds": [
+                111,
+                112
+              ]
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "resultados de las comprobaciones.",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 742,
+              "end": 775,
+              "requiredUnitIds": [
+                115,
+                116,
+                117,
+                118
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "multiple_facts"
+    },
+    {
+      "id": "Q08",
+      "split": "dev",
+      "text": "¿Qué hacer si el checksum no coincide?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "detener la restauración y conservar el archivo para investigar.",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 870,
+              "end": 933,
+              "requiredUnitIds": [
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "one_fact"
+    },
+    {
+      "id": "Q09",
+      "split": "dev",
+      "text": "¿Se puede sustituir el checksum esperado por el observado?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "No sustituir el checksum esperado por el observado.",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 934,
+              "end": 985,
+              "requiredUnitIds": [
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "one_fact"
+    },
+    {
+      "id": "Q10",
+      "split": "dev",
+      "text": "¿Prometen los tiempos locales la recuperación de otro sistema?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "RUNBOOK",
+              "quote": "Los tiempos locales no prometen el tiempo de recuperación de otro sistema.",
+              "representationId": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd",
+              "start": 1062,
+              "end": 1136,
+              "requiredUnitIds": [
+                162,
+                163,
+                164,
+                165,
+                166,
+                167,
+                168,
+                169,
+                170,
+                171,
+                172,
+                173
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "one_fact"
+    },
+    {
+      "id": "Q11",
+      "split": "test",
+      "text": "¿Qué TTL inicial usa la caché y qué incluye su clave?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "COLUMNS",
+              "quote": "El TTL inicial es de 300 segundos.",
+              "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+              "start": 337,
+              "end": 371,
+              "requiredUnitIds": [
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56
+              ]
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "documentId": "COLUMNS",
+              "quote": "La clave incluye el idioma.",
+              "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+              "start": 372,
+              "end": 399,
+              "requiredUnitIds": [
+                57,
+                58,
+                59,
+                60,
+                61
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "multiple_facts"
+    },
+    {
+      "id": "Q12",
+      "split": "test",
+      "text": "¿Cuándo invalidar la caché tras un cambio de versión?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "COLUMNS",
+              "quote": "Invalidar tras cambiar la versión.",
+              "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+              "start": 400,
+              "end": 434,
+              "requiredUnitIds": [
+                62,
+                63,
+                64,
+                65,
+                66
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "one_fact"
+    },
+    {
+      "id": "Q13",
+      "split": "test",
+      "text": "¿Qué ocurre en un cache miss y se almacena un error del origen?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "COLUMNS",
+              "quote": "Un cache miss consulta el origen.",
+              "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+              "start": 435,
+              "end": 468,
+              "requiredUnitIds": [
+                67,
+                68,
+                69,
+                70,
+                71,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "documentId": "COLUMNS",
+              "quote": "El error del origen no se almacena.",
+              "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+              "start": 469,
+              "end": 504,
+              "requiredUnitIds": [
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "multiple_facts"
+    },
+    {
+      "id": "Q14",
+      "split": "test",
+      "text": "¿Qué métricas medir para la caché?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "COLUMNS",
+              "quote": "Medir hit ratio y latencia.",
+              "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+              "start": 505,
+              "end": 532,
+              "requiredUnitIds": [
+                80,
+                81,
+                82,
+                83,
+                84
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "one_fact"
+    },
+    {
+      "id": "Q15",
+      "split": "test",
+      "text": "¿Garantiza consistencia el TTL?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "COLUMNS",
+              "quote": "Un TTL no garantiza consistencia.",
+              "representationId": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748",
+              "start": 533,
+              "end": 566,
+              "requiredUnitIds": [
+                85,
+                86,
+                87,
+                88,
+                89
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "one_fact"
+    },
+    {
+      "id": "Q16",
+      "split": "test",
+      "text": "¿Qué identifica la versión del índice y qué comprobar si cambia el analizador?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "HTML",
+              "quote": "el analizador y el corpus utilizado.",
+              "representationId": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610",
+              "start": 70,
+              "end": 106,
+              "requiredUnitIds": [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+              ]
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "documentId": "HTML",
+              "quote": "evaluar de nuevo las consultas.",
+              "representationId": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610",
+              "start": 135,
+              "end": 166,
+              "requiredUnitIds": [
+                19,
+                20,
+                21,
+                22,
+                23
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "multiple_facts"
+    },
+    {
+      "id": "Q17",
+      "split": "test",
+      "text": "¿Cómo reconstruir el índice y cuándo cambiar su referencia?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "HTML",
+              "quote": "Las reconstrucciones se hacen sobre un índice nuevo.",
+              "representationId": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610",
+              "start": 167,
+              "end": 219,
+              "requiredUnitIds": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ]
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "documentId": "HTML",
+              "quote": "El cambio de referencia ocurre después de comprobar que conserva los documentos esperados.",
+              "representationId": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610",
+              "start": 220,
+              "end": 310,
+              "requiredUnitIds": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "multiple_facts"
+    },
+    {
+      "id": "Q18",
+      "split": "test",
+      "text": "¿Qué identificador permanece estable y cómo citar versiones distintas?",
+      "facts": [
+        {
+          "alternatives": [
+            {
+              "documentId": "HTML",
+              "quote": "El identificador del documento es estable;",
+              "representationId": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610",
+              "start": 311,
+              "end": 353,
+              "requiredUnitIds": [
+                45,
+                46,
+                47,
+                48,
+                49,
+                50
+              ]
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "documentId": "HTML",
+              "quote": "la versión cambia cuando cambia el contenido.",
+              "representationId": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610",
+              "start": 354,
+              "end": 399,
+              "requiredUnitIds": [
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57
+              ]
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "documentId": "HTML",
+              "quote": "Dos versiones diferentes no deben compartir una cita sin especificar la revisión.",
+              "representationId": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610",
+              "start": 400,
+              "end": 481,
+              "requiredUnitIds": [
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69
+              ]
+            }
+          ]
+        }
+      ],
+      "category": "multiple_facts"
+    },
+    {
+      "id": "Q19",
+      "split": "test",
+      "text": "¿Cuál es el índice glucémico del pan?",
+      "facts": [],
+      "category": "unanswerable"
+    },
+    {
+      "id": "Q20",
+      "split": "test",
+      "text": "telescopio lunar calibración",
+      "facts": [],
+      "category": "unanswerable"
+    }
+  ],
+  "segments": [
+    {
+      "documentId": "RUNBOOK",
+      "pieces": [
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:0:14",
+          "documentId": "RUNBOOK",
+          "first": 0,
+          "last": 14,
+          "start": 0,
+          "end": 106,
+          "text": "AtlasQueue: recuperación verificada Una copia de seguridad no garantiza que el servicio pueda recuperarse.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:14:23",
+          "documentId": "RUNBOOK",
+          "first": 14,
+          "last": 23,
+          "start": 107,
+          "end": 163,
+          "text": "La prueba debe restaurar datos y comprobar su contenido.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:23:34",
+          "documentId": "RUNBOOK",
+          "first": 23,
+          "last": 34,
+          "start": 164,
+          "end": 232,
+          "text": "El manifiesto registra el checksum SHA-256 y la versión del esquema.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:34:46",
+          "documentId": "RUNBOOK",
+          "first": 34,
+          "last": 46,
+          "start": 233,
+          "end": 308,
+          "text": "Antes de restaurar, comprobar que ambos coinciden con el entorno de prueba.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:46:55",
+          "documentId": "RUNBOOK",
+          "first": 46,
+          "last": 55,
+          "start": 309,
+          "end": 355,
+          "text": "La retención de las copias es de treinta días.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:55:67",
+          "documentId": "RUNBOOK",
+          "first": 55,
+          "last": 67,
+          "start": 356,
+          "end": 437,
+          "text": "Mantener dos copias en ubicaciones diferentes evita depender de un único volumen.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:67:73",
+          "documentId": "RUNBOOK",
+          "first": 67,
+          "last": 73,
+          "start": 438,
+          "end": 480,
+          "text": "La restauración usa un directorio aislado.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:73:82",
+          "documentId": "RUNBOOK",
+          "first": 73,
+          "last": 82,
+          "start": 481,
+          "end": 545,
+          "text": "Nunca sobrescribir los datos de producción durante un ejercicio.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:82:95",
+          "documentId": "RUNBOOK",
+          "first": 82,
+          "last": 95,
+          "start": 546,
+          "end": 625,
+          "text": "Después de cargar la copia, reproducir el registro WAL hasta el punto acordado.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:95:103",
+          "documentId": "RUNBOOK",
+          "first": 95,
+          "last": 103,
+          "start": 626,
+          "end": 678,
+          "text": "Una escritura posterior no pertenece a ese snapshot.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:103:119",
+          "documentId": "RUNBOOK",
+          "first": 103,
+          "last": 119,
+          "start": 679,
+          "end": 775,
+          "text": "El informe guarda el identificador de la copia, la fecha y los resultados de las comprobaciones.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:119:129",
+          "documentId": "RUNBOOK",
+          "first": 119,
+          "last": 129,
+          "start": 776,
+          "end": 841,
+          "text": "Una ejecución sin errores no demuestra que falten cero registros.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:129:143",
+          "documentId": "RUNBOOK",
+          "first": 129,
+          "last": 143,
+          "start": 842,
+          "end": 933,
+          "text": "Si el checksum no coincide, detener la restauración y conservar el archivo para investigar.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:143:151",
+          "documentId": "RUNBOOK",
+          "first": 143,
+          "last": 151,
+          "start": 934,
+          "end": 985,
+          "text": "No sustituir el checksum esperado por el observado.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:151:162",
+          "documentId": "RUNBOOK",
+          "first": 151,
+          "last": 162,
+          "start": 986,
+          "end": 1061,
+          "text": "El objetivo del ejercicio es detectar pérdidas y límites del procedimiento.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:162:174",
+          "documentId": "RUNBOOK",
+          "first": 162,
+          "last": 174,
+          "start": 1062,
+          "end": 1136,
+          "text": "Los tiempos locales no prometen el tiempo de recuperación de otro sistema.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "83677e54d9c1d3631ea90fb31fb4e355715cdac81e92df5776fb90ee7cee02fd:174:178",
+          "documentId": "RUNBOOK",
+          "first": 174,
+          "last": 178,
+          "start": 1137,
+          "end": 1158,
+          "text": "AtlasQueue | Página 1",
+          "endReason": "sentence"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "documentId": "COLUMNS",
+      "pieces": [
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:0:9",
+          "documentId": "COLUMNS",
+          "first": 0,
+          "last": 9,
+          "start": 0,
+          "end": 52,
+          "text": "Copias de seguridad La retención es de treinta días.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:9:14",
+          "documentId": "COLUMNS",
+          "first": 9,
+          "last": 14,
+          "start": 53,
+          "end": 85,
+          "text": "Restaurar requiere dos pasos: 1.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:14:17",
+          "documentId": "COLUMNS",
+          "first": 14,
+          "last": 17,
+          "start": 86,
+          "end": 110,
+          "text": "Verificar el manifiesto.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:17:18",
+          "documentId": "COLUMNS",
+          "first": 17,
+          "last": 18,
+          "start": 111,
+          "end": 113,
+          "text": "2.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:18:22",
+          "documentId": "COLUMNS",
+          "first": 18,
+          "last": 22,
+          "start": 114,
+          "end": 141,
+          "text": "Reproducir el registro WAL.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:22:28",
+          "documentId": "COLUMNS",
+          "first": 22,
+          "last": 28,
+          "start": 142,
+          "end": 178,
+          "text": "La prueba usa un directorio aislado.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:28:33",
+          "documentId": "COLUMNS",
+          "first": 28,
+          "last": 33,
+          "start": 179,
+          "end": 211,
+          "text": "No se restaura sobre producción.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:33:37",
+          "documentId": "COLUMNS",
+          "first": 33,
+          "last": 37,
+          "start": 212,
+          "end": 241,
+          "text": "Guardar el checksum esperado.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:37:42",
+          "documentId": "COLUMNS",
+          "first": 37,
+          "last": 42,
+          "start": 242,
+          "end": 275,
+          "text": "Una copia no prueba recuperación.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:42:47",
+          "documentId": "COLUMNS",
+          "first": 42,
+          "last": 47,
+          "start": 276,
+          "end": 313,
+          "text": "La verificación compara el contenido.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:47:57",
+          "documentId": "COLUMNS",
+          "first": 47,
+          "last": 57,
+          "start": 314,
+          "end": 371,
+          "text": "Configuración de caché El TTL inicial es de 300 segundos.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:57:62",
+          "documentId": "COLUMNS",
+          "first": 57,
+          "last": 62,
+          "start": 372,
+          "end": 399,
+          "text": "La clave incluye el idioma.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:62:67",
+          "documentId": "COLUMNS",
+          "first": 62,
+          "last": 67,
+          "start": 400,
+          "end": 434,
+          "text": "Invalidar tras cambiar la versión.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:67:73",
+          "documentId": "COLUMNS",
+          "first": 67,
+          "last": 73,
+          "start": 435,
+          "end": 468,
+          "text": "Un cache miss consulta el origen.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:73:80",
+          "documentId": "COLUMNS",
+          "first": 73,
+          "last": 80,
+          "start": 469,
+          "end": 504,
+          "text": "El error del origen no se almacena.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:80:85",
+          "documentId": "COLUMNS",
+          "first": 80,
+          "last": 85,
+          "start": 505,
+          "end": 532,
+          "text": "Medir hit ratio y latencia.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:85:90",
+          "documentId": "COLUMNS",
+          "first": 85,
+          "last": 90,
+          "start": 533,
+          "end": 566,
+          "text": "Un TTL no garantiza consistencia.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:90:96",
+          "documentId": "COLUMNS",
+          "first": 90,
+          "last": 96,
+          "start": 567,
+          "end": 601,
+          "text": "La caché es una copia descartable.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "5ec5a0f49d8268d71b26af5c148404696061c4f90b8d9b2efea968c6e0720748:96:101",
+          "documentId": "COLUMNS",
+          "first": 96,
+          "last": 101,
+          "start": 602,
+          "end": 634,
+          "text": "El origen conserva la autoridad.",
+          "endReason": "sentence"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "documentId": "HTML",
+      "pieces": [
+        {
+          "id": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610:0:15",
+          "documentId": "HTML",
+          "first": 0,
+          "last": 15,
+          "start": 0,
+          "end": 106,
+          "text": "AtlasQueue: mantenimiento del índice La versión del índice identifica el analizador y el corpus utilizado.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610:15:24",
+          "documentId": "HTML",
+          "first": 15,
+          "last": 24,
+          "start": 107,
+          "end": 166,
+          "text": "Cambiar el analizador exige evaluar de nuevo las consultas.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610:24:32",
+          "documentId": "HTML",
+          "first": 24,
+          "last": 32,
+          "start": 167,
+          "end": 219,
+          "text": "Las reconstrucciones se hacen sobre un índice nuevo.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610:32:45",
+          "documentId": "HTML",
+          "first": 32,
+          "last": 45,
+          "start": 220,
+          "end": 310,
+          "text": "El cambio de referencia ocurre después de comprobar que conserva los documentos esperados.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610:45:58",
+          "documentId": "HTML",
+          "first": 45,
+          "last": 58,
+          "start": 311,
+          "end": 399,
+          "text": "El identificador del documento es estable; la versión cambia cuando cambia el contenido.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610:58:70",
+          "documentId": "HTML",
+          "first": 58,
+          "last": 70,
+          "start": 400,
+          "end": 481,
+          "text": "Dos versiones diferentes no deben compartir una cita sin especificar la revisión.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610:70:76",
+          "documentId": "HTML",
+          "first": 70,
+          "last": 76,
+          "start": 482,
+          "end": 520,
+          "text": "Una consulta sin resultados es válida.",
+          "endReason": "sentence"
+        },
+        {
+          "id": "bb540054216b9baf396535dac0343fc75e81cefb23124c1fd5c0b675ea304610:76:88",
+          "documentId": "HTML",
+          "first": 76,
+          "last": 88,
+          "start": 521,
+          "end": 590,
+          "text": "El sistema no debe inventar una respuesta para completar el top tres.",
+          "endReason": "sentence"
+        }
+      ],
+      "ignored": []
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "node": "v24.19.0",
+  "icu": "78.3",
+  "unicode": "17.0",
+  "platform": "linux",
+  "arch": "x64",
+  "cpu": "Intel(R) Core(TM) Ultra 9 285H",
+  "transformersJs": "3.8.1",
+  "onnxRuntimeNode": "1.21.0"
+}

@@ -1,0 +1,46 @@
+{
+  "status": "fixed_before_extraction_and_ocr",
+  "sources": "original synthetic Spanish runbooks, no external documents or personal data",
+  "pdf": {
+    "popplerVersion": "24.08.0",
+    "coordinates": "PDF points, upper-left origin",
+    "rasterDpi": 144,
+    "capture": [
+      "-bbox-layout",
+      "-raw"
+    ]
+  },
+  "ocr": {
+    "tesseractJs": "7.0.0",
+    "language": "spa",
+    "oem": 1,
+    "psm": 3,
+    "cacheMethod": "none",
+    "retries": "one observation, no correction or best-run selection",
+    "output": [
+      "text",
+      "tsv",
+      "blocks"
+    ],
+    "confidence": "engine score, not a calibrated probability of word correctness"
+  },
+  "layout": {
+    "case": "two columns with interleaved text drawing order",
+    "columnSplitPoints": 306,
+    "bodyTop": 70,
+    "bodyBottom": 700,
+    "rowTolerancePoints": 2,
+    "limits": "known-layout rule for controlled fixtures; not general document understanding"
+  },
+  "evaluation": {
+    "truth": "author-written source text before OCR, keep engine output unchanged",
+    "cer": "Levenshtein over NFC Unicode code points after whitespace folding; case preserved",
+    "limits": "synthetic clean scans, one OCR model, no production-quality claim"
+  },
+  "nextPhases": {
+    "size": "word-span windows with explicit UTF16 offsets, model-token preflight separately",
+    "semantic": "real sentence embeddings, declared boundary and budget, no gold tuning",
+    "retrieval": "same query gold across two strategies; include unanswerable and cross-boundary questions",
+    "status": "not_implemented"
+  }
+}

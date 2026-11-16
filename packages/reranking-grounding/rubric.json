@@ -1,0 +1,12 @@
+{
+  "fixedBeforeOutcomes": true,
+  "annotator": "Editorial review by the assistant for this laboratory; not user approval or multi-rater adjudication.",
+  "format": "Accept exact JSON object or exactly one surrounding ```json fence. No extraction of substrings,JSON repair or dropping extra prose. Required keys estado andafirmaciones only. estado respuesta has1..3claims; sin_respuesta has0claims. Claim keys texto,citas only,nonempty text and1..3nonempty string references.",
+  "claims": "For each parsed claim record support=supported/contradicted/unsupported/uncited_or_unresolved,coveredFacts=zero-based original fact groups correctly answered,notes,and supporting/contradicting quotes from context where available. A conjunctive claim is supported only if its complete assertion andconditions are supported by cited context.",
+  "quotes": "Reference alias+exact text quote inside a supplied cited chunk. Existence is checked automatically; whether it entails the claim remains the editorial label,not a general semantic verifier.",
+  "completeAnswer": "For answerable gold:accepted response covers all fact groups. Report separately groundedComplete:allfacts covered through supported claims andallclaims have valid,supporting citations.",
+  "negative": "No goldfacts:content coverage/completeness null. Correct model abstention requires accepted sin_respuesta; a format rejection is a technical failure anddoes not count as successful noanswer.",
+  "linkValidity": "Resolved references/total references; null when no references. Also record claims with no resolved citation. A valid source can contain an unrelated orcontradictory statement.",
+  "uncertainty": "Raw relevance logits are not calibrated answer probabilities. No threshold calibration on two negative cases.",
+  "reviewOrder": "Read all unique raw outputs with contexts; save per-answer labels andrationales before calculating aggregate answer quality."
+}

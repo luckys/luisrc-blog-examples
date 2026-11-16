@@ -1,0 +1,38 @@
+[
+  {
+    "id": "F01",
+    "queryId": "Q04",
+    "field": "documentId",
+    "value": "COLUMNS"
+  },
+  {
+    "id": "F02",
+    "queryId": "Q11",
+    "field": "documentId",
+    "value": "COLUMNS"
+  },
+  {
+    "id": "F03",
+    "queryId": "Q17",
+    "field": "documentId",
+    "value": "HTML"
+  },
+  {
+    "id": "F04",
+    "queryId": "Q08",
+    "field": "documentId",
+    "value": "COLUMNS"
+  },
+  {
+    "id": "F05",
+    "queryId": "Q17",
+    "field": "language",
+    "value": "en"
+  },
+  {
+    "id": "F06",
+    "queryId": "Q04",
+    "field": "kind",
+    "value": "pdf"
+  }
+]

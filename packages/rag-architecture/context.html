@@ -1,0 +1,13 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Context design: historial, fuentes y tokens</title>
+<style>:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0}*{box-sizing:border-box}body{padding:16px;margin:0;max-width:1000px}h1{font-size:1.35rem}h2{font-size:1.1rem;margin-top:24px}p,li{line-height:1.6;overflow-wrap:anywhere}label{display:block;margin:12px 0}select{display:block;background:#1e293b;color:#fff;border:1px solid #94a3b8;border-radius:6px;padding:10px;font:inherit;width:100%;max-width:700px;margin-top:6px}select:focus-visible,summary:focus-visible{outline:3px solid #fbbf24;outline-offset:3px}pre{padding:12px;background:#020617;border:1px solid #475569;border-radius:6px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5}svg{display:block;width:100%;max-width:420px;height:auto}#status{padding:12px;background:#1e293b;border-left:4px solid #38bdf8}</style>
+<h1>Qué cabe en el chat completo</h1><p>60 composiciones guardadas con el tokenizer Qwen fijado. Los historiales, rankings y controles son fixtures redactadas; no son respuestas de un modelo ni una nueva evaluación de búsquedas. No hay tokenización ni inferencia nueva en este visor.</p>
+<label>Escenario<select id="context-scenario"></select></label><label>Ventana de trabajo elegida<select id="context-window"><option>192</option><option>320</option><option>512</option></select></label><label>Prioridad<select id="context-policy"><option value="history_first">Historial primero</option><option value="evidence_first">Evidencia primero</option></select></label>
+<p id="status" role="status" aria-live="polite"></p><div id="budget"></div><p id="selection"></p>
+<h2>Fuentes seleccionadas completas</h2><ul id="evidence"></ul>
+<details><summary>Ámbito declarado y origen de los datos</summary><pre id="context-scope"></pre></details>
+<details><summary>Mensajes y roles del prompt admitido</summary><pre id="context-messages"></pre></details>
+<details><summary>Plantilla de chat completa medida</summary><pre id="context-prompt"></pre></details>
+<details><summary>IDs de tokens del prompt admitido</summary><pre id="context-token-ids"></pre></details>
+<details><summary>Intentos de empaquetado y base rechazada</summary><pre id="context-trials"></pre></details>
+<p>La reserva de 64 tokens es una decisión del cliente, no una salida generada. Los límites de 192/320/512 tampoco describen la capacidad nativa del modelo. ready significa que se admitió evidencia dentro del presupuesto; no demuestra respuesta correcta. Las fuentes ajenas o restringidas se rechazan antes del conteo.</p>
+<script type="module" src="./context-view.mjs"></script></html>

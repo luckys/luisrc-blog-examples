@@ -1,0 +1,894 @@
+[
+  {
+    "id": "alpha_reader-one-step",
+    "kind": "one-step",
+    "role": "alpha_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "alpha-restoration-v1"
+      ]
+    },
+    "maxCalls": 1,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "call_budget",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-follow-reference",
+    "kind": "follow-reference",
+    "role": "alpha_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "alpha-restoration-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "requirements_met",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-cycle",
+    "kind": "cycle",
+    "role": "alpha_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "alpha-manual-v1"
+      ]
+    },
+    "maxCalls": 4,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-empty-search",
+    "kind": "empty-search",
+    "role": "alpha_reader",
+    "query": "telescopio",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {},
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_results",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-foreign-reference",
+    "kind": "foreign-reference",
+    "role": "alpha_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "beta-restoration-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-restricted-reference",
+    "kind": "restricted-reference",
+    "role": "alpha_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "rotation"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "alpha-rotation-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": []
+  },
+  {
+    "id": "alpha_reader-direct-sufficient",
+    "kind": "direct-sufficient",
+    "role": "alpha_reader",
+    "query": "retencion",
+    "requiredKeys": [
+      "retention"
+    ],
+    "references": {},
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "requirements_met",
+    "goldAuthorizedIds": [
+      "alpha-retention-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-zero-budget",
+    "kind": "zero-budget",
+    "role": "alpha_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "alpha-restoration-v1"
+      ]
+    },
+    "maxCalls": 0,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "call_budget",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-foreign-first-budget",
+    "kind": "foreign-first-budget",
+    "role": "alpha_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "beta-restoration-v1",
+        "alpha-restoration-v1"
+      ]
+    },
+    "maxCalls": 2,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "call_budget",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-missing-reference",
+    "kind": "missing-reference",
+    "role": "alpha_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "missing-document"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-source-budget",
+    "kind": "source-budget",
+    "role": "alpha_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "alpha-restoration-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 1,
+    "maxQueuedReferences": 8,
+    "expectedStop": "source_budget",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-one-step",
+    "kind": "one-step",
+    "role": "alpha_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "alpha-restoration-v1"
+      ]
+    },
+    "maxCalls": 1,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "call_budget",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-follow-reference",
+    "kind": "follow-reference",
+    "role": "alpha_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "alpha-restoration-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "requirements_met",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-cycle",
+    "kind": "cycle",
+    "role": "alpha_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "alpha-manual-v1"
+      ]
+    },
+    "maxCalls": 4,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-empty-search",
+    "kind": "empty-search",
+    "role": "alpha_manager",
+    "query": "telescopio",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {},
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_results",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-foreign-reference",
+    "kind": "foreign-reference",
+    "role": "alpha_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "beta-restoration-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-restricted-reference",
+    "kind": "restricted-reference",
+    "role": "alpha_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "rotation"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "alpha-rotation-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "requirements_met",
+    "goldAuthorizedIds": [
+      "alpha-rotation-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-direct-sufficient",
+    "kind": "direct-sufficient",
+    "role": "alpha_manager",
+    "query": "retencion",
+    "requiredKeys": [
+      "retention"
+    ],
+    "references": {},
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "requirements_met",
+    "goldAuthorizedIds": [
+      "alpha-retention-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-zero-budget",
+    "kind": "zero-budget",
+    "role": "alpha_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "alpha-restoration-v1"
+      ]
+    },
+    "maxCalls": 0,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "call_budget",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-foreign-first-budget",
+    "kind": "foreign-first-budget",
+    "role": "alpha_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "beta-restoration-v1",
+        "alpha-restoration-v1"
+      ]
+    },
+    "maxCalls": 2,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "call_budget",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-missing-reference",
+    "kind": "missing-reference",
+    "role": "alpha_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "missing-document"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-source-budget",
+    "kind": "source-budget",
+    "role": "alpha_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "alpha-manual-v1": [
+        "alpha-restoration-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 1,
+    "maxQueuedReferences": 8,
+    "expectedStop": "source_budget",
+    "goldAuthorizedIds": [
+      "alpha-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-one-step",
+    "kind": "one-step",
+    "role": "beta_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "beta-restoration-v1"
+      ]
+    },
+    "maxCalls": 1,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "call_budget",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-follow-reference",
+    "kind": "follow-reference",
+    "role": "beta_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "beta-restoration-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "requirements_met",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-cycle",
+    "kind": "cycle",
+    "role": "beta_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "beta-manual-v1"
+      ]
+    },
+    "maxCalls": 4,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-empty-search",
+    "kind": "empty-search",
+    "role": "beta_reader",
+    "query": "telescopio",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {},
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_results",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-foreign-reference",
+    "kind": "foreign-reference",
+    "role": "beta_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "alpha-restoration-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-restricted-reference",
+    "kind": "restricted-reference",
+    "role": "beta_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "rotation"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "beta-rotation-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": []
+  },
+  {
+    "id": "beta_reader-direct-sufficient",
+    "kind": "direct-sufficient",
+    "role": "beta_reader",
+    "query": "retencion",
+    "requiredKeys": [
+      "retention"
+    ],
+    "references": {},
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "requirements_met",
+    "goldAuthorizedIds": [
+      "beta-retention-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-zero-budget",
+    "kind": "zero-budget",
+    "role": "beta_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "beta-restoration-v1"
+      ]
+    },
+    "maxCalls": 0,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "call_budget",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-foreign-first-budget",
+    "kind": "foreign-first-budget",
+    "role": "beta_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "alpha-restoration-v1",
+        "beta-restoration-v1"
+      ]
+    },
+    "maxCalls": 2,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "call_budget",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-missing-reference",
+    "kind": "missing-reference",
+    "role": "beta_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "missing-document"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-source-budget",
+    "kind": "source-budget",
+    "role": "beta_reader",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "beta-restoration-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 1,
+    "maxQueuedReferences": 8,
+    "expectedStop": "source_budget",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-one-step",
+    "kind": "one-step",
+    "role": "beta_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "beta-restoration-v1"
+      ]
+    },
+    "maxCalls": 1,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "call_budget",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-follow-reference",
+    "kind": "follow-reference",
+    "role": "beta_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "beta-restoration-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "requirements_met",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-cycle",
+    "kind": "cycle",
+    "role": "beta_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "beta-manual-v1"
+      ]
+    },
+    "maxCalls": 4,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-empty-search",
+    "kind": "empty-search",
+    "role": "beta_manager",
+    "query": "telescopio",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {},
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_results",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-foreign-reference",
+    "kind": "foreign-reference",
+    "role": "beta_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "alpha-restoration-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-restricted-reference",
+    "kind": "restricted-reference",
+    "role": "beta_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "rotation"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "beta-rotation-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "requirements_met",
+    "goldAuthorizedIds": [
+      "beta-rotation-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-direct-sufficient",
+    "kind": "direct-sufficient",
+    "role": "beta_manager",
+    "query": "retencion",
+    "requiredKeys": [
+      "retention"
+    ],
+    "references": {},
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "requirements_met",
+    "goldAuthorizedIds": [
+      "beta-retention-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-zero-budget",
+    "kind": "zero-budget",
+    "role": "beta_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "beta-restoration-v1"
+      ]
+    },
+    "maxCalls": 0,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "call_budget",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-foreign-first-budget",
+    "kind": "foreign-first-budget",
+    "role": "beta_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "alpha-restoration-v1",
+        "beta-restoration-v1"
+      ]
+    },
+    "maxCalls": 2,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "call_budget",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-missing-reference",
+    "kind": "missing-reference",
+    "role": "beta_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "missing-document"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 3,
+    "maxQueuedReferences": 8,
+    "expectedStop": "no_progress",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-source-budget",
+    "kind": "source-budget",
+    "role": "beta_manager",
+    "query": "manual",
+    "requiredKeys": [
+      "restoration"
+    ],
+    "references": {
+      "beta-manual-v1": [
+        "beta-restoration-v1"
+      ]
+    },
+    "maxCalls": 3,
+    "maxSources": 1,
+    "maxQueuedReferences": 8,
+    "expectedStop": "source_budget",
+    "goldAuthorizedIds": [
+      "beta-restoration-v1"
+    ]
+  }
+]

@@ -1,9 +1,9 @@
 {
   "objective": "Completar en español todas las fichas del roadmap, por series, con ejemplos y recursos estáticos e interactivos pertinentes.",
   "counts": {
-    "draft_exists": 86,
+    "draft_exists": 91,
     "related_only": 19,
-    "not_written": 70
+    "not_written": 65
   },
   "completionProven": false,
   "criteria": "draft_exists indica archivo con ID, no aceptación de todos los requisitos. related_only exige ampliar o escribir una ficha. No renombrar IDs para aparentar cobertura.",
@@ -1403,40 +1403,60 @@
         {
           "id": "P112",
           "title": "Ingesta documental, OCR y chunking para RAG",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/ingesta-documental-extraer-texto-pdf-html-rag.md",
+            "slug": "ingesta-documental-extraer-texto-pdf-html-rag",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         },
         {
           "id": "P113",
           "title": "Retrieval léxico, denso e híbrido",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/retrieval-lexico-bm25-chunks-evidencia.md",
+            "slug": "retrieval-lexico-bm25-chunks-evidencia",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         },
         {
           "id": "P114",
           "title": "Reranking, grounding y trazabilidad de fuentes",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/cross-encoder-reranking-consulta-fragmento.md",
+            "slug": "cross-encoder-reranking-consulta-fragmento",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         },
         {
           "id": "P115",
           "title": "Arquitecturas RAG y decisiones técnicas",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/arquitectura-rag-requisitos-contratos-limites.md",
+            "slug": "arquitectura-rag-requisitos-contratos-limites",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         },
         {
           "id": "P116",
           "title": "Evaluación cuantitativa de sistemas RAG",
-          "status": "not_written",
-          "exactPost": null,
+          "status": "draft_exists",
+          "exactPost": {
+            "path": "src/content/posts/es/evaluar-rag-gold-dataset-splits-etiquetas.md",
+            "slug": "evaluar-rag-gold-dataset-splits-etiquetas",
+            "draft": true
+          },
           "related": [],
           "verification": "Revisar temario, laboratorio y DoD de la ficha; no inferir completitud por título o ID."
         },

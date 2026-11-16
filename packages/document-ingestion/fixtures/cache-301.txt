@@ -1,0 +1,1 @@
+Caché 🧭: El TTL es de 301 segundos. No almacenar errores del origen.

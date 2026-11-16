@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "kind": "fixed_lexical_retrieval_and_offline_metrics_protocol",
+  "retriever": {"method": "bm25", "analyzer": "fold", "k1": 1.2, "b": 0.75, "fields": ["title", "body"], "stopwords": false, "stemming": false, "candidateRule": "at least one analyzed term; retain score > 0", "tieBreak": "ascending ID codepoint"},
+  "cutoffs": [1, 2, 3, 5],
+  "metrics": {"binaryRelevantGradeAtLeast": 1, "precisionDenominator": "requested k, including missing slots", "emptyGold": {"precision": 0, "recall": null, "rr": null, "ndcg": null}, "noHitWithPositiveGold": 0, "gain": "2**grade - 1", "discountDenominator": "log2(rank + 1), rank starts at 1", "ideal": "sort all qrels by grade descending, not just retrieved IDs", "invalidRanking": "reject duplicate or unjudged IDs", "macro": "unweighted query means; answerable metrics and all-query precision separately; no null to zero coercion"},
+  "purpose": "One actual in-process BM25 search per query, four cutoff evaluations; no tuning or model generation.",
+  "testPolicy": "No edits to original corpus,queries,gold; public authored collection, not blind. No configuration search over test. Future generator pair and inputs fixed in comparison-plan.v1.json before this capture."
+}

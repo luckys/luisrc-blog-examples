@@ -1,0 +1,38 @@
+{
+  "status": "fixed_before_ledger_and_chunk_preflight",
+  "normalization": "Each source unit NFC, join with one space; preserve case and ñ. Canonical offsets are UTF16 [start,end), not original file bytes.",
+  "identity": {
+    "documentId": "stable registry ID",
+    "documentVersion": "SHA256 original file bytes",
+    "representation": "SHA256 [documentId,documentVersion,selection,normalization-v1,text]",
+    "unitOrigin": "PDF page and word ordinal/bbox; OCR same with pixel coordinates; HTML block and offsets in parsed block text; plain decoded UTF16 offsets"
+  },
+  "dedup": {
+    "raw": "same SHA256 bytes",
+    "normalized": "same role and normalized content SHA256; keep all source/version aliases; first source in registry is representative",
+    "near": "Jaccard over lowercase Unicode letter/number sets; threshold0.8 only nominates review, never merges; empty token union undefined"
+  },
+  "windows": {
+    "unit": "whitespace-separated source units, NOT model tokens",
+    "budgets": [
+      16,
+      32,
+      48
+    ],
+    "overlap": 0,
+    "tail": "keep incomplete final window",
+    "boundary": "do not cross a source or canonical text representation",
+    "id": "SHA256 [representationId,policy,first,last,start,end,text]"
+  },
+  "tokenPreflight": {
+    "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+    "transformersJs": "3.8.1",
+    "specialTokens": true,
+    "truncation": false,
+    "maxTokens": 128,
+    "scope": "tokenizer only, no encoder inference or retrieval measurement"
+  },
+  "controls": "Three short texts differ by300/301 orNo/Sí; near-duplicate counterexamples, excluded from future retrieval corpus.",
+  "limits": "No semantic splitter,overlap experiment or retrieval evaluation yet. Fixed tiny corpus and known controlled cases, no production claim."
+}

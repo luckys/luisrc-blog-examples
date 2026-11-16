@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {generationTable,contentFingerprint,validateGeneration} from '../updates-core.mjs';
+const a={id:'A',tenant:'alpha',key:'cache',revision:1,accessLevel:0,body:'TTL300'};
+const b={...a,id:'B',tenant:'beta',body:'TTL60'};
+test('content fingerprint is independent of database row order',()=>{assert.equal(contentFingerprint([a,b]),contentFingerprint([b,a]));});
+test('same count with missing and unexpected ID cannot activate',()=>{const result=validateGeneration([a,b],[a,{...b,id:'C'}]);assert.equal(result.accepted,false);assert.deepEqual(result.missing,['B']);assert.deepEqual(result.unexpected,['C']);});
+test('correct IDs with incorrect body cannot activate',()=>{const result=validateGeneration([a,b],[a,{...b,body:'TTL999'}]);assert.equal(result.accepted,false);assert.deepEqual(result.missing,[]);assert.notEqual(result.actualHash,result.expectedHash);});
+test('missing row rejects incomplete build',()=>{assert.equal(validateGeneration([a,b],[a]).accepted,false);});
+test('duplicate stable identity within a generation is invalid',()=>{assert.throws(()=>validateGeneration([a],[a,{...a,id:'C'}]),/Duplicate/);});
+test('untrusted generation never becomes a SQL identifier',()=>{assert.equal(generationTable('v1'),'documents');assert.equal(generationTable('v2'),'documents_v2');for(const value of ['v3','documents;DROP TABLE documents',''])assert.throws(()=>generationTable(value),/Unknown generation/);});

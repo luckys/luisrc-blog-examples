@@ -1,0 +1,12 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+import {orderBodyWords} from './parsing.mjs';
+const root=new URL('.',import.meta.url),read=file=>readFile(new URL(file,root)),json=async file=>JSON.parse(await read(file));
+const capture=await json('results/extraction.json'),derived=await json('results/ocr-words.json'),ledger=await json('results/ledger.json'),preflight=await json('results/token-preflight.json'),chunkInputs=await json('results/chunk-inputs.json'),embeddings=await json('results/semantic-embeddings.json'),chunking=await json('results/chunking.json'),retrieval=await json('results/retrieval.json');
+for(const saved of [capture,derived,ledger,preflight,chunkInputs,embeddings,chunking,retrieval])for(const [file,hash]of Object.entries(saved.sourceHashes))assert.equal(createHash('sha256').update(await read(file)).digest('hex'),hash,file);
+const columns=capture.documents.find(doc=>doc.id==='COLUMNS').pages[0];
+const documents=await Promise.all(capture.documents.map(async doc=>doc.blocks?{...doc,source:(await read(doc.file)).toString()}:doc));
+const pack={ledger,preflight,chunkInputs,chunking,retrieval,kind:'saved_document_extraction_not_live_ocr',capturedAt:capture.capturedAt,sourceHashes:capture.sourceHashes,derivedHashes:derived.sourceHashes,protocol:capture.protocol,documents,ocr:{text:capture.ocr.text,confidence:capture.ocr.confidence,width:capture.ocr.width,height:capture.ocr.height,words:derived.words},layout:capture.layout,layoutOrders:Object.fromEntries(['stream','rows','columns'].map(mode=>[mode,orderBodyWords(columns.words,mode,capture.protocol.layout).map(word=>word.ordinal)])),metrics:capture.metrics,truth:await json('fixtures/truth.json')};
+await writeFile(new URL('viewer-data.json',root),JSON.stringify(pack,null,2)+'\n');
+console.log('Viewer pack derived from preserved PDF/OCR outputs; no model or runtime included.');

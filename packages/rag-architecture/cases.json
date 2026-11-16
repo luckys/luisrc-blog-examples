@@ -1,0 +1,212 @@
+[
+  {
+    "id": "alpha_reader-Q01",
+    "role": "alpha_reader",
+    "query": "retencion",
+    "goldIds": [
+      "alpha-retention-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-Q02",
+    "role": "alpha_reader",
+    "query": "cache",
+    "goldIds": [
+      "alpha-cache-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-Q03",
+    "role": "alpha_reader",
+    "query": "rotacion",
+    "goldIds": []
+  },
+  {
+    "id": "alpha_reader-Q04",
+    "role": "alpha_reader",
+    "query": "orquidea",
+    "goldIds": []
+  },
+  {
+    "id": "alpha_reader-Q05",
+    "role": "alpha_reader",
+    "query": "restauracion",
+    "goldIds": [
+      "alpha-restoration-v1",
+      "alpha-manual-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-Q06",
+    "role": "alpha_reader",
+    "query": "manual",
+    "goldIds": [
+      "alpha-manual-v1"
+    ]
+  },
+  {
+    "id": "alpha_reader-Q07",
+    "role": "alpha_reader",
+    "query": "telescopio",
+    "goldIds": []
+  },
+  {
+    "id": "alpha_manager-Q01",
+    "role": "alpha_manager",
+    "query": "retencion",
+    "goldIds": [
+      "alpha-retention-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-Q02",
+    "role": "alpha_manager",
+    "query": "cache",
+    "goldIds": [
+      "alpha-cache-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-Q03",
+    "role": "alpha_manager",
+    "query": "rotacion",
+    "goldIds": [
+      "alpha-rotation-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-Q04",
+    "role": "alpha_manager",
+    "query": "orquidea",
+    "goldIds": []
+  },
+  {
+    "id": "alpha_manager-Q05",
+    "role": "alpha_manager",
+    "query": "restauracion",
+    "goldIds": [
+      "alpha-restoration-v1",
+      "alpha-manual-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-Q06",
+    "role": "alpha_manager",
+    "query": "manual",
+    "goldIds": [
+      "alpha-manual-v1"
+    ]
+  },
+  {
+    "id": "alpha_manager-Q07",
+    "role": "alpha_manager",
+    "query": "telescopio",
+    "goldIds": []
+  },
+  {
+    "id": "beta_reader-Q01",
+    "role": "beta_reader",
+    "query": "retencion",
+    "goldIds": [
+      "beta-retention-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-Q02",
+    "role": "beta_reader",
+    "query": "cache",
+    "goldIds": [
+      "beta-cache-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-Q03",
+    "role": "beta_reader",
+    "query": "rotacion",
+    "goldIds": []
+  },
+  {
+    "id": "beta_reader-Q04",
+    "role": "beta_reader",
+    "query": "orquidea",
+    "goldIds": []
+  },
+  {
+    "id": "beta_reader-Q05",
+    "role": "beta_reader",
+    "query": "restauracion",
+    "goldIds": [
+      "beta-restoration-v1",
+      "beta-manual-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-Q06",
+    "role": "beta_reader",
+    "query": "manual",
+    "goldIds": [
+      "beta-manual-v1"
+    ]
+  },
+  {
+    "id": "beta_reader-Q07",
+    "role": "beta_reader",
+    "query": "telescopio",
+    "goldIds": []
+  },
+  {
+    "id": "beta_manager-Q01",
+    "role": "beta_manager",
+    "query": "retencion",
+    "goldIds": [
+      "beta-retention-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-Q02",
+    "role": "beta_manager",
+    "query": "cache",
+    "goldIds": [
+      "beta-cache-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-Q03",
+    "role": "beta_manager",
+    "query": "rotacion",
+    "goldIds": [
+      "beta-rotation-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-Q04",
+    "role": "beta_manager",
+    "query": "orquidea",
+    "goldIds": [
+      "beta-rotation-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-Q05",
+    "role": "beta_manager",
+    "query": "restauracion",
+    "goldIds": [
+      "beta-restoration-v1",
+      "beta-manual-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-Q06",
+    "role": "beta_manager",
+    "query": "manual",
+    "goldIds": [
+      "beta-manual-v1"
+    ]
+  },
+  {
+    "id": "beta_manager-Q07",
+    "role": "beta_manager",
+    "query": "telescopio",
+    "goldIds": []
+  }
+]

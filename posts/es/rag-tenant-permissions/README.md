@@ -1,0 +1,28 @@
+# Permisos en un RAG multi-tenant: filtrar resultados no basta
+
+Borrador español de la serie de arquitecturas RAG. Laboratorio sintético; no genera respuestas.
+
+- [README.md](../../../packages/rag-architecture/README.md)
+- [capture-isolation.mjs](../../../packages/rag-architecture/capture-isolation.mjs)
+- [cases.json](../../../packages/rag-architecture/cases.json)
+- [concepts.mjs](../../../packages/rag-architecture/concepts.mjs)
+- [core.mjs](../../../packages/rag-architecture/core.mjs)
+- [corpus.json](../../../packages/rag-architecture/corpus.json)
+- [dependency-lock.capture.json](../../../packages/rag-architecture/dependency-lock.capture.json)
+- [diagrams.mjs](../../../packages/rag-architecture/diagrams.mjs)
+- [explorer.html](../../../packages/rag-architecture/explorer.html)
+- [explorer.mjs](../../../packages/rag-architecture/explorer.mjs)
+- [index-storage.svg](../../../packages/rag-architecture/index-storage.svg)
+- [package.json](../../../packages/rag-architecture/package.json)
+- [protocol.json](../../../packages/rag-architecture/protocol.json)
+- [render-concepts.mjs](../../../packages/rag-architecture/render-concepts.mjs)
+- [render.mjs](../../../packages/rag-architecture/render.mjs)
+- [request-counts.svg](../../../packages/rag-architecture/request-counts.svg)
+- [results/isolation.json](../../../packages/rag-architecture/results/isolation.json)
+- [runtime.json](../../../packages/rag-architecture/runtime.json)
+- [schema.sql](../../../packages/rag-architecture/schema.sql)
+- [search.sql](../../../packages/rag-architecture/search.sql)
+- [tests/isolation.test.mjs](../../../packages/rag-architecture/tests/isolation.test.mjs)
+- [verify-isolation.mjs](../../../packages/rag-architecture/verify-isolation.mjs)
+- [viewer-data.json](../../../packages/rag-architecture/viewer-data.json)
+- [visible-counts.svg](../../../packages/rag-architecture/visible-counts.svg)

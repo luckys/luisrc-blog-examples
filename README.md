@@ -7,7 +7,7 @@ Solo contienen datos ficticios. No son aplicaciones listas para producción.
 
 ## Encontrar el código de un post
 
-El [índice por artículo](posts/README.md) relaciona 383 posts con sus archivos y
+El [índice por artículo](posts/README.md) relaciona 421 posts con sus archivos y
 laboratorios. Cada entrada en `posts/<locale>/<id>/README.md` enlaza las fuentes
 correspondientes. Los laboratorios compartidos viven una sola vez en `packages/`:
 dividir un tema en varios artículos no duplica su implementación.
@@ -241,3 +241,15 @@ y CPU con un thread; no compara calidad ni un pipeline completo.
 [structured-extraction](packages/structured-extraction/README.md): P110 en siete drafts; 24 respuestas reales, validación estricta, evidencias y propuestas locales de herramientas. Diagramas, figuras y visor de capturas.
 
 [vector-retrieval](packages/vector-retrieval/README.md): P111 desarrollado en drafts; encoder real, comparación BM25/vector y capturas FAISS/pgvector. Nueve borradores escritos; figuras y visor de geometría, índices, relevancia y medición. Revisión final completada; sin publicación.
+
+[document-ingestion](packages/document-ingestion/README.md): nueve borradores españoles verificados de P112. Parsing/OCR/layout, provenance/dedup, chunking por tamaño y embeddings, overlap e indexación BM25 comparada. Conserva resultados negativos, nueve diagramas, ocho figuras y diez paneles interactivos.
+
+[retrieval-strategies](packages/retrieval-strategies/README.md): P113 en siete borradores españoles verificados. BM25/denso/RRF reales sobre los mismos13chunks; filtros,multi-query yrewriting con controles explícitos.
+
+[reranking-grounding](packages/reranking-grounding/README.md): P114 en ocho borradores españoles verificados. Cross encoder real,80escenarios/61generaciones rechazadas por contrato,diagnósticos de grounding ycitas versionadas. No se repara el resultado fallido.
+
+## Evaluación RAG: comienzo de P116
+
+`packages/rag-evaluation`: gold sintético, grupos dev/test, referencias y hashes.
+Cinco entregas de diez; comparación real A/B aún pendiente. Ver
+[la ruta editorial](docs/editorial/ruta-evaluacion-rag.md).

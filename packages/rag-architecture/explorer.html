@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Laboratorio de arquitectura RAG multi-tenant</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0}*{box-sizing:border-box}body{margin:0;padding:16px;max-width:1100px}h1{font-size:1.35rem}h2{font-size:1.1rem;margin-top:24px}p{line-height:1.55}label{display:block;margin:12px 0}select{display:block;background:#1e293b;color:#fff;border:1px solid #94a3b8;border-radius:6px;width:100%;max-width:600px;padding:9px;margin-top:6px;font:inherit}select:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #fbbf24;outline-offset:3px}pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;background:#020617;padding:12px;border:1px solid #334155;border-radius:6px}li{line-height:1.5;margin-bottom:12px;overflow-wrap:anywhere}code{overflow-wrap:anywhere}svg{display:block;width:100%;max-width:420px;height:auto}table{border-collapse:collapse;min-width:550px}th,td{padding:10px;text-align:left;border-bottom:1px solid #475569;vertical-align:top}caption{text-align:left;padding:8px}.scroll{overflow-x:auto;border:1px solid #475569;border-radius:6px;max-width:100%}.scroll:focus-visible{outline:3px solid #fbbf24}#status{padding:12px;border-left:4px solid #38bdf8;background:#1e293b}small{color:#cbd5e1}a{color:#7dd3fc}
+</style>
+<h1>Arquitectura RAG: comparar acceso e índices</h1>
+<p>Reproducción de una captura real de PostgreSQL. Todos los datos son sintéticos y públicos. Cambiar de rol aquí selecciona una ejecución guardada; este visor no autentica al visitante ni consulta una base de datos.</p>
+<label>Distribución de los datos<select id="layout"><option value="global">Tabla global con RLS</option><option value="isolated">Base separada por organización</option></select></label>
+<label>Identidad efectiva<select id="role"></select></label>
+<label>Consulta guardada<select id="query"></select></label>
+<div id="status" role="status" aria-live="polite"></div>
+<h2>Cuántos documentos atraviesan cada límite</h2><p>Filas almacenadas, filas visibles para este rol y resultados de la consulta seleccionada. La altura de cada barra representa cantidad de documentos.</p><div id="counts"></div>
+<h2>Resultados, texto y gold autorizado</h2><p id="gold"></p><ol id="results"></ol>
+<h2>Pruebas de acceso para esta identidad</h2><label>Control guardado<select id="probe"></select></label><pre id="probe-result"></pre>
+<details><summary>Control adicional: identidad sin registro de permisos</summary><pre id="missing-principal"></pre></details>
+<h2>Objetos físicos de la base seleccionada</h2><div class="scroll" tabindex="0" role="region" aria-label="Tabla de objetos físicos con desplazamiento horizontal"><table><caption id="database"></caption><thead><tr><th>Objeto</th><th>Archivo relativo</th><th>Bytes</th><th>Propietario</th></tr></thead><tbody id="relations"></tbody></table></div>
+<details><summary>Plan real de búsqueda de retencion para este rol</summary><pre id="plan"></pre></details>
+<p><small>El ensayo usa full text search exacta, no embeddings ni ANN. Los planes pueden usar un recorrido secuencial aunque exista GIN. Las bases separadas comparten servidor, CPU, memoria, WAL y administrador. No hay LLM en este laboratorio; P114 no consiguió respuestas que cumplieran su contrato.</small></p>
+<script type="module" src="./explorer.mjs"></script></html>

@@ -942,5 +942,389 @@
   {
     "source": "packages/vector-retrieval/postgres-latency.svg",
     "destination": "public/assets/interactive/vector-retrieval/postgres-latency.svg"
+  },
+  {
+    "source": "packages/document-ingestion/explorer.html",
+    "destination": "public/assets/interactive/document-ingestion/explorer.html"
+  },
+  {
+    "source": "packages/document-ingestion/explorer.mjs",
+    "destination": "public/assets/interactive/document-ingestion/explorer.mjs"
+  },
+  {
+    "source": "packages/document-ingestion/page-diagram.mjs",
+    "destination": "public/assets/interactive/document-ingestion/page-diagram.mjs"
+  },
+  {
+    "source": "packages/document-ingestion/viewer-data.json",
+    "destination": "public/assets/interactive/document-ingestion/viewer-data.json"
+  },
+  {
+    "source": "packages/document-ingestion/scanned-preview.png",
+    "destination": "public/assets/interactive/document-ingestion/scanned-preview.png"
+  },
+  {
+    "source": "packages/document-ingestion/columns-preview.png",
+    "destination": "public/assets/interactive/document-ingestion/columns-preview.png"
+  },
+  {
+    "source": "packages/document-ingestion/ocr-input.png",
+    "destination": "public/assets/interactive/document-ingestion/ocr-input.png"
+  },
+  {
+    "source": "packages/document-ingestion/extraction-counts.svg",
+    "destination": "public/assets/interactive/document-ingestion/extraction-counts.svg"
+  },
+  {
+    "source": "packages/document-ingestion/ocr-confidence.svg",
+    "destination": "public/assets/interactive/document-ingestion/ocr-confidence.svg"
+  },
+  {
+    "source": "packages/document-ingestion/layout-order.svg",
+    "destination": "public/assets/interactive/document-ingestion/layout-order.svg"
+  },
+  {
+    "source": "packages/document-ingestion/ranges.mjs",
+    "destination": "public/assets/interactive/document-ingestion/ranges.mjs"
+  },
+  {
+    "source": "packages/document-ingestion/ledger-diagrams.mjs",
+    "destination": "public/assets/interactive/document-ingestion/ledger-diagrams.mjs"
+  },
+  {
+    "source": "packages/document-ingestion/ledger-panels.mjs",
+    "destination": "public/assets/interactive/document-ingestion/ledger-panels.mjs"
+  },
+  {
+    "source": "packages/document-ingestion/dedup-groups.svg",
+    "destination": "public/assets/interactive/document-ingestion/dedup-groups.svg"
+  },
+  {
+    "source": "packages/document-ingestion/window-budgets.svg",
+    "destination": "public/assets/interactive/document-ingestion/window-budgets.svg"
+  },
+  {
+    "source": "packages/document-ingestion/chunk-explorer.mjs",
+    "destination": "public/assets/interactive/document-ingestion/chunk-explorer.mjs"
+  },
+  {
+    "source": "packages/document-ingestion/chunk-panels.mjs",
+    "destination": "public/assets/interactive/document-ingestion/chunk-panels.mjs"
+  },
+  {
+    "source": "packages/document-ingestion/semantic-boundaries.svg",
+    "destination": "public/assets/interactive/document-ingestion/semantic-boundaries.svg"
+  },
+  {
+    "source": "packages/document-ingestion/overlap-cost.svg",
+    "destination": "public/assets/interactive/document-ingestion/overlap-cost.svg"
+  },
+  {
+    "source": "packages/document-ingestion/retrieval-evidence.svg",
+    "destination": "public/assets/interactive/document-ingestion/retrieval-evidence.svg"
+  },
+  {
+    "source": "packages/retrieval-strategies/explorer.html",
+    "destination": "public/assets/interactive/retrieval-strategies/explorer.html"
+  },
+  {
+    "source": "packages/retrieval-strategies/explorer.mjs",
+    "destination": "public/assets/interactive/retrieval-strategies/explorer.mjs"
+  },
+  {
+    "source": "packages/retrieval-strategies/ranking.mjs",
+    "destination": "public/assets/interactive/retrieval-strategies/ranking.mjs"
+  },
+  {
+    "source": "packages/retrieval-strategies/viewer-data.json",
+    "destination": "public/assets/interactive/retrieval-strategies/viewer-data.json"
+  },
+  {
+    "source": "packages/retrieval-strategies/lexical-terms.svg",
+    "destination": "public/assets/interactive/retrieval-strategies/lexical-terms.svg"
+  },
+  {
+    "source": "packages/retrieval-strategies/dense-evidence.svg",
+    "destination": "public/assets/interactive/retrieval-strategies/dense-evidence.svg"
+  },
+  {
+    "source": "packages/retrieval-strategies/rrf-contributions.svg",
+    "destination": "public/assets/interactive/retrieval-strategies/rrf-contributions.svg"
+  },
+  {
+    "source": "packages/retrieval-strategies/filter-counts.svg",
+    "destination": "public/assets/interactive/retrieval-strategies/filter-counts.svg"
+  },
+  {
+    "source": "packages/retrieval-strategies/multi-coverage.svg",
+    "destination": "public/assets/interactive/retrieval-strategies/multi-coverage.svg"
+  },
+  {
+    "source": "packages/retrieval-strategies/rewrite-acceptance.svg",
+    "destination": "public/assets/interactive/retrieval-strategies/rewrite-acceptance.svg"
+  },
+  {
+    "source": "packages/retrieval-strategies/retriever-evidence.svg",
+    "destination": "public/assets/interactive/retrieval-strategies/retriever-evidence.svg"
+  },
+  {
+    "source": "packages/retrieval-strategies/diagrams.mjs",
+    "destination": "public/assets/interactive/retrieval-strategies/diagrams.mjs"
+  },
+  {
+    "source": "packages/reranking-grounding/explorer.html",
+    "destination": "public/assets/interactive/reranking-grounding/explorer.html"
+  },
+  {
+    "source": "packages/reranking-grounding/explorer.mjs",
+    "destination": "public/assets/interactive/reranking-grounding/explorer.mjs"
+  },
+  {
+    "source": "packages/reranking-grounding/source.html",
+    "destination": "public/assets/interactive/reranking-grounding/source.html"
+  },
+  {
+    "source": "packages/reranking-grounding/source.mjs",
+    "destination": "public/assets/interactive/reranking-grounding/source.mjs"
+  },
+  {
+    "source": "packages/reranking-grounding/source-data.json",
+    "destination": "public/assets/interactive/reranking-grounding/source-data.json"
+  },
+  {
+    "source": "packages/reranking-grounding/viewer-data.json",
+    "destination": "public/assets/interactive/reranking-grounding/viewer-data.json"
+  },
+  {
+    "source": "packages/reranking-grounding/core.mjs",
+    "destination": "public/assets/interactive/reranking-grounding/core.mjs"
+  },
+  {
+    "source": "packages/reranking-grounding/diagrams.mjs",
+    "destination": "public/assets/interactive/reranking-grounding/diagrams.mjs"
+  },
+  {
+    "source": "packages/reranking-grounding/reranker-order.svg",
+    "destination": "public/assets/interactive/reranking-grounding/reranker-order.svg"
+  },
+  {
+    "source": "packages/reranking-grounding/candidate-budgets.svg",
+    "destination": "public/assets/interactive/reranking-grounding/candidate-budgets.svg"
+  },
+  {
+    "source": "packages/reranking-grounding/context-budgets.svg",
+    "destination": "public/assets/interactive/reranking-grounding/context-budgets.svg"
+  },
+  {
+    "source": "packages/reranking-grounding/format-failures.svg",
+    "destination": "public/assets/interactive/reranking-grounding/format-failures.svg"
+  },
+  {
+    "source": "packages/reranking-grounding/grounding-example.svg",
+    "destination": "public/assets/interactive/reranking-grounding/grounding-example.svg"
+  },
+  {
+    "source": "packages/reranking-grounding/citation-controls.svg",
+    "destination": "public/assets/interactive/reranking-grounding/citation-controls.svg"
+  },
+  {
+    "source": "packages/reranking-grounding/no-answer.svg",
+    "destination": "public/assets/interactive/reranking-grounding/no-answer.svg"
+  },
+  {
+    "source": "packages/reranking-grounding/answers-comparison.svg",
+    "destination": "public/assets/interactive/reranking-grounding/answers-comparison.svg"
+  },
+  {
+    "source": "packages/rag-architecture/explorer.html",
+    "destination": "public/assets/interactive/rag-architecture/explorer.html"
+  },
+  {
+    "source": "packages/rag-architecture/explorer.mjs",
+    "destination": "public/assets/interactive/rag-architecture/explorer.mjs"
+  },
+  {
+    "source": "packages/rag-architecture/diagrams.mjs",
+    "destination": "public/assets/interactive/rag-architecture/diagrams.mjs"
+  },
+  {
+    "source": "packages/rag-architecture/viewer-data.json",
+    "destination": "public/assets/interactive/rag-architecture/viewer-data.json"
+  },
+  {
+    "source": "packages/rag-architecture/request-counts.svg",
+    "destination": "public/assets/interactive/rag-architecture/request-counts.svg"
+  },
+  {
+    "source": "packages/rag-architecture/visible-counts.svg",
+    "destination": "public/assets/interactive/rag-architecture/visible-counts.svg"
+  },
+  {
+    "source": "packages/rag-architecture/index-storage.svg",
+    "destination": "public/assets/interactive/rag-architecture/index-storage.svg"
+  },
+  {
+    "source": "packages/rag-architecture/conversation.html",
+    "destination": "public/assets/interactive/rag-architecture/conversation.html"
+  },
+  {
+    "source": "packages/rag-architecture/conversation.mjs",
+    "destination": "public/assets/interactive/rag-architecture/conversation.mjs"
+  },
+  {
+    "source": "packages/rag-architecture/conversation-data.json",
+    "destination": "public/assets/interactive/rag-architecture/conversation-data.json"
+  },
+  {
+    "source": "packages/rag-architecture/conversation-outcomes.svg",
+    "destination": "public/assets/interactive/rag-architecture/conversation-outcomes.svg"
+  },
+  {
+    "source": "packages/rag-architecture/multistep.html",
+    "destination": "public/assets/interactive/rag-architecture/multistep.html"
+  },
+  {
+    "source": "packages/rag-architecture/multistep-view.mjs",
+    "destination": "public/assets/interactive/rag-architecture/multistep-view.mjs"
+  },
+  {
+    "source": "packages/rag-architecture/multistep-data.json",
+    "destination": "public/assets/interactive/rag-architecture/multistep-data.json"
+  },
+  {
+    "source": "packages/rag-architecture/multistep-stops.svg",
+    "destination": "public/assets/interactive/rag-architecture/multistep-stops.svg"
+  },
+  {
+    "source": "packages/rag-architecture/cache.html",
+    "destination": "public/assets/interactive/rag-architecture/cache.html"
+  },
+  {
+    "source": "packages/rag-architecture/cache-view.mjs",
+    "destination": "public/assets/interactive/rag-architecture/cache-view.mjs"
+  },
+  {
+    "source": "packages/rag-architecture/cache-data.json",
+    "destination": "public/assets/interactive/rag-architecture/cache-data.json"
+  },
+  {
+    "source": "packages/rag-architecture/cache-lookups.svg",
+    "destination": "public/assets/interactive/rag-architecture/cache-lookups.svg"
+  },
+  {
+    "source": "packages/rag-architecture/updates.html",
+    "destination": "public/assets/interactive/rag-architecture/updates.html"
+  },
+  {
+    "source": "packages/rag-architecture/updates-view.mjs",
+    "destination": "public/assets/interactive/rag-architecture/updates-view.mjs"
+  },
+  {
+    "source": "packages/rag-architecture/updates-data.json",
+    "destination": "public/assets/interactive/rag-architecture/updates-data.json"
+  },
+  {
+    "source": "packages/rag-architecture/updates-promotions.svg",
+    "destination": "public/assets/interactive/rag-architecture/updates-promotions.svg"
+  },
+  {
+    "source": "packages/rag-architecture/updates-views.svg",
+    "destination": "public/assets/interactive/rag-architecture/updates-views.svg"
+  },
+  {
+    "source": "packages/rag-architecture/context.html",
+    "destination": "public/assets/interactive/rag-architecture/context.html"
+  },
+  {
+    "source": "packages/rag-architecture/context-view.mjs",
+    "destination": "public/assets/interactive/rag-architecture/context-view.mjs"
+  },
+  {
+    "source": "packages/rag-architecture/context-data.json",
+    "destination": "public/assets/interactive/rag-architecture/context-data.json"
+  },
+  {
+    "source": "packages/rag-architecture/context-priorities.svg",
+    "destination": "public/assets/interactive/rag-architecture/context-priorities.svg"
+  },
+  {
+    "source": "packages/rag-architecture/context-statuses.svg",
+    "destination": "public/assets/interactive/rag-architecture/context-statuses.svg"
+  },
+  {
+    "source": "packages/rag-architecture/architecture.html",
+    "destination": "public/assets/interactive/rag-architecture/architecture.html"
+  },
+  {
+    "source": "packages/rag-architecture/architecture-view.mjs",
+    "destination": "public/assets/interactive/rag-architecture/architecture-view.mjs"
+  },
+  {
+    "source": "packages/rag-architecture/architecture-data.json",
+    "destination": "public/assets/interactive/rag-architecture/architecture-data.json"
+  },
+  {
+    "source": "packages/rag-architecture/architecture-interventions.svg",
+    "destination": "public/assets/interactive/rag-architecture/architecture-interventions.svg"
+  },
+  {
+    "source": "packages/rag-evaluation/viewer.html",
+    "destination": "public/assets/interactive/rag-evaluation/viewer.html"
+  },
+  {
+    "source": "packages/rag-evaluation/viewer.mjs",
+    "destination": "public/assets/interactive/rag-evaluation/viewer.mjs"
+  },
+  {
+    "source": "packages/rag-evaluation/viewer-data.json",
+    "destination": "public/assets/interactive/rag-evaluation/viewer-data.json"
+  },
+  {
+    "source": "packages/rag-evaluation/split-counts.svg",
+    "destination": "public/assets/interactive/rag-evaluation/split-counts.svg"
+  },
+  {
+    "source": "packages/rag-evaluation/ranking.html",
+    "destination": "public/assets/interactive/rag-evaluation/ranking.html"
+  },
+  {
+    "source": "packages/rag-evaluation/ranking-view.mjs",
+    "destination": "public/assets/interactive/rag-evaluation/ranking-view.mjs"
+  },
+  {
+    "source": "packages/rag-evaluation/ranking-data.json",
+    "destination": "public/assets/interactive/rag-evaluation/ranking-data.json"
+  },
+  {
+    "source": "packages/rag-evaluation/precision-recall.svg",
+    "destination": "public/assets/interactive/rag-evaluation/precision-recall.svg"
+  },
+  {
+    "source": "packages/rag-evaluation/mrr-coverage.svg",
+    "destination": "public/assets/interactive/rag-evaluation/mrr-coverage.svg"
+  },
+  {
+    "source": "packages/rag-evaluation/ndcg-controls.svg",
+    "destination": "public/assets/interactive/rag-evaluation/ndcg-controls.svg"
+  },
+  {
+    "source": "packages/rag-evaluation/context.html",
+    "destination": "public/assets/interactive/rag-evaluation/context.html"
+  },
+  {
+    "source": "packages/rag-evaluation/context-view.mjs",
+    "destination": "public/assets/interactive/rag-evaluation/context-view.mjs"
+  },
+  {
+    "source": "packages/rag-evaluation/context-data.json",
+    "destination": "public/assets/interactive/rag-evaluation/context-data.json"
+  },
+  {
+    "source": "packages/rag-evaluation/context-budgets.svg",
+    "destination": "public/assets/interactive/rag-evaluation/context-budgets.svg"
+  },
+  {
+    "source": "packages/rag-evaluation/context-docs-facts.svg",
+    "destination": "public/assets/interactive/rag-evaluation/context-docs-facts.svg"
   }
 ]

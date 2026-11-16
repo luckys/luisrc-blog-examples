@@ -1,0 +1,50 @@
+<svg width="360" height="440" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 360 440">
+<rect width="360" height="440" x="0" y="0" fill="#0f172a"></rect>
+<path d="M44 385.5L336 385.5" fill="none" pointer-events="visible" stroke="#334155" class="updates-figure-cls-0"></path>
+<path d="M44 326.5L336 326.5" fill="none" pointer-events="visible" stroke="#334155" class="updates-figure-cls-0"></path>
+<path d="M44 268.5L336 268.5" fill="none" pointer-events="visible" stroke="#334155" class="updates-figure-cls-0"></path>
+<path d="M44 209.5L336 209.5" fill="none" pointer-events="visible" stroke="#334155" class="updates-figure-cls-0"></path>
+<path d="M44 151.5L336 151.5" fill="none" pointer-events="visible" stroke="#334155" class="updates-figure-cls-0"></path>
+<path d="M44 112.5L336 112.5" fill="none" pointer-events="visible" stroke="#334155" class="updates-figure-cls-0"></path>
+<path d="M44 385.5L336 385.5" fill="none" pointer-events="visible" stroke="#54555a" stroke-linecap="round" class="updates-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(36 385)" fill="#e2e8f0">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(36 326.5)" fill="#e2e8f0">3</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(36 268)" fill="#e2e8f0">6</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(36 209.5)" fill="#e2e8f0">9</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(36 151)" fill="#e2e8f0">12</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(36 112)" fill="#e2e8f0">14</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(92.6667 393)" fill="#e2e8f0">Parcial</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(190 393)" fill="#e2e8f0">Validada</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(287.3333 393)" fill="#e2e8f0">Obsoleta</text>
+<path d="M70.2 385l45 0l0 -214.5l-45 0Z" fill="#f87171" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="updates-figure-cls-1"></path>
+<path d="M167.5 385l45 0l0 -234l-45 0Z" fill="#4ade80" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="updates-figure-cls-2"></path>
+<path d="M264.8 385l45 0l0 -234l-45 0Z" fill="#fbbf24" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="updates-figure-cls-3"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(92.6667 165.5)" fill="#e2e8f0">11</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(190 146)" fill="#e2e8f0">12</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:sans-serif;" y="-6.5" transform="translate(287.3333 146)" fill="#e2e8f0">12</text>
+<path d="M-5 -5l215.7 0l0 74l-215.7 0Z" transform="translate(17 15)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#3c3c41" stroke-width="0" class="updates-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:16px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="8" transform="translate(17 15)" fill="#e2e8f0">Tres intentos de activación</text>
+<path d="M0 26l205.7 0l0 38l-205.7 0Z" transform="translate(17 15)" fill="none" pointer-events="visible" class="updates-figure-cls-0"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" y="35.5" transform="translate(17 15)" fill="#cbd5e1">Documentos cargados en la candidata</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" y="54.5" transform="translate(17 15)" fill="#cbd5e1">Solo se confirma el segundo intento</text>
+<style ><![CDATA[
+.updates-figure-cls-0:hover {
+pointer-events:none;
+}
+.updates-figure-cls-1:hover {
+cursor:pointer;
+fill:rgba(255,124,124,1);
+}
+.updates-figure-cls-2:hover {
+cursor:pointer;
+fill:rgba(81,244,140,1);
+}
+.updates-figure-cls-3:hover {
+cursor:pointer;
+fill:rgba(255,210,39,1);
+}
+
+]]>
+
+</style>
+</svg>
